@@ -10,12 +10,14 @@ class RepeatClass(Warning):
     def __str__(self):
         return (f"用例中存在重复的类名:{self.class_name},请修改确认后，再执行操作....")
 
+
 class RepeatCase(Warning):
     """
     检查重复方法名
     """
     def __init__(self,case_name):
         self.case_name = case_name
+
 
     def __str__(self):
         return (f"用例中存在重复的方法名:{self.case_name},请修改确认后，再执行操作....")
