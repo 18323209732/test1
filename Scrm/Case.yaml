@@ -1,0 +1,43 @@
+Scrm:
+  product: #产品管理
+    - url: /api/user_center/auth/login  # 邮件地址
+      modular: 产品列表  # 接口注释
+      className: manage_product  # 接口类名
+      funName:
+        - test_product33_getlist: {  # 接口方法名
+          url: ,
+          level: 中,
+          author: 陈建波,
+          bar: {"account":"13438476724","password":"Li123456"},
+          relation_data: {test_product_getlists,id,test_product_getlists,name},    #关联接口
+          case_name: 产品列表,
+          expected: [0],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_product33_getlist22: {  # 接口方法名
+          url: ,
+          level: 中,
+          author: 陈建波,
+          bar: {"account":"13438476724","password":"Li123456"},
+          relation_data: {test_product_getlists,id,test_product_getlists,name},    #关联接口
+          case_name: 产品列表,
+          expected: [0],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+    - url: /api/user_center/auth/login  # 邮件地址
+      modular: 产品列表  # 接口注释
+      className: managess_product  # 接口类名
+      funName:
+        - test_product333_getlist: {  # 接口方法名
+          url: ,
+          level: 中,
+          author: 陈建波,
+          bar: {"account":"13438476724","password":"Li123456"},
+          relation_data: {test_product_getlists,id,test_product_getlists,name},    #关联接口
+          case_name: 产品列表,
+          expected: [0],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }

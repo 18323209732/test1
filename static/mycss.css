@@ -1,0 +1,96 @@
+
+*,body,html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+h1 {
+    text-align: center;
+}
+.staticdis {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.staticdis div:nth-child(1) {
+    margin-right: 10px;
+    width: 50%;
+    height: 250px;
+}
+
+.staticdis div:nth-child(2) {
+    width: 50%;
+    height: 250px;
+}
+
+.staticdis td {
+    width: 25%;
+    height: 50px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.staticdis table {
+    table-layout: fixed
+}
+
+.button {
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.button a {
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    background: #49d230;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.button  a:hover {
+    background: #a707fa;
+    color: white;
+}
+#content>div {
+    margin: 20px 0 ;
+    width: 100%;
+}
+.show {
+    display: block;
+}
+
+#content th,td {
+    width: 12.5%;
+}
+
+#content table {
+   table-layout: fixed
+}
+#content th,td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.other{
+    width: 100%;
+    height: 100%;
+    border-collapse:collapse;
+}
+
+.hiddenRow {
+    display: none;
+}

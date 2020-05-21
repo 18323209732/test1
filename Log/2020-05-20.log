@@ -1,0 +1,678 @@
+时间:2020-05-20 12:24:02,086  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,086  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,087  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,087  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,124  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,124  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,214  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,214  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,215  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,215  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,215  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,215  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,215  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,215  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,216  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,216  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:02,378  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 12:24:02,378  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 12:24:02,378  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 12:24:02,378  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 12:24:02,551  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3981 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 12:24:02,551  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3981 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 12:24:02,556  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3978 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 12:24:02,556  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3978 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 12:24:04,011  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 12:24:04,011  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 12:24:04,069  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:04,069  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:04,069  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:04,069  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:04,085  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1270 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 12:24:04,085  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1270 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 12:24:05,129  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:05,129  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:05,130  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:05,130  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:05,130  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:05,130  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:05,411  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 12:24:05,411  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:32,890  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:32,890  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:32,891  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:32,891  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:32,941  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:32,941  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,082  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,082  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,082  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,082  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,083  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,083  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,083  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,083  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,083  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,083  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:33,223  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:42:33,223  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:42:33,223  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:42:33,223  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:42:33,285  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:42:33,285  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:42:33,285  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:42:33,285  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:42:34,410  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:42:34,410  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:42:34,454  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1267 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:42:34,454  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1267 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:42:34,550  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:34,550  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:34,550  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:34,550  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:35,380  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:35,380  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:35,380  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:35,380  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:35,380  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:35,380  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:35,662  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:42:35,662  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,835  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,835  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,836  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,836  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,879  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,879  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,975  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,975  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,976  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,976  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,976  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,976  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,976  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,976  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,976  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:53,976  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:54,115  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:54:54,115  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:54:54,115  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:54:54,115  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:54:55,192  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:54:55,192  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:54:55,193  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:54:55,193  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:54:56,435  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:54:56,435  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:54:56,500  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:56,500  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:56,500  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:56,500  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:56,514  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1268 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:54:56,514  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1268 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:54:57,321  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:57,321  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:57,321  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:57,321  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:57,321  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:57,321  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:57,597  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:54:57,597  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,502  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,502  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,503  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,503  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,538  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,538  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,656  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,656  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,657  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,657  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,658  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,658  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,658  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,658  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,658  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,658  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:48,811  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:56:48,811  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:56:48,811  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:56:48,811  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:56:48,869  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:56:48,869  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:56:48,897  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1265 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:56:48,897  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1265 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:56:49,963  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:49,963  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:49,964  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:49,964  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:50,056  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:56:50,056  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:56:50,098  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1269 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:56:50,098  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1269 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:56:50,941  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:50,941  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:50,941  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:50,941  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:50,941  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:50,941  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:51,227  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:51,227  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:56:51,228  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 13:56:51,228  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 13:56:51,460  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 404 None 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:56:51,460  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 404 None 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:57:31,827  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:31,827  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:31,828  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:31,828  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:31,886  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:31,886  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:31,999  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:31,999  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:32,000  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:32,000  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:32,000  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:32,000  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:32,000  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:32,000  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:32,000  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:32,000  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:32,141  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:57:32,141  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:57:32,142  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:57:32,142  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:57:32,195  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1266 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:57:32,195  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1266 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:57:32,197  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1266 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:57:32,197  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1266 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:57:33,190  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:33,190  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:33,190  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:33,190  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:33,446  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:57:33,446  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:57:33,490  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1267 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:57:33,490  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1267 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:57:34,430  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:34,430  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:34,430  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:34,430  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:34,430  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:34,430  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:34,711  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:34,711  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:57:34,712  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 13:57:34,712  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 13:57:34,810  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 404 None 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:57:34,810  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 404 None 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:58:58,672  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,672  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,673  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,673  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,719  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,719  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,810  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,810  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,811  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,811  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,811  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,811  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,812  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,812  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,812  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,812  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:58:58,965  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:58:58,965  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:58:58,966  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:58:58,966  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:58:59,030  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:58:59,030  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:58:59,031  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:58:59,031  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:00,091  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:59:00,091  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:59:00,133  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1269 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:00,133  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1269 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:00,223  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:00,223  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:00,223  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:00,223  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:01,039  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:01,039  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:01,039  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:01,039  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:01,039  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:01,039  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:01,321  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:01,321  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:01,322  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 13:59:01,322  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 13:59:12,965  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /get_report/ HTTP/1.1" 200 263 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:12,965  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /get_report/ HTTP/1.1" 200 263 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:12,966  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:12,966  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:12,967  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 13:59:12,967  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 13:59:12,981  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /download_report/ HTTP/1.1" 200 28821 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:12,981  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /download_report/ HTTP/1.1" 200 28821 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:12,983  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:12,983  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 13:59:13,203  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:59:13,203  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:59:13,614  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:13,614  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:13,617  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:59:13,617  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 13:59:13,854  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:13,854  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 13:59:14,641  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8866/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 13:59:14,641  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8866/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 13:59:14,641  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:8866 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 13:59:14,641  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:8866 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:00:26,984  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:26,984  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:26,984  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:26,984  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,010  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,010  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,100  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,100  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,101  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,101  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,101  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,101  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,101  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,101  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,101  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,101  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:27,244  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:00:27,244  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:00:27,244  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:00:27,244  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:00:27,661  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:27,661  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:27,679  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1267 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:27,679  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1267 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:28,781  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:00:28,781  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:00:28,857  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:28,857  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:28,857  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:28,857  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:29,214  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1268 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:29,214  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1268 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:30,141  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:30,141  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:30,141  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:30,141  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:30,141  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:30,141  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:30,424  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:30,424  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:30,426  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:00:30,426  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,604  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /get_report/ HTTP/1.1" 200 263 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,604  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /get_report/ HTTP/1.1" 200 263 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,604  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:40,604  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:40,605  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,605  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,607  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /download_report/ HTTP/1.1" 200 23377 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,607  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /download_report/ HTTP/1.1" 200 23377 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,609  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:40,609  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:00:40,699  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,699  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,917  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,917  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,920  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:00:40,920  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:00:41,166  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:41,166  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:41,828  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8983/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:00:41,828  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8983/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:00:41,828  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:8983 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:00:41,828  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:8983 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:00:43,714  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "POST /session HTTP/1.1" 200 718 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:43,714  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "POST /session HTTP/1.1" 200 718 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:00:43,715  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:00:43,715  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:00:43,715  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8983/session/2b86984c7ec92b26969f90e675e3189e/url {"url": "D:\\workspace\\AutoAPI\\template\\report.html"} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:00:43,715  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8983/session/2b86984c7ec92b26969f90e675e3189e/url {"url": "D:\\workspace\\AutoAPI\\template\\report.html"} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:01:34,226  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "POST /session/2b86984c7ec92b26969f90e675e3189e/url HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:01:34,226  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "POST /session/2b86984c7ec92b26969f90e675e3189e/url HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:01:34,226  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:01:34,226  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:01:34,226  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8983/session/2b86984c7ec92b26969f90e675e3189e/timeouts {"implicit": 10000} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:01:34,226  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8983/session/2b86984c7ec92b26969f90e675e3189e/timeouts {"implicit": 10000} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:01:34,239  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "POST /session/2b86984c7ec92b26969f90e675e3189e/timeouts HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:01:34,239  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "POST /session/2b86984c7ec92b26969f90e675e3189e/timeouts HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:01:34,240  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:01:34,240  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:01:34,240  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8983/session/2b86984c7ec92b26969f90e675e3189e/window/rect {"x": null, "y": null, "width": 1800, "height": 900} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:01:34,240  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8983/session/2b86984c7ec92b26969f90e675e3189e/window/rect {"x": null, "y": null, "width": 1800, "height": 900} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:01:35,356  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "POST /session/2b86984c7ec92b26969f90e675e3189e/window/rect HTTP/1.1" 200 49 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:01:35,356  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "POST /session/2b86984c7ec92b26969f90e675e3189e/window/rect HTTP/1.1" 200 49 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:01:35,357  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:01:35,357  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:01:38,357  方法:_request  级别:DEBUG  消息:GET http://127.0.0.1:8983/session/2b86984c7ec92b26969f90e675e3189e/screenshot {} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:01:38,357  方法:_request  级别:DEBUG  消息:GET http://127.0.0.1:8983/session/2b86984c7ec92b26969f90e675e3189e/screenshot {} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:01:38,662  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "GET /session/2b86984c7ec92b26969f90e675e3189e/screenshot HTTP/1.1" 200 103348 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:01:38,662  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "GET /session/2b86984c7ec92b26969f90e675e3189e/screenshot HTTP/1.1" 200 103348 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:01:38,663  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:01:38,663  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:01:38,664  方法:_request  级别:DEBUG  消息:DELETE http://127.0.0.1:8983/session/2b86984c7ec92b26969f90e675e3189e {} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:01:38,664  方法:_request  级别:DEBUG  消息:DELETE http://127.0.0.1:8983/session/2b86984c7ec92b26969f90e675e3189e {} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:01:38,705  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "DELETE /session/2b86984c7ec92b26969f90e675e3189e HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:01:38,705  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8983 "DELETE /session/2b86984c7ec92b26969f90e675e3189e HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:01:38,705  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:01:38,705  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:04:00,050  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,050  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,051  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,051  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,091  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,091  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,177  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,177  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,177  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,177  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,177  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,177  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,178  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,178  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,178  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,178  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:00,316  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:04:00,316  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:04:00,317  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:04:00,317  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:04:00,727  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:00,727  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:00,733  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:00,733  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:01,925  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:04:01,925  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:04:01,995  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:01,995  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:01,995  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:01,995  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:02,293  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1268 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:02,293  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1268 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:03,171  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:03,171  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:03,171  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:03,171  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:03,171  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:03,171  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:03,457  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:03,457  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:03,459  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:04:03,459  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:04:13,805  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /get_report/ HTTP/1.1" 200 249 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:13,805  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /get_report/ HTTP/1.1" 200 249 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:13,805  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:13,805  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:13,809  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:04:13,809  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:04:13,814  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /download_report/ HTTP/1.1" 200 28824 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:13,814  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /download_report/ HTTP/1.1" 200 28824 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:13,815  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:13,815  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:04:13,947  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:04:13,947  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:04:14,141  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:14,141  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:14,143  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:04:14,143  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:04:14,636  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:14,636  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:15,300  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9253/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:04:15,300  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9253/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:04:15,300  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:9253 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:04:15,300  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:9253 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:04:17,225  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9253 "POST /session HTTP/1.1" 200 718 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:17,225  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9253 "POST /session HTTP/1.1" 200 718 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:04:17,225  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:04:17,225  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:04:17,226  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9253/session/98515a185d176b47314cd5bcb910bd1e/url {"url": "D:\\workspace\\AutoAPI\\template\\report.html"} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:04:17,226  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9253/session/98515a185d176b47314cd5bcb910bd1e/url {"url": "D:\\workspace\\AutoAPI\\template\\report.html"} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:00,467  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,467  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,468  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,468  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,518  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,518  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,643  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,643  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,644  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,644  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,644  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,644  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,644  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,644  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,644  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,644  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:00,782  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:06:00,782  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:06:00,783  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:06:00,783  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:06:00,852  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:00,852  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:00,853  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:00,853  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:01,919  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:06:01,919  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:06:01,988  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:01,988  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:01,988  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:01,988  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:01,997  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1268 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:01,997  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1268 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:02,909  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:02,909  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:02,910  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:02,910  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:02,910  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:02,910  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:03,184  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:03,184  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:03,185  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:06:03,185  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,418  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /get_report/ HTTP/1.1" 200 249 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,418  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /get_report/ HTTP/1.1" 200 249 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,418  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:13,418  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:13,419  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,419  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 192.168.4.36:8080 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,432  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /download_report/ HTTP/1.1" 200 28825 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,432  方法:_make_request  级别:DEBUG  消息:http://192.168.4.36:8080 "POST /download_report/ HTTP/1.1" 200 28825 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,433  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:13,433  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:06:13,569  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,569  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,749  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,749  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,751  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,751  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,973  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:13,973  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:14,821  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9382/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:14,821  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9382/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:14,822  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:9382 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:06:14,822  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:9382 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:06:16,754  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "POST /session HTTP/1.1" 200 718 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:16,754  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "POST /session HTTP/1.1" 200 718 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:16,754  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:16,754  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:16,755  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9382/session/e7732d7c832eff7ff3adf3a6255e4be7/url {"url": "D:\\workspace\\AutoAPI\\template\\report.html"} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:16,755  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9382/session/e7732d7c832eff7ff3adf3a6255e4be7/url {"url": "D:\\workspace\\AutoAPI\\template\\report.html"} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:53,747  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "POST /session/e7732d7c832eff7ff3adf3a6255e4be7/url HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:53,747  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "POST /session/e7732d7c832eff7ff3adf3a6255e4be7/url HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:53,747  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:53,747  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:53,748  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9382/session/e7732d7c832eff7ff3adf3a6255e4be7/timeouts {"implicit": 10000} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:53,748  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9382/session/e7732d7c832eff7ff3adf3a6255e4be7/timeouts {"implicit": 10000} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:53,748  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "POST /session/e7732d7c832eff7ff3adf3a6255e4be7/timeouts HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:53,748  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "POST /session/e7732d7c832eff7ff3adf3a6255e4be7/timeouts HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:53,748  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:53,748  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:53,749  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9382/session/e7732d7c832eff7ff3adf3a6255e4be7/window/rect {"x": null, "y": null, "width": 1800, "height": 900} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:53,749  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9382/session/e7732d7c832eff7ff3adf3a6255e4be7/window/rect {"x": null, "y": null, "width": 1800, "height": 900} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:54,857  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "POST /session/e7732d7c832eff7ff3adf3a6255e4be7/window/rect HTTP/1.1" 200 49 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:54,857  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "POST /session/e7732d7c832eff7ff3adf3a6255e4be7/window/rect HTTP/1.1" 200 49 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:54,857  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:54,857  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:57,857  方法:_request  级别:DEBUG  消息:GET http://127.0.0.1:9382/session/e7732d7c832eff7ff3adf3a6255e4be7/screenshot {} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:57,857  方法:_request  级别:DEBUG  消息:GET http://127.0.0.1:9382/session/e7732d7c832eff7ff3adf3a6255e4be7/screenshot {} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:58,189  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "GET /session/e7732d7c832eff7ff3adf3a6255e4be7/screenshot HTTP/1.1" 200 103412 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:58,189  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "GET /session/e7732d7c832eff7ff3adf3a6255e4be7/screenshot HTTP/1.1" 200 103412 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:58,190  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:58,190  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:58,191  方法:_request  级别:DEBUG  消息:DELETE http://127.0.0.1:9382/session/e7732d7c832eff7ff3adf3a6255e4be7 {} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:58,191  方法:_request  级别:DEBUG  消息:DELETE http://127.0.0.1:9382/session/e7732d7c832eff7ff3adf3a6255e4be7 {} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:06:58,201  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "DELETE /session/e7732d7c832eff7ff3adf3a6255e4be7 HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:58,201  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9382 "DELETE /session/e7732d7c832eff7ff3adf3a6255e4be7 HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:06:58,202  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:06:58,202  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:09:47,411  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,411  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,411  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,411  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,454  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,454  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,540  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,540  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,540  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,540  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,540  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,540  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,541  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,541  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,551  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,551  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:47,679  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:09:47,679  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:09:47,679  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:09:47,679  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:09:47,751  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:09:47,751  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:09:47,753  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:09:47,753  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:09:48,828  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:09:48,828  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:09:48,885  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:48,885  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:48,885  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:48,885  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:48,907  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1268 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:09:48,907  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1268 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:09:49,779  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:49,779  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:49,780  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:49,780  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:49,780  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:49,780  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:50,093  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:50,093  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:09:50,094  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:09:50,094  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:10:00,782  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 200 249 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:10:00,782  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 200 249 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:10:00,783  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:10:00,783  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:10:00,784  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:10:00,784  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:10:01,041  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /download_report/ HTTP/1.1" 200 28825 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:10:01,041  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /download_report/ HTTP/1.1" 200 28825 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:10:01,199  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:10:01,199  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:10:01,289  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:10:01,289  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:10:01,534  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:10:01,534  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:10:01,539  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:10:01,539  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:10:01,787  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:10:01,787  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:10:02,451  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9756/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:10:02,451  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9756/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:10:02,452  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:9756 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:10:02,452  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:9756 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:10:04,324  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9756 "POST /session HTTP/1.1" 200 717 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:10:04,324  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:9756 "POST /session HTTP/1.1" 200 717 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:10:04,325  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:10:04,325  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:10:04,325  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9756/session/0fbd71d823bc677da0cffe4d7c85fc9b/url {"url": "D:\\workspace\\AutoAPI\\template\\report.html"} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:10:04,325  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:9756/session/0fbd71d823bc677da0cffe4d7c85fc9b/url {"url": "D:\\workspace\\AutoAPI\\template\\report.html"} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:32:07,052  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,052  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,052  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,052  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,095  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,095  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,183  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,183  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,184  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,184  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,184  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,184  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,184  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,184  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,185  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,185  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:07,325  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:32:07,325  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:32:07,326  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:32:07,326  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:32:08,407  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:08,407  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:08,409  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:08,409  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:09,665  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:09,665  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:09,665  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:09,665  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:09,755  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:32:09,755  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:32:09,796  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1265 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:09,796  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1265 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:10,713  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:10,713  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:10,713  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:10,713  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:10,713  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:10,713  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:11,018  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:11,018  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:11,019  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:32:11,019  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:32:21,905  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 200 263 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:21,905  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 200 263 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:21,906  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:21,906  方法:info  级别:INFO  消息:获取测试报告数据相关内容成功... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:21,910  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:32:21,910  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:32:22,162  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /download_report/ HTTP/1.1" 200 28787 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:22,162  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /download_report/ HTTP/1.1" 200 28787 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:22,275  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:22,275  方法:info  级别:INFO  消息:下载测试报告至本地成功.... 行数: 55 文件名:Log.py
+时间:2020-05-20 14:32:22,379  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:32:22,379  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:32:22,740  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:22,740  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwc4a06a344ebfec12&corpsecret=s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0 HTTP/1.1" 200 277 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:22,743  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:32:22,743  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): qyapi.weixin.qq.com:443 行数: 813 文件名:connectionpool.py
+时间:2020-05-20 14:32:22,998  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:22,998  方法:_make_request  级别:DEBUG  消息:https://qyapi.weixin.qq.com:443 "POST /cgi-bin/message/send?access_token=VZ-RIh_Sjk7zLJvS5oJK7TNGD7C3oz8kYMHxQyflYiJes06b2bPZellhOweO4vnxnOVPMb-kMO0FGNkvarIWI3uwc-epzPzeugWzy4vIB8i4XdZReLBBo981vS7vJQro1sa7VDiUI-XeYk1-ZZZClhb1X9BgVnrSBg6zBnsIUGf1VGChZYarqOO1QiAbeCfsp2Fo7EIJp7GUOUw0BnaKmA HTTP/1.1" 200 93 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:23,648  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:11073/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:32:23,648  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:11073/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:32:23,649  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:11073 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:32:23,649  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:11073 行数: 205 文件名:connectionpool.py
+时间:2020-05-20 14:32:25,558  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:11073 "POST /session HTTP/1.1" 200 719 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:25,558  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:11073 "POST /session HTTP/1.1" 200 719 行数: 393 文件名:connectionpool.py
+时间:2020-05-20 14:32:25,558  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:32:25,558  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-05-20 14:32:25,558  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:11073/session/ebefa2f42d1e77e8828e1d29b59cc14e/url {"url": "D:\\workspace\\AutoAPI\\template\\report.html"} 行数: 388 文件名:remote_connection.py
+时间:2020-05-20 14:32:25,558  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:11073/session/ebefa2f42d1e77e8828e1d29b59cc14e/url {"url": "D:\\workspace\\AutoAPI\\template\\report.html"} 行数: 388 文件名:remote_connection.py
