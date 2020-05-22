@@ -43,10 +43,18 @@
     </recent_temporary>
   </component>
   <component name="WindowStateProjectService">
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1590137281799">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1590137281799" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1590137241657">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590137241657" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1590137291380">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590137291380" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Portal_interface$Run.coverage" NAME="Run Coverage Results" MODIFIED="1590050384934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
