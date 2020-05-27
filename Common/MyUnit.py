@@ -2,7 +2,7 @@
 import base64
 import traceback
 
-from mysite.models.read_write_ini import read_ini
+from Common.ReadWriteIni import ReadWrite
 
 from Common.FontColor import outcome
 from Common.DataHandle import SqlHandle,Assertion,Matching
@@ -16,7 +16,7 @@ from Common.ReadYaml import ConfigYaml,CaseYaml
 from Common.ReadWriteIni import ReadWrite
 from Common.Results import results
 import warnings
-from Common.GetToken import getCookie
+# from Common.GetToken import getCookie
 import re
 from Common.MyRedis import ReDis
 from Common.DataHandle import SqlHandle,Assertion
