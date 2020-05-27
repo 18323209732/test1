@@ -1,7 +1,6 @@
-from Scrm.product.managess_st import managess_product
-from Scrm.product.manage_st import manage_product
+from Door.product.manage_st import manage_product
 
-all_class = [managess_product, manage_product]
+all_class = [manage_product]
 
 all_dirs = ['product']
 

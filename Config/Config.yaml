@@ -1,5 +1,5 @@
 base_url:
-  Scrm: https://test.cloud.app.scrm365.cn # 正式环境
+  Door: https://test.cloud.app.scrm365.cn # 正式环境
 base_config:
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
@@ -11,8 +11,8 @@ base_config:
   browserName: chrome                             #启动浏览器类型
   title: 接口化测试报告
   domain: autoreport.free-http.svipss.top         #域名
-  EnvName: SCRM线上环境测试报告
-  projectName: Scrm                           #项目名称
+  EnvName: Door线上环境测试报告
+  projectName: Door                           #项目名称
   moudleName:                                    #运行模块
   timeout: 3                                     #超时时间
   thread_count: 4                                 #开启线程数，开启线程数不能大于模块数

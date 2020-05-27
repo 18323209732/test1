@@ -133,7 +133,7 @@ class RunAll:
         多线程运行
         :return:
         '''
-        from Scrm import all_class
+        from Door import all_class
         mythreads = []
         for mythread in all_class:
             mythreads.append(MyThread(mythread,self.data))
@@ -156,7 +156,7 @@ class RunAll:
         多进程运行
         :return:
         '''
-        from Scrm import all_dirs
+        from Door import all_dirs
         myprocess = []
         for process in all_dirs:
             myprocess.append(MyProcess(process, self.data))
@@ -203,9 +203,9 @@ class RunAll:
         运行用例
         :return:
         '''
-        from Scrm import class_case
-        from Scrm import all_class
-        from Scrm import fail_error
+        from Door import class_case
+        from Door import all_class
+        from Door import fail_error
         self.clean_data()
         self.startdata = time.strftime("%Y-%m-%d:%H:%M:%S")
         self.startime = time.time()
@@ -347,4 +347,3 @@ class RunAll:
 if __name__=='__main__':
 
     RunAll().send_mail()
-1111

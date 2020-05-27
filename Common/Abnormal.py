@@ -30,6 +30,7 @@ class DataException(Exception):
     def __init__(self,class_name):
         self.class_name = class_name
 
+
     def __str__(self):
         return f"{self.class_name}:该数据类型对象错误,请修确认改后，再执行操作...."
 

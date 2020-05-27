@@ -7,30 +7,14 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 
-class managess_product(MyTest):
+class manage_product(MyTest):
 
     condition = True
     # 产品列表
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test_product_getlist(self):
-        # 产品列表
-        try:
-            url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, json=self.data, stream=True)
-            self.result = r.json()
-
-            self.time=r.elapsed.total_seconds()
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red',self.singular)
-            return self.singular
-        
-
-    # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test_product333_getlist(self):
+    def test_product33_getlist(self):
         # 产品列表
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
