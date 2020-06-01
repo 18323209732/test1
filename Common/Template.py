@@ -10,6 +10,8 @@ from Common.FontColor import outcome
 from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class {}(MyTest):
 
