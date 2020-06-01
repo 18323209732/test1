@@ -2,7 +2,7 @@
 import base64
 import traceback
 
-from mysite.models.read_write_ini import read_ini
+from Common.ReadWriteIni import ReadWrite
 
 from Common.FontColor import outcome
 from Common.DataHandle import SqlHandle,Assertion,Matching

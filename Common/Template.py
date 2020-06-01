@@ -23,7 +23,7 @@ case_body = """
         # {}
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.{}(url, headers=self.headers, {}=self.data, stream=True)
+            r = requests.{}(url, headers=self.headers, {}=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time=r.elapsed.total_seconds()
