@@ -1,6 +1,7 @@
 from bottle import template
 import webbrowser
 import sys
+
 class_title = """# coding=utf-8
 import unittest
 import traceback
