@@ -64,11 +64,25 @@ def Matching(style,string):
     :param string:
     :return:
     '''
+    global result
+    if isinstance(string, dict):
+        result = string.get(style)
+    elif isinstance(string, str):
+        data = string.replace("'", '"').replace(' ', '')
+        value = re.findall(f'\"{style}\":(.*?),', data)
+        if value:
+            result = value[0]
+    else:
+        data = str(string).replace("'", '"').replace(' ','')
+        value = re.findall(f'\"{style}\":(.*?),',data)
+        if value:
+            result = value[0]
 
-    data = str(string).replace("'",'"').replace(' ','')
-    value = re.findall(f'\"{style}\":\"(.*?)\"',data)
-    if value:
-        return value[0]
+    return int(result)
+
+tt = {'status': 200, 'msg': 'success', 'success': True, 'data': [{'infos': 2, 'leaf': True, 'createDate': 1590595200000, 'status': 1, 'task': '6月', 'ismobile': '1', 'id': 2}]}
+print(Matching('status',tt))
+
 
 
 def CaseHandle(clsname,funname,data):
