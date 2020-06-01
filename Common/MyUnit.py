@@ -104,7 +104,6 @@ class MyTest(TestCase):
             )
 
         Resonse = str(base64.b64encode(str(resonse).encode('utf-8')), 'utf-8')
-        # Resonse = json.dumps(resonse, indent=4, ensure_ascii=False)
         if self.sql:
             mysql = SqlHandle(self.casename,self.notes,self.level, self.url, self.abnormal,self.author,self.time, Resonse, self.className)
             mysql.implement()

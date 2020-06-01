@@ -80,8 +80,7 @@ def Matching(style,string):
 
     return int(result)
 
-tt = {'status': 200, 'msg': 'success', 'success': True, 'data': [{'infos': 2, 'leaf': True, 'createDate': 1590595200000, 'status': 1, 'task': '6月', 'ismobile': '1', 'id': 2}]}
-print(Matching('status',tt))
+
 
 
 
