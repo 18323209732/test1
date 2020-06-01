@@ -1,5 +1,5 @@
 Door:
-  product: #产品管理111111
+  AddCategory: #添加产品分类
     - url: /api/user_center/auth/login  # 邮件地址
       modular: 产品列表 # 接口注释
       className: manage_product  # 接口类名
