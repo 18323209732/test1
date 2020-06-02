@@ -32,6 +32,7 @@ class MyTest(TestCase):
         self.time = 0
         self.abnormal = ''
 
+
     @classmethod
     def setUpClass(self):
         self.key = ConfigYaml('key').base_config
@@ -93,7 +94,7 @@ class MyTest(TestCase):
         except:
             self.msg = 'None'
         try:
-            Assertion(self.result, self.assertEqual, actualone="code",
+            Assertion(self.result, self.assertEqual, actualone="status",
                       expectone=self.expected[0],
                       ).datahandle()
         except:
