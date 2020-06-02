@@ -11,7 +11,7 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 class {}(MyTest):
 
@@ -24,6 +24,7 @@ case_body = """
     @ReRun(MyTest.setUp)
     def {}(self):
         # {}
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.{}(url, headers=self.headers, {}=self.data, stream=True, verify=False)
