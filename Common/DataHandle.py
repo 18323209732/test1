@@ -71,12 +71,12 @@ def Matching(style,string):
         data = string.replace("'", '"').replace(' ', '')
         value = re.findall(f'\"{style}\":(.*?),', data)
         if value:
-            result = value[0]
+            result = value[0].replace("'", ' ').replace('"', ' ')
     else:
         data = str(string).replace("'", '"').replace(' ','')
         value = re.findall(f'\"{style}\":(.*?),',data)
         if value:
-            result = value[0]
+            result = value[0].replace("'", ' ').replace('"', ' ')
 
     return result
 
