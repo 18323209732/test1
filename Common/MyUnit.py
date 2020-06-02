@@ -8,6 +8,7 @@ from Common.FontColor import outcome
 from Common.DataHandle import SqlHandle,Assertion,Matching
 from Common.DataHandle import CaseHandle
 import unittest
+from Common.GetToken import Get_Cookies
 from unittest import TestCase
 import json
 from Common.MySql import Sql
@@ -31,10 +32,13 @@ class MyTest(TestCase):
         self.time = 0
         self.abnormal = ''
 
-
     @classmethod
     def setUpClass(self):
+        self.key = ConfigYaml('key').base_config
+        Get_Cookies(self.key).write_cookies()
+        self.cookies = ReadWrite(sign='session', option='cookies').read_ini_cookies()
         self.headers = {'Content-Type': 'application/json;charset=UTF-8'}
+        self.headers.update({self.key: self.cookies})
 
 
     @classmethod

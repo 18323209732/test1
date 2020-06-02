@@ -1,6 +1,12 @@
 base_url:
-  Door: https://2005275179-stsite-oper.pool601.yun300.cn # 正式环境
+  Door: https://1909045011.pool401-bestsite.make.yun300.cn # 正式环境
+  Design: http://design.yun300.cn/html/login.html        #设计器地址
 base_config:
+  over_time: 14400                                #cookie 过期时间
+  key: GWSESSION                                   #cookies键
+  user_name: zhanghailong                         #登录名称
+  user_pwd: v4                                    #密码
+  website: www.rootcloud.com                      #网站
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
   steam_handler: false                          #控制台输入日志 Fasle：不输入
@@ -85,6 +91,7 @@ sql:
   search_all_result: SELECT modular,funname  FROM result where errorrate != 0 or failrate != 0;
   search_max_result: select max(totalnumber) from result;
   search_fail_error: SELECT modular,funname  FROM result where errorrate >%s or failrate >%s;
+  search_cookies: select name ,encrypted_value from cookies WHERE host_key='%s';
 
 report:
   title: 接口自动化测试报告
