@@ -1,5 +1,5 @@
 base_url:
-  Door: https://test.cloud.app.scrm365.cn # 正式环境
+  Door: https://2005275179-stsite-oper.pool601.yun300.cn # 正式环境
 base_config:
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
