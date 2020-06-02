@@ -34,7 +34,7 @@ class MyTest(TestCase):
 
     @classmethod
     def setUpClass(self):
-        self.headers = {'Content-Type': 'application/json;charset=UTF-8'}
+        self.headers = {'Content-Type': 'application/json;charset=UTF-8','Cookie': 'mr=6b72c87a28d1fc161df3fb13efd84b50; GWSESSION=MWQ4M2Q3YzEtNmEwYi00ZWE3LWFlMDgtOWM3NjlhODIzYmU5'}
 
 
     @classmethod
@@ -89,7 +89,7 @@ class MyTest(TestCase):
         except:
             self.msg = 'None'
         try:
-            Assertion(self.result, self.assertEqual, actualone="code",
+            Assertion(self.result, self.assertEqual, actualone="status",
                       expectone=self.expected[0],
                       ).datahandle()
         except:
