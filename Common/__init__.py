@@ -28,5 +28,7 @@
 import re
 
 tt = {'status': 200, 'msg': 'success', 'success': True, 'data': [{'infos': 2, 'leaf': True, 'createDate': 1590595200000, 'status': 1, 'task': '6月', 'ismobile': '1', 'id': 2}]}
-value = re.findall(f'\'status\':(.*?),', str(tt))
-print(value)
+value = re.findall(f'\'msg\':(.*?),', str(tt))[0]
+print(value.replace("'", ' ').replace('"', ' '))
+if value=='success':
+    print(11)

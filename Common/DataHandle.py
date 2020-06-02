@@ -77,7 +77,6 @@ def Matching(style,string):
         value = re.findall(f'\"{style}\":(.*?),', data)
         if value:
             result = value[0].replace("'", ' ').replace('"', ' ')
-
     return result
 
 
