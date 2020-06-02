@@ -73,8 +73,8 @@ def Matching(style,string):
         if value:
             result = value[0].replace("'", ' ').replace('"', ' ')
     else:
-        data = str(string).replace("'", '"').replace(' ','')
-        value = re.findall(f'\"{style}\":(.*?),',data)
+        data = str(string).replace("'", '"').replace(' ', '')
+        value = re.findall(f'\"{style}\":(.*?),', data)
         if value:
             result = value[0].replace("'", ' ').replace('"', ' ')
 
