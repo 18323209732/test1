@@ -78,7 +78,7 @@ def Matching(style,string):
         if value:
             result = value[0]
 
-    return str(result)
+    return result
 
 
 
