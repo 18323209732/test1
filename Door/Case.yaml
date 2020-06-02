@@ -48,3 +48,57 @@ Door:
             mode: post,  # 请求类型
             re_bar: json, # 请求参数
           }
+  AddCategory: #添加产品分类
+    - url:   # 类URL为空
+      modular: 添加产品分类,然后获取分类列表，验证创建分类是否存在  # 接口注释
+      className: manage_AddCategory  # 接口类名
+      funName:
+        - test_add_category: {  # 添加产品分类
+          url: /manager-webapi/product/appCategory/isUniqueCategoryName,
+          level: 中,
+          author: 姜娜,
+          bar: {"account":"CEM10097239","password":"zok9phwv6n"},
+          relation_data: {},    #关联接口
+          case_name: 添加产品分类,
+          expected: [200],  # 预期结果，接口返回正常
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_category_list: {  # 产品分类列表
+            url: /manager-webapi/product/appCategory/list,
+            level: 中,
+            author: 姜娜,
+            bar: {"account":"CEM10097239","password":"zok9phwv6n"},
+            relation_data: {},    #关联接口
+            case_name: 获取产品分类列表
+              expected: [200],  # 预期结果，接口返回正常
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+  AddProduct: #添加产品，选择必填项，并上传图片，设置封面
+    - url:   # 保存产品
+      modular: 保存产品  # 接口注释
+      className: manage_AddProduct  # 接口类名
+      funName:
+        - test_add_product: {  # 接口方法名
+          url: /manager-webapi/product/productInformation/saveOrUpdate,
+          level: 中,
+          author: 姜娜,
+          bar: {"account":"CEM10097239","password":"zok9phwv6n"},
+          relation_data: {},    #关联接口
+          case_name: 添加产品,
+          expected: [200],  # 预期结果添加成功，产品列表显示正常
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_get_AppAuthority: {  # 接口方法名
+            url: /manager-webapi/product/productInformation/getAppAuthority,
+            level: 中,
+            author: 姜娜,
+            bar: {"account":"CEM10097239","password":"zok9phwv6n"},
+            relation_data: {},    #关联接口
+            case_name: 获取权限,
+            expected: [200],  # 预期结果添加成功，产品列表显示正常
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
