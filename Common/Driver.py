@@ -13,7 +13,7 @@ def browser(switch=True):
         options = webdriver.ChromeOptions()
         options.add_argument('--headless')
         driver = webdriver.Chrome(executable_path=driver_path, options=options)
-        driver.set_window_size(1900, 980)
+        driver.maximize_window()
     else:
         options = None
         driver = webdriver.Chrome(executable_path=driver_path, options=options)

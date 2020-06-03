@@ -36,10 +36,11 @@ class MyTest(TestCase):
     @classmethod
     def setUpClass(self):
         self.key = ConfigYaml('key').base_config
+        self.cookies_key = ConfigYaml('cookies').base_config
         Get_Cookies(self.key).write_cookies()
-        self.cookies = ReadWrite(sign='session', option='cookies').read_ini_cookies()
+        self.cookies_value = ReadWrite(sign='session', option='cookies').read_ini_cookies()
         self.headers = {'Content-Type': 'application/json;charset=UTF-8'}
-        self.headers.update({self.key: self.cookies})
+        self.headers.update({self.cookies_key: self.cookies_value})
 
 
     @classmethod
@@ -94,7 +95,7 @@ class MyTest(TestCase):
         except:
             self.msg = 'None'
         try:
-            Assertion(self.result, self.assertEqual, actualone="status",
+            Assertion(self.result, self.assertEqual, actualone="code",
                       expectone=self.expected[0],
                       ).datahandle()
         except:
@@ -110,7 +111,7 @@ class MyTest(TestCase):
 
         Resonse = str(base64.b64encode(str(resonse).encode('utf-8')), 'utf-8')
         if self.sql:
-            mysql = SqlHandle(self.casename,self.notes,self.level, self.url, self.abnormal,self.author,self.time, Resonse, self.className)
+            mysql = SqlHandle(self.casename,self.notes, self.level, self.url, self.abnormal,self.author,self.time, Resonse, self.className)
             mysql.implement()
             mysql.insert_result_table()
 

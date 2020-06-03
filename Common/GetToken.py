@@ -19,10 +19,11 @@ class Get_Cookies:
     def __init__(self, value):
         '''
         '''
+
         self.value = value
         self.browser_type = ConfigYaml('browserName').base_config
         self.over_time = ConfigYaml('over_time').base_config
-        self.host = ConfigYaml('Door').base_url.split("//")[1]
+        self.host = ConfigYaml('web_host').base_config
         self.local_state = os.environ['LOCALAPPDATA'] + r'\Google\Chrome\User Data\Local State'
         self.cookie_path = os.environ['LOCALAPPDATA'] + r"\Google\Chrome\User Data\Default\Cookies"
         self.sql = ConfigYaml('search_cookies').sql % self.host
@@ -114,7 +115,7 @@ class Get_Cookies:
                 else:
                     cookies[host_key] = CryptUnprotectData(encrypted_value)[1].decode()
 
-            return cookies.get(self.value)
+            return '{}={}'.format(self.value, cookies.get(self.value))
 
     def write_cookies(self):
         '''
@@ -130,3 +131,5 @@ class Get_Cookies:
             Login().login()
             self.config.write_ini()
 
+
+Get_Cookies("GWSESSION").write_cookies()

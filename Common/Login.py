@@ -11,10 +11,10 @@ class Login:
     def __init__(self):
         self.base_url = ConfigYaml('Design').base_url
         self.user_pwd = ConfigYaml('user_pwd').base_config
-        self.website = ConfigYaml('website').base_config
+        self.website = ConfigYaml('Door').base_url
         self.username = ConfigYaml('user_name').base_config
         self.driver = browser()
-        self.support = WebDriverWait(driver=self.driver, timeout=20)
+        self.support = WebDriverWait(driver=self.driver, timeout=30)
         self.element = (By.XPATH, "(//{}[@{}='{}'])[{}]")
 
     def operation_element(self, element):
@@ -58,11 +58,23 @@ class Login:
             self._send_keys("*", "class", "el-input__inner", 3, data=self.user_pwd)
             self._send_keys("*", "class", "el-input__inner", 4, data=self.website)
             self._click("*", "class", "el-button el-button--primary", 1)
-            sleep(20)
+            sleep(17)
             self._click("*", "class", "pos-icon", 7)
+            sleep(3)
+            self._click("*", "class", "rel active", 1)
+            sleep(2)
         except Exception:
             outcome('red', '登录异常....')
 
 
+    def get_token(self):
+        """
+        通过driver获取到driver中的token
+        """
+        js = "sessionStorage.getItem('token');"
+        token = self.driver.execute_script(js)
+        print(token)
 
+
+Login().get_token()
 
