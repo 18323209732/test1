@@ -1,6 +1,6 @@
 base_url:
   Design: http://design.yun300.cn/html/login.html        #设计器地址
-  Door: https://2005275179-stsite-oper.pool601.yun300.cn/manager/gwforward # 正式环境
+  Door: https://2005275179-stsite-oper.pool601.yun300.cn # 正式环境
 base_config:
   over_time: 14400                                #cookie 过期时间
   key: GWSESSION                                   #cookies键
