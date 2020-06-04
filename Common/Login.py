@@ -13,6 +13,7 @@ class Login:
         self.user_pwd = ConfigYaml('user_pwd').base_config
         self.website = ConfigYaml('Door').base_url
         self.username = ConfigYaml('user_name').base_config
+        self.cookie_url = ConfigYaml('cookie_url').base_config
         self.driver = browser()
         self.support = WebDriverWait(driver=self.driver, timeout=30)
         self.element = (By.XPATH, "(//{}[@{}='{}'])[{}]")
@@ -38,6 +39,9 @@ class Login:
     def click(self, element, *args):
         self.xpath(element, *args).click()
 
+    def double_click(self, element, *args):
+        self.xpath(element, *args).double_click()
+
     def send_keys(self, element, *args, value):
         self.clear(element, *args)
         self.xpath(element, *args).send_keys(value)
@@ -48,33 +52,35 @@ class Login:
     def _click(self, *args):
         return self.click(self.element, *args)
 
+
+    def more_windows(self):
+        return self.driver.window_handles
+
+    def switch_windows(self, name):
+
+        windows = self.more_windows()
+        return self.driver.switch_to.window(windows[name])
+
     def login(self):
         '''
         :return:
         '''
         try:
+            outcome('green', "请稍等,正在登陆中....")
             self.driver.get(self.base_url)
             self._send_keys("*", "class", "el-input__inner", 2, data=self.username)
             self._send_keys("*", "class", "el-input__inner", 3, data=self.user_pwd)
             self._send_keys("*", "class", "el-input__inner", 4, data=self.website)
             self._click("*", "class", "el-button el-button--primary", 1)
-            sleep(17)
+            sleep(15)
             self._click("*", "class", "pos-icon", 7)
+            self.switch_windows(2)
             sleep(3)
-            self._click("*", "class", "rel active", 1)
+            self.driver.get(self.cookie_url)
+            cookies = self.driver.get_cookies()[1]['value']
             sleep(2)
+            outcome('green', "登陆完成,获取【Cookie】成功....")
+            return cookies
         except Exception:
             outcome('red', '登录异常....')
-
-
-    def get_token(self):
-        """
-        通过driver获取到driver中的token
-        """
-        js = "sessionStorage.getItem('token');"
-        token = self.driver.execute_script(js)
-        print(token)
-
-
-Login().get_token()
 

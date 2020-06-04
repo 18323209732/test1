@@ -37,7 +37,7 @@ class MyTest(TestCase):
     def setUpClass(self):
         self.key = ConfigYaml('key').base_config
         self.cookies_key = ConfigYaml('cookies').base_config
-        Get_Cookies(self.key).write_cookies()
+        Get_Cookies().write_cookies()
         self.cookies_value = ReadWrite(sign='session', option='cookies').read_ini_cookies()
         self.headers = {'Content-Type': 'application/json;charset=UTF-8'}
         self.headers.update({self.cookies_key: self.cookies_value})
@@ -108,7 +108,6 @@ class MyTest(TestCase):
             usetime=self.time,
             results=self.result
             )
-
         Resonse = str(base64.b64encode(str(resonse).encode('utf-8')), 'utf-8')
         if self.sql:
             mysql = SqlHandle(self.casename,self.notes, self.level, self.url, self.abnormal,self.author,self.time, Resonse, self.className)
