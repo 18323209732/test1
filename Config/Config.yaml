@@ -1,12 +1,13 @@
 base_url:
   Design: http://design.yun300.cn/html/login.html        #设计器地址
-  Door: https://2005275179-stsite-oper.pool601.yun300.cn # 正式环境
+  Door: http://2004105022.pool5-site.make.yun300.cn # 正式环境
 base_config:
+  cookies: Cookie
   over_time: 14400                                #cookie 过期时间
   key: GWSESSION                                   #cookies键
   user_name: zhanghailong                         #登录名称
   user_pwd: v4                                    #密码
-  website: www.rootcloud.com                      #网站
+  website: 2004105022.pool5-site.make.yun300.cn                      #网站
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
   steam_handler: false                          #控制台输入日志 Fasle：不输入
