@@ -95,7 +95,7 @@ class MyTest(TestCase):
         except:
             self.msg = 'None'
         try:
-            Assertion(self.result, self.assertEqual, actualone="code",
+            Assertion(self.result, self.assertEqual, actualone="status",
                       expectone=self.expected[0],
                       ).datahandle()
         except:
@@ -111,7 +111,7 @@ class MyTest(TestCase):
 
         Resonse = str(base64.b64encode(str(resonse).encode('utf-8')), 'utf-8')
         if self.sql:
-            mysql = SqlHandle(self.casename,self.notes, self.level, self.url, self.abnormal,self.author,self.time, Resonse, self.className)
+            mysql = SqlHandle(self.casename,self.notes,self.level, self.url, self.abnormal,self.author,self.time, Resonse, self.className)
             mysql.implement()
             mysql.insert_result_table()
 
