@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="sqlite3.exe" uuid="16474f35-cd59-48b7-8613-d778b00a4419">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:E:\Automate\sqlite3\sqlite-tools-win32-x86-3320100\sqlite3.exe</jdbc-url>
+    </data-source>
+  </component>
+</project>
