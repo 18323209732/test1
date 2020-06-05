@@ -1,14 +1,14 @@
 Door:
   attribute: #属性管理
-    - url: /manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_add  # 添加属性类型地址
-      modular: 添加属性  # 接口注释
+    - url:   # 添加属性类型地址
+      modular: 属性管理  # 接口注释
       className: add_attribute  # 接口类名
       funName:
         - test_add_attribute: {  # 添加属性类型
-          url: ,
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=188078&authPermission=attribute_add',
           level: 高,   #级别
           author: 方坤,  #作者
-          bar: {"id":"","appId":2,"templateName":"类型09","memo":"","operType":"add","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"name":"产品名称09","defaultname":"","defaultcode":"","isrequire":"0","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"name","isFix":"0","issearch":"0"},{"name":"编号","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"code","isFix":"0","issearch":"0"},{"name":"计量单位","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"unit","isFix":"0","issearch":"1"},{"name":"重量","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"weight","isFix":"0","issearch":"1"},{"name":"计费重量","defaultname":"","defaultcode":"","isrequire":"1","unit":"kg","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"chargedWeight","isFix":"0","issearch":"1"},{"name":"市场价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"price","isFix":"0","issearch":"1"},{"name":"零售价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"retailPrice","isFix":"0","issearch":"1"},{"name":"库存","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"stock","isFix":"0","issearch":"1"},{"name":"最低起订量","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"moq","isFix":"0","issearch":"1"},{"name":"交货期","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"deliveryTime","isFix":"0","issearch":"1"},{"name":"产品描述","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"1","subFieldType":"content","option":"","code":"content","isFix":"0","issearch":"1"}],"specDataArr":[],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
+          bar: {"id":"","appId":2,"templateName":"123","memo":"","operType":"add","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"name":"产品名称","defaultname":"","defaultcode":"","isrequire":"0","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"name","isFix":"0","issearch":"0"},{"name":"编号","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"code","isFix":"0","issearch":"0"},{"name":"计量单位","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"unit","isFix":"0","issearch":"1"},{"name":"重量","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"weight","isFix":"0","issearch":"1"},{"name":"计费重量","defaultname":"","defaultcode":"","isrequire":"1","unit":"kg","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"chargedWeight","isFix":"0","issearch":"1"},{"name":"市场价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"price","isFix":"0","issearch":"1"},{"name":"零售价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"retailPrice","isFix":"0","issearch":"1"},{"name":"库存","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"stock","isFix":"0","issearch":"1"},{"name":"最低起订量","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"moq","isFix":"0","issearch":"1"},{"name":"交货期","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"deliveryTime","isFix":"0","issearch":"1"},{"name":"产品描述","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"1","subFieldType":"content","option":"","code":"content","isFix":"0","issearch":"1"}],"specDataArr":[],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
           test_data: {},
           case_name: 添加属性类型,
           expected: [200],  # 预期结果
@@ -16,10 +16,10 @@ Door:
           re_bar: json, # 请求参数
           }
           test_attribute_list: {  # 属性列表
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/list?viewType=1&tenantId=196498&appId=2&ec_p=1&ec_crd=15&startDate=&endDate=&sortField=&sortType=',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/list',
           level: 中,   #级别
           author: 方坤,  #作者
-          bar: ,
+          bar: {'appId':2,'viewType':1,'tenantId':'188078','ec_p':'1','ec_crd':'15','startDate':'','endDate':'','sortField':''},
           test_data: {},
           case_name: 属性类型列表,
           expected: [200],  # 预期结果
@@ -27,7 +27,7 @@ Door:
           re_bar: json, # 请求参数
         }
           test_edit_attribute: {  # 编辑属性类型
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=196498&appId=2&id=1&operType=edit',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=188078&appId=2&id={}&operType=edit',
           level: 中,   #级别
           author: 方坤,  #作者
           bar: ,
@@ -38,18 +38,18 @@ Door:
           re_bar: json, # 请求参数
         }
           test_edit_attribute_pre: {  # 编辑属性类型后保存
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_edit',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=188078&authPermission=attribute_edit',
           level: 中,   #级别
           author: 方坤,  #作者
-          bar: {"id":1,"appId":2,"templateName":"默认属性类型1","memo":"系统默认模版,全局只有一个","operType":"edit","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"isrequire":"0","issearch":"0","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入产品名称","defaultname":"产品名称","defaultcode":"name","aid":1,"isFix":"0","name":"产品名称","isRefer":false,"code":"name"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入编号","defaultname":"编号","defaultcode":"code","aid":2,"isFix":"0","name":"编号","isRefer":false,"code":"code"},{"isrequire":"0","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入最低起订量","defaultname":"最低起订量","defaultcode":"moq","aid":17,"isFix":"0","name":"最低起订量","isRefer":false,"code":"moq"},{"isrequire":"0","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入交货期","defaultname":"交货期","defaultcode":"deliveryTime","aid":18,"isFix":"0","name":"交货期","isRefer":false,"code":"deliveryTime"},{"isrequire":"0","issearch":"1","unit":"kg","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入计费重量","defaultname":"计费重量","defaultcode":"chargedWeight","aid":19,"isFix":"0","name":"计费重量","isRefer":false,"code":"chargedWeight"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入计量单位","defaultname":"计量单位","defaultcode":"unit","aid":3,"isFix":"0","name":"计量单位","isRefer":false,"code":"unit"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入重量","defaultname":"重量","defaultcode":"weight","aid":4,"isFix":"0","name":"重量","isRefer":false,"code":"weight"},{"isrequire":"1","issearch":"1","unit":"元","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入市场价","defaultname":"市场价","defaultcode":"price","aid":5,"isFix":"0","name":"市场价","isRefer":false,"code":"price"},{"isrequire":"1","issearch":"1","unit":"元","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入零售价","defaultname":"零售价","defaultcode":"retailPrice","aid":6,"isFix":"0","name":"零售价","isRefer":false,"code":"retailPrice"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入库存","defaultname":"库存","defaultcode":"stock","aid":7,"isFix":"0","name":"库存","isRefer":false,"code":"stock"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"1","subFieldType":"AREtext","option":"","optionReferIdx":[],"defaultname":"产品描述","defaultcode":"content","aid":8,"isFix":"0","name":"产品描述","isRefer":false,"code":"content"}],"specDataArr":[],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
+          bar: {"id":13,"appId":2,"templateName":"自动1667","memo":"","operType":"edit","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"isrequire":"0","issearch":"0","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"name","aid":126,"isFix":"0","name":"产品名称","isRefer":false,"code":"name"},{"isrequire":"1","issearch":"0","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"code","aid":127,"isFix":"0","name":"编号","isRefer":false,"code":"code"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"unit","aid":128,"isFix":"0","name":"计量单位","isRefer":false,"code":"unit"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"weight","aid":129,"isFix":"0","name":"重量","isRefer":false,"code":"weight"},{"isrequire":"1","issearch":"1","unit":"kg","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"chargedWeight","aid":130,"isFix":"0","name":"计费重量","isRefer":false,"code":"chargedWeight"},{"isrequire":"1","issearch":"1","unit":"元","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"price","aid":131,"isFix":"0","name":"市场价","isRefer":false,"code":"price"},{"isrequire":"1","issearch":"1","unit":"元","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"retailPrice","aid":132,"isFix":"0","name":"零售价","isRefer":false,"code":"retailPrice"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"stock","aid":133,"isFix":"0","name":"库存","isRefer":false,"code":"stock"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"moq","aid":134,"isFix":"0","name":"最低起订量","isRefer":false,"code":"moq"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"deliveryTime","aid":135,"isFix":"0","name":"交货期","isRefer":false,"code":"deliveryTime"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"1","subFieldType":"content","option":"","optionReferIdx":[],"promt":"请输入","defaultname":"","defaultcode":"content","aid":136,"isFix":"0","name":"产品描述","isRefer":false,"code":"content"}],"specDataArr":[],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
           test_data: {},
           case_name: 编辑属性类型后保存,
-          expected: ["200"],  # 预期结果
+          expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
           test_attribute_copy: {  # 复制属性类型
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=196498&appId=2&id=32&operType=copy',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=188078&appId=2&id={}&operType=copy',
           level: 中,   #级别
           author: 方坤,  #作者
           bar:,
@@ -60,7 +60,7 @@ Door:
           re_bar: json, # 请求参数
           }
           test_attribute_delete: {  # 删除属性类型
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/delAttribute?viewType=1&tenantId=196498&authPermission=attribute_del&_d=1591087588807&templateId=33&appId=2',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/delAttribute?viewType=1&tenantId=188078&authPermission=attribute_del&templateId={}&appId=2',
           level: 中,   #级别
           author: 方坤,  #作者
           bar:,
@@ -70,6 +70,17 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
             }
+          test_list_screen: {  # 列表筛选
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/list?viewType=1&tenantId=188078&_d=1591177451739&appId=2&ec_p=1&ec_crd=15&startDate={}&endDate={}&sortField=&sortType=',
+          level: 低,   #级别
+          author: 方坤,  #作者
+          bar:,
+          test_data: {},
+          case_name: 列表筛选,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
 
   productCategory: #添加产品分类
     - url:   # 类URL为空

@@ -1,6 +1,6 @@
 base_url:
   Design: http://design.yun300.cn/html/login.html        #设计器地址
-  Door: https://2005275179-stsite-oper.pool601.yun300.cn # 正式环境
+  Door: https://2004105022-site.pool5.yun300.cn # 正式环境
 base_config:
   over_time: 14400                                #cookie 过期时间
   key: GWSESSION                                   #cookies键
@@ -30,12 +30,12 @@ base_config:
   mail_file: True                                   #是否发送邮件附件
   mail_picture: True                               #是否添加发送邮件正文图片
   matching: '*_st.py'                              #文件后缀
-  mysql: False                                    #数据库连接类型开关
-  sqlite: True                                     #sqlite执行开关
+  mysql: True                                    #数据库连接类型开关
+  sqlite: False                                     #sqlite执行开关
   host: 127.0.0.1                                     #数据库主机ip
   port: 3306                                          #主机sql端口
   sqlname: response                                  #数据库名称
-  pwd: '123456'                                         #数据库连接密码
+  pwd: '111111'                                         #数据库连接密码
   user: root                                  #数据库连接用户
   redisip: 192.168.4.36                       #redis服务ip
   redisport: 6379                             #redis服务端口
@@ -74,7 +74,7 @@ email:
   send_pwd: Cjbwt0107  # 邮件发送者邮箱密码
   receive_person: [chenjianbo@gouuse.cn]      #邮件接收者
 sql:
-  create_table: CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));
+  create_table: CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL AUTO_INCREMENT,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));
   drop_database: DROP DATABASE %s;
   search_response: SELECT funname,describes,priority,address,result,writer,usetime,summary FROM response WHERE 1=1; # 获取结果 数据
   search_desc: SELECT usetime FROM response ORDER BY  usetime desc; # 查询数据库排序/
@@ -82,7 +82,7 @@ sql:
   search_min_time: select min(usetime) from response;
   insert_response: INSERT INTO response (funname,describes,priority,address,result,writer,usetime,summary) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s');
   del_response: DELETE FROM response WHERE 1=1; # 清除统计结果数据
-  create_result: CREATE TABLE IF NOT EXISTS result(id INTEGER primary key NOT NULL,funname varchar (100),totalnumber int default 0,passnumber int default 0, errornumber int default 0,failnumber int default 0,passrate float default 0,errorrate float default 0,failrate float default 0,modular varchar (30));
+  create_result: CREATE TABLE IF NOT EXISTS result(id INTEGER primary key NOT NULL AUTO_INCREMENT,funname varchar (100),totalnumber int default 0,passnumber int default 0, errornumber int default 0,failnumber int default 0,passrate float default 0,errorrate float default 0,failrate float default 0,modular varchar (30));
   insert_result: INSERT INTO result(funname,modular) VALUES ('%s','%s');
   search_result: SELECT *  FROM result WHERE funname='%s';
   update_result: update result set totalnumber=totalnumber+1, %s=%s+1 where funname='%s';

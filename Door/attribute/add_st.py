@@ -8,7 +8,13 @@ from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import random
 import urllib3
+from Door.attribute import Public
+import datetime
 
+
+
+list_id = Public.list_id() #获取属性列表的id
+id = random.choice(list_id) #随机获取一个id
 
 class add_attribute(MyTest):
     condition = True
@@ -22,9 +28,9 @@ class add_attribute(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             num = random.randint(0, 1000)
             self.data['templateName'] = '自动%d' % num
-            r = requests.post(url, headers=self.headers, json=self.data, stream=True,verify = False)
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-            print("templateId:::",self.result['data']['templateId'])
+            print(self.result)
 
             self.time=r.elapsed.total_seconds()
         except:
@@ -39,14 +45,10 @@ class add_attribute(MyTest):
         # 属性类型列表
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify = False)
-            print("jieguo:",r)
+            self.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8'
+            r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify = False)
             self.result = r.json()
-            global list_num
-            list_num = []
-            for i in self.result['data']['list']:
-                id = i['id']
-                list_num.append(id)
+            print(self.result)
 
             self.time=r.elapsed.total_seconds()
         except:
@@ -55,21 +57,22 @@ class add_attribute(MyTest):
             return self.singular
 
 
-    # # @unittest.skipIf(condition, "暂时跳过")
+    # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_edit_attribute(self):
         # 编辑属性类型
         try:
-            url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify = False)
+            url = ConfigYaml(self.projectName).base_url + self.url.format(id)
+            r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify = False)
             self.result = r.json()
+            print('编辑：--=-：',r.json())
 
             self.time=r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
             return self.singular
-        
+
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
@@ -78,16 +81,18 @@ class add_attribute(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             num = random.randint(0,10000)
-            self.data['templateName'] = '默认属性类型%d'%num
+            self.data['templateName'] = '自动%d'%num
+            self.data['id'] = id
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify = False)
             self.result = r.json()
+            print('rrrr-=:',self.result)
 
             self.time=r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
             return self.singular
-        
+
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
@@ -95,7 +100,7 @@ class add_attribute(MyTest):
         # 复制属性类型
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            url = ConfigYaml(self.projectName).base_url + self.url
+            url = ConfigYaml(self.projectName).base_url + self.url.format(id)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -104,7 +109,7 @@ class add_attribute(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
             return self.singular
-        
+
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
@@ -112,7 +117,28 @@ class add_attribute(MyTest):
         # 删除属性类型
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            url = ConfigYaml(self.projectName).base_url + self.url
+            url = ConfigYaml(self.projectName).base_url + self.url.format(id)
+            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time=r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red',self.singular)
+            return self.singular
+
+
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_list_screen(self):
+        # 列表筛选
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            start_today = datetime.date.today()  # 获取当前年月日
+            offset = datetime.timedelta(days=-5)
+            end_date = (start_today + offset).strftime('%Y-%m-%d')  # 获取当前日期前5天年月日
+
+            url = ConfigYaml(self.projectName).base_url + self.url.format(end_date,start_today)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 

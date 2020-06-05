@@ -39,7 +39,7 @@ class MyTest(TestCase):
         Get_Cookies(self.key).write_cookies()
         self.cookies = ReadWrite(sign='session', option='cookies').read_ini_cookies()
         self.headers = {'Content-Type': 'application/json;charset=UTF-8'}
-        self.headers.update({self.key: self.cookies})
+        self.headers.update({'Cookie': 'GWSESSION=NDE1ZjY4ZTEtYjlkMy00ZDFiLWI0NzEtMmZiZWZiNjkzNjZh'})
 
 
     @classmethod

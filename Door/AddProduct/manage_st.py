@@ -7,7 +7,7 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 class manage_AddProduct(MyTest):
 
@@ -18,6 +18,7 @@ class manage_AddProduct(MyTest):
     @ReRun(MyTest.setUp)
     def test_add_product(self):
         # 添加产品
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.GET(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -34,6 +35,7 @@ class manage_AddProduct(MyTest):
     @ReRun(MyTest.setUp)
     def test_get_AppAuthority(self):
         # 获取权限
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)

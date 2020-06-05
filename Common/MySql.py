@@ -51,16 +51,16 @@ class Sql:
 
 
 if __name__=="__main__":
-    m="SELECT *  FROM result WHERE funname='test_product_getlistsss';"
+    m="CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL AUTO_INCREMENT,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));"
     s = "update result set totalnumber=totalnumber+1,passnumber=passnumber+1,passrate=(passnumber/totalnumber) where funname='test_fun';"
-    sql = "INSERT INTO result(funname) VALUES ('test_fun');"
+    sql = "CREATE TABLE IF NOT EXISTS result(id INTEGER primary key NOT NULL AUTO_INCREMENT,funname varchar (100),totalnumber int default 0,passnumber int default 0, errornumber int default 0,failnumber int default 0,passrate float default 0,errorrate float default 0,failrate float default 0,modular varchar (30));"
     j = """CREATE TABLE IF NOT EXISTS result(id INTEGER primary key NOT NULL,funname varchar (100),totalnumber int default 0,
       passnumber int default 0, errornumber int default 0,failnumber int default 0,passrate float default 0,
       errorrate float default 0,failrate float default 0,modular varchar (30));"""
     hh = "select max(usetime) from response;"
     ff = """SELECT modular,funname  FROM result where errorrate >0.7 or failrate >0.8;"""
     tt="""CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));"""
-    da = Sql(ff).execute_sql()
+    da = Sql(sql).execute_sql()
     print(da)
 
 
