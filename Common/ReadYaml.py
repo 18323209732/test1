@@ -7,9 +7,8 @@ current_dir = os.getcwd().split("\\")[-1]
 
 
 class ConfigYaml:
-    def __init__(self, key=None,dir="Config",file='Config.yaml', encoding='utf-8'):
+    def __init__(self, key=None, dir="Config", file='Config.yaml', encoding='utf-8'):
         '''
-
         :param key:
         :param dir:
         :param file:
@@ -123,6 +122,41 @@ class CaseYaml:
         :return:
         '''
         return self.all_case.get(self.key)
+
+
+class ReadPublic:
+    def __init__(self, key=None, catalog='', file='Public.yaml', encoding='utf-8'):
+        '''
+
+        :param key:
+        :param file:
+        :param encoding:
+        '''
+        self.key = key
+        self.file = file
+        self.dir = ConfigYaml(key='projectName').base_config
+        self.catalog = catalog
+        self.encoding = encoding
+
+
+    @property
+    def public_data(self):
+        """读取yaml里所有的内容"""
+        self.path = Any_Path(self.dir, self.catalog, self.file)
+        if os.path.exists(self.path):
+            f = open(self.path, encoding=self.encoding)
+            data = yaml.load(f)
+            f.close()
+            return data
+        else:
+            outcome('red', f"请检此路径:{self.path},下的用例文件是否存在")
+
+    @property
+    def public_value(self):
+        '''
+        :return:
+        '''
+        return self.public_data.get(self.key)
 
 
 if __name__ == '__main__':

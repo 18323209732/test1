@@ -1,12 +1,14 @@
 base_url:
   Design: http://design.yun300.cn/html/login.html        #设计器地址
-  Door: https://2004105022-site.pool5.yun300.cn # 正式环境
+  Door: http://2004105022.pool5-site.make.yun300.cn # 正式环境
 base_config:
+  cookie_url: http://2004105022.pool5-site.make.yun300.cn/managePanel/clue/list
+  cookies: Cookie
   over_time: 14400                                #cookie 过期时间
   key: GWSESSION                                   #cookies键
   user_name: zhanghailong                         #登录名称
   user_pwd: v4                                    #密码
-  website: www.rootcloud.com                      #网站
+  website: 2004105022.pool5-site.make.yun300.cn                      #网站 2004105022.pool5-site.make.yun300.cn
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
   steam_handler: false                          #控制台输入日志 Fasle：不输入
@@ -30,12 +32,12 @@ base_config:
   mail_file: True                                   #是否发送邮件附件
   mail_picture: True                               #是否添加发送邮件正文图片
   matching: '*_st.py'                              #文件后缀
-  mysql: True                                    #数据库连接类型开关
-  sqlite: False                                     #sqlite执行开关
-  host: 127.0.0.1                                     #数据库主机ip
+  mysql:  True                                   #数据库连接类型开关
+  sqlite: False                                    #sqlite执行开关
+  host: localhost                                 #数据库主机ip
   port: 3306                                          #主机sql端口
   sqlname: response                                  #数据库名称
-  pwd: '111111'                                         #数据库连接密码
+  pwd: '123456'                                         #数据库连接密码
   user: root                                  #数据库连接用户
   redisip: 192.168.4.36                       #redis服务ip
   redisport: 6379                             #redis服务端口

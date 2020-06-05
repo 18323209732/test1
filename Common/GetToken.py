@@ -16,21 +16,18 @@ from Common.Login import Login
 
 
 class Get_Cookies:
-    def __init__(self, value):
+    def __init__(self):
         '''
         '''
-        self.value = value
         self.browser_type = ConfigYaml('browserName').base_config
         self.over_time = ConfigYaml('over_time').base_config
-        self.host = ConfigYaml('Door').base_url.split("//")[1]
+        self.host = ConfigYaml('website').base_config
+        self.key = ConfigYaml('key').base_config
         self.local_state = os.environ['LOCALAPPDATA'] + r'\Google\Chrome\User Data\Local State'
         self.cookie_path = os.environ['LOCALAPPDATA'] + r"\Google\Chrome\User Data\Default\Cookies"
         self.sql = ConfigYaml('search_cookies').sql % self.host
         self.current_time = int(time.time())
-        self.config = ReadWrite(sign="session", option='cookies',
-                          value=self.get_cookie_from_chrome(),
-                          time_sign='times', time_option='time',
-                          time_value=str(self.current_time))
+
 
     def get_path(self, main_value, sub_value):
         '''
@@ -114,7 +111,7 @@ class Get_Cookies:
                 else:
                     cookies[host_key] = CryptUnprotectData(encrypted_value)[1].decode()
 
-            return cookies.get(self.value)
+            return cookies
 
     def write_cookies(self):
         '''
@@ -124,9 +121,16 @@ class Get_Cookies:
         if value:
             over_time = int(value) + int(self.over_time)
             if over_time < self.current_time:
-                Login().login()
-                self.config.write_ini()
+                cookie = Login().login()
+                ReadWrite(sign="session", option='cookies',
+                          value='{}={}'.format(self.key, cookie),
+                          time_sign='times', time_option='time',
+                          time_value=str(self.current_time)).write_ini()
         else:
-            Login().login()
-            self.config.write_ini()
+            cookie = Login().login()
+            ReadWrite(sign="session", option='cookies',
+                      value='{}={}'.format(self.key, cookie),
+                      time_sign='times', time_option='time',
+                      time_value=str(self.current_time)).write_ini()
+
 

@@ -1,3 +1,4 @@
+
 from bottle import template
 import webbrowser
 import sys
@@ -30,7 +31,7 @@ case_body = """
             r = requests.{}(url, headers=self.headers, {}=self.data, stream=True, verify=False)
             self.result = r.json()
 
-            self.time=r.elapsed.total_seconds()
+            self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -65,6 +66,7 @@ import requests
 import time
 from random import randint
 from datetime import date,timedelta
+from Common.ReadYaml import ReadPublic
 '''
 
 publicyaml = '''add_customer:
