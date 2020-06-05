@@ -1,9 +1,9 @@
 from Door.attribute.add_st import add_attribute
-from Door.productCategory.manage_st import manage_productCategory
+from Door.AddCategory.manage_st import manage_AddCategory
 
-all_class = [add_attribute, manage_productCategory]
+all_class = [add_attribute, manage_AddCategory]
 
-all_dirs = ['AddProduct', 'attribute', 'productCategory']
+all_dirs = ['AddProduct', 'attribute', 'AddCategory']
 
 class_case = ()
 

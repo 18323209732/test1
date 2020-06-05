@@ -71,10 +71,10 @@ Door:
           re_bar: json, # 请求参数
             }
 
-  productCategory: #添加产品分类
+  AddCategory: #添加产品分类
     - url:   # 类URL为空
       modular: 添加产品分类,然后获取分类列表，验证创建分类是否存在  # 接口注释
-      className: manage_productCategory  # 接口类名
+      className: manage_AddCategory  # 接口类名
       funName:
         - test_add_category: {  # 添加产品分类
           url: /manager/gwforward/manager-webapi/product/appCategory/save,
@@ -103,7 +103,7 @@ Door:
       modular: 保存产品  # 接口注释
       className: manage_AddProduct  # 接口类名
       funName:
-        - test_add_product: {  # 接口方法名
+        - test01_add_product: {  # 接口方法名
           url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
           level: 高,
           author: 姜娜,
@@ -114,7 +114,18 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
-          test_product_list: {  # 接口方法名
+#          test02_attribute_list: {  # 接口方法名
+#          url: '/manager/gwforward/manager-webapi/product/productAttribute/list?appId=2',
+#          level: 中,
+#          author: 姜娜,
+#          bar:{},
+#          relation_data: {},    #关联接口
+#          case_name: 产品列表,
+#          expected: [200],  # 预期结果添加成功，产品列表显示正常
+#          mode: get,  # 请求类型
+#          re_bar: json, # 请求参数
+#          }
+          test03_product_list: {  # 接口方法名
           url: /manager/gwforward/manager-webapi/product/productInformation/list,
           level: 中,
           author: 姜娜,
@@ -125,6 +136,7 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
+
   content: #内容模块
     - url:  # 邮件地址
       modular: 介绍内容  # 接口注释
