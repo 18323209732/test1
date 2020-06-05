@@ -35,7 +35,6 @@ class MyTest(TestCase):
 
     @classmethod
     def setUpClass(self):
-        self.key = ConfigYaml('key').base_config
         self.cookies_key = ConfigYaml('cookies').base_config
         Get_Cookies().write_cookies()
         self.cookies_value = ReadWrite(sign='session', option='cookies').read_ini_cookies()

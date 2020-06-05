@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="128">
+          <list size="129">
             <item index="0" class="java.lang.String" itemvalue="tzlocal" />
             <item index="1" class="java.lang.String" itemvalue="PyYAML" />
             <item index="2" class="java.lang.String" itemvalue="queued" />
@@ -133,6 +133,7 @@
             <item index="125" class="java.lang.String" itemvalue="queues" />
             <item index="126" class="java.lang.String" itemvalue="allure-behave" />
             <item index="127" class="java.lang.String" itemvalue="aiohttp" />
+            <item index="128" class="java.lang.String" itemvalue="six" />
           </list>
         </value>
       </option>
