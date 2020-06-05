@@ -1,0 +1,858 @@
+Index: Common/MyUnit.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># coding=utf-8\r\nimport base64\r\nimport traceback\r\n\r\nfrom Common.ReadWriteIni import ReadWrite\r\n\r\nfrom Common.FontColor import outcome\r\nfrom Common.DataHandle import SqlHandle,Assertion,Matching\r\nfrom Common.DataHandle import CaseHandle\r\nimport unittest\r\nfrom Common.GetToken import Get_Cookies\r\nfrom unittest import TestCase\r\nimport json\r\nfrom Common.MySql import Sql\r\nfrom Common.Log import MyLog\r\nfrom Common.ReadYaml import ConfigYaml,CaseYaml\r\nfrom Common.ReadWriteIni import ReadWrite\r\nfrom Common.Results import results\r\nimport warnings\r\n# from Common.GetToken import getCookie\r\nimport re\r\nfrom Common.MyRedis import ReDis\r\nfrom Common.DataHandle import SqlHandle,Assertion\r\n\r\n\r\nclass MyTest(TestCase):\r\n\r\n    def __init__(self, methodName='runTest', param=None):\r\n        TestCase.__init__(self, methodName)\r\n        self.param = param\r\n        self.result = None\r\n        self.time = 0\r\n        self.abnormal = ''\r\n\r\n\r\n    @classmethod\r\n    def setUpClass(self):\r\n        self.key = ConfigYaml('key').base_config\r\n        Get_Cookies(self.key).write_cookies()\r\n        self.cookies = ReadWrite(sign='session', option='cookies').read_ini_cookies()\r\n        self.headers = {'Content-Type': 'application/json;charset=UTF-8'}\r\n        self.headers.update({self.key: self.cookies})\r\n\r\n\r\n    @classmethod\r\n    def tearDownClass(self):\r\n        pass\r\n\r\n    def setUp(self):\r\n        '''\r\n        初始化数据\r\n        :return:\r\n        '''\r\n        self.className = self.__class__.__name__\r\n        self.casename = self._testMethodName\r\n        self.projectName = ConfigYaml(\"projectName\").base_config\r\n        self.casedata = CaseYaml().all_case\r\n        if self.casedata:\r\n            self.clsdata,self.fundata = CaseHandle(self.className,self.casename,self.casedata)\r\n        self.sql = ConfigYaml('sql').base_config\r\n        self.redis = ConfigYaml('redis').base_config\r\n        if self.fundata.get('url'):\r\n            self.url = self.fundata.get('url')\r\n        else:\r\n            self.url = self.clsdata.get('url')\r\n        if self.fundata.get('author'):\r\n            self.author = self.fundata.get('author')\r\n        else:\r\n            self.author = \"None\"\r\n        if self.fundata.get('case_name'):\r\n            self.notes = self.fundata.get('case_name')\r\n        else:\r\n            self.notes = \"None\"\r\n        if self.fundata.get('bar'):\r\n            self.data = self.fundata.get('bar')\r\n        else:\r\n            self.data = {}\r\n        if self.fundata.get('level'):\r\n            self.level = self.fundata.get('level')\r\n        else:\r\n            self.level = \"中\"\r\n        self.test_data = self.fundata.get('test_data')\r\n        self.method = self.fundata.get('mode')\r\n        self.expected = self.fundata.get('expected')\r\n\r\n\r\n    def tearDown(self):\r\n        try:\r\n            self.actual = Matching(\"status\",self.result)\r\n        except Exception:\r\n            self.actual = 'None'\r\n        try:\r\n            self.msg = Matching(\"msg\",self.result)\r\n        except:\r\n            self.msg = 'None'\r\n        try:\r\n            Assertion(self.result, self.assertEqual, actualone=\"status\",\r\n                      expectone=self.expected[0],\r\n                      ).datahandle()\r\n        except:\r\n            self.abnormal = str(traceback.format_exc())\r\n            outcome('red',self.abnormal)\r\n        resonse = results(\r\n            expected=self.expected[0],\r\n            actual=self.actual,\r\n            parameter=self.data,\r\n            usetime=self.time,\r\n            results=self.result\r\n            )\r\n\r\n        Resonse = str(base64.b64encode(str(resonse).encode('utf-8')), 'utf-8')\r\n        if self.sql:\r\n            mysql = SqlHandle(self.casename,self.notes,self.level, self.url, self.abnormal,self.author,self.time, Resonse, self.className)\r\n            mysql.implement()\r\n            mysql.insert_result_table()\r\n\r\n        if self.redis:\r\n            data = SqlHandle(self.casename,self.notes,self.level,self.url,self.abnormal,self.author,self.time,Resonse,self.className).data_handle()\r\n            ReDis(data).lpush()\r\n\r\n\r\n\r\n    @staticmethod\r\n    def parametrize(class_name, param=None):\r\n        '''\r\n        :param testcase_klass:\r\n        :param param:\r\n        :return:\r\n        '''\r\n        \"\"\" Create a suite containing all tests taken from the given\r\n            subclass, passing them the parameter 'param'.\r\n        \"\"\"\r\n        testloader = unittest.TestLoader()\r\n        testnames = testloader.getTestCaseNames(class_name)\r\n        suite = unittest.TestSuite()\r\n        for name in testnames:\r\n            suite.addTest(class_name(name, param=param))\r\n        return suite\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Common/MyUnit.py	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Common/MyUnit.py	(date 1591156683145)
+@@ -35,11 +35,11 @@
+ 
+     @classmethod
+     def setUpClass(self):
+-        self.key = ConfigYaml('key').base_config
+-        Get_Cookies(self.key).write_cookies()
+-        self.cookies = ReadWrite(sign='session', option='cookies').read_ini_cookies()
+-        self.headers = {'Content-Type': 'application/json;charset=UTF-8'}
+-        self.headers.update({self.key: self.cookies})
++        # self.key = ConfigYaml('key').base_config
++        # Get_Cookies(self.key).write_cookies()
++        # self.cookies = ReadWrite(sign='session', option='cookies').read_ini_cookies()
++        self.headers = {'Content-Type': 'application/json;charset=UTF-8','Cookie': 'mr=39c993a9303f80c258f1d9fdb6e86f34; GWSESSION=Nzg4ZmNhZTEtY2U0Yy00MzdlLWEwZWEtNTA4MzU5ODk0ZjU4; SESSION_COOKIE=web-18-99'}
++        # self.headers.update({self.key: self.cookies})
+ 
+ 
+     @classmethod
+Index: Common/MySql.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nfrom pymysql.connections import Connection\r\nimport sqlite3\r\n# from Common.GetPath import second_path\r\nfrom Common.ReadYaml import ConfigYaml\r\nfrom Common.Route import Any_Path\r\n\r\n\r\nclass Sql:\r\n    def __init__(self,sql=None,db='Sqlite.db',encoding=\"utf-8\"):\r\n        '''\r\n\r\n        :param sql:  sql语句\r\n        :param db:  数据库名称\r\n        '''\r\n        self.sql = sql\r\n        self.db = db\r\n        self.encoding = encoding\r\n        self.mysql = ConfigYaml('mysql').base_config\r\n        self.sqlite_path = Any_Path('Config', self.db)\r\n        self.sqlite = ConfigYaml('sqlite').base_config\r\n        self.host = ConfigYaml('host').base_config\r\n        self.port = ConfigYaml('port').base_config\r\n        self.pwd = ConfigYaml('pwd').base_config\r\n        self.sqlname = ConfigYaml('sqlname').base_config\r\n        self.user = ConfigYaml('user').base_config\r\n        if self.sqlite:\r\n            try:\r\n                self.conn = sqlite3.connect(self.sqlite_path)\r\n            except:\r\n                raise ConnectionError(\"sqlite connect error,please check configuration ....\")\r\n        else:\r\n            try:\r\n                self.conn = Connection(host=self.host,user=self.user,password=self.pwd,database=self.sqlname,\r\n                                        port=self.port,charset='utf8')\r\n            except:\r\n                raise ConnectionError(\"mysql connect error,please check configuration ....\")\r\n\r\n    def execute_sql(self):\r\n        '''\r\n        执行sql语句\r\n        :return:\r\n        '''\r\n        cursor = self.conn.cursor()\r\n        cursor.execute(self.sql)\r\n        values = cursor.fetchall()\r\n        self.conn.commit()\r\n        cursor.close()\r\n        self.conn.close()\r\n        return values\r\n\r\n\r\nif __name__==\"__main__\":\r\n    m=\"SELECT *  FROM result WHERE funname='test_product_getlistsss';\"\r\n    s = \"update result set totalnumber=totalnumber+1,passnumber=passnumber+1,passrate=(passnumber/totalnumber) where funname='test_fun';\"\r\n    sql = \"INSERT INTO result(funname) VALUES ('test_fun');\"\r\n    j = \"\"\"CREATE TABLE IF NOT EXISTS result(id INTEGER primary key NOT NULL,funname varchar (100),totalnumber int default 0,\r\n      passnumber int default 0, errornumber int default 0,failnumber int default 0,passrate float default 0,\r\n      errorrate float default 0,failrate float default 0,modular varchar (30));\"\"\"\r\n    hh = \"select max(usetime) from response;\"\r\n    ff = \"\"\"SELECT modular,funname  FROM result where errorrate >0.7 or failrate >0.8;\"\"\"\r\n    tt=\"\"\"CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));\"\"\"\r\n    da = Sql(ff).execute_sql()\r\n    print(da)\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Common/MySql.py	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Common/MySql.py	(date 1591163659035)
+@@ -31,8 +31,7 @@
+                 raise ConnectionError("sqlite connect error,please check configuration ....")
+         else:
+             try:
+-                self.conn = Connection(host=self.host,user=self.user,password=self.pwd,database=self.sqlname,
+-                                        port=self.port,charset='utf8')
++                self.conn = Connection(host=self.host, user=self.user, passwd=self.pwd, db=self.sqlname, port=self.port, charset='utf8')
+             except:
+                 raise ConnectionError("mysql connect error,please check configuration ....")
+ 
+@@ -51,7 +50,7 @@
+ 
+ 
+ if __name__=="__main__":
+-    m="SELECT *  FROM result WHERE funname='test_product_getlistsss';"
++    m="CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));"
+     s = "update result set totalnumber=totalnumber+1,passnumber=passnumber+1,passrate=(passnumber/totalnumber) where funname='test_fun';"
+     sql = "INSERT INTO result(funname) VALUES ('test_fun');"
+     j = """CREATE TABLE IF NOT EXISTS result(id INTEGER primary key NOT NULL,funname varchar (100),totalnumber int default 0,
+@@ -60,7 +59,7 @@
+     hh = "select max(usetime) from response;"
+     ff = """SELECT modular,funname  FROM result where errorrate >0.7 or failrate >0.8;"""
+     tt="""CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));"""
+-    da = Sql(ff).execute_sql()
++    da = Sql(m).execute_sql()
+     print(da)
+ 
+ 
+Index: Common/MyProcess.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import unittest, time, os, multiprocessing\r\nimport commands\r\nfrom multiprocessing import Process\r\nfrom multiprocessing import  Lock\r\nfrom Common.DataHandle import Get_Skip\r\n# from Common.GetPath import second_path,third_path\r\nfrom Common.ReadYaml import ConfigYaml\r\nfrom Common.Route import Any_Path\r\nimport os\r\n\r\n\r\nclass  MyProcess(Process):\r\n    def __init__(self,catalog,data):\r\n        '''\r\n        继承多进程，重写该方法\r\n        :param catalog: 目录\r\n        '''\r\n        Process.__init__(self)\r\n        self.catalog = catalog\r\n        self.data = data\r\n        self.lock = Lock()\r\n\r\n    def run(self):\r\n        '''\r\n        重写run方法\r\n        :return:\r\n        '''\r\n        testsuite = LoadSuite(self.catalog).load_suite()\r\n        runner = unittest.TextTestRunner(verbosity=1)\r\n        self.lock.acquire()\r\n        result = runner.run(testsuite)\r\n        Get_Skip(result.skipped, self.data).get_skip()\r\n        self.lock.release()\r\n\r\n\r\nclass LoadSuite(object):\r\n    def __init__(self,catalog):\r\n        '''\r\n        封装测试集加载类\r\n        :param catalog: 目录\r\n        '''\r\n        self.catalog = catalog\r\n        self.projectName = ConfigYaml(\"projectName\").base_config\r\n        self.path = Any_Path(self.projectName)\r\n        self.matching = ConfigYaml(\"matching\").base_config\r\n\r\n    def load_suite(self):\r\n        '''\r\n        加载测试集\r\n        :return:\r\n        '''\r\n        testsuite = unittest.TestSuite()\r\n        discover = unittest.defaultTestLoader.discover(\r\n            Any_Path(self.projectName,self.catalog),\r\n            pattern=self.matching,top_level_dir=Any_Path(self.projectName)\r\n            )\r\n        for test_suite in discover:\r\n            if test_suite:\r\n                for test_case in test_suite:\r\n                    testsuite.addTests(test_case)\r\n        return testsuite\r\n\r\n\r\nclass RunFailError:\r\n\r\n    def __init__(self,classlist,class_case):\r\n        '''\r\n        运行错误率及失败率较高的用例\r\n        '''\r\n        self.classlist = classlist      #类列表\r\n        self.class_case = class_case       #类方法列表\r\n        self.runner = unittest.TextTestRunner(verbosity=1)\r\n\r\n\r\n    def get_case(self,classname,funname):\r\n        '''\r\n        获取相应的用例\r\n        :param all_data: 类对应的用例\r\n        :return:\r\n        '''\r\n        testsuite = unittest.TestSuite()\r\n        testsuite.addTest(classname(funname))\r\n        return testsuite\r\n\r\n\r\n    def run_fail_error(self):\r\n        '''\r\n        运行失败或者错误率达到多少的\r\n        :return:\r\n        '''\r\n        global suite\r\n        if self.classlist and self.class_case:\r\n            for fail_error in self.class_case:\r\n                for classname in self.classlist:\r\n                    class_name = str(classname).split('.')[-1].split(\"'\")[0]\r\n                    if fail_error[0] == class_name:\r\n                        self.runner.run(self.get_case(classname,fail_error[1]))\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Common/MyProcess.py	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Common/MyProcess.py	(date 1591159665070)
+@@ -1,5 +1,4 @@
+ import unittest, time, os, multiprocessing
+-import commands
+ from multiprocessing import Process
+ from multiprocessing import  Lock
+ from Common.DataHandle import Get_Skip
+Index: Door/AddProduct/Public.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/AddProduct/Public.py	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Door/AddProduct/Public.py	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
+@@ -1,10 +0,0 @@
+-
+-# coding=utf-8
+-import requests
+-from random import randint,choice
+-import random,os,re
+-import json
+-import requests
+-import time
+-from random import randint
+-from datetime import date,timedelta
+Index: Door/AddProduct/manage_st.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/AddProduct/manage_st.py	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Door/AddProduct/manage_st.py	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
+@@ -1,47 +0,0 @@
+-# coding=utf-8
+-import unittest
+-import traceback
+-import requests
+-from Common.FontColor import outcome
+-from Common.MyUnit import MyTest
+-from Common.ReadYaml import ConfigYaml
+-from Common.DataHandle import ReRun
+-import urllib3
+-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+-
+-class manage_AddProduct(MyTest):
+-
+-    condition = True
+-    # 保存产品
+-
+-    # @unittest.skipIf(condition, "暂时跳过")
+-    @ReRun(MyTest.setUp)
+-    def test_add_product(self):
+-        # 添加产品
+-        try:
+-            url = ConfigYaml(self.projectName).base_url + self.url
+-            r = requests.GET(url, headers=self.headers, json=self.data, stream=True, verify=False)
+-            self.result = r.json()
+-
+-            self.time=r.elapsed.total_seconds()
+-        except:
+-            self.singular = str(traceback.format_exc())
+-            outcome('red',self.singular)
+-            return self.singular
+-        
+-
+-    # @unittest.skipIf(condition, "暂时跳过")
+-    @ReRun(MyTest.setUp)
+-    def test_get_AppAuthority(self):
+-        # 获取权限
+-        try:
+-            url = ConfigYaml(self.projectName).base_url + self.url
+-            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+-            self.result = r.json()
+-
+-            self.time=r.elapsed.total_seconds()
+-        except:
+-            self.singular = str(traceback.format_exc())
+-            outcome('red',self.singular)
+-            return self.singular
+-        
+\ No newline at end of file
+Index: Door/AddProduct/Public.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/AddProduct/Public.yaml	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Door/AddProduct/Public.yaml	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
+@@ -1,3 +0,0 @@
+-add_customer:
+-  - url: /add/customerParam
+-    bar: {}
+Index: Log/2020-05-27.log
+===================================================================
+--- Log/2020-05-27.log	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Log/2020-05-27.log	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
+@@ -1,90 +0,0 @@
+-<<<<<<< HEAD
+-时间:2020-05-27 15:19:00,257  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,257  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,258  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,258  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,284  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,284  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,371  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,371  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,372  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,372  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,372  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,372  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,372  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,372  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,373  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,373  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:00,521  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 941 文件名:connectionpool.py
+-时间:2020-05-27 15:19:00,521  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 941 文件名:connectionpool.py
+-时间:2020-05-27 15:19:00,521  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 941 文件名:connectionpool.py
+-时间:2020-05-27 15:19:00,521  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 941 文件名:connectionpool.py
+-时间:2020-05-27 15:19:00,688  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 442 文件名:connectionpool.py
+-时间:2020-05-27 15:19:00,688  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 442 文件名:connectionpool.py
+-时间:2020-05-27 15:19:00,690  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 442 文件名:connectionpool.py
+-时间:2020-05-27 15:19:00,690  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 442 文件名:connectionpool.py
+-时间:2020-05-27 15:19:01,759  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 941 文件名:connectionpool.py
+-时间:2020-05-27 15:19:01,759  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 941 文件名:connectionpool.py
+-时间:2020-05-27 15:19:01,812  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1265 行数: 442 文件名:connectionpool.py
+-时间:2020-05-27 15:19:01,812  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 1265 行数: 442 文件名:connectionpool.py
+-时间:2020-05-27 15:19:02,096  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,096  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,096  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,096  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,693  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,693  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,693  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,693  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,693  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,693  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,973  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,973  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 15:19:02,975  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 230 文件名:connectionpool.py
+-时间:2020-05-27 15:19:02,975  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 230 文件名:connectionpool.py
+-时间:2020-05-27 15:19:03,185  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 404 None 行数: 442 文件名:connectionpool.py
+-时间:2020-05-27 15:19:03,185  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 404 None 行数: 442 文件名:connectionpool.py
+-=======
+-时间:2020-05-27 12:30:18,237  方法:add_job  级别:INFO  消息:Adding job tentatively -- it will be properly scheduled when the scheduler starts 行数: 436 文件名:base.py
+-时间:2020-05-27 12:30:18,237  方法:add_job  级别:INFO  消息:Adding job tentatively -- it will be properly scheduled when the scheduler starts 行数: 436 文件名:base.py
+-时间:2020-05-27 12:30:18,237  方法:add_job  级别:INFO  消息:Adding job tentatively -- it will be properly scheduled when the scheduler starts 行数: 436 文件名:base.py
+-时间:2020-05-27 12:30:18,282  方法:_real_add_job  级别:INFO  消息:Added job "TimingTask.Perform_Task" to job store "default" 行数: 878 文件名:base.py
+-时间:2020-05-27 12:30:18,282  方法:_real_add_job  级别:INFO  消息:Added job "TimingTask.Perform_Task" to job store "default" 行数: 878 文件名:base.py
+-时间:2020-05-27 12:30:18,282  方法:_real_add_job  级别:INFO  消息:Added job "TimingTask.Perform_Task" to job store "default" 行数: 878 文件名:base.py
+-时间:2020-05-27 12:30:18,283  方法:start  级别:INFO  消息:Scheduler started 行数: 162 文件名:base.py
+-时间:2020-05-27 12:30:18,283  方法:start  级别:INFO  消息:Scheduler started 行数: 162 文件名:base.py
+-时间:2020-05-27 12:30:18,283  方法:start  级别:INFO  消息:Scheduler started 行数: 162 文件名:base.py
+-时间:2020-05-27 12:30:18,283  方法:_process_jobs  级别:DEBUG  消息:Looking for jobs to run 行数: 937 文件名:base.py
+-时间:2020-05-27 12:30:18,283  方法:_process_jobs  级别:DEBUG  消息:Looking for jobs to run 行数: 937 文件名:base.py
+-时间:2020-05-27 12:30:18,283  方法:_process_jobs  级别:DEBUG  消息:Looking for jobs to run 行数: 937 文件名:base.py
+-时间:2020-05-27 12:30:18,284  方法:_process_jobs  级别:DEBUG  消息:Next wakeup is due at 2020-05-27 12:30:28.236600+08:00 (in 9.952000 seconds) 行数: 1017 文件名:base.py
+-时间:2020-05-27 12:30:18,284  方法:_process_jobs  级别:DEBUG  消息:Next wakeup is due at 2020-05-27 12:30:28.236600+08:00 (in 9.952000 seconds) 行数: 1017 文件名:base.py
+-时间:2020-05-27 12:30:18,284  方法:_process_jobs  级别:DEBUG  消息:Next wakeup is due at 2020-05-27 12:30:28.236600+08:00 (in 9.952000 seconds) 行数: 1017 文件名:base.py
+-时间:2020-05-27 12:32:48,330  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,330  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,331  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,331  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,367  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,367  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,454  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,454  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,454  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,454  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,455  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,455  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:48,551  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+-时间:2020-05-27 12:32:48,551  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+-时间:2020-05-27 12:32:49,118  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+-时间:2020-05-27 12:32:49,118  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3984 行数: 393 文件名:connectionpool.py
+-时间:2020-05-27 12:32:49,815  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:49,815  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:49,815  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:49,815  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:49,816  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:49,816  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:50,148  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:50,148  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+-时间:2020-05-27 12:32:50,149  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+-时间:2020-05-27 12:32:50,149  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+-时间:2020-05-27 12:32:50,334  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 404 None 行数: 393 文件名:connectionpool.py
+-时间:2020-05-27 12:32:50,334  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 404 None 行数: 393 文件名:connectionpool.py
+->>>>>>> origin/master
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources.xml	(date 1591158860716)
++++ .idea/dataSources.xml	(date 1591158860716)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
++    <data-source source="LOCAL" name="sqlite3.exe" uuid="16474f35-cd59-48b7-8613-d778b00a4419">
++      <driver-ref>sqlite.xerial</driver-ref>
++      <synchronize>true</synchronize>
++      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
++      <jdbc-url>jdbc:sqlite:E:\Automate\sqlite3\sqlite-tools-win32-x86-3320100\sqlite3.exe</jdbc-url>
++    </data-source>
++  </component>
++</project>
+\ No newline at end of file
+Index: Door/Data.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/Data.yaml	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Door/Data.yaml	(date 1591164086003)
+@@ -1,0 +1,9 @@
++{'funname': 'test_add_category', 'describe': '添加产品分类', 'priority': '中', 'address': '/manager/gwforward//manager-webapi/product/appCategory/save', 'status': '成功', 'writer': '姜娜', 'usetime': 1.03256, 'summary': 'eydleHBlY3RlZCc6IDIwMCwgJ2FjdHVhbCc6IDIwMCwgJ3BhcmFtZXRlcic6IHsnY2F0ZWdvcnknOiB7J2lkJzogJycsICdpc21vYmlsZSc6IDAsICdzdGF0dXMnOiAwLCAnaXNTZWFyY2gnOiAwLCAnc2VxdWVuY2UnOiAnJywgJ2ltYWdlSWQnOiAnJywgJ2ltYWdldXJsJzogJycsICdwYXJlbnRJZCc6ICcnLCAnYWRkUElkJzogJycsICdhZGRQbmFtZSc6ICcnLCAnZWRpdFBJZCc6ICcnLCAnZWlkdFBuYW1lJzogJycsICdjYXRlZ29yeVR5cGUnOiAnMCcsICd3aW5kb3d0eXBlJzogMSwgJ21vYmlsZVdpbmRvd1R5cGUnOiAxLCAnc3R5bGVDYXRlZ29yeUxpc3RJZCc6ICcnLCAnc3R5bGVQcm9kdWN0RGV0YWlsSWQnOiAnJywgJ2dvdG90eXBlJzogMCwgJ2RlZlRhYlN0eWxlJzogJycsICdkZWZEZXRhaWxTdHlsZSc6ICcnLCAnbW9iaWxlU3R5bGVDYXRlZ29yeUxpc3RJZCc6ICcnLCAnbW9iaWxlU3R5bGVQcm9kdWN0RGV0YWlsSWQnOiAnJywgJ2RlZlRhYlN0eWxlTSc6ICcnLCAnZGVmRGV0YWlsU3R5bGVNJzogJycsICdhcHBJZCc6IDIsICdjYXRlZ29yeU5hbWUnOiAn5YiG57G7MTU5MTE2NDA3OC45MzM0MzY5JywgJ2xpbmt1cmwnOiAnJywgJ21vYmlsZUxpbmtVcmwnOiAnJ30sICdjaG9pY2VVcmwnOiAnJywgJ2Nob2ljZVVybE0nOiAnJywgJ2Rlc3R5cGUnOiAwLCAnZGVzY3JpcHRpb24nOiAnJywgJ2NvbnRlbnQnOiAnJywgJ21vYmlsZUNvbnRlbnQnOiAnJywgJ2Rlc2NyaXB0aW9uUyc6ICcnLCAnc2VvU3RhdGUnOiAxLCAnaGlkVGl0bGUnOiBbeydpZCc6ICdjYXRlZ29yeU5hbWUnLCAnbmFtZSc6ICfkuqflk4Hln7rmnKzliIbnsbvlkI3np7AnfSwgeydpZCc6ICdvbmVDYXRlZ29yeU5hbWUnLCAnbmFtZSc6ICfkuqflk4Hln7rmnKzliIbnsbvkuIDnuqfliIbnsbvlkI3np7AnfSwgeydpZCc6ICdzaXRlTmFtZScsICduYW1lJzogJ+e9keermeWQjeensCd9XSwgJ2hpZEtleXdvcmRzJzogW3snaWQnOiAnY2F0ZWdvcnlLZXl3b3JkJywgJ25hbWUnOiAn5Lqn5ZOB5Z+65pys5YiG57G75YWz6ZSu6K+NJ30sIHsnaWQnOiAnc2l0ZU5hbWUnLCAnbmFtZSc6ICfnvZHnq5nlkI3np7AnfV0sICdoaWREZXNjcmlwdGlvbic6IFt7J2lkJzogJ2NhdGVnb3J5TmFtZScsICduYW1lJzogJ+S6p+WTgeWfuuacrOWIhuexu+WQjeensCd9LCB7J2lkJzogJ3NpdGVOYW1lJywgJ25hbWUnOiAn572R56uZ5ZCN56ewJ30sIHsnaWQnOiAnY2F0ZWdvcnlEZXNjcmlwdGlvbicsICduYW1lJzogJ+S6p+WTgeWfuuacrOWIhuexu+aPj+i/sCd9XSwgJ2hpZFRpdGxlU2lnbic6ICdfJywgJ2hpZEtleXdvcmRzU2lnbic6ICcsJywgJ2hpZERlc2NyaXB0aW9uU2lnbic6ICctJywgJ3Nlb1RpdGxlU2lnbic6ICdfJywgJ3Nlb0tleXdvcmRzU2lnbic6ICcsJywgJ3Nlb0Rlc2NyaXB0aW9uU2lnbic6ICctJywgJ3Nlb1RpdGxlJzogW3snaWQnOiAnY2F0ZWdvcnlOYW1lJywgJ25hbWUnOiAn5Lqn5ZOB5Z+65pys5YiG57G75ZCN56ewJ30sIHsnaWQnOiAnb25lQ2F0ZWdvcnlOYW1lJywgJ25hbWUnOiAn5Lqn5ZOB5Z+65pys5YiG57G75LiA57qn5YiG57G75ZCN56ewJ30sIHsnaWQnOiAnc2l0ZU5hbWUnLCAnbmFtZSc6ICfnvZHnq5nlkI3np7AnfV0sICdzZW9LZXl3b3Jkcyc6IFt7J2lkJzogJ2NhdGVnb3J5S2V5d29yZCcsICduYW1lJzogJ+S6p+WTgeWfuuacrOWIhuexu+WFs+mUruivjSd9LCB7J2lkJzogJ3NpdGVOYW1lJywgJ25hbWUnOiAn572R56uZ5ZCN56ewJ31dLCAnc2VvRGVzY3JpcHRpb24nOiBbeydpZCc6ICdjYXRlZ29yeU5hbWUnLCAnbmFtZSc6ICfkuqflk4Hln7rmnKzliIbnsbvlkI3np7AnfSwgeydpZCc6ICdzaXRlTmFtZScsICduYW1lJzogJ+e9keermeWQjeensCd9LCB7J2lkJzogJ2NhdGVnb3J5RGVzY3JpcHRpb24nLCAnbmFtZSc6ICfkuqflk4Hln7rmnKzliIbnsbvmj4/ov7AnfV0sICdhdXRoRGF0YSc6IFt7J2F1dGhUeXBlJzogMSwgJ2F1dGhTdHInOiAnR1dfOjI6Y2F0ZWdvcnk6dmlldzonLCAncm9sZUlkcyc6ICcnfV0sICdhdXRoU3RyJzogJ0dXXzoyOmNhdGVnb3J5OnZpZXc6JywgJ2F1dGhUeXBlJzogMSwgJ3JvbGVJZHMnOiAnJ30sICd1c2V0aW1lJzogMS4wMzI1NiwgJ3Jlc3VsdHMnOiB7J3N0YXR1cyc6IDIwMCwgJ21zZyc6ICdzdWNjZXNzJywgJ3N1Y2Nlc3MnOiBUcnVlLCAnZGF0YSc6IHsnYXBwSWQnOiAyLCAnY2F0ZWdvcnlCaWdGaWVsZCc6IHsnYXBwSWQnOiAyLCAnY29udGVudCc6ICcnLCAnbW9iaWxlQ29udGVudCc6ICcnLCAnc3VtbWFyeSc6ICcnLCAndXBkYXRlVGltZSc6IDE1OTExNjQwNzkzNTksICd1c2VWaWV3VHlwZSc6IEZhbHNlfSwgJ2NhdGVnb3J5TmFtZSc6ICfliIbnsbsxNTkxMTY0MDc4LjkzMzQzNjknLCAnY2F0ZWdvcnlUeXBlJzogJzAnLCAnaWQnOiAxMCwgJ2ltYWdldXJsJzogJycsICdpc1NlYXJjaCc6IDAsICdpc21vYmlsZSc6IDAsICdsZWFmJzogRmFsc2UsICdsaW5rdXJsJzogJycsICdsb2NhdGlvbic6ICcxJywgJ21vYmlsZUxpbmtVcmwnOiAnJywgJ21vYmlsZVN0eWxlQ2F0ZWdvcnlMaXN0SWQnOiAnJywgJ21vYmlsZVdpbmRvd1R5cGUnOiAnMScsICdwYXJlbnRJZCc6IDAsICdwcm9Db3VudCc6IDAsICdzZXF1ZW5jZSc6IDE1OTExNjQwNzkzNTksICdzdGF0dXMnOiAwLCAnc3R5bGVDYXRlZ29yeUxpc3RJZCc6ICcnLCAndXBkYXRldGltZSc6IDE1OTExNjQwNzkzNTksICd1c2VWaWV3VHlwZSc6IEZhbHNlLCAnd2luZG93dHlwZSc6ICcxJ319fQ=='}
++{'funname': 'test_add_attribute', 'describe': '添加属性类型', 'priority': '高', 'address': '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_add', 'status': '成功', 'writer': '方坤', 'usetime': 1.074839, 'summary': 'eydleHBlY3RlZCc6IDIwMCwgJ2FjdHVhbCc6IDIwMCwgJ3BhcmFtZXRlcic6IHsnaWQnOiAnJywgJ2FwcElkJzogMiwgJ3RlbXBsYXRlTmFtZSc6ICfoh6rliqgzNScsICdtZW1vJzogJycsICdvcGVyVHlwZSc6ICdhZGQnLCAncGFyYW1EYXRhQXJyJzogW10sICdidXR0b25EYXRhQXJyJzogW10sICd0YWJQYWdlRGF0YUFycic6IFtdLCAnaXRlbURhdGFBcnInOiBbeyduYW1lJzogJ+S6p+WTgeWQjeensDA5JywgJ2RlZmF1bHRuYW1lJzogJycsICdkZWZhdWx0Y29kZSc6ICcnLCAnaXNyZXF1aXJlJzogJzAnLCAndW5pdCc6ICcnLCAncHJvbXQnOiAn6K+36L6T5YWlJywgJ2lzZGlzcGxheSc6ICcwJywgJ2ZpZWxkVHlwZSc6ICcwJywgJ3N1YkZpZWxkVHlwZSc6ICd0ZXh0JywgJ29wdGlvbic6ICcnLCAnY29kZSc6ICduYW1lJywgJ2lzRml4JzogJzAnLCAnaXNzZWFyY2gnOiAnMCd9LCB7J25hbWUnOiAn57yW5Y+3JywgJ2lzcmVxdWlyZSc6ICcxJywgJ2RlZmF1bHRuYW1lJzogJycsICdkZWZhdWx0Y29kZSc6ICcnLCAndW5pdCc6ICcnLCAncHJvbXQnOiAn6K+36L6T5YWlJywgJ2lzZGlzcGxheSc6ICcwJywgJ2ZpZWxkVHlwZSc6ICcwJywgJ3N1YkZpZWxkVHlwZSc6ICd0ZXh0JywgJ29wdGlvbic6ICcnLCAnY29kZSc6ICdjb2RlJywgJ2lzRml4JzogJzAnLCAnaXNzZWFyY2gnOiAnMCd9LCB7J25hbWUnOiAn6K6h6YeP5Y2V5L2NJywgJ2lzcmVxdWlyZSc6ICcxJywgJ2RlZmF1bHRuYW1lJzogJycsICdkZWZhdWx0Y29kZSc6ICcnLCAndW5pdCc6ICcnLCAncHJvbXQnOiAn6K+36L6T5YWlJywgJ2lzZGlzcGxheSc6ICcwJywgJ2ZpZWxkVHlwZSc6ICcwJywgJ3N1YkZpZWxkVHlwZSc6ICd0ZXh0JywgJ29wdGlvbic6ICcnLCAnY29kZSc6ICd1bml0JywgJ2lzRml4JzogJzAnLCAnaXNzZWFyY2gnOiAnMSd9LCB7J25hbWUnOiAn6YeN6YePJywgJ2lzcmVxdWlyZSc6ICcxJywgJ2RlZmF1bHRuYW1lJzogJycsICdkZWZhdWx0Y29kZSc6ICcnLCAndW5pdCc6ICcnLCAncHJvbXQnOiAn6K+36L6T5YWlJywgJ2lzZGlzcGxheSc6ICcwJywgJ2ZpZWxkVHlwZSc6ICcwJywgJ3N1YkZpZWxkVHlwZSc6ICdudW1iZXInLCAnb3B0aW9uJzogJycsICdjb2RlJzogJ3dlaWdodCcsICdpc0ZpeCc6ICcwJywgJ2lzc2VhcmNoJzogJzEnfSwgeyduYW1lJzogJ+iuoei0uemHjemHjycsICdkZWZhdWx0bmFtZSc6ICcnLCAnZGVmYXVsdGNvZGUnOiAnJywgJ2lzcmVxdWlyZSc6ICcxJywgJ3VuaXQnOiAna2cnLCAncHJvbXQnOiAn6K+36L6T5YWlJywgJ2lzZGlzcGxheSc6ICcwJywgJ2ZpZWxkVHlwZSc6ICcwJywgJ3N1YkZpZWxkVHlwZSc6ICdudW1iZXInLCAnb3B0aW9uJzogJycsICdjb2RlJzogJ2NoYXJnZWRXZWlnaHQnLCAnaXNGaXgnOiAnMCcsICdpc3NlYXJjaCc6ICcxJ30sIHsnbmFtZSc6ICfluILlnLrku7cnLCAnZGVmYXVsdG5hbWUnOiAnJywgJ2RlZmF1bHRjb2RlJzogJycsICdpc3JlcXVpcmUnOiAnMScsICd1bml0JzogJ+WFgycsICdwcm9tdCc6ICfor7fovpPlhaUnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ251bWJlcicsICdvcHRpb24nOiAnJywgJ2NvZGUnOiAncHJpY2UnLCAnaXNGaXgnOiAnMCcsICdpc3NlYXJjaCc6ICcxJ30sIHsnbmFtZSc6ICfpm7bllK7ku7cnLCAnZGVmYXVsdG5hbWUnOiAnJywgJ2RlZmF1bHRjb2RlJzogJycsICdpc3JlcXVpcmUnOiAnMScsICd1bml0JzogJ+WFgycsICdwcm9tdCc6ICfor7fovpPlhaUnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ251bWJlcicsICdvcHRpb24nOiAnJywgJ2NvZGUnOiAncmV0YWlsUHJpY2UnLCAnaXNGaXgnOiAnMCcsICdpc3NlYXJjaCc6ICcxJ30sIHsnbmFtZSc6ICflupPlrZgnLCAnZGVmYXVsdG5hbWUnOiAnJywgJ2RlZmF1bHRjb2RlJzogJycsICdpc3JlcXVpcmUnOiAnMScsICd1bml0JzogJycsICdwcm9tdCc6ICfor7fovpPlhaUnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ251bWJlcicsICdvcHRpb24nOiAnJywgJ2NvZGUnOiAnc3RvY2snLCAnaXNGaXgnOiAnMCcsICdpc3NlYXJjaCc6ICcxJ30sIHsnbmFtZSc6ICfmnIDkvY7otbforqLph48nLCAnZGVmYXVsdG5hbWUnOiAnJywgJ2RlZmF1bHRjb2RlJzogJycsICdpc3JlcXVpcmUnOiAnMScsICd1bml0JzogJycsICdwcm9tdCc6ICfor7fovpPlhaUnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ251bWJlcicsICdvcHRpb24nOiAnJywgJ2NvZGUnOiAnbW9xJywgJ2lzRml4JzogJzAnLCAnaXNzZWFyY2gnOiAnMSd9LCB7J25hbWUnOiAn5Lqk6LSn5pyfJywgJ2RlZmF1bHRuYW1lJzogJycsICdkZWZhdWx0Y29kZSc6ICcnLCAnaXNyZXF1aXJlJzogJzEnLCAndW5pdCc6ICcnLCAncHJvbXQnOiAn6K+36L6T5YWlJywgJ2lzZGlzcGxheSc6ICcwJywgJ2ZpZWxkVHlwZSc6ICcwJywgJ3N1YkZpZWxkVHlwZSc6ICd0ZXh0JywgJ29wdGlvbic6ICcnLCAnY29kZSc6ICdkZWxpdmVyeVRpbWUnLCAnaXNGaXgnOiAnMCcsICdpc3NlYXJjaCc6ICcxJ30sIHsnbmFtZSc6ICfkuqflk4Hmj4/ov7AnLCAnZGVmYXVsdG5hbWUnOiAnJywgJ2RlZmF1bHRjb2RlJzogJycsICdpc3JlcXVpcmUnOiAnMScsICd1bml0JzogJycsICdwcm9tdCc6ICfor7fovpPlhaUnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzEnLCAnc3ViRmllbGRUeXBlJzogJ2NvbnRlbnQnLCAnb3B0aW9uJzogJycsICdjb2RlJzogJ2NvbnRlbnQnLCAnaXNGaXgnOiAnMCcsICdpc3NlYXJjaCc6ICcxJ31dLCAnc3BlY0RhdGFBcnInOiBbXSwgJ2ZpbGVQYWdlRGF0YUFycic6IFtdLCAnbmVlZERlbElkJzogeydhdHRySWRzJzogW10sICdwYXJhbUlkcyc6IFtdLCAnYnV0dG9uSWRzJzogW10sICd0YWJQYWdlSWRzJzogW10sICdzcGVjSWRzJzogW119LCAnbmV3TGluZU51bXMnOiB7fX0sICd1c2V0aW1lJzogMS4wNzQ4MzksICdyZXN1bHRzJzogeydzdGF0dXMnOiAyMDAsICdtc2cnOiAnc3VjY2VzcycsICdzdWNjZXNzJzogVHJ1ZSwgJ2RhdGEnOiB7J2NvZGUnOiAnc3VjY2VzcycsICd0ZW1wbGF0ZUlkJzogOCwgJ29wZXJUeXBlJzogJ2FkZCd9fX0='}
++{'funname': 'test_add_product', 'describe': '添加产品', 'priority': '中', 'address': '/manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate', 'status': '成功', 'writer': '姜娜', 'usetime': 1.134502, 'summary': 'eydleHBlY3RlZCc6IDIwMCwgJ2FjdHVhbCc6IDIwMCwgJ3BhcmFtZXRlcic6IHsnc2hvdzM2MEltYWdlTGlzdCc6IFtdLCAnb3BlclR5cGUnOiAnYWRkJywgJ3Byb2R1Y3RJbmZvcm1hdGlvbic6IHsnaWQnOiAnJywgJ2F0dHJpYnV0ZVRlbXBsYXRlSWQnOiAxLCAnYXBwSWQnOiAyLCAnaXNtb2JpbGUnOiAwLCAnc3RhdHVzJzogMCwgJ3Byb2R1Y3ROYW1lJzogJ+aIkeeahOS6p+WTgTAwMScsICdwcm9kdWN0VHlwZSc6IDAsICdwcm9kdWN0Q29kZSc6ICcnLCAndW5pdCc6IDAsICd3ZWlnaHQnOiAwLCAncHJpY2UnOiAwLCAncmV0YWlsUHJpY2UnOiAwLCAnc3RvY2snOiAwLCAnaXNwdWJsaXNoJzogMSwgJ21vYmlsZUlzcHVibGlzaCc6IDEsICdwdWJsaXNoVGltZSc6ICcyMDIwLTA2LTAzIDExOjQxJywgJ21vYmlsZVB1Ymxpc2hUaW1lJzogJzIwMjAtMDYtMDMgMTE6NDEnLCAna2V5d29yZCc6ICcnLCAncHZzJzogMTAwMCwgJ3NlcXVlbmNlJzogJycsICdzaG9ydFVybCc6ICcnLCAncXJidXlVcmwnOiAnJywgJ3N5bmNRUlN0YXR1cyc6IDIsICd2aWRlb0lkJzogJycsICd2aWRlb1RodW1ibmFpbCc6ICcnLCAnbGlua1VybCc6ICcnLCAnd2luZG93VHlwZSc6IDEsICdtb2JpbGVMaW5rVXJsJzogJycsICdtb2JpbGVXaW5kb3dUeXBlJzogMSwgJ2RlbGl2ZXJ5VGltZSc6ICcxJywgJ21vcSc6IDEsICdjaGFyZ2VkV2VpZ2h0JzogMCwgJ25hbWUnOiAn5oiR55qE5Lqn5ZOBMDAxJ30sICdwcm9kdWN0QmlnRmllbGQnOiB7J2NvbnRlbnQnOiAnJywgJ21vYmlsZUNvbnRlbnQnOiAnJywgJ3N1bW1hcnknOiAnJywgJ21vYmlsZVN1bW1hcnknOiAnJ30sICdwcm9kdWN0SW1hZ2VMaXN0JzogW10sICdyZWxlY29udGVudExpc3QnOiBbXSwgJ21hdGNoaW5nUHJvZHVjdCc6IHsnYXBwSWQnOiAnJywgJ2NvbnRlbnRMaXN0JzogW119LCAnY2F0ZWdvcnlJZHMnOiBbNl0sICdzaG93Y2FzZUlkcyc6IFtdLCAnbWFya0lkcyc6IFtdLCAncGFyYW1WYWx1ZUxpc3QnOiBbXSwgJ3RhYlBhZ2VWYWx1ZUxpc3QnOiBbXSwgJ2J1dHRvblZhbHVlTGlzdCc6IFtdLCAnZmlsZVBhZ2VWYWx1ZUxpc3QnOiBbXSwgJ2N1c3RvbUF0dHJWYWx1ZUxpc3QnOiBbXSwgJ3NrdUxpc3QnOiBbXSwgJ3NwZWNDb25maWdMaXN0JzogW10sICdhdXRoTGlzdCc6IFt7J2F1dGhUeXBlJzogJzEnLCAnYXV0aCc6ICdHV186MjpkZXRhaWw6dmlldzonLCAncm9sZUlkcyc6ICcnfV0sICdzZW9EYXRhJzogeydzZW9TdGF0ZSc6IDEsICdzZW9UaXRsZVNpZ24nOiAnXycsICdzZW9LZXl3b3Jkc1NpZ24nOiAnLCcsICdzZW9EZXNjcmlwdGlvblNpZ24nOiAnLScsICdzZW9UaXRsZSc6IFt7J2lkJzogJ25hbWUnLCAnbmFtZSc6ICfkuqflk4HlkI3np7AnfSwgeydpZCc6ICdzaXRlTmFtZScsICduYW1lJzogJ+e9keermeWQjeensCd9XSwgJ3Nlb0tleXdvcmRzJzogW3snaWQnOiAna2V5d29yZCcsICduYW1lJzogJ+S6p+WTgeWFs+mUruivjSd9LCB7J2lkJzogJ25hbWUnLCAnbmFtZSc6ICfkuqflk4HlkI3np7AnfSwgeydpZCc6ICdzaXRlTmFtZScsICduYW1lJzogJ+e9keermeWQjeensCd9XSwgJ3Nlb0Rlc2NyaXB0aW9uJzogW3snaWQnOiAnbmFtZScsICduYW1lJzogJ+S6p+WTgeWQjeensCd9LCB7J2lkJzogJ3NpdGVOYW1lJywgJ25hbWUnOiAn572R56uZ5ZCN56ewJ30sIHsnaWQnOiAnc3VtbWFyeScsICduYW1lJzogJ+S6p+WTgeeugOS7iyd9XX0sICdpdGVtRGF0YUFycic6IFtdLCAncXJEb21haW4nOiAnJywgJ3FyVGVuYW50SWQnOiAtMSwgJ2Nob2ljZVVybCc6ICcnLCAnY2hvaWNlVXJsTSc6ICcnfSwgJ3VzZXRpbWUnOiAxLjEzNDUwMiwgJ3Jlc3VsdHMnOiB7J3N0YXR1cyc6IDIwMCwgJ21zZyc6ICdzdWNjZXNzJywgJ3N1Y2Nlc3MnOiBUcnVlLCAnZGF0YSc6IHsnc3VjY2Vzcyc6IDF9fX0='}
++{'funname': 'test_category_list', 'describe': '获取产品分类列表', 'priority': '中', 'address': '/manager/gwforward/manager-webapi/product/appCategory/list', 'status': '成功', 'writer': '姜娜', 'usetime': 0.273838, 'summary': 'eydleHBlY3RlZCc6IDIwMCwgJ2FjdHVhbCc6IDIwMCwgJ3BhcmFtZXRlcic6IHsndmlld1R5cGUnOiAnMScsICd0ZW5hbnRJZCc6ICcxOTY0OTgnLCAnX2QnOiAnMTU5MTA2OTM4MDcyNycsICdhcHBJZCc6IDIsICdwaWQnOiAnMCd9LCAndXNldGltZSc6IDAuMjczODM4LCAncmVzdWx0cyc6IHsnc3RhdHVzJzogMjAwLCAnbXNnJzogJ3N1Y2Nlc3MnLCAnc3VjY2Vzcyc6IFRydWUsICdkYXRhJzogW119fQ=='}
++{'funname': 'test_attribute_copy', 'describe': '复制属性类型', 'priority': '中', 'address': '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=196498&appId=2&id=32&operType=copy', 'status': '失败', 'writer': '方坤', 'usetime': 0.306165, 'summary': 'eydleHBlY3RlZCc6IDIwMCwgJ2FjdHVhbCc6IDIwNCwgJ3BhcmFtZXRlcic6IHt9LCAndXNldGltZSc6IDAuMzA2MTY1LCAncmVzdWx0cyc6IHsnc3RhdHVzJzogMjA0LCAnbXNnJzogJ0ludGVybmFsIFNlcnZlciBFcnJvcicsICdkYXRhJzogeydhcHBJZCc6IDIsICdvcGVyVHlwZSc6ICdjb3B5J319fQ=='}
++{'funname': 'test_attribute_delete', 'describe': '删除属性类型', 'priority': '中', 'address': '/manager/gwforward/manager-webapi/product/productAttribute/delAttribute?viewType=1&tenantId=196498&authPermission=attribute_del&_d=1591087588807&templateId=33&appId=2', 'status': '成功', 'writer': '方坤', 'usetime': 0.257623, 'summary': 'eydleHBlY3RlZCc6IDIwMCwgJ2FjdHVhbCc6IDIwMCwgJ3BhcmFtZXRlcic6IHt9LCAndXNldGltZSc6IDAuMjU3NjIzLCAncmVzdWx0cyc6IHsnc3RhdHVzJzogMjAwLCAnbXNnJzogJ3N1Y2Nlc3MnLCAnc3VjY2Vzcyc6IFRydWUsICdkYXRhJzogeydzdWNjZXNzJzogMX19fQ=='}
++{'funname': 'test_attribute_list', 'describe': '属性类型列表', 'priority': '中', 'address': '/manager/gwforward/manager-webapi/product/productAttribute/list?viewType=1&tenantId=196498&appId=2&ec_p=1&ec_crd=15&startDate=&endDate=&sortField=&sortType=', 'status': '成功', 'writer': '方坤', 'usetime': 0.266489, 'summary': 'eydleHBlY3RlZCc6IDIwMCwgJ2FjdHVhbCc6IDIwMCwgJ3BhcmFtZXRlcic6IHt9LCAndXNldGltZSc6IDAuMjY2NDg5LCAncmVzdWx0cyc6IHsnc3RhdHVzJzogMjAwLCAnbXNnJzogJ3N1Y2Nlc3MnLCAnc3VjY2Vzcyc6IFRydWUsICdkYXRhJzogeydwYWdlSW5mbyc6IHsndG90YWwnOiAzLCAndG90YWxQYWdlJzogMSwgJ3BhZ2VTaXplJzogMTUsICdjdXJyZW50UGFnZSc6IDF9LCAnbGlzdCc6IFt7J2NyZWF0ZVRpbWUnOiAxNTg2NDQ4MDAwMDAwLCAnaWQnOiAxLCAnaXNkZWZhdWx0JzogJzAnLCAnbWVtbyc6ICfns7vnu5/pu5jorqTmqKHniYgs5YWo5bGA5Y+q5pyJ5LiA5LiqJywgJ3B1c2VyY291bnQnOiAnNycsICd0ZW1wbGF0ZU5hbWUnOiAn6buY6K6k5bGe5oCn57G75Z6LJywgJ3VzZVZpZXdUeXBlJzogRmFsc2V9LCB7J2NyZWF0ZVRpbWUnOiAxNTg5MjEyODAwMDAwLCAnaWQnOiA1LCAnbWVtbyc6ICcnLCAncHVzZXJjb3VudCc6ICcwJywgJ3RlbXBsYXRlTmFtZSc6ICcxMTM357yW6L6RJywgJ3VwZGF0ZVRpbWUnOiAxNTg5Mjg4NDE5MDAwLCAndXNlVmlld1R5cGUnOiBGYWxzZX0sIHsnY3JlYXRlVGltZSc6IDE1OTExMTM2MDAwMDAsICdpZCc6IDgsICdtZW1vJzogJycsICdwdXNlcmNvdW50JzogJzAnLCAndGVtcGxhdGVOYW1lJzogJ+iHquWKqDM1JywgJ3VwZGF0ZVRpbWUnOiAxNTkxMTY0MDc5MDAwLCAndXNlVmlld1R5cGUnOiBGYWxzZX1dfX19'}
++{'funname': 'test_edit_attribute', 'describe': '编辑属性类型', 'priority': '中', 'address': '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=196498&appId=2&id=1&operType=edit', 'status': '成功', 'writer': '方坤', 'usetime': 0.619093, 'summary': 'eydleHBlY3RlZCc6IDIwMCwgJ2FjdHVhbCc6IDIwMCwgJ3BhcmFtZXRlcic6IHt9LCAndXNldGltZSc6IDAuNjE5MDkzLCAncmVzdWx0cyc6IHsnc3RhdHVzJzogMjAwLCAnbXNnJzogJ3N1Y2Nlc3MnLCAnc3VjY2Vzcyc6IFRydWUsICdkYXRhJzogeydzcGVjRGF0YUFycic6IFtdLCAndGVtcGxhdGVOYW1lJzogJ+m7mOiupOWxnuaAp+exu+WeiycsICdpdGVtRGF0YUFycic6IFt7J2lzcmVxdWlyZSc6ICcwJywgJ2lzc2VhcmNoJzogJzAnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ3RleHQnLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAncHJvbXQnOiAn6K+36L6T5YWl5Lqn5ZOB5ZCN56ewJywgJ2RlZmF1bHRuYW1lJzogJ+S6p+WTgeWQjeensCcsICdkZWZhdWx0Y29kZSc6ICduYW1lJywgJ2FpZCc6IDEsICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn5Lqn5ZOB5ZCN56ewJywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAnbmFtZSd9LCB7J2lzcmVxdWlyZSc6ICcxJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ3RleHQnLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAncHJvbXQnOiAn6K+36L6T5YWl57yW5Y+3JywgJ2RlZmF1bHRuYW1lJzogJ+e8luWPtycsICdkZWZhdWx0Y29kZSc6ICdjb2RlJywgJ2FpZCc6IDIsICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn57yW5Y+3JywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAnY29kZSd9LCB7J2lzcmVxdWlyZSc6ICcwJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ3RleHQnLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAncHJvbXQnOiAn6K+36L6T5YWl5pyA5L2O6LW36K6i6YePJywgJ2RlZmF1bHRuYW1lJzogJ+acgOS9jui1t+iuoumHjycsICdkZWZhdWx0Y29kZSc6ICdtb3EnLCAnYWlkJzogMTcsICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn5pyA5L2O6LW36K6i6YePJywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAnbW9xJ30sIHsnaXNyZXF1aXJlJzogJzAnLCAnaXNzZWFyY2gnOiAnMScsICd1bml0JzogJycsICdpc2Rpc3BsYXknOiAnMCcsICdmaWVsZFR5cGUnOiAnMCcsICdzdWJGaWVsZFR5cGUnOiAndGV4dCcsICdvcHRpb24nOiAnJywgJ29wdGlvblJlZmVySWR4JzogW10sICdwcm9tdCc6ICfor7fovpPlhaXkuqTotKfmnJ8nLCAnZGVmYXVsdG5hbWUnOiAn5Lqk6LSn5pyfJywgJ2RlZmF1bHRjb2RlJzogJ2RlbGl2ZXJ5VGltZScsICdhaWQnOiAxOCwgJ2lzRml4JzogJzAnLCAnbmFtZSc6ICfkuqTotKfmnJ8nLCAnaXNSZWZlcic6IEZhbHNlLCAnY29kZSc6ICdkZWxpdmVyeVRpbWUnfSwgeydpc3JlcXVpcmUnOiAnMCcsICdpc3NlYXJjaCc6ICcxJywgJ3VuaXQnOiAna2cnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ251bWJlcicsICdvcHRpb24nOiAnJywgJ29wdGlvblJlZmVySWR4JzogW10sICdwcm9tdCc6ICfor7fovpPlhaXorqHotLnph43ph48nLCAnZGVmYXVsdG5hbWUnOiAn6K6h6LS56YeN6YePJywgJ2RlZmF1bHRjb2RlJzogJ2NoYXJnZWRXZWlnaHQnLCAnYWlkJzogMTksICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn6K6h6LS56YeN6YePJywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAnY2hhcmdlZFdlaWdodCd9LCB7J2lzcmVxdWlyZSc6ICcxJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ3RleHQnLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAncHJvbXQnOiAn6K+36L6T5YWl6K6h6YeP5Y2V5L2NJywgJ2RlZmF1bHRuYW1lJzogJ+iuoemHj+WNleS9jScsICdkZWZhdWx0Y29kZSc6ICd1bml0JywgJ2FpZCc6IDMsICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn6K6h6YeP5Y2V5L2NJywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAndW5pdCd9LCB7J2lzcmVxdWlyZSc6ICcxJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ251bWJlcicsICdvcHRpb24nOiAnJywgJ29wdGlvblJlZmVySWR4JzogW10sICdwcm9tdCc6ICfor7fovpPlhaXph43ph48nLCAnZGVmYXVsdG5hbWUnOiAn6YeN6YePJywgJ2RlZmF1bHRjb2RlJzogJ3dlaWdodCcsICdhaWQnOiA0LCAnaXNGaXgnOiAnMCcsICduYW1lJzogJ+mHjemHjycsICdpc1JlZmVyJzogRmFsc2UsICdjb2RlJzogJ3dlaWdodCd9LCB7J2lzcmVxdWlyZSc6ICcxJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICflhYMnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ251bWJlcicsICdvcHRpb24nOiAnJywgJ29wdGlvblJlZmVySWR4JzogW10sICdwcm9tdCc6ICfor7fovpPlhaXluILlnLrku7cnLCAnZGVmYXVsdG5hbWUnOiAn5biC5Zy65Lu3JywgJ2RlZmF1bHRjb2RlJzogJ3ByaWNlJywgJ2FpZCc6IDUsICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn5biC5Zy65Lu3JywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAncHJpY2UnfSwgeydpc3JlcXVpcmUnOiAnMScsICdpc3NlYXJjaCc6ICcxJywgJ3VuaXQnOiAn5YWDJywgJ2lzZGlzcGxheSc6ICcwJywgJ2ZpZWxkVHlwZSc6ICcwJywgJ3N1YkZpZWxkVHlwZSc6ICdudW1iZXInLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAncHJvbXQnOiAn6K+36L6T5YWl6Zu25ZSu5Lu3JywgJ2RlZmF1bHRuYW1lJzogJ+mbtuWUruS7tycsICdkZWZhdWx0Y29kZSc6ICdyZXRhaWxQcmljZScsICdhaWQnOiA2LCAnaXNGaXgnOiAnMCcsICduYW1lJzogJ+mbtuWUruS7tycsICdpc1JlZmVyJzogRmFsc2UsICdjb2RlJzogJ3JldGFpbFByaWNlJ30sIHsnaXNyZXF1aXJlJzogJzEnLCAnaXNzZWFyY2gnOiAnMScsICd1bml0JzogJycsICdpc2Rpc3BsYXknOiAnMCcsICdmaWVsZFR5cGUnOiAnMCcsICdzdWJGaWVsZFR5cGUnOiAnbnVtYmVyJywgJ29wdGlvbic6ICcnLCAnb3B0aW9uUmVmZXJJZHgnOiBbXSwgJ3Byb210JzogJ+ivt+i+k+WFpeW6k+WtmCcsICdkZWZhdWx0bmFtZSc6ICflupPlrZgnLCAnZGVmYXVsdGNvZGUnOiAnc3RvY2snLCAnYWlkJzogNywgJ2lzRml4JzogJzAnLCAnbmFtZSc6ICflupPlrZgnLCAnaXNSZWZlcic6IEZhbHNlLCAnY29kZSc6ICdzdG9jayd9LCB7J2lzcmVxdWlyZSc6ICcxJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzEnLCAnc3ViRmllbGRUeXBlJzogJ0FSRXRleHQnLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAnZGVmYXVsdG5hbWUnOiAn5Lqn5ZOB5o+P6L+wJywgJ2RlZmF1bHRjb2RlJzogJ2NvbnRlbnQnLCAnYWlkJzogOCwgJ2lzRml4JzogJzAnLCAnbmFtZSc6ICfkuqflk4Hmj4/ov7AnLCAnaXNSZWZlcic6IEZhbHNlLCAnY29kZSc6ICdjb250ZW50J31dLCAnYXBwSWQnOiAyLCAnbWVtbyc6ICfns7vnu5/pu5jorqTmqKHniYgs5YWo5bGA5Y+q5pyJ5LiA5LiqJywgJ2J1dHRvbkRhdGFBcnInOiBbXSwgJ3BhcmFtRGF0YUFycic6IFtdLCAnb3BlclR5cGUnOiAnZWRpdCcsICd0YWJQYWdlRGF0YUFycic6IFtdfX19'}
++{'funname': 'test_edit_attribute_pre', 'describe': '编辑属性类型后保存', 'priority': '中', 'address': '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_edit', 'status': '失败', 'writer': '方坤', 'usetime': 0.665475, 'summary': 'eydleHBlY3RlZCc6ICcyMDAnLCAnYWN0dWFsJzogMjAwLCAncGFyYW1ldGVyJzogeydpZCc6IDEsICdhcHBJZCc6IDIsICd0ZW1wbGF0ZU5hbWUnOiAn6buY6K6k5bGe5oCn57G75Z6LNDQ4OScsICdtZW1vJzogJ+ezu+e7n+m7mOiupOaooeeJiCzlhajlsYDlj6rmnInkuIDkuKonLCAnb3BlclR5cGUnOiAnZWRpdCcsICdwYXJhbURhdGFBcnInOiBbXSwgJ2J1dHRvbkRhdGFBcnInOiBbXSwgJ3RhYlBhZ2VEYXRhQXJyJzogW10sICdpdGVtRGF0YUFycic6IFt7J2lzcmVxdWlyZSc6ICcwJywgJ2lzc2VhcmNoJzogJzAnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ3RleHQnLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAncHJvbXQnOiAn6K+36L6T5YWl5Lqn5ZOB5ZCN56ewJywgJ2RlZmF1bHRuYW1lJzogJ+S6p+WTgeWQjeensCcsICdkZWZhdWx0Y29kZSc6ICduYW1lJywgJ2FpZCc6IDEsICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn5Lqn5ZOB5ZCN56ewJywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAnbmFtZSd9LCB7J2lzcmVxdWlyZSc6ICcxJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ3RleHQnLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAncHJvbXQnOiAn6K+36L6T5YWl57yW5Y+3JywgJ2RlZmF1bHRuYW1lJzogJ+e8luWPtycsICdkZWZhdWx0Y29kZSc6ICdjb2RlJywgJ2FpZCc6IDIsICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn57yW5Y+3JywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAnY29kZSd9LCB7J2lzcmVxdWlyZSc6ICcwJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ3RleHQnLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAncHJvbXQnOiAn6K+36L6T5YWl5pyA5L2O6LW36K6i6YePJywgJ2RlZmF1bHRuYW1lJzogJ+acgOS9jui1t+iuoumHjycsICdkZWZhdWx0Y29kZSc6ICdtb3EnLCAnYWlkJzogMTcsICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn5pyA5L2O6LW36K6i6YePJywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAnbW9xJ30sIHsnaXNyZXF1aXJlJzogJzAnLCAnaXNzZWFyY2gnOiAnMScsICd1bml0JzogJycsICdpc2Rpc3BsYXknOiAnMCcsICdmaWVsZFR5cGUnOiAnMCcsICdzdWJGaWVsZFR5cGUnOiAndGV4dCcsICdvcHRpb24nOiAnJywgJ29wdGlvblJlZmVySWR4JzogW10sICdwcm9tdCc6ICfor7fovpPlhaXkuqTotKfmnJ8nLCAnZGVmYXVsdG5hbWUnOiAn5Lqk6LSn5pyfJywgJ2RlZmF1bHRjb2RlJzogJ2RlbGl2ZXJ5VGltZScsICdhaWQnOiAxOCwgJ2lzRml4JzogJzAnLCAnbmFtZSc6ICfkuqTotKfmnJ8nLCAnaXNSZWZlcic6IEZhbHNlLCAnY29kZSc6ICdkZWxpdmVyeVRpbWUnfSwgeydpc3JlcXVpcmUnOiAnMCcsICdpc3NlYXJjaCc6ICcxJywgJ3VuaXQnOiAna2cnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ251bWJlcicsICdvcHRpb24nOiAnJywgJ29wdGlvblJlZmVySWR4JzogW10sICdwcm9tdCc6ICfor7fovpPlhaXorqHotLnph43ph48nLCAnZGVmYXVsdG5hbWUnOiAn6K6h6LS56YeN6YePJywgJ2RlZmF1bHRjb2RlJzogJ2NoYXJnZWRXZWlnaHQnLCAnYWlkJzogMTksICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn6K6h6LS56YeN6YePJywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAnY2hhcmdlZFdlaWdodCd9LCB7J2lzcmVxdWlyZSc6ICcxJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ3RleHQnLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAncHJvbXQnOiAn6K+36L6T5YWl6K6h6YeP5Y2V5L2NJywgJ2RlZmF1bHRuYW1lJzogJ+iuoemHj+WNleS9jScsICdkZWZhdWx0Y29kZSc6ICd1bml0JywgJ2FpZCc6IDMsICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn6K6h6YeP5Y2V5L2NJywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAndW5pdCd9LCB7J2lzcmVxdWlyZSc6ICcxJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ251bWJlcicsICdvcHRpb24nOiAnJywgJ29wdGlvblJlZmVySWR4JzogW10sICdwcm9tdCc6ICfor7fovpPlhaXph43ph48nLCAnZGVmYXVsdG5hbWUnOiAn6YeN6YePJywgJ2RlZmF1bHRjb2RlJzogJ3dlaWdodCcsICdhaWQnOiA0LCAnaXNGaXgnOiAnMCcsICduYW1lJzogJ+mHjemHjycsICdpc1JlZmVyJzogRmFsc2UsICdjb2RlJzogJ3dlaWdodCd9LCB7J2lzcmVxdWlyZSc6ICcxJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICflhYMnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzAnLCAnc3ViRmllbGRUeXBlJzogJ251bWJlcicsICdvcHRpb24nOiAnJywgJ29wdGlvblJlZmVySWR4JzogW10sICdwcm9tdCc6ICfor7fovpPlhaXluILlnLrku7cnLCAnZGVmYXVsdG5hbWUnOiAn5biC5Zy65Lu3JywgJ2RlZmF1bHRjb2RlJzogJ3ByaWNlJywgJ2FpZCc6IDUsICdpc0ZpeCc6ICcwJywgJ25hbWUnOiAn5biC5Zy65Lu3JywgJ2lzUmVmZXInOiBGYWxzZSwgJ2NvZGUnOiAncHJpY2UnfSwgeydpc3JlcXVpcmUnOiAnMScsICdpc3NlYXJjaCc6ICcxJywgJ3VuaXQnOiAn5YWDJywgJ2lzZGlzcGxheSc6ICcwJywgJ2ZpZWxkVHlwZSc6ICcwJywgJ3N1YkZpZWxkVHlwZSc6ICdudW1iZXInLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAncHJvbXQnOiAn6K+36L6T5YWl6Zu25ZSu5Lu3JywgJ2RlZmF1bHRuYW1lJzogJ+mbtuWUruS7tycsICdkZWZhdWx0Y29kZSc6ICdyZXRhaWxQcmljZScsICdhaWQnOiA2LCAnaXNGaXgnOiAnMCcsICduYW1lJzogJ+mbtuWUruS7tycsICdpc1JlZmVyJzogRmFsc2UsICdjb2RlJzogJ3JldGFpbFByaWNlJ30sIHsnaXNyZXF1aXJlJzogJzEnLCAnaXNzZWFyY2gnOiAnMScsICd1bml0JzogJycsICdpc2Rpc3BsYXknOiAnMCcsICdmaWVsZFR5cGUnOiAnMCcsICdzdWJGaWVsZFR5cGUnOiAnbnVtYmVyJywgJ29wdGlvbic6ICcnLCAnb3B0aW9uUmVmZXJJZHgnOiBbXSwgJ3Byb210JzogJ+ivt+i+k+WFpeW6k+WtmCcsICdkZWZhdWx0bmFtZSc6ICflupPlrZgnLCAnZGVmYXVsdGNvZGUnOiAnc3RvY2snLCAnYWlkJzogNywgJ2lzRml4JzogJzAnLCAnbmFtZSc6ICflupPlrZgnLCAnaXNSZWZlcic6IEZhbHNlLCAnY29kZSc6ICdzdG9jayd9LCB7J2lzcmVxdWlyZSc6ICcxJywgJ2lzc2VhcmNoJzogJzEnLCAndW5pdCc6ICcnLCAnaXNkaXNwbGF5JzogJzAnLCAnZmllbGRUeXBlJzogJzEnLCAnc3ViRmllbGRUeXBlJzogJ0FSRXRleHQnLCAnb3B0aW9uJzogJycsICdvcHRpb25SZWZlcklkeCc6IFtdLCAnZGVmYXVsdG5hbWUnOiAn5Lqn5ZOB5o+P6L+wJywgJ2RlZmF1bHRjb2RlJzogJ2NvbnRlbnQnLCAnYWlkJzogOCwgJ2lzRml4JzogJzAnLCAnbmFtZSc6ICfkuqflk4Hmj4/ov7AnLCAnaXNSZWZlcic6IEZhbHNlLCAnY29kZSc6ICdjb250ZW50J31dLCAnc3BlY0RhdGFBcnInOiBbXSwgJ2ZpbGVQYWdlRGF0YUFycic6IFtdLCAnbmVlZERlbElkJzogeydhdHRySWRzJzogW10sICdwYXJhbUlkcyc6IFtdLCAnYnV0dG9uSWRzJzogW10sICd0YWJQYWdlSWRzJzogW10sICdzcGVjSWRzJzogW119LCAnbmV3TGluZU51bXMnOiB7fX0sICd1c2V0aW1lJzogMC42NjU0NzUsICdyZXN1bHRzJzogeydzdGF0dXMnOiAyMDAsICdtc2cnOiAnc3VjY2VzcycsICdzdWNjZXNzJzogVHJ1ZSwgJ2RhdGEnOiB7J2NvZGUnOiAnc3VjY2VzcycsICd0ZW1wbGF0ZUlkJzogMSwgJ29wZXJUeXBlJzogJ2VkaXQnfX19'}
+Index: Door/__init__.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/__init__.py	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Door/__init__.py	(date 1591164077800)
+@@ -1,0 +1,11 @@
++from Door.AddProduct.manage_st import manage_AddProduct
++from Door.attribute.add_st import add_attribute
++from Door.productCategory.manage_st import manage_productCategory
++
++all_class = [manage_AddProduct, add_attribute, manage_productCategory]
++
++all_dirs = ['AddProduct', 'attribute', 'productCategory']
++
++class_case = ()
++
++fail_error = ()
+\ No newline at end of file
+Index: Door/Case.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Door:\r\n  attribute: #属性管理\r\n    - url: /manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_add  # 添加属性类型地址\r\n      modular: 添加属性  # 接口注释\r\n      className: add_attribute  # 接口类名\r\n      funName:\r\n        - test_add_attribute: {  # 添加属性类型\r\n          url: ,\r\n          level: 高,   #级别\r\n          author: 方坤,  #作者\r\n          bar: {\"id\":\"\",\"appId\":2,\"templateName\":\"类型09\",\"memo\":\"\",\"operType\":\"add\",\"paramDataArr\":[],\"buttonDataArr\":[],\"tabPageDataArr\":[],\"itemDataArr\":[{\"name\":\"产品名称09\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"0\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"code\":\"name\",\"isFix\":\"0\",\"issearch\":\"0\"},{\"name\":\"编号\",\"isrequire\":\"1\",\"defaultname\":\"\",\"defaultcode\":\"\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"code\":\"code\",\"isFix\":\"0\",\"issearch\":\"0\"},{\"name\":\"计量单位\",\"isrequire\":\"1\",\"defaultname\":\"\",\"defaultcode\":\"\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"code\":\"unit\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"重量\",\"isrequire\":\"1\",\"defaultname\":\"\",\"defaultcode\":\"\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"weight\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"计费重量\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"kg\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"chargedWeight\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"市场价\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"元\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"price\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"零售价\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"元\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"retailPrice\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"库存\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"stock\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"最低起订量\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"moq\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"交货期\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"code\":\"deliveryTime\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"产品描述\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"1\",\"subFieldType\":\"content\",\"option\":\"\",\"code\":\"content\",\"isFix\":\"0\",\"issearch\":\"1\"}],\"specDataArr\":[],\"filePageDataArr\":[],\"needDelId\":{\"attrIds\":[],\"paramIds\":[],\"buttonIds\":[],\"tabPageIds\":[],\"specIds\":[]},\"newLineNums\":{}},\r\n          test_data: {},\r\n          case_name: 添加属性类型,\r\n          expected: [200],  # 预期结果\r\n          mode: post,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n          test_attribute_list: {  # 属性列表\r\n          url: '/manager/gwforward/manager-webapi/product/productAttribute/list?viewType=1&tenantId=196498&appId=2&ec_p=1&ec_crd=15&startDate=&endDate=&sortField=&sortType=',\r\n          level: 中,   #级别\r\n          author: 方坤,  #作者\r\n          bar: ,\r\n          test_data: {},\r\n          case_name: 属性类型列表,\r\n          expected: [200],  # 预期结果\r\n          mode: get,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n        }\r\n          test_edit_attribute: {  # 编辑属性类型\r\n          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=196498&appId=2&id=1&operType=edit',\r\n          level: 中,   #级别\r\n          author: 方坤,  #作者\r\n          bar: ,\r\n          test_data: {},\r\n          case_name: 编辑属性类型,\r\n          expected: [200],  # 预期结果\r\n          mode: get,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n        }\r\n          test_edit_attribute_pre: {  # 编辑属性类型后保存\r\n          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_edit',\r\n          level: 中,   #级别\r\n          author: 方坤,  #作者\r\n          bar: {\"id\":1,\"appId\":2,\"templateName\":\"默认属性类型1\",\"memo\":\"系统默认模版,全局只有一个\",\"operType\":\"edit\",\"paramDataArr\":[],\"buttonDataArr\":[],\"tabPageDataArr\":[],\"itemDataArr\":[{\"isrequire\":\"0\",\"issearch\":\"0\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入产品名称\",\"defaultname\":\"产品名称\",\"defaultcode\":\"name\",\"aid\":1,\"isFix\":\"0\",\"name\":\"产品名称\",\"isRefer\":false,\"code\":\"name\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入编号\",\"defaultname\":\"编号\",\"defaultcode\":\"code\",\"aid\":2,\"isFix\":\"0\",\"name\":\"编号\",\"isRefer\":false,\"code\":\"code\"},{\"isrequire\":\"0\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入最低起订量\",\"defaultname\":\"最低起订量\",\"defaultcode\":\"moq\",\"aid\":17,\"isFix\":\"0\",\"name\":\"最低起订量\",\"isRefer\":false,\"code\":\"moq\"},{\"isrequire\":\"0\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入交货期\",\"defaultname\":\"交货期\",\"defaultcode\":\"deliveryTime\",\"aid\":18,\"isFix\":\"0\",\"name\":\"交货期\",\"isRefer\":false,\"code\":\"deliveryTime\"},{\"isrequire\":\"0\",\"issearch\":\"1\",\"unit\":\"kg\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入计费重量\",\"defaultname\":\"计费重量\",\"defaultcode\":\"chargedWeight\",\"aid\":19,\"isFix\":\"0\",\"name\":\"计费重量\",\"isRefer\":false,\"code\":\"chargedWeight\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入计量单位\",\"defaultname\":\"计量单位\",\"defaultcode\":\"unit\",\"aid\":3,\"isFix\":\"0\",\"name\":\"计量单位\",\"isRefer\":false,\"code\":\"unit\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入重量\",\"defaultname\":\"重量\",\"defaultcode\":\"weight\",\"aid\":4,\"isFix\":\"0\",\"name\":\"重量\",\"isRefer\":false,\"code\":\"weight\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"元\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入市场价\",\"defaultname\":\"市场价\",\"defaultcode\":\"price\",\"aid\":5,\"isFix\":\"0\",\"name\":\"市场价\",\"isRefer\":false,\"code\":\"price\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"元\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入零售价\",\"defaultname\":\"零售价\",\"defaultcode\":\"retailPrice\",\"aid\":6,\"isFix\":\"0\",\"name\":\"零售价\",\"isRefer\":false,\"code\":\"retailPrice\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入库存\",\"defaultname\":\"库存\",\"defaultcode\":\"stock\",\"aid\":7,\"isFix\":\"0\",\"name\":\"库存\",\"isRefer\":false,\"code\":\"stock\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"1\",\"subFieldType\":\"AREtext\",\"option\":\"\",\"optionReferIdx\":[],\"defaultname\":\"产品描述\",\"defaultcode\":\"content\",\"aid\":8,\"isFix\":\"0\",\"name\":\"产品描述\",\"isRefer\":false,\"code\":\"content\"}],\"specDataArr\":[],\"filePageDataArr\":[],\"needDelId\":{\"attrIds\":[],\"paramIds\":[],\"buttonIds\":[],\"tabPageIds\":[],\"specIds\":[]},\"newLineNums\":{}},\r\n          test_data: {},\r\n          case_name: 编辑属性类型后保存,\r\n          expected: [\"200\"],  # 预期结果\r\n          mode: post,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n          test_attribute_copy: {  # 复制属性类型\r\n          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=196498&appId=2&id=32&operType=copy',\r\n          level: 中,   #级别\r\n          author: 方坤,  #作者\r\n          bar:,\r\n          test_data: {},\r\n          case_name: 复制属性类型,\r\n          expected: [200],  # 预期结果\r\n          mode: get,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n          test_attribute_delete: {  # 删除属性类型\r\n          url: '/manager/gwforward/manager-webapi/product/productAttribute/delAttribute?viewType=1&tenantId=196498&authPermission=attribute_del&_d=1591087588807&templateId=33&appId=2',\r\n          level: 中,   #级别\r\n          author: 方坤,  #作者\r\n          bar:,\r\n          test_data: {},\r\n          case_name: 删除属性类型,\r\n          expected: [200],  # 预期结果\r\n          mode: get,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n            }\r\n\r\n  productCategory: #添加产品分类\r\n    - url:   # 类URL为空\r\n      modular: 添加产品分类,然后获取分类列表，验证创建分类是否存在  # 接口注释\r\n      className: manage_productCategory  # 接口类名\r\n      funName:\r\n        - test_add_category: {  # 添加产品分类\r\n          url: /manager-webapi/product/appCategory/save,\r\n          level: 中,\r\n          author: 姜娜,\r\n          bar:{\"category\":{\"id\":\"\",\"ismobile\":0,\"status\":0,\"isSearch\":0,\"sequence\":\"\",\"imageId\":\"\",\"imageurl\":\"\",\"parentId\":\"\",\"addPId\":\"\",\"addPname\":\"\",\"editPId\":\"\",\"eidtPname\":\"\",\"categoryType\":\"0\",\"windowtype\":1,\"mobileWindowType\":1,\"styleCategoryListId\":\"\",\"styleProductDetailId\":\"\",\"gototype\":0,\"defTabStyle\":\"\",\"defDetailStyle\":\"\",\"mobileStyleCategoryListId\":\"\",\"mobileStyleProductDetailId\":\"\",\"defTabStyleM\":\"\",\"defDetailStyleM\":\"\",\"appId\":2,\"categoryName\":\"测试分类2\",\"linkurl\":\"\",\"mobileLinkUrl\":\"\"},\"choiceUrl\":\"\",\"choiceUrlM\":\"\",\"destype\":0,\"description\":\"\",\"content\":\"\",\"mobileContent\":\"\",\"descriptionS\":\"\",\"seoState\":1,\"hidTitle\":[{\"id\":\"categoryName\",\"name\":\"产品基本分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"产品基本分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}],\"hidKeywords\":[{\"id\":\"categoryKeyword\",\"name\":\"产品基本分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}],\"hidDescription\":[{\"id\":\"categoryName\",\"name\":\"产品基本分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"产品基本分类描述\"}],\"hidTitleSign\":\"_\",\"hidKeywordsSign\":\",\",\"hidDescriptionSign\":\"-\",\"seoTitleSign\":\"_\",\"seoKeywordsSign\":\",\",\"seoDescriptionSign\":\"-\",\"seoTitle\":[{\"id\":\"categoryName\",\"name\":\"产品基本分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"产品基本分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}],\"seoKeywords\":[{\"id\":\"categoryKeyword\",\"name\":\"产品基本分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}],\"seoDescription\":[{\"id\":\"categoryName\",\"name\":\"产品基本分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"产品基本分类描述\"}],\"authData\":[{\"authType\":1,\"authStr\":\"GW_:2:category:view:\",\"roleIds\":\"\"}],\"authStr\":\"GW_:2:category:view:\",\"authType\":1,\"roleIds\":\"\"},\r\n          relation_data: {},    #关联接口\r\n          case_name: 添加产品分类,\r\n          expected: [200],  # 预期结果，接口返回正常\r\n          mode: post,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n          test_category_list: {  # 产品分类列表\r\n          url: '/manager-webapi/product/appCategory/list',\r\n          level: 中,\r\n          author: 姜娜,\r\n          bar: {\"viewType\":\"1\",\"tenantId\":\"196498\",\"_d\": \"1591069380727\",\"appId\": 2,\"pid\":\"0\"},\r\n          relation_data: {},    #关联接口\r\n          case_name: 获取产品分类列表,\r\n          expected: [200],  # 预期结果，接口返回正常\r\n          mode: get,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n        }\r\n  AddProduct: #添加产品，选择必填项，并上传图片，设置封面\r\n    - url:   # 保存产品\r\n      modular: 保存产品  # 接口注释\r\n      className: manage_AddProduct  # 接口类名\r\n      funName:\r\n        - test_add_product: {  # 接口方法名\r\n          url: /manager-webapi/product/productInformation/saveOrUpdate,\r\n          level: 中,\r\n          author: 姜娜,\r\n          bar: {\"account\":\"CEM10097239\",\"password\":\"zok9phwv6n\"},\r\n          relation_data: {},    #关联接口\r\n          case_name: 添加产品,\r\n          expected: [200],  # 预期结果添加成功，产品列表显示正常\r\n          mode: GET,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n          test_get_AppAuthority: {  # 接口方法名\r\n          url: /manager-webapi/product/productInformation/getAppAuthority,\r\n          level: 中,\r\n          author: 姜娜,\r\n          bar: {\"account\":\"CEM10097239\",\"password\":\"zok9phwv6n\"},\r\n          relation_data: {},    #关联接口\r\n          case_name: 获取权限,\r\n          expected: [200],  # 预期结果添加成功，产品列表显示正常\r\n          mode: post,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/Case.yaml	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Door/Case.yaml	(date 1591155973362)
+@@ -77,7 +77,7 @@
+       className: manage_productCategory  # 接口类名
+       funName:
+         - test_add_category: {  # 添加产品分类
+-          url: /manager-webapi/product/appCategory/save,
++          url: /manager/gwforward//manager-webapi/product/appCategory/save,
+           level: 中,
+           author: 姜娜,
+           bar:{"category":{"id":"","ismobile":0,"status":0,"isSearch":0,"sequence":"","imageId":"","imageurl":"","parentId":"","addPId":"","addPname":"","editPId":"","eidtPname":"","categoryType":"0","windowtype":1,"mobileWindowType":1,"styleCategoryListId":"","styleProductDetailId":"","gototype":0,"defTabStyle":"","defDetailStyle":"","mobileStyleCategoryListId":"","mobileStyleProductDetailId":"","defTabStyleM":"","defDetailStyleM":"","appId":2,"categoryName":"测试分类2","linkurl":"","mobileLinkUrl":""},"choiceUrl":"","choiceUrlM":"","destype":0,"description":"","content":"","mobileContent":"","descriptionS":"","seoState":1,"hidTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"hidDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"hidTitleSign":"_","hidKeywordsSign":",","hidDescriptionSign":"-","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"authData":[{"authType":1,"authStr":"GW_:2:category:view:","roleIds":""}],"authStr":"GW_:2:category:view:","authType":1,"roleIds":""},
+@@ -88,7 +88,7 @@
+           re_bar: json, # 请求参数
+           }
+           test_category_list: {  # 产品分类列表
+-          url: '/manager-webapi/product/appCategory/list',
++          url: /manager/gwforward/manager-webapi/product/appCategory/list,
+           level: 中,
+           author: 姜娜,
+           bar: {"viewType":"1","tenantId":"196498","_d": "1591069380727","appId": 2,"pid":"0"},
+@@ -104,24 +104,13 @@
+       className: manage_AddProduct  # 接口类名
+       funName:
+         - test_add_product: {  # 接口方法名
+-          url: /manager-webapi/product/productInformation/saveOrUpdate,
++          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
+           level: 中,
+           author: 姜娜,
+-          bar: {"account":"CEM10097239","password":"zok9phwv6n"},
++          bar: {"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"我的产品001","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-03 11:41","mobilePublishTime":"2020-06-03 11:41","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"我的产品001"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[6],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
+           relation_data: {},    #关联接口
+           case_name: 添加产品,
+-          expected: [200],  # 预期结果添加成功，产品列表显示正常
+-          mode: GET,  # 请求类型
+-          re_bar: json, # 请求参数
+-          }
+-          test_get_AppAuthority: {  # 接口方法名
+-          url: /manager-webapi/product/productInformation/getAppAuthority,
+-          level: 中,
+-          author: 姜娜,
+-          bar: {"account":"CEM10097239","password":"zok9phwv6n"},
+-          relation_data: {},    #关联接口
+-          case_name: 获取权限,
+           expected: [200],  # 预期结果添加成功，产品列表显示正常
+           mode: post,  # 请求类型
+           re_bar: json, # 请求参数
+-          }
+\ No newline at end of file
++          }
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"JavaScriptSettings\">\r\n    <option name=\"languageLevel\" value=\"ES6\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.7\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ .idea/misc.xml	(date 1591152206378)
+@@ -3,5 +3,5 @@
+   <component name="JavaScriptSettings">
+     <option name="languageLevel" value="ES6" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/Portal_interface.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/venv\" />\r\n    </content>\r\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.7\" jdkType=\"Python SDK\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/Portal_interface.iml	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ .idea/Portal_interface.iml	(date 1591152206333)
+@@ -4,7 +4,7 @@
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/venv" />
+     </content>
+-    <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
++    <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"89211bc0-fa15-4ecc-a7f3-73c9f4440e86\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Config/Config.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Config/Config.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Door/Case.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Door/Case.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Door/attribute/add_st.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Door/attribute/add_st.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"ff53b5933361dd1342db0ee3b071ad94c2c7dded\" />\r\n      </map>\r\n    </option>\r\n    <favorite-branches>\r\n      <branch-storage>\r\n        <map>\r\n          <entry type=\"LOCAL\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"dev\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n          <entry type=\"REMOTE\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"origin/dev\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n        </map>\r\n      </branch-storage>\r\n    </favorite-branches>\r\n    <excluded-from-favorite>\r\n      <branch-storage>\r\n        <map>\r\n          <entry type=\"LOCAL\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"master\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n          <entry type=\"REMOTE\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"origin/master\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n        </map>\r\n      </branch-storage>\r\n    </excluded-from-favorite>\r\n  </component>\r\n  <component name=\"ProjectFrameBounds\" extendedState=\"7\">\r\n    <option name=\"x\" value=\"440\" />\r\n    <option name=\"width\" value=\"1491\" />\r\n    <option name=\"height\" value=\"982\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1cFvafGrJjgNqJr33lB1FXZYB89\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"nodejs_interpreter_path.stuck_in_default_project\" value=\"undefined stuck path\" />\r\n    <property name=\"nodejs_npm_path_reset_for_default_project\" value=\"true\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.InitializeCase\">\r\n    <configuration name=\"GetToken\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\">\r\n      <module name=\"Portal_interface\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Common\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/Common/GetToken.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"InitializeCase\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Portal_interface\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/InitializeCase.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"ReadWriteIni\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\">\r\n      <module name=\"Portal_interface\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Common\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/Common/ReadWriteIni.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"__init__\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\">\r\n      <module name=\"Portal_interface\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Common\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/Common/__init__.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unittests for add_st.add_attribute.test_add_attribute\" type=\"tests\" factoryName=\"Unittests\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Portal_interface\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Door/attribute\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;add_st.add_attribute.test_add_attribute&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.InitializeCase\" />\r\n        <item itemvalue=\"Python.ReadWriteIni\" />\r\n        <item itemvalue=\"Python.GetToken\" />\r\n        <item itemvalue=\"Python tests.Unittests for add_st.add_attribute.test_add_attribute\" />\r\n        <item itemvalue=\"Python.__init__\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task id=\"LOCAL-00001\" summary=\"333\">\r\n      <created>1590554002365</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1590554002365</updated>\r\n    </task>\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"89211bc0-fa15-4ecc-a7f3-73c9f4440e86\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1590981949321</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1590981949321</updated>\r\n      <workItem from=\"1590981954475\" duration=\"11534000\" />\r\n      <workItem from=\"1591061017500\" duration=\"278000\" />\r\n      <workItem from=\"1591064312861\" duration=\"394000\" />\r\n      <workItem from=\"1591066618601\" duration=\"803000\" />\r\n      <workItem from=\"1591062220504\" duration=\"635000\" />\r\n      <workItem from=\"1591071707270\" duration=\"17089000\" />\r\n      <workItem from=\"1591148852161\" duration=\"511000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"1111111\">\r\n      <created>1591077262997</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1591077262997</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TestHistory\">\r\n    <history-entry file=\"Unittests_for_add_st_add_attribute_test_add_attribute - 2020.06.02 at 16h 33m 28s.xml\">\r\n      <configuration name=\"Unittests for add_st.add_attribute.test_add_attribute\" configurationId=\"tests\" />\r\n    </history-entry>\r\n    <history-entry file=\"Unittests_for_add_st_add_attribute_test_add_attribute - 2020.06.02 at 16h 34m 57s.xml\">\r\n      <configuration name=\"Unittests for add_st.add_attribute.test_add_attribute\" configurationId=\"tests\" />\r\n    </history-entry>\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"1\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"333\" />\r\n    <MESSAGE value=\"添加产品分类\" />\r\n    <MESSAGE value=\"1111111\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"1111111\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"394\" y=\"0\" key=\"CommitChangelistDialog2\" timestamp=\"1591064537476\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state x=\"295\" y=\"0\" key=\"CommitChangelistDialog2/0.0.1366.728@0.0.1366.728\" timestamp=\"1590137281799\" />\r\n    <state x=\"394\" y=\"0\" key=\"CommitChangelistDialog2/62.0.1538.900@62.0.1538.900\" timestamp=\"1591064537476\" />\r\n    <state width=\"1323\" height=\"37\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1591149335497\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state width=\"1323\" height=\"37\" key=\"GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728\" timestamp=\"1591149335497\" />\r\n    <state width=\"1323\" height=\"37\" key=\"GridCell.Tab.0.center\" timestamp=\"1591149335496\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state width=\"1323\" height=\"37\" key=\"GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728\" timestamp=\"1591149335496\" />\r\n    <state width=\"1323\" height=\"37\" key=\"GridCell.Tab.0.left\" timestamp=\"1591149335496\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state width=\"1323\" height=\"37\" key=\"GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728\" timestamp=\"1591149335496\" />\r\n    <state width=\"1323\" height=\"37\" key=\"GridCell.Tab.0.right\" timestamp=\"1591149335497\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state width=\"1323\" height=\"37\" key=\"GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728\" timestamp=\"1591149335497\" />\r\n    <state x=\"692\" y=\"286\" key=\"MultipleFileMergeDialog\" timestamp=\"1591064698309\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state x=\"692\" y=\"286\" key=\"MultipleFileMergeDialog/62.0.1538.900@62.0.1538.900\" timestamp=\"1591064698309\" />\r\n    <state x=\"186\" y=\"9\" key=\"SettingsEditor\" timestamp=\"1590137241657\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"186\" y=\"9\" key=\"SettingsEditor/0.0.1366.728@0.0.1366.728\" timestamp=\"1590137241657\" />\r\n    <state x=\"372\" y=\"124\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1591064591962\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state x=\"275\" y=\"100\" key=\"Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728\" timestamp=\"1591061415303\" />\r\n    <state x=\"372\" y=\"124\" key=\"Vcs.Push.Dialog.v2/62.0.1538.900@62.0.1538.900\" timestamp=\"1591064591962\" />\r\n    <state x=\"588\" y=\"343\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1591067043569\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state x=\"588\" y=\"343\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1538.900@62.0.1538.900\" timestamp=\"1591067043569\" />\r\n    <state x=\"474\" y=\"329\" key=\"git4idea.remote.GitConfigureRemotesDialog\" timestamp=\"1591066698272\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state x=\"474\" y=\"329\" key=\"git4idea.remote.GitConfigureRemotesDialog/62.0.1538.900@62.0.1538.900\" timestamp=\"1591066698272\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_add_attribute.coverage\" NAME=\"Unittests for add_st.add_attribute.test_add_attribute Coverage Results\" MODIFIED=\"1591086892428\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Door/attribute\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$ReadWriteIni.coverage\" NAME=\"ReadWriteIni Coverage Results\" MODIFIED=\"1591106803742\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Common\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Unittests_for_add_st_add_attribute.coverage\" NAME=\"Unittests for add_st.add_attribute Coverage Results\" MODIFIED=\"1591061687878\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Door/attribute\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$InitializeCase.coverage\" NAME=\"InitializeCase Coverage Results\" MODIFIED=\"1591149281473\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$GetToken.coverage\" NAME=\"GetToken Coverage Results\" MODIFIED=\"1591107883149\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Common\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Run.coverage\" NAME=\"Run Coverage Results\" MODIFIED=\"1590982001317\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$__init__.coverage\" NAME=\"__init__ Coverage Results\" MODIFIED=\"1591084636405\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Common\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Login.coverage\" NAME=\"Login Coverage Results\" MODIFIED=\"1591080810062\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Common\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$TimingTask.coverage\" NAME=\"TimingTask Coverage Results\" MODIFIED=\"1590553814229\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ .idea/workspace.xml	(date 1591164258535)
+@@ -2,68 +2,38 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="89211bc0-fa15-4ecc-a7f3-73c9f4440e86" name="Default Changelist" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/Portal_interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portal_interface.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Common/GetToken.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/GetToken.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Common/MyProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/MyProcess.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Common/MySql.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/MySql.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Common/MyUnit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/MyUnit.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Config/Config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Config.yaml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Door/AddProduct/Public.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Door/AddProduct/Public.yaml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Door/AddProduct/__init__.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Door/AddProduct/manage_st.py" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/Door/Case.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/Case.yaml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Door/attribute/add_st.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/attribute/add_st.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Door/Data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/Data.yaml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Door/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/__init__.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Log/2020-05-27.log" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+-  <component name="Git.Settings">
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="ff53b5933361dd1342db0ee3b071ad94c2c7dded" />
+-      </map>
+-    </option>
+-    <favorite-branches>
+-      <branch-storage>
+-        <map>
+-          <entry type="LOCAL">
+-            <value>
+-              <list>
+-                <branch-info repo="$PROJECT_DIR$" source="dev" />
+-              </list>
+-            </value>
+-          </entry>
+-          <entry type="REMOTE">
+-            <value>
+-              <list>
+-                <branch-info repo="$PROJECT_DIR$" source="origin/dev" />
+-              </list>
+-            </value>
+-          </entry>
+-        </map>
+-      </branch-storage>
+-    </favorite-branches>
+-    <excluded-from-favorite>
+-      <branch-storage>
+-        <map>
+-          <entry type="LOCAL">
+-            <value>
+-              <list>
+-                <branch-info repo="$PROJECT_DIR$" source="master" />
+-              </list>
+-            </value>
+-          </entry>
+-          <entry type="REMOTE">
+-            <value>
+-              <list>
+-                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+-              </list>
+-            </value>
+-          </entry>
+-        </map>
+-      </branch-storage>
+-    </excluded-from-favorite>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Python Script" />
++      </list>
++    </option>
+   </component>
+-  <component name="ProjectFrameBounds" extendedState="7">
+-    <option name="x" value="440" />
+-    <option name="width" value="1491" />
+-    <option name="height" value="982" />
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="ProjectId" id="1cFvafGrJjgNqJr33lB1FXZYB89" />
+   <component name="ProjectViewState">
+@@ -71,10 +41,11 @@
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
++    <property name="DatabaseDriversLRU" value="sqlite" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/Config/Sqlite.db" />
+     <property name="node.js.detected.package.eslint" value="true" />
+     <property name="node.js.detected.package.tslint" value="true" />
+     <property name="node.js.path.for.package.eslint" value="project" />
+@@ -85,8 +56,8 @@
+     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+   </component>
+-  <component name="RunManager" selected="Python.InitializeCase">
+-    <configuration name="GetToken" type="PythonConfigurationType" factoryName="Python" temporary="true">
++  <component name="RunManager" selected="Python.Run">
++    <configuration name="2222222" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Portal_interface" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -94,12 +65,12 @@
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Common" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Config" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Common/GetToken.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Config/2222222.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -108,7 +79,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="InitializeCase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="InitializeCase" type="PythonConfigurationType" factoryName="Python" temporary="true">
+       <module name="Portal_interface" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -130,7 +101,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="ReadWriteIni" type="PythonConfigurationType" factoryName="Python" temporary="true">
++    <configuration name="MySql" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Portal_interface" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -143,7 +114,7 @@
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Common/ReadWriteIni.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Common/MySql.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -152,7 +123,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
++    <configuration name="Run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Portal_interface" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -160,12 +131,12 @@
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Common" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Common/__init__.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Run.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -174,28 +145,28 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="Unittests for add_st.add_attribute.test_add_attribute" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
++    <configuration name="Unittests for manage_st.manage_AddProduct.test_add_product" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+       <module name="Portal_interface" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/attribute" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/AddProduct" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+       <option name="_new_additionalArguments" value="&quot;&quot;" />
+-      <option name="_new_target" value="&quot;add_st.add_attribute.test_add_attribute&quot;" />
++      <option name="_new_target" value="&quot;manage_st.manage_AddProduct.test_add_product&quot;" />
+       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+       <method v="2" />
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Python.Run" />
++        <item itemvalue="Python.MySql" />
++        <item itemvalue="Python tests.Unittests for manage_st.manage_AddProduct.test_add_product" />
++        <item itemvalue="Python.2222222" />
+         <item itemvalue="Python.InitializeCase" />
+-        <item itemvalue="Python.ReadWriteIni" />
+-        <item itemvalue="Python.GetToken" />
+-        <item itemvalue="Python tests.Unittests for add_st.add_attribute.test_add_attribute" />
+-        <item itemvalue="Python.__init__" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -217,93 +188,91 @@
+       <option name="presentableId" value="Default" />
+       <updated>1590981949321</updated>
+       <workItem from="1590981954475" duration="11534000" />
+-      <workItem from="1591061017500" duration="278000" />
+-      <workItem from="1591064312861" duration="394000" />
+-      <workItem from="1591066618601" duration="803000" />
+-      <workItem from="1591062220504" duration="635000" />
+-      <workItem from="1591071707270" duration="17089000" />
+-      <workItem from="1591148852161" duration="511000" />
+-    </task>
+-    <task id="LOCAL-00002" summary="1111111">
+-      <created>1591077262997</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1591077262997</updated>
++      <workItem from="1591151694315" duration="10525000" />
++      <workItem from="1591163050182" duration="1208000" />
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+-  <component name="TestHistory">
+-    <history-entry file="Unittests_for_add_st_add_attribute_test_add_attribute - 2020.06.02 at 16h 33m 28s.xml">
+-      <configuration name="Unittests for add_st.add_attribute.test_add_attribute" configurationId="tests" />
+-    </history-entry>
+-    <history-entry file="Unittests_for_add_st_add_attribute_test_add_attribute - 2020.06.02 at 16h 34m 57s.xml">
+-      <configuration name="Unittests for add_st.add_attribute.test_add_attribute" configurationId="tests" />
+-    </history-entry>
+-  </component>
+   <component name="TypeScriptGeneratedFilesManager">
+-    <option name="version" value="1" />
++    <option name="version" value="2" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="333" />
+-    <MESSAGE value="添加产品分类" />
+-    <MESSAGE value="1111111" />
+-    <option name="LAST_COMMIT_MESSAGE" value="1111111" />
++    <option name="LAST_COMMIT_MESSAGE" value="333" />
+   </component>
+   <component name="WindowStateProjectService">
+-    <state x="394" y="0" key="CommitChangelistDialog2" timestamp="1591064537476">
++    <state x="423" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591158874002">
+       <screen x="62" y="0" width="1538" height="900" />
+     </state>
+-    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1590137281799" />
+-    <state x="394" y="0" key="CommitChangelistDialog2/62.0.1538.900@62.0.1538.900" timestamp="1591064537476" />
+-    <state width="1323" height="37" key="GridCell.Tab.0.bottom" timestamp="1591149335497">
++    <state x="423" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1538.900@62.0.1538.900" timestamp="1591158874002" />
++    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1590137281799">
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+-    <state width="1323" height="37" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591149335497" />
+-    <state width="1323" height="37" key="GridCell.Tab.0.center" timestamp="1591149335496">
+-      <screen x="0" y="0" width="1366" height="728" />
++    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1590137281799" />
++    <state x="558" y="110" key="FileChooserDialogImpl" timestamp="1591158575816">
++      <screen x="62" y="0" width="1538" height="900" />
++    </state>
++    <state x="558" y="110" key="FileChooserDialogImpl/62.0.1538.900@62.0.1538.900" timestamp="1591158575816" />
++    <state width="1485" height="261" key="GridCell.Tab.0.bottom" timestamp="1591164076312">
++      <screen x="62" y="0" width="1538" height="900" />
++    </state>
++    <state width="1485" height="261" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1591164076312" />
++    <state width="1485" height="261" key="GridCell.Tab.0.center" timestamp="1591164076311">
++      <screen x="62" y="0" width="1538" height="900" />
+     </state>
+-    <state width="1323" height="37" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591149335496" />
+-    <state width="1323" height="37" key="GridCell.Tab.0.left" timestamp="1591149335496">
+-      <screen x="0" y="0" width="1366" height="728" />
++    <state width="1485" height="261" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1591164076311" />
++    <state width="1485" height="261" key="GridCell.Tab.0.left" timestamp="1591164076311">
++      <screen x="62" y="0" width="1538" height="900" />
++    </state>
++    <state width="1485" height="261" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1591164076311" />
++    <state width="1485" height="261" key="GridCell.Tab.0.right" timestamp="1591164076311">
++      <screen x="62" y="0" width="1538" height="900" />
++    </state>
++    <state width="1485" height="261" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1591164076311" />
++    <state width="1485" height="297" key="GridCell.Tab.1.bottom" timestamp="1591163026751">
++      <screen x="62" y="0" width="1538" height="900" />
++    </state>
++    <state width="1485" height="297" key="GridCell.Tab.1.bottom/62.0.1538.900@62.0.1538.900" timestamp="1591163026751" />
++    <state width="1485" height="297" key="GridCell.Tab.1.center" timestamp="1591163026751">
++      <screen x="62" y="0" width="1538" height="900" />
++    </state>
++    <state width="1485" height="297" key="GridCell.Tab.1.center/62.0.1538.900@62.0.1538.900" timestamp="1591163026751" />
++    <state width="1485" height="297" key="GridCell.Tab.1.left" timestamp="1591163026751">
++      <screen x="62" y="0" width="1538" height="900" />
+     </state>
+-    <state width="1323" height="37" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591149335496" />
+-    <state width="1323" height="37" key="GridCell.Tab.0.right" timestamp="1591149335497">
+-      <screen x="0" y="0" width="1366" height="728" />
++    <state width="1485" height="297" key="GridCell.Tab.1.left/62.0.1538.900@62.0.1538.900" timestamp="1591163026751" />
++    <state width="1485" height="297" key="GridCell.Tab.1.right" timestamp="1591163026751">
++      <screen x="62" y="0" width="1538" height="900" />
+     </state>
+-    <state width="1323" height="37" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591149335497" />
+-    <state x="692" y="286" key="MultipleFileMergeDialog" timestamp="1591064698309">
++    <state width="1485" height="297" key="GridCell.Tab.1.right/62.0.1538.900@62.0.1538.900" timestamp="1591163026751" />
++    <state width="264" height="550" key="HiddenNamespacesPopup" timestamp="1591158868005">
+       <screen x="62" y="0" width="1538" height="900" />
+     </state>
+-    <state x="692" y="286" key="MultipleFileMergeDialog/62.0.1538.900@62.0.1538.900" timestamp="1591064698309" />
++    <state width="264" height="550" key="HiddenNamespacesPopup/62.0.1538.900@62.0.1538.900" timestamp="1591158868005" />
+     <state x="186" y="9" key="SettingsEditor" timestamp="1590137241657">
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590137241657" />
+-    <state x="372" y="124" key="Vcs.Push.Dialog.v2" timestamp="1591064591962">
+-      <screen x="62" y="0" width="1538" height="900" />
++    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1590137291380">
++      <screen x="0" y="0" width="1366" height="728" />
+     </state>
+-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591061415303" />
+-    <state x="372" y="124" key="Vcs.Push.Dialog.v2/62.0.1538.900@62.0.1538.900" timestamp="1591064591962" />
+-    <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591067043569">
++    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590137291380" />
++    <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591164258513">
+       <screen x="62" y="0" width="1538" height="900" />
+     </state>
+-    <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1538.900@62.0.1538.900" timestamp="1591067043569" />
+-    <state x="474" y="329" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1591066698272">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state x="474" y="329" key="git4idea.remote.GitConfigureRemotesDialog/62.0.1538.900@62.0.1538.900" timestamp="1591066698272" />
++    <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1538.900@62.0.1538.900" timestamp="1591164258513" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_add_attribute.coverage" NAME="Unittests for add_st.add_attribute.test_add_attribute Coverage Results" MODIFIED="1591086892428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$ReadWriteIni.coverage" NAME="ReadWriteIni Coverage Results" MODIFIED="1591106803742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute.coverage" NAME="Unittests for add_st.add_attribute Coverage Results" MODIFIED="1591061687878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$InitializeCase.coverage" NAME="InitializeCase Coverage Results" MODIFIED="1591149281473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$GetToken.coverage" NAME="GetToken Coverage Results" MODIFIED="1591107883149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$Run.coverage" NAME="Run Coverage Results" MODIFIED="1590982001317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1591084636405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$Login.coverage" NAME="Login Coverage Results" MODIFIED="1591080810062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
++    <SUITE FILE_PATH="coverage/Portal_interface$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1590994467027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
++    <SUITE FILE_PATH="coverage/Portal_interface$MySql.coverage" NAME="MySql Coverage Results" MODIFIED="1591163659040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
++    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_AddProduct_test_add_product.coverage" NAME="Unittests for manage_st.manage_AddProduct.test_add_product Coverage Results" MODIFIED="1591163545663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/AddProduct" />
++    <SUITE FILE_PATH="coverage/Portal_interface$Run.coverage" NAME="Run Coverage Results" MODIFIED="1591164076304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_add_attribute.coverage" NAME="Unittests for add_st.add_attribute.test_add_attribute Coverage Results" MODIFIED="1591151882417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
++    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_productCategory.coverage" NAME="Unittests for manage_st.manage_productCategory Coverage Results" MODIFIED="1591152117386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/productCategory" />
++    <SUITE FILE_PATH="coverage/Portal_interface$GetToken.coverage" NAME="GetToken Coverage Results" MODIFIED="1591152307089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
++    <SUITE FILE_PATH="coverage/Portal_interface$2222222.coverage" NAME="2222222 Coverage Results" MODIFIED="1591162893550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config" />
++    <SUITE FILE_PATH="coverage/Portal_interface$InitializeCase.coverage" NAME="InitializeCase Coverage Results" MODIFIED="1591155973368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+     <SUITE FILE_PATH="coverage/Portal_interface$TimingTask.coverage" NAME="TimingTask Coverage Results" MODIFIED="1590553814229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: Common/GetToken.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import sqlite3\r\nimport sys\r\nimport re\r\nimport win32crypt\r\nimport os\r\nimport json\r\nimport base64\r\nimport sqlite3\r\nfrom win32crypt import CryptUnprotectData\r\nfrom cryptography.hazmat.primitives.ciphers.aead import AESGCM\r\nimport winreg, os\r\nimport time\r\nfrom Common.ReadWriteIni import ReadWrite\r\nfrom Common.ReadYaml import ConfigYaml\r\nfrom Common.Login import Login\r\n\r\n\r\nclass Get_Cookies:\r\n    def __init__(self, value):\r\n        '''\r\n        '''\r\n        self.value = value\r\n        self.browser_type = ConfigYaml('browserName').base_config\r\n        self.over_time = ConfigYaml('over_time').base_config\r\n        self.host = ConfigYaml('Door').base_url.split(\"//\")[1]\r\n        self.local_state = os.environ['LOCALAPPDATA'] + r'\\Google\\Chrome\\User Data\\Local State'\r\n        self.cookie_path = os.environ['LOCALAPPDATA'] + r\"\\Google\\Chrome\\User Data\\Default\\Cookies\"\r\n        self.sql = ConfigYaml('search_cookies').sql % self.host\r\n        self.current_time = int(time.time())\r\n        self.config = ReadWrite(sign=\"session\", option='cookies',\r\n                          value=self.get_cookie_from_chrome(),\r\n                          time_sign='times', time_option='time',\r\n                          time_value=str(self.current_time))\r\n\r\n    def get_path(self, main_value, sub_value):\r\n        '''\r\n\r\n        :param main_value:\r\n        :param sub_value:\r\n        :return:\r\n        '''\r\n        try:\r\n            self.key = winreg.OpenKey(main_value, sub_value)\r\n        except FileNotFoundError:\r\n            return '未安装相关浏览器'\r\n        value, data = winreg.QueryValueEx(self.key, \"\")\r\n        full_file_name = value.split(',')[0]\r\n        dir_name, file_name = os.path.split(full_file_name)\r\n        return dir_name\r\n\r\n    def get_browser(self):\r\n        '''\r\n        :return:\r\n        '''\r\n        if self.browser_type == 'chrome':\r\n            browser_ico = \"SOFTWARE\\\\Clients\\\\StartMenuInternet\\\\Google Chrome\\\\DefaultIcon\"\r\n        elif self.browser_type == 'ie':\r\n            browser_ico = \"SOFTWARE\\\\Clients\\\\StartMenuInternet\\\\IEXPLORE.EXE\\\\DefaultIcon\"\r\n        elif self.browser_type == 'firefox':\r\n            browser_ico = \"SOFTWARE\\\\Clients\\\\StartMenuInternet\\\\FIREFOX.EXE\\\\DefaultIcon\"\r\n        else:\r\n            browser_ico = \"SOFTWARE\\\\Clients\\\\StartMenuInternet\\\\360Chrome\\\\DefaultIcon\"\r\n\r\n        return self.get_path(winreg.HKEY_LOCAL_MACHINE, browser_ico)\r\n\r\n    def get_string(self, local_state):\r\n        '''\r\n\r\n        :param local_state:\r\n        :return:\r\n        '''\r\n        with open(local_state, 'r', encoding='utf-8') as f:\r\n            content = json.load(f)['os_crypt']['encrypted_key']\r\n        return content\r\n\r\n    def pull_the_key(self, base64_encrypted_key):\r\n        '''\r\n\r\n        :param base64_encrypted_key:\r\n        :return:\r\n        '''\r\n        encrypted_key_with_header = base64.b64decode(base64_encrypted_key)\r\n        encrypted_key = encrypted_key_with_header[5:]\r\n        key = CryptUnprotectData(encrypted_key, None, None, None, 0)[1]\r\n        return key\r\n\r\n    def decrypt_string(self, key, data):\r\n        '''\r\n\r\n        :param key:\r\n        :param data:\r\n        :return:\r\n        '''\r\n        nonce, cipherbytes = data[3:15], data[15:]\r\n        aesgcm = AESGCM(key)\r\n        plainbytes = aesgcm.decrypt(nonce, cipherbytes, None)\r\n        plaintext = plainbytes.decode('utf-8')\r\n        return plaintext\r\n\r\n    def get_cookie_from_chrome(self):\r\n        '''\r\n\r\n        :return:\r\n        '''\r\n        with sqlite3.connect(self.cookie_path) as conn:\r\n            cursor = conn.cursor()\r\n            res = cursor.execute(self.sql).fetchall()\r\n            cursor.close()\r\n            cookies = {}\r\n            key = self.pull_the_key(self.get_string(self.local_state))\r\n            for host_key, encrypted_value in res:\r\n                if encrypted_value[0:3] == b'v10':\r\n                    cookies[host_key] = self.decrypt_string(key, encrypted_value)\r\n                else:\r\n                    cookies[host_key] = CryptUnprotectData(encrypted_value)[1].decode()\r\n\r\n            return cookies.get(self.value)\r\n\r\n    def write_cookies(self):\r\n        '''\r\n        :return:\r\n        '''\r\n        value = ReadWrite(time_sign='times', time_option=\"time\").read_ini_time()\r\n        if value:\r\n            over_time = int(value) + int(self.over_time)\r\n            if over_time < self.current_time:\r\n                Login().login()\r\n                self.config.write_ini()\r\n        else:\r\n            Login().login()\r\n            self.config.write_ini()\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Common/GetToken.py	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Common/GetToken.py	(date 1591156073915)
+@@ -25,6 +25,7 @@
+         self.host = ConfigYaml('Door').base_url.split("//")[1]
+         self.local_state = os.environ['LOCALAPPDATA'] + r'\Google\Chrome\User Data\Local State'
+         self.cookie_path = os.environ['LOCALAPPDATA'] + r"\Google\Chrome\User Data\Default\Cookies"
++        # print(self.cookie_path)
+         self.sql = ConfigYaml('search_cookies').sql % self.host
+         self.current_time = int(time.time())
+         self.config = ReadWrite(sign="session", option='cookies',
+@@ -70,7 +71,9 @@
+         :return:
+         '''
+         with open(local_state, 'r', encoding='utf-8') as f:
+-            content = json.load(f)['os_crypt']['encrypted_key']
++
++            content = json.load(f)
++            # print(content)
+         return content
+ 
+     def pull_the_key(self, base64_encrypted_key):
+@@ -130,3 +133,4 @@
+             Login().login()
+             self.config.write_ini()
+ 
++# Get_Cookies("GWSESSION")
+\ No newline at end of file
+Index: Config/Config.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>base_url:\r\n  Design: http://design.yun300.cn/html/login.html        #设计器地址\r\n  Door: https://2005275179-stsite-oper.pool601.yun300.cn # 正式环境\r\nbase_config:\r\n  over_time: 14400                                #cookie 过期时间\r\n  key: GWSESSION                                   #cookies键\r\n  user_name: zhanghailong                         #登录名称\r\n  user_pwd: v4                                    #密码\r\n  website: www.rootcloud.com                      #网站\r\n  log_level: 10                                   #输出日志级别\r\n  file_handler: True                             #文件输出日志，Fasle：不输入\r\n  steam_handler: false                          #控制台输入日志 Fasle：不输入\r\n  frequency: 0                                   #运行失败重跑次数\r\n  intervaltime: 0.1                                #失败间隔时间\r\n  interval: 1                                      #日志间隔，1表示每多少天新建一个日志文件\r\n  backupCount: 7                                  #日志保存最大天数\r\n  browserName: chrome                             #启动浏览器类型\r\n  title: 接口化测试报告\r\n  domain: autoreport.free-http.svipss.top         #域名\r\n  EnvName: Door线上环境测试报告\r\n  projectName: Door                           #项目名称\r\n  moudleName:                                    #运行模块\r\n  timeout: 3                                     #超时时间\r\n  thread_count: 4                                 #开启线程数，开启线程数不能大于模块数\r\n  process: False                                 #开启多进程\r\n  sql: True                                     #sql执行开关\r\n  redis: False                                     #redis执行开关\r\n  Log: Log                                           #存放日志文件的目录名称\r\n  image: Img                                       #图片存放地址\r\n  mail_file: True                                   #是否发送邮件附件\r\n  mail_picture: True                               #是否添加发送邮件正文图片\r\n  matching: '*_st.py'                              #文件后缀\r\n  mysql: False                                    #数据库连接类型开关\r\n  sqlite: True                                     #sqlite执行开关\r\n  host: 127.0.0.1                                     #数据库主机ip\r\n  port: 3306                                          #主机sql端口\r\n  sqlname: response                                  #数据库名称\r\n  pwd: '123456'                                         #数据库连接密码\r\n  user: root                                  #数据库连接用户\r\n  redisip: 192.168.4.36                       #redis服务ip\r\n  redisport: 6379                             #redis服务端口\r\n  redisresult: redisre                        #redis表名\r\n  serverip: 192.168.4.36                      #服务器ip\r\n  serverport: 8080                            #服务器端口\r\n  threadrun: True                             #是否开启多线程运行\r\n  timing: 10                                  #定时任务间隔时间\r\n  company: 秒                                 #定时任务执行单位,时，分，秒\r\n  errorrate: 0.7                              #错误率\r\n  failrate: 0.8                               #失败率\r\n  eachtimes: 4                                #每多少次整体运行一次\r\n  basenumber: 3                               #运行总数,基数\r\n  runfrequency: 2                             #只运行失败和错误的达到多少次之后\r\n  againrun: 3                                 #再次整体运行多少次，再运行失败和错误的，循环\r\n  operatmode: 1                               #0表示每多少次（eachtimes）整体运行一次，其余（eachtimes-1）次只运行失败或者错误用例\r\n                                              #1表示在运行总数达到多少时（totalfrequency），错误率和失败率到达多少时（errorrate，failrate），\r\n                                              #只运行失败和错误用例（runfrequency）这么多次以后再整体运行（againrun）。。。\r\n                                              # 除此之外的数字表示一直全部执行\r\nwechat:  # 企业微信消息推送配置\r\n  wechat_url: https://qyapi.weixin.qq.com/cgi-bin/gettoken  # 获取登陆令牌\r\n  access_token_url: https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token={}  # 消息推送\r\n  corpid: wwc4a06a344ebfec12  # 企业ID\r\n  corpsecret: s8RQJblVM6DLrfKMEsF52KQRiTjpwEIdzPlVDpZRNE0  #应用的凭证密钥\r\n  toparty:  1  # 部门ID列表，多个接收者用‘|’分隔，最多支持100个。当touser为@all时忽略本参数\r\n  touser: ChenJianBo  # 成员ID列表（消息接收者，多个接收者用‘|’分隔，最多支持1000个）。特殊情况：指定为@all，则向该企业应用的全部成员发送\r\n  agentid: 1000002  # 企业应用的id，整型。企业内部开发，可在应用的设置页面查看；第三方服务商，\r\n  content:\r\n\r\n\r\nemail:\r\n  title: 门户接口自动化测试报告  # 邮件标题\r\n  desc: 用例执行情况       #邮件描述\r\n  smtp_sever: smtp.gouuse.cn # 邮箱smtp服务 如 smtp.163.com\r\n  send_person: chenjianbo@gouuse.cn    #邮件发送者邮箱\r\n  send_pwd: Cjbwt0107  # 邮件发送者邮箱密码\r\n  receive_person: [chenjianbo@gouuse.cn]      #邮件接收者\r\nsql:\r\n  create_table: CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));\r\n  drop_database: DROP DATABASE %s;\r\n  search_response: SELECT funname,describes,priority,address,result,writer,usetime,summary FROM response WHERE 1=1; # 获取结果 数据\r\n  search_desc: SELECT usetime FROM response ORDER BY  usetime desc; # 查询数据库排序/\r\n  search_max_time: select max(usetime) from response;\r\n  search_min_time: select min(usetime) from response;\r\n  insert_response: INSERT INTO response (funname,describes,priority,address,result,writer,usetime,summary) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s');\r\n  del_response: DELETE FROM response WHERE 1=1; # 清除统计结果数据\r\n  create_result: CREATE TABLE IF NOT EXISTS result(id INTEGER primary key NOT NULL,funname varchar (100),totalnumber int default 0,passnumber int default 0, errornumber int default 0,failnumber int default 0,passrate float default 0,errorrate float default 0,failrate float default 0,modular varchar (30));\r\n  insert_result: INSERT INTO result(funname,modular) VALUES ('%s','%s');\r\n  search_result: SELECT *  FROM result WHERE funname='%s';\r\n  update_result: update result set totalnumber=totalnumber+1, %s=%s+1 where funname='%s';\r\n  update_ratecl: update result set %s=%s where funname='%s';\r\n  del_result: DELETE FROM result WHERE 1=1;\r\n  search_all_result: SELECT modular,funname  FROM result where errorrate != 0 or failrate != 0;\r\n  search_max_result: select max(totalnumber) from result;\r\n  search_fail_error: SELECT modular,funname  FROM result where errorrate >%s or failrate >%s;\r\n  search_cookies: select name ,encrypted_value from cookies WHERE host_key='%s';\r\n\r\nreport:\r\n  title: 接口自动化测试报告\r\n  edition: V1.0.0.1        #项目版本\r\n  science: 测试环境          #项目环境\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Config/Config.yaml	(revision f4e21f289d2cf69f45dbf58038e1dc1cf118e610)
++++ Config/Config.yaml	(date 1591163450359)
+@@ -1,6 +1,6 @@
+ base_url:
+   Design: http://design.yun300.cn/html/login.html        #设计器地址
+-  Door: https://2005275179-stsite-oper.pool601.yun300.cn # 正式环境
++  Door: https://2004105022-site.pool5.yun300.cn # 正式环境
+ base_config:
+   over_time: 14400                                #cookie 过期时间
+   key: GWSESSION                                   #cookies键
+@@ -30,13 +30,13 @@
+   mail_file: True                                   #是否发送邮件附件
+   mail_picture: True                               #是否添加发送邮件正文图片
+   matching: '*_st.py'                              #文件后缀
+-  mysql: False                                    #数据库连接类型开关
+-  sqlite: True                                     #sqlite执行开关
+-  host: 127.0.0.1                                     #数据库主机ip
++  mysql:  True                                   #数据库连接类型开关
++  sqlite: False                                    #sqlite执行开关
++  host: localhost                                 #数据库主机ip
+   port: 3306                                          #主机sql端口
+   sqlname: response                                  #数据库名称
+-  pwd: '123456'                                         #数据库连接密码
+-  user: root                                  #数据库连接用户
++  pwd: 'jn123000'                                      #数据库连接密码
++  user: root                                #数据库连接用户
+   redisip: 192.168.4.36                       #redis服务ip
+   redisport: 6379                             #redis服务端口
+   redisresult: redisre                        #redis表名
+diff --git Door/AddProduct/__init__.py Door/AddProduct/__init__.py
+deleted file mode 100644

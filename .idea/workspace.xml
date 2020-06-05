@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89211bc0-fa15-4ecc-a7f3-73c9f4440e86" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Portal_interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portal_interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/GetToken.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/GetToken.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/MyProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/MyProcess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/MyUnit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/MyUnit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/Config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/AddProduct/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/AddProduct/Public.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/AddProduct/manage_st.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/AddProduct/manage_st.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/Case.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/Case.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/Data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/Data.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/productCategory/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/productCategory/Public.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/productCategory/manage_st.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/productCategory/manage_st.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Log/2020-05-27.log" beforeDir="false" />
-    </list>
+    <list default="true" id="89211bc0-fa15-4ecc-a7f3-73c9f4440e86" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +15,46 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="dev" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cFvafGrJjgNqJr33lB1FXZYB89" />
@@ -162,12 +185,24 @@
       <workItem from="1591151694315" duration="10525000" />
       <workItem from="1591163050182" duration="6971000" />
       <workItem from="1591233280139" duration="23922000" />
+      <workItem from="1591320281278" duration="382000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="333" />
@@ -234,14 +269,19 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590137241657" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1590137291380">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590137291380" />
-    <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591259385923">
+    <state x="372" y="124" key="Vcs.Push.Dialog.v2" timestamp="1591320512292">
       <screen x="62" y="0" width="1538" height="900" />
     </state>
-    <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1538.900@62.0.1538.900" timestamp="1591259385923" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590137291380" />
+    <state x="372" y="124" key="Vcs.Push.Dialog.v2/62.0.1538.900@62.0.1538.900" timestamp="1591320512292" />
+    <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591320663468">
+      <screen x="62" y="0" width="1538" height="900" />
+    </state>
+    <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1538.900@62.0.1538.900" timestamp="1591320663468" />
+    <state x="439" y="193" key="git4idea.merge.GitPullDialog" timestamp="1591320538808">
+      <screen x="62" y="0" width="1538" height="900" />
+    </state>
+    <state x="439" y="193" key="git4idea.merge.GitPullDialog/62.0.1538.900@62.0.1538.900" timestamp="1591320538808" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
