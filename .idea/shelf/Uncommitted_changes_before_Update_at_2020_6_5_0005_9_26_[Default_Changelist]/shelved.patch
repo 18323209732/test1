@@ -1,0 +1,35 @@
+Index: Log/2020-06-01.log
+===================================================================
+--- Log/2020-06-01.log	(revision af5c66909e0618a6f1217314eb5b0ba74da37afd)
++++ Log/2020-06-01.log	(revision af5c66909e0618a6f1217314eb5b0ba74da37afd)
+@@ -1,28 +0,0 @@
+-时间:2020-06-01 11:26:46,464  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,464  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,464  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,464  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,503  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,503  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,588  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,588  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,590  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,590  方法:info  级别:INFO  消息:开启多线程并进行加锁.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,590  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,590  方法:info  级别:INFO  消息:开始运行单个模块用例... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:46,668  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+-时间:2020-06-01 11:26:46,668  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): test.cloud.app.scrm365.cn:443 行数: 813 文件名:connectionpool.py
+-时间:2020-06-01 11:26:46,828  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+-时间:2020-06-01 11:26:46,828  方法:_make_request  级别:DEBUG  消息:https://test.cloud.app.scrm365.cn:443 "POST /api/user_center/auth/login HTTP/1.1" 200 3983 行数: 393 文件名:connectionpool.py
+-时间:2020-06-01 11:26:47,569  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:47,569  方法:info  级别:INFO  消息:运行单个模块用例结束... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:47,569  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:47,569  方法:info  级别:INFO  消息:多线程结束释放锁.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:47,569  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:47,569  方法:info  级别:INFO  消息:用例运行结束.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:47,844  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:47,844  方法:info  级别:INFO  消息:测试结果数据收集成功.... 行数: 55 文件名:Log.py
+-时间:2020-06-01 11:26:47,845  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+-时间:2020-06-01 11:26:47,845  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): autoreport.free-http.svipss.top:80 行数: 205 文件名:connectionpool.py
+-时间:2020-06-01 11:26:48,128  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 404 None 行数: 393 文件名:connectionpool.py
+-时间:2020-06-01 11:26:48,128  方法:_make_request  级别:DEBUG  消息:http://autoreport.free-http.svipss.top:80 "POST /get_report/ HTTP/1.1" 404 None 行数: 393 文件名:connectionpool.py
+diff --git Log/2020-06-02.log Log/2020-06-02.log
+deleted file mode 100644
