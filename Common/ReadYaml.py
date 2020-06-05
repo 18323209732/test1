@@ -159,6 +159,5 @@ class ReadPublic:
         return self.public_data.get(self.key)
 
 
-if __name__ == '__main__':
-    data = ConfigYaml('wechat_url').wechat
-    print(data)
+
+

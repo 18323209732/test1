@@ -118,19 +118,29 @@ class Get_Cookies:
         :return:
         '''
         value = ReadWrite(time_sign='times', time_option="time").read_ini_time()
-        if value:
+        session = self.cookies_value = ReadWrite(sign='session', option='cookies').read_ini_cookies()
+        if session:
+            authen = session.split("=")[1]
+            if authen == "none":
+                result = False
+            else:
+                result = True
+        else:
+            result = False
+        if value and result:
             over_time = int(value) + int(self.over_time)
             if over_time < self.current_time:
-                cookie = Login().login()
+                cookie = Login().get_cookie()
                 ReadWrite(sign="session", option='cookies',
-                          value='{}={}'.format(self.key, cookie),
+                          value=cookie,
                           time_sign='times', time_option='time',
                           time_value=str(self.current_time)).write_ini()
         else:
-            cookie = Login().login()
+            cookie = Login().get_cookie()
             ReadWrite(sign="session", option='cookies',
-                      value='{}={}'.format(self.key, cookie),
+                      value=cookie,
                       time_sign='times', time_option='time',
                       time_value=str(self.current_time)).write_ini()
 
 
+Get_Cookies().write_cookies()
