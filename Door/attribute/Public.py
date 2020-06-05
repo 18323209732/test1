@@ -13,7 +13,7 @@ from Common.MyUnit import MyTest
 
 def list_id():
     url = 'https://2004105022-site.pool5.yun300.cn/manager/gwforward/manager-webapi/product/productAttribute/list?viewType=1&tenantId=188078&appId=2&ec_p=1&ec_crd=15&startDate=&endDate=&sortField=&sortType='
-    headers = {'Content-Type': 'application/json;charset=UTF-8', 'Cookie': 'GWSESSION=NDE1ZjY4ZTEtYjlkMy00ZDFiLWI0NzEtMmZiZWZiNjkzNjZh'}
+    headers = {'Content-Type': 'application/json;charset=UTF-8', 'Cookie': 'GWSESSION=OTU3YzNmYzUtNmIwNS00MWQyLWI4MTYtNDg2OWMyNWFiZGQy'}
     r = requests.get(url, headers=headers, stream=True, verify=False)
     result = r.json()
     list_num = []
@@ -23,3 +23,4 @@ def list_id():
             list_num.append(id)
     return list_num
 
+list_num = list_id()
