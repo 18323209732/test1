@@ -6,14 +6,18 @@ from Common.Driver import browser
 from Common.ReadYaml import ConfigYaml
 from time import sleep
 from Common.FontColor import outcome
-
+import requests
 class Login:
     def __init__(self):
         self.base_url = ConfigYaml('Design').base_url
         self.user_pwd = ConfigYaml('user_pwd').base_config
-        self.website = ConfigYaml('Door').base_url
         self.username = ConfigYaml('user_name').base_config
-        self.cookie_url = ConfigYaml('cookie_url').base_config
+        self.key = ConfigYaml('key').base_config
+        self.project_url = ConfigYaml('project_url').base_config
+        self.cookies = ConfigYaml('cookies').base_config
+        self.website = ConfigYaml('website').base_config
+        self.new_website = ConfigYaml('new_website').base_config
+        self.session = ConfigYaml('session').base_config
         self.driver = browser()
         self.support = WebDriverWait(driver=self.driver, timeout=30)
         self.element = (By.XPATH, "(//{}[@{}='{}'])[{}]")
@@ -61,26 +65,59 @@ class Login:
         windows = self.more_windows()
         return self.driver.switch_to.window(windows[name])
 
-    def login(self):
+    def get_cookie(self):
         '''
         :return:
         '''
         try:
             outcome('green', "请稍等,正在登陆中....")
             self.driver.get(self.base_url)
-            self._send_keys("*", "class", "el-input__inner", 2, data=self.username)
-            self._send_keys("*", "class", "el-input__inner", 3, data=self.user_pwd)
-            self._send_keys("*", "class", "el-input__inner", 4, data=self.website)
-            self._click("*", "class", "el-button el-button--primary", 1)
-            sleep(15)
-            self._click("*", "class", "pos-icon", 7)
-            self.switch_windows(2)
-            sleep(3)
-            self.driver.get(self.cookie_url)
-            cookies = self.driver.get_cookies()[1]['value']
-            sleep(2)
+            self._send_keys("*", "id", "username", 1, data=self.username)
+            self._send_keys("*", "id", "password", 1, data=self.user_pwd)
+            self._click("*", "class", "input-box-button m20", 1)
+            sleep(10)
+            self._click("*", "class", "closeCode abs", 1)
+            cookies = self.driver.get_cookies()[1].get('value')
+            _cookies = f"{self.key}={cookies}"
+            count, index = self.get_index(_cookies)
+            for pages in range(count):
+                if pages == 0:
+                    self._click("*", "class", "arrow-border active", 1)
+                    sleep(1)
+                else:
+                    self._click("*", "class", "arrow-border active", 2)
+                    sleep(1)
+            self._click("*", "class", "el-button el-button--primary el-button--small", index)
+            sleep(7)
+            self.driver.get(self.new_website)
+            Cookis = self.driver.get_cookies()[1].get("value")
             outcome('green', "登陆完成,获取【Cookie】成功....")
-            return cookies
+            return f"{self.session}={Cookis}"
+
         except Exception:
             outcome('red', '登录异常....')
+
+    def get_index(self, cookies):
+        '''
+        :return:
+        '''
+        global all_count, result_count
+        headers = {self.cookies: cookies}
+        response = requests.get(url=self.project_url, headers=headers)
+        result = response.json()
+        if result.get('status') == 101:
+            for index, value in enumerate(result.get('data').get('jsonVoList')):
+                if self.website == value.get('domain'):
+                    all_count = index + 1
+            count, remainder = divmod(all_count, 3)
+            if remainder:
+                result_count = count
+            else:
+                result_count = count - 1
+
+            return result_count, remainder
+
+        else:
+            outcome('red', "获取网站【index】失败....")
+
 
