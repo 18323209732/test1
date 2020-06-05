@@ -7,7 +7,9 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-
+from Common.generator import random_name
+from Common.RWyaml import RWyaml
+from Door.content.Public import Public_path
 
 class getlist_content(MyTest):
 
@@ -22,6 +24,15 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            id = r.json()['data']['list'][0]['id']     # 获取首个内容id
+            id2 = r.json()['data']['list'][1]['id']  # 获取第二个内容id
+            id3 = r.json()['data']['list'][2]['id']  # 获取第二个内容id
+            title = r.json()['data']['list'][0]['title']  # 获取首个内容title
+            print('已获取内容id1：%d，:2：%d，3：%d，和标题：%s' % (id, id2, id3, title))
+            RWyaml(Public_path()).write_yaml('content', 'id1', id)    # 内容id存入public.yaml文件
+            RWyaml(Public_path()).write_yaml('content', 'id2', id2)  # 内容id存入public.yaml文件
+            RWyaml(Public_path()).write_yaml('content', 'id3', id3)  # 内容id存入public.yaml文件
+            RWyaml(Public_path()).write_yaml('content', 'title', title)  # 内容title存入public.yaml文件
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -53,9 +64,11 @@ class getlist_content(MyTest):
     def test_showpc_content(self):
         # 显示电脑版
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.data['id'] = RWyaml(Public_path()).read_yaml_value('content', 'id1')  # 读取yaml文件内容id
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -70,6 +83,7 @@ class getlist_content(MyTest):
     def test_hidepc_content(self):
         # 隐藏电脑版
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.data['id'] = RWyaml(Public_path()).read_yaml_value('content', 'id1')  # 读取yaml文件内容id
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
@@ -87,9 +101,13 @@ class getlist_content(MyTest):
     def test_add_content(self):
         # 新增分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        num = random_name()
+        self.data["introductionContent"]['title'] = num     # 随机生成内容标题
+        self.data["content"] = num                  # 随机生成详细介绍
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -104,6 +122,8 @@ class getlist_content(MyTest):
     def test_del_content(self):
         # 删除分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.headers["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8"    # 修改头部请求方式
+        self.data["id"] = RWyaml(Public_path()).read_yaml_value('content', 'id3')        # yaml文件读取删除id
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -121,6 +141,7 @@ class getlist_content(MyTest):
     def test_search_content(self):
         # 搜索分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.data['keywords'] = RWyaml(Public_path()).read_yaml_value('content', 'title')   # 读取yaml文件标题名
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -172,6 +193,9 @@ class getlist_content(MyTest):
     def test_drag_content(self):
         # 拖拽排序分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.headers["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8"
+        self.data['id'] = RWyaml(Public_path()).read_yaml_value('content', 'id1')   # 拖拽内容id
+        self.data['orderid'] = RWyaml(Public_path()).read_yaml_value('content', 'id2')  # 拖拽到id
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -192,6 +216,7 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -206,6 +231,8 @@ class getlist_content(MyTest):
     def test_preview_content(self):
         # 预览分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.headers["Content-Type"]="application/x-www-form-urlencoded;charset=UTF-8"  # 更新头部请求类型
+        self.data['id'] = RWyaml(Public_path()).read_yaml_value('content', 'id1')   # 读取yaml文件内容id
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -223,6 +250,8 @@ class getlist_content(MyTest):
     def test_move_content(self):
         # 转移分类
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.data['id'] = RWyaml(Public_path()).read_yaml_value('content', 'id1')  # 读取yaml文件内容id
+        self.data['cateid'] = 2     # 转移分类的id
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
@@ -240,6 +269,7 @@ class getlist_content(MyTest):
     def test_copy_content(self):
         # 复制分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.data['id'] = RWyaml(Public_path()).read_yaml_value('content', 'id1')   # 读取yaml文件内容id
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
