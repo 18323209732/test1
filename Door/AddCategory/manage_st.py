@@ -10,12 +10,12 @@ import urllib3
 import time, yaml, os
 from ruamel.yaml import RoundTripDumper
 
-
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-class manage_AddCategory(MyTest):
 
+class manage_AddCategory(MyTest):
     condition = True
+
     # 添加产品分类,然后获取分类列表，验证创建分类是否存在
 
     # @unittest.skipIf(condition, "暂时跳过")
@@ -28,15 +28,15 @@ class manage_AddCategory(MyTest):
             self.data['category']['categoryName'] = '分类%s' % time.time()  # 获取随机分类名称
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-            with open("Public.yaml", "w", encoding="utf-8") as yaml_file:   # 把传入的分类名称存入Public.yaml
+            with open("Public.yaml", "w", encoding="utf-8") as yaml_file:  # 把传入的分类名称存入Public.yaml
                 data = {'categoryName': self.data['category']['categoryName']}
                 yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
             print(self.data['category']['categoryName'])
 
-            self.time=r.elapsed.total_seconds()
+            self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
-            outcome('red',self.singular)
+            outcome('red', self.singular)
             return self.singular
 
     # @unittest.skipIf(condition, "暂时跳过")
@@ -63,12 +63,11 @@ class manage_AddCategory(MyTest):
 
             except:
                 self.singular = str(traceback.format_exc())
-                outcome('red',self.singular)
+                outcome('red', self.singular)
                 return self.singular
 
-            self.time=r.elapsed.total_seconds()
+            self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
