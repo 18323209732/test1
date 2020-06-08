@@ -143,3 +143,4 @@ class Get_Cookies:
                       time_value=str(self.current_time)).write_ini()
 
 
+# Get_Cookies().write_cookies()

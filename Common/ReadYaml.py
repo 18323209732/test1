@@ -125,7 +125,7 @@ class CaseYaml:
 
 
 class ReadPublic:
-    def __init__(self, key=None, catalog='', file='Public.yaml', encoding='utf-8'):
+    def __init__(self, catalog='', key='', file='Public.yaml', encoding='utf-8'):
         '''
 
         :param key:
@@ -150,13 +150,20 @@ class ReadPublic:
             return data
         else:
             outcome('red', f"请检此路径:{self.path},下的用例文件是否存在")
-
     @property
-    def public_value(self):
+    def key_value(self):
         '''
         :return:
         '''
         return self.public_data.get(self.key)
+
+
+
+    def public_value(self,value):
+        '''
+        :return:
+        '''
+        return self.key_value.get(value)
 
 
 

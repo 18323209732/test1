@@ -113,6 +113,7 @@ class Login:
             if remainder:
                 result_count = count
             else:
+                remainder = 3
                 result_count = count - 1
 
             return result_count, remainder

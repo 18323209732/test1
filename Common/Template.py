@@ -17,16 +17,20 @@ import urllib3
 class {}(MyTest):
 
     condition = True
+    type_condition = False
     # {}"""
 
 case_body = """
-
+    
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def {}(self):
         # {}
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.{}(url, headers=self.headers, {}=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -66,7 +70,9 @@ import requests
 import time
 from random import randint
 from datetime import date,timedelta
-from Common.ReadYaml import ReadPublic
+from Common.ReadYaml import ReadPublic, ConfigYaml
+projectName = ConfigYaml("projectName").base_config
+Url = ConfigYaml(projectName).base_url
 '''
 
 publicyaml = '''add_customer:

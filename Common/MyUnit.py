@@ -24,7 +24,6 @@ from Common.DataHandle import SqlHandle,Assertion
 
 
 class MyTest(TestCase):
-
     def __init__(self, methodName='runTest', param=None):
         TestCase.__init__(self, methodName)
         self.param = param
@@ -35,10 +34,13 @@ class MyTest(TestCase):
 
     @classmethod
     def setUpClass(self):
+        self.type = ConfigYaml('type_key').base_config
+        self.json_type = ConfigYaml('json_type').base_config
+        self.form_type = ConfigYaml('form_type').base_config
         self.cookies_key = ConfigYaml('cookies').base_config
         Get_Cookies().write_cookies()
         self.cookies_value = ReadWrite(sign='session', option='cookies').read_ini_cookies()
-        self.headers = {'Content-Type': 'application/json;charset=UTF-8'}
+        self.headers = {self.type: self.json_type}
         self.headers.update({self.cookies_key: self.cookies_value})
 
 
@@ -56,7 +58,7 @@ class MyTest(TestCase):
         self.projectName = ConfigYaml("projectName").base_config
         self.casedata = CaseYaml().all_case
         if self.casedata:
-            self.clsdata,self.fundata = CaseHandle(self.className,self.casename,self.casedata)
+            self.clsdata,self.fundata = CaseHandle(self.className, self.casename,self.casedata)
         self.sql = ConfigYaml('sql').base_config
         self.redis = ConfigYaml('redis').base_config
         if self.fundata.get('url'):
