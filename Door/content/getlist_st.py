@@ -7,7 +7,7 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-from Common.generator import random_name
+from Common.generator import random_name,random_address
 from Common.RWyaml import RWyaml
 from Door.content.Public import Public_path
 
@@ -287,9 +287,106 @@ class getlist_content(MyTest):
     def test_batch_move_content(self):
         # 批量转移分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        id1 = RWyaml(Public_path()).read_yaml_value('content', 'id1')  # 读取yaml文件内容id
+        id2 = RWyaml(Public_path()).read_yaml_value('content', 'id2')  # 读取yaml文件内容id
+        self.data['ids'] = [id1, id2]
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red',self.singular)
+            return self.singular
+        
+
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_batch_hidepc_content(self):
+        # 批量隐藏电脑版
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red',self.singular)
+            return self.singular
+        
+
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_batch_showpc_content(self):
+        # 批量显示电脑版
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red',self.singular)
+            return self.singular
+        
+
+    @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_batch_delete_content(self):
+        # 批量删除
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.headers["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8"
+        id1 = RWyaml(Public_path()).read_yaml_value('content', 'id1')  # 读取yaml文件内容id
+        id2 = RWyaml(Public_path()).read_yaml_value('content', 'id2')  # 读取yaml文件内容id
+        self.data['id'] = [id1, id2]
+        try:
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            print(r.json())
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red',self.singular)
+            return self.singular
+        
+
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_quick_addclass_content(self):
+        # 快速添加分类
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.data['introductionCategory']['name'] = random_name()
+        try:
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            print(r.json())
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red',self.singular)
+            return self.singular
+        
+
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_autokey_content(self):
+        # 自动获取关键词
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.data['content'] = random_address()
+        try:
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
