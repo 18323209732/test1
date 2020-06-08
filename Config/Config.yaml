@@ -2,6 +2,9 @@ base_url:
   Design: https://account.300.cn/CAS/login?service=http://new-api-console.300.cn/api-platform/permission/userPermission?backurl=https://new-console.300.cn/        #设计器地址
   Door: http://2004105022.pool5-site.make.yun300.cn # 正式环境
 base_config:
+  json_type: application/json
+  form_type: application/x-www-form-urlencoded
+  type_key: Content-Type
   project_url: https://api-shop.300.cn/security/operInstance/getNewInstanceInfoList?productType=11
   cookies: Cookie
   session: GWSESSION
