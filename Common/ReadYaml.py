@@ -160,4 +160,6 @@ class ReadPublic:
 
 
 
-
+if __name__ == '__main__':
+    cookies_key = CaseYaml('')
+    print(cookies_key)
