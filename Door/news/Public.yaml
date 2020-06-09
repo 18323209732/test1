@@ -1,0 +1,7 @@
+get_news:
+  url: "/manager/gwforward/manager-webapi/content/info/info_page?viewType=1&tenantId=188078"
+  bar: {top: -1,recommend: -1,startDate: endDate=, pcStatus: -1, mobileStatus: -1,cateId: -1,keywords: '',wd: '',queryType: 4, ec_p: 1,ec_crd: 15,ec_s: '',v: 1,orderColumn: '',orderType: '',ec_s_title: '',ec_s_categorys: '',ec_s_pubDate: '',ec_s_viewCount: '', ec_s_showFlag: '', ec_s_showMobileFlag: ''}
+
+get_news_class:
+  url: "/manager/gwforward/manager-webapi/content/infoCategory/infoCategoryTreeExt?viewType=1&tenantId=188078"
+  bar: {node: -1}

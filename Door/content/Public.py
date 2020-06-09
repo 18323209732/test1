@@ -9,3 +9,8 @@ import time
 from random import randint
 from datetime import date,timedelta
 from Common.ReadYaml import ReadPublic
+
+def Public_path():
+    path = os.path.dirname(os.path.abspath('.')) + '/content/Public.yaml'
+    print(path)
+    return path

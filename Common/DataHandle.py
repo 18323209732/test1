@@ -150,10 +150,10 @@ class SqlHandle:
         self.funname = funname
         self.modular = modular
         self.insert_response = ConfigYaml(key='insert_response').sql
-        self.insert_result = ConfigYaml(key='insert_result').sql%(self.funname,self.modular)
+        self.insert_result = ConfigYaml(key='insert_result').sql%(self.funname, self.modular)
         self.update_result = ConfigYaml(key='update_result').sql
         self.update_ratecl = ConfigYaml(key='update_ratecl').sql
-        self.search_result = ConfigYaml(key='search_result').sql%self.funname
+        self.search_result = ConfigYaml(key='search_result').sql % self.funname
         self.describe = describe
         self.priority = priority
         self.address = address
@@ -196,8 +196,8 @@ class SqlHandle:
 
         try:
             sqldata = self.insert_response%(
-                self.funname,self.describe,self.priority,self.address,
-                self.status,self.writer,self.usetime,self.summary
+                self.funname, self.describe, self.priority, self.address,
+                self.status, self.writer, self.usetime, self.summary
                 )
             Sql(sql=sqldata).execute_sql()
         except:
@@ -210,7 +210,7 @@ class SqlHandle:
         :param statusnumber:
         :return:
         '''
-        return self.update_result%(statuscl,statuscl,self.funname)
+        return self.update_result % (statuscl, statuscl, self.funname)
 
     def update_rate(self,clmname,rate):
         '''
@@ -218,7 +218,7 @@ class SqlHandle:
         :param clmname:
         :return:
         '''
-        return self.update_ratecl % (clmname,rate,self.funname)
+        return self.update_ratecl % (clmname, rate, self.funname)
 
     def insert_result_table(self):
         '''
@@ -226,9 +226,9 @@ class SqlHandle:
         :return:
         '''
         data = Sql(sql=self.search_result).execute_sql()
-
         if not data:
             Sql(sql=self.insert_result).execute_sql()
+            data = Sql(sql=self.search_result).execute_sql()
 
         if self.status == '失败':
             Sql(sql=self.handle_sql(statuscl="failnumber")).execute_sql()

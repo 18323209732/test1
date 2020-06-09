@@ -1,0 +1,4 @@
+add_customer:
+  - url: /add/customerParam
+    bar: {}
+content: {id: 4, id1: 1, id2: 1, title: "1137\u7F16\u8F911"}
