@@ -21,7 +21,7 @@ import warnings
 import re
 from Common.MyRedis import ReDis
 from Common.DataHandle import SqlHandle,Assertion
-
+from time import sleep
 
 class MyTest(TestCase):
     def __init__(self, methodName='runTest', param=None):
@@ -31,18 +31,21 @@ class MyTest(TestCase):
         self.time = 0
         self.abnormal = ''
 
-
     @classmethod
     def setUpClass(self):
+        '''
+        :return:
+        '''
         self.type = ConfigYaml('type_key').base_config
         self.json_type = ConfigYaml('json_type').base_config
         self.form_type = ConfigYaml('form_type').base_config
         self.cookies_key = ConfigYaml('cookies').base_config
+        self.tenant_key = ConfigYaml('tenant_key').base_config
+        self.tenant_value = ConfigYaml('tenant_value').base_config
+
         Get_Cookies().write_cookies()
         self.cookies_value = ReadWrite(sign='session', option='cookies').read_ini_cookies()
-        self.headers = {self.type: self.json_type}
-        self.headers.update({self.cookies_key: self.cookies_value})
-
+        self.headers = {self.cookies_key: self.cookies_value}
 
     @classmethod
     def tearDownClass(self):
@@ -56,15 +59,16 @@ class MyTest(TestCase):
         self.className = self.__class__.__name__
         self.casename = self._testMethodName
         self.projectName = ConfigYaml("projectName").base_config
+        self.headers.update({self.type: self.json_type})
         self.casedata = CaseYaml().all_case
         if self.casedata:
             self.clsdata,self.fundata = CaseHandle(self.className, self.casename,self.casedata)
         self.sql = ConfigYaml('sql').base_config
         self.redis = ConfigYaml('redis').base_config
         if self.fundata.get('url'):
-            self.url = self.fundata.get('url')
+            self.url = self.fundata.get('url') + f"?{self.tenant_key}={self.tenant_value}"
         else:
-            self.url = self.clsdata.get('url')
+            self.url = self.clsdata.get('url') + f"?{self.tenant_key}={self.tenant_value}"
         if self.fundata.get('author'):
             self.author = self.fundata.get('author')
         else:
