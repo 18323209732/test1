@@ -28,7 +28,7 @@ class getlist_content(MyTest):
             title = r.json()['data']['list'][0]['title']  # 获取首个内容title
             RWyaml(Public_path()).write_yaml('content', 'title', title)  # 内容title存入public.yaml文件
             n = 1
-            for i in r.json()['data']['list']:
+            for i in r.json()['data']['list']:   # 循环获取列表内容id
                 # print(i['id'])
                 RWyaml(Public_path()).write_yaml('content', 'id'+str(n), i['id'])  # 内容id存入public.yaml文件
                 n += 1
