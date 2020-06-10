@@ -177,10 +177,11 @@ class RunAll:
                 if times[0] != 0:
                     all_time.append(times[0])
                     sumtime += float(times[0])
-                else:
-                    all_time = sumtime = 0
 
-            return all_time,sumtime
+            return all_time, sumtime
+        else:
+            all_time = sumtime = 0
+            return all_time, sumtime
 
     def runmethod(self):
         '''
@@ -257,12 +258,12 @@ class RunAll:
             all_data = data
         times = Sql(self.search_desc).execute_sql()
         all_time, run_sumtime = self.sql_handle(times)
-        if isinstance(all_time,list):
+        if isinstance(all_time, list):
             max_time = round(all_time[0], 2)
             min_time = round(all_time[-1], 2)
             avg_time = round(run_sumtime/len(all_time), 2)
         else:
-            max_time = min_time = avg_time =0
+            max_time = min_time = avg_time = 0
 
         value = Package_Data(
                 all_data, sumtime, starttime, endtime,
