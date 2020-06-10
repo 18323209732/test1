@@ -210,7 +210,7 @@ Door:
           re_bar: data, # 请求参数
       }
           test_search_content: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/content/introduction/searchTips',
+          url: '/manager/gwforward/manager-webapi/content/introduction/searchTips/',
           level: 中,
           author: 宋宇,
           bar: {tenantId: 196498,viewType: 1,keywords: '请输入标题',parentId: 0},
@@ -218,7 +218,7 @@ Door:
           case_name: 搜索分类内容,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
-          re_bar: json, # 请求参数
+          re_bar: params, # 请求参数
       }
           test_filter_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/introductList/',
