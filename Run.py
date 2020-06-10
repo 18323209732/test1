@@ -95,8 +95,6 @@ class RunAll:
         self.basenumber = ConfigYaml('basenumber').base_config          #执行次数，基数
         self.runfrequency = ConfigYaml('runfrequency').base_config      #只运行失败和错误的用例次数
         self.againrunall = ConfigYaml('againrun').base_config           #运行失败和错误的用例多少次数之后再整体运行多少次
-        self.create_table = ConfigYaml('create_table').sql              #创建response表
-        self.create_result = ConfigYaml('create_result').sql            #创建result表
         self.report_path = Any_Path("template", 'report.html')       #测试报告存放路径
         self.oldstrcs = '../../static/mycss.css'                       #静态文件地址css
         self.oldstrjs = '../../static/alljs.js'                         #静态js文件地址
@@ -126,7 +124,7 @@ class RunAll:
         runner = unittest.TextTestRunner(verbosity=1)
         result = runner.run(discover)
         log.info("单线程用例执行完成....")
-        Get_Skip(result.skipped,self.data).get_skip()
+        Get_Skip(result.skipped, self.data).get_skip()
 
     def runthread(self):
         '''
@@ -279,7 +277,6 @@ class RunAll:
         :return:
         '''
         value = self.collect_data()
-
         r = requests.post(url=self.url, json=value, stream=True, timeout=60)
         if r.json().get('code') == 0:
             url = r.json().get('data').get('report_url')
@@ -316,6 +313,7 @@ class RunAll:
         发送邮件
         :return:
         '''
+
         url, file_path, success, error, fail, timeout, skip = self.download_report()
         sum_case = success + error + fail + timeout + skip
         title = '{}({})'.format(self.title,self.EnvName)
@@ -333,8 +331,6 @@ class RunAll:
         :return:
         '''
 
-        Sql(self.create_table).execute_sql()            #创建表response
-        Sql(self.create_result).execute_sql()           #创建表result
         if self.sql:
             Sql(self.delsql).execute_sql()              #清空response表
         if self.redis:

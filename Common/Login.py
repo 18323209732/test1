@@ -87,7 +87,7 @@ class Login:
                 else:
                     self._click("*", "class", "arrow-border active", 2)
                     sleep(1)
-            self._click("*", "class", "el-button el-button--primary el-button--small", index)
+            self._click("*", "class", "fr", index + 1)
             sleep(7)
             self.driver.get(self.new_website)
             Cookis = self.driver.get_cookies()[1].get("value")
@@ -121,4 +121,7 @@ class Login:
         else:
             outcome('red', "获取网站【index】失败....")
 
-
+#
+# if __name__=="__main__":
+#     # Login().get_cookie()
+#     pass

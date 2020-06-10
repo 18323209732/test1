@@ -21,7 +21,6 @@ class {}(MyTest):
     # {}"""
 
 case_body = """
-    
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def {}(self):
@@ -38,7 +37,7 @@ case_body = """
             self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
-            outcome('red',self.singular)
+            outcome('red', self.singular)
             return self.singular
         """
 
