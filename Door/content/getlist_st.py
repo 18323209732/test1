@@ -141,7 +141,7 @@ class getlist_content(MyTest):
         self.data['keywords'] = RWyaml(Public_path()).read_yaml_value('content', 'title')  # 读取yaml文件标题名
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
