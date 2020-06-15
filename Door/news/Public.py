@@ -27,8 +27,8 @@ class Public_Data:
         self.headers.update({self.cookies_key: self.cookies_value})
         self.projectName = ConfigYaml("projectName").base_config
         self.url = ConfigYaml(projectName).base_url
-
-
+        self.tenant_key = ConfigYaml('tenant_key').base_config
+        self.tenant_value = ConfigYaml('tenant_value').base_config
 
     def get_news(self, swich=True):
         '''
@@ -36,24 +36,23 @@ class Public_Data:
         :return:
         '''
         self.public_data = ReadPublic(catalog='news', key="get_news")
-        url = self.public_data.public_value("url")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
         url = self.url + url
         data = self.public_data.public_value("bar")
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
         result = r.json()
-        title = []
-        news_id = []
-        if result.get('status')==200:
+        if result.get('status') == 200:
             if swich:
-                for value in result.get('data').get('pres'):
-                    title.append(value.get('title'))
+                while True:
+                    for value in result.get('data').get('pres'):
+                        yield value.get('title')
 
-                return title
             else:
-                for value in result.get('data').get('pres'):
-                    news_id.append(value.get('id'))
+                while True:
+                    for value in result.get('data').get('pres'):
+                        yield value.get('id')
 
-                return news_id
+
 
     @property
     def get_news_class(self):
@@ -62,16 +61,14 @@ class Public_Data:
         :return:
         '''
         self.public_data = ReadPublic(catalog='news', key="get_news_class")
-        url = self.public_data.public_value("url")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
         url = self.url + url
         data = self.public_data.public_value("bar")
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
         result = r.json()
-        class_id = []
         if result.get('status') == 200:
-            for value in result.get('data').get('data'):
-                class_id.append(value.get('id'))
-
-        return class_id
+            while True:
+                for value in result.get('data').get('data'):
+                    yield value.get('id')
 
 
