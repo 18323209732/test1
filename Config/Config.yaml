@@ -1,6 +1,6 @@
 base_url:
   Design: https://account.300.cn/CAS/login?service=http://new-api-console.300.cn/api-platform/permission/userPermission?backurl=https://new-console.300.cn/        #设计器地址
-  Door: http://2004105022.pool5-site.make.yun300.cn # 正式环境
+  Door: https://2004105022-site.pool5.yun300.cn # 正式环境
 base_config:
   tenant_key: tenantId
   tenant_value: 188078
@@ -105,5 +105,5 @@ sql:
 report:
   title: 接口自动化测试报告
   edition: V1.0.0.1        #项目版本
-  science: 测试环境          #项目环境
+  science: 线上环境          #项目环境
 
