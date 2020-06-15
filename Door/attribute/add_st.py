@@ -8,7 +8,7 @@ from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import random
 import urllib3
-from Door.attribute.Public import list_num
+# from Door.attribute.Public import list_num
 import datetime
 
 class add_attribute(MyTest):

@@ -1,0 +1,12 @@
+时间:2020-06-15 15:01:25,732  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:8417/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}} 行数: 390 文件名:remote_connection.py
+时间:2020-06-15 15:01:25,733  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:8417 行数: 205 文件名:connectionpool.py
+时间:2020-06-15 15:01:28,243  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:8417 "POST /session HTTP/1.1" 500 988 行数: 393 文件名:connectionpool.py
+时间:2020-06-15 15:01:28,243  方法:_request  级别:DEBUG  消息:Finished Request 行数: 442 文件名:remote_connection.py
+时间:2020-06-15 15:02:06,285  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2206/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}} 行数: 390 文件名:remote_connection.py
+时间:2020-06-15 15:02:06,285  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:2206 行数: 205 文件名:connectionpool.py
+时间:2020-06-15 15:02:08,384  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2206 "POST /session HTTP/1.1" 500 988 行数: 393 文件名:connectionpool.py
+时间:2020-06-15 15:02:08,385  方法:_request  级别:DEBUG  消息:Finished Request 行数: 442 文件名:remote_connection.py
+时间:2020-06-15 15:02:41,545  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2793/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}} 行数: 390 文件名:remote_connection.py
+时间:2020-06-15 15:02:41,546  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:2793 行数: 205 文件名:connectionpool.py
+时间:2020-06-15 15:02:43,269  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2793 "POST /session HTTP/1.1" 500 988 行数: 393 文件名:connectionpool.py
+时间:2020-06-15 15:02:43,270  方法:_request  级别:DEBUG  消息:Finished Request 行数: 442 文件名:remote_connection.py

@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89211bc0-fa15-4ecc-a7f3-73c9f4440e86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_6_3_0003_10_34_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_6_3_0003_10_34__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_6_4_0004_17_31_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_6_4_0004_17_31__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_3_0003_14_04_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_3_0003_14_04__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_4_0004_16_29_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_4_0004_16_29__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_4_0004_17_52_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_4_0004_17_52__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/MyUnit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/MyUnit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/ReadYaml.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/ReadYaml.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/Case.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/Case.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/attribute/Public.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/attribute/Public.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Door/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Log/2020-06-05.log" beforeDir="false" afterPath="$PROJECT_DIR$/Log/2020-06-05.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Door/attribute/add_st.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/attribute/add_st.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +83,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Config/Sqlite.db" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,29 +94,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Public">
-    <configuration name="InitializeCase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Portal_interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/InitializeCase.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests for add_st.add_attribute.test_attribute_list">
     <configuration name="MySql" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Portal_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,6 +161,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for add_st.add_attribute.test_attribute_list" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Portal_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/attribute" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;add_st.add_attribute.test_attribute_list&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for manage_st.manage_classification.test_edit_classification" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Portal_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -193,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for add_st.add_attribute.test_attribute_list" />
         <item itemvalue="Python.Public" />
         <item itemvalue="Python.ReadYaml" />
         <item itemvalue="Python.MySql" />
         <item itemvalue="Python tests.Unittests for manage_st.manage_classification.test_edit_classification" />
-        <item itemvalue="Python.InitializeCase" />
       </list>
     </recent_temporary>
   </component>
@@ -224,6 +224,10 @@
       <workItem from="1591233280139" duration="23922000" />
       <workItem from="1591320281278" duration="382000" />
       <workItem from="1591324065653" duration="16599000" />
+      <workItem from="1591690199101" duration="917000" />
+      <workItem from="1591772510373" duration="42000" />
+      <workItem from="1592192569918" duration="1071000" />
+      <workItem from="1592203658807" duration="867000" />
     </task>
     <task id="LOCAL-00002" summary="3334">
       <created>1591343682784</created>
@@ -232,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591343682784</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="33345">
+      <created>1591690361581</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591690361581</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +265,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="333" />
     <MESSAGE value="3334" />
-    <option name="LAST_COMMIT_MESSAGE" value="3334" />
+    <MESSAGE value="33345" />
+    <option name="LAST_COMMIT_MESSAGE" value="33345" />
   </component>
   <component name="WindowStateProjectService">
     <state x="423" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591158874002">
@@ -265,33 +277,34 @@
       <screen x="62" y="0" width="1538" height="900" />
     </state>
     <state x="635" y="318" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/62.0.1538.900@62.0.1538.900" timestamp="1591234676781" />
-    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1591343680417">
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1591690358130">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1591343680417" />
-    <state x="558" y="110" key="FileChooserDialogImpl" timestamp="1591158575816">
-      <screen x="62" y="0" width="1538" height="900" />
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1591690358130" />
+    <state x="441" y="89" key="FileChooserDialogImpl" timestamp="1591772546308">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="441" y="89" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591772546308" />
     <state x="558" y="110" key="FileChooserDialogImpl/62.0.1538.900@62.0.1538.900" timestamp="1591158575816" />
-    <state width="1323" height="302" key="GridCell.Tab.0.bottom" timestamp="1591350364094">
+    <state width="1323" height="128" key="GridCell.Tab.0.bottom" timestamp="1592204631250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="302" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591350364094" />
+    <state width="1323" height="128" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592204631250" />
     <state width="1485" height="131" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
-    <state width="1323" height="302" key="GridCell.Tab.0.center" timestamp="1591350364094">
+    <state width="1323" height="128" key="GridCell.Tab.0.center" timestamp="1592204631250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="302" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591350364094" />
+    <state width="1323" height="128" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592204631250" />
     <state width="1485" height="131" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
-    <state width="1323" height="302" key="GridCell.Tab.0.left" timestamp="1591350364093">
+    <state width="1323" height="128" key="GridCell.Tab.0.left" timestamp="1592204631250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="302" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591350364093" />
+    <state width="1323" height="128" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592204631250" />
     <state width="1485" height="131" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
-    <state width="1323" height="302" key="GridCell.Tab.0.right" timestamp="1591350364094">
+    <state width="1323" height="128" key="GridCell.Tab.0.right" timestamp="1592204631250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="302" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591350364094" />
+    <state width="1323" height="128" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592204631250" />
     <state width="1485" height="131" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
     <state width="1323" height="302" key="GridCell.Tab.1.bottom" timestamp="1591350364095">
       <screen x="0" y="0" width="1366" height="728" />
@@ -321,10 +334,10 @@
       <screen x="62" y="0" width="1538" height="900" />
     </state>
     <state x="208" y="71" key="MergeDialog/62.0.1538.900@62.0.1538.900" timestamp="1591259754780" />
-    <state x="392" y="80" key="MultipleFileMergeDialog" timestamp="1591343707714">
+    <state x="392" y="80" key="MultipleFileMergeDialog" timestamp="1591690400378">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="392" y="80" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1591343707714" />
+    <state x="392" y="80" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1591690400378" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1591337326240">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -334,10 +347,10 @@
     </state>
     <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590137291380" />
     <state x="372" y="124" key="Vcs.Push.Dialog.v2/62.0.1538.900@62.0.1538.900" timestamp="1591320512292" />
-    <state x="467" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591343688285">
+    <state x="467" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591690372488">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="467" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1591343688285" />
+    <state x="467" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1591690372488" />
     <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1538.900@62.0.1538.900" timestamp="1591320663468" />
     <state x="439" y="193" key="git4idea.merge.GitPullDialog" timestamp="1591320538808">
       <screen x="62" y="0" width="1538" height="900" />
@@ -373,11 +386,11 @@
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_add_attribute.coverage" NAME="Unittests for add_st.add_attribute.test_add_attribute Coverage Results" MODIFIED="1591343823668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_in_add_st_py.coverage" NAME="Unittests in add_st.py Coverage Results" MODIFIED="1591344431047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_classification_test_edit_classification.coverage" NAME="Unittests for manage_st.manage_classification.test_edit_classification Coverage Results" MODIFIED="1591345359284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/classification" />
-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_attribute_list.coverage" NAME="Unittests for add_st.add_attribute.test_attribute_list Coverage Results" MODIFIED="1591344092015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
+    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_attribute_list.coverage" NAME="Unittests for add_st.add_attribute.test_attribute_list Coverage Results" MODIFIED="1592204557740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute.coverage" NAME="Unittests for add_st.add_attribute Coverage Results" MODIFIED="1591344455312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_productCategory_test_add_category.coverage" NAME="Unittests for manage_st.manage_productCategory.test_add_category Coverage Results" MODIFIED="1591256868959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/productCategory" />
     <SUITE FILE_PATH="coverage/Portal_interface$GetToken.coverage" NAME="GetToken Coverage Results" MODIFIED="1591152307089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
-    <SUITE FILE_PATH="coverage/Portal_interface$Public.coverage" NAME="Public Coverage Results" MODIFIED="1591349468897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
+    <SUITE FILE_PATH="coverage/Portal_interface$Public.coverage" NAME="Public Coverage Results" MODIFIED="1592204240328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_list_screen.coverage" NAME="Unittests for add_st.add_attribute.test_list_screen Coverage Results" MODIFIED="1591337163593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$ReadYaml.coverage" NAME="ReadYaml Coverage Results" MODIFIED="1591349396855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_edit_attribute_pre.coverage" NAME="Unittests for add_st.add_attribute.test_edit_attribute_pre Coverage Results" MODIFIED="1591340101134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
