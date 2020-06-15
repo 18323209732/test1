@@ -8,7 +8,7 @@ from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import random
 import urllib3
-# from Door.attribute.Public import list_num
+from Door.attribute.Public import Public_Data
 import datetime
 
 class add_attribute(MyTest):
@@ -55,7 +55,7 @@ class add_attribute(MyTest):
     def test_edit_attribute_pre(self):
         # 编辑属性类型
         try:
-            id = random.choice(list_num)
+            id = random.choice(Public_Data().get_attribute(swich=False))
             url = ConfigYaml(self.projectName).base_url + self.url
             num = random.randint(0,10000)
             self.data['templateName'] = '自动%d'%num
@@ -79,10 +79,12 @@ class add_attribute(MyTest):
         # 复制属性类型
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            id = random.choice(list_num)
+            id = random.choice(Public_Data().get_attribute(swich=False))
             url = ConfigYaml(self.projectName).base_url + self.url.format(id)
+            print('url===:',url)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
+            print('ret=====:',self.result)
 
             self.time=r.elapsed.total_seconds()
         except:
@@ -97,7 +99,7 @@ class add_attribute(MyTest):
         # 删除属性类型
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            id = random.choice(list_num)
+            id = random.choice(Public_Data().get_attribute(swich=False))
             url = ConfigYaml(self.projectName).base_url + self.url.format(id)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()

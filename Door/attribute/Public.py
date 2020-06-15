@@ -30,30 +30,31 @@ class Public_Data:
 
 
 
-    def get_news(self, swich=True):
+    def get_attribute(self, swich=False):
         '''
-        获取新闻资讯列表数据
+        获取属性管理列表数据
         :return:
         '''
-        self.public_data = ReadPublic(catalog='news', key="get_news")
+        self.public_data = ReadPublic(catalog='attribute', key="get_attribute")
         url = self.public_data.public_value("url")
         url = self.url + url
         data = self.public_data.public_value("bar")
-        r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+        r = requests.get(url, headers=self.headers, json=data, stream=True, verify=False)
         result = r.json()
-        title = []
-        news_id = []
+        name = []
+        id = []
         if result.get('status')==200:
             if swich:
-                for value in result.get('data').get('pres'):
-                    title.append(value.get('title'))
-
-                return title
+                for value in result.get('data').get('list'):
+                    if value.get('id') != 1:
+                        name.append(value.get('templateName'))
+                return name
             else:
-                for value in result.get('data').get('pres'):
-                    news_id.append(value.get('id'))
+                for value in result.get('data').get('list'):
+                    if value.get('id') != 1:
+                        id.append(value.get('id'))
 
-                return news_id
+                return id
 
     @property
     def get_news_class(self):
@@ -76,4 +77,5 @@ class Public_Data:
 
 if __name__ == '__main__':
     p = Public_Data()
-    p.get_news()
+    ret = p.get_attribute()
+    print(ret)
