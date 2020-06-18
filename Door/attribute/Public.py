@@ -76,6 +76,4 @@ class Public_Data:
         return class_id
 
 if __name__ == '__main__':
-    p = Public_Data()
-    ret = p.get_attribute()
-    print(ret)
+    pass

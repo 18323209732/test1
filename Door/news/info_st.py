@@ -589,3 +589,212 @@ class info_news(MyTest):
             outcome('red', self.singular)
             return self.singular
         
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_add_news(self):
+        # 普通资讯新增
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_addpicture_news(self):
+        # 图片资讯新增
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_addlink_news(self):
+        # 链接资讯新增
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_getkeywords_news(self):
+        # 自动获取关键词
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_addcategor_news(self):
+        # 快捷添加分类
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_timing_news(self):
+        # 定时发布
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_relevant_news(self):
+        # 相关内容
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_extension_news(self):
+        # 推广优化
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_senior_news(self):
+        # 高级设置
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_muchpicture_news(self):
+        # 多图片上传
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_select_news(self):
+        # 选择图片连接
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        

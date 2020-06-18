@@ -21,7 +21,7 @@ class add_attribute(MyTest):
         # 添加属性类型
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
-            num = random.randint(0, 1000)
+            num = random.randint(0, 999999)
             self.data['templateName'] = '自动%d' % num
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -40,9 +40,10 @@ class add_attribute(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             self.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8'
+            print('url====:',url)
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify = False)
             self.result = r.json()
-
+            print('result===:',self.result)
             self.time=r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
@@ -82,7 +83,7 @@ class add_attribute(MyTest):
             id = random.choice(Public_Data().get_attribute(swich=False))
             url = ConfigYaml(self.projectName).base_url + self.url.format(id)
             print('url===:',url)
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
             print('ret=====:',self.result)
 
@@ -101,8 +102,11 @@ class add_attribute(MyTest):
         try:
             id = random.choice(Public_Data().get_attribute(swich=False))
             url = ConfigYaml(self.projectName).base_url + self.url.format(id)
+            print('url=====:',url)
+            print('--=-=-:',self.headers)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
+            print(self.result)
 
             self.time=r.elapsed.total_seconds()
         except:
@@ -129,5 +133,24 @@ class add_attribute(MyTest):
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_edit_attribute(self):
+        # 编辑属性类型
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
             return self.singular
         

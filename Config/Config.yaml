@@ -44,7 +44,7 @@ base_config:
   host: localhost                                 #数据库主机ip
   port: 3306                                          #主机sql端口
   sqlname: response                                  #数据库名称
-  pwd: '111111'                                         #数据库连接密码
+  pwd: '123456'                                         #数据库连接密码
   user: root                                  #数据库连接用户
   redisip: 192.168.4.36                       #redis服务ip
   redisport: 6379                             #redis服务端口
