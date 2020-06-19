@@ -123,7 +123,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/product/appCategory/updateMoveTree?viewType=1&authPermission=classify_update',
           level: 中,   #级别
           author: 方坤,  #作者
-          bar: {'appId':2,'pid':42,'id':53},
+          bar: {'appId':2,'pid':44,'id':44},
           test_data: {},
           case_name: 转移分类,
           expected: [200],  # 预期结果
