@@ -1140,6 +1140,371 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
           }
+  picture: #新闻资讯
+    - url:  # 新闻资讯
+      modular: 新闻分类管理  # 接口注释
+      className: library_picture  # 接口类名
+      funName:
+        - test_list_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/findByPagination",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 全部图片列表数据,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_search_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/findByPagination",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {pageSize: 15,currentPage: 1,queryStatus: 1,startDate: 2020-06-08+00:00:00,endDate: 2020-06-18+23:59:59,classId: 1},
+          test_data: {},
+          case_name: 筛选图片,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_screen_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/findByPagination",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {name: '155'},
+          test_data: {},
+          case_name: 搜索图片,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_edit_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageInfoUpdate",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 35,name: 11},
+          test_data: {},
+          case_name: 编辑图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_upload_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageFileUpload",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {appId: 0},
+          test_data: {},
+          case_name: 上传图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_cat_picture: {  # 添加属性类型
+          url: '/',
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 预览图片,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_move_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/updateClassByIds",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {classId: 1, ids: 47},
+          test_data: {},
+          case_name: 转移图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_moves_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/updateClassByIds",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {classId: 1, ids: [47,46,44,31]},
+          test_data: {},
+          case_name: 批量转移图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_addwater_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/addImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: 46},
+          test_data: {},
+          case_name: 添加水印,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_addwateres_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/addImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: [26,25]},
+          test_data: {},
+          case_name: 批量添加水印,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_acancelwateres_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/clearImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: [26,25]},
+          test_data: {},
+          case_name: 批量取消水印,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_acancelwater_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/clearImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: 26},
+          test_data: {},
+          case_name: 取消水印,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_delete_pictur: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageDelete",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: 26},
+          test_data: {},
+          case_name: 删除水印,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_delete_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageDelete",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 批量删除水印,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_pages_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/findByPagination",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 翻页,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_editwindow_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageFileUpdate",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 53},
+          test_data: {},
+          case_name: 编辑上传图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_wicket_pictures: {  # 添加属性类型
+          url: "/",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 编辑图片窗口,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_edetwicket_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageInfoUpdate",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 53,name: test},
+          test_data: {},
+          case_name: 编辑图片确认,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_waterset_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/getImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 53,name: test},
+          test_data: {},
+          case_name: 水印设置,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_saveandgetwater_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/saveAndGetWatermarkBak",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {"layout":1,"logoFlag":1,"wordFlag":0,"word":"","urlFlag":0,"url":"","opacityScale":40,"pos":1,"wordB":1,"wordI":1,"wordU":1,"wordFamilyName":"宋体","wordSize":24,"wordColor":"#FFFFFF","urlB":1,"urlI":1,"urlU":1,"urlFamilyName":"宋体","urlSize":24,"urlColor":"#FFFFFF","imageId":2,"imageUrl":"/repository/image/f426652a-eaf5-4020-a1f7-7c689f675c45.jpg_135x135.jpg","id":1,"useViewType":false},
+          test_data: {},
+          case_name: 生成水印waterbak.png,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_waterupload_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/saveOrUpdateImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {"layout":2,"logoFlag":1,"wordFlag":1,"word":"67868","urlFlag":0,"url":"9999","opacityScale":40,"pos":"2","wordB":1,"wordI":1,"wordU":1,"wordFamilyName":"宋体","wordSize":24,"wordColor":"#FFFFFF","urlB":1,"urlI":1,"urlU":1,"urlFamilyName":"宋体","urlSize":24,"urlColor":"#FFFFFF","imageId":54,"imageUrl":"/repository/image/b8b6b8ac-e364-4df5-ab87-d61f22357e7f.jpg","id":1,"useViewType":false},
+          test_data: {},
+          case_name: 水印设置保存,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_water_pictures: {  # 添加属性类型
+          url: "/managePanel/static/imgs/water.png",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 水印设置页面,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_water1_pictures: {  # 添加属性类型
+          url: "/managePanel/static/imgs/water1.png",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 水印设置页面1,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_water2_pictures: {  # 添加属性类型
+          url: "/managePanel/static/imgs/water2.png",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 水印设置页面2,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_reset_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/getImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {authPermission: image_watermark_set},
+          test_data: {},
+          case_name: 重置,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_batchsearch_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/getByIds",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: id批量查询,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_addclass_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/addFileClass",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {className: 333, classInfo: 4444},
+          test_data: {},
+          case_name: 添加分类,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_deleteclass_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/deleteFileClass",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: 3},
+          test_data: {},
+          case_name: 删除分类,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_editclass_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/updateFileClass",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 6,className: 自动,classInfo: 自动化},
+          test_data: {},
+          case_name: 编辑分类,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_listclass_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/findAllClass",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 获取分类列表,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
 
 
 
