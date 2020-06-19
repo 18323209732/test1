@@ -82,6 +82,7 @@ class Login:
                 for value in cookies:
                     if self.key in value.values():
                         cookie = value.get("value")
+
             else:
                 outcome('red',f"未获取到【{self.key}】...")
             _cookies = f"{self.key}={cookie}"
@@ -103,6 +104,7 @@ class Login:
                     if self.session in session.values():
                         gwsession = session.get("value")
                         outcome('green', f"登陆成功,成功获取【{self.session}】成功....")
+
             else:
                 outcome('red',f"登录失败,未获取到【{self.session}】..")
 
