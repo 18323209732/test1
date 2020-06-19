@@ -79,3 +79,16 @@ def show_sort():
     '''
     result = choice(['TITLE_DESC', 'default', 'TITLE_ASC', 'PUB_DATE_ASC', 'PUB_DATE_DESC'])
     return result
+
+
+def get_hour_second(value):
+    '''
+    获取当前日期前任意天数日期
+    :param value:
+    :return:
+    '''
+    today = datetime.now()
+    date_time = timedelta(days=value)
+    re_date = (today + date_time).strftime('%Y-%m-%d %H:%M:%S')
+
+    return re_date

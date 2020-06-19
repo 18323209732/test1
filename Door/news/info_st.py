@@ -9,7 +9,7 @@ from Common.DataHandle import ReRun
 import urllib3
 from random import choice
 from Door.news.Public import Public_Data
-from Common.CusMethod import get_data_time, random_char, thead_sort, random_str, show_sort
+from Common.CusMethod import get_data_time, random_char, thead_sort, random_str, show_sort, get_hour_second
 
 
 class info_news(MyTest):
@@ -19,10 +19,7 @@ class info_news(MyTest):
     type_condition = True
 
     public_data = Public_Data()
-    news_name = public_data.get_news()
-    news_id = public_data.get_news(swich=False)
-    class_id = public_data.get_news_class
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_all_news(self):
         # 全部资讯页面
@@ -30,6 +27,7 @@ class info_news(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -40,7 +38,7 @@ class info_news(MyTest):
             outcome('red',self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_noclass_news(self):
         # 无内容分类
@@ -59,7 +57,7 @@ class info_news(MyTest):
             return self.singular
         
     
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_search_news(self):
         # 搜索新闻资讯
@@ -68,7 +66,8 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['keywords'] = next(self.news_name)
+            news_name = self.public_data.get_news()
+            self.data['keywords'] = next(news_name)
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -79,7 +78,7 @@ class info_news(MyTest):
             outcome('red',self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_screen_news(self):
         # 筛选新闻资讯
@@ -88,7 +87,8 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['cateId'] = next(self.class_id)
+            class_id = self.public_data.get_news_class
+            self.data['cateId'] = next(class_id)
             self.data['pcStatus'] = choice([0, 1, -1])
             self.data['startDate'] = get_data_time(-7)
             self.data['startDate'] = get_data_time(0)
@@ -102,7 +102,7 @@ class info_news(MyTest):
             outcome('red', self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_turnpage_news(self):
         # 翻页
@@ -122,7 +122,7 @@ class info_news(MyTest):
             outcome('red',self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_theadsort_news(self):
         # 表头排序
@@ -147,7 +147,7 @@ class info_news(MyTest):
             outcome('red',self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_dragsort_news(self):
         # 拖拽排序
@@ -156,7 +156,8 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            value = next(self.news_id)
+            news_id = self.public_data.get_news(swich=False)
+            value = next(news_id)
             self.data['targetId'] = value - 1
             self.data['sectionIds'] = value
 
@@ -170,16 +171,18 @@ class info_news(MyTest):
             outcome('red', self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_edit_news(self):
         # 拖拽排序
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            self.data['id'] = str(next(self.news_id))
+            news_id = self.public_data.get_news(swich=False)
+            class_id = self.public_data.get_news_class
+            self.data['id'] = str(next(news_id))
             self.data['title'] = random_str("自动化测试")
-            self.data['infotype'] = str(next(self.class_id))
+            self.data['infotype'] = str(next(class_id))
             self.data['content'] = random_str("<p>自动化测试新闻资讯内容数据</p>\n")
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -201,7 +204,8 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(self.news_id)
+            news_id = self.public_data.get_news(swich=False)
+            self.data['id'] = next(news_id)
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -221,8 +225,10 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(self.news_id)
-            self.data['cateId'] = next(self.class_id)
+            news_id = self.public_data.get_news(swich=False)
+            class_id = self.public_data.get_news_class
+            self.data['id'] = next(news_id)
+            self.data['cateId'] = next(class_id)
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -243,7 +249,8 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(self.news_id)
+            news_id = self.public_data.get_news(swich=False)
+            self.data['id'] = next(news_id)
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -263,7 +270,8 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(self.news_id)
+            news_id = self.public_data.get_news(swich=False)
+            self.data['id'] = next(news_id)
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -281,7 +289,8 @@ class info_news(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            self.data['id'] = next(self.news_id)
+            news_id = self.public_data.get_news(swich=False)
+            self.data['id'] = next(news_id)
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -301,7 +310,8 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(self.news_id)
+            news_id = self.public_data.get_news(swich=False)
+            self.data['id'] = next(news_id)
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -321,7 +331,8 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(self.news_id)
+            news_id = self.public_data.get_news(swich=False)
+            self.data['id'] = next(news_id)
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -340,9 +351,11 @@ class info_news(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            news_id = next(self.news_id)
-            self.data['tags'][0]['infoId'] = news_id
-            self.data['tags'][1]['infoId'] = news_id
+            news_id = self.public_data.get_news(swich=False)
+            news_id = next(news_id)
+
+            self.data['tags'][0]['infoId'] = next(self.public_data.get_news(swich=False))
+            self.data['tags'][1]['infoId'] = next(self.public_data.get_news(swich=False))
             self.data['id'] = news_id
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -364,7 +377,8 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(self.news_id)
+            news_id = self.public_data.get_news(swich=False)
+            self.data['id'] = next(news_id)
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -384,17 +398,16 @@ class info_news(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-            print(self.headers)
-            # news_id_one = next(self.news_id)
-            # news_id_two = next(self.news_id)
-            # news_id_three = next(self.news_id)
-            # self.data['cateId'] = next(self.class_id)
-            # self.data['id'] = [news_id_one, news_id_two, news_id_three]
+
+            class_id = self.public_data.get_news_class
+            news_id_one = next(self.public_data.get_news(swich=False))
+            news_id_two = next(self.public_data.get_news(swich=False))
+            self.data['cateId'] = next(class_id)
+            self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
-            print(self.result)
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -411,10 +424,9 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(self.news_id)
-            news_id_two = next(self.news_id)
-            news_id_three = next(self.news_id)
-            self.data['id'] = [news_id_one, news_id_two, news_id_three]
+            news_id_one = next(self.public_data.get_news(swich=False))
+            news_id_two = next(self.public_data.get_news(swich=False))
+            self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -435,10 +447,9 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(self.news_id)
-            news_id_two = next(self.news_id)
-            news_id_three = next(self.news_id)
-            self.data['id'] = [news_id_one, news_id_two, news_id_three]
+            news_id_one = next(self.public_data.get_news(swich=False))
+            news_id_two = next(self.public_data.get_news(swich=False))
+            self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -450,7 +461,7 @@ class info_news(MyTest):
             outcome('red', self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_batchdelete_news(self):
         # 批量删除
@@ -459,8 +470,8 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(self.news_id)
-            news_id_two = next(self.news_id)
+            news_id_one = next(self.public_data.get_news(swich=False))
+            news_id_two = next(self.public_data.get_news(swich=False))
             self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -482,10 +493,9 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(self.news_id)
-            news_id_two = next(self.news_id)
-            news_id_three = next(self.news_id)
-            self.data['id'] = [news_id_one, news_id_two, news_id_three]
+            news_id_one = next(self.public_data.get_news(swich=False))
+            news_id_two = next(self.public_data.get_news(swich=False))
+            self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -506,10 +516,9 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(self.news_id)
-            news_id_two = next(self.news_id)
-            news_id_three = next(self.news_id)
-            self.data['id'] = [news_id_one, news_id_two, news_id_three]
+            news_id_one = next(self.public_data.get_news(swich=False))
+            news_id_two = next(self.public_data.get_news(swich=False))
+            self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -521,7 +530,7 @@ class info_news(MyTest):
             outcome('red', self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_canceltop_news(self):
         # 批量置顶
@@ -530,10 +539,9 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(self.news_id)
-            news_id_two = next(self.news_id)
-            news_id_three = next(self.news_id)
-            self.data['id'] = [news_id_one, news_id_two, news_id_three]
+            news_id_one = next(self.public_data.get_news(swich=False))
+            news_id_two = next(self.public_data.get_news(swich=False))
+            self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -545,7 +553,7 @@ class info_news(MyTest):
             outcome('red', self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_batchcancel_news(self):
         # 批量取消置顶
@@ -554,10 +562,9 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(self.news_id)
-            news_id_two = next(self.news_id)
-            news_id_three = next(self.news_id)
-            self.data['id'] = [news_id_one, news_id_two, news_id_three]
+            news_id_one = next(self.public_data.get_news(swich=False))
+            news_id_two = next(self.public_data.get_news(swich=False))
+            self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -569,7 +576,7 @@ class info_news(MyTest):
             outcome('red', self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_customsort_news(self):
         # 展示排序
@@ -595,9 +602,15 @@ class info_news(MyTest):
         # 普通资讯新增
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
+
+            self.data['infotype'] = str(next(self.public_data.get_news_class))
+            self.data['title'] = random_str("自动化新增普通新闻资讯...")
+            self.data['content'] = random_str("<p>自动化新增新闻资讯内容....</p>\n")
+            self.data['summary'] = random_str("自动化新增普通新闻资讯描述....")
+            self.data['keyWords'] = random_str("关键词....")
+            self.data['author'] = random_str("自动化测试...")
+            self.data['source'] = random_str("自动化测试来源...")
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -614,9 +627,21 @@ class info_news(MyTest):
         # 图片资讯新增
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
+
+            img_url = next(self.public_data.get_pictures)
+            self.data['infotype'] = str(next(self.public_data.get_news_class))
+            self.data['title'] = random_str("自动化新增图片新闻资讯")
+            self.data['content'] = random_str("<p>自动化新增新闻资讯内容....</p>\n")
+            self.data['summary'] = random_str("自动化新增普通新闻资讯描述....")
+            self.data['keyWords'] = random_str("关键词....")
+            self.data['author'] = random_str("自动化测试...")
+            self.data['source'] = random_str("自动化测试来源...")
+            self.data['imgs'][0]['relativeImgUrl'] = img_url
+            self.data['imgs'][0]['relativeThumbUrl'] = img_url
+            self.data['imgs'][0]['imgUrl'] = img_url
+            self.data['imgs'][0]['thumbUrl"'] = img_url
+            self.data['infoImgUrl'] = img_url
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -633,9 +658,14 @@ class info_news(MyTest):
         # 链接资讯新增
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
+
+            img_url = next(self.public_data.get_pictures)
+            self.data['title'] = random_str("自动化新增图片新闻资讯")
+            self.data['summary'] = random_str("自动化新增普通新闻资讯描述....")
+            self.data['keyWords'] = random_str("关键词....")
+            self.data['imgs'][0]['imgUrl'] = img_url
+            self.data['infoImgUrl'] = img_url
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -646,15 +676,13 @@ class info_news(MyTest):
             outcome('red', self.singular)
             return self.singular
         
-    # @unittest.skipIf(condition, "暂时跳过")
+    @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_getkeywords_news(self):
         # 自动获取关键词
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -671,9 +699,10 @@ class info_news(MyTest):
         # 快捷添加分类
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
+
+            self.data['name'] = random_str("自动化新增分类....")
+            self.data['des'] = random_str("<p>自动化测试分类内容数据....</p>\n")
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -690,9 +719,15 @@ class info_news(MyTest):
         # 定时发布
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
+
+            self.data['title'] = random_str("自动化新增定时任务新闻资讯")
+            self.data['content'] = random_str("<p>自动化新增定时任务新闻资讯内容....</p>\n")
+            self.data['summary'] = random_str("自动化新增定时任务新闻资讯描述....")
+            self.data['keyWords'] = random_str("关键词....")
+            self.data['author'] = random_str("自动化测试...")
+            self.data['source'] = random_str("自动化测试来源...")
+            self.data['pubDate'] = get_hour_second(2)
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -706,12 +741,19 @@ class info_news(MyTest):
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_relevant_news(self):
-        # 相关内容
+        # 定时发布
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
+
+            self.data['infotype'] = str(next(self.public_data.get_news_class))
+            self.data['title'] = random_str("自动化新增相关内容新闻资讯")
+            self.data['content'] = random_str("<p>自动化新增相关内容新闻资讯内容....</p>\n")
+            self.data['summary'] = random_str("自动化新增相关内容新闻资讯描述....")
+            self.data['keyWords'] = random_str("关键词....")
+            self.data['author'] = random_str("自动化测试...")
+            self.data['source'] = random_str("自动化测试来源...")
+            self.data['relecontentList'][1]['contentList'] = [next(self.public_data.get_application)]
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -728,9 +770,16 @@ class info_news(MyTest):
         # 推广优化
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
+
+            self.data['infotype'] = str(next(self.public_data.get_news_class))
+            self.data['title'] = random_str("自动化新增推广优化新闻资讯")
+            self.data['content'] = random_str("<p>自动化新增推广优化新闻资讯内容....</p>\n")
+            self.data['summary'] = random_str("自动化新增推广优化新闻资讯描述....")
+            self.data['keyWords'] = random_str("关键词....")
+            self.data['author'] = random_str("自动化测试...")
+            self.data['source'] = random_str("自动化测试来源...")
+            self.data['seoAddDescription'] = random_str("推广优化描述...")
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -747,8 +796,16 @@ class info_news(MyTest):
         # 高级设置
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
+
+            self.data['infotype'] = str(next(self.public_data.get_news_class))
+            self.data['title'] = random_str("自动化新增高级设置新闻资讯")
+            self.data['content'] = random_str("<p>自动化新增高级设置新闻资讯内容....</p>\n")
+            self.data['summary'] = random_str("自动化新增高级设置新闻资讯描述....")
+            self.data['keyWords'] = random_str("关键词....")
+            self.data['author'] = random_str("自动化测试...")
+            self.data['source'] = random_str("自动化测试来源...")
+            self.data['pubDate'] = get_hour_second(2)
+            self.data['seoAddDescription'] = random_str("高级设置描述...")
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -766,8 +823,26 @@ class info_news(MyTest):
         # 多图片上传
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
+
+            img_url_one = next(self.public_data.get_pictures)
+            img_url_two = next(self.public_data.get_pictures)
+
+            self.data['infotype'] = str(next(self.public_data.get_news_class))
+            self.data['title'] = random_str("自动化新增多图片新闻资讯")
+            self.data['content'] = random_str("<p>自动化新增多图片新闻资讯内容....</p>\n")
+            self.data['summary'] = random_str("自动化新增多图片新闻资讯描述....")
+            self.data['keyWords'] = random_str("关键词....")
+            self.data['author'] = random_str("自动化测试...")
+            self.data['source'] = random_str("自动化测试来源...")
+            self.data['imgs'][0]['relativeImgUrl'] = img_url_one
+            self.data['imgs'][0]['relativeThumbUrl'] = img_url_one
+            self.data['imgs'][0]['imgUrl'] = img_url_one
+            self.data['imgs'][0]['thumbUrl"'] = img_url_one
+            self.data['imgs'][1]['relativeImgUrl'] = img_url_two
+            self.data['imgs'][1]['relativeThumbUrl'] = img_url_two
+            self.data['imgs'][1]['imgUrl'] = img_url_two
+            self.data['imgs'][1]['thumbUrl"'] = img_url_two
+            self.data['infoImgUrl'] = img_url_one
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -785,9 +860,16 @@ class info_news(MyTest):
         # 选择图片连接
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
+
+            img_url = next(self.public_data.get_pictures)
+            self.data['title'] = random_str("自动化新增选择连接新闻资讯99...")
+            self.data['content'] = random_str("<p>自动化新增选择连接新闻资讯内容....</p>\n")
+            self.data['summary'] = random_str("自动化新增选择连接新闻资讯描述....")
+            self.data['keyWords'] = random_str("关键词....")
+            self.data['pubDate'] = get_hour_second(2)
+            self.data['imgs'][0]['imgUrl'] = img_url
+            self.data['infoImgUrl'] = img_url
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()

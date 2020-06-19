@@ -1,0 +1,11 @@
+get_picture:
+  url: "/manager/gwforward/dssresources/imageRepository/findByPagination"
+  bar: {}
+
+picture_url:
+  url: "/manager/gwforward/dssresources/imageRepository/findByPagination"
+  bar: {}
+
+get_class:
+  url: "/manager/gwforward/dssresources/imageRepository/findAllClass"
+  bar: {}
