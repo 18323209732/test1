@@ -9,6 +9,7 @@ from Common.FontColor import outcome
 import requests
 class Login:
     def __init__(self):
+        self.url = ConfigYaml('Door').base_url
         self.base_url = ConfigYaml('Design').base_url
         self.user_pwd = ConfigYaml('user_pwd').base_config
         self.username = ConfigYaml('user_name').base_config
@@ -16,7 +17,7 @@ class Login:
         self.project_url = ConfigYaml('project_url').base_config
         self.cookies = ConfigYaml('cookies').base_config
         self.website = ConfigYaml('website').base_config
-        self.new_website = ConfigYaml('new_website').base_config
+        self.new_website = ConfigYaml('new_website').base_config.format(self.url)
         self.session = ConfigYaml('session').base_config
         self.driver = browser()
         self.support = WebDriverWait(driver=self.driver, timeout=30)
@@ -84,7 +85,7 @@ class Login:
                         cookie = value.get("value")
 
             else:
-                outcome('red',f"未获取到【{self.key}】...")
+                outcome('red', "未获取到【cookie】...")
             _cookies = f"{self.key}={cookie}"
             count, index = self.get_index(_cookies)
             for pages in range(count):
@@ -138,6 +139,6 @@ class Login:
             outcome('red', "获取网站【index】失败....")
 
 #
-# if __name__=="__main__":
-#     Login().get_cookie()
-#     pass
+if __name__=="__main__":
+    # Login().get_cookie()
+    pass
