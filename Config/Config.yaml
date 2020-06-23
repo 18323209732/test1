@@ -1,5 +1,5 @@
 base_url:
-  Design: https://account.300.cn/CAS/login?service=http://new-api-console.300.cn/api-platform/permission/userPermission?backurl=https://new-console.300.cn/        #设计器地址
+  Design: https://new-console.300.cn        #会员中心地址
   Door: https://2004105022-site.pool5.yun300.cn # 正式环境
 base_config:
   tenant_key: tenantId
@@ -10,16 +10,16 @@ base_config:
   project_url: https://api-shop.300.cn/security/operInstance/getNewInstanceInfoList?productType=11
   cookies: Cookie
   session: GWSESSION
-  new_website: https://2004105022-site.pool5.yun300.cn/manager/gwforward/manager-webapi/content/info/info_page
+  new_website: "{}/manager/gwforward/manager-webapi/content/info/info_page"
   over_time: 14400                                #cookie 过期时间
-  key: JSESSIONID                                   #cookies键
+  key: CEST             #JSESSIONID                                   #cookies键
   user_name: CEM10097239                         #登录名称
   user_pwd: zok9phwv6n                                    #密码
   website: www.vue3.euzhongtec.com                      #网站 2004105022.pool5-site.make.yun300.cn
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
   steam_handler: false                          #控制台输入日志 Fasle：不输入
-  frequency: 1                                  #运行失败重跑次数
+  frequency: 0                                  #运行失败重跑次数
   intervaltime: 0.1                                #失败间隔时间
   interval: 1                                      #日志间隔，1表示每多少天新建一个日志文件
   backupCount: 7                                  #日志保存最大天数
