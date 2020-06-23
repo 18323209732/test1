@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="89211bc0-fa15-4ecc-a7f3-73c9f4440e86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/Case.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/Case.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/classification/Public.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/classification/Public.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/classification/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/classification/Public.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/classification/manage_st.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/classification/manage_st.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,6 +234,7 @@
       <workItem from="1592808550304" duration="328000" />
       <workItem from="1592808892383" duration="6000" />
       <workItem from="1592898717896" duration="24000" />
+      <workItem from="1592898918289" duration="645000" />
     </task>
     <task id="LOCAL-00002" summary="666">
       <created>1591349407745</created>
@@ -302,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592528582458</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="拉代码">
+      <created>1592898949553</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1592898949553</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +349,8 @@
     <MESSAGE value="提交用例1" />
     <MESSAGE value="提交用例12" />
     <MESSAGE value="提交用例123" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交用例123" />
+    <MESSAGE value="拉代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="拉代码" />
   </component>
   <component name="WindowStateProjectService">
     <state x="651" y="274" key="#Notifications" timestamp="1592469912299">
@@ -360,11 +365,11 @@
       <screen x="62" y="0" width="1538" height="900" />
     </state>
     <state x="635" y="318" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/62.0.1538.900@62.0.1538.900" timestamp="1591234676781" />
-    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1592528581928">
+    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1592898949006">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1592208665264" />
-    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592528581928" />
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592898949006" />
     <state x="495" y="101" key="FileChooserDialogImpl" timestamp="1592808896920">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -434,20 +439,20 @@
     </state>
     <state x="467" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1592208707684" />
     <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1538.900@62.0.1538.900" timestamp="1591320663468" />
-    <state x="377" y="177" key="git4idea.merge.GitPullDialog" timestamp="1592528617965">
+    <state x="377" y="177" key="git4idea.merge.GitPullDialog" timestamp="1592898976249">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="335" y="156" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1592208695224" />
-    <state x="377" y="177" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1592528617965" />
+    <state x="377" y="177" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1592898976249" />
     <state x="439" y="193" key="git4idea.merge.GitPullDialog/62.0.1538.900@62.0.1538.900" timestamp="1591320538808" />
-    <state x="596" y="310" key="git4idea.ui.GitStashDialog" timestamp="1592528609069">
+    <state x="596" y="310" key="git4idea.ui.GitStashDialog" timestamp="1592898960934">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="596" y="310" key="git4idea.ui.GitStashDialog/0.0.1536.824@0.0.1536.824" timestamp="1592528609069" />
-    <state x="430" y="243" key="git4idea.ui.GitUnstashDialog" timestamp="1592528630528">
+    <state x="596" y="310" key="git4idea.ui.GitStashDialog/0.0.1536.824@0.0.1536.824" timestamp="1592898960934" />
+    <state x="430" y="243" key="git4idea.ui.GitUnstashDialog" timestamp="1592898998528">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="430" y="243" key="git4idea.ui.GitUnstashDialog/0.0.1536.824@0.0.1536.824" timestamp="1592528630528" />
+    <state x="430" y="243" key="git4idea.ui.GitUnstashDialog/0.0.1536.824@0.0.1536.824" timestamp="1592898998528" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -523,7 +528,7 @@
     <SUITE FILE_PATH="coverage/Portal_interface$MySql.coverage" NAME="MySql Coverage Results" MODIFIED="1592278915436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_screen_news.coverage" NAME="Unittests for info_st.info_news.test_screen_news Coverage Results" MODIFIED="1591691436393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_add_attribute.coverage" NAME="Unittests for add_st.add_attribute.test_add_attribute Coverage Results" MODIFIED="1592376763770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_classification_test_classify_update.coverage" NAME="Unittests for manage_st.manage_classification.test_classify_update Coverage Results" MODIFIED="1592808736973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/classification" />
+    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_classification_test_classify_update.coverage" NAME="Unittests for manage_st.manage_classification.test_classify_update Coverage Results" MODIFIED="1592899077349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/classification" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_hide_news.coverage" NAME="Unittests for info_st.info_news.test_hide_news Coverage Results" MODIFIED="1591674780716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_in_getlist_st_py.coverage" NAME="Unittests in getlist_st.py Coverage Results" MODIFIED="1591696210701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/content" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_edit_news.coverage" NAME="Unittests for info_st.info_news.test_edit_news Coverage Results" MODIFIED="1591692504643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
