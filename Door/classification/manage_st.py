@@ -7,7 +7,7 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-from Door.classification.Public import Public_Data
+from Door.classification.Public import Public_Data,Classify
 import random
 import time
 
@@ -76,7 +76,6 @@ class manage_classification(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             id = random.choice(Public_Data().get_classification(swich=False))
-            print(id)
             self.data['category']['parentId'] = id
             self.data['category']['categoryName'] = '自动下级分类{}'.format(time.time())
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -98,6 +97,12 @@ class manage_classification(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
+            #这里需要两个ID id是转移的分类id pid是转移到分类的id
+            id = random.choice(Public_Data().get_classification(swich=False))
+            pid = Classify().add_classify()
+
+            self.data['pid'] = pid
+            self.data['id'] = id
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 

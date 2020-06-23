@@ -1,0 +1,231 @@
+时间:2020-06-22 14:52:19,456  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:19,457  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:2210 行数: 230 文件名:connectionpool.py
+时间:2020-06-22 14:52:21,971  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session HTTP/1.1" 200 716 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:21,972  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:21,972  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/window/maximize {} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:24,081  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/window/maximize HTTP/1.1" 200 48 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:24,082  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:24,082  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/url {"url": "https://account.300.cn/CAS/login?service=http://new-api-console.300.cn/api-platform/permission/userPermission?backurl=https://new-console.300.cn/"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,570  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/url HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:28,570  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,570  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@id='username'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,585  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:28,586  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,586  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element/fc0ed5ae-178d-45be-9ae9-dcc6d0a9d607/clear {"id": "fc0ed5ae-178d-45be-9ae9-dcc6d0a9d607"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,614  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element/fc0ed5ae-178d-45be-9ae9-dcc6d0a9d607/clear HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:28,614  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,615  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@id='username'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,620  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:28,621  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,621  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element/fc0ed5ae-178d-45be-9ae9-dcc6d0a9d607/value {"text": "CEM10097239", "value": ["C", "E", "M", "1", "0", "0", "9", "7", "2", "3", "9"], "id": "fc0ed5ae-178d-45be-9ae9-dcc6d0a9d607"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,674  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element/fc0ed5ae-178d-45be-9ae9-dcc6d0a9d607/value HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:28,674  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,674  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@id='password'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,681  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:28,682  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,682  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element/1cd9f347-2a8a-488d-b83f-30aa6b9c9dfa/clear {"id": "1cd9f347-2a8a-488d-b83f-30aa6b9c9dfa"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,704  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element/1cd9f347-2a8a-488d-b83f-30aa6b9c9dfa/clear HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:28,705  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,705  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@id='password'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,710  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:28,710  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,710  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element/1cd9f347-2a8a-488d-b83f-30aa6b9c9dfa/value {"text": "zok9phwv6n", "value": ["z", "o", "k", "9", "p", "h", "w", "v", "6", "n"], "id": "1cd9f347-2a8a-488d-b83f-30aa6b9c9dfa"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,754  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element/1cd9f347-2a8a-488d-b83f-30aa6b9c9dfa/value HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:28,754  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,754  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='input-box-button m20'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,762  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:28,762  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:28,762  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element/d450d6dd-60cf-401d-bbda-c268067a31e7/click {"id": "d450d6dd-60cf-401d-bbda-c268067a31e7"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:30,189  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element/d450d6dd-60cf-401d-bbda-c268067a31e7/click HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:30,189  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:40,189  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:40,199  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:40,199  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:40,699  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:40,709  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:40,709  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:41,210  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:41,220  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:41,220  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:41,720  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:41,728  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:41,728  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:42,228  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:42,239  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:42,239  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:42,740  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:42,747  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:42,748  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:43,248  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:43,257  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:43,257  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:43,757  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:43,766  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:43,768  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:44,268  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:44,275  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:44,275  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:44,776  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:44,784  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:44,784  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:45,285  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:45,293  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:45,293  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:45,793  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:45,801  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:45,801  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:46,302  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:46,308  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:46,309  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:46,809  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:46,819  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:46,819  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:47,319  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:47,330  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:47,330  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:47,831  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:47,838  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:47,838  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:48,339  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:48,347  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:48,347  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:48,847  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:48,853  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:48,854  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:49,354  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:49,362  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:49,362  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:49,863  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:49,870  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:49,870  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:50,370  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:50,377  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:50,377  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:50,878  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:50,885  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:50,885  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:51,387  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:51,396  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:51,396  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:51,896  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:51,903  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:51,903  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:52,403  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:52,411  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:52,411  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:52,912  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:52,920  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:52,920  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:53,421  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:53,429  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:53,429  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:53,929  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:53,936  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:53,936  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:54,438  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:54,445  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:54,446  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:54,947  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:54,954  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:54,954  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:55,456  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:55,466  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:55,466  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:55,968  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:55,979  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:55,979  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:56,479  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:56,488  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:56,488  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:56,989  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:56,996  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:56,997  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:57,497  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:57,505  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:57,506  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:58,007  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:58,013  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:58,014  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:58,514  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:58,520  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:58,520  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:59,020  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:59,026  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:59,026  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:52:59,526  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:52:59,533  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:52:59,533  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:00,034  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:00,042  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:00,042  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:00,542  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:00,549  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:00,550  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:01,051  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:01,059  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:01,059  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:01,559  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:01,567  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:01,567  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:02,068  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:02,078  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:02,078  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:02,578  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:02,586  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:02,586  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:03,087  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:03,094  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:03,094  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:03,594  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:03,600  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:03,600  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:04,102  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:04,110  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:04,110  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:04,610  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:04,616  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:04,617  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:05,117  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:05,127  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:05,127  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:05,627  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:05,632  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:05,632  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:06,134  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:06,141  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:06,141  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:06,642  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:06,650  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:06,650  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:07,150  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:07,156  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:07,157  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:07,658  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:07,664  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:07,664  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:08,165  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:08,175  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:08,175  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:08,676  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:08,690  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:08,690  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:09,192  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:09,198  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:09,198  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:09,698  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:2210/session/64c6962f8633255180e6397af9ba4454/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-22 14:53:09,710  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:2210 "POST /session/64c6962f8633255180e6397af9ba4454/element HTTP/1.1" 404 1101 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:09,711  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-22 14:53:12,784  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-22 14:53:13,116  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/appCategory/list?viewType=1&pid=0&appId=2 HTTP/1.1" 302 0 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:13,118  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): member.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-22 14:53:13,435  方法:_make_request  级别:DEBUG  消息:https://member.yun300.cn:443 "GET /bm/oauth?client_id=c1&response_type=code&redirect_uri=https%3A%2F%2F2004105022-site.pool5.yun300.cn%2Fmanager%2Fgwforward%2Fmanager-webapi%2Fproduct%2FappCategory%2Flist%3FviewType%3D1%26pid%3D0%26appId%3D2 HTTP/1.1" 302 158 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:13,490  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/appCategory/list?viewType=1&pid=0&appId=2&authCheck=true HTTP/1.1" 302 0 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:13,493  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): account.300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-22 14:53:13,760  方法:_make_request  级别:DEBUG  消息:https://account.300.cn:443 "GET /CAS/login?service=https%3A%2F%2F2004105022-site.pool5.yun300.cn%2Fmanager%2Fgwforward%2Fmanager-webapi%2Fproduct%2FappCategory%2Flist%3FviewType%3D1%26pid%3D0%26appId%3D2%26authCheck%3Dtrue HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:14,337  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-22 14:53:14,577  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/appCategory/list?viewType=1&pid=0&appId=2 HTTP/1.1" 302 0 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:14,578  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): member.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-22 14:53:15,551  方法:_make_request  级别:DEBUG  消息:https://member.yun300.cn:443 "GET /bm/oauth?client_id=c1&response_type=code&redirect_uri=https%3A%2F%2F2004105022-site.pool5.yun300.cn%2Fmanager%2Fgwforward%2Fmanager-webapi%2Fproduct%2FappCategory%2Flist%3FviewType%3D1%26pid%3D0%26appId%3D2 HTTP/1.1" 302 158 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:15,604  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/appCategory/list?viewType=1&pid=0&appId=2&authCheck=true HTTP/1.1" 302 0 行数: 442 文件名:connectionpool.py
+时间:2020-06-22 14:53:15,607  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): account.300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-22 14:53:15,827  方法:_make_request  级别:DEBUG  消息:https://account.300.cn:443 "GET /CAS/login?service=https%3A%2F%2F2004105022-site.pool5.yun300.cn%2Fmanager%2Fgwforward%2Fmanager-webapi%2Fproduct%2FappCategory%2Flist%3FviewType%3D1%26pid%3D0%26appId%3D2%26authCheck%3Dtrue HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
