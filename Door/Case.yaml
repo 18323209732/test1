@@ -848,7 +848,7 @@ Door:
           re_bar: json, # 请求参数
           }
 
-          test_relevant_news: {  # 添加属性类型
+          test_brelevant_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/add",
           level: 高,   #级别
           author: 陈建波,  #作者
@@ -884,7 +884,7 @@ Door:
           re_bar: json, # 请求参数
           }
 
-          test_muchpicture_news: {  # 添加属性类型
+          test_cmuchpicture_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/add",
           level: 中,   #级别
           author: 陈建波,  #作者
@@ -896,7 +896,7 @@ Door:
           re_bar: json, # 请求参数
           }
 
-          test_select_news: {  # 添加属性类型
+          test_aselect_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/add",
           level: 中,   #级别
           author: 陈建波,  #作者
