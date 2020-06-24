@@ -480,4 +480,102 @@ Door:
           re_bar: json, # 请求参数
           }
 
+  tab: # 标记管理
+    - url:  # 新闻资讯
+      modular: 标记管理  # 接口注释
+      className: info_tab  # 接口类名
+      funName:
+        - test_all_tablist: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/product/productMark/list",
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {appId: 2},
+          test_data: {},
+          case_name: 全部标记列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_add_tab_product: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/product/productMark/save',
+          level: 高,
+          author: 宋宇,
+          bar: {appId: 2, markName: 小熊2, imageId: 60, imageurl: /repository/image/kaAnY7BRRIuCo67vZDJJig.jpg},
+          relation_data: {},    #关联接口
+          case_name: 新增标记,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+          test_edit_tab: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/product/productMark/save",
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {appId: 2, markName: 编辑, imageId: 60, imageurl: /repository/image/kaAnY7BRRIuCo67vZDJJig.jpg, id: 18},
+          test_data: {},
+          case_name: 编辑标记,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+          test_delete_tab: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/product/productMark/delete",
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {appId: 2, authPermission: tag_del, id: 5},
+          test_data: {},
+          case_name: 删除标记,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_add_img_tab: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageFileUpload?viewType=1",
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {appId: ""},
+          test_data: {},
+          case_name: 上传照片,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
 
+  class: # 分类管理
+    - url:  # 新闻资讯
+      modular: 分类管理  # 接口注释
+      className: info_class  # 接口类名
+      funName:
+        - test_all_classlist: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/product/appCategory/list",
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {appId: 2, pid: 0},
+          test_data: {},
+          case_name: 全部分类列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_delete_class: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/product/appCategory/delete",
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {appId: 2, authPermission: classify_del, id: 5},
+          test_data: {},
+          case_name: 删除分类,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_add_class: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/product/appCategory/save",
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {"category":{"id":"","ismobile":0,"status":0,"isSearch":0,"sequence":"","imageId":"","imageurl":"","parentId":"","addPId":"","addPname":"","editPId":"","eidtPname":"","categoryType":"0","windowtype":1,"mobileWindowType":1,"styleCategoryListId":"","styleProductDetailId":"","gototype":0,"defTabStyle":"","defDetailStyle":"","mobileStyleCategoryListId":"","mobileStyleProductDetailId":"","defTabStyleM":"","defDetailStyleM":"","appId":2,"categoryName":"点点点","linkurl":"","mobileLinkUrl":""},"choiceUrl":"","choiceUrlM":"","destype":0,"description":"","content":"","mobileContent":"","descriptionS":"","seoState":1,"hidTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"hidDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"hidTitleSign":"_","hidKeywordsSign":",","hidDescriptionSign":"-","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"authData":[{"authType":1,"authStr":"GW_:2:category:view:","roleIds":""}],"authStr":"GW_:2:category:view:","authType":1,"roleIds":""},
+          test_data: {},
+          case_name: 新增标记,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
