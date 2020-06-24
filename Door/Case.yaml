@@ -206,6 +206,100 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
+  listShowcase: # 橱窗列表及添加橱窗
+    - url:   # 橱窗管理
+      modular: 橱窗管理  # 接口注释
+      className: manage_listShowcase  # 接口类名
+      funName:
+        - test01_add_listShowcase: {  # 方法名：添加/编辑橱窗
+          url: /manager/gwforward/manager-webapi/product/productShowcase/save,
+          level: 高,
+          author: 姜娜,
+          bar: {showcaseId: 1,showcaseName: 橱窗01号, appId: 2 ,content: '' },
+          relation_data: {},    #关联接口
+          case_name: 添加橱窗,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test02_listShowcase: {  # 方法名：橱窗列表
+          url: '/manager/gwforward/manager-webapi/product/productShowcase/listShowcase',
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 橱窗列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test03_keywords_listShowcase: {  # 方法名：关键词筛选橱窗
+          url: '/manager/gwforward/manager-webapi/product/productShowcase/listShowcase',
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 筛选橱窗,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test04_saveProductShowcaseRelation: {  # 方法名：橱窗选择产品
+          url: '/manager/gwforward/manager-webapi/product/productInformation/saveProductShowcaseRelation',
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 橱窗选择产品,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test05_ShowcaseRelation: {  # 方法名：选择橱窗,批量选择橱窗
+          url: '/manager/gwforward/manager-webapi/product/productInformation/showcaseProduct',
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 选择橱窗,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test06_delProduct: {  # 方法名：橱窗里移除产品，批量移除产品
+          url: '/manager/gwforward/manager-webapi/product/productShowcase/delProduct',
+          level: 中,
+          author: 姜娜,
+          bar: {appId: 2, ids: 3, showcaseId: 22},
+          relation_data: {},    #关联接口
+          case_name: 橱窗移除产品,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test07_Productlist: {  # 方法名：筛选并搜索橱窗里显示的产品列表
+          url: '/manager/gwforward/manager-webapi/product/productInformation/list',
+          level: 中,
+          author: 姜娜,
+          bar: {"appId":2,"cateId":0,"showCaseId":1,"attributeId":0,"pcStatus":"1","moStatus":"null","startDate":"","endDate":"","keyword":"1","pageSize":15,"pageNumber":1,"orderColumn":"","order_productName":"","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":""},
+          relation_data: {},    #关联接口
+          case_name: 筛选并搜索橱窗里显示的产品列表,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test08_delete: {  # 方法名：删除没有产品的橱窗
+          url: '/manager/gwforward/manager-webapi/product/productShowcase/delete',
+          level: 中,
+          author: 姜娜,
+          bar: {"appId":2,"id":28},
+          relation_data: {},    #关联接口
+          case_name: 筛选并搜索橱窗里显示的产品列表,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
 
   content: #内容模块
     - url:  # 邮件地址
