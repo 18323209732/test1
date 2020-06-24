@@ -42,11 +42,10 @@ class MyTest(TestCase):
         self.cookies_key = ConfigYaml('cookies').base_config
         self.tenant_key = ConfigYaml('tenant_key').base_config
         self.tenant_value = ConfigYaml('tenant_value').base_config
-        Get_Cookies().write_cookies()
 
+        Get_Cookies().write_cookies()
         self.cookies_value = ReadWrite(sign='session', option='cookies').read_ini_cookies()
         self.headers = {self.cookies_key: self.cookies_value}
-
 
     @classmethod
     def tearDownClass(self):

@@ -9,7 +9,7 @@ from Common.DataHandle import ReRun
 import urllib3
 from Common.generator import random_name, random_address
 from Common.RWyaml import RWyaml
-from Door.content.Public import Public_path
+from Door.content.Public import Public_path, print_debug_info
 
 
 class getlist_content(MyTest):
@@ -25,16 +25,15 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            id = r.json()['data']['list'][0]['id']  # 获取首个内容id
-            id2 = r.json()['data']['list'][1]['id']  # 获取第二个内容id
-            id3 = r.json()['data']['list'][2]['id']  # 获取第二个内容id
             title = r.json()['data']['list'][0]['title']  # 获取首个内容title
-            print('已获取内容id1：%d，:2：%d，3：%d，和标题：%s' % (id, id2, id3, title))
-            RWyaml(Public_path()).write_yaml('content', 'id1', id)  # 内容id存入public.yaml文件
-            RWyaml(Public_path()).write_yaml('content', 'id2', id2)  # 内容id存入public.yaml文件
-            RWyaml(Public_path()).write_yaml('content', 'id3', id3)  # 内容id存入public.yaml文件
             RWyaml(Public_path()).write_yaml('content', 'title', title)  # 内容title存入public.yaml文件
+            n = 1
+            for i in r.json()['data']['list']:   # 循环获取列表内容id
+                # print(i['id'])
+                RWyaml(Public_path()).write_yaml('content', 'id'+str(n), i['id'])  # 内容id存入public.yaml文件
+                n += 1
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -51,6 +50,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -67,8 +67,9 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -86,6 +87,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -106,8 +108,9 @@ class getlist_content(MyTest):
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             id = r.json()['data']
             RWyaml(Public_path()).write_yaml('content', 'addid2', id[8:])  # 新增内容id存入public.yaml文件
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -126,6 +129,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -141,8 +145,9 @@ class getlist_content(MyTest):
         self.data['keywords'] = RWyaml(Public_path()).read_yaml_value('content', 'title')  # 读取yaml文件标题名
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -159,6 +164,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -175,6 +181,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -194,6 +201,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -209,8 +217,9 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -229,6 +238,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -247,6 +257,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -264,6 +275,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -283,6 +295,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -302,6 +315,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -321,6 +335,7 @@ class getlist_content(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -340,8 +355,9 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -358,8 +374,9 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -376,8 +393,9 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -394,8 +412,9 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -411,9 +430,10 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            classid = r.json()["data"][-1]["id"]
-            print(classid)
+            # classid = r.json()["data"][-1]["id"]
+            # print(classid)
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -433,8 +453,8 @@ class getlist_content(MyTest):
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             id = r.json()['data']
             RWyaml(Public_path()).write_yaml('content', 'addid1', id[8:])  # 新增内容id存入public.yaml文件
-
             self.result = r.json()
+            print_debug_info('-->pass')
 
             self.time = r.elapsed.total_seconds()
         except:
