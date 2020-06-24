@@ -1,14 +1,14 @@
 Door:
   attribute: #属性管理
-    - url: /manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_add  # 添加属性类型地址
+    - url:   # 添加属性类型地址
       modular: 添加属性  # 接口注释
       className: add_attribute  # 接口类名
       funName:
         - test_add_attribute: {  # 添加属性类型
-          url: ,
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&authPermission=attribute_add',
           level: 高,   #级别
           author: 方坤,  #作者
-          bar: {"id":"","appId":2,"templateName":"类型09","memo":"","operType":"add","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"name":"产品名称09","defaultname":"","defaultcode":"","isrequire":"0","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"name","isFix":"0","issearch":"0"},{"name":"编号","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"code","isFix":"0","issearch":"0"},{"name":"计量单位","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"unit","isFix":"0","issearch":"1"},{"name":"重量","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"weight","isFix":"0","issearch":"1"},{"name":"计费重量","defaultname":"","defaultcode":"","isrequire":"1","unit":"kg","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"chargedWeight","isFix":"0","issearch":"1"},{"name":"市场价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"price","isFix":"0","issearch":"1"},{"name":"零售价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"retailPrice","isFix":"0","issearch":"1"},{"name":"库存","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"stock","isFix":"0","issearch":"1"},{"name":"最低起订量","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"moq","isFix":"0","issearch":"1"},{"name":"交货期","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"deliveryTime","isFix":"0","issearch":"1"},{"name":"产品描述","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"1","subFieldType":"content","option":"","code":"content","isFix":"0","issearch":"1"}],"specDataArr":[],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
+          bar: {"id":"","appId":2,"templateName":"有规格","memo":"","operType":"add","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"name":"产品名称","defaultname":"","defaultcode":"","isrequire":"0","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"name","isFix":"0","issearch":"0"},{"name":"编号","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"code","isFix":"0","issearch":"0"},{"name":"计量单位","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"unit","isFix":"0","issearch":"1"},{"name":"重量","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"weight","isFix":"0","issearch":"1"},{"name":"计费重量","defaultname":"","defaultcode":"","isrequire":"1","unit":"kg","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"chargedWeight","isFix":"0","issearch":"1"},{"name":"市场价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"price","isFix":"0","issearch":"1"},{"name":"零售价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"retailPrice","isFix":"0","issearch":"1"},{"name":"库存","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"stock","isFix":"0","issearch":"1"},{"name":"最低起订量","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"moq","isFix":"0","issearch":"1"},{"name":"交货期","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"deliveryTime","isFix":"0","issearch":"1"},{"name":"产品描述","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"1","subFieldType":"content","option":"","code":"content","isFix":"0","issearch":"1"}],"specDataArr":[{"specName":"我的规格3","specType":"0","delSpecValueIds":[],"specValues":[{"specValueName":"4444","imgUrl":""}]}],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
           test_data: {},
           case_name: 添加属性类型,
           expected: [200],  # 预期结果
@@ -16,7 +16,7 @@ Door:
           re_bar: json, # 请求参数
           }
           test_attribute_list: {  # 属性列表
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/list?viewType=1&tenantId=196498&appId=2&ec_p=1&ec_crd=15&startDate=&endDate=&sortField=&sortType=',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/list?viewType=1&appId=2&ec_p=1&ec_crd=15&startDate=&endDate=&sortField=&sortType=',
           level: 中,   #级别
           author: 方坤,  #作者
           bar: ,
@@ -27,7 +27,7 @@ Door:
           re_bar: json, # 请求参数
         }
           test_edit_attribute: {  # 编辑属性类型
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=196498&appId=2&id=1&operType=edit',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&appId=2&id=1&operType=edit',
           level: 中,   #级别
           author: 方坤,  #作者
           bar: ,
@@ -38,18 +38,18 @@ Door:
           re_bar: json, # 请求参数
         }
           test_edit_attribute_pre: {  # 编辑属性类型后保存
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_edit',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&authPermission=attribute_edit',
           level: 中,   #级别
           author: 方坤,  #作者
           bar: {"id":1,"appId":2,"templateName":"默认属性类型1","memo":"系统默认模版,全局只有一个","operType":"edit","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"isrequire":"0","issearch":"0","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入产品名称","defaultname":"产品名称","defaultcode":"name","aid":1,"isFix":"0","name":"产品名称","isRefer":false,"code":"name"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入编号","defaultname":"编号","defaultcode":"code","aid":2,"isFix":"0","name":"编号","isRefer":false,"code":"code"},{"isrequire":"0","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入最低起订量","defaultname":"最低起订量","defaultcode":"moq","aid":17,"isFix":"0","name":"最低起订量","isRefer":false,"code":"moq"},{"isrequire":"0","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入交货期","defaultname":"交货期","defaultcode":"deliveryTime","aid":18,"isFix":"0","name":"交货期","isRefer":false,"code":"deliveryTime"},{"isrequire":"0","issearch":"1","unit":"kg","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入计费重量","defaultname":"计费重量","defaultcode":"chargedWeight","aid":19,"isFix":"0","name":"计费重量","isRefer":false,"code":"chargedWeight"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入计量单位","defaultname":"计量单位","defaultcode":"unit","aid":3,"isFix":"0","name":"计量单位","isRefer":false,"code":"unit"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入重量","defaultname":"重量","defaultcode":"weight","aid":4,"isFix":"0","name":"重量","isRefer":false,"code":"weight"},{"isrequire":"1","issearch":"1","unit":"元","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入市场价","defaultname":"市场价","defaultcode":"price","aid":5,"isFix":"0","name":"市场价","isRefer":false,"code":"price"},{"isrequire":"1","issearch":"1","unit":"元","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入零售价","defaultname":"零售价","defaultcode":"retailPrice","aid":6,"isFix":"0","name":"零售价","isRefer":false,"code":"retailPrice"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入库存","defaultname":"库存","defaultcode":"stock","aid":7,"isFix":"0","name":"库存","isRefer":false,"code":"stock"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"1","subFieldType":"AREtext","option":"","optionReferIdx":[],"defaultname":"产品描述","defaultcode":"content","aid":8,"isFix":"0","name":"产品描述","isRefer":false,"code":"content"}],"specDataArr":[],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
           test_data: {},
           case_name: 编辑属性类型后保存,
-          expected: ["200"],  # 预期结果
+          expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
           test_attribute_copy: {  # 复制属性类型
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=196498&appId=2&id=32&operType=copy',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&appId=2&id={}&operType=copy',
           level: 中,   #级别
           author: 方坤,  #作者
           bar:,
@@ -60,7 +60,7 @@ Door:
           re_bar: json, # 请求参数
           }
           test_attribute_delete: {  # 删除属性类型
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/delAttribute?viewType=1&tenantId=196498&authPermission=attribute_del&_d=1591087588807&templateId=33&appId=2',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/delAttribute?viewType=1&authPermission=attribute_del&templateId={}&appId=2',
           level: 中,   #级别
           author: 方坤,  #作者
           bar:,
@@ -70,7 +70,66 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
             }
-
+          test_list_screen: {  # 列表筛选
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/list?viewType=1&tenantId=188078&_d=1591177451739&appId=2&ec_p=1&ec_crd=15&startDate={}&endDate={}&sortField=&sortType=',
+          level: 低,   #级别
+          author: 方坤,  #作者
+          bar:,
+          test_data: {},
+          case_name: 列表筛选,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+  classification: #分类管理
+    - url:   # 分类地址
+      modular: 分类管理  # 接口注释
+      className: manage_classification # 接口类名
+      funName:
+        - test_edit_classification: { #编辑分类
+          url: '/manager/gwforward/manager-webapi/product/appCategory/save?viewType=1&authPermission=classify_update',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"category":{"appId":2,"categoryBigField":{"categoryId":46,"content":"","mobileContent":"","summary":"","useViewType":false},"categoryName":"分类12123666","categoryType":"0","createtime":1591286400000,"id":46,"imageurl":"","isSearch":0,"ismobile":0,"leaf":true,"linkurl":"","location":"1","mobileLinkUrl":"","mobileStyleCategoryListId":"","mobileWindowType":1,"parentId":0,"proCount":0,"sequence":1591324635189,"status":0,"styleCategoryListId":"","updatetime":1591340580000,"useViewType":false,"windowtype":1},"choiceUrl":"","choiceUrlM":"","destype":"0","description":"","content":"","mobileContent":"","descriptionS":"","seoState":1,"hidTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"hidDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"hidTitleSign":"_","hidKeywordsSign":",","hidDescriptionSign":"-","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"authData":[{"authType":1,"authStr":"GW_:2:category:view:46","roleIds":""}],"authStr":"GW_:2:category:view:46","authType":1,"roleIds":"","eidtPname":"作为顶级分类","catetree":"[{ id:\"\", pId:0, name:\"作为顶级分类\"}, {id:5,pId:0,name:\"111\"},{id:7,pId:0,name:\"1137链接1\",disabled:true},{id:42,pId:0,name:\"我的分类\"},{id:43,pId:0,name:\"我的分类22\"},{id:44,pId:0,name:\"分类1591324357.0098417\"},{id:45,pId:0,name:\"分类1591324523.202511\"},{id:46,pId:0,name:\"分类121\",disabled:true,noDisIcon:true},{id:47,pId:0,name:\"分类1591324651.388086\"},{id:48,pId:0,name:\"分类1591324778.9620414\"},{id:49,pId:0,name:\"分类1591325135.7921693\"},{id:50,pId:0,name:\"分类1591326422.3592412\"},{id:51,pId:0,name:\"分类1591339146.2089343\"},{id:52,pId:0,name:\"分类1591343927.7986653\"}]","editPId":0},
+          test_data: {},
+          case_name: 编辑分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_see_classification: { #查看分类
+          url: '/manager/gwforward/manager-webapi/product/productInformation/list?viewType=1',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"appId":2,"cateId":43,"showCaseId":null,"attributeId":0,"pcStatus":"null","moStatus":"null","startDate":"","endDate":"","pageSize":15,"pageNumber":1,"orderColumn":"","order_productName":"","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":""},
+          test_data: {},
+          case_name: 查看分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_classify_add: { #添加下级分类
+          url: '/manager/gwforward/manager-webapi/product/appCategory/save?viewType=1&authPermission=classify_add',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"category":{"id":"","ismobile":0,"status":0,"isSearch":0,"sequence":"","imageId":"","imageurl":"","parentId":43,"addPId":"","addPname":"","editPId":"","eidtPname":"","categoryType":"0","windowtype":1,"mobileWindowType":1,"styleCategoryListId":"","styleProductDetailId":"","gototype":0,"defTabStyle":"","defDetailStyle":"","mobileStyleCategoryListId":"","mobileStyleProductDetailId":"","defTabStyleM":"","defDetailStyleM":"","appId":2,"categoryName":"我的下级分类1","linkurl":"","mobileLinkUrl":""},"choiceUrl":"","choiceUrlM":"","destype":0,"description":"","content":"","mobileContent":"","descriptionS":"","seoState":1,"hidTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"hidDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"hidTitleSign":"_","hidKeywordsSign":",","hidDescriptionSign":"-","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"authData":[{"authType":1,"authStr":"GW_:2:category:view:","roleIds":""}],"authStr":"GW_:2:category:view:","authType":1,"roleIds":""},
+          test_data: {},
+          case_name: 添加下级分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_classify_update: { #转移分类
+          url: '/manager/gwforward/manager-webapi/product/appCategory/updateMoveTree?viewType=1&authPermission=classify_update',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {'appId':2,'pid':42,'id':53},
+          test_data: {},
+          case_name: 转移分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
   AddCategory: #添加产品分类
     - url:   # 类URL为空
       modular: 添加产品分类,然后获取分类列表，验证创建分类是否存在  # 接口注释
@@ -789,7 +848,7 @@ Door:
           re_bar: json, # 请求参数
           }
 
-          test_relevant_news: {  # 添加属性类型
+          test_brelevant_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/add",
           level: 高,   #级别
           author: 陈建波,  #作者
@@ -825,7 +884,7 @@ Door:
           re_bar: json, # 请求参数
           }
 
-          test_muchpicture_news: {  # 添加属性类型
+          test_cmuchpicture_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/add",
           level: 中,   #级别
           author: 陈建波,  #作者
@@ -837,7 +896,7 @@ Door:
           re_bar: json, # 请求参数
           }
 
-          test_select_news: {  # 添加属性类型
+          test_aselect_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/add",
           level: 中,   #级别
           author: 陈建波,  #作者
@@ -1081,6 +1140,371 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
           }
+  picture: #新闻资讯
+    - url:  # 新闻资讯
+      modular: 新闻分类管理  # 接口注释
+      className: library_picture  # 接口类名
+      funName:
+        - test_list_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/findByPagination",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 全部图片列表数据,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_search_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/findByPagination",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {pageSize: 15,currentPage: 1,queryStatus: 1,startDate: 2020-06-08+00:00:00,endDate: 2020-06-18+23:59:59,classId: 1},
+          test_data: {},
+          case_name: 筛选图片,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_screen_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/findByPagination",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {name: '155'},
+          test_data: {},
+          case_name: 搜索图片,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_edit_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageInfoUpdate",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 35,name: 11},
+          test_data: {},
+          case_name: 编辑图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_upload_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageFileUpload",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {appId: 0},
+          test_data: {},
+          case_name: 上传图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_cat_picture: {  # 添加属性类型
+          url: '/',
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 预览图片,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_move_picture: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/updateClassByIds",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {classId: 1, ids: 47},
+          test_data: {},
+          case_name: 转移图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_moves_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/updateClassByIds",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {classId: 1, ids: [47,46,44,31]},
+          test_data: {},
+          case_name: 批量转移图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_addwater_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/addImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: 46},
+          test_data: {},
+          case_name: 添加水印,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_addwateres_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/addImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: [26,25]},
+          test_data: {},
+          case_name: 批量添加水印,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_acancelwateres_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/clearImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: [26,25]},
+          test_data: {},
+          case_name: 批量取消水印,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_acancelwater_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/clearImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: 26},
+          test_data: {},
+          case_name: 取消水印,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_delete_pictur: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageDelete",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: 26},
+          test_data: {},
+          case_name: 删除水印,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_delete_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageDelete",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 批量删除水印,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_pages_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/findByPagination",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 翻页,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_editwindow_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageFileUpdate",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 53},
+          test_data: {},
+          case_name: 编辑上传图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_wicket_pictures: {  # 添加属性类型
+          url: "/",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 编辑图片窗口,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_edetwicket_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/imageInfoUpdate",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 53,name: test},
+          test_data: {},
+          case_name: 编辑图片确认,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_waterset_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/getImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 53,name: test},
+          test_data: {},
+          case_name: 水印设置,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_saveandgetwater_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/saveAndGetWatermarkBak",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {"layout":1,"logoFlag":1,"wordFlag":0,"word":"","urlFlag":0,"url":"","opacityScale":40,"pos":1,"wordB":1,"wordI":1,"wordU":1,"wordFamilyName":"宋体","wordSize":24,"wordColor":"#FFFFFF","urlB":1,"urlI":1,"urlU":1,"urlFamilyName":"宋体","urlSize":24,"urlColor":"#FFFFFF","imageId":2,"imageUrl":"/repository/image/f426652a-eaf5-4020-a1f7-7c689f675c45.jpg_135x135.jpg","id":1,"useViewType":false},
+          test_data: {},
+          case_name: 生成水印waterbak.png,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_waterupload_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/saveOrUpdateImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {"layout":2,"logoFlag":1,"wordFlag":1,"word":"67868","urlFlag":0,"url":"9999","opacityScale":40,"pos":"2","wordB":1,"wordI":1,"wordU":1,"wordFamilyName":"宋体","wordSize":24,"wordColor":"#FFFFFF","urlB":1,"urlI":1,"urlU":1,"urlFamilyName":"宋体","urlSize":24,"urlColor":"#FFFFFF","imageId":54,"imageUrl":"/repository/image/b8b6b8ac-e364-4df5-ab87-d61f22357e7f.jpg","id":1,"useViewType":false},
+          test_data: {},
+          case_name: 水印设置保存,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_water_pictures: {  # 添加属性类型
+          url: "/managePanel/static/imgs/water.png",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 水印设置页面,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_water1_pictures: {  # 添加属性类型
+          url: "/managePanel/static/imgs/water1.png",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 水印设置页面1,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_water2_pictures: {  # 添加属性类型
+          url: "/managePanel/static/imgs/water2.png",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 水印设置页面2,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_reset_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/getImageWatermark",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {authPermission: image_watermark_set},
+          test_data: {},
+          case_name: 重置,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_batchsearch_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/getByIds",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: id批量查询,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_addclass_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/addFileClass",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {className: 333, classInfo: 4444},
+          test_data: {},
+          case_name: 添加分类,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_deleteclass_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/deleteFileClass",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {ids: 3},
+          test_data: {},
+          case_name: 删除分类,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_editclass_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/updateFileClass",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 6,className: 自动,classInfo: 自动化},
+          test_data: {},
+          case_name: 编辑分类,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_listclass_pictures: {  # 添加属性类型
+          url: "/manager/gwforward/dssresources/imageRepository/findAllClass",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 获取分类列表,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
 
 
 
