@@ -141,8 +141,8 @@ class Public_Data:
         return result
 
 
-if __name__ == "__main__":
-    print(next(Public_Data().get_news(value='id')))
-    # Public_Data().add_class()
-    pass
+# if __name__ == "__main__":
+#     print(next(Public_Data().get_news(value='id')))
+#     # Public_Data().add_class()
+#     pass
 
