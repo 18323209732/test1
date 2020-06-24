@@ -19,6 +19,7 @@ class Public_Data:
         self.headers.update({self.cookies_key: self.cookies_value})
         self.projectName = ConfigYaml("projectName").base_config
         self.url = ConfigYaml(projectName).base_url
+        self.tenant_value = ConfigYaml('tenant_value').base_config
 
 
 
@@ -59,8 +60,13 @@ class Classify:
         self.headers.update({self.cookies_key: self.cookies_value})
         self.projectName = ConfigYaml("projectName").base_config
         self.url = ConfigYaml(projectName).base_url
+        self.tenant_value = ConfigYaml('tenant_value').base_config
 
     def add_classify(self):
+        '''
+        新建分类
+        :return: 分类id
+        '''
         self.public_data = ReadPublic(catalog='classification', key="add_classify")
         url = self.public_data.public_value("url")
         url = self.url + url
@@ -75,10 +81,27 @@ class Classify:
 
         return id
 
+    def hide_classify(self):
+        '''
+        隐藏分类
+        :return: 隐藏分类的id
+        '''
+        id = Classify().add_classify() #新建分类id
+        self.public_data = ReadPublic(catalog='classification', key="hide_classify")
+        url = self.public_data.public_value("url")
+        url = self.url + url + "?viewType=1&authPermission=classify_update&appId=2&id={}&status=1".format(id) + "&tenantId={}".format(self.tenant_value)
+        data = self.public_data.public_value("bar")
+
+        r = requests.get(url, headers=self.headers, data=data, stream=True, verify=False)
+        result = r.json()
+
+        return id
+
 if __name__ == '__main__':
     # p = Public_Data()
     # ret = p.get_classification(swich=False)
     # print(ret)
     addd = Classify()
-    id = addd.add_classify()
+    id = addd.hide_classify()
     print(id)
+    # print(id)

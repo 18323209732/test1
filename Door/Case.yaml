@@ -130,6 +130,40 @@ Door:
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
           }
+          test_hide_classify: { #隐藏电脑版
+          url: '/manager/gwforward/manager-webapi/product/appCategory/updateStatus',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 隐藏电脑版,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_display_classify: { #显示电脑版
+          url: '/manager/gwforward/manager-webapi/product/appCategory/updateStatus',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 显示电脑版,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_delete_classify: { #删除分类
+          url: '/manager/gwforward/manager-webapi/product/appCategory/delete',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 删除分类,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
   AddCategory: #添加产品分类
     - url:   # 类URL为空
       modular: 添加产品分类,然后获取分类列表，验证创建分类是否存在  # 接口注释
