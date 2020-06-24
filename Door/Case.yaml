@@ -435,6 +435,7 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
+
           test_screen_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/info_page?viewType=1&tenantId=188078",
           level: 中,   #级别
