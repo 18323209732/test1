@@ -690,351 +690,351 @@ Door:
           re_bar: json, # 请求参数
           }
 
-            test_browse_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/browse",
-            level: 高,   #级别
-            author: 陈建波,  #作者
-            bar: {viewType: 1,tenantId: 188078,id: 7},
-            test_data: {},
-            case_name: 浏览新闻资讯,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
-          }
-            test_updatetransfer_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updateTransfer",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {id: 2,cateId: 1},
-            test_data: {},
-            case_name: 转移新闻资讯,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-          }
+          test_browse_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/browse",
+          level: 高,   #级别
+          author: 陈建波,  #作者
+          bar: {viewType: 1,tenantId: 188078,id: 7},
+          test_data: {},
+          case_name: 浏览新闻资讯,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_updatetransfer_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updateTransfer",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 2,cateId: 1},
+          test_data: {},
+          case_name: 转移新闻资讯,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
 
-            test_updatepcview_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {state: true, id: 7},
-            test_data: {},
-            case_name: 显示电脑版,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
+          test_updatepcview_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {state: true, id: 7},
+          test_data: {},
+          case_name: 显示电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+
+          test_hide_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {state: false, id: 12},
+          test_data: {},
+          case_name: 隐藏电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+
+          test_copy_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/add",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {"contentValid":1,"id":"17","infotype":"1","title":"234234","content":"<p>23424</p>\n","summary":"","keyWords":"","cateGoryIds":"3","sign":[],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-08 16:19:46","showMobileFlag":"true","accessPermission":"","veiwCount":"0","linkPath":"http://","linkPathMobile":"http://","targetFlag":"false","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"false","pubDateMobile":"2020-06-08 16:19:46","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:17\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""},
+          test_data: {},
+          case_name: 复制,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+
+          test_top_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updateTop",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {state: true,id: 26},
+          test_data: {},
+          case_name: 置顶,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
           }
+          test_recommend_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updateRecommend",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {state: true,id: 26},
+          test_data: {},
+          case_name: 推荐,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
 
-            test_hide_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {state: false, id: 12},
-            test_data: {},
-            case_name: 隐藏电脑版,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-          }
+          test_savetags_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/saveTags",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {"tags":[{"name":"sign_red","iconUrl":"sign_red","expiryDate":"","isNew":"false","infoId":27},{"name":"sign_green","iconUrl":"sign_green","expiryDate":"","isNew":"true","infoId":27}],"id":27},
+          test_data: {},
+          case_name: 标记,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
 
-            test_copy_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/add",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {"contentValid":1,"id":"17","infotype":"1","title":"234234","content":"<p>23424</p>\n","summary":"","keyWords":"","cateGoryIds":"3","sign":[],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-08 16:19:46","showMobileFlag":"true","accessPermission":"","veiwCount":"0","linkPath":"http://","linkPathMobile":"http://","targetFlag":"false","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"false","pubDateMobile":"2020-06-08 16:19:46","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:17\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""},
-            test_data: {},
-            case_name: 复制,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-          }
+          test_delete_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/delete",
+          level: 高,   #级别
+          author: 陈建波,  #作者
+          bar: {id: 26},
+          test_data: {},
+          case_name: 删除,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
 
-            test_top_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updateTop",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {state: true,id: 26},
-            test_data: {},
-            case_name: 置顶,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-            }
-            test_recommend_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updateRecommend",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {state: true,id: 26},
-            test_data: {},
-            case_name: 推荐,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-          }
-
-            test_savetags_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/saveTags",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {"tags":[{"name":"sign_red","iconUrl":"sign_red","expiryDate":"","isNew":"false","infoId":27},{"name":"sign_green","iconUrl":"sign_green","expiryDate":"","isNew":"true","infoId":27}],"id":27},
-            test_data: {},
-            case_name: 标记,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-          }
-
-            test_delete_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/delete",
-            level: 高,   #级别
-            author: 陈建波,  #作者
-            bar: {id: 26},
-            test_data: {},
-            case_name: 删除,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-          }
-
-            test_transfer_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updateTransfer",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {id: [23,7,9], cateId: 2},
-            test_data: {},
-            case_name: 批量转移,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-            }
-
-            test_pcview_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {id: [23,7,9], state: 1},
-            test_data: {},
-            case_name: 批量显示电脑版,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
+          test_transfer_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updateTransfer",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: [23,7,9], cateId: 2},
+          test_data: {},
+          case_name: 批量转移,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
           }
 
-            test_hidepcview_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {id: [23,7,9], state: 0},
-            test_data: {},
-            case_name: 批量隐藏电脑版,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
+          test_pcview_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: [23,7,9], state: 1},
+          test_data: {},
+          case_name: 批量显示电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+
+          test_hidepcview_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: [23,7,9], state: 0},
+          test_data: {},
+          case_name: 批量隐藏电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+
+          test_batchdelete_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/delete",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: [23,7]},
+          test_data: {},
+          case_name: 批量删除,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+
+          test_batchrecommend_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updateRecommend",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: [23,7], state: true},
+          test_data: {},
+          case_name: 批量推荐,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+
+          test_cancelrecommend_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updateRecommend",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: [23,7], state: false},
+          test_data: {},
+          case_name: 批量取消推荐,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+
+          test_canceltop_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updateTop",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: [23,7], state: true},
+          test_data: {},
+          case_name: 批量置顶,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
           }
 
-            test_batchdelete_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/delete",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {id: [23,7]},
-            test_data: {},
-            case_name: 批量删除,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
+          test_batchcancel_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updateTop",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {id: [23,7], state: false},
+          test_data: {},
+          case_name: 批量取消置顶,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
           }
 
-            test_batchrecommend_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updateRecommend",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {id: [23,7], state: true},
-            test_data: {},
-            case_name: 批量推荐,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
+          test_customsort_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/updateCustomSort",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {orderMode: TITLE_DESC},
+          test_data: {},
+          case_name: 展示排序,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
           }
 
-            test_cancelrecommend_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updateRecommend",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {id: [23,7], state: false},
-            test_data: {},
-            case_name: 批量取消推荐,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
+          test_add_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/add",
+          level: 高,   #级别
+          author: 陈建波,  #作者
+          bar: {"relecontentList":[{"appId":3,"contentList":[]},{"appId":1,"contentList":[]}],"contentValid":1,"id":"","infotype":"1","title":"111","content":"<p>内容</p>\n","summary":"描述","keyWords":"关键词","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"测试作则","source":"测试来源","appId":"3","showFlag":"true","pubDate":"2020-06-10 10:55:43","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 10:55:43","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""},
+          test_data: {},
+          case_name: 普通资讯新增,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
           }
 
-            test_canceltop_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updateTop",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {id: [23,7], state: true},
-            test_data: {},
-            case_name: 批量置顶,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-            }
-
-            test_batchcancel_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updateTop",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {id: [23,7], state: false},
-            test_data: {},
-            case_name: 批量取消置顶,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-            }
-
-            test_customsort_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/updateCustomSort",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {orderMode: TITLE_DESC},
-            test_data: {},
-            case_name: 展示排序,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: data, # 请求参数
-            }
-
-            test_add_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/add",
-            level: 高,   #级别
-            author: 陈建波,  #作者
-            bar: {"relecontentList":[{"appId":3,"contentList":[]},{"appId":1,"contentList":[]}],"contentValid":1,"id":"","infotype":"1","title":"111","content":"<p>内容</p>\n","summary":"描述","keyWords":"关键词","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"测试作则","source":"测试来源","appId":"3","showFlag":"true","pubDate":"2020-06-10 10:55:43","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 10:55:43","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""},
-            test_data: {},
-            case_name: 普通资讯新增,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
-            }
-
-            test_addpicture_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/add",
-            level: 高,   #级别
-            author: 陈建波,  #作者
-            bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"2","title":"1111","content":"<p>444</p>\n","summary":"555555","keyWords":"66666","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"2222","source":"3333","appId":"3","showFlag":"true","pubDate":"2020-06-10 11:14:05","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[{"name":"","height":"0","width":"0","id":"","des":"自动化测试描述...","relativeImgUrl":"/repository/image/b0dfb365-f363-49a3-91ab-51dea2931d0a.jpg","relativeThumbUrl":"/repository/image/b0dfb365-f363-49a3-91ab-51dea2931d0a.jpg","thumImgloadErrorFlag":false,"imgloadErrorFlag":false,"targetFlag":true,"linkUrl":"{\"entityTag\":\"page\",\"text\":\"首页\",\"id\":\"af96174b-39ab-430a-a049-013fbaedc3e4\"}","title":"自动化测试标题...","imgUrl":"/repository/image/b0dfb365-f363-49a3-91ab-51dea2931d0a.jpg","thumbUrl":"/repository/image/b0dfb365-f363-49a3-91ab-51dea2931d0a.jpg","coverFlag":true,"showOrder":"0","imgId":1,"thumbId":1}],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 11:14:05","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":2,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"1,2\"}]","videoIds":"","infoImgUrl":"/repository/image/b0dfb365-f363-49a3-91ab-51dea2931d0a.jpg"},
-            test_data: {},
-            case_name: 图片资讯新增,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
-            }
-
-            test_addlink_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/add",
-            level: 高,   #级别
-            author: 陈建波,  #作者
-            bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"4","title":"1111","content":"","summary":"222","keyWords":"33","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-10 11:40:28","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"{\"entityTag\":\"page\",\"text\":\"登录页\",\"id\":\"af96174b-39ab-430a-a049-013fbaedc3e5\"}","linkPathMobile":"http://","targetFlag":"true","imgs":[{"name":"","height":"","width":"","id":"","des":"","relativeImgUrl":"","relativeThumbUrl":"","thumImgloadErrorFlag":false,"imgloadErrorFlag":false,"targetFlag":"true","linkUrl":{"text":""},"title":"","imgUrl":"/repository/image/54605155-a452-4776-96a1-bf367d4d18fa.jpg","thumbUrl":"","coverFlag":"false","showOrder":"0","imgId":12,"thumbId":""}],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 11:40:28","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:6\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":"/repository/image/54605155-a452-4776-96a1-bf367d4d18fa.jpg"},
-            test_data: {},
-            case_name: 链接资讯新增,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
-            }
-
-            test_getkeywords_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/getKeywords",
-            level: 高,   #级别
-            author: 陈建波,  #作者
-            bar: {"len":9,"title":"3421345","content":""},
-            test_data: {},
-            case_name: 自动获取关键词,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
-            }
-
-            test_addcategor_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/infoCategory/saveInfoCategory",
-            level: 高,   #级别
-            author: 陈建波,  #作者
-            bar: {"id":"","parentId":"","parentName":"","name":"测试","imgUrl":"","imgId":"","imgThumbUrl":"","type":"1","des":"<p>111</p>\n","mobileDes":"","summary":"","keywords":"","targetType":"true","linkUrl":"","mobileTargetType":"true","mobileLinkUrl":"","showFlag":true,"mobileShowFlag":true,"newOpen":"true","showStyle":"","detailStyle":"","configValue":"","seoState":true,"seoTitle":[{"id":"categoryName","name":"资讯分类名称"},{"id":"oneCategoryName","name":"资讯分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoTitleSign":"_","seoKeywords":[{"id":"categoryKeyword","name":"资讯分类关键词"},{"id":"siteName","name":"网站名称"}],"seoKeywordsSign":",","seoDescription":[{"id":"categoryName","name":"资讯分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"资讯分类描述"}],"seoDescriptionSign":"-","mobileNewOpen":"true","mobileShowStyle":"","mobileDetailStyle":"","authType":1,"authStr":"GW_:3:category:view:","roleIds":"","authData":[{"authType":1,"authStr":"GW_:3:category:view:","roleIds":""}]},
-            test_data: {},
-            case_name: 快捷添加分类,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
-            }
-
-            test_timing_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/add",
-            level: 高,   #级别
-            author: 陈建波,  #作者
-            bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"1","title":"1111111","content":"<p>44444</p>\n","summary":"555","keyWords":"666","cateGoryIds":"1","sign":[],"author":"22","source":"33","appId":"3","showFlag":"true","pubDate":"2020-06-11 14:03:24","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 14:03:24","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""},
-            test_data: {},
-            case_name: 定时发布,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
+          test_addpicture_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/add",
+          level: 高,   #级别
+          author: 陈建波,  #作者
+          bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"2","title":"1111","content":"<p>444</p>\n","summary":"555555","keyWords":"66666","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"2222","source":"3333","appId":"3","showFlag":"true","pubDate":"2020-06-10 11:14:05","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[{"name":"","height":"0","width":"0","id":"","des":"自动化测试描述...","relativeImgUrl":"/repository/image/b0dfb365-f363-49a3-91ab-51dea2931d0a.jpg","relativeThumbUrl":"/repository/image/b0dfb365-f363-49a3-91ab-51dea2931d0a.jpg","thumImgloadErrorFlag":false,"imgloadErrorFlag":false,"targetFlag":true,"linkUrl":"{\"entityTag\":\"page\",\"text\":\"首页\",\"id\":\"af96174b-39ab-430a-a049-013fbaedc3e4\"}","title":"自动化测试标题...","imgUrl":"/repository/image/b0dfb365-f363-49a3-91ab-51dea2931d0a.jpg","thumbUrl":"/repository/image/b0dfb365-f363-49a3-91ab-51dea2931d0a.jpg","coverFlag":true,"showOrder":"0","imgId":1,"thumbId":1}],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 11:14:05","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":2,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"1,2\"}]","videoIds":"","infoImgUrl":"/repository/image/b0dfb365-f363-49a3-91ab-51dea2931d0a.jpg"},
+          test_data: {},
+          case_name: 图片资讯新增,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
           }
 
-            test_brelevant_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/add",
-            level: 高,   #级别
-            author: 陈建波,  #作者
-            bar: {"relecontentList":[{"appId":3,"contentList":[]},{"appId":2,"contentList":[24]}],"contentValid":1,"id":"","infotype":"1","title":"111","content":"<p>333</p>\n","summary":"","keyWords":"","cateGoryIds":"1","sign":[],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-10 16:09:23","showMobileFlag":"true","accessPermission":"","veiwCount":"0","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 16:09:23","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""},
-            test_data: {},
-            case_name: 相关内容,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
-            }
-
-            test_extension_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/add",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"1","title":"22","content":"<p>7777</p>\n","summary":"","keyWords":"","cateGoryIds":"1","sign":[],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-10 16:18:03","showMobileFlag":"true","accessPermission":"","veiwCount":"0","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"false","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"555555","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 16:18:03","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""},
-            test_data: {},
-            case_name: 推广优化,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
-            }
-
-            test_senior_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/add",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"1","title":"11","content":"<p>333</p>\n","summary":"","keyWords":"","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-11 16:26:34","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"false","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"1111","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 16:26:34","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":2,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"1,2\"}]","videoIds":"","infoImgUrl":""},
-            test_data: {},
-            case_name: 高级设置,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
-            }
-
-            test_cmuchpicture_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/add",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"2","title":"111","content":"<p>333</p>\n","summary":"","keyWords":"","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-10 16:49:43","showMobileFlag":"true","accessPermission":"","veiwCount":"0","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[{"name":"","height":"0","width":"0","id":"","des":"","relativeImgUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg","relativeThumbUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg","thumImgloadErrorFlag":false,"imgloadErrorFlag":false,"targetFlag":true,"linkUrl":"","title":"","imgUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg","thumbUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg","coverFlag":true,"showOrder":"0","imgId":15,"thumbId":15},{"name":"","height":"0","width":"0","id":"","des":"","relativeImgUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg","relativeThumbUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg","thumImgloadErrorFlag":false,"imgloadErrorFlag":false,"targetFlag":true,"linkUrl":"","title":"","imgUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg","thumbUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg","coverFlag":false,"showOrder":"0","imgId":8,"thumbId":8}],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 16:49:43","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg"},
-            test_data: {},
-            case_name: 多图片上传,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
+          test_addlink_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/add",
+          level: 高,   #级别
+          author: 陈建波,  #作者
+          bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"4","title":"1111","content":"","summary":"222","keyWords":"33","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-10 11:40:28","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"{\"entityTag\":\"page\",\"text\":\"登录页\",\"id\":\"af96174b-39ab-430a-a049-013fbaedc3e5\"}","linkPathMobile":"http://","targetFlag":"true","imgs":[{"name":"","height":"","width":"","id":"","des":"","relativeImgUrl":"","relativeThumbUrl":"","thumImgloadErrorFlag":false,"imgloadErrorFlag":false,"targetFlag":"true","linkUrl":{"text":""},"title":"","imgUrl":"/repository/image/54605155-a452-4776-96a1-bf367d4d18fa.jpg","thumbUrl":"","coverFlag":"false","showOrder":"0","imgId":12,"thumbId":""}],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 11:40:28","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:6\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":"/repository/image/54605155-a452-4776-96a1-bf367d4d18fa.jpg"},
+          test_data: {},
+          case_name: 链接资讯新增,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
           }
 
-            test_aselect_news: {  # 添加属性类型
-            url: "/manager/gwforward/manager-webapi/content/info/add",
-            level: 中,   #级别
-            author: 陈建波,  #作者
-            bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"4","title":"663377","content":"","summary":"444","keyWords":"555","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-11 17:10:38","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"{\"entityTag\":\"page\",\"text\":\"首页\",\"id\":\"af96174b-39ab-430a-a049-013fbaedc3e4\"}","linkPathMobile":"http://","targetFlag":"true","imgs":[{"name":"","height":"","width":"","id":"","des":"","relativeImgUrl":"","relativeThumbUrl":"","thumImgloadErrorFlag":false,"imgloadErrorFlag":false,"targetFlag":"true","linkUrl":{"text":""},"title":"","imgUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg","thumbUrl":"","coverFlag":"false","showOrder":"0","imgId":8,"thumbId":""}],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 17:10:38","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:6\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg"},
-            test_data: {},
-            case_name: 选择图片连接,
-            expected: [200],  # 预期结果
-            mode: post,  # 请求类型
-            re_bar: json, # 请求参数
-            }
+          test_getkeywords_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/getKeywords",
+          level: 高,   #级别
+          author: 陈建波,  #作者
+          bar: {"len":9,"title":"3421345","content":""},
+          test_data: {},
+          case_name: 自动获取关键词,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_addcategor_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/infoCategory/saveInfoCategory",
+          level: 高,   #级别
+          author: 陈建波,  #作者
+          bar: {"id":"","parentId":"","parentName":"","name":"测试","imgUrl":"","imgId":"","imgThumbUrl":"","type":"1","des":"<p>111</p>\n","mobileDes":"","summary":"","keywords":"","targetType":"true","linkUrl":"","mobileTargetType":"true","mobileLinkUrl":"","showFlag":true,"mobileShowFlag":true,"newOpen":"true","showStyle":"","detailStyle":"","configValue":"","seoState":true,"seoTitle":[{"id":"categoryName","name":"资讯分类名称"},{"id":"oneCategoryName","name":"资讯分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoTitleSign":"_","seoKeywords":[{"id":"categoryKeyword","name":"资讯分类关键词"},{"id":"siteName","name":"网站名称"}],"seoKeywordsSign":",","seoDescription":[{"id":"categoryName","name":"资讯分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"资讯分类描述"}],"seoDescriptionSign":"-","mobileNewOpen":"true","mobileShowStyle":"","mobileDetailStyle":"","authType":1,"authStr":"GW_:3:category:view:","roleIds":"","authData":[{"authType":1,"authStr":"GW_:3:category:view:","roleIds":""}]},
+          test_data: {},
+          case_name: 快捷添加分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_timing_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/add",
+          level: 高,   #级别
+          author: 陈建波,  #作者
+          bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"1","title":"1111111","content":"<p>44444</p>\n","summary":"555","keyWords":"666","cateGoryIds":"1","sign":[],"author":"22","source":"33","appId":"3","showFlag":"true","pubDate":"2020-06-11 14:03:24","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 14:03:24","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""},
+          test_data: {},
+          case_name: 定时发布,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+
+          test_brelevant_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/add",
+          level: 高,   #级别
+          author: 陈建波,  #作者
+          bar: {"relecontentList":[{"appId":3,"contentList":[]},{"appId":2,"contentList":[24]}],"contentValid":1,"id":"","infotype":"1","title":"111","content":"<p>333</p>\n","summary":"","keyWords":"","cateGoryIds":"1","sign":[],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-10 16:09:23","showMobileFlag":"true","accessPermission":"","veiwCount":"0","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 16:09:23","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""},
+          test_data: {},
+          case_name: 相关内容,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_extension_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/add",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"1","title":"22","content":"<p>7777</p>\n","summary":"","keyWords":"","cateGoryIds":"1","sign":[],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-10 16:18:03","showMobileFlag":"true","accessPermission":"","veiwCount":"0","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"false","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"555555","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 16:18:03","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""},
+          test_data: {},
+          case_name: 推广优化,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_senior_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/add",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"1","title":"11","content":"<p>333</p>\n","summary":"","keyWords":"","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-11 16:26:34","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"false","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"1111","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 16:26:34","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":2,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"1,2\"}]","videoIds":"","infoImgUrl":""},
+          test_data: {},
+          case_name: 高级设置,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_cmuchpicture_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/add",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"2","title":"111","content":"<p>333</p>\n","summary":"","keyWords":"","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-10 16:49:43","showMobileFlag":"true","accessPermission":"","veiwCount":"0","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[{"name":"","height":"0","width":"0","id":"","des":"","relativeImgUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg","relativeThumbUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg","thumImgloadErrorFlag":false,"imgloadErrorFlag":false,"targetFlag":true,"linkUrl":"","title":"","imgUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg","thumbUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg","coverFlag":true,"showOrder":"0","imgId":15,"thumbId":15},{"name":"","height":"0","width":"0","id":"","des":"","relativeImgUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg","relativeThumbUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg","thumImgloadErrorFlag":false,"imgloadErrorFlag":false,"targetFlag":true,"linkUrl":"","title":"","imgUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg","thumbUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg","coverFlag":false,"showOrder":"0","imgId":8,"thumbId":8}],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 16:49:43","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg"},
+          test_data: {},
+          case_name: 多图片上传,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+
+          test_aselect_news: {  # 添加属性类型
+          url: "/manager/gwforward/manager-webapi/content/info/add",
+          level: 中,   #级别
+          author: 陈建波,  #作者
+          bar: {"relecontentList":[],"contentValid":1,"id":"","infotype":"4","title":"663377","content":"","summary":"444","keyWords":"555","cateGoryIds":"1","sign":[{"signname":"sign_red","pubdate":"","isnew":"false"},{"signname":"sign_green","pubdate":"","isnew":"true"}],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-11 17:10:38","showMobileFlag":"true","accessPermission":"","veiwCount":"10","linkPath":"{\"entityTag\":\"page\",\"text\":\"首页\",\"id\":\"af96174b-39ab-430a-a049-013fbaedc3e4\"}","linkPathMobile":"http://","targetFlag":"true","imgs":[{"name":"","height":"","width":"","id":"","des":"","relativeImgUrl":"","relativeThumbUrl":"","thumImgloadErrorFlag":false,"imgloadErrorFlag":false,"targetFlag":"true","linkUrl":{"text":""},"title":"","imgUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg","thumbUrl":"","coverFlag":"false","showOrder":"0","imgId":8,"thumbId":""}],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 17:10:38","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:6\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":"/repository/image/6f36a355-9451-47f9-9603-6f5c9cd3e254.jpg"},
+          test_data: {},
+          case_name: 选择图片连接,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
 
   tab: # 标记管理
     - url:  # 新闻资讯
@@ -1734,7 +1734,7 @@ Door:
           re_bar: data, # 请求参数
           }
 
- product: #内容模块
+  product: #内容模块
     - url:  # 邮件地址
       modular: 介绍内容  # 接口注释
       className: getlist_product  # 接口类名
