@@ -26,6 +26,22 @@ def readyaml(file=None, key=None):
         pass
 
 
+def readyaml_case():
+    """
+    1. 获取case.yaml的橱窗列表
+    2. 转译文件内容获取对应test03_keywords_listShowcase的URL值
+    """
+    path = os.path.abspath(os.path.join(os.getcwd(), "..")) + r"\Case.yaml"
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            # value = yaml.load(f.read(), Loader=yaml.Loader)[key]
+            value = yaml.load(f.read())['Door']['listShowcase'][0]['funName'][0]['test03_keywords_listShowcase']['url']
+
+        return value
+    except:
+        pass
+
+
 def writeyaml(w_key=None, w_value=None, n=None):
     """
     1. 打开当前文件下的yaml文件，n传入写入方法（a 为追加方式写入，w 为清空后重写）
@@ -98,9 +114,11 @@ class GetAll:
 
             result = r.json()
             try:
-                id = result['data']['list'][0]['id']
-                # print(result['data']['list'])
-                return id
+                for i in result['data']['list']:
+                    id = i['id']
+                    #print(result['data']['list'])
+                    return id
+
             except:
                 writeyaml(w_key="删除", w_value="成功", n='a')
 
@@ -109,6 +127,7 @@ class GetAll:
             singular = str(traceback.format_exc())
             outcome('red', singular)
             return singular
+
 
 
 if __name__ == '__main__':
