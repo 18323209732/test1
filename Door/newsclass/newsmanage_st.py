@@ -19,8 +19,7 @@ class newsmanage_newsclass(MyTest):
     type_condition = True
     # 新闻分类管理
     # @unittest.skipIf(condition, "暂时跳过")
-    pub_data = pd()
-    pub_news_data = pub_news()
+
     @ReRun(MyTest.setUp)
     def test_list_news(self):
         # “分类管理”页面列表
@@ -46,7 +45,7 @@ class newsmanage_newsclass(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            self.data['id'] = next(self.pub_data.get_classnews(swich=False))
+            self.data['id'] = next(pd().get_classnews_id(value='id'))
             self.data['name'] = random_str("自动化新增分类...")
             self.data['des'] = random_str("<p>自动化新增分类描述数据...</p>\n")
 
@@ -67,7 +66,7 @@ class newsmanage_newsclass(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(self.pub_news_data.get_pictures)
+            img_url = next(pub_news().get_pictures(value='id'))
             self.data['name'] = random_str("自动化新增分类...")
             self.data['des'] = random_str("<p>自动化新增分类描述数据...</p>\n")
             self.data['imgUrl'] = img_url
@@ -168,8 +167,8 @@ class newsmanage_newsclass(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            toCateId = next(self.pub_data.get_classnews(swich=False))
-            cateId = next(self.pub_data.get_classnews(swich=False))
+            toCateId = next(pd().get_classnews_id(value='id'))
+            cateId = next(pd().get_classnews_id(value='id'))
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&toCateId={toCateId}&cateId={cateId}"
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -190,7 +189,7 @@ class newsmanage_newsclass(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            cateId = next(self.pub_data.get_classnews(swich=False))
+            cateId = next(pd().get_classnews_id(value='id'))
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&cateId={cateId}&status=1"
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -211,7 +210,7 @@ class newsmanage_newsclass(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            cateId = next(self.pub_data.get_classnews(swich=False))
+            cateId = next(pd().get_classnews_id(value='id'))
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&cateId={cateId}&status=0"
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -232,7 +231,7 @@ class newsmanage_newsclass(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            cateId = next(self.pub_data.get_classnews(swich=False))
+            cateId = next(pd().get_classnews_id(value='id'))
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&cateId={cateId}"
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -253,8 +252,8 @@ class newsmanage_newsclass(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            cateId = next(self.pub_data.get_classnews(swich=False))
-            targetId = next(self.pub_data.get_classnews(swich=False))
+            cateId = next(pd().get_classnews_id(value='id'))
+            targetId = next(pd().get_classnews_id(value='id'))
             targetPos = choice(['before', 'below'])
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&cateId={cateId}&targetId={targetId}&targetPos={targetPos}"
@@ -274,7 +273,7 @@ class newsmanage_newsclass(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(self.pub_news_data.get_pictures)
+            img_url = next(pub_news().get_pictures(value='imgUrl'))
             self.data['name'] = random_str("自动化新增普通分类...")
             self.data['des'] = random_str("<p>自动化新增普通分类描述数据...</p>\n")
             self.data['imgUrl'] = img_url
@@ -299,7 +298,7 @@ class newsmanage_newsclass(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(self.pub_news_data.get_pictures)
+            img_url = next(pub_news().get_pictures(value='imgUrl'))
             self.data['name'] = random_str("自动化新增连接分类...")
             self.data['des'] = random_str("<p>自动化新增连接分类描述数据...</p>\n")
             self.data['imgUrl'] = img_url
@@ -398,7 +397,7 @@ class newsmanage_newsclass(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(self.pub_news_data.get_pictures)
+            img_url = next(pub_news().get_pictures(value='imgUrl'))
             self.data['name'] = random_str("自动化新增保存继续分类...")
             self.data['des'] = random_str("<p>自动化新增保存继续分类描述数据...</p>\n")
             self.data['imgUrl'] = img_url

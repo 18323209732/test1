@@ -14,15 +14,10 @@ from Common.ReadWriteIni import ReadWrite
 from Common.ReadYaml import ReadPublic, ConfigYaml
 projectName = ConfigYaml("projectName").base_config
 from Door.news.Public import Public_Data as pub_news
-
-
-
-
-
-
+from Common.ReExecution import ReExecution
 
 class Public_Data:
-    def __init__(self):
+    def __init__(self, value='id', status=200, response_key='data', response_list='list'):
         '''
         '''
         self.type = ConfigYaml('type_key').base_config
@@ -37,43 +32,10 @@ class Public_Data:
         self.tenant_key = ConfigYaml('tenant_key').base_config
         self.tenant_value = ConfigYaml('tenant_value').base_config
         self.pub_news_data = pub_news()
-
-    def get_classnews(self,swich=True):
-        '''
-        获取新闻资讯列表数据
-        :return:
-        '''
-
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
-        self.public_data = ReadPublic(catalog='newsclass', key="list_classnews")
-        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
-        url = self.url + url
-        data = self.public_data.public_value("bar")
-
-        r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
-        result = r.json()
-
-        if result.get('status') == 200:
-            if swich:
-                try:
-                    if not result.get('data').get('data'):
-                        self.add_classnews()
-
-                    value = choice(result.get('data').get('data'))
-                    yield value.get('name')
-                except StopIteration:
-                    pass
-
-            else:
-                try:
-                    if not result.get('data').get('data'):
-                        self.add_classnews()
-
-                    value = choice(result.get('data').get('data'))
-                    yield value.get('id')
-                except StopIteration:
-                    pass
+        self.value = value
+        self.status = status
+        self.response_key = response_key
+        self.response_list = response_list
 
     def add_classnews(self):
         '''
@@ -88,20 +50,53 @@ class Public_Data:
         self.headers[self.type] = self.json_type
 
         data = self.public_data.public_value("bar")
-        img_url = next(self.pub_news_data.get_pictures)
+        img_url = next(pub_news().get_pictures(value='id'))
         data['name'] = random_str("自动化新增分类...")
         data['des'] = random_str("<p>自动化新增分类描述数据...</p>\n")
         data['imgUrl'] = img_url
         data['imgThumbUrl'] = img_url
         data['summary'] = random_str("自动化新增分类来源数据...")
         data['keywords'] = random_str("关键词...")
-
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
 
+    @ReExecution(add_classnews, response_list='data')
+    def get_classnews_id(self):
+        '''
+        获取新闻资讯列表数据
+        :return:
+        '''
 
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+        self.public_data = ReadPublic(catalog='newsclass', key="list_classnews")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
+        url = self.url + url
 
+        data = self.public_data.public_value("bar")
+        r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
+        result = r.json()
+
+        return result
+
+    @ReExecution(add_classnews, response_list='data') #value='name'
+    def get_classnews_name(self):
+        '''
+        获取新闻资讯列表数据
+        :return:
+        '''
+
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+        self.public_data = ReadPublic(catalog='newsclass', key="list_classnews")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
+        url = self.url + url
+
+        data = self.public_data.public_value("bar")
+        r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
+        result = r.json()
+
+        return result
 
 if __name__ == "__main__":
-    print(next(Public_Data().get_classnews(swich=False)))
+    # print(next(Public_Data().get_classnews_name()))
     pass
