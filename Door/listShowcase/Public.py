@@ -26,7 +26,7 @@ def readyaml(file=None, key=None):
         pass
 
 
-def readyaml_case():
+def readyaml_case(key=None):
     """
     1. 获取case.yaml的橱窗列表
     2. 转译文件内容获取对应test03_keywords_listShowcase的URL值

@@ -165,13 +165,13 @@ class manage_listShowcase(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-            # 获取橱窗列表所有数据，找出没有产品的橱窗,除了橱窗2号
+            # 获取橱窗列表所有数据，找出没有产品的橱窗，并删除
             url = ConfigYaml(self.projectName).base_url + readyaml_case() + '?ec_crd=15&ec_p=1&appId=2'
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
             productNum = self.result['data']['list']
             for i in productNum:
-                if i['productNum'] == 0 and i['id'] != readyaml(file='listShowcase', key='橱窗2号'):
+                if i['productNum'] == 0:
                     idd = i['id']
                     # 删除没有产品的橱窗
                     self.data['id'] = idd

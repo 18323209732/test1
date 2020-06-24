@@ -195,7 +195,7 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
-          test03_product_list: {  # 接口方法名：产品列表
+          test04_product_list: {  # 接口方法名：产品列表
           url: /manager/gwforward/manager-webapi/product/productInformation/list,
           level: 中,
           author: 姜娜,
@@ -206,6 +206,73 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
+          test05_news_list: {  # 接口方法名：相关内容获取新闻资讯
+          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
+          level: 高,
+          author: 姜娜,
+          bar:{"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"123312321","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-24 14:47","mobilePublishTime":"2020-06-24 14:47","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"123312321"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[{"appId":2,"contentList":[]},{"appId":3,"contentList":[1709]}],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[50],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
+          relation_data: {},    #关联接口
+          case_name: 相关内容获取新闻资讯,
+          expected: [200],  # 预期结果添加成功，产品列表显示正常
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test06_getSeoList: {  # 接口方法名：优化推广
+          url: /manager/gwforward/manager-webapi/product/productInformation/getSeoList,
+          level: 中,
+          author: 姜娜,
+          bar:{},
+          relation_data: {},    #关联接口
+          case_name: 优化推广,
+          expected: [200],  # 预期结果添加成功，产品列表显示正常
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test07_choiceshow: {  # 接口方法名：选择橱窗
+          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
+          level: 中,
+          author: 姜娜,
+          bar:{"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"我的产品001","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-17 11:41","mobilePublishTime":"2020-06-17 11:41","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"我的产品001"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[6],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"2","auth":"GW_:2:detail:view:","roleIds":"1"}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
+          relation_data: {},    #关联接口
+          case_name: 选择橱窗,
+          expected: [200],  # 预期结果添加成功，产品列表显示正常
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test08_choicemark: {  # 接口方法名：选择标记
+          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
+          level: 中,
+          author: 姜娜,
+          bar:{"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"我的产品001","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-17 11:41","mobilePublishTime":"2020-06-17 11:41","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"我的产品001"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[6],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"2","auth":"GW_:2:detail:view:","roleIds":"1"}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
+          relation_data: {},    #关联接口
+          case_name: 选择标记,
+          expected: [200],  # 预期结果添加成功，产品列表显示正常
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test09_editor: {  # 接口方法名：编辑库存和价格
+          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
+          level: 中,
+          author: 姜娜,
+          bar:{"show360ImageList":[],"operType":"edit","productInformation":{"appId":2,"attributeTemplateId":1,"chargedWeight":0,"createTime":1592991734000,"deliveryTime":"1","id":114,"isSyncQR":false,"ismobile":0,"ispublish":1,"keyword":"","linkUrl":"","mobileIspublish":1,"mobileLinkUrl":"","mobilePublishTime":"2020-06-17 11:41","mobileWindowType":"1","moq":1,"price":"8000","productCode":"","productName":"我的产品1592991731.141973","productType":0,"publishTime":"2020-06-24 17:42","pvs":1000,"qrbuyUrl":"","retailPrice":"8000","saveSelf":false,"sequence":1592991734015,"shortUrl":"5ef31ff69d80db1CaTS","status":0,"stock":"900","syncQRStatus":2,"unit":"0","updateTime":1592991734000,"useViewType":false,"videoThumbnail":"","weight":0,"windowType":"1","code":"","name":"我的产品1592991731.141973"},"productBigField":{"content":"","mobileContent":"","mobileSummary":"","productId":114,"summary":"","useViewType":false},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[111],"showcaseIds":[41],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"2","auth":"GW_:2:detail:view:","roleIds":"1"}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":"","categoryList":[{"appId":2,"categoryName":"分类1592991194.0468266","categoryType":"0","createtime":1592928000000,"id":111,"imageurl":"","isSearch":0,"ismobile":0,"leaf":false,"linkurl":"","location":"1","mobileLinkUrl":"","mobileStyleCategoryListId":"","mobileWindowType":"1","parentId":0,"proCount":0,"sequence":1592991197304,"status":0,"styleCategoryListId":"","updatetime":1592991197000,"useViewType":false,"windowtype":"1"}]},
+          relation_data: {},    #关联接口
+          case_name: 编辑库存和价格,
+          expected: [200],  # 预期结果添加成功，产品列表显示正常
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test10_close_sku: {  # 接口方法名：批量/隐藏货品
+          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
+          level: 中,
+          author: 姜娜,
+          bar:{"show360ImageList":[],"operType":"edit","productInformation":{"appId":2,"attributeTemplateId":1,"chargedWeight":0,"createTime":1592991734000,"deliveryTime":"1","id":114,"isSyncQR":false,"ismobile":0,"ispublish":1,"keyword":"","linkUrl":"","mobileIspublish":1,"mobileLinkUrl":"","mobilePublishTime":"2020-06-17 11:41","mobileWindowType":"1","moq":1,"price":8000,"productCode":"","productName":"我的产品1592991731.141973","productType":0,"publishTime":"2020-06-24 17:42","pvs":1000,"qrbuyUrl":"","retailPrice":8000,"saveSelf":false,"sequence":1592991734015,"shortUrl":"5ef31ff69d80db1CaTS","status":1,"stock":900,"syncQRStatus":2,"unit":"0","updateTime":1592992854000,"useViewType":false,"videoThumbnail":"","weight":0,"windowType":"1","code":"","name":"我的产品1592991731.141973"},"productBigField":{"content":"","mobileContent":"","mobileSummary":"","productId":114,"summary":"","useViewType":false},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[111],"showcaseIds":[41],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[{"selected":false,"id":"","code":"123","price":8000,"retailPrice":8000,"stock":900,"moq":1,"deliveryTime":"1","weight":0,"chargedWeight":0,"status":1,"isDefault":1,"name":"","productId":114,"templateId":1,"productSkuSpecs":[{"productId":114,"specId":1,"specValueId":1,"name":"10寸","specName":"尺寸","skuId":""}]},{"selected":false,"id":"","code":"124","price":8000,"retailPrice":8000,"stock":900,"moq":1,"deliveryTime":"1","weight":0,"chargedWeight":0,"status":0,"isDefault":0,"name":"","productId":114,"templateId":1,"productSkuSpecs":[{"productId":114,"specId":1,"specValueId":2,"name":"12寸","specName":"尺寸","skuId":""}]}],"specConfigList":[{"id":"","productId":114,"specId":1,"specValueId":1,"alias":"10寸","productSpecImgList":[]},{"id":"","productId":114,"specId":1,"specValueId":2,"alias":"12寸","productSpecImgList":[]}],"authList":[{"authType":"2","auth":"GW_:2:detail:view:","roleIds":"1"}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":"","categoryList":[{"appId":2,"categoryName":"分类1592991194.0468266","categoryType":"0","createtime":1592928000000,"id":111,"imageurl":"","isSearch":0,"ismobile":0,"leaf":false,"linkurl":"","location":"1","mobileLinkUrl":"","mobileStyleCategoryListId":"","mobileWindowType":"1","parentId":0,"proCount":0,"sequence":1592991197304,"status":0,"styleCategoryListId":"","updatetime":1592991197000,"useViewType":false,"windowtype":"1"}]},
+          relation_data: {},    #关联接口
+          case_name: 批量/隐藏货品,
+          expected: [200],  # 预期结果添加成功，产品列表显示正常
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
   listShowcase: # 橱窗列表及添加橱窗
     - url:   # 橱窗管理
       modular: 橱窗管理  # 接口注释
@@ -1255,7 +1322,7 @@ Door:
           url: "/manager/gwforward/dssresources/imageRepository/findByPagination",
           level: 中,   #级别
           author: 陈建波,  #作者
-          bar: {pageSize: 15,currentPage: 1,queryStatus: 1,startDate: 2020-06-08+00:00:00,endDate: 2020-06-18+23:59:59,classId: 1},
+          bar: {pageSize: 15,currentPage: 1,queryStatus: 1,startDate: '2020-06-08+00:00:00',endDate: '2020-06-18+23:59:59',classId: 1},
           test_data: {},
           case_name: 筛选图片,
           expected: ['200'],  # 预期结果
