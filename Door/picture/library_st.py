@@ -51,7 +51,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['queryStatus'] = choice([0,1,''])
+            self.data['queryStatus'] = choice([0, 1, ''])
             self.data['startDate'] = get_hour_second(-7)
             self.data['endDate'] = get_hour_second(0)
             self.data['classId'] = choice([0,1,''])
@@ -75,7 +75,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['name'] = next(self.pub_data.get_news())
+            self.data['name'] = next(pd().get_news(value='name'))
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -96,7 +96,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(self.pub_data.get_news(swich=False))
+            self.data['id'] = next(pd().get_news(value='id'))
             self.data['name'] = random_str("自动化编辑图片名称...")
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -141,7 +141,7 @@ class library_picture(MyTest):
         try:
 
             del self.headers[self.type]
-            img_url = next(self.pub_data.picture_name)
+            img_url = next(pd().picture_name(value='imgUrl'))
 
             url = ConfigYaml(self.projectName).base_url + img_url
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -163,7 +163,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(self.pub_data.get_news(swich=False))
+            id = next(pd().get_news(value='id'))
             self.data['ids'] = id
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -185,9 +185,9 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id_one = next(self.pub_data.get_news(swich=False))
-            id_two = next(self.pub_data.get_news(swich=False))
-            id_three = next(self.pub_data.get_news(swich=False))
+            id_one = next(pd().get_news(value='id'))
+            id_two = next(pd().get_news(value='id'))
+            id_three = next(pd().get_news(value='id'))
             self.data['ids'] = [id_one, id_two, id_three]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -209,7 +209,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            ids = next(self.pub_data.get_news(swich=False))
+            ids = next(pd().get_news(value='id'))
             self.data['ids'] = ids
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -231,9 +231,9 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id_one = next(self.pub_data.get_news(swich=False))
-            id_two = next(self.pub_data.get_news(swich=False))
-            id_three = next(self.pub_data.get_news(swich=False))
+            id_one = next(pd().get_news(value='id'))
+            id_two = next(pd().get_news(value='id'))
+            id_three = next(pd().get_news(value='id'))
             self.data['ids'] = [id_one, id_two, id_three]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -255,9 +255,9 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id_one = next(self.pub_data.get_news(swich=False))
-            id_two = next(self.pub_data.get_news(swich=False))
-            id_three = next(self.pub_data.get_news(swich=False))
+            id_one = next(pd().get_news(value='id'))
+            id_two = next(pd().get_news(value='id'))
+            id_three = next(pd().get_news(value='id'))
             self.data['ids'] = [id_one, id_two, id_three]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -279,7 +279,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            ids = next(self.pub_data.get_news(swich=False))
+            ids = next(pd().get_news(value='id'))
             self.data['ids'] = ids
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -301,7 +301,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            ids = next(self.pub_data.get_news(swich=False, use=True))
+            ids = next(pd().get_news_used(value="id"))
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={ids}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -322,8 +322,8 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id_one = next(self.pub_data.get_news(swich=False))
-            id_two = next(self.pub_data.get_news(swich=False))
+            id_one = next(pd().get_news(value='id'))
+            id_two = next(pd().get_news(value='id'))
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={id_one},{id_two}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -391,7 +391,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            img_url = next(self.pub_data.picture_name)
+            img_url = next(pd().picture_name(value="imgUrl"))
 
             url = ConfigYaml(self.projectName).base_url + img_url
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -413,7 +413,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(self.pub_data.get_news(swich=False))
+            id = next(pd().get_news(value='id'))
             self.data['name'] = random_str("自动化图片编辑....")
             self.data['id'] = id
 
@@ -476,8 +476,8 @@ class library_picture(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(self.pub_data.picture_name)
-            id = next(self.pub_data.get_news(swich=False))
+            img_url = next(pd().picture_name(value="imgUrl"))
+            id = next(pd().get_news(value='id'))
             self.data['imageUrl'] = img_url
             self.data['word'] = random_str("自动化测试")
             self.data['url'] = "http://www.baidu.com"
@@ -623,7 +623,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['ids'] = next(self.pub_data.get_class(swich=False))
+            self.data['ids'] = next(pd().get_news(value='id'))
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -644,7 +644,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['ids'] = next(self.pub_data.get_class(swich=False))
+            self.data['ids'] = next(pd().get_news(value='id'))
             self.data['className'] = random_str("编辑后的自动化测试")
             self.data['classInfo'] = random_str("编辑后的自动化测试描述")
 

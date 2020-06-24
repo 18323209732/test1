@@ -5,7 +5,7 @@ from time import sleep
 
 class ReExecution:
 
-    def __init__(self, fun, status=200, response_key='data', response_list='list'):
+    def __init__(self, fun, status=200, response_key='data', response_list='list', swich=True, isuse=1, key=''):
         '''
 
         :param fun:  回调函数
@@ -18,6 +18,9 @@ class ReExecution:
         self.status = status
         self.response_key = response_key
         self.response_list = response_list
+        self.swich = swich
+        self.isuse = isuse
+        self.key = key
 
     def __call__(self, method):
         '''
@@ -25,21 +28,58 @@ class ReExecution:
         :param method:
         :return:
         '''
-
         @wraps(method)
         def wrapper(*args, **kwargs):
             result = method(*args)
             if result.get("status") == self.status:
-                if not result.get(self.response_key).get(self.response_list):
-                    self.fun(*args)
-                    result = method(*args)
-                    if result.get("status") == self.status:
-                        value = choice(result.get(self.response_key).get(self.response_list))
-                        yield value.get(kwargs.get('value'))
+                if self.response_list:
+                    if not result.get(self.response_key).get(self.response_list):
+                        self.fun(*args)
+                        result = method(*args)
+                        if result.get("status") == self.status:
+                            if self.swich:
+                                value = choice(result.get(self.response_key).get(self.response_list))
+                                yield value.get(kwargs.get('value'))
+
+                            else:
+                                value = choice(result.get(self.response_key).get(self.response_list))
+                                if value.get(self.key) == self.isuse:
+                                    yield value.get(kwargs.get('value'))
+
+                    else:
+                        if self.swich:
+                            value = choice(result.get(self.response_key).get(self.response_list))
+                            yield value.get(kwargs.get('value'))
+
+                        else:
+                            value = choice(result.get(self.response_key).get(self.response_list))
+                            if value.get(self.key) == self.isuse:
+                                yield value.get(kwargs.get('value'))
 
                 else:
-                    value = choice(result.get(self.response_key).get(self.response_list))
-                    yield value.get(kwargs.get('value'))
+
+                    if not result.get(self.response_key):
+                        self.fun(*args)
+                        result = method(*args)
+                        if result.get("status") == self.status:
+                            if self.swich:
+                                value = choice(result.get(self.response_key))
+                                yield value.get(kwargs.get('value'))
+
+                            else:
+                                value = choice(result.get(self.response_key))
+                                if value.get(self.key) == self.isuse:
+                                    yield value.get(kwargs.get('value'))
+
+                    else:
+                        if self.swich:
+                            value = choice(result.get(self.response_key))
+                            yield value.get(kwargs.get('value'))
+
+                        else:
+                            value = choice(result.get(self.response_key))
+                            if value.get(self.key) == self.isuse:
+                                yield value.get(kwargs.get('value'))
 
         return wrapper
 
