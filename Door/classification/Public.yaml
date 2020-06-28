@@ -1,3 +1,0 @@
-get_classification:
-    url: '/manager/gwforward/manager-webapi/product/appCategory/list?viewType=1&pid=0&appId=2'
-    bar:

@@ -118,7 +118,7 @@ class Get_Cookies:
         :return:
         '''
         value = ReadWrite(time_sign='times', time_option="time").read_ini_time()
-        session = ReadWrite(sign='session', option='cookies').read_ini_cookies()
+        session = self.cookies_value = ReadWrite(sign='session', option='cookies').read_ini_cookies()
         if session:
             authen = session.split("=")[1]
             if authen == "none":
@@ -143,4 +143,4 @@ class Get_Cookies:
                       time_value=str(self.current_time)).write_ini()
 
 
-
+# Get_Cookies().write_cookies()
