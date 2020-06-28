@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89211bc0-fa15-4ecc-a7f3-73c9f4440e86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_6_3_0003_10_34__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_6_3_0003_10_34__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_6_4_0004_17_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_6_4_0004_17_31__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_3_0003_14_04__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_3_0003_14_04__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_4_0004_16_29__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_4_0004_16_29__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_4_0004_17_52__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_6_4_0004_17_52__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/classification/Public.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/classification/Public.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/classification/manage_st.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/classification/manage_st.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Door/Case.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/Case.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Door/attribute/add_st.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/attribute/add_st.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,30 +101,8 @@
       <recent name="D:\Portal_interface\Packages" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in manage_st.py">
-    <configuration name="InitializeCase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Portal_interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/InitializeCase.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for add_st.add_attribute.test_add_attribute" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests for add_st.add_attribute.test_list_screen">
+    <configuration name="Unittests for add_st.add_attribute.test_attribute_copy" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Portal_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,62 +113,77 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;add_st.add_attribute.test_add_attribute&quot;" />
+      <option name="_new_target" value="&quot;add_st.add_attribute.test_attribute_copy&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for manage_st.manage_classify.test_del_classify" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for add_st.add_attribute.test_attribute_delete" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Portal_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/classify" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/attribute" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;manage_st.manage_classify.test_del_classify&quot;" />
+      <option name="_new_target" value="&quot;add_st.add_attribute.test_attribute_delete&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for manage_st.manage_classify.test_display_classify" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for add_st.add_attribute.test_attribute_list" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Portal_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/classify" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/attribute" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;manage_st.manage_classify.test_display_classify&quot;" />
+      <option name="_new_target" value="&quot;add_st.add_attribute.test_attribute_list&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in manage_st.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for add_st.add_attribute.test_edit_attribute_pre" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Portal_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/classify" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/attribute" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Door/classify/manage_st.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;add_st.add_attribute.test_edit_attribute_pre&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for add_st.add_attribute.test_list_screen" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Portal_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/attribute" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;add_st.add_attribute.test_list_screen&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in manage_st.py" />
-        <item itemvalue="Python tests.Unittests for add_st.add_attribute.test_add_attribute" />
-        <item itemvalue="Python tests.Unittests for manage_st.manage_classify.test_del_classify" />
-        <item itemvalue="Python.InitializeCase" />
-        <item itemvalue="Python tests.Unittests for manage_st.manage_classify.test_display_classify" />
+        <item itemvalue="Python tests.Unittests for add_st.add_attribute.test_list_screen" />
+        <item itemvalue="Python tests.Unittests for add_st.add_attribute.test_attribute_delete" />
+        <item itemvalue="Python tests.Unittests for add_st.add_attribute.test_attribute_copy" />
+        <item itemvalue="Python tests.Unittests for add_st.add_attribute.test_edit_attribute_pre" />
+        <item itemvalue="Python tests.Unittests for add_st.add_attribute.test_attribute_list" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +225,7 @@
       <workItem from="1592898918289" duration="6653000" />
       <workItem from="1592977926708" duration="13920000" />
       <workItem from="1593241376025" duration="27000" />
-      <workItem from="1593308843321" duration="994000" />
+      <workItem from="1593308843321" duration="2869000" />
     </task>
     <task id="LOCAL-00002" summary="666">
       <created>1591349407745</created>
@@ -330,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593308967836</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="拉代码1234">
+      <created>1593309965339</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1593309965339</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +372,8 @@
     <MESSAGE value="拉代码1" />
     <MESSAGE value="拉代码12" />
     <MESSAGE value="拉代码123" />
-    <option name="LAST_COMMIT_MESSAGE" value="拉代码123" />
+    <MESSAGE value="拉代码1234" />
+    <option name="LAST_COMMIT_MESSAGE" value="拉代码1234" />
   </component>
   <component name="WindowStateProjectService">
     <state x="651" y="274" key="#Notifications" timestamp="1592469912299">
@@ -392,39 +388,39 @@
       <screen x="62" y="0" width="1538" height="900" />
     </state>
     <state x="635" y="318" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/62.0.1538.900@62.0.1538.900" timestamp="1591234676781" />
-    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1593308967300">
+    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1593309964819">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1592208665264" />
-    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1593308967300" />
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1593309964819" />
     <state x="495" y="101" key="FileChooserDialogImpl" timestamp="1593241401019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="495" y="101" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593241401019" />
     <state x="558" y="110" key="FileChooserDialogImpl/62.0.1538.900@62.0.1538.900" timestamp="1591158575816" />
-    <state width="1493" height="222" key="GridCell.Tab.0.bottom" timestamp="1592992002798">
+    <state width="1493" height="87" key="GridCell.Tab.0.bottom" timestamp="1593311159911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="391" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592214595582" />
-    <state width="1493" height="222" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592992002798" />
+    <state width="1493" height="87" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593311159911" />
     <state width="1485" height="131" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
-    <state width="1493" height="222" key="GridCell.Tab.0.center" timestamp="1592992002798">
+    <state width="1493" height="87" key="GridCell.Tab.0.center" timestamp="1593311159911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="391" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592214595582" />
-    <state width="1493" height="222" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592992002798" />
+    <state width="1493" height="87" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593311159911" />
     <state width="1485" height="131" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
-    <state width="1493" height="222" key="GridCell.Tab.0.left" timestamp="1592992002797">
+    <state width="1493" height="87" key="GridCell.Tab.0.left" timestamp="1593311159911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="391" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592214595581" />
-    <state width="1493" height="222" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592992002797" />
+    <state width="1493" height="87" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593311159911" />
     <state width="1485" height="131" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
-    <state width="1493" height="222" key="GridCell.Tab.0.right" timestamp="1592992002798">
+    <state width="1493" height="87" key="GridCell.Tab.0.right" timestamp="1593311159911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="391" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592214595582" />
-    <state width="1493" height="222" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592992002798" />
+    <state width="1493" height="87" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593311159911" />
     <state width="1485" height="131" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
     <state width="1485" height="274" key="GridCell.Tab.1.bottom" timestamp="1591254876597">
       <screen x="62" y="0" width="1538" height="900" />
@@ -460,11 +456,11 @@
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590137241657" />
     <state x="352" y="73" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592292483346" />
-    <state x="310" y="114" key="Vcs.Push.Dialog.v2" timestamp="1592979670869">
+    <state x="310" y="114" key="Vcs.Push.Dialog.v2" timestamp="1593309983268">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590137291380" />
-    <state x="310" y="114" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592979670869" />
+    <state x="310" y="114" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1593309983268" />
     <state x="372" y="124" key="Vcs.Push.Dialog.v2/62.0.1538.900@62.0.1538.900" timestamp="1591320512292" />
     <state x="467" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592208707684">
       <screen x="0" y="0" width="1366" height="728" />
@@ -537,16 +533,17 @@
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_canceltop_news.coverage" NAME="Unittests for info_st.info_news.test_canceltop_news Coverage Results" MODIFIED="1591686865420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_in_add_st_py.coverage" NAME="Unittests in add_st.py Coverage Results" MODIFIED="1592209697918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_delete_news.coverage" NAME="Unittests for info_st.info_news.test_delete_news Coverage Results" MODIFIED="1591684579215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_attribute_list.coverage" NAME="Unittests for add_st.add_attribute.test_attribute_list Coverage Results" MODIFIED="1592290499679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
+    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_attribute_list.coverage" NAME="Unittests for add_st.add_attribute.test_attribute_list Coverage Results" MODIFIED="1593310441354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_theadsort_news.coverage" NAME="Unittests for info_st.info_news.test_theadsort_news Coverage Results" MODIFIED="1591691319708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_classify_test_see_classify.coverage" NAME="Unittests for manage_st.manage_classify.test_see_classify Coverage Results" MODIFIED="1592987773488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/classify" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_AddProduct_test_add_product.coverage" NAME="Unittests for manage_st.manage_AddProduct.test_add_product Coverage Results" MODIFIED="1591259112565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/AddProduct" />
-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_attribute_copy.coverage" NAME="Unittests for add_st.add_attribute.test_attribute_copy Coverage Results" MODIFIED="1592209368503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
+    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_attribute_copy.coverage" NAME="Unittests for add_st.add_attribute.test_attribute_copy Coverage Results" MODIFIED="1593310917120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_batchcancel_news.coverage" NAME="Unittests for info_st.info_news.test_batchcancel_news Coverage Results" MODIFIED="1591687022520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_hidepcview_news.coverage" NAME="Unittests for info_st.info_news.test_hidepcview_news Coverage Results" MODIFIED="1591685832056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Login.coverage" NAME="Login Coverage Results" MODIFIED="1591690228223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_noclass_news.coverage" NAME="Unittests for info_st.info_news.test_noclass_news Coverage Results" MODIFIED="1591691429136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_classify_test_display_classify.coverage" NAME="Unittests for manage_st.manage_classify.test_display_classify Coverage Results" MODIFIED="1592990222009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/classify" />
+    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute.coverage" NAME="Unittests for add_st.add_attribute Coverage Results" MODIFIED="1593310245143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_turnpage_news.coverage" NAME="Unittests for info_st.info_news.test_turnpage_news Coverage Results" MODIFIED="1591674905334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_browse_news.coverage" NAME="Unittests for info_st.info_news.test_browse_news Coverage Results" MODIFIED="1591674921953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_dragsort_news.coverage" NAME="Unittests for info_st.info_news.test_dragsort_news Coverage Results" MODIFIED="1591674911317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
@@ -557,17 +554,17 @@
     <SUITE FILE_PATH="coverage/Portal_interface$TimingTask.coverage" NAME="TimingTask Coverage Results" MODIFIED="1590553814229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_classify_test_add_classify.coverage" NAME="Unittests for manage_st.manage_classify.test_add_classify Coverage Results" MODIFIED="1592988459491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/classify" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_productCategory_test_category_list.coverage" NAME="Unittests for manage_st.manage_productCategory.test_category_list Coverage Results" MODIFIED="1591258442606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/productCategory" />
-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_list_screen.coverage" NAME="Unittests for add_st.add_attribute.test_list_screen Coverage Results" MODIFIED="1592209684265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_top_news.coverage" NAME="Unittests for info_st.info_news.test_top_news Coverage Results" MODIFIED="1591682332439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
+    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_list_screen.coverage" NAME="Unittests for add_st.add_attribute.test_list_screen Coverage Results" MODIFIED="1593311080114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$generator.coverage" NAME="generator Coverage Results" MODIFIED="1591580349187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_AddProduct_test_product_list.coverage" NAME="Unittests for manage_st.manage_AddProduct.test_product_list Coverage Results" MODIFIED="1591240056861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/AddProduct" />
     <SUITE FILE_PATH="coverage/Portal_interface$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1591694461084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_edit_attribute_pre.coverage" NAME="Unittests for add_st.add_attribute.test_edit_attribute_pre Coverage Results" MODIFIED="1592207523863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_classification.coverage" NAME="Unittests for manage_st.manage_classification Coverage Results" MODIFIED="1592273815415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/classification" />
+    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_edit_attribute_pre.coverage" NAME="Unittests for add_st.add_attribute.test_edit_attribute_pre Coverage Results" MODIFIED="1593310491117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_transfer_news.coverage" NAME="Unittests for info_st.info_news.test_transfer_news Coverage Results" MODIFIED="1591695385337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_updatepcview_news.coverage" NAME="Unittests for info_st.info_news.test_updatepcview_news Coverage Results" MODIFIED="1591674927715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_classification_test_classify_add.coverage" NAME="Unittests for manage_st.manage_classification.test_classify_add Coverage Results" MODIFIED="1592293629346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/classification" />
-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_attribute_delete.coverage" NAME="Unittests for add_st.add_attribute.test_attribute_delete Coverage Results" MODIFIED="1592210211535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
+    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_attribute_delete.coverage" NAME="Unittests for add_st.add_attribute.test_attribute_delete Coverage Results" MODIFIED="1593310989923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_all_news.coverage" NAME="Unittests for info_st.info_news.test_all_news Coverage Results" MODIFIED="1591674889700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_news_test_savetags_news.coverage" NAME="Unittests for info_st.info_news.test_savetags_news Coverage Results" MODIFIED="1591684270411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/news" />
     <SUITE FILE_PATH="coverage/Portal_interface$DataHandle.coverage" NAME="DataHandle Coverage Results" MODIFIED="1591750987779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />

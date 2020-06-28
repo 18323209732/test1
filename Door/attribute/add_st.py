@@ -9,7 +9,7 @@ from Common.DataHandle import ReRun
 import random
 import urllib3
 from Door.attribute.Public import Public_Data
-import datetime
+import datetime,time
 
 class add_attribute(MyTest):
     condition = True
@@ -22,7 +22,7 @@ class add_attribute(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             num = random.randint(0, 999999)
-            self.data['templateName'] = '自动%d' % num
+            self.data['templateName'] = 'FK自动{}'.format(time.time())
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -40,10 +40,8 @@ class add_attribute(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             self.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8'
-            print('url====:',url)
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify = False)
             self.result = r.json()
-            print('result===:',self.result)
             self.time=r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
@@ -59,13 +57,10 @@ class add_attribute(MyTest):
             id = random.choice(Public_Data().get_attribute(swich=False))
             url = ConfigYaml(self.projectName).base_url + self.url
             num = random.randint(0,10000)
-            self.data['templateName'] = '自动%d'%num
+            self.data['templateName'] = 'FKBJ自动{}'.format(time.time())
             self.data['id'] = id
-            print('id--===：',self.data)
-            print('url:::',url)
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify = False)
             self.result = r.json()
-            print('rrrr-=:',self.result)
 
             self.time=r.elapsed.total_seconds()
         except:
@@ -81,11 +76,9 @@ class add_attribute(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             id = random.choice(Public_Data().get_attribute(swich=False))
-            url = ConfigYaml(self.projectName).base_url + self.url.format(id)
-            print('url===:',url)
+            url = ConfigYaml(self.projectName).base_url + self.url + '&appId=2&id={}&operType=copy'.format(id)
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
-            print('ret=====:',self.result)
 
             self.time=r.elapsed.total_seconds()
         except:
@@ -101,12 +94,9 @@ class add_attribute(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             id = random.choice(Public_Data().get_attribute(swich=False))
-            url = ConfigYaml(self.projectName).base_url + self.url.format(id)
-            print('url=====:',url)
-            print('--=-=-:',self.headers)
+            url = ConfigYaml(self.projectName).base_url + self.url + '&authPermission=attribute_del&templateId={}&appId=2'.format(id)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-            print(self.result)
 
             self.time=r.elapsed.total_seconds()
         except:
@@ -125,7 +115,7 @@ class add_attribute(MyTest):
             offset = datetime.timedelta(days=-5)
             end_date = (start_today + offset).strftime('%Y-%m-%d')  # 获取当前日期前5天年月日
 
-            url = ConfigYaml(self.projectName).base_url + self.url.format(end_date,start_today)
+            url = ConfigYaml(self.projectName).base_url + self.url + '&appId=2&ec_p=1&ec_crd=15&startDate={}&endDate={}&sortField=&sortType='.format(end_date,start_today)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -134,23 +124,3 @@ class add_attribute(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
             return self.singular
-        
-    # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test_edit_attribute(self):
-        # 编辑属性类型
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
-            url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            self.result = r.json()
-
-            self.time = r.elapsed.total_seconds()
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red', self.singular)
-            return self.singular
-        
