@@ -1,0 +1,474 @@
+Index: Door/Case.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Door:\r\n  attribute: #属性管理\r\n    - url: /manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_add  # 添加属性类型地址\r\n      modular: 添加属性  # 接口注释\r\n      className: add_attribute  # 接口类名\r\n      funName:\r\n        - test_add_attribute: {  # 添加属性类型\r\n          url: ,\r\n          level: 高,   #级别\r\n          author: 方坤,  #作者\r\n          bar: {\"id\":\"\",\"appId\":2,\"templateName\":\"类型09\",\"memo\":\"\",\"operType\":\"add\",\"paramDataArr\":[],\"buttonDataArr\":[],\"tabPageDataArr\":[],\"itemDataArr\":[{\"name\":\"产品名称09\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"0\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"code\":\"name\",\"isFix\":\"0\",\"issearch\":\"0\"},{\"name\":\"编号\",\"isrequire\":\"1\",\"defaultname\":\"\",\"defaultcode\":\"\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"code\":\"code\",\"isFix\":\"0\",\"issearch\":\"0\"},{\"name\":\"计量单位\",\"isrequire\":\"1\",\"defaultname\":\"\",\"defaultcode\":\"\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"code\":\"unit\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"重量\",\"isrequire\":\"1\",\"defaultname\":\"\",\"defaultcode\":\"\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"weight\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"计费重量\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"kg\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"chargedWeight\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"市场价\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"元\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"price\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"零售价\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"元\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"retailPrice\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"库存\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"stock\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"最低起订量\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"code\":\"moq\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"交货期\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"code\":\"deliveryTime\",\"isFix\":\"0\",\"issearch\":\"1\"},{\"name\":\"产品描述\",\"defaultname\":\"\",\"defaultcode\":\"\",\"isrequire\":\"1\",\"unit\":\"\",\"promt\":\"请输入\",\"isdisplay\":\"0\",\"fieldType\":\"1\",\"subFieldType\":\"content\",\"option\":\"\",\"code\":\"content\",\"isFix\":\"0\",\"issearch\":\"1\"}],\"specDataArr\":[],\"filePageDataArr\":[],\"needDelId\":{\"attrIds\":[],\"paramIds\":[],\"buttonIds\":[],\"tabPageIds\":[],\"specIds\":[]},\"newLineNums\":{}},\r\n          test_data: {},\r\n          case_name: 添加属性类型,\r\n          expected: [200],  # 预期结果\r\n          mode: post,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n          test_attribute_list: {  # 属性列表\r\n          url: '/manager/gwforward/manager-webapi/product/productAttribute/list?viewType=1&tenantId=196498&appId=2&ec_p=1&ec_crd=15&startDate=&endDate=&sortField=&sortType=',\r\n          level: 中,   #级别\r\n          author: 方坤,  #作者\r\n          bar: ,\r\n          test_data: {},\r\n          case_name: 属性类型列表,\r\n          expected: [200],  # 预期结果\r\n          mode: get,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n        }\r\n          test_edit_attribute: {  # 编辑属性类型\r\n          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=196498&appId=2&id=1&operType=edit',\r\n          level: 中,   #级别\r\n          author: 方坤,  #作者\r\n          bar: ,\r\n          test_data: {},\r\n          case_name: 编辑属性类型,\r\n          expected: [200],  # 预期结果\r\n          mode: get,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n        }\r\n          test_edit_attribute_pre: {  # 编辑属性类型后保存\r\n          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_edit',\r\n          level: 中,   #级别\r\n          author: 方坤,  #作者\r\n          bar: {\"id\":1,\"appId\":2,\"templateName\":\"默认属性类型1\",\"memo\":\"系统默认模版,全局只有一个\",\"operType\":\"edit\",\"paramDataArr\":[],\"buttonDataArr\":[],\"tabPageDataArr\":[],\"itemDataArr\":[{\"isrequire\":\"0\",\"issearch\":\"0\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入产品名称\",\"defaultname\":\"产品名称\",\"defaultcode\":\"name\",\"aid\":1,\"isFix\":\"0\",\"name\":\"产品名称\",\"isRefer\":false,\"code\":\"name\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入编号\",\"defaultname\":\"编号\",\"defaultcode\":\"code\",\"aid\":2,\"isFix\":\"0\",\"name\":\"编号\",\"isRefer\":false,\"code\":\"code\"},{\"isrequire\":\"0\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入最低起订量\",\"defaultname\":\"最低起订量\",\"defaultcode\":\"moq\",\"aid\":17,\"isFix\":\"0\",\"name\":\"最低起订量\",\"isRefer\":false,\"code\":\"moq\"},{\"isrequire\":\"0\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入交货期\",\"defaultname\":\"交货期\",\"defaultcode\":\"deliveryTime\",\"aid\":18,\"isFix\":\"0\",\"name\":\"交货期\",\"isRefer\":false,\"code\":\"deliveryTime\"},{\"isrequire\":\"0\",\"issearch\":\"1\",\"unit\":\"kg\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入计费重量\",\"defaultname\":\"计费重量\",\"defaultcode\":\"chargedWeight\",\"aid\":19,\"isFix\":\"0\",\"name\":\"计费重量\",\"isRefer\":false,\"code\":\"chargedWeight\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"text\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入计量单位\",\"defaultname\":\"计量单位\",\"defaultcode\":\"unit\",\"aid\":3,\"isFix\":\"0\",\"name\":\"计量单位\",\"isRefer\":false,\"code\":\"unit\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入重量\",\"defaultname\":\"重量\",\"defaultcode\":\"weight\",\"aid\":4,\"isFix\":\"0\",\"name\":\"重量\",\"isRefer\":false,\"code\":\"weight\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"元\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入市场价\",\"defaultname\":\"市场价\",\"defaultcode\":\"price\",\"aid\":5,\"isFix\":\"0\",\"name\":\"市场价\",\"isRefer\":false,\"code\":\"price\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"元\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入零售价\",\"defaultname\":\"零售价\",\"defaultcode\":\"retailPrice\",\"aid\":6,\"isFix\":\"0\",\"name\":\"零售价\",\"isRefer\":false,\"code\":\"retailPrice\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"0\",\"subFieldType\":\"number\",\"option\":\"\",\"optionReferIdx\":[],\"promt\":\"请输入库存\",\"defaultname\":\"库存\",\"defaultcode\":\"stock\",\"aid\":7,\"isFix\":\"0\",\"name\":\"库存\",\"isRefer\":false,\"code\":\"stock\"},{\"isrequire\":\"1\",\"issearch\":\"1\",\"unit\":\"\",\"isdisplay\":\"0\",\"fieldType\":\"1\",\"subFieldType\":\"AREtext\",\"option\":\"\",\"optionReferIdx\":[],\"defaultname\":\"产品描述\",\"defaultcode\":\"content\",\"aid\":8,\"isFix\":\"0\",\"name\":\"产品描述\",\"isRefer\":false,\"code\":\"content\"}],\"specDataArr\":[],\"filePageDataArr\":[],\"needDelId\":{\"attrIds\":[],\"paramIds\":[],\"buttonIds\":[],\"tabPageIds\":[],\"specIds\":[]},\"newLineNums\":{}},\r\n          test_data: {},\r\n          case_name: 编辑属性类型后保存,\r\n          expected: [\"200\"],  # 预期结果\r\n          mode: post,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n          test_attribute_copy: {  # 复制属性类型\r\n          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&tenantId=196498&appId=2&id=32&operType=copy',\r\n          level: 中,   #级别\r\n          author: 方坤,  #作者\r\n          bar:,\r\n          test_data: {},\r\n          case_name: 复制属性类型,\r\n          expected: [200],  # 预期结果\r\n          mode: get,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n          test_attribute_delete: {  # 删除属性类型\r\n          url: '/manager/gwforward/manager-webapi/product/productAttribute/delAttribute?viewType=1&tenantId=196498&authPermission=attribute_del&_d=1591087588807&templateId=33&appId=2',\r\n          level: 中,   #级别\r\n          author: 方坤,  #作者\r\n          bar:,\r\n          test_data: {},\r\n          case_name: 删除属性类型,\r\n          expected: [200],  # 预期结果\r\n          mode: get,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n            }\r\n\r\n  productCategory: #添加产品分类\r\n    - url:   # 类URL为空\r\n      modular: 添加产品分类,然后获取分类列表，验证创建分类是否存在  # 接口注释\r\n      className: manage_productCategory  # 接口类名\r\n      funName:\r\n        - test_add_category: {  # 添加产品分类\r\n          url: /manager/gwforward/manager-webapi/product/appCategory/save,\r\n          level: 中,\r\n          author: 姜娜,\r\n          bar:{\"category\":{\"id\":\"\",\"ismobile\":0,\"status\":0,\"isSearch\":0,\"sequence\":\"\",\"imageId\":\"\",\"imageurl\":\"\",\"parentId\":\"\",\"addPId\":\"\",\"addPname\":\"\",\"editPId\":\"\",\"eidtPname\":\"\",\"categoryType\":\"0\",\"windowtype\":1,\"mobileWindowType\":1,\"styleCategoryListId\":\"\",\"styleProductDetailId\":\"\",\"gototype\":0,\"defTabStyle\":\"\",\"defDetailStyle\":\"\",\"mobileStyleCategoryListId\":\"\",\"mobileStyleProductDetailId\":\"\",\"defTabStyleM\":\"\",\"defDetailStyleM\":\"\",\"appId\":2,\"categoryName\":\"测试分类2\",\"linkurl\":\"\",\"mobileLinkUrl\":\"\"},\"choiceUrl\":\"\",\"choiceUrlM\":\"\",\"destype\":0,\"description\":\"\",\"content\":\"\",\"mobileContent\":\"\",\"descriptionS\":\"\",\"seoState\":1,\"hidTitle\":[{\"id\":\"categoryName\",\"name\":\"产品基本分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"产品基本分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}],\"hidKeywords\":[{\"id\":\"categoryKeyword\",\"name\":\"产品基本分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}],\"hidDescription\":[{\"id\":\"categoryName\",\"name\":\"产品基本分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"产品基本分类描述\"}],\"hidTitleSign\":\"_\",\"hidKeywordsSign\":\",\",\"hidDescriptionSign\":\"-\",\"seoTitleSign\":\"_\",\"seoKeywordsSign\":\",\",\"seoDescriptionSign\":\"-\",\"seoTitle\":[{\"id\":\"categoryName\",\"name\":\"产品基本分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"产品基本分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}],\"seoKeywords\":[{\"id\":\"categoryKeyword\",\"name\":\"产品基本分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}],\"seoDescription\":[{\"id\":\"categoryName\",\"name\":\"产品基本分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"产品基本分类描述\"}],\"authData\":[{\"authType\":1,\"authStr\":\"GW_:2:category:view:\",\"roleIds\":\"\"}],\"authStr\":\"GW_:2:category:view:\",\"authType\":1,\"roleIds\":\"\"},\r\n          relation_data: {},    #关联接口\r\n          case_name: 添加产品分类,\r\n          expected: [200],  # 预期结果，接口返回正常\r\n          mode: post,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n          test_category_list: {  # 产品分类列表\r\n          url: '/manager/gwforward/manager-webapi/product/appCategory/list?pid=0&appId=2',\r\n          level: 中,\r\n          author: 姜娜,\r\n          bar:{},\r\n          relation_data: {},    #关联接口\r\n          case_name: 获取产品分类列表,\r\n          expected: [200],  # 预期结果，接口返回正常\r\n          mode: get,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n        }\r\n  AddProduct: #添加产品，选择必填项，并上传图片，设置封面\r\n    - url:   # 保存产品\r\n      modular: 保存产品  # 接口注释\r\n      className: manage_AddProduct  # 接口类名\r\n      funName:\r\n        - test_add_product: {  # 接口方法名\r\n          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,\r\n          level: 高,\r\n          author: 姜娜,\r\n          bar: {\"show360ImageList\":[],\"operType\":\"add\",\"productInformation\":{\"id\":\"\",\"attributeTemplateId\":1,\"appId\":2,\"ismobile\":0,\"status\":0,\"productName\":\"我的产品001\",\"productType\":0,\"productCode\":\"\",\"unit\":0,\"weight\":0,\"price\":0,\"retailPrice\":0,\"stock\":0,\"ispublish\":1,\"mobileIspublish\":1,\"publishTime\":\"2020-06-03 11:41\",\"mobilePublishTime\":\"2020-06-03 11:41\",\"keyword\":\"\",\"pvs\":1000,\"sequence\":\"\",\"shortUrl\":\"\",\"qrbuyUrl\":\"\",\"syncQRStatus\":2,\"videoId\":\"\",\"videoThumbnail\":\"\",\"linkUrl\":\"\",\"windowType\":1,\"mobileLinkUrl\":\"\",\"mobileWindowType\":1,\"deliveryTime\":\"1\",\"moq\":1,\"chargedWeight\":0,\"name\":\"我的产品001\"},\"productBigField\":{\"content\":\"\",\"mobileContent\":\"\",\"summary\":\"\",\"mobileSummary\":\"\"},\"productImageList\":[],\"relecontentList\":[],\"matchingProduct\":{\"appId\":\"\",\"contentList\":[]},\"categoryIds\":[6],\"showcaseIds\":[],\"markIds\":[],\"paramValueList\":[],\"tabPageValueList\":[],\"buttonValueList\":[],\"filePageValueList\":[],\"customAttrValueList\":[],\"skuList\":[],\"specConfigList\":[],\"authList\":[{\"authType\":\"1\",\"auth\":\"GW_:2:detail:view:\",\"roleIds\":\"\"}],\"seoData\":{\"seoState\":1,\"seoTitleSign\":\"_\",\"seoKeywordsSign\":\",\",\"seoDescriptionSign\":\"-\",\"seoTitle\":[{\"id\":\"name\",\"name\":\"产品名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}],\"seoKeywords\":[{\"id\":\"keyword\",\"name\":\"产品关键词\"},{\"id\":\"name\",\"name\":\"产品名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}],\"seoDescription\":[{\"id\":\"name\",\"name\":\"产品名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"产品简介\"}]},\"itemDataArr\":[],\"qrDomain\":\"\",\"qrTenantId\":-1,\"choiceUrl\":\"\",\"choiceUrlM\":\"\"},\r\n          relation_data: {},    #关联接口\r\n          case_name: 添加产品,\r\n          expected: [200],  # 预期结果添加成功，产品列表显示正常\r\n          mode: post,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n          test_product_list: {  # 接口方法名\r\n          url: /manager/gwforward/manager-webapi/product/productInformation/list,\r\n          level: 中,\r\n          author: 姜娜,\r\n          bar:{\"appId\":2,\"cateId\":0,\"showCaseId\":null,\"attributeId\":0,\"pcStatus\":\"null\",\"moStatus\":\"null\",\"startDate\":\"\",\"endDate\":\"\",\"pageSize\":15,\"pageNumber\":1,\"orderColumn\":\"\",\"order_productName\":\"\",\"order_productCode\":\"\",\"order_cateName\":\"\",\"order_retailPrice\":\"\",\"order_publishTime\":\"\",\"order_pcStatus\":\"\",\"order_moStatus\":\"\",\"order_shortUrl\":\"\",\"order_pvs\":\"\"},\r\n          relation_data: {},    #关联接口\r\n          case_name: 产品列表,\r\n          expected: [200],  # 预期结果添加成功，产品列表显示正常\r\n          mode: post,  # 请求类型\r\n          re_bar: json, # 请求参数\r\n          }\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/Case.yaml	(revision 2ffab7077f2edd688c4c31052df0c4713dfc570d)
++++ Door/Case.yaml	(date 1591264279833)
+@@ -71,10 +71,10 @@
+           re_bar: json, # 请求参数
+             }
+ 
+-  productCategory: #添加产品分类
++  AddCategory: #添加产品分类
+     - url:   # 类URL为空
+       modular: 添加产品分类,然后获取分类列表，验证创建分类是否存在  # 接口注释
+-      className: manage_productCategory  # 接口类名
++      className: manage_AddCategory  # 接口类名
+       funName:
+         - test_add_category: {  # 添加产品分类
+           url: /manager/gwforward/manager-webapi/product/appCategory/save,
+@@ -125,3 +125,19 @@
+           mode: post,  # 请求类型
+           re_bar: json, # 请求参数
+           }
++  ProductSKU: #编辑产品，选择规格、规格值、编辑规格值、维护产品信息
++    - url:
++      modular: 编辑产品，选择规格、规格值、编辑规格值、维护产品信息
++      className: manage_ProductSKU  # 接口类名
++      funName:
++        - test_product_sku: {  # 接口方法名
++          url: /manager-webapi/product/productInformation/saveOrUpdate,
++          level: 中,
++          author: 姜娜,
++          bar: {"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"123","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-04 17:48","mobilePublishTime":"2020-06-04 17:48","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"123"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[5],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[{"selected":false,"id":"","code":"1","price":"1","retailPrice":"1","stock":"1","moq":1,"deliveryTime":"1","weight":"1","chargedWeight":"1","status":1,"isDefault":1,"name":"","productId":"","templateId":1,"productSkuSpecs":[{"productId":"","specId":1,"specValueId":1,"name":"10寸10","specName":"尺寸","skuId":""}]}],"specConfigList":[{"id":"","productId":"","specId":1,"specValueId":1,"alias":"10寸10","productSpecImgList":[]},{"id":"","productId":"","specId":1,"specValueId":1,"alias":"10寸10","productSpecImgList":[]}],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
++          relation_data: {},    #关联接口
++          case_name: 添加产品,
++          expected: [200],  # 预期结果添加成功，产品列表显示正常
++          mode: post,  # 请求类型
++          re_bar: json,  # 请求参数
++        }
+Index: Door/productCategory/Public.yaml
+===================================================================
+--- Door/productCategory/Public.yaml	(revision 2ffab7077f2edd688c4c31052df0c4713dfc570d)
++++ Door/productCategory/Public.yaml	(revision 2ffab7077f2edd688c4c31052df0c4713dfc570d)
+@@ -1,2 +0,0 @@
+-categoryName: 分类1591256869.914127
+-id: 41
+Index: Door/productCategory/manage_st.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># coding=utf-8\r\nimport unittest\r\nimport traceback\r\nimport requests\r\nfrom Common.FontColor import outcome\r\nfrom Common.MyUnit import MyTest\r\nfrom Common.ReadYaml import ConfigYaml\r\nfrom Common.DataHandle import ReRun\r\nimport urllib3\r\nimport time, yaml, os\r\nfrom ruamel.yaml import RoundTripDumper\r\n\r\n\r\nurllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\r\n\r\nclass manage_productCategory(MyTest):\r\n\r\n    condition = True\r\n    # 添加产品分类,然后获取分类列表，验证创建分类是否存在\r\n\r\n    # @unittest.skipIf(condition, \"暂时跳过\")\r\n    @ReRun(MyTest.setUp)\r\n    def test_add_category(self):\r\n        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\r\n        # 添加产品分类\r\n        try:\r\n            url = ConfigYaml(self.projectName).base_url + self.url\r\n            self.data['category']['categoryName'] = '分类%s' % time.time()  # 获取随机分类名称\r\n            with open(\"Public.yaml\", \"a\", encoding=\"utf-8\") as yaml_file:   # 把传入的分类名称存入Public.yaml\r\n                data = {'categoryName': self.data['category']['categoryName']}\r\n                yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)\r\n            print(self.data['category']['categoryName'])\r\n\r\n            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)\r\n            self.result = r.json()\r\n\r\n            self.time=r.elapsed.total_seconds()\r\n        except:\r\n            self.singular = str(traceback.format_exc())\r\n            outcome('red',self.singular)\r\n            return self.singular\r\n\r\n    # @unittest.skipIf(condition, \"暂时跳过\")\r\n    @ReRun(MyTest.setUp)\r\n    def test_category_list(self):\r\n        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\r\n        # 获取产品分类列表\r\n        try:\r\n            url = ConfigYaml(self.projectName).base_url + self.url\r\n            r = requests.get(url, headers=self.headers, stream=True, verify=False)\r\n            self.result = r.json()\r\n            try:\r\n                # path = os.path.dirname(os.path.realpath(__file__))+r\"\\Public.yaml\"\r\n                with open('Public.yaml', 'r', encoding='utf-8') as f:  # 读取Public.yaml中'categoryName'的值\r\n                    value = yaml.load(f.read(), Loader=yaml.Loader)['categoryName']\r\n                    # print(value)\r\n                    for i in self.result['data']:  # 循环判断分类列表名称与存入的是否一致\r\n                        if i['categoryName'] == value:\r\n                            # print(i['categoryName'])\r\n                            id = i['id']\r\n                            with open(\"Public.yaml\", \"a\", encoding=\"utf-8\") as yaml_file:  # 把传入的分类名称存入Public.yaml\r\n                                data = {'id': id}\r\n                                yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)\r\n\r\n            except:\r\n                self.singular = str(traceback.format_exc())\r\n                outcome('red',self.singular)\r\n                return self.singular\r\n\r\n            self.time=r.elapsed.total_seconds()\r\n        except:\r\n            self.singular = str(traceback.format_exc())\r\n            outcome('red', self.singular)\r\n            return self.singular\r\n        
+===================================================================
+--- Door/productCategory/manage_st.py	(revision 2ffab7077f2edd688c4c31052df0c4713dfc570d)
++++ Door/AddCategory/manage_st.py	(date 1591264067697)
+@@ -10,12 +10,12 @@
+ import time, yaml, os
+ from ruamel.yaml import RoundTripDumper
+ 
+-
+ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+ 
++
+ class manage_productCategory(MyTest):
+-
+     condition = True
++
+     # 添加产品分类,然后获取分类列表，验证创建分类是否存在
+ 
+     # @unittest.skipIf(condition, "暂时跳过")
+@@ -26,7 +26,7 @@
+         try:
+             url = ConfigYaml(self.projectName).base_url + self.url
+             self.data['category']['categoryName'] = '分类%s' % time.time()  # 获取随机分类名称
+-            with open("Public.yaml", "a", encoding="utf-8") as yaml_file:   # 把传入的分类名称存入Public.yaml
++            with open("Public.yaml", "a", encoding="utf-8") as yaml_file:  # 把传入的分类名称存入Public.yaml
+                 data = {'categoryName': self.data['category']['categoryName']}
+                 yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
+             print(self.data['category']['categoryName'])
+@@ -34,10 +34,10 @@
+             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+             self.result = r.json()
+ 
+-            self.time=r.elapsed.total_seconds()
++            self.time = r.elapsed.total_seconds()
+         except:
+             self.singular = str(traceback.format_exc())
+-            outcome('red',self.singular)
++            outcome('red', self.singular)
+             return self.singular
+ 
+     # @unittest.skipIf(condition, "暂时跳过")
+@@ -64,12 +64,11 @@
+ 
+             except:
+                 self.singular = str(traceback.format_exc())
+-                outcome('red',self.singular)
++                outcome('red', self.singular)
+                 return self.singular
+ 
+-            self.time=r.elapsed.total_seconds()
++            self.time = r.elapsed.total_seconds()
+         except:
+             self.singular = str(traceback.format_exc())
+             outcome('red', self.singular)
+             return self.singular
+-        
+\ No newline at end of file
+Index: Door/productCategory/Public.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n# coding=utf-8\r\nimport requests\r\nfrom random import randint,choice\r\nimport random,os,re\r\nimport json\r\nimport requests\r\nimport time\r\nfrom random import randint\r\nfrom datetime import date,timedelta\r\n
+===================================================================
+--- Door/productCategory/Public.py	(revision 2ffab7077f2edd688c4c31052df0c4713dfc570d)
++++ Door/AddCategory/Public.py	(date 1591263809135)
+@@ -8,3 +8,4 @@
+ import time
+ from random import randint
+ from datetime import date,timedelta
++from Common.ReadYaml import ReadPublic
+Index: Door/AddProduct/manage_st.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># coding=utf-8\r\nimport unittest\r\nimport traceback\r\nimport requests\r\nfrom Common.FontColor import outcome\r\nfrom Common.MyUnit import MyTest\r\nfrom Common.ReadYaml import ConfigYaml\r\nfrom Common.DataHandle import ReRun\r\nimport urllib3\r\nimport time, yaml, os\r\nfrom ruamel.yaml import RoundTripDumper\r\n\r\n\r\nclass manage_AddProduct(MyTest):\r\n\r\n    condition = True\r\n    # 保存产品\r\n\r\n    # @unittest.skipIf(condition, \"暂时跳过\")\r\n    @ReRun(MyTest.setUp)\r\n    def test_add_product(self):\r\n        # 添加产品\r\n        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\r\n        try:\r\n            url = ConfigYaml(self.projectName).base_url + self.url\r\n            self.data['productInformation']['productName'] = '我的产品%s' % time.time()\r\n            # 读取产品分类里的id，添加商品选择此分类。\r\n            path = os.path.abspath(os.path.join(os.getcwd(), \"..\")) + r\"\\productCategory\\Public.yaml\"\r\n            with open(path, 'r', encoding='utf-8') as f:  # 读取productCategory\\Public.yaml中'id'的值\r\n                id = yaml.load(f.read(), Loader=yaml.Loader)['id']\r\n            self.data['categoryIds'] = [id]\r\n\r\n            # 把获取到的分类id，自定义的产品名称 传参\r\n            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)\r\n            self.result = r.json()\r\n            # 把添加成功的产品名称写入Public.yaml\r\n            with open(\"Public.yaml\", \"a\", encoding=\"utf-8\") as yaml_file:\r\n                data = {'productName': self.data['productInformation']['productName']}\r\n                yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)\r\n\r\n            self.time = r.elapsed.total_seconds()\r\n        except:\r\n            self.singular = str(traceback.format_exc())\r\n            outcome('red',self.singular)\r\n            return self.singular\r\n\r\n    # @unittest.skipIf(condition, \"暂时跳过\")\r\n    @ReRun(MyTest.setUp)\r\n    def test_product_list(self):\r\n        # 产品列表\r\n        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\r\n        try:\r\n            url = ConfigYaml(self.projectName).base_url + self.url\r\n            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)\r\n            self.result = r.json()\r\n            print(self.result)\r\n            self.time = r.elapsed.total_seconds()\r\n        except:\r\n            self.singular = str(traceback.format_exc())\r\n            outcome('red', self.singular)\r\n            return self.singular\r\n        
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/AddProduct/manage_st.py	(revision 2ffab7077f2edd688c4c31052df0c4713dfc570d)
++++ Door/AddProduct/manage_st.py	(date 1591263660665)
+@@ -34,7 +34,7 @@
+             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+             self.result = r.json()
+             # 把添加成功的产品名称写入Public.yaml
+-            with open("Public.yaml", "a", encoding="utf-8") as yaml_file:
++            with open("Public.yaml", "w", encoding="utf-8") as yaml_file:
+                 data = {'productName': self.data['productInformation']['productName']}
+                 yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
+ 
+Index: Door/AddCategory/Public.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/AddCategory/Public.yaml	(date 1591263809136)
++++ Door/AddCategory/Public.yaml	(date 1591263809136)
+@@ -0,0 +1,3 @@
++add_customer:
++  - url: /add/customerParam
++    bar: {}
+Index: Door/productSKU/manage_st.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/productSKU/manage_st.py	(date 1591264067703)
++++ Door/productSKU/manage_st.py	(date 1591264067703)
+@@ -0,0 +1,32 @@
++# coding=utf-8
++import unittest
++import traceback
++import requests
++from Common.FontColor import outcome
++from Common.MyUnit import MyTest
++from Common.ReadYaml import ConfigYaml
++from Common.DataHandle import ReRun
++import urllib3
++
++
++class manage_ProductSKU(MyTest):
++
++    condition = True
++    # 编辑产品，选择规格、规格值、编辑规格值、维护产品信息
++
++    # @unittest.skipIf(condition, "暂时跳过")
++    @ReRun(MyTest.setUp)
++    def test_product_sku(self):
++        # 编辑产品，选择规格、规格值、编辑规格值、维护产品信息
++        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
++        try:
++            url = ConfigYaml(self.projectName).base_url + self.url
++            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
++            self.result = r.json()
++
++            self.time = r.elapsed.total_seconds()
++        except:
++            self.singular = str(traceback.format_exc())
++            outcome('red',self.singular)
++            return self.singular
++        
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"89211bc0-fa15-4ecc-a7f3-73c9f4440e86\" name=\"Default Changelist\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/dataSources.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/Portal_interface.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/Portal_interface.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Common/GetToken.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Common/GetToken.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Common/MyProcess.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Common/MyProcess.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Common/MyUnit.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Common/MyUnit.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Config/Config.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Config/Config.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Door/AddProduct/Public.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Door/AddProduct/Public.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Door/AddProduct/manage_st.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Door/AddProduct/manage_st.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Door/Case.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Door/Case.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Door/Data.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Door/Data.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Door/__init__.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Door/__init__.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Door/productCategory/Public.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Door/productCategory/Public.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Door/productCategory/manage_st.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Door/productCategory/manage_st.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Log/2020-05-27.log\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1cFvafGrJjgNqJr33lB1FXZYB89\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DatabaseDriversLRU\" value=\"sqlite\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/Config/Sqlite.db\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"nodejs_interpreter_path.stuck_in_default_project\" value=\"undefined stuck path\" />\r\n    <property name=\"nodejs_npm_path_reset_for_default_project\" value=\"true\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python tests.Unittests for manage_st.manage_AddProduct.test_add_product\">\r\n    <configuration name=\"Unittests for manage_st.manage_AddProduct.test_add_product\" type=\"tests\" factoryName=\"Unittests\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Portal_interface\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Door/AddProduct\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;manage_st.manage_AddProduct.test_add_product&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unittests for manage_st.manage_AddProduct.test_product_list\" type=\"tests\" factoryName=\"Unittests\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Portal_interface\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Door/AddProduct\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;manage_st.manage_AddProduct.test_product_list&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unittests for manage_st.manage_productCategory\" type=\"tests\" factoryName=\"Unittests\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Portal_interface\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Door/productCategory\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;manage_st.manage_productCategory&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unittests for manage_st.manage_productCategory.test_add_category\" type=\"tests\" factoryName=\"Unittests\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Portal_interface\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Door/productCategory\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;manage_st.manage_productCategory.test_add_category&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unittests for manage_st.manage_productCategory.test_category_list\" type=\"tests\" factoryName=\"Unittests\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Portal_interface\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Door/productCategory\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;manage_st.manage_productCategory.test_category_list&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python tests.Unittests for manage_st.manage_AddProduct.test_add_product\" />\r\n        <item itemvalue=\"Python tests.Unittests for manage_st.manage_productCategory.test_category_list\" />\r\n        <item itemvalue=\"Python tests.Unittests for manage_st.manage_productCategory.test_add_category\" />\r\n        <item itemvalue=\"Python tests.Unittests for manage_st.manage_productCategory\" />\r\n        <item itemvalue=\"Python tests.Unittests for manage_st.manage_AddProduct.test_product_list\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task id=\"LOCAL-00001\" summary=\"333\">\r\n      <created>1590554002365</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1590554002365</updated>\r\n    </task>\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"89211bc0-fa15-4ecc-a7f3-73c9f4440e86\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1590981949321</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1590981949321</updated>\r\n      <workItem from=\"1590981954475\" duration=\"11534000\" />\r\n      <workItem from=\"1591151694315\" duration=\"10525000\" />\r\n      <workItem from=\"1591163050182\" duration=\"6971000\" />\r\n      <workItem from=\"1591233280139\" duration=\"23922000\" />\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"333\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"333\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"423\" y=\"100\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1591158874002\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state x=\"423\" y=\"100\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1538.900@62.0.1538.900\" timestamp=\"1591158874002\" />\r\n    <state x=\"635\" y=\"318\" key=\"#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog\" timestamp=\"1591234676781\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state x=\"635\" y=\"318\" key=\"#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/62.0.1538.900@62.0.1538.900\" timestamp=\"1591234676781\" />\r\n    <state x=\"295\" y=\"0\" key=\"CommitChangelistDialog2\" timestamp=\"1590137281799\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"295\" y=\"0\" key=\"CommitChangelistDialog2/0.0.1366.728@0.0.1366.728\" timestamp=\"1590137281799\" />\r\n    <state x=\"558\" y=\"110\" key=\"FileChooserDialogImpl\" timestamp=\"1591158575816\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state x=\"558\" y=\"110\" key=\"FileChooserDialogImpl/62.0.1538.900@62.0.1538.900\" timestamp=\"1591158575816\" />\r\n    <state width=\"1485\" height=\"131\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1591259112572\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state width=\"1485\" height=\"131\" key=\"GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900\" timestamp=\"1591259112572\" />\r\n    <state width=\"1485\" height=\"131\" key=\"GridCell.Tab.0.center\" timestamp=\"1591259112572\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state width=\"1485\" height=\"131\" key=\"GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900\" timestamp=\"1591259112572\" />\r\n    <state width=\"1485\" height=\"131\" key=\"GridCell.Tab.0.left\" timestamp=\"1591259112572\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state width=\"1485\" height=\"131\" key=\"GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900\" timestamp=\"1591259112572\" />\r\n    <state width=\"1485\" height=\"131\" key=\"GridCell.Tab.0.right\" timestamp=\"1591259112572\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state width=\"1485\" height=\"131\" key=\"GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900\" timestamp=\"1591259112572\" />\r\n    <state width=\"1485\" height=\"274\" key=\"GridCell.Tab.1.bottom\" timestamp=\"1591254876597\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state width=\"1485\" height=\"274\" key=\"GridCell.Tab.1.bottom/62.0.1538.900@62.0.1538.900\" timestamp=\"1591254876597\" />\r\n    <state width=\"1485\" height=\"274\" key=\"GridCell.Tab.1.center\" timestamp=\"1591254876597\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state width=\"1485\" height=\"274\" key=\"GridCell.Tab.1.center/62.0.1538.900@62.0.1538.900\" timestamp=\"1591254876597\" />\r\n    <state width=\"1485\" height=\"274\" key=\"GridCell.Tab.1.left\" timestamp=\"1591254876597\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state width=\"1485\" height=\"274\" key=\"GridCell.Tab.1.left/62.0.1538.900@62.0.1538.900\" timestamp=\"1591254876597\" />\r\n    <state width=\"1485\" height=\"274\" key=\"GridCell.Tab.1.right\" timestamp=\"1591254876597\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state width=\"1485\" height=\"274\" key=\"GridCell.Tab.1.right/62.0.1538.900@62.0.1538.900\" timestamp=\"1591254876597\" />\r\n    <state width=\"264\" height=\"550\" key=\"HiddenNamespacesPopup\" timestamp=\"1591158868005\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state width=\"264\" height=\"550\" key=\"HiddenNamespacesPopup/62.0.1538.900@62.0.1538.900\" timestamp=\"1591158868005\" />\r\n    <state x=\"208\" y=\"71\" key=\"MergeDialog\" timestamp=\"1591259754780\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state x=\"208\" y=\"71\" key=\"MergeDialog/62.0.1538.900@62.0.1538.900\" timestamp=\"1591259754780\" />\r\n    <state x=\"186\" y=\"9\" key=\"SettingsEditor\" timestamp=\"1590137241657\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"186\" y=\"9\" key=\"SettingsEditor/0.0.1366.728@0.0.1366.728\" timestamp=\"1590137241657\" />\r\n    <state x=\"275\" y=\"100\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1590137291380\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"275\" y=\"100\" key=\"Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728\" timestamp=\"1590137291380\" />\r\n    <state x=\"588\" y=\"343\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1591259385923\">\r\n      <screen x=\"62\" y=\"0\" width=\"1538\" height=\"900\" />\r\n    </state>\r\n    <state x=\"588\" y=\"343\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1538.900@62.0.1538.900\" timestamp=\"1591259385923\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/Door/AddProduct/manage_st.py</url>\r\n          <line>1</line>\r\n          <option name=\"timeStamp\" value=\"6\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/Door/productCategory/manage_st.py</url>\r\n          <line>63</line>\r\n          <option name=\"timeStamp\" value=\"11\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n    <watches-manager>\r\n      <configuration name=\"tests\">\r\n        <watch expression=\"r.url\" language=\"Python\" />\r\n      </configuration>\r\n    </watches-manager>\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$__init__.coverage\" NAME=\"__init__ Coverage Results\" MODIFIED=\"1590994467027\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Common\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Unittests_for_manage_st_manage_productCategory_test_category_list.coverage\" NAME=\"Unittests for manage_st.manage_productCategory.test_category_list Coverage Results\" MODIFIED=\"1591258442606\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Door/productCategory\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$MySql.coverage\" NAME=\"MySql Coverage Results\" MODIFIED=\"1591234487272\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Common\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Unittests_for_manage_st_manage_AddProduct_test_add_product.coverage\" NAME=\"Unittests for manage_st.manage_AddProduct.test_add_product Coverage Results\" MODIFIED=\"1591259112565\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Door/AddProduct\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Unittests_for_manage_st_manage_productCategory_test_add_category.coverage\" NAME=\"Unittests for manage_st.manage_productCategory.test_add_category Coverage Results\" MODIFIED=\"1591256868959\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Door/productCategory\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Run.coverage\" NAME=\"Run Coverage Results\" MODIFIED=\"1591177145413\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$GetToken.coverage\" NAME=\"GetToken Coverage Results\" MODIFIED=\"1591152307089\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Common\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$2222222.coverage\" NAME=\"2222222 Coverage Results\" MODIFIED=\"1591162893550\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Config\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$InitializeCase.coverage\" NAME=\"InitializeCase Coverage Results\" MODIFIED=\"1591239152577\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Unittests_for_manage_st_manage_AddProduct_test_product_list.coverage\" NAME=\"Unittests for manage_st.manage_AddProduct.test_product_list Coverage Results\" MODIFIED=\"1591240056861\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Door/AddProduct\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_add_attribute.coverage\" NAME=\"Unittests for add_st.add_attribute.test_add_attribute Coverage Results\" MODIFIED=\"1591151882417\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Door/attribute\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$Unittests_for_manage_st_manage_productCategory.coverage\" NAME=\"Unittests for manage_st.manage_productCategory Coverage Results\" MODIFIED=\"1591251080938\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/Door/productCategory\" />\r\n    <SUITE FILE_PATH=\"coverage/Portal_interface$TimingTask.coverage\" NAME=\"TimingTask Coverage Results\" MODIFIED=\"1590553814229\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 2ffab7077f2edd688c4c31052df0c4713dfc570d)
++++ .idea/workspace.xml	(date 1591264068074)
+@@ -2,22 +2,13 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="89211bc0-fa15-4ecc-a7f3-73c9f4440e86" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/Portal_interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portal_interface.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Common/GetToken.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/GetToken.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Common/MyProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/MyProcess.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Common/MyUnit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/MyUnit.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Config/Config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Config.yaml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Door/AddProduct/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/AddProduct/Public.yaml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Door/AddProduct/manage_st.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/AddProduct/manage_st.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Door/Case.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/Case.yaml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Door/Data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/Data.yaml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Door/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/__init__.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Door/productCategory/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/productCategory/Public.yaml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Door/productCategory/manage_st.py" beforeDir="false" afterPath="$PROJECT_DIR$/Door/productCategory/manage_st.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Log/2020-05-27.log" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Door/productCategory/Public.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Door/productCategory/Public.yaml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Door/productCategory/__init__.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Door/productCategory/manage_st.py" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -55,23 +46,30 @@
+     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+   </component>
+-  <component name="RunManager" selected="Python tests.Unittests for manage_st.manage_AddProduct.test_add_product">
+-    <configuration name="Unittests for manage_st.manage_AddProduct.test_add_product" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="Python.InitializeCase">
++    <configuration name="InitializeCase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Portal_interface" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/AddProduct" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="_new_additionalArguments" value="&quot;&quot;" />
+-      <option name="_new_target" value="&quot;manage_st.manage_AddProduct.test_add_product&quot;" />
+-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/InitializeCase.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="Unittests for manage_st.manage_AddProduct.test_product_list" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
++    <configuration name="Unittests for manage_st.manage_AddProduct.test_add_product" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+       <module name="Portal_interface" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -82,22 +80,22 @@
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+       <option name="_new_additionalArguments" value="&quot;&quot;" />
+-      <option name="_new_target" value="&quot;manage_st.manage_AddProduct.test_product_list&quot;" />
++      <option name="_new_target" value="&quot;manage_st.manage_AddProduct.test_add_product&quot;" />
+       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="Unittests for manage_st.manage_productCategory" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
++    <configuration name="Unittests for manage_st.manage_ProductSKU.test_product_sku" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+       <module name="Portal_interface" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/productCategory" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Door/productSKU" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+       <option name="_new_additionalArguments" value="&quot;&quot;" />
+-      <option name="_new_target" value="&quot;manage_st.manage_productCategory&quot;" />
++      <option name="_new_target" value="&quot;manage_st.manage_ProductSKU.test_product_sku&quot;" />
+       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+       <method v="2" />
+     </configuration>
+@@ -133,11 +131,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Python.InitializeCase" />
+         <item itemvalue="Python tests.Unittests for manage_st.manage_AddProduct.test_add_product" />
++        <item itemvalue="Python tests.Unittests for manage_st.manage_ProductSKU.test_product_sku" />
+         <item itemvalue="Python tests.Unittests for manage_st.manage_productCategory.test_category_list" />
+         <item itemvalue="Python tests.Unittests for manage_st.manage_productCategory.test_add_category" />
+-        <item itemvalue="Python tests.Unittests for manage_st.manage_productCategory" />
+-        <item itemvalue="Python tests.Unittests for manage_st.manage_AddProduct.test_product_list" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -159,9 +157,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1590981949321</updated>
+       <workItem from="1590981954475" duration="11534000" />
+-      <workItem from="1591151694315" duration="10525000" />
+-      <workItem from="1591163050182" duration="6971000" />
+-      <workItem from="1591233280139" duration="23922000" />
++      <workItem from="1591263173944" duration="894000" />
+     </task>
+     <option name="localTasksCounter" value="2" />
+     <servers />
+@@ -174,62 +170,26 @@
+     <option name="LAST_COMMIT_MESSAGE" value="333" />
+   </component>
+   <component name="WindowStateProjectService">
+-    <state x="423" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591158874002">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state x="423" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1538.900@62.0.1538.900" timestamp="1591158874002" />
+-    <state x="635" y="318" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1591234676781">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state x="635" y="318" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/62.0.1538.900@62.0.1538.900" timestamp="1591234676781" />
+     <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1590137281799">
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+     <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1590137281799" />
+-    <state x="558" y="110" key="FileChooserDialogImpl" timestamp="1591158575816">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state x="558" y="110" key="FileChooserDialogImpl/62.0.1538.900@62.0.1538.900" timestamp="1591158575816" />
+-    <state width="1485" height="131" key="GridCell.Tab.0.bottom" timestamp="1591259112572">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state width="1485" height="131" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
+-    <state width="1485" height="131" key="GridCell.Tab.0.center" timestamp="1591259112572">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state width="1485" height="131" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
+-    <state width="1485" height="131" key="GridCell.Tab.0.left" timestamp="1591259112572">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state width="1485" height="131" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
+-    <state width="1485" height="131" key="GridCell.Tab.0.right" timestamp="1591259112572">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state width="1485" height="131" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1591259112572" />
+-    <state width="1485" height="274" key="GridCell.Tab.1.bottom" timestamp="1591254876597">
++    <state width="1485" height="65" key="GridCell.Tab.0.bottom" timestamp="1591263808675">
+       <screen x="62" y="0" width="1538" height="900" />
+     </state>
+-    <state width="1485" height="274" key="GridCell.Tab.1.bottom/62.0.1538.900@62.0.1538.900" timestamp="1591254876597" />
+-    <state width="1485" height="274" key="GridCell.Tab.1.center" timestamp="1591254876597">
++    <state width="1485" height="65" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1591263808675" />
++    <state width="1485" height="65" key="GridCell.Tab.0.center" timestamp="1591263808675">
+       <screen x="62" y="0" width="1538" height="900" />
+     </state>
+-    <state width="1485" height="274" key="GridCell.Tab.1.center/62.0.1538.900@62.0.1538.900" timestamp="1591254876597" />
+-    <state width="1485" height="274" key="GridCell.Tab.1.left" timestamp="1591254876597">
++    <state width="1485" height="65" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1591263808675" />
++    <state width="1485" height="65" key="GridCell.Tab.0.left" timestamp="1591263808675">
+       <screen x="62" y="0" width="1538" height="900" />
+     </state>
+-    <state width="1485" height="274" key="GridCell.Tab.1.left/62.0.1538.900@62.0.1538.900" timestamp="1591254876597" />
+-    <state width="1485" height="274" key="GridCell.Tab.1.right" timestamp="1591254876597">
++    <state width="1485" height="65" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1591263808675" />
++    <state width="1485" height="65" key="GridCell.Tab.0.right" timestamp="1591263808675">
+       <screen x="62" y="0" width="1538" height="900" />
+     </state>
+-    <state width="1485" height="274" key="GridCell.Tab.1.right/62.0.1538.900@62.0.1538.900" timestamp="1591254876597" />
+-    <state width="264" height="550" key="HiddenNamespacesPopup" timestamp="1591158868005">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state width="264" height="550" key="HiddenNamespacesPopup/62.0.1538.900@62.0.1538.900" timestamp="1591158868005" />
+-    <state x="208" y="71" key="MergeDialog" timestamp="1591259754780">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state x="208" y="71" key="MergeDialog/62.0.1538.900@62.0.1538.900" timestamp="1591259754780" />
++    <state width="1485" height="65" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1591263808675" />
+     <state x="186" y="9" key="SettingsEditor" timestamp="1590137241657">
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+@@ -238,45 +198,13 @@
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+     <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590137291380" />
+-    <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591259385923">
+-      <screen x="62" y="0" width="1538" height="900" />
+-    </state>
+-    <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1538.900@62.0.1538.900" timestamp="1591259385923" />
+-  </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+-          <url>file://$PROJECT_DIR$/Door/AddProduct/manage_st.py</url>
+-          <line>1</line>
+-          <option name="timeStamp" value="6" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+-          <url>file://$PROJECT_DIR$/Door/productCategory/manage_st.py</url>
+-          <line>63</line>
+-          <option name="timeStamp" value="11" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
+-    <watches-manager>
+-      <configuration name="tests">
+-        <watch expression="r.url" language="Python" />
+-      </configuration>
+-    </watches-manager>
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/Portal_interface$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1590994467027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_productCategory_test_category_list.coverage" NAME="Unittests for manage_st.manage_productCategory.test_category_list Coverage Results" MODIFIED="1591258442606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/productCategory" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$MySql.coverage" NAME="MySql Coverage Results" MODIFIED="1591234487272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_AddProduct_test_add_product.coverage" NAME="Unittests for manage_st.manage_AddProduct.test_add_product Coverage Results" MODIFIED="1591259112565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/AddProduct" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_productCategory_test_add_category.coverage" NAME="Unittests for manage_st.manage_productCategory.test_add_category Coverage Results" MODIFIED="1591256868959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/productCategory" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$Run.coverage" NAME="Run Coverage Results" MODIFIED="1591177145413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$GetToken.coverage" NAME="GetToken Coverage Results" MODIFIED="1591152307089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$2222222.coverage" NAME="2222222 Coverage Results" MODIFIED="1591162893550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$InitializeCase.coverage" NAME="InitializeCase Coverage Results" MODIFIED="1591239152577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_AddProduct_test_product_list.coverage" NAME="Unittests for manage_st.manage_AddProduct.test_product_list Coverage Results" MODIFIED="1591240056861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/AddProduct" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_add_attribute.coverage" NAME="Unittests for add_st.add_attribute.test_add_attribute Coverage Results" MODIFIED="1591151882417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
+-    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_productCategory.coverage" NAME="Unittests for manage_st.manage_productCategory Coverage Results" MODIFIED="1591251080938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/productCategory" />
++    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_AddProduct_test_add_product.coverage" NAME="Unittests for manage_st.manage_AddProduct.test_add_product Coverage Results" MODIFIED="1591263660671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/AddProduct" />
++    <SUITE FILE_PATH="coverage/Portal_interface$Run.coverage" NAME="Run Coverage Results" MODIFIED="1590982001317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/Portal_interface$InitializeCase.coverage" NAME="InitializeCase Coverage Results" MODIFIED="1591263808671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_manage_st_manage_ProductSKU_test_product_sku.coverage" NAME="Unittests for manage_st.manage_ProductSKU.test_product_sku Coverage Results" MODIFIED="1591263211529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/productSKU" />
+     <SUITE FILE_PATH="coverage/Portal_interface$TimingTask.coverage" NAME="TimingTask Coverage Results" MODIFIED="1590553814229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: Door/productSKU/Public.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/productSKU/Public.py	(date 1591262596023)
++++ Door/productSKU/Public.py	(date 1591262596023)
+@@ -0,0 +1,11 @@
++
++# coding=utf-8
++import requests
++from random import randint,choice
++import random,os,re
++import json
++import requests
++import time
++from random import randint
++from datetime import date,timedelta
++from Common.ReadYaml import ReadPublic
+Index: Door/productSKU/Public.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Door/productSKU/Public.yaml	(date 1591262596024)
++++ Door/productSKU/Public.yaml	(date 1591262596024)
+@@ -0,0 +1,3 @@
++add_customer:
++  - url: /add/customerParam
++    bar: {}
+diff --git Door/productCategory/__init__.py Door/AddCategory/__init__.py
+rename from Door/productCategory/__init__.py
+rename to Door/AddCategory/__init__.py
+diff --git Door/productSKU/__init__.py Door/productSKU/__init__.py
+new file mode 100644

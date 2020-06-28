@@ -16,6 +16,7 @@ projectName = ConfigYaml("projectName").base_config
 from Door.news.Public import Public_Data as pub_news
 from Common.ReExecution import ReExecution
 
+
 class Public_Data:
     def __init__(self, value='id', status=200, response_key='data', response_list='list'):
         '''
@@ -78,25 +79,25 @@ class Public_Data:
 
         return result
 
-    @ReExecution(add_classnews, response_list='data') #value='name'
-    def get_classnews_name(self):
-        '''
-        获取新闻资讯列表数据
-        :return:
-        '''
+    # @ReExecution(add_classnews, response_list='data') #value='name'
+    # def get_classnews_name(self):
+    #     '''
+    #     获取新闻资讯列表数据
+    #     :return:
+    #     '''
+    #
+    #     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    #
+    #     self.public_data = ReadPublic(catalog='newsclass', key="list_classnews")
+    #     url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
+    #     url = self.url + url
+    #
+    #     data = self.public_data.public_value("bar")
+    #     r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
+    #     result = r.json()
+    #
+    #     return result
 
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
-        self.public_data = ReadPublic(catalog='newsclass', key="list_classnews")
-        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
-        url = self.url + url
-
-        data = self.public_data.public_value("bar")
-        r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
-        result = r.json()
-
-        return result
-
-if __name__ == "__main__":
-    # print(next(Public_Data().get_classnews_name()))
-    pass
+# if __name__ == "__main__":
+#     # print(next(Public_Data().get_classnews_name()))
+#     pass

@@ -18,7 +18,6 @@ from Common.Route import Any_Path
 projectName = ConfigYaml("projectName").base_config
 
 
-
 class Public_Data:
     def __init__(self):
         '''
@@ -55,7 +54,6 @@ class Public_Data:
         data['cateGoryIds'] = id
 
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
-
 
     def add_classnews(self):
         '''
@@ -116,24 +114,6 @@ class Public_Data:
 
         return result
 
-    @ReExecution(add_news, response_list='pres')  #value='title'
-    def get_news_name(self):
-        '''
-        获取新闻资讯列表数据
-        :return:
-        '''
-
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        self.public_data = ReadPublic(catalog='news', key="get_news")
-        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
-        url = self.url + url
-        data = self.public_data.public_value("bar")
-        r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
-
-        result = r.json()
-
-        return result
-
     @ReExecution(add_classnews, response_list='data')   #value='id'
     def get_news_class(self):
         '''
@@ -188,7 +168,7 @@ class Public_Data:
             except StopIteration:
                 pass
 
-if __name__ == "__main__":
-    # print(Public_Data().add_news())
-    pass
-
+# if __name__ == "__main__":
+#     # print(Public_Data().add_news())
+#     pass
+#

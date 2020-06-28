@@ -70,7 +70,7 @@ class Public_Data:
         data = self.public_data.public_value("bar")
         r = requests.post(url, headers=self.headers, data=data, files=file, stream=True, verify=False)
 
-    @ReExecution(add_class, status='200', swich=False, isuse=1, key='used')
+    @ReExecution(add_class, status='200', swich=False, isuse=0, key='used')
     def get_news_used(self):
         '''
         获取新闻资讯列表数据
@@ -142,7 +142,7 @@ class Public_Data:
 
 
 if __name__ == "__main__":
-    print(next(Public_Data().get_news(value='id')))
-    # Public_Data().add_class()
-    pass
+    print(next(Public_Data().get_news_used(value='id')))
+#     # Public_Data().add_class()
+#     pass
 

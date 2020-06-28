@@ -18,7 +18,7 @@
 <body>
 
 <div>
-    <h1>Door接口自动化测试报告</h1>
+    <h1>Scrm接口自动化测试报告</h1>
     <hr>
     <div class="staticdis">
         <div>
@@ -32,45 +32,45 @@
                 </tr>
                 <tr>
                     <td>用例执行数</td>
-                    <td>26</td>
+                    <td>3</td>
                     <td>执行总用时</td>
-                    <td>32.67</td>
+                    <td>3.62</td>
                 </tr>
                 <tr>
                     <td>开始时间</td>
-                    <td>2020-06-10:09:09:35</td>
+                    <td>2020-05-20:14:32:07</td>
                     <td>结束时间</td>
-                    <td>2020-06-10:09:10:08</td>
+                    <td>2020-05-20:14:32:10</td>
                 </tr>
                 <tr>
                     <td>用时最长</td>
-                    <td>0</td>
+                    <td>1.09</td>
                     <td>用时最短</td>
-                    <td>0</td>
+                    <td>0.04</td>
                 </tr>
                 <tr>
                     <td>平均时长</td>
-                    <td>0</td>
+                    <td>0.74</td>
                     <td>成功率</td>
-                    <td>92.0</td>
+                    <td>0.0</td>
                 </tr>
                 </tbody>
             </table>
         </div>
         <div id="picture">
             <script>
-                statistical(23, 2, 0, 0, 1);
+                statistical(0, 3, 0, 0, 0);
             </script>
         </div>
     </div>
 
 <div class="button">
-        <div><a href="#all" data-toggle="tab">全部(26)</a></div>
-        <div><a href="#success" data-toggle="tab">成功(23)</a></div>
-        <div><a href="#fail" data-toggle="tab">失败(2)</a></div>
+        <div><a href="#all" data-toggle="tab">全部(3)</a></div>
+        <div><a href="#success" data-toggle="tab">成功(0)</a></div>
+        <div><a href="#fail" data-toggle="tab">失败(3)</a></div>
         <div><a href="#error" data-toggle="tab">错误(0)</a></div>
         <div><a href="#timeout" data-toggle="tab">超时(0)</a></div>
-        <div><a href="#skip" data-toggle="tab">跳过(1)</a></div>
+        <div><a href="#skip" data-toggle="tab">跳过(0)</a></div>
     </div>
 
 <div class="tab-content content" id="content">
@@ -90,520 +90,60 @@
             </thead>
 
 <tr>
-    <td>test_all_news</td>
-    <td>全部资讯页面</td>
+    <td>test_product333_getlist</td>
+    <td>产品列表</td>
     <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.46</td>
-    <td><a href="javascript:showClassDetail('al_test_all_news','hidd_al_test_all_news')" id="al_test_all_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_all_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': 'endDate=', 'pcStatus': -1, 'mobileStatus': -1, 'cateId': -1, 'keywords': '', 'wd': '', 'queryType': 4, 'ec_p': 1, 'ec_crd': 15, 'ec_s': '', 'v': 1, 'orderColumn': '', 'orderType': '', 'ec_s_title': '', 'ec_s_categorys': '', 'ec_s_pubDate': '', 'ec_s_viewCount': '', 'ec_s_showFlag': '', 'ec_s_showMobileFlag': ''}, 'usetime': 0.461934, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751039000, 'id': 88, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751039000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 88, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_batchcancel_news</td>
-    <td>批量取消置顶</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateTop?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.16</td>
-    <td><a href="javascript:showClassDetail('al_test_batchcancel_news','hidd_al_test_batchcancel_news')" id="al_test_batchcancel_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_batchcancel_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88, 88], 'state': False}, 'usetime': 0.158767, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 3}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_batchdelete_news</td>
-    <td>批量删除</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/delete?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>2.07</td>
-    <td><a href="javascript:showClassDetail('al_test_batchdelete_news','hidd_al_test_batchdelete_news')" id="al_test_batchdelete_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_batchdelete_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88]}, 'usetime': 2.074665, 'results': {'status': 200, 'msg': 'success', 'data': {'result': 1}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_browse_news</td>
-    <td>浏览新闻资讯</td>
-    <td>高</td>
-    <td>/manager/gwforward/manager-webapi/content/info/browse?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.2</td>
-    <td><a href="javascript:showClassDetail('al_test_browse_news','hidd_al_test_browse_news')" id="al_test_browse_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_browse_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'viewType': 1, 'tenantId': 188078, 'id': 88}, 'usetime': 0.204205, 'results': {'status': 200, 'msg': 'success', 'data': {'pagePath': '2004105022.pool5-site.make.yun300.cnindex.html'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_cancelrecommend_news</td>
-    <td>批量取消推荐</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateRecommend?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.17</td>
-    <td><a href="javascript:showClassDetail('al_test_cancelrecommend_news','hidd_al_test_cancelrecommend_news')" id="al_test_cancelrecommend_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_cancelrecommend_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88, 88], 'state': False}, 'usetime': 0.166979, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_canceltop_news</td>
-    <td>批量置顶</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateTop?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.17</td>
-    <td><a href="javascript:showClassDetail('al_test_canceltop_news','hidd_al_test_canceltop_news')" id="al_test_canceltop_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_canceltop_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88, 88], 'state': True}, 'usetime': 0.165476, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_copy_news</td>
-    <td>复制</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/add?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.22</td>
-    <td><a href="javascript:showClassDetail('al_test_copy_news','hidd_al_test_copy_news')" id="al_test_copy_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_copy_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'contentValid': 1, 'id': 88, 'infotype': '1', 'title': '234234', 'content': '<p>23424</p>\n', 'summary': '', 'keyWords': '', 'cateGoryIds': '3', 'sign': [], 'author': '', 'source': '', 'appId': '3', 'showFlag': 'true', 'pubDate': '2020-06-08 16:19:46', 'showMobileFlag': 'true', 'accessPermission': '', 'veiwCount': '0', 'linkPath': 'http://', 'linkPathMobile': 'http://', 'targetFlag': 'false', 'imgs': [], 'InfoConfig': [{'name': '资讯内容', 'state': '2', 'id': 'show_info_content'}, {'name': '链接目标', 'state': '2', 'id': 'show_link_info'}, {'name': '相关内容', 'state': '1', 'id': 'show_info_relation'}, {'name': '权限设置', 'state': '1', 'id': 'show_info_permission'}, {'name': '推广优化', 'state': '1', 'id': 'show_info_extension'}, {'name': '高级设置', 'state': '1', 'id': 'show_info_senior'}], 'RelevantContent': [], 'showStyle': '', 'recommandType': 'false', 'seoAuto': 'true', 'seoTitle': '[{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"}]', 'seoKeywords': '[{"id":"keyword","name":"资讯关键词"},{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"}]', 'seoDescription': '[{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"资讯概要"}]', 'seoAddDescription': '', 'seoTitleSign': '_', 'seoKeywordsSign': ',', 'seoDescriptionSign': '-', 'targetFlagMobile': 'false', 'pubDateMobile': '2020-06-08 16:19:46', 'showStyleMobile': '', 'contentMobile': '', 'authData': '[{"authType":1,"authStr":"GW_:3:detail:view:17","roleIds":""}]', 'videoIds': '', 'infoImgUrl': ''}, 'usetime': 0.21647, 'results': {'status': 200, 'msg': 'success', 'success': True, 'data': {'result': {'id': 89, 'result': True}}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_customsort_news</td>
-    <td>展示排序</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateCustomSort?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.23</td>
-    <td><a href="javascript:showClassDetail('al_test_customsort_news','hidd_al_test_customsort_news')" id="al_test_customsort_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_customsort_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'orderMode': 'TITLE_ASC'}, 'usetime': 0.233428, 'results': {'status': 200, 'msg': 'success', 'data': {'msg': 'success'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_delete_news</td>
-    <td>删除</td>
-    <td>高</td>
-    <td>/manager/gwforward/manager-webapi/content/info/delete?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.21</td>
-    <td><a href="javascript:showClassDetail('al_test_delete_news','hidd_al_test_delete_news')" id="al_test_delete_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_delete_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': 88}, 'usetime': 0.207599, 'results': {'status': 200, 'msg': 'success', 'data': {'result': 1}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_dragsort_news</td>
-    <td>拖拽排序</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateSort?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.15</td>
-    <td><a href="javascript:showClassDetail('al_test_dragsort_news','hidd_al_test_dragsort_news')" id="al_test_dragsort_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_dragsort_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'maxOrder': 9, 'minOrder': 4, 'direction': -1, 'targetId': 87, 'sectionIds': 88, 'isTop': False}, 'usetime': 0.148928, 'results': {'status': 200, 'msg': 'success', 'data': {'result': True}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_edit_news</td>
-    <td>编辑新闻资讯</td>
-    <td>高</td>
-    <td>/manager/gwforward/manager-webapi/content/info/update?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.18</td>
-    <td><a href="javascript:showClassDetail('al_test_edit_news','hidd_al_test_edit_news')" id="al_test_edit_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_edit_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'contentValid': 1, 'id': '88', 'infotype': '1', 'title': '自动化测试1591751390501', 'content': '<p>自动化测试新闻资讯内容数据</p>\n1591751390745', 'summary': '', 'keyWords': '', 'cateGoryIds': '1', 'sign': [], 'author': '', 'source': '', 'appId': '3', 'showFlag': 'true', 'pubDate': '2020-06-08 16:20:07', 'showMobileFlag': 'true', 'accessPermission': '', 'veiwCount': '0', 'linkPath': 'http://', 'linkPathMobile': 'http://', 'targetFlag': 'false', 'imgs': [], 'InfoConfig': [{'name': '资讯内容', 'state': '2', 'id': 'show_info_content'}, {'name': '链接目标', 'state': '2', 'id': 'show_link_info'}, {'name': '相关内容', 'state': '1', 'id': 'show_info_relation'}, {'name': '权限设置', 'state': '1', 'id': 'show_info_permission'}, {'name': '推广优化', 'state': '1', 'id': 'show_info_extension'}, {'name': '高级设置', 'state': '1', 'id': 'show_info_senior'}], 'RelevantContent': [], 'showStyle': '', 'recommandType': 'false', 'seoAuto': 'true', 'seoTitle': '[{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"}]', 'seoKeywords': '[{"id":"keyword","name":"资讯关键词"},{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"}]', 'seoDescription': '[{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"资讯概要"}]', 'seoAddDescription': '', 'seoTitleSign': '_', 'seoKeywordsSign': ',', 'seoDescriptionSign': '-', 'targetFlagMobile': 'false', 'pubDateMobile': '2020-06-08 16:20:07', 'showStyleMobile': '', 'contentMobile': '', 'authData': '[{"authType":1,"authStr":"GW_:3:detail:view:19","roleIds":""}]', 'videoIds': '', 'infoImgUrl': ''}, 'usetime': 0.18016, 'results': {'status': 200, 'msg': 'success', 'success': True, 'data': {'result': {'id': -1, 'result': False}}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_hide_news</td>
-    <td>隐藏电脑版</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updatePcview?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.17</td>
-    <td><a href="javascript:showClassDetail('al_test_hide_news','hidd_al_test_hide_news')" id="al_test_hide_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_hide_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'state': False, 'id': 88}, 'usetime': 0.169686, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_hidepcview_news</td>
-    <td>批量隐藏电脑版</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updatePcview?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.41</td>
-    <td><a href="javascript:showClassDetail('al_test_hidepcview_news','hidd_al_test_hidepcview_news')" id="al_test_hidepcview_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_hidepcview_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88, 88], 'state': 0}, 'usetime': 0.410875, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_noclass_news</td>
-    <td>无内容分类</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.26</td>
-    <td><a href="javascript:showClassDetail('al_test_noclass_news','hidd_al_test_noclass_news')" id="al_test_noclass_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_noclass_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': '', 'endDate': '', 'pcStatus': -1, 'mobileStatus': -1, 'cateId': 0, 'keywords': '', 'wd': '', 'queryType': 4, 'ec_p': 1, 'ec_crd': 15, 'ec_s': '', 'v': 1, 'orderColumn': '', 'orderType': '', 'ec_s_title': '', 'ec_s_categorys': '', 'ec_s_pubDate': '', 'ec_s_viewCount': '', 'ec_s_showFlag': '', 'ec_s_showMobileFlag': ''}, 'usetime': 0.263441, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751396000, 'id': 89, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751396000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 89, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_pcview_news</td>
-    <td>批量显示电脑版</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updatePcview?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.18</td>
-    <td><a href="javascript:showClassDetail('al_test_pcview_news','hidd_al_test_pcview_news')" id="al_test_pcview_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_pcview_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88, 88], 'state': 1}, 'usetime': 0.178155, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_recommend_news</td>
-    <td>推荐</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateRecommend?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.15</td>
-    <td><a href="javascript:showClassDetail('al_test_recommend_news','hidd_al_test_recommend_news')" id="al_test_recommend_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_recommend_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'state': True, 'id': 88}, 'usetime': 0.150617, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_savetags_news</td>
-    <td>标记</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/saveTags?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.19</td>
-    <td><a href="javascript:showClassDetail('al_test_savetags_news','hidd_al_test_savetags_news')" id="al_test_savetags_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_savetags_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'tags': [{'name': 'sign_red', 'iconUrl': 'sign_red', 'expiryDate': '', 'isNew': 'false', 'infoId': 88}, {'name': 'sign_green', 'iconUrl': 'sign_green', 'expiryDate': '', 'isNew': 'true', 'infoId': 88}], 'id': 88}, 'usetime': 0.191064, 'results': {'status': 200, 'msg': 'success', 'success': True, 'data': {}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_screen_news</td>
-    <td>筛选新闻资讯</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.25</td>
-    <td><a href="javascript:showClassDetail('al_test_screen_news','hidd_al_test_screen_news')" id="al_test_screen_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_screen_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': '2020-06-10', 'endDate': '', 'pcStatus': 0, 'mobileStatus': -1, 'cateId': 2, 'keywords': '', 'wd': '', 'queryType': 4, 'ec_p': 1, 'ec_crd': 15, 'ec_s': '', 'v': 1, 'orderColumn': '', 'orderType': '', 'ec_s_title': '', 'ec_s_categorys': '', 'ec_s_pubDate': '', 'ec_s_viewCount': '', 'ec_s_showFlag': '', 'ec_s_showMobileFlag': ''}, 'usetime': 0.248289, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751396000, 'id': 89, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751396000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 89, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_search_news</td>
-    <td>搜索新闻资讯</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.21</td>
-    <td><a href="javascript:showClassDetail('al_test_search_news','hidd_al_test_search_news')" id="al_test_search_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_search_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': '', 'endDate': '', 'pcStatus': -1, 'mobileStatus': -1, 'cateId': 0, 'keywords': '234234', 'wd': '', 'queryType': 4, 'ec_p': 1, 'ec_crd': 15, 'ec_s': '', 'v': 1, 'orderColumn': '', 'orderType': '', 'ec_s_title': '', 'ec_s_categorys': '', 'ec_s_pubDate': '', 'ec_s_viewCount': '', 'ec_s_showFlag': '', 'ec_s_showMobileFlag': ''}, 'usetime': 0.206643, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751396000, 'id': 89, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751396000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 89, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_theadsort_news</td>
-    <td>表头排序</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.23</td>
-    <td><a href="javascript:showClassDetail('al_test_theadsort_news','hidd_al_test_theadsort_news')" id="al_test_theadsort_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_theadsort_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': 'endDate=', 'pcStatus': -1, 'mobileStatus': -1, 'cateId': -1, 'keywords': '', 'wd': '', 'queryType': 4, 'ec_p': 1, 'ec_crd': 15, 'ec_s': '', 'v': 1, 'orderColumn': '', 'orderType': '', 'ec_s_title': 'desc', 'ec_s_categorys': '', 'ec_s_pubDate': 'desc', 'ec_s_viewCount': 'asc', 'ec_s_showFlag': 'desc', 'ec_s_showMobileFlag': ''}, 'usetime': 0.22617, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751396000, 'id': 89, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751396000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 89, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_top_news</td>
-    <td>置顶</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateTop?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.19</td>
-    <td><a href="javascript:showClassDetail('al_test_top_news','hidd_al_test_top_news')" id="al_test_top_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_top_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'state': True, 'id': 88}, 'usetime': 0.187053, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_turnpage_news</td>
-    <td>翻页</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.21</td>
-    <td><a href="javascript:showClassDetail('al_test_turnpage_news','hidd_al_test_turnpage_news')" id="al_test_turnpage_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_turnpage_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': '', 'endDate': '', 'pcStatus': -1, 'mobileStatus': -1, 'cateId': 0, 'keywords': '', 'wd': '', 'queryType': 4, 'ec_p': 6, 'ec_crd': 15, 'ec_s': '', 'v': 1}, 'usetime': 0.20627, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751396000, 'id': 89, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751396000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 89, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_updatepcview_news</td>
-    <td>显示电脑版</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updatePcview?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.38</td>
-    <td><a href="javascript:showClassDetail('al_test_updatepcview_news','hidd_al_test_updatepcview_news')" id="al_test_updatepcview_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_al_test_updatepcview_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'state': True, 'id': 88}, 'usetime': 0.384547, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_transfer_news</td>
-    <td>批量转移</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateTransfer?tenantId=188078</td>
+    <td>/api/user_center/auth/login</td>
     <td>失败</td>
     <td>陈建波</td>
-    <td>0.22</td>
-    <td><a href="javascript:showClassDetail('al_test_transfer_news','hidd_al_test_transfer_news')" id="al_test_transfer_news">详细</a></td>
+    <td>1.08</td>
+    <td><a href="javascript:showClassDetail('al_test_product333_getlist','hidd_al_test_product333_getlist')" id="al_test_product333_getlist">详细</a></td>
 </tr>
-    <tr class='hiddenRow' id="hidd_al_test_transfer_news">
+    <tr class='hiddenRow' id="hidd_al_test_product333_getlist">
         <td colspan='8'>
             <div>
                <pre class="text-left">
-               {'expected': 200, 'actual': 500, 'parameter': {'id': [23, 7, 9], 'cateId': 2}, 'usetime': 0.221983, 'results': {'msg': '后端服务:Internal Server Error', 'status': 500, 'error': 'cn.ce.ebiz.gateway.filter.ResponsePostFilter.run(ResponsePostFilter.java:44)', 'path': 'POST:/manager/gwforward/manager-webapi/content/info/updateTransfer?tenantId=188078', 'timestamp': '2020-06-10 09:10:14', 'success': False}}
+               {'expected': 0, 'actual': None, 'parameter': {'account': '13438476724', 'password': 'Li123456'}, 'usetime': 1.082355, 'results': {'code': 1005304010, 'data': [{'company_id': 177, 'company_name': '北京耀光文化测试有限公司', 'company_no': '', 'register_domain': '', 'logo': 'test/image/191126/ca83acf56957120a94b76d7899c140f5.jpg', 'status': 1}, {'company_id': 297, 'company_name': '测试假中企公司', 'company_no': '', 'register_domain': 'http://m.300.cn', 'logo': '', 'status': 1}], 'msg': '多个用户记录', 'debug': {'run_time': 0.026152849197387695, 'sql_count': 4, 'rpc_count': 0, 'memory_use': '22.11M', 'include_files': 481, 'request_id': '1005200520143215825', 'optimization_list': ['execute:0.0009150505065918 GouuseCore\\Libraries\\RedisLib->hgetall(cloud-test7c2f6f2c85118bca2f758aee314acbadgetUpgradePromptCacheKey:list)', 'execute:0.0013670921325684 GouuseCore\\Libraries\\RedisLib->incr(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.00042104721069336 GouuseCore\\Libraries\\RedisLib->expire(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.005385160446167 GouuseCore\\Libraries\\RedisLib->hget(cloud-testtableFileds,ab3ce917a939f951c1a453cee35b5c0a)', "execute time:1ms;select  password,company_id,member_id,status,status_type,last_login_time from member_data where 1 and mobile='13438476724' and status='1'", 'execute:0.00031304359436035 GouuseCore\\Libraries\\RedisLib->hget(cloud-testtableFileds,63259ba47dce7099333b3e7d3785e0d3)', "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '146' limit 1 ", "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '177' limit 1 ", "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '297' limit 1 "]}}}
                </pre>
             </div>
         </td>
     </tr>
 
 <tr>
-    <td>test_updatetransfer_news</td>
-    <td>转移新闻资讯</td>
+    <td>test_product33_getlist</td>
+    <td>产品列表</td>
     <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateTransfer?tenantId=188078</td>
+    <td>/api/user_center/auth/login</td>
     <td>失败</td>
     <td>陈建波</td>
-    <td>0.2</td>
-    <td><a href="javascript:showClassDetail('al_test_updatetransfer_news','hidd_al_test_updatetransfer_news')" id="al_test_updatetransfer_news">详细</a></td>
+    <td>1.09</td>
+    <td><a href="javascript:showClassDetail('al_test_product33_getlist','hidd_al_test_product33_getlist')" id="al_test_product33_getlist">详细</a></td>
 </tr>
-    <tr class='hiddenRow' id="hidd_al_test_updatetransfer_news">
+    <tr class='hiddenRow' id="hidd_al_test_product33_getlist">
         <td colspan='8'>
             <div>
                <pre class="text-left">
-               {'expected': 200, 'actual': 500, 'parameter': {'id': 88, 'cateId': 3}, 'usetime': 0.197203, 'results': {'msg': '后端服务:Internal Server Error', 'status': 500, 'error': 'cn.ce.ebiz.gateway.filter.ResponsePostFilter.run(ResponsePostFilter.java:44)', 'path': 'POST:/manager/gwforward/manager-webapi/content/info/updateTransfer?tenantId=188078', 'timestamp': '2020-06-10 09:10:17', 'success': False}}
+               {'expected': 0, 'actual': None, 'parameter': {'account': '13438476724', 'password': 'Li123456'}, 'usetime': 1.087127, 'results': {'code': 1005304010, 'data': [{'company_id': 177, 'company_name': '北京耀光文化测试有限公司', 'company_no': '', 'register_domain': '', 'logo': 'test/image/191126/ca83acf56957120a94b76d7899c140f5.jpg', 'status': 1}, {'company_id': 297, 'company_name': '测试假中企公司', 'company_no': '', 'register_domain': 'http://m.300.cn', 'logo': '', 'status': 1}], 'msg': '多个用户记录', 'debug': {'run_time': 0.028928041458129883, 'sql_count': 4, 'rpc_count': 0, 'memory_use': '36.60M', 'include_files': 422, 'request_id': '1005200520143215290', 'optimization_list': ['execute:0.0011880397796631 GouuseCore\\Libraries\\RedisLib->hgetall(cloud-test7c2f6f2c85118bca2f758aee314acbadgetUpgradePromptCacheKey:list)', 'execute:0.0013430118560791 GouuseCore\\Libraries\\RedisLib->incr(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.00034785270690918 GouuseCore\\Libraries\\RedisLib->expire(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.0050549507141113 GouuseCore\\Libraries\\RedisLib->hget(cloud-testtableFileds,ab3ce917a939f951c1a453cee35b5c0a)', "execute time:1ms;select  password,company_id,member_id,status,status_type,last_login_time from member_data where 1 and mobile='13438476724' and status='1'", 'execute:0.00028395652770996 GouuseCore\\Libraries\\RedisLib->hget(cloud-testtableFileds,63259ba47dce7099333b3e7d3785e0d3)', "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '146' limit 1 ", "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '177' limit 1 ", "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '297' limit 1 "]}}}
                </pre>
             </div>
         </td>
     </tr>
 
 <tr>
-    <td>test_batchrecommend_news</td>
-    <td>批量推荐</td>
+    <td>test_product33_getlist22</td>
+    <td>产品列表</td>
     <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateRecommend</td>
-    <td>跳过</td>
+    <td>/api/user_center/auth/login</td>
+    <td>失败</td>
     <td>陈建波</td>
-    <td>0.0</td>
-    <td><a href="javascript:showClassDetail('al_test_batchrecommend_news','hidd_al_test_batchrecommend_news')" id="al_test_batchrecommend_news">详细</a></td>
+    <td>0.04</td>
+    <td><a href="javascript:showClassDetail('al_test_product33_getlist22','hidd_al_test_product33_getlist22')" id="al_test_product33_getlist22">详细</a></td>
 </tr>
-    <tr class='hiddenRow' id="hidd_al_test_batchrecommend_news">
+    <tr class='hiddenRow' id="hidd_al_test_product33_getlist22">
         <td colspan='8'>
             <div>
                <pre class="text-left">
-               
+               {'expected': 0, 'actual': None, 'parameter': {'account': '13438476724', 'password': 'Li123456'}, 'usetime': 0.04221, 'results': {'code': 1005304010, 'data': [{'company_id': 177, 'company_name': '北京耀光文化测试有限公司', 'company_no': '', 'register_domain': '', 'logo': 'test/image/191126/ca83acf56957120a94b76d7899c140f5.jpg', 'status': 1}, {'company_id': 297, 'company_name': '测试假中企公司', 'company_no': '', 'register_domain': 'http://m.300.cn', 'logo': '', 'status': 1}], 'msg': '多个用户记录', 'debug': {'run_time': 0.016128063201904297, 'sql_count': 1, 'rpc_count': 0, 'memory_use': '36.63M', 'include_files': 422, 'request_id': '10052005201432165', 'optimization_list': ['execute:0.0011110305786133 GouuseCore\\Libraries\\RedisLib->hgetall(cloud-test7c2f6f2c85118bca2f758aee314acbadgetUpgradePromptCacheKey:list)', 'execute:0.0010957717895508 GouuseCore\\Libraries\\RedisLib->incr(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.0002899169921875 GouuseCore\\Libraries\\RedisLib->expire(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.0048120021820068 GouuseCore\\Libraries\\RedisLib->hget(cloud-testtableFileds,ab3ce917a939f951c1a453cee35b5c0a)', "execute time:1ms;select  password,company_id,member_id,status,status_type,last_login_time from member_data where 1 and mobile='13438476724' and status='1'"]}}}
                </pre>
             </div>
         </td>
@@ -627,466 +167,6 @@
             </tr>
         </thead>
 
-
-<tr>
-    <td>test_all_news</td>
-    <td>全部资讯页面</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.46</td>
-    <td><a href="javascript:showClassDetail('su_test_all_news','hidd_su_test_all_news')" id="su_test_all_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_all_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': 'endDate=', 'pcStatus': -1, 'mobileStatus': -1, 'cateId': -1, 'keywords': '', 'wd': '', 'queryType': 4, 'ec_p': 1, 'ec_crd': 15, 'ec_s': '', 'v': 1, 'orderColumn': '', 'orderType': '', 'ec_s_title': '', 'ec_s_categorys': '', 'ec_s_pubDate': '', 'ec_s_viewCount': '', 'ec_s_showFlag': '', 'ec_s_showMobileFlag': ''}, 'usetime': 0.461934, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751039000, 'id': 88, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751039000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 88, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_batchcancel_news</td>
-    <td>批量取消置顶</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateTop?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.16</td>
-    <td><a href="javascript:showClassDetail('su_test_batchcancel_news','hidd_su_test_batchcancel_news')" id="su_test_batchcancel_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_batchcancel_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88, 88], 'state': False}, 'usetime': 0.158767, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 3}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_batchdelete_news</td>
-    <td>批量删除</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/delete?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>2.07</td>
-    <td><a href="javascript:showClassDetail('su_test_batchdelete_news','hidd_su_test_batchdelete_news')" id="su_test_batchdelete_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_batchdelete_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88]}, 'usetime': 2.074665, 'results': {'status': 200, 'msg': 'success', 'data': {'result': 1}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_browse_news</td>
-    <td>浏览新闻资讯</td>
-    <td>高</td>
-    <td>/manager/gwforward/manager-webapi/content/info/browse?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.2</td>
-    <td><a href="javascript:showClassDetail('su_test_browse_news','hidd_su_test_browse_news')" id="su_test_browse_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_browse_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'viewType': 1, 'tenantId': 188078, 'id': 88}, 'usetime': 0.204205, 'results': {'status': 200, 'msg': 'success', 'data': {'pagePath': '2004105022.pool5-site.make.yun300.cnindex.html'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_cancelrecommend_news</td>
-    <td>批量取消推荐</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateRecommend?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.17</td>
-    <td><a href="javascript:showClassDetail('su_test_cancelrecommend_news','hidd_su_test_cancelrecommend_news')" id="su_test_cancelrecommend_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_cancelrecommend_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88, 88], 'state': False}, 'usetime': 0.166979, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_canceltop_news</td>
-    <td>批量置顶</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateTop?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.17</td>
-    <td><a href="javascript:showClassDetail('su_test_canceltop_news','hidd_su_test_canceltop_news')" id="su_test_canceltop_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_canceltop_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88, 88], 'state': True}, 'usetime': 0.165476, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_copy_news</td>
-    <td>复制</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/add?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.22</td>
-    <td><a href="javascript:showClassDetail('su_test_copy_news','hidd_su_test_copy_news')" id="su_test_copy_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_copy_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'contentValid': 1, 'id': 88, 'infotype': '1', 'title': '234234', 'content': '<p>23424</p>\n', 'summary': '', 'keyWords': '', 'cateGoryIds': '3', 'sign': [], 'author': '', 'source': '', 'appId': '3', 'showFlag': 'true', 'pubDate': '2020-06-08 16:19:46', 'showMobileFlag': 'true', 'accessPermission': '', 'veiwCount': '0', 'linkPath': 'http://', 'linkPathMobile': 'http://', 'targetFlag': 'false', 'imgs': [], 'InfoConfig': [{'name': '资讯内容', 'state': '2', 'id': 'show_info_content'}, {'name': '链接目标', 'state': '2', 'id': 'show_link_info'}, {'name': '相关内容', 'state': '1', 'id': 'show_info_relation'}, {'name': '权限设置', 'state': '1', 'id': 'show_info_permission'}, {'name': '推广优化', 'state': '1', 'id': 'show_info_extension'}, {'name': '高级设置', 'state': '1', 'id': 'show_info_senior'}], 'RelevantContent': [], 'showStyle': '', 'recommandType': 'false', 'seoAuto': 'true', 'seoTitle': '[{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"}]', 'seoKeywords': '[{"id":"keyword","name":"资讯关键词"},{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"}]', 'seoDescription': '[{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"资讯概要"}]', 'seoAddDescription': '', 'seoTitleSign': '_', 'seoKeywordsSign': ',', 'seoDescriptionSign': '-', 'targetFlagMobile': 'false', 'pubDateMobile': '2020-06-08 16:19:46', 'showStyleMobile': '', 'contentMobile': '', 'authData': '[{"authType":1,"authStr":"GW_:3:detail:view:17","roleIds":""}]', 'videoIds': '', 'infoImgUrl': ''}, 'usetime': 0.21647, 'results': {'status': 200, 'msg': 'success', 'success': True, 'data': {'result': {'id': 89, 'result': True}}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_customsort_news</td>
-    <td>展示排序</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateCustomSort?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.23</td>
-    <td><a href="javascript:showClassDetail('su_test_customsort_news','hidd_su_test_customsort_news')" id="su_test_customsort_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_customsort_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'orderMode': 'TITLE_ASC'}, 'usetime': 0.233428, 'results': {'status': 200, 'msg': 'success', 'data': {'msg': 'success'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_delete_news</td>
-    <td>删除</td>
-    <td>高</td>
-    <td>/manager/gwforward/manager-webapi/content/info/delete?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.21</td>
-    <td><a href="javascript:showClassDetail('su_test_delete_news','hidd_su_test_delete_news')" id="su_test_delete_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_delete_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': 88}, 'usetime': 0.207599, 'results': {'status': 200, 'msg': 'success', 'data': {'result': 1}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_dragsort_news</td>
-    <td>拖拽排序</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateSort?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.15</td>
-    <td><a href="javascript:showClassDetail('su_test_dragsort_news','hidd_su_test_dragsort_news')" id="su_test_dragsort_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_dragsort_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'maxOrder': 9, 'minOrder': 4, 'direction': -1, 'targetId': 87, 'sectionIds': 88, 'isTop': False}, 'usetime': 0.148928, 'results': {'status': 200, 'msg': 'success', 'data': {'result': True}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_edit_news</td>
-    <td>编辑新闻资讯</td>
-    <td>高</td>
-    <td>/manager/gwforward/manager-webapi/content/info/update?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.18</td>
-    <td><a href="javascript:showClassDetail('su_test_edit_news','hidd_su_test_edit_news')" id="su_test_edit_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_edit_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'contentValid': 1, 'id': '88', 'infotype': '1', 'title': '自动化测试1591751390501', 'content': '<p>自动化测试新闻资讯内容数据</p>\n1591751390745', 'summary': '', 'keyWords': '', 'cateGoryIds': '1', 'sign': [], 'author': '', 'source': '', 'appId': '3', 'showFlag': 'true', 'pubDate': '2020-06-08 16:20:07', 'showMobileFlag': 'true', 'accessPermission': '', 'veiwCount': '0', 'linkPath': 'http://', 'linkPathMobile': 'http://', 'targetFlag': 'false', 'imgs': [], 'InfoConfig': [{'name': '资讯内容', 'state': '2', 'id': 'show_info_content'}, {'name': '链接目标', 'state': '2', 'id': 'show_link_info'}, {'name': '相关内容', 'state': '1', 'id': 'show_info_relation'}, {'name': '权限设置', 'state': '1', 'id': 'show_info_permission'}, {'name': '推广优化', 'state': '1', 'id': 'show_info_extension'}, {'name': '高级设置', 'state': '1', 'id': 'show_info_senior'}], 'RelevantContent': [], 'showStyle': '', 'recommandType': 'false', 'seoAuto': 'true', 'seoTitle': '[{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"}]', 'seoKeywords': '[{"id":"keyword","name":"资讯关键词"},{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"}]', 'seoDescription': '[{"id":"name","name":"资讯名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"资讯概要"}]', 'seoAddDescription': '', 'seoTitleSign': '_', 'seoKeywordsSign': ',', 'seoDescriptionSign': '-', 'targetFlagMobile': 'false', 'pubDateMobile': '2020-06-08 16:20:07', 'showStyleMobile': '', 'contentMobile': '', 'authData': '[{"authType":1,"authStr":"GW_:3:detail:view:19","roleIds":""}]', 'videoIds': '', 'infoImgUrl': ''}, 'usetime': 0.18016, 'results': {'status': 200, 'msg': 'success', 'success': True, 'data': {'result': {'id': -1, 'result': False}}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_hide_news</td>
-    <td>隐藏电脑版</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updatePcview?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.17</td>
-    <td><a href="javascript:showClassDetail('su_test_hide_news','hidd_su_test_hide_news')" id="su_test_hide_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_hide_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'state': False, 'id': 88}, 'usetime': 0.169686, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_hidepcview_news</td>
-    <td>批量隐藏电脑版</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updatePcview?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.41</td>
-    <td><a href="javascript:showClassDetail('su_test_hidepcview_news','hidd_su_test_hidepcview_news')" id="su_test_hidepcview_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_hidepcview_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88, 88], 'state': 0}, 'usetime': 0.410875, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_noclass_news</td>
-    <td>无内容分类</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.26</td>
-    <td><a href="javascript:showClassDetail('su_test_noclass_news','hidd_su_test_noclass_news')" id="su_test_noclass_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_noclass_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': '', 'endDate': '', 'pcStatus': -1, 'mobileStatus': -1, 'cateId': 0, 'keywords': '', 'wd': '', 'queryType': 4, 'ec_p': 1, 'ec_crd': 15, 'ec_s': '', 'v': 1, 'orderColumn': '', 'orderType': '', 'ec_s_title': '', 'ec_s_categorys': '', 'ec_s_pubDate': '', 'ec_s_viewCount': '', 'ec_s_showFlag': '', 'ec_s_showMobileFlag': ''}, 'usetime': 0.263441, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751396000, 'id': 89, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751396000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 89, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_pcview_news</td>
-    <td>批量显示电脑版</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updatePcview?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.18</td>
-    <td><a href="javascript:showClassDetail('su_test_pcview_news','hidd_su_test_pcview_news')" id="su_test_pcview_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_pcview_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'id': [88, 88, 88], 'state': 1}, 'usetime': 0.178155, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_recommend_news</td>
-    <td>推荐</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateRecommend?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.15</td>
-    <td><a href="javascript:showClassDetail('su_test_recommend_news','hidd_su_test_recommend_news')" id="su_test_recommend_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_recommend_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'state': True, 'id': 88}, 'usetime': 0.150617, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_savetags_news</td>
-    <td>标记</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/saveTags?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.19</td>
-    <td><a href="javascript:showClassDetail('su_test_savetags_news','hidd_su_test_savetags_news')" id="su_test_savetags_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_savetags_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'tags': [{'name': 'sign_red', 'iconUrl': 'sign_red', 'expiryDate': '', 'isNew': 'false', 'infoId': 88}, {'name': 'sign_green', 'iconUrl': 'sign_green', 'expiryDate': '', 'isNew': 'true', 'infoId': 88}], 'id': 88}, 'usetime': 0.191064, 'results': {'status': 200, 'msg': 'success', 'success': True, 'data': {}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_screen_news</td>
-    <td>筛选新闻资讯</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.25</td>
-    <td><a href="javascript:showClassDetail('su_test_screen_news','hidd_su_test_screen_news')" id="su_test_screen_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_screen_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': '2020-06-10', 'endDate': '', 'pcStatus': 0, 'mobileStatus': -1, 'cateId': 2, 'keywords': '', 'wd': '', 'queryType': 4, 'ec_p': 1, 'ec_crd': 15, 'ec_s': '', 'v': 1, 'orderColumn': '', 'orderType': '', 'ec_s_title': '', 'ec_s_categorys': '', 'ec_s_pubDate': '', 'ec_s_viewCount': '', 'ec_s_showFlag': '', 'ec_s_showMobileFlag': ''}, 'usetime': 0.248289, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751396000, 'id': 89, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751396000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 89, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_search_news</td>
-    <td>搜索新闻资讯</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.21</td>
-    <td><a href="javascript:showClassDetail('su_test_search_news','hidd_su_test_search_news')" id="su_test_search_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_search_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': '', 'endDate': '', 'pcStatus': -1, 'mobileStatus': -1, 'cateId': 0, 'keywords': '234234', 'wd': '', 'queryType': 4, 'ec_p': 1, 'ec_crd': 15, 'ec_s': '', 'v': 1, 'orderColumn': '', 'orderType': '', 'ec_s_title': '', 'ec_s_categorys': '', 'ec_s_pubDate': '', 'ec_s_viewCount': '', 'ec_s_showFlag': '', 'ec_s_showMobileFlag': ''}, 'usetime': 0.206643, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751396000, 'id': 89, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751396000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 89, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_theadsort_news</td>
-    <td>表头排序</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.23</td>
-    <td><a href="javascript:showClassDetail('su_test_theadsort_news','hidd_su_test_theadsort_news')" id="su_test_theadsort_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_theadsort_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': 'endDate=', 'pcStatus': -1, 'mobileStatus': -1, 'cateId': -1, 'keywords': '', 'wd': '', 'queryType': 4, 'ec_p': 1, 'ec_crd': 15, 'ec_s': '', 'v': 1, 'orderColumn': '', 'orderType': '', 'ec_s_title': 'desc', 'ec_s_categorys': '', 'ec_s_pubDate': 'desc', 'ec_s_viewCount': 'asc', 'ec_s_showFlag': 'desc', 'ec_s_showMobileFlag': ''}, 'usetime': 0.22617, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751396000, 'id': 89, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751396000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 89, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_top_news</td>
-    <td>置顶</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateTop?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.19</td>
-    <td><a href="javascript:showClassDetail('su_test_top_news','hidd_su_test_top_news')" id="su_test_top_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_top_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'state': True, 'id': 88}, 'usetime': 0.187053, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_turnpage_news</td>
-    <td>翻页</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/info_page?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.21</td>
-    <td><a href="javascript:showClassDetail('su_test_turnpage_news','hidd_su_test_turnpage_news')" id="su_test_turnpage_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_turnpage_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'top': -1, 'recommend': -1, 'startDate': '', 'endDate': '', 'pcStatus': -1, 'mobileStatus': -1, 'cateId': 0, 'keywords': '', 'wd': '', 'queryType': 4, 'ec_p': 6, 'ec_crd': 15, 'ec_s': '', 'v': 1}, 'usetime': 0.20627, 'results': {'status': 200, 'msg': 'success', 'data': {'filter': {'cateId': -1, 'mobileStatus': -1, 'pcStatus': -1, 'queryType': -1, 'recommend': -1, 'selectedContentIds': '', 'top': -1}, 'ectableType': 2, 'orderType': 'ASC', 'ec_cp': 1, 'ecp': 1, 'pres': [{'categoryNames': '1137', 'categorys': [{'des': '', 'hasInfoCount': 0, 'id': 3, 'keywords': '', 'linkUrl': '{"text":"首页","id":"af96174b-39ab-430a-a049-013fbaedc3e4","entityTag":"page"}', 'mobileDes': '', 'mobileDetailStyle': '', 'mobileLinkUrl': '{"text":""}', 'mobileNewOpen': True, 'mobileShowFlag': True, 'mobileShowStyle': '', 'name': '1137', 'newOpen': False, 'showStyle': '', 'summary': '', 'type': 2, 'useViewType': False}], 'createDate': 1591751396000, 'id': 89, 'mobilePubDate': 1591604386000, 'mobileTargetFlag': False, 'modifyDate': 1591751396000, 'pubDate': 1591604386000, 'recommandFlag': False, 'showFlag': True, 'showMobileFlag': True, 'showOrder': 89, 'summary': '', 'targetFlag': False, 'title': '234234', 'topFlag': False, 'topOrder': 0, 'type': 1, 'useViewType': False, 'viewCount': 0}], 'totalRows': 1, 'isDrag': True, 'ec_crd': 15, 'orderColumn': 'TITLE'}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
-
-<tr>
-    <td>test_updatepcview_news</td>
-    <td>显示电脑版</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updatePcview?tenantId=188078</td>
-    <td>成功</td>
-    <td>陈建波</td>
-    <td>0.38</td>
-    <td><a href="javascript:showClassDetail('su_test_updatepcview_news','hidd_su_test_updatepcview_news')" id="su_test_updatepcview_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_su_test_updatepcview_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               {'expected': 200, 'actual': 200, 'parameter': {'state': True, 'id': 88}, 'usetime': 0.384547, 'results': {'status': 200, 'msg': 'success', 'data': {'sucessCount': 0}}}
-               </pre>
-            </div>
-        </td>
-    </tr>
 
     </table>
 </div>
@@ -1127,40 +207,60 @@
 
 
 <tr>
-    <td>test_transfer_news</td>
-    <td>批量转移</td>
+    <td>test_product333_getlist</td>
+    <td>产品列表</td>
     <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateTransfer?tenantId=188078</td>
+    <td>/api/user_center/auth/login</td>
     <td>失败</td>
     <td>陈建波</td>
-    <td>0.22</td>
-    <td><a href="javascript:showClassDetail('fa_test_transfer_news','hidd_fa_test_transfer_news')" id="fa_test_transfer_news">详细</a></td>
+    <td>1.08</td>
+    <td><a href="javascript:showClassDetail('fa_test_product333_getlist','hidd_fa_test_product333_getlist')" id="fa_test_product333_getlist">详细</a></td>
 </tr>
-    <tr class='hiddenRow' id="hidd_fa_test_transfer_news">
+    <tr class='hiddenRow' id="hidd_fa_test_product333_getlist">
         <td colspan='8'>
             <div>
                <pre class="text-left">
-               {'expected': 200, 'actual': 500, 'parameter': {'id': [23, 7, 9], 'cateId': 2}, 'usetime': 0.221983, 'results': {'msg': '后端服务:Internal Server Error', 'status': 500, 'error': 'cn.ce.ebiz.gateway.filter.ResponsePostFilter.run(ResponsePostFilter.java:44)', 'path': 'POST:/manager/gwforward/manager-webapi/content/info/updateTransfer?tenantId=188078', 'timestamp': '2020-06-10 09:10:14', 'success': False}}
+               {'expected': 0, 'actual': None, 'parameter': {'account': '13438476724', 'password': 'Li123456'}, 'usetime': 1.082355, 'results': {'code': 1005304010, 'data': [{'company_id': 177, 'company_name': '北京耀光文化测试有限公司', 'company_no': '', 'register_domain': '', 'logo': 'test/image/191126/ca83acf56957120a94b76d7899c140f5.jpg', 'status': 1}, {'company_id': 297, 'company_name': '测试假中企公司', 'company_no': '', 'register_domain': 'http://m.300.cn', 'logo': '', 'status': 1}], 'msg': '多个用户记录', 'debug': {'run_time': 0.026152849197387695, 'sql_count': 4, 'rpc_count': 0, 'memory_use': '22.11M', 'include_files': 481, 'request_id': '1005200520143215825', 'optimization_list': ['execute:0.0009150505065918 GouuseCore\\Libraries\\RedisLib->hgetall(cloud-test7c2f6f2c85118bca2f758aee314acbadgetUpgradePromptCacheKey:list)', 'execute:0.0013670921325684 GouuseCore\\Libraries\\RedisLib->incr(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.00042104721069336 GouuseCore\\Libraries\\RedisLib->expire(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.005385160446167 GouuseCore\\Libraries\\RedisLib->hget(cloud-testtableFileds,ab3ce917a939f951c1a453cee35b5c0a)', "execute time:1ms;select  password,company_id,member_id,status,status_type,last_login_time from member_data where 1 and mobile='13438476724' and status='1'", 'execute:0.00031304359436035 GouuseCore\\Libraries\\RedisLib->hget(cloud-testtableFileds,63259ba47dce7099333b3e7d3785e0d3)', "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '146' limit 1 ", "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '177' limit 1 ", "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '297' limit 1 "]}}}
                </pre>
             </div>
         </td>
     </tr>
 
 <tr>
-    <td>test_updatetransfer_news</td>
-    <td>转移新闻资讯</td>
+    <td>test_product33_getlist</td>
+    <td>产品列表</td>
     <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateTransfer?tenantId=188078</td>
+    <td>/api/user_center/auth/login</td>
     <td>失败</td>
     <td>陈建波</td>
-    <td>0.2</td>
-    <td><a href="javascript:showClassDetail('fa_test_updatetransfer_news','hidd_fa_test_updatetransfer_news')" id="fa_test_updatetransfer_news">详细</a></td>
+    <td>1.09</td>
+    <td><a href="javascript:showClassDetail('fa_test_product33_getlist','hidd_fa_test_product33_getlist')" id="fa_test_product33_getlist">详细</a></td>
 </tr>
-    <tr class='hiddenRow' id="hidd_fa_test_updatetransfer_news">
+    <tr class='hiddenRow' id="hidd_fa_test_product33_getlist">
         <td colspan='8'>
             <div>
                <pre class="text-left">
-               {'expected': 200, 'actual': 500, 'parameter': {'id': 88, 'cateId': 3}, 'usetime': 0.197203, 'results': {'msg': '后端服务:Internal Server Error', 'status': 500, 'error': 'cn.ce.ebiz.gateway.filter.ResponsePostFilter.run(ResponsePostFilter.java:44)', 'path': 'POST:/manager/gwforward/manager-webapi/content/info/updateTransfer?tenantId=188078', 'timestamp': '2020-06-10 09:10:17', 'success': False}}
+               {'expected': 0, 'actual': None, 'parameter': {'account': '13438476724', 'password': 'Li123456'}, 'usetime': 1.087127, 'results': {'code': 1005304010, 'data': [{'company_id': 177, 'company_name': '北京耀光文化测试有限公司', 'company_no': '', 'register_domain': '', 'logo': 'test/image/191126/ca83acf56957120a94b76d7899c140f5.jpg', 'status': 1}, {'company_id': 297, 'company_name': '测试假中企公司', 'company_no': '', 'register_domain': 'http://m.300.cn', 'logo': '', 'status': 1}], 'msg': '多个用户记录', 'debug': {'run_time': 0.028928041458129883, 'sql_count': 4, 'rpc_count': 0, 'memory_use': '36.60M', 'include_files': 422, 'request_id': '1005200520143215290', 'optimization_list': ['execute:0.0011880397796631 GouuseCore\\Libraries\\RedisLib->hgetall(cloud-test7c2f6f2c85118bca2f758aee314acbadgetUpgradePromptCacheKey:list)', 'execute:0.0013430118560791 GouuseCore\\Libraries\\RedisLib->incr(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.00034785270690918 GouuseCore\\Libraries\\RedisLib->expire(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.0050549507141113 GouuseCore\\Libraries\\RedisLib->hget(cloud-testtableFileds,ab3ce917a939f951c1a453cee35b5c0a)', "execute time:1ms;select  password,company_id,member_id,status,status_type,last_login_time from member_data where 1 and mobile='13438476724' and status='1'", 'execute:0.00028395652770996 GouuseCore\\Libraries\\RedisLib->hget(cloud-testtableFileds,63259ba47dce7099333b3e7d3785e0d3)', "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '146' limit 1 ", "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '177' limit 1 ", "execute time:1ms;select `company_id`,`company_name`,`company_short`,`company_no`,`company_address`,`full_address`,`register_domain`,`logo`,`state_id`,`province_id`,`city_id`,`area_id`,`industry_id`,`industry_name`,`industry_item`,`service_id`,`max_member`,`pay_total`,`customer_id`,`registr_time`,`registr_source`,`end_time`,`last_update_time`,`pay_status`,`last_pay_time`,`status`,`last_renew_time`,`second_domain`,`record`,`invite_code`,`company_email`,`domain_status`,`principal`,`domain_time`,`domain_reason`,`domain_review_time`,`is_login`,`label_ids`,`type`,`ce_corp_id`,`ce_corp_account`,`oper_customer_id`,`wx_corp_id`,`company_name_en`,`company_address_en`,`company_address_second_en`,`company_phone`,`company_fax`,`is_init`,`third_system`,`version_level`,`identity`,`channel`,`card_style`,`maturity_time` from company where company_id = '297' limit 1 "]}}}
+               </pre>
+            </div>
+        </td>
+    </tr>
+
+<tr>
+    <td>test_product33_getlist22</td>
+    <td>产品列表</td>
+    <td>中</td>
+    <td>/api/user_center/auth/login</td>
+    <td>失败</td>
+    <td>陈建波</td>
+    <td>0.04</td>
+    <td><a href="javascript:showClassDetail('fa_test_product33_getlist22','hidd_fa_test_product33_getlist22')" id="fa_test_product33_getlist22">详细</a></td>
+</tr>
+    <tr class='hiddenRow' id="hidd_fa_test_product33_getlist22">
+        <td colspan='8'>
+            <div>
+               <pre class="text-left">
+               {'expected': 0, 'actual': None, 'parameter': {'account': '13438476724', 'password': 'Li123456'}, 'usetime': 0.04221, 'results': {'code': 1005304010, 'data': [{'company_id': 177, 'company_name': '北京耀光文化测试有限公司', 'company_no': '', 'register_domain': '', 'logo': 'test/image/191126/ca83acf56957120a94b76d7899c140f5.jpg', 'status': 1}, {'company_id': 297, 'company_name': '测试假中企公司', 'company_no': '', 'register_domain': 'http://m.300.cn', 'logo': '', 'status': 1}], 'msg': '多个用户记录', 'debug': {'run_time': 0.016128063201904297, 'sql_count': 1, 'rpc_count': 0, 'memory_use': '36.63M', 'include_files': 422, 'request_id': '10052005201432165', 'optimization_list': ['execute:0.0011110305786133 GouuseCore\\Libraries\\RedisLib->hgetall(cloud-test7c2f6f2c85118bca2f758aee314acbadgetUpgradePromptCacheKey:list)', 'execute:0.0010957717895508 GouuseCore\\Libraries\\RedisLib->incr(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.0002899169921875 GouuseCore\\Libraries\\RedisLib->expire(cloud-test8a8d952936c58f2f50d7c15a6821794e)', 'execute:0.0048120021820068 GouuseCore\\Libraries\\RedisLib->hget(cloud-testtableFileds,ab3ce917a939f951c1a453cee35b5c0a)', "execute time:1ms;select  password,company_id,member_id,status,status_type,last_login_time from member_data where 1 and mobile='13438476724' and status='1'"]}}}
                </pre>
             </div>
         </td>
@@ -1203,26 +303,6 @@
             </tr>
         </thead>
 
-
-<tr>
-    <td>test_batchrecommend_news</td>
-    <td>批量推荐</td>
-    <td>中</td>
-    <td>/manager/gwforward/manager-webapi/content/info/updateRecommend</td>
-    <td>跳过</td>
-    <td>陈建波</td>
-    <td>0.0</td>
-    <td><a href="javascript:showClassDetail('sk_test_batchrecommend_news','hidd_sk_test_batchrecommend_news')" id="sk_test_batchrecommend_news">详细</a></td>
-</tr>
-    <tr class='hiddenRow' id="hidd_sk_test_batchrecommend_news">
-        <td colspan='8'>
-            <div>
-               <pre class="text-left">
-               
-               </pre>
-            </div>
-        </td>
-    </tr>
 
     </table>
 </div>

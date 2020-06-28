@@ -5,7 +5,7 @@ from time import sleep
 
 class ReExecution:
 
-    def __init__(self, fun, status=200, response_key='data', response_list='list', swich=True, isuse=1, key=''):
+    def __init__(self, fun, status=200, response_key='data', response_list='list', swich=True, isuse=0, key=''):
         '''
 
         :param fun:  回调函数
@@ -42,9 +42,13 @@ class ReExecution:
                                 yield value.get(kwargs.get('value'))
 
                             else:
-                                value = choice(result.get(self.response_key).get(self.response_list))
-                                if value.get(self.key) == self.isuse:
-                                    yield value.get(kwargs.get('value'))
+                                data_list = result.get(self.response_key).get(self.response_list)
+                                for value in data_list:
+                                    if value.get(self.key) != self.isuse:
+                                        yield value.get(kwargs.get('value'))
+                                # value = choice(result.get(self.response_key).get(self.response_list))
+                                # if value.get(self.key) == self.isuse:
+                                #     yield value.get(kwargs.get('value'))
 
                     else:
                         if self.swich:
@@ -52,9 +56,14 @@ class ReExecution:
                             yield value.get(kwargs.get('value'))
 
                         else:
-                            value = choice(result.get(self.response_key).get(self.response_list))
-                            if value.get(self.key) == self.isuse:
-                                yield value.get(kwargs.get('value'))
+                            data_list = result.get(self.response_key).get(self.response_list)
+                            for value in data_list:
+                                if value.get(self.key) != self.isuse:
+                                    yield value.get(kwargs.get('value'))
+                            # value = choice(result.get(self.response_key).get(self.response_list))
+                            # if value.get(self.key) == self.isuse:
+                            #     yield value.get(kwargs.get('value'))
+
 
                 else:
 
@@ -67,9 +76,13 @@ class ReExecution:
                                 yield value.get(kwargs.get('value'))
 
                             else:
-                                value = choice(result.get(self.response_key))
-                                if value.get(self.key) == self.isuse:
-                                    yield value.get(kwargs.get('value'))
+                                data_list = result.get(self.response_key)
+                                for value in data_list:
+                                    if value.get(self.key) != self.isuse:
+                                        yield value.get(kwargs.get('value'))
+                                # value = choice(result.get(self.response_key))
+                                # if value.get(self.key) == self.isuse:
+                                #     yield value.get(kwargs.get('value'))
 
                     else:
                         if self.swich:
@@ -77,9 +90,13 @@ class ReExecution:
                             yield value.get(kwargs.get('value'))
 
                         else:
-                            value = choice(result.get(self.response_key))
-                            if value.get(self.key) == self.isuse:
-                                yield value.get(kwargs.get('value'))
+                            data_list = result.get(self.response_key).get(self.response_list)
+                            for value in data_list:
+                                if value.get(self.key) != self.isuse:
+                                    yield value.get(kwargs.get('value'))
+                            # value = choice(result.get(self.response_key))
+                            # if value.get(self.key) == self.isuse:
+                            #     yield value.get(kwargs.get('value'))
 
         return wrapper
 

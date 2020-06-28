@@ -25,16 +25,16 @@ class manage_AddCategory(MyTest):
         # 添加产品分类
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
-            # url = 'https://2003275126-stsite-oper.pool601.yun300.cn/manager/gwforward/manager-webapi/product/appCategory/save?viewType=1&tenantId=185569&authPermission=classify_update&_d=1592381386593'
+            url = 'https://2003275126-stsite-oper.pool601.yun300.cn/manager/gwforward/manager-webapi/product/appCategory/save?viewType=1&tenantId=185569&authPermission=classify_update&_d=1592381386593'
             self.data['category']['categoryName'] = '分类%s' % time.time()  # 获取随机分类名称
             # self.headers[self.cookies_key]='GWSESSION=OTRmODM2MDktZDc3ZC00OTI3LWE3MTAtMTNkNzA1ZjllMzgx'
-            # print(url)
+            print(self.headers)
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
             with open("Public.yaml", "w", encoding="utf-8") as yaml_file:  # 把传入的分类名称存入Public.yaml
                 data = {'categoryName': self.data['category']['categoryName']}
                 yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
-            # print(self.data['category']['categoryName'])
+            print(self.data['category']['categoryName'])
 
             self.time = r.elapsed.total_seconds()
         except:
