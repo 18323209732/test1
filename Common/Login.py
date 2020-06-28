@@ -9,6 +9,7 @@ from Common.FontColor import outcome
 import requests
 class Login:
     def __init__(self):
+        self.url = ConfigYaml('Door').base_url
         self.base_url = ConfigYaml('Design').base_url
         self.user_pwd = ConfigYaml('user_pwd').base_config
         self.username = ConfigYaml('user_name').base_config
@@ -16,7 +17,7 @@ class Login:
         self.project_url = ConfigYaml('project_url').base_config
         self.cookies = ConfigYaml('cookies').base_config
         self.website = ConfigYaml('website').base_config
-        self.new_website = ConfigYaml('new_website').base_config
+        self.new_website = ConfigYaml('new_website').base_config.format(self.url)
         self.session = ConfigYaml('session').base_config
         self.driver = browser()
         self.support = WebDriverWait(driver=self.driver, timeout=30)
@@ -77,8 +78,15 @@ class Login:
             self._click("*", "class", "input-box-button m20", 1)
             sleep(10)
             self._click("*", "class", "closeCode abs", 1)
-            cookies = self.driver.get_cookies()[1].get('value')
-            _cookies = f"{self.key}={cookies}"
+            cookies = self.driver.get_cookies()
+            if cookies:
+                for value in cookies:
+                    if self.key in value.values():
+                        cookie = value.get("value")
+
+            else:
+                outcome('red', "未获取到【cookie】...")
+            _cookies = f"{self.key}={cookie}"
             count, index = self.get_index(_cookies)
             for pages in range(count):
                 if pages == 0:
@@ -87,12 +95,21 @@ class Login:
                 else:
                     self._click("*", "class", "arrow-border active", 2)
                     sleep(1)
-            self._click("*", "class", "el-button el-button--primary el-button--small", index)
-            sleep(7)
+            self._click("*", "class", "fr", index + 1)
+            sleep(5)
             self.driver.get(self.new_website)
-            Cookis = self.driver.get_cookies()[1].get("value")
-            outcome('green', "登陆完成,获取【Cookie】成功....")
-            return f"{self.session}={Cookis}"
+            sleep(2)
+            Cookies = self.driver.get_cookies()
+            if Cookies:
+                for session in Cookies:
+                    if self.session in session.values():
+                        gwsession = session.get("value")
+                        outcome('green', f"登陆成功,成功获取【{self.session}】成功....")
+
+            else:
+                outcome('red',f"登录失败,未获取到【{self.session}】..")
+
+            return f"{self.session}={gwsession}"
 
         except Exception:
             outcome('red', '登录异常....')
@@ -121,4 +138,7 @@ class Login:
         else:
             outcome('red', "获取网站【index】失败....")
 
-
+#
+if __name__=="__main__":
+    # Login().get_cookie()
+    pass
