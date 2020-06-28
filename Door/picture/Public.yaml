@@ -1,0 +1,19 @@
+get_picture:
+  url: "/manager/gwforward/dssresources/imageRepository/findByPagination"
+  bar: {}
+
+picture_url:
+  url: "/manager/gwforward/dssresources/imageRepository/findByPagination"
+  bar: {}
+
+get_class:
+  url: "/manager/gwforward/dssresources/imageRepository/findAllClass"
+  bar: {}
+
+file_upload:
+  url: "/manager/gwforward/dssresources/imageRepository/imageFileUpload"
+  bar: {appId: 0}
+
+add_class:
+  url: "/manager/gwforward/dssresources/imageRepository/addFileClass"
+  bar: {className: 33,classInfo: 44}
