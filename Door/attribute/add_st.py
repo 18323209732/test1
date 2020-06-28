@@ -61,9 +61,11 @@ class add_attribute(MyTest):
             num = random.randint(0,10000)
             self.data['templateName'] = '自动%d'%num
             self.data['id'] = id
+            print('id--===：',self.data)
+            print('url:::',url)
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify = False)
             self.result = r.json()
-
+            print('rrrr-=:',self.result)
 
             self.time=r.elapsed.total_seconds()
         except:
@@ -80,8 +82,10 @@ class add_attribute(MyTest):
         try:
             id = random.choice(Public_Data().get_attribute(swich=False))
             url = ConfigYaml(self.projectName).base_url + self.url.format(id)
+            print('url===:',url)
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
+            print('ret=====:',self.result)
 
             self.time=r.elapsed.total_seconds()
         except:
@@ -98,6 +102,8 @@ class add_attribute(MyTest):
         try:
             id = random.choice(Public_Data().get_attribute(swich=False))
             url = ConfigYaml(self.projectName).base_url + self.url.format(id)
+            print('url=====:',url)
+            print('--=-=-:',self.headers)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
             print(self.result)

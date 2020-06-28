@@ -302,6 +302,7 @@ class library_picture(MyTest):
                 self.headers[self.type] = self.form_type
 
             ids = next(pd().get_news_used(value="id"))
+            print(ids)
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={ids}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)

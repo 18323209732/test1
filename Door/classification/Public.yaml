@@ -1,11 +1,3 @@
 get_classification:
     url: '/manager/gwforward/manager-webapi/product/appCategory/list?viewType=1&pid=0&appId=2'
     bar:
-
-add_classify:
-    url: '/manager/gwforward/manager-webapi/product/appCategory/save?viewType=1&authPermission=classify_add'
-    bar: {"category":{"id":"","ismobile":0,"status":0,"isSearch":0,"sequence":"","imageId":"","imageurl":"","parentId":"","addPId":"","addPname":"","editPId":"","eidtPname":"","categoryType":"0","windowtype":1,"mobileWindowType":1,"styleCategoryListId":"","styleProductDetailId":"","gototype":0,"defTabStyle":"","defDetailStyle":"","mobileStyleCategoryListId":"","mobileStyleProductDetailId":"","defTabStyleM":"","defDetailStyleM":"","appId":2,"categoryName":"手动分类","linkurl":"","mobileLinkUrl":""},"choiceUrl":"","choiceUrlM":"","destype":0,"description":"","content":"","mobileContent":"","descriptionS":"","seoState":1,"hidTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"hidDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"hidTitleSign":"_","hidKeywordsSign":",","hidDescriptionSign":"-","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"authData":[{"authType":1,"authStr":"GW_:2:category:view:","roleIds":""}],"authStr":"GW_:2:category:view:","authType":1,"roleIds":""}
-
-hide_classify:
-    url: '/manager/gwforward/manager-webapi/product/appCategory/updateStatus'
-    bar:

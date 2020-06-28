@@ -66,7 +66,7 @@ class info_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_name = next(Public_Data().get_news_name(value='title'))
+            news_name = next(Public_Data().get_news_id(value='title'))
 
             self.data['keywords'] = news_name
             url = ConfigYaml(self.projectName).base_url + self.url
