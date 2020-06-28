@@ -7,7 +7,7 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-from Door.classification.Public import Public_Data
+from Door.classification.Public import Public_Data,Classify
 import random
 import time
 
@@ -106,4 +106,70 @@ class manage_classification(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_hide_classify(self):
+        # 隐藏电脑版
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+
+            id = Classify().add_classify()  # 新建分类id
+            url = ConfigYaml(
+                self.projectName).base_url + self.url + "&authPermission=classify_update&appId=2&id={}&status=1".format(
+                id)
+            print(url)
+            r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_display_classify(self):
+        # 显示电脑版
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+
+            id = Classify().hide_classify()
+            url = ConfigYaml(
+                self.projectName).base_url + self.url + "&authPermission=classify_update&appId=2&id={}&status=0".format(
+                id)
+            r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_delete_classify(self):
+        # 删除分类
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+
+            id = Classify().add_classify()  # 新建分类id
+            url = ConfigYaml(
+                self.projectName).base_url + self.url + '?viewType=1&authPermission=classify_del&appId=2&id={}'.format(
+                id)
+            r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
