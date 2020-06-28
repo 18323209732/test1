@@ -1,0 +1,7 @@
+add_classify:
+    url: /manager/gwforward/manager-webapi/content/introcate/save
+    bar: {"introductionCategory":{"id":"","ismobile":"1","status":"1","sequence":"","parentId":0,"addtype":"add","addPId":"0","addPname":"作为顶级分类","editPId":"","eidtPname":"","savemessage":"","imagepath":"","appId":"1","name":"手动分类","imageurl":""}}
+
+add_hide_classify:
+    url: /manager/gwforward/manager-webapi/content/introcate/updateStatus
+    bar: {'id':27,'status':0}
