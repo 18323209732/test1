@@ -56,24 +56,6 @@ class Public_Data:
 
                 return id
 
-    @property
-    def get_news_class(self):
-        '''
-        获取新闻资讯分类数据
-        :return:
-        '''
-        self.public_data = ReadPublic(catalog='news', key="get_news_class")
-        url = self.public_data.public_value("url")
-        url = self.url + url
-        data = self.public_data.public_value("bar")
-        r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
-        result = r.json()
-        class_id = []
-        if result.get('status') == 200:
-            for value in result.get('data').get('data'):
-                class_id.append(value.get('id'))
-
-        return class_id
 
 if __name__ == '__main__':
     pass
