@@ -31,7 +31,7 @@ class manage_AddCategory(MyTest):
             with open("Public.yaml", "w", encoding="utf-8") as yaml_file:  # 把传入的分类名称存入Public.yaml
                 data = {'categoryName': self.data['category']['categoryName']}
                 yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
-            print(self.data['category']['categoryName'])
+            # print(self.data['category']['categoryName'])
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -45,14 +45,14 @@ class manage_AddCategory(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         # 获取产品分类列表
         try:
-            url = ConfigYaml(self.projectName).base_url + self.url
+            url = ConfigYaml(self.projectName).base_url + self.url + '&appId=2'
             r = requests.get(url, headers=self.headers, stream=True, verify=False)
             self.result = r.json()
             try:
                 # path = os.path.dirname(os.path.realpath(__file__))+r"\Public.yaml"
                 with open('Public.yaml', 'r', encoding='utf-8') as f:  # 读取Public.yaml中'categoryName'的值
                     value = yaml.load(f.read(), Loader=yaml.Loader)['categoryName']
-                    # print(value)
+                    # print(self.result['data'])
                     for i in self.result['data']:  # 循环判断分类列表名称与存入的是否一致
                         if i['categoryName'] == value:
                             # print(i['categoryName'])
