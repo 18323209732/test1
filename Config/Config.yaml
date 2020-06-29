@@ -28,7 +28,7 @@ base_config:
   domain:                                         #域名
   EnvName: Door线上环境测试报告
   projectName: Door                           #项目名称
-  moudleName: news #picture news #newsclass                                   #运行模块
+  moudleName: newsclass #picture news #newsclass                                   #运行模块
   timeout: 3                                     #超时时间
   thread_count: 4                                 #开启线程数，开启线程数不能大于模块数
   process: False                                 #开启多进程
@@ -38,7 +38,7 @@ base_config:
   image: Img                                       #图片存放地址
   mail_file: True                                   #是否发送邮件附件
   mail_picture: True                               #是否添加发送邮件正文图片
-  Mail: False                                        #是否发送邮件
+  Mail: True                                        #是否发送邮件
   Wechat: True                                      #是否发送企业微信
   matching: '*_st.py'                              #文件后缀
   mysql:  True                                   #数据库连接类型开关
