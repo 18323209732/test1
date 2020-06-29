@@ -11,7 +11,7 @@ from Door.content.Public import Public_path, print_debug_info
 from Common.RWyaml import RWyaml
 import time
 
-class info_class(MyTest):
+class info_classes(MyTest):
 
     condition = True
     type_condition = False
@@ -28,6 +28,7 @@ class info_class(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            print(r.json())
             i = r.json()['data'][-1]
             RWyaml(Public_path()).write_yaml('class', 'id', i['id'])  # 标记id存入public.yaml文件
 
