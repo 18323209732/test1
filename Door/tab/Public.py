@@ -3,26 +3,37 @@
 import requests
 from random import randint,choice
 import random,os,re
+import sys
+from datetime import *
 import json
 import requests
 import time
 from random import randint
 from datetime import date,timedelta
-from Common.ReadYaml import ReadPublic, ConfigYaml
-projectName = ConfigYaml("projectName").base_config
-Url = ConfigYaml(projectName).base_url
+from Common.ReadYaml import ReadPublic
+
 
 def Public_path():
     """当前路径"""
-    return os.path.realpath('img.img')
+    # return os.path.realpath('Public.yaml')
+    return "D:\Program Files\PycharmProjects\Portal_interface\Door\tab\Public.yaml"
 
-"""
-file_path = os.path.realpath('图片.jpg')
-url = "https://2004105022-site.pool5.yun300.cn/manager/gwforward/dssresources/imageRepository/imageFileUpload?viewType=1"
-headers = {"Cookie": "GWSESSION=M2RiOWNmY2YtZTIyYy00OGUwLTg0MzQtNWE5ODU1MzQwNzll"}
-datas = {"appId": ""}
-file = {"file": ("图片.jpg", open(file_path, "rb"), "image/jpeg")}
-r = requests.post(url, headers=headers, data=datas, stream=True, verify=False, files=file)
-print(r.json()['data']['imgUrl'])
-print(r.json()['data']['fileID'])
-"""
+def print_debug_info(o):
+    """
+    打印打印日期，文件名，行，函数名的方法
+    :param o:
+    :return:
+    """
+    try:
+        raise Exception
+    except :
+        f = sys.exc_info()[2].tb_frame.f_back
+    print('%s -- %s -- %d -- %s ' % (str(datetime.now()), os.path.basename(f.f_code.co_filename), f.f_lineno, f.f_code.co_name), end='')
+    print(o)
+
+# 例子
+def test1():
+    print("test1")
+    print_debug_info('-->pass')
+
+# test1()

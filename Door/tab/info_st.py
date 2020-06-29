@@ -7,7 +7,7 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-from Door.content.Public import Public_path, print_debug_info
+from Door.tab.Public import Public_path, print_debug_info
 from Common.RWyaml import RWyaml
 import time
 
@@ -117,7 +117,8 @@ class info_tab(MyTest):
     @ReRun(MyTest.setUp)
     def test_add_img_tab(self):
         # 上传照片
-        file_path = os.path.realpath('图片.jpg')
+        # file_path = os.path.realpath('图片.jpg')
+        file_path = "D:\Program Files\PycharmProjects\Portal_interface\Door\tab\图片.jpg"
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         file = {"file": ("图片.jpg", open(file_path, "rb"), "image/jpeg")}
         del self.headers['Content-Type']
