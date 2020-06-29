@@ -1247,10 +1247,10 @@ Door:
           re_bar: data, # 请求参数
         }
 
-  class: # 分类管理
+  classes: # 分类管理
     - url:  # 新闻资讯
       modular: 分类管理  # 接口注释
-      className: info_class  # 接口类名
+      className: info_classes  # 接口类名
       funName:
         - test_all_classlist: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/product/appCategory/list",
