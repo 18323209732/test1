@@ -1,11 +1,11 @@
 Door:
   attribute: #属性管理
     - url:   # 添加属性类型地址
-      modular: 添加属性  # 接口注释
+      modular: 属性管理  # 接口注释
       className: add_attribute  # 接口类名
       funName:
         - test_add_attribute: {  # 添加属性类型
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&authPermission=attribute_add',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute',
           level: 高,   #级别
           author: 方坤,  #作者
           bar: {"id":"","appId":2,"templateName":"有规格","memo":"","operType":"add","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"name":"产品名称","defaultname":"","defaultcode":"","isrequire":"0","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"name","isFix":"0","issearch":"0"},{"name":"编号","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"code","isFix":"0","issearch":"0"},{"name":"计量单位","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"unit","isFix":"0","issearch":"1"},{"name":"重量","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"weight","isFix":"0","issearch":"1"},{"name":"计费重量","defaultname":"","defaultcode":"","isrequire":"1","unit":"kg","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"chargedWeight","isFix":"0","issearch":"1"},{"name":"市场价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"price","isFix":"0","issearch":"1"},{"name":"零售价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"retailPrice","isFix":"0","issearch":"1"},{"name":"库存","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"stock","isFix":"0","issearch":"1"},{"name":"最低起订量","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"moq","isFix":"0","issearch":"1"},{"name":"交货期","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"deliveryTime","isFix":"0","issearch":"1"},{"name":"产品描述","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"1","subFieldType":"content","option":"","code":"content","isFix":"0","issearch":"1"}],"specDataArr":[{"specName":"我的规格3","specType":"0","delSpecValueIds":[],"specValues":[{"specValueName":"4444","imgUrl":""}]}],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
@@ -27,14 +27,14 @@ Door:
           re_bar: json, # 请求参数
         }
           test_edit_attribute: {  # 编辑属性类型
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&appId=2&id=1&operType=edit',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute',
           level: 中,   #级别
           author: 方坤,  #作者
-          bar: ,
+          bar: {"id":31,"appId":2,"templateName":"15559998","memo":"","operType":"edit","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"specDataArr":[],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
           test_data: {},
           case_name: 编辑属性类型,
           expected: [200],  # 预期结果
-          mode: get,  # 请求类型
+          mode: post,  # 请求类型
           re_bar: json, # 请求参数
         }
           test_attribute_copy: {  # 复制属性类型
@@ -76,7 +76,7 @@ Door:
       className: manage_classification # 接口类名
       funName:
         - test_edit_classification: { #编辑分类
-          url: '/manager/gwforward/manager-webapi/product/appCategory/save?viewType=1&authPermission=classify_update',
+          url: '/manager/gwforward/manager-webapi/product/appCategory/save',
           level: 中,   #级别
           author: 方坤,  #作者
           bar: {"category":{"appId":2,"categoryBigField":{"categoryId":46,"content":"","mobileContent":"","summary":"","useViewType":false},"categoryName":"分类12123666","categoryType":"0","createtime":1591286400000,"id":46,"imageurl":"","isSearch":0,"ismobile":0,"leaf":true,"linkurl":"","location":"1","mobileLinkUrl":"","mobileStyleCategoryListId":"","mobileWindowType":1,"parentId":0,"proCount":0,"sequence":1591324635189,"status":0,"styleCategoryListId":"","updatetime":1591340580000,"useViewType":false,"windowtype":1},"choiceUrl":"","choiceUrlM":"","destype":"0","description":"","content":"","mobileContent":"","descriptionS":"","seoState":1,"hidTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"hidDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"hidTitleSign":"_","hidKeywordsSign":",","hidDescriptionSign":"-","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"authData":[{"authType":1,"authStr":"GW_:2:category:view:46","roleIds":""}],"authStr":"GW_:2:category:view:46","authType":1,"roleIds":"","eidtPname":"作为顶级分类","catetree":"[{ id:\"\", pId:0, name:\"作为顶级分类\"}, {id:5,pId:0,name:\"111\"},{id:7,pId:0,name:\"1137链接1\",disabled:true},{id:42,pId:0,name:\"我的分类\"},{id:43,pId:0,name:\"我的分类22\"},{id:44,pId:0,name:\"分类1591324357.0098417\"},{id:45,pId:0,name:\"分类1591324523.202511\"},{id:46,pId:0,name:\"分类121\",disabled:true,noDisIcon:true},{id:47,pId:0,name:\"分类1591324651.388086\"},{id:48,pId:0,name:\"分类1591324778.9620414\"},{id:49,pId:0,name:\"分类1591325135.7921693\"},{id:50,pId:0,name:\"分类1591326422.3592412\"},{id:51,pId:0,name:\"分类1591339146.2089343\"},{id:52,pId:0,name:\"分类1591343927.7986653\"}]","editPId":0},
@@ -87,7 +87,7 @@ Door:
           re_bar: json, # 请求参数
         }
           test_see_classification: { #查看分类
-          url: '/manager/gwforward/manager-webapi/product/productInformation/list?viewType=1',
+          url: '/manager/gwforward/manager-webapi/product/productInformation/list',
           level: 中,   #级别
           author: 方坤,  #作者
           bar: {"appId":2,"cateId":43,"showCaseId":null,"attributeId":0,"pcStatus":"null","moStatus":"null","startDate":"","endDate":"","pageSize":15,"pageNumber":1,"orderColumn":"","order_productName":"","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":""},
@@ -98,7 +98,7 @@ Door:
           re_bar: json, # 请求参数
         }
           test_classify_add: { #添加下级分类
-          url: '/manager/gwforward/manager-webapi/product/appCategory/save?viewType=1&authPermission=classify_add',
+          url: '/manager/gwforward/manager-webapi/product/appCategory/save',
           level: 中,   #级别
           author: 方坤,  #作者
           bar: {"category":{"id":"","ismobile":0,"status":0,"isSearch":0,"sequence":"","imageId":"","imageurl":"","parentId":43,"addPId":"","addPname":"","editPId":"","eidtPname":"","categoryType":"0","windowtype":1,"mobileWindowType":1,"styleCategoryListId":"","styleProductDetailId":"","gototype":0,"defTabStyle":"","defDetailStyle":"","mobileStyleCategoryListId":"","mobileStyleProductDetailId":"","defTabStyleM":"","defDetailStyleM":"","appId":2,"categoryName":"我的下级分类1","linkurl":"","mobileLinkUrl":""},"choiceUrl":"","choiceUrlM":"","destype":0,"description":"","content":"","mobileContent":"","descriptionS":"","seoState":1,"hidTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"hidDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"hidTitleSign":"_","hidKeywordsSign":",","hidDescriptionSign":"-","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"authData":[{"authType":1,"authStr":"GW_:2:category:view:","roleIds":""}],"authStr":"GW_:2:category:view:","authType":1,"roleIds":""},
@@ -109,7 +109,7 @@ Door:
           re_bar: json, # 请求参数
           }
           test_classify_update: { #转移分类
-          url: '/manager/gwforward/manager-webapi/product/appCategory/updateMoveTree?viewType=1&authPermission=classify_update',
+          url: '/manager/gwforward/manager-webapi/product/appCategory/updateMoveTree',
           level: 中,   #级别
           author: 方坤,  #作者
           bar: {'appId':2,'pid':46,'id':46},
@@ -244,6 +244,17 @@ Door:
           case_name: 删除分类,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_add_classify_picture: { #添加分类-分类图片
+          url: '/manager/gwforward/manager-webapi/content/introcate/save',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"introductionCategory":{"id":"","ismobile":"1","status":"1","sequence":"","parentId":0,"addtype":"add","addPId":"0","addPname":"作为顶级分类","editPId":"","eidtPname":"","savemessage":"","imagepath":"","appId":"1","name":"手动分类","imageurl":""}},
+          test_data: {},
+          case_name: 添加分类-分类图片,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
 

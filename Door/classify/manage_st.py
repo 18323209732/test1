@@ -46,7 +46,7 @@ class manage_classify(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            self.data['introductionCategory']['name'] = '接口分类{}'.format(time.time())
+            self.data['introductionCategory']['name'] = 'FK接口分类{}'.format(time.time())
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -66,7 +66,7 @@ class manage_classify(MyTest):
                 self.headers[self.type] = self.form_type
             id = Classify().add_classify() #添加分类id
             url = ConfigYaml(self.projectName).base_url + self.url
-            self.data['introductionCategory']['name'] = '编辑分类{}'.format(time.time())
+            self.data['introductionCategory']['name'] = 'FK编辑分类{}'.format(time.time())
             self.data['introductionCategory']['id'] = id
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -88,11 +88,8 @@ class manage_classify(MyTest):
 
             id = Classify().add_classify()  # 添加分类id
             url = ConfigYaml(self.projectName).base_url + self.url + '&viewType=1&categoryId={}&isdisplay=&title=&ismobile=&endDate=&ec_crd=15&ec_p=1&beginDate=&category={}'.format(id,id)
-            print(url)
-            print(self.headers)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-            print(self.result)
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -173,6 +170,29 @@ class manage_classify(MyTest):
             id = Classify().add_hide_classify()
             url = ConfigYaml(self.projectName).base_url + self.url + '&id={}'.format(id)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_add_classify_picture(self):
+        # 添加分类-分类图片
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.type_condition = False
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            id = Classify().get_picture_id()
+            self.data['introductionCategory']['name'] = 'FK接口分类{}'.format(time.time())
+            self.data['introductionCategory']['imageurl'] = id
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()

@@ -5,3 +5,7 @@ add_classify:
 add_hide_classify:
     url: /manager/gwforward/manager-webapi/content/introcate/updateStatus
     bar: {'id':27,'status':0}
+
+get_picture_id:
+    url: /manager/gwforward/dssresources/imageRepository/findByPagination?viewType=1&startDate=&endDate=&name=&classId=&currentPage=1&pageSize=30
+    bar:

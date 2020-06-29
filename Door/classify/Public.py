@@ -60,9 +60,26 @@ class Classify:
         result = r.json()
 
         return id
+    def get_picture_id(self):
+        '''
+        获取分类图片列表id
+        :return: 随机返回一个id
+        '''
+        self.public_data = ReadPublic(catalog='classify', key="get_picture_id")
+        url = self.public_data.public_value("url")
+        url = self.url + url + "&tenantId={}".format(self.tenant_value)
+        self.headers['Content-Type'] = 'applicaton/x-www-form-urlencoded'
+        r = requests.get(url, headers=self.headers, stream=True, verify=False)
+        result = r.json()
+        id = []
+        for value in result.get('data').get('list'):
+            # print(value)
+            id.append(value.get('id'))
 
+        id = random.choice(id)
+        return id
 
 
 if __name__ == '__main__':
     add = Classify()
-    add.add_hide_classify()
+    print(add.get_picture_id())
