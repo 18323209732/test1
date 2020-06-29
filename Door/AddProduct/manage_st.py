@@ -29,7 +29,7 @@ class manage_AddProduct(MyTest):
             # 设置上传时间为当前时间
             self.data['productInformation']['publishTime'] = time.strftime("%Y-%m-%d %H:%M", time.localtime())
             # 读取产品分类里的id，把获取到的分类id，自定义的产品名称 传参。
-            value = readyaml(file='AddCategory', key='id')
+            value = readyaml(file='Door\AddCategory', key='id')
             self.data['categoryIds'] = [value]
             # print(self.data)
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -55,7 +55,7 @@ class manage_AddProduct(MyTest):
             # 设置上传时间为当前时间
             self.data['productInformation']['publishTime'] = time.strftime("%Y-%m-%d %H:%M", time.localtime())
             # 读取产品分类里的id，把获取到的分类id，自定义的产品名称 传参。
-            value = readyaml(file='AddCategory', key='id')
+            value = readyaml(file='Door\AddCategory', key='id')
             self.data['categoryIds'] = [value]
             # 获取属性列表及规格、规格值、启用货品,货品sku编码固定为110
             attribute_id,s_id,specName,value_id,specValueName = GetAll().get_attribute()
@@ -66,7 +66,7 @@ class manage_AddProduct(MyTest):
 
             self.time = r.elapsed.total_seconds()
             # 把添加成功的产品名称写入Public.yaml
-            writeyaml(w_key='data', w_value=self.data, n="w")
+            writeyaml(file='Door/AddProduct',w_key='data', w_value=self.data, n="w")
         except:
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
@@ -87,15 +87,15 @@ class manage_AddProduct(MyTest):
             # 设置上传时间为当前时间
             self.data['productInformation']['publishTime'] = time.strftime("%Y-%m-%d %H:%M", time.localtime())
             # 读取产品分类里的id，把获取到的分类id，自定义的产品名称 传参。
-            value = readyaml(file='AddCategory', key='id')
+            value = readyaml(file='Door\AddCategory', key='id')
             self.data['categoryIds'] = [value]
 
 
             # 获取素材库图片，上传本地图片，从素材库选择本地图片，并设置成封面第一张
             GetAll().put_img()
-            imgId = readyaml(file='AddProduct', key='p_id')
-            url1 = readyaml(file='AddProduct', key='p_url')
-            imageName = readyaml(file='AddProduct', key='p_name')
+            imgId = readyaml(file='Door\AddProduct', key='p_id')
+            url1 = readyaml(file='Door\AddProduct', key='p_url')
+            imageName = readyaml(file='Door\AddProduct', key='p_name')
             self.data['productImageList'] = [
                 {"imgId": imgId, "url": url1, "thumbId": imgId, "thumbUrl": url1, "imageName": imageName, "iscover": 1,
                  "sequence": "", "height": "", "wide": ""}]
@@ -142,7 +142,7 @@ class manage_AddProduct(MyTest):
             # 设置上传时间为当前时间
             self.data['productInformation']['publishTime'] = time.strftime("%Y-%m-%d %H:%M", time.localtime())
             # 读取产品分类里的id，把获取到的分类id，自定义的产品名称 传参。
-            value = readyaml(file='AddCategory', key='id')
+            value = readyaml(file='Door\AddCategory', key='id')
             self.data['categoryIds'] = [value]
 
             # 获取新闻资讯id
@@ -192,7 +192,7 @@ class manage_AddProduct(MyTest):
             # 设置上传时间为当前时间
             self.data['productInformation']['publishTime'] = time.strftime("%Y-%m-%d %H:%M", time.localtime())
             # 读取产品分类里的id，把获取到的分类id，自定义的产品名称 传参。
-            value = readyaml(file='AddCategory', key='id')
+            value = readyaml(file='Door\AddCategory', key='id')
             self.data['categoryIds'] = [value]
             # 获取橱窗id
             self.data['showcaseIds'] = GetAll().showlist()
@@ -220,7 +220,7 @@ class manage_AddProduct(MyTest):
             # 设置上传时间为当前时间
             self.data['productInformation']['publishTime'] = time.strftime("%Y-%m-%d %H:%M", time.localtime())
             # 读取产品分类里的id，把获取到的分类id，自定义的产品名称 传参。
-            value = readyaml(file='AddCategory', key='id')
+            value = readyaml(file='Door\AddCategory', key='id')
             self.data['categoryIds'] = [value]
             # 获取标记id
             self.data['markIds'] = [GetAll().get_mark()]
@@ -244,7 +244,7 @@ class manage_AddProduct(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            data = readyaml(file='AddProduct', key='data')
+            data = readyaml(file='Door\AddProduct', key='data')
             data['productInformation']['price'] = 8000
             data['productInformation']['retailPrice'] = 1000
             data['productInformation']['stock'] = 50
@@ -267,7 +267,7 @@ class manage_AddProduct(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            data = readyaml(file='AddProduct', key='data')
+            data = readyaml(file='Door\AddProduct', key='data')
             data['productInformation']['price'] = 8000
             r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
             self.result = r.json()

@@ -8,6 +8,7 @@ import requests.packages.urllib3
 from Common.FontColor import outcome
 import yaml
 from ruamel.yaml import RoundTripDumper
+from Common.Route import Any_Path
 
 
 def readyaml(file=None, key=None):
@@ -16,7 +17,8 @@ def readyaml(file=None, key=None):
     2. 打开yaml文件
     3. 转译文件内容获取对应key的值
     """
-    path = os.path.abspath(os.path.join(os.getcwd(), "..")) + r"\%s\Public.yaml" % file
+    path = Any_Path(file, "Public.yaml")
+
     try:
         with open(path, 'r', encoding='utf-8') as f:
             value = yaml.load(f.read(), Loader=yaml.Loader)[key]
@@ -30,7 +32,8 @@ def readyaml_case(key=None):
     1. 获取case.yaml的橱窗列表
     2. 转译文件内容获取对应test03_keywords_listShowcase的URL值
     """
-    path = os.path.abspath(os.path.join(os.getcwd(), "..")) + r"\Case.yaml"
+    path = Any_Path("Door", "Case.yaml")
+
     try:
         with open(path, 'r', encoding='utf-8') as f:
             # value = yaml.load(f.read(), Loader=yaml.Loader)[key]
@@ -41,26 +44,28 @@ def readyaml_case(key=None):
         pass
 
 
-def writeyaml(w_key=None, w_value=None, n=None):
+def writeyaml(w_key=None, w_value=None, n=None, file=None):
     """
     1. 打开当前文件下的yaml文件，n传入写入方法（a 为追加方式写入，w 为清空后重写）
     2. 传入要写入的key：value
     3. 转译文件，传入参数，去重｛｝，方便yaml直接读取数据
     """
-    with open("Public.yaml", n, encoding="utf-8") as yaml_file:
+    path = Any_Path(file, "Public.yaml")
+    with open(path, n, encoding="utf-8") as yaml_file:
         data = {w_key: w_value}
         yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
 
 
 def readconfig_yaml(basekey='base_url', key='Door'):
-    path = os.path.abspath(os.path.join(os.getcwd(), "../.."))+r'\Config\Config.yaml'
+    path = Any_Path("Config", "Config.yaml")
+    # print(path)
     with open(path, 'r', encoding='utf-8') as f:
         value = yaml.load(f.read(), Loader=yaml.Loader)[basekey][key]
     return value
 
 
 def readconfig_ini(v=True):
-    path = os.path.abspath(os.path.join(os.getcwd(), "../.."))+r'\Door\Config.ini'
+    path = Any_Path("Door", "Config.ini")
     config = configparser.ConfigParser()
     config.read(path)
     cookies_value = config.get("session", "cookies")
@@ -150,9 +155,9 @@ class GetAll:
                 p_url = result['data']['imgUrl']
                 p_name = result['data']['name']
                 # print(p_name)
-                writeyaml(w_key='p_id', w_value=p_id, n='a')
-                writeyaml(w_key='p_url', w_value=p_url, n='a')
-                writeyaml(w_key='p_name', w_value=p_name, n='a')
+                writeyaml(file='Door/AddProduct',w_key='p_id', w_value=p_id, n='a')
+                writeyaml(file='Door/AddProduct',w_key='p_url', w_value=p_url, n='a')
+                writeyaml(file='Door/AddProduct',w_key='p_name', w_value=p_name, n='a')
 
     def showlist(self):
         """
@@ -187,5 +192,6 @@ class GetAll:
         return result
 
 
-if __name__ == '__main__':
-    GetAll().get_attribute()
+# if __name__ == '__main__':
+#     #   GetAll().get_product_attribute()
+#     print(readyaml(file="Door\AddProduct",key="p_id"))

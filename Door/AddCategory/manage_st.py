@@ -9,6 +9,7 @@ from Common.DataHandle import ReRun
 import urllib3
 import time, yaml, os
 from ruamel.yaml import RoundTripDumper
+from Common.Route import Any_Path
 
 
 class manage_AddCategory(MyTest):
@@ -26,7 +27,8 @@ class manage_AddCategory(MyTest):
             self.data['category']['categoryName'] = '分类%s' % time.time()  # 获取随机分类名称
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-            with open("Public.yaml", "w", encoding="utf-8") as yaml_file:  # 把传入的分类名称存入Public.yaml
+            path = Any_Path("Door\AddCategory", "Public.yaml")
+            with open(path, "w", encoding="utf-8") as yaml_file:  # 把传入的分类名称存入Public.yaml
                 data = {'categoryName': self.data['category']['categoryName']}
                 yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
             # print(self.data['category']['categoryName'])
@@ -46,16 +48,16 @@ class manage_AddCategory(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url + '&appId=2'
             r = requests.get(url, headers=self.headers, stream=True, verify=False)
             self.result = r.json()
+
             try:
-                # path = os.path.dirname(os.path.realpath(__file__))+r"\Public.yaml"
-                with open('Public.yaml', 'r', encoding='utf-8') as f:  # 读取Public.yaml中'categoryName'的值
+                path = Any_Path("Door\AddCategory", "Public.yaml")
+                with open(path, 'r', encoding='utf-8') as f:  # 读取Public.yaml中'categoryName'的值
                     value = yaml.load(f.read(), Loader=yaml.Loader)['categoryName']
                     # print(self.result['data'])
                     for i in self.result['data']:  # 循环判断分类列表名称与存入的是否一致
                         if i['categoryName'] == value:
-                            # print(i['categoryName'])
                             id = i['id']
-                            with open("Public.yaml", "a", encoding="utf-8") as yaml_file:  # 把传入的分类名称存入Public.yaml
+                            with open(path, "a", encoding="utf-8") as yaml_file:  # 把传入的分类名称存入Public.yaml
                                 data = {'id': id}
                                 yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
 
