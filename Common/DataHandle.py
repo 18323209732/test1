@@ -381,7 +381,7 @@ class Assertion:
         msgtwo = Matching(self.msgtwo, self.response)
 
         if self.expectone and self.actualone:
-            self.assertEqual(actualone,self.expectone,msg=msgone)
+            self.assertEqual(actualone,self.expectone, msg=msgone)
 
         elif self.expectone and not self.actualone:
             raise Assert(self.expectone,self.actualone)
@@ -511,18 +511,16 @@ class Get_Skip:
         :return:
         '''
         if self.skipped:
-            for skip in self.skipped:
-                fun_class = str(skip[0]).split(' ')
-                funname = fun_class[0]
-                key = fun_class[1].split('.')[1]
-                classname = fun_class[1].split('.')[-1].split(")")[0]
-                for case in self.data.get(key):
-                    if classname==case.get('className'):
-                        for funs in case.get('funName'):
-                            data = funs.get(funname)
-                            SqlHandle(funname,data.get('case_name'),data.get('level'),
-                            data.get('url'),'skip',data.get('author'),
-                            0,skip[1],classname).implement()
-
-
-
+            if isinstance(self.skipped, list):
+                for skip in self.skipped:
+                    fun_class = str(skip[0]).split(' ')
+                    fun_name = fun_class[0]
+                    classname = fun_class[1].split('.')[1].split(')')[0]
+                    key = classname.split('_')[1]
+                    for case in self.data.get(key):
+                        if classname == case.get('className'):
+                            for funs in case.get('funName'):
+                                data = funs.get(fun_name)
+                                SqlHandle(fun_name, data.get('case_name'), data.get('level'),
+                                data.get('url'), 'skip', data.get('author'),
+                                0,skip[1], classname).implement()

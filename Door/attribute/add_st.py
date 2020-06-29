@@ -8,7 +8,8 @@ from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import random
 import urllib3
-
+from Door.attribute.Public import Public_Data
+import datetime,time
 
 class add_attribute(MyTest):
     condition = True
@@ -20,11 +21,10 @@ class add_attribute(MyTest):
         # 添加属性类型
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
-            num = random.randint(0, 1000)
-            self.data['templateName'] = '自动%d' % num
-            r = requests.post(url, headers=self.headers, json=self.data, stream=True,verify = False)
+            num = random.randint(0, 999999)
+            self.data['templateName'] = 'FK自动{}'.format(time.time())
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-            print("templateId:::",self.result['data']['templateId'])
 
             self.time=r.elapsed.total_seconds()
         except:
@@ -39,46 +39,26 @@ class add_attribute(MyTest):
         # 属性类型列表
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify = False)
-            print("jieguo:",r)
+            self.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8'
+            r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify = False)
             self.result = r.json()
-            global list_num
-            list_num = []
-            for i in self.result['data']['list']:
-                id = i['id']
-                list_num.append(id)
-
             self.time=r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
             return self.singular
 
-
-    # # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test_edit_attribute(self):
-        # 编辑属性类型
-        try:
-            url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify = False)
-            self.result = r.json()
-
-            self.time=r.elapsed.total_seconds()
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red',self.singular)
-            return self.singular
-        
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_edit_attribute_pre(self):
-        # 编辑属性类型后保存
+        # 编辑属性类型
         try:
+            id = random.choice(Public_Data().get_attribute(swich=False))
             url = ConfigYaml(self.projectName).base_url + self.url
             num = random.randint(0,10000)
-            self.data['templateName'] = '默认属性类型%d'%num
+            self.data['templateName'] = 'FKBJ自动{}'.format(time.time())
+            self.data['id'] = id
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify = False)
             self.result = r.json()
 
@@ -87,7 +67,7 @@ class add_attribute(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
             return self.singular
-        
+
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
@@ -95,8 +75,9 @@ class add_attribute(MyTest):
         # 复制属性类型
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            id = random.choice(Public_Data().get_attribute(swich=False))
+            url = ConfigYaml(self.projectName).base_url + self.url + '&appId=2&id={}&operType=copy'.format(id)
+            r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time=r.elapsed.total_seconds()
@@ -104,7 +85,7 @@ class add_attribute(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
             return self.singular
-        
+
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
@@ -112,7 +93,8 @@ class add_attribute(MyTest):
         # 删除属性类型
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            url = ConfigYaml(self.projectName).base_url + self.url
+            id = random.choice(Public_Data().get_attribute(swich=False))
+            url = ConfigYaml(self.projectName).base_url + self.url + '&authPermission=attribute_del&templateId={}&appId=2'.format(id)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -121,4 +103,24 @@ class add_attribute(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
             return self.singular
-        
+
+
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_list_screen(self):
+        # 列表筛选
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            start_today = datetime.date.today()  # 获取当前年月日
+            offset = datetime.timedelta(days=-5)
+            end_date = (start_today + offset).strftime('%Y-%m-%d')  # 获取当前日期前5天年月日
+
+            url = ConfigYaml(self.projectName).base_url + self.url + '&appId=2&ec_p=1&ec_crd=15&startDate={}&endDate={}&sortField=&sortType='.format(end_date,start_today)
+            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time=r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red',self.singular)
+            return self.singular

@@ -1,0 +1,243 @@
+时间:2020-06-24 14:06:06,437  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:06,438  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:3390 行数: 230 文件名:connectionpool.py
+时间:2020-06-24 14:06:08,941  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session HTTP/1.1" 200 716 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:08,950  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:08,950  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/window/maximize {} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:11,062  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/window/maximize HTTP/1.1" 200 48 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:11,062  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:11,062  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/url {"url": "https://new-console.300.cn"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:12,439  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/url HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:12,440  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:12,440  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@id='username'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:12,452  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 404 1065 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:12,452  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:12,953  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@id='username'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,529  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:13,530  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,530  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element/b1fa2a96-ebde-4fd1-8b98-526a35c60be9/clear {"id": "b1fa2a96-ebde-4fd1-8b98-526a35c60be9"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,555  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element/b1fa2a96-ebde-4fd1-8b98-526a35c60be9/clear HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:13,555  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,555  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@id='username'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,563  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:13,564  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,564  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element/b1fa2a96-ebde-4fd1-8b98-526a35c60be9/value {"text": "CEM10097239", "value": ["C", "E", "M", "1", "0", "0", "9", "7", "2", "3", "9"], "id": "b1fa2a96-ebde-4fd1-8b98-526a35c60be9"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,612  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element/b1fa2a96-ebde-4fd1-8b98-526a35c60be9/value HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:13,612  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,613  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@id='password'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,621  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:13,621  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,621  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element/3498140c-7d88-4774-bc6b-535453f6c67d/clear {"id": "3498140c-7d88-4774-bc6b-535453f6c67d"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,647  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element/3498140c-7d88-4774-bc6b-535453f6c67d/clear HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:13,647  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,647  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@id='password'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,654  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:13,654  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,655  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element/3498140c-7d88-4774-bc6b-535453f6c67d/value {"text": "zok9phwv6n", "value": ["z", "o", "k", "9", "p", "h", "w", "v", "6", "n"], "id": "3498140c-7d88-4774-bc6b-535453f6c67d"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,700  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element/3498140c-7d88-4774-bc6b-535453f6c67d/value HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:13,700  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,701  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@class='input-box-button m20'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,713  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:13,714  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:13,714  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element/aafed28b-53e4-420e-afbd-266aab54cbfb/click {"id": "aafed28b-53e4-420e-afbd-266aab54cbfb"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:14,169  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element/aafed28b-53e4-420e-afbd-266aab54cbfb/click HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:14,170  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:24,171  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:24,183  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:24,183  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:24,184  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element/5b48651e-7efd-4c24-ae2e-ad47736b8fc5/click {"id": "5b48651e-7efd-4c24-ae2e-ad47736b8fc5"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:24,226  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element/5b48651e-7efd-4c24-ae2e-ad47736b8fc5/click HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:24,227  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:24,227  方法:_request  级别:DEBUG  消息:GET http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/cookie {} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:24,232  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "GET /session/2000a842c1ca0c9af90a16f272fab6b3/cookie HTTP/1.1" 200 1160 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:24,233  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:24,244  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): api-shop.300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 14:06:31,526  方法:_make_request  级别:DEBUG  消息:https://api-shop.300.cn:443 "GET /security/operInstance/getNewInstanceInfoList?productType=11 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:31,540  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:31,551  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:31,551  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:31,551  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element/326b5ef1-9c15-4c10-a964-7b8591aa7c3b/click {"id": "326b5ef1-9c15-4c10-a964-7b8591aa7c3b"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:31,594  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element/326b5ef1-9c15-4c10-a964-7b8591aa7c3b/click HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:31,594  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:32,594  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:32,604  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:32,605  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:32,605  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element/326b5ef1-9c15-4c10-a964-7b8591aa7c3b/click {"id": "326b5ef1-9c15-4c10-a964-7b8591aa7c3b"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:32,645  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element/326b5ef1-9c15-4c10-a964-7b8591aa7c3b/click HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:32,645  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:33,645  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:33,658  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:33,659  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:33,659  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element/326b5ef1-9c15-4c10-a964-7b8591aa7c3b/click {"id": "326b5ef1-9c15-4c10-a964-7b8591aa7c3b"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:33,680  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element/326b5ef1-9c15-4c10-a964-7b8591aa7c3b/click HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:33,680  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:34,681  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element {"using": "xpath", "value": "(//*[@class='fr'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:34,699  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element HTTP/1.1" 200 88 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:34,699  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:34,699  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/element/edae343d-c541-4a80-9998-370a4c603347/click {"id": "edae343d-c541-4a80-9998-370a4c603347"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:34,742  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/element/edae343d-c541-4a80-9998-370a4c603347/click HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:34,742  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:39,743  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/url {"url": "https://2004105022-site.pool5.yun300.cn/manager/gwforward/manager-webapi/content/info/info_page"} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:39,976  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "POST /session/2000a842c1ca0c9af90a16f272fab6b3/url HTTP/1.1" 200 14 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:39,976  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:06:41,977  方法:_request  级别:DEBUG  消息:GET http://127.0.0.1:3390/session/2000a842c1ca0c9af90a16f272fab6b3/cookie {} 行数: 388 文件名:remote_connection.py
+时间:2020-06-24 14:06:41,988  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:3390 "GET /session/2000a842c1ca0c9af90a16f272fab6b3/cookie HTTP/1.1" 200 634 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:06:41,988  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-06-24 14:10:08,797  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 14:10:09,632  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/appCategory/save?viewType=1&authPermission=classify_add HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:10:09,657  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 14:10:10,171  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/appCategory/delete?tenantId=188078?viewType=1&authPermission=classify_del&appId=2&id=100 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:11:01,049  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 14:11:02,139  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/appCategory/save?viewType=1&authPermission=classify_add HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:11:02,155  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 14:11:02,629  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/appCategory/delete?tenantId=188078?viewType=1&authPermission=classify_del&appId=2&id=101 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:41:29,851  方法:info  级别:INFO  消息:未找到introduce相关目录 行数: 55 文件名:Log.py
+时间:2020-06-24 14:44:06,923  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 14:44:07,303  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introcate/treeDateList?tenantId=188078 HTTP/1.1" 400 278 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:44:49,226  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 14:44:51,229  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introcate/treeDateList?tenantId=188078viewType=1&node=root HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:45:03,970  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 14:45:05,748  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introcate/treeDateList?tenantId=188078viewType=1&node=root HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 14:52:47,337  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 14:52:47,718  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 15:44:45,159  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 15:44:45,738  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 15:48:22,555  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 15:48:22,918  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 15:48:22,936  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 15:48:23,311  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 15:48:52,946  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 15:48:54,345  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 15:48:54,362  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 15:48:54,814  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:21:02,638  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:21:02,974  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?viewType=1&categoryId=19&ec_crd=15&ec_p=1?tenantId=188078 HTTP/1.1" 400 324 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:22:15,044  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:22:16,423  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078viewType=1&categoryId=19&ec_crd=15&ec_p=1 HTTP/1.1" 400 323 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:25:12,937  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:25:13,442  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078viewType=1&categoryId=19&ec_crd=15&ec_p=1&category=19 HTTP/1.1" 400 335 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:25:35,779  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:25:36,077  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078&viewType=1&categoryId=19&ec_crd=15&ec_p=1&category=19 HTTP/1.1" 400 336 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:26:29,083  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:26:29,430  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078&viewType=1&categoryId=19&ec_crd=15&isdisplay=&ec_p=1&category=19 HTTP/1.1" 400 347 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:26:44,084  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:26:44,766  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078&viewType=1&categoryId=19&ec_crd=15&isdisplay=&ec_p=1&category=19 HTTP/1.1" 400 347 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:27:27,331  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:27:27,635  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078&viewType=1&categoryId=19&ec_crd=15&isdisplay=&ec_p=1&category=19 HTTP/1.1" 400 347 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:28:15,366  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:28:15,643  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078&viewType=1&categoryId=19&ec_crd=15&isdisplay=&title=&ismobile=&endDate=&ec_p=1&category=19 HTTP/1.1" 400 373 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:30:02,275  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:30:02,657  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?viewType=1&tenantId=188078&categoryId=20&isdisplay=&title=&ismobile=&endDate=&ec_crd=15&ec_p=1&beginDate=&category=20?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:30:51,534  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:30:51,889  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?viewType=1&categoryId=20&isdisplay=&title=&ismobile=&endDate=&ec_crd=15&ec_p=1&beginDate=&category=20?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:31:52,177  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:31:52,551  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?viewType=1&categoryId=20&isdisplay=&title=&ismobile=&endDate=&ec_crd=15&ec_p=1&beginDate=&category=20?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:34:08,713  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:34:09,129  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078viewType=1&categoryId=20&isdisplay=&title=&ismobile=&endDate=&ec_crd=15&ec_p=1&beginDate=&category=20 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:34:38,605  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:34:39,096  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078&viewType=1&categoryId=20&isdisplay=&title=&ismobile=&endDate=&ec_crd=15&ec_p=1&beginDate=&category=20 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:36:15,734  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:36:17,086  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:36:17,112  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:36:17,463  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078&viewType=1&categoryId=24&isdisplay=&title=&ismobile=&endDate=&ec_crd=15&ec_p=1&beginDate=&category=24 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:43:29,407  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:43:29,798  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:43:29,904  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:43:30,242  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:43:30,266  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:43:30,711  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introcate/updateMoveTree?tenantId=188078&id=25&pid=26 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:44:32,313  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:44:36,289  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introcate/treeDateList?tenantId=188078viewType=1&node=root HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:44:47,813  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:44:48,101  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 415 282 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:45:39,311  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:45:39,628  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 415 282 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:46:34,463  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:46:34,798  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:47:41,697  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:47:42,023  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:53:46,771  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:53:47,116  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:53:47,132  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:53:47,428  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 400 279 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:55:02,566  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:55:03,169  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:55:03,192  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:55:03,449  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078&viewType=1 HTTP/1.1" 400 290 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:55:33,506  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:55:33,892  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:55:33,913  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:55:34,218  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078&viewType=1 HTTP/1.1" 400 290 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:57:21,419  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:57:21,958  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:57:21,974  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:57:22,618  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078&viewType=1 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:58:14,449  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:58:14,842  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 16:58:14,863  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 16:58:15,217  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:15:17,070  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:15:17,504  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:15:17,524  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:15:17,842  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:15:17,858  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:15:18,123  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 400 279 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:16:08,739  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:16:10,080  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:16:10,101  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:16:10,469  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:16:10,486  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:16:10,784  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 400 279 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:16:26,584  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:16:26,958  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:16:26,987  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:16:27,348  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:16:27,364  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:16:27,718  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:17:04,312  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:17:04,663  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:17:04,685  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:17:04,986  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:17:05,008  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:17:05,334  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:25:09,787  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:25:10,336  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:25:10,365  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:25:11,770  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:25:11,786  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:25:12,459  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introcate/delete?tenantId=188078&id=44 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:36:52,558  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:36:53,404  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&authPermission=attribute_add?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:37,418  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:37,815  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:38,737  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:43,438  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introcate/treeDateList?tenantId=188078viewType=1&node=root HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:44,452  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:44,815  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:44,838  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:45,189  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:45,204  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:45,716  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introcate/delete?tenantId=188078&id=46 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:46,726  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:47,023  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:47,045  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:47,371  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:47,387  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:47,737  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:48,739  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:49,042  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:49,063  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:49,415  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 415 282 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:50,442  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:50,768  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:50,789  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:51,132  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/updateStatus?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:52,145  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:52,520  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:52,543  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:52,865  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introduction/introductList?tenantId=188078&viewType=1&categoryId=50&isdisplay=&title=&ismobile=&endDate=&ec_crd=15&ec_p=1&beginDate=&category=50 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:53,889  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:54,471  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:54,582  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:54,946  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/introcate/save?tenantId=188078 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py
+时间:2020-06-24 17:45:54,963  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2004105022-site.pool5.yun300.cn:443 行数: 941 文件名:connectionpool.py
+时间:2020-06-24 17:45:55,383  方法:_make_request  级别:DEBUG  消息:https://2004105022-site.pool5.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/introcate/updateMoveTree?tenantId=188078&id=51&pid=52 HTTP/1.1" 200 None 行数: 442 文件名:connectionpool.py

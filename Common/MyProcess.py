@@ -1,5 +1,4 @@
 import unittest, time, os, multiprocessing
-import commands
 from multiprocessing import Process
 from multiprocessing import  Lock
 from Common.DataHandle import Get_Skip

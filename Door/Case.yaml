@@ -1,14 +1,14 @@
 Door:
   attribute: #属性管理
-    - url: /manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=196498&authPermission=attribute_add  # 添加属性类型地址
+    - url:   # 添加属性类型地址
       modular: 添加属性  # 接口注释
       className: add_attribute  # 接口类名
       funName:
         - test_add_attribute: {  # 添加属性类型
-          url: ,
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&authPermission=attribute_add',
           level: 高,   #级别
           author: 方坤,  #作者
-          bar: {"id":"","appId":2,"templateName":"类型09","memo":"","operType":"add","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"name":"产品名称09","defaultname":"","defaultcode":"","isrequire":"0","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"name","isFix":"0","issearch":"0"},{"name":"编号","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"code","isFix":"0","issearch":"0"},{"name":"计量单位","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"unit","isFix":"0","issearch":"1"},{"name":"重量","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"weight","isFix":"0","issearch":"1"},{"name":"计费重量","defaultname":"","defaultcode":"","isrequire":"1","unit":"kg","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"chargedWeight","isFix":"0","issearch":"1"},{"name":"市场价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"price","isFix":"0","issearch":"1"},{"name":"零售价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"retailPrice","isFix":"0","issearch":"1"},{"name":"库存","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"stock","isFix":"0","issearch":"1"},{"name":"最低起订量","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"moq","isFix":"0","issearch":"1"},{"name":"交货期","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"deliveryTime","isFix":"0","issearch":"1"},{"name":"产品描述","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"1","subFieldType":"content","option":"","code":"content","isFix":"0","issearch":"1"}],"specDataArr":[],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
+          bar: {"id":"","appId":2,"templateName":"有规格","memo":"","operType":"add","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"name":"产品名称","defaultname":"","defaultcode":"","isrequire":"0","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"name","isFix":"0","issearch":"0"},{"name":"编号","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"code","isFix":"0","issearch":"0"},{"name":"计量单位","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"unit","isFix":"0","issearch":"1"},{"name":"重量","isrequire":"1","defaultname":"","defaultcode":"","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"weight","isFix":"0","issearch":"1"},{"name":"计费重量","defaultname":"","defaultcode":"","isrequire":"1","unit":"kg","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"chargedWeight","isFix":"0","issearch":"1"},{"name":"市场价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"price","isFix":"0","issearch":"1"},{"name":"零售价","defaultname":"","defaultcode":"","isrequire":"1","unit":"元","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"retailPrice","isFix":"0","issearch":"1"},{"name":"库存","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"stock","isFix":"0","issearch":"1"},{"name":"最低起订量","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","code":"moq","isFix":"0","issearch":"1"},{"name":"交货期","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","code":"deliveryTime","isFix":"0","issearch":"1"},{"name":"产品描述","defaultname":"","defaultcode":"","isrequire":"1","unit":"","promt":"请输入","isdisplay":"0","fieldType":"1","subFieldType":"content","option":"","code":"content","isFix":"0","issearch":"1"}],"specDataArr":[{"specName":"我的规格3","specType":"0","delSpecValueIds":[],"specValues":[{"specValueName":"4444","imgUrl":""}]}],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
           test_data: {},
           case_name: 添加属性类型,
           expected: [200],  # 预期结果
@@ -37,19 +37,8 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
         }
-          test_edit_attribute_pre: {  # 编辑属性类型后保存
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&authPermission=attribute_edit',
-          level: 中,   #级别
-          author: 方坤,  #作者
-          bar: {"id":1,"appId":2,"templateName":"默认属性类型1","memo":"系统默认模版,全局只有一个","operType":"edit","paramDataArr":[],"buttonDataArr":[],"tabPageDataArr":[],"itemDataArr":[{"isrequire":"0","issearch":"0","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入产品名称","defaultname":"产品名称","defaultcode":"name","aid":1,"isFix":"0","name":"产品名称","isRefer":false,"code":"name"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入编号","defaultname":"编号","defaultcode":"code","aid":2,"isFix":"0","name":"编号","isRefer":false,"code":"code"},{"isrequire":"0","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入最低起订量","defaultname":"最低起订量","defaultcode":"moq","aid":17,"isFix":"0","name":"最低起订量","isRefer":false,"code":"moq"},{"isrequire":"0","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入交货期","defaultname":"交货期","defaultcode":"deliveryTime","aid":18,"isFix":"0","name":"交货期","isRefer":false,"code":"deliveryTime"},{"isrequire":"0","issearch":"1","unit":"kg","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入计费重量","defaultname":"计费重量","defaultcode":"chargedWeight","aid":19,"isFix":"0","name":"计费重量","isRefer":false,"code":"chargedWeight"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"text","option":"","optionReferIdx":[],"promt":"请输入计量单位","defaultname":"计量单位","defaultcode":"unit","aid":3,"isFix":"0","name":"计量单位","isRefer":false,"code":"unit"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入重量","defaultname":"重量","defaultcode":"weight","aid":4,"isFix":"0","name":"重量","isRefer":false,"code":"weight"},{"isrequire":"1","issearch":"1","unit":"元","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入市场价","defaultname":"市场价","defaultcode":"price","aid":5,"isFix":"0","name":"市场价","isRefer":false,"code":"price"},{"isrequire":"1","issearch":"1","unit":"元","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入零售价","defaultname":"零售价","defaultcode":"retailPrice","aid":6,"isFix":"0","name":"零售价","isRefer":false,"code":"retailPrice"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"0","subFieldType":"number","option":"","optionReferIdx":[],"promt":"请输入库存","defaultname":"库存","defaultcode":"stock","aid":7,"isFix":"0","name":"库存","isRefer":false,"code":"stock"},{"isrequire":"1","issearch":"1","unit":"","isdisplay":"0","fieldType":"1","subFieldType":"AREtext","option":"","optionReferIdx":[],"defaultname":"产品描述","defaultcode":"content","aid":8,"isFix":"0","name":"产品描述","isRefer":false,"code":"content"}],"specDataArr":[],"filePageDataArr":[],"needDelId":{"attrIds":[],"paramIds":[],"buttonIds":[],"tabPageIds":[],"specIds":[]},"newLineNums":{}},
-          test_data: {},
-          case_name: 编辑属性类型后保存,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-          }
           test_attribute_copy: {  # 复制属性类型
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?viewType=1&appId=2&id={}&operType=copy',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail',
           level: 中,   #级别
           author: 方坤,  #作者
           bar:,
@@ -60,7 +49,7 @@ Door:
           re_bar: json, # 请求参数
           }
           test_attribute_delete: {  # 删除属性类型
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/delAttribute?viewType=1&authPermission=attribute_del&templateId={}&appId=2',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/delAttribute',
           level: 中,   #级别
           author: 方坤,  #作者
           bar:,
@@ -71,7 +60,7 @@ Door:
           re_bar: json, # 请求参数
             }
           test_list_screen: {  # 列表筛选
-          url: '/manager/gwforward/manager-webapi/product/productAttribute/list?viewType=1&tenantId=188078&_d=1591177451739&appId=2&ec_p=1&ec_crd=15&startDate={}&endDate={}&sortField=&sortType=',
+          url: '/manager/gwforward/manager-webapi/product/productAttribute/list',
           level: 低,   #级别
           author: 方坤,  #作者
           bar:,
@@ -164,6 +153,100 @@ Door:
           re_bar: data, # 请求参数
           }
 
+  classify: #介绍内容-分类管理
+    - url:   # 分类地址
+      modular: 介绍内容-分类管理  # 接口注释
+      className: manage_classify # 接口类名
+      funName:
+        - test_classify_manage: { #分类管理页面
+          url: '/manager/gwforward/manager-webapi/content/introcate/treeDateList',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 分类管理页面,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_add_classify: { #添加分类
+          url: '/manager/gwforward/manager-webapi/content/introcate/save',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"introductionCategory":{"id":"","ismobile":"1","status":"1","sequence":"","parentId":0,"addtype":"add","addPId":"0","addPname":"作为顶级分类","editPId":"","eidtPname":"","savemessage":"","imagepath":"","appId":"1","name":"手动分类","imageurl":""}},
+          test_data: {},
+          case_name: 添加分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_edit_classify: { #编辑分类
+          url: '/manager/gwforward/manager-webapi/content/introcate/save',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"introductionCategory":{"children":[],"createdate":1592928000000,"id":17,"imageurl":"","isParent":false,"ismobile":"1","location":"1","name":"手动分类12","parentId":0,"sequence":1592981198372,"status":1,"useViewType":false,"addPname":"作为顶级分类"}},
+          test_data: {},
+          case_name: 编辑分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_see_classify: { #查看分类
+          url: '/manager/gwforward/manager-webapi/content/introduction/introductList',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 查看分类,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_transfer_classify: { #转移分类
+          url: '/manager/gwforward/manager-webapi/content/introcate/updateMoveTree',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 转移分类,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_hide_classify: { #隐藏电脑版
+          url: '/manager/gwforward/manager-webapi/content/introcate/updateStatus',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {'id':27,'status':0},
+          test_data: {},
+          case_name: 隐藏电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_display_classify: { #显示电脑版
+          url: '/manager/gwforward/manager-webapi/content/introcate/updateStatus',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {'id':27,'status':1},
+          test_data: {},
+          case_name: 显示电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_del_classify: { #删除分类
+          url: '/manager/gwforward/manager-webapi/content/introcate/delete',
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 删除分类,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
   AddCategory: #添加产品分类
     - url:   # 类URL为空
       modular: 添加产品分类,然后获取分类列表，验证创建分类是否存在  # 接口注释
@@ -229,7 +312,7 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
-          test04_product_list: {  # 接口方法名：产品列表
+          test03_product_list: {  # 接口方法名：产品列表
           url: /manager/gwforward/manager-webapi/product/productInformation/list,
           level: 中,
           author: 姜娜,
@@ -240,73 +323,6 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
-          test05_news_list: {  # 接口方法名：相关内容获取新闻资讯
-          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
-          level: 高,
-          author: 姜娜,
-          bar:{"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"123312321","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-24 14:47","mobilePublishTime":"2020-06-24 14:47","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"123312321"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[{"appId":2,"contentList":[]},{"appId":3,"contentList":[1709]}],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[50],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
-          relation_data: {},    #关联接口
-          case_name: 相关内容获取新闻资讯,
-          expected: [200],  # 预期结果添加成功，产品列表显示正常
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-          }
-          test06_getSeoList: {  # 接口方法名：优化推广
-          url: /manager/gwforward/manager-webapi/product/productInformation/getSeoList,
-          level: 中,
-          author: 姜娜,
-          bar:{},
-          relation_data: {},    #关联接口
-          case_name: 优化推广,
-          expected: [200],  # 预期结果添加成功，产品列表显示正常
-          mode: get,  # 请求类型
-          re_bar: json, # 请求参数
-          }
-          test07_choiceshow: {  # 接口方法名：选择橱窗
-          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
-          level: 中,
-          author: 姜娜,
-          bar:{"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"我的产品001","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-17 11:41","mobilePublishTime":"2020-06-17 11:41","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"我的产品001"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[6],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"2","auth":"GW_:2:detail:view:","roleIds":"1"}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
-          relation_data: {},    #关联接口
-          case_name: 选择橱窗,
-          expected: [200],  # 预期结果添加成功，产品列表显示正常
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-          }
-          test08_choicemark: {  # 接口方法名：选择标记
-          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
-          level: 中,
-          author: 姜娜,
-          bar:{"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"我的产品001","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-17 11:41","mobilePublishTime":"2020-06-17 11:41","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"我的产品001"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[6],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"2","auth":"GW_:2:detail:view:","roleIds":"1"}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
-          relation_data: {},    #关联接口
-          case_name: 选择标记,
-          expected: [200],  # 预期结果添加成功，产品列表显示正常
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-          }
-          test09_editor: {  # 接口方法名：编辑库存和价格
-          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
-          level: 中,
-          author: 姜娜,
-          bar:{"show360ImageList":[],"operType":"edit","productInformation":{"appId":2,"attributeTemplateId":1,"chargedWeight":0,"createTime":1592991734000,"deliveryTime":"1","id":114,"isSyncQR":false,"ismobile":0,"ispublish":1,"keyword":"","linkUrl":"","mobileIspublish":1,"mobileLinkUrl":"","mobilePublishTime":"2020-06-17 11:41","mobileWindowType":"1","moq":1,"price":"8000","productCode":"","productName":"我的产品1592991731.141973","productType":0,"publishTime":"2020-06-24 17:42","pvs":1000,"qrbuyUrl":"","retailPrice":"8000","saveSelf":false,"sequence":1592991734015,"shortUrl":"5ef31ff69d80db1CaTS","status":0,"stock":"900","syncQRStatus":2,"unit":"0","updateTime":1592991734000,"useViewType":false,"videoThumbnail":"","weight":0,"windowType":"1","code":"","name":"我的产品1592991731.141973"},"productBigField":{"content":"","mobileContent":"","mobileSummary":"","productId":114,"summary":"","useViewType":false},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[111],"showcaseIds":[41],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"2","auth":"GW_:2:detail:view:","roleIds":"1"}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":"","categoryList":[{"appId":2,"categoryName":"分类1592991194.0468266","categoryType":"0","createtime":1592928000000,"id":111,"imageurl":"","isSearch":0,"ismobile":0,"leaf":false,"linkurl":"","location":"1","mobileLinkUrl":"","mobileStyleCategoryListId":"","mobileWindowType":"1","parentId":0,"proCount":0,"sequence":1592991197304,"status":0,"styleCategoryListId":"","updatetime":1592991197000,"useViewType":false,"windowtype":"1"}]},
-          relation_data: {},    #关联接口
-          case_name: 编辑库存和价格,
-          expected: [200],  # 预期结果添加成功，产品列表显示正常
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-          }
-          test10_close_sku: {  # 接口方法名：批量/隐藏货品
-          url: /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate,
-          level: 中,
-          author: 姜娜,
-          bar:{"show360ImageList":[],"operType":"edit","productInformation":{"appId":2,"attributeTemplateId":1,"chargedWeight":0,"createTime":1592991734000,"deliveryTime":"1","id":114,"isSyncQR":false,"ismobile":0,"ispublish":1,"keyword":"","linkUrl":"","mobileIspublish":1,"mobileLinkUrl":"","mobilePublishTime":"2020-06-17 11:41","mobileWindowType":"1","moq":1,"price":8000,"productCode":"","productName":"我的产品1592991731.141973","productType":0,"publishTime":"2020-06-24 17:42","pvs":1000,"qrbuyUrl":"","retailPrice":8000,"saveSelf":false,"sequence":1592991734015,"shortUrl":"5ef31ff69d80db1CaTS","status":1,"stock":900,"syncQRStatus":2,"unit":"0","updateTime":1592992854000,"useViewType":false,"videoThumbnail":"","weight":0,"windowType":"1","code":"","name":"我的产品1592991731.141973"},"productBigField":{"content":"","mobileContent":"","mobileSummary":"","productId":114,"summary":"","useViewType":false},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[111],"showcaseIds":[41],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[{"selected":false,"id":"","code":"123","price":8000,"retailPrice":8000,"stock":900,"moq":1,"deliveryTime":"1","weight":0,"chargedWeight":0,"status":1,"isDefault":1,"name":"","productId":114,"templateId":1,"productSkuSpecs":[{"productId":114,"specId":1,"specValueId":1,"name":"10寸","specName":"尺寸","skuId":""}]},{"selected":false,"id":"","code":"124","price":8000,"retailPrice":8000,"stock":900,"moq":1,"deliveryTime":"1","weight":0,"chargedWeight":0,"status":0,"isDefault":0,"name":"","productId":114,"templateId":1,"productSkuSpecs":[{"productId":114,"specId":1,"specValueId":2,"name":"12寸","specName":"尺寸","skuId":""}]}],"specConfigList":[{"id":"","productId":114,"specId":1,"specValueId":1,"alias":"10寸","productSpecImgList":[]},{"id":"","productId":114,"specId":1,"specValueId":2,"alias":"12寸","productSpecImgList":[]}],"authList":[{"authType":"2","auth":"GW_:2:detail:view:","roleIds":"1"}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":"","categoryList":[{"appId":2,"categoryName":"分类1592991194.0468266","categoryType":"0","createtime":1592928000000,"id":111,"imageurl":"","isSearch":0,"ismobile":0,"leaf":false,"linkurl":"","location":"1","mobileLinkUrl":"","mobileStyleCategoryListId":"","mobileWindowType":"1","parentId":0,"proCount":0,"sequence":1592991197304,"status":0,"styleCategoryListId":"","updatetime":1592991197000,"useViewType":false,"windowtype":"1"}]},
-          relation_data: {},    #关联接口
-          case_name: 批量/隐藏货品,
-          expected: [200],  # 预期结果添加成功，产品列表显示正常
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-          }
-
   listShowcase: # 橱窗列表及添加橱窗
     - url:   # 橱窗管理
       modular: 橱窗管理  # 接口注释
@@ -465,7 +481,7 @@ Door:
         }
           test_del_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/delete/',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {"id": ''},
           relation_data: {},    #关联接口
@@ -475,7 +491,7 @@ Door:
           re_bar: data, # 请求参数
       }
           test_search_content: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/content/introduction/searchTips/',
+          url: '/manager/gwforward/manager-webapi/content/introduction/searchTips',
           level: 中,
           author: 宋宇,
           bar: {tenantId: 196498,viewType: 1,keywords: '请输入标题',parentId: 0},
@@ -483,7 +499,7 @@ Door:
           case_name: 搜索分类内容,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
-          re_bar: params, # 请求参数
+          re_bar: json, # 请求参数
       }
           test_filter_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/introductList/',
@@ -509,7 +525,7 @@ Door:
         }
           test_drag_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/updateSortCategoryAndContentList/',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {id: 1,orderid: 5, operatype: before,ordertype: nr,type: nr},
           relation_data: {},    #关联接口
@@ -519,8 +535,8 @@ Door:
           re_bar: data, # 请求参数
         }
           test_updata_content: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/content/introcate/treeDateList/',
-          level: 高,
+          url: '/manager/gwforward/manager-webapi/content/introcate/treeDateList',
+          level: 中,
           author: 宋宇,
           bar: {viewType: 1, tenantId: 188078, node: root},
           relation_data: {},    #关联接口
@@ -541,8 +557,8 @@ Door:
           re_bar: data, # 请求参数
         }
           test_move_content: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/content/introduction/updateChange/',
-          level: 高,
+          url: '/manager/gwforward/manager-webapi/content/introduction/updateChange',
+          level: 中,
           author: 宋宇,
           bar: {viewType: 1, tenantId: 188078, id: '', cateid: ''},
           relation_data: {},    #关联接口
@@ -596,7 +612,7 @@ Door:
           re_bar: params, # 请求参数
         }
           test_batch_delete_content: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/content/introduction/delete/',
+          url: '/manager/gwforward/manager-webapi/content/introduction/delete',
           level: 中,
           author: 宋宇,
           bar: {id: 37},
@@ -652,7 +668,7 @@ Door:
         }
           test_add_link_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/save/',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {"introductionContent":{"linkurl":"www.baidu.com","mobileLinkUrl":"","spreadId":"","spreadName":"","spreadType":0,"appId":"1","subtype":"0","contentList":"","catid":0,"source":0,"catname":"","ConfigJson":"[{savemessage: 0,treeValue:['{id:35,pId:0,name:'新后台添加分类测试2'}','{id:34,pId:0,name:'新后台添加分类测试1-1'}','{id:39,pId:0,name:'333'}','{id:41,pId:0,name:'555'}','{id:40,pId:0,name:'方法'}','{id:45,pId:40,name:'fdfs'}','{id:43,pId:40,name:'2224444'}','{id:42,pId:43,name:'11'}]","videoIds":"","canTitle":"","canDescription":"","canTitleSign":"","canKeywordsSign":"","canDescriptionSign":"","canAddDescription":"","contenttype":"1","ismobile":0,"isdisplay":0,"windowtype":1,"mobileWindowType":1,"categoryId":4,"keywords":"","pageId":"","mobilePageId":"","imageurl":"","imageId":"","title":"哈喽","PVS":"","selectcate":555},"relecontent":[{"appId":1,"contentList":[]}],"destype":0,"seoState":1,"hidTitle":[{"id":"name","name":"介绍类应用名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":"","hidDescription":"","hidTitleSign":"","hidKeywordsSign":"","hidDescriptionSign":"","hidAddDescription":"","content":"","mobileContent":"","description":"","choiceUrl":"","choiceUrlM":"","PVS":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"}],"seoKeywords":[{"name":"介绍类应用关键词","id":"keyword"},{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"}],"seoDescription":[{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"},{"name":"介绍类应用概要","id":"summary"}],"device":"","seoAuto":true},
           relation_data: {},    #关联接口
@@ -668,7 +684,7 @@ Door:
       className: info_news  # 接口类名
       funName:
         - test_all_news: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/content/info/info_page?viewType=1&tenantId=188078",
+          url: "/manager/gwforward/manager-webapi/content/info/info_page",
           level: 中,   #级别
           author: 陈建波,  #作者
           bar: {top: -1,recommend: -1,startDate: endDate=, pcStatus: -1, mobileStatus: -1,cateId: -1,keywords: '',wd: '',queryType: 4, ec_p: 1,ec_crd: 15,ec_s: '',v: 1,orderColumn: '',orderType: '',ec_s_title: '',ec_s_categorys: '',ec_s_pubDate: '',ec_s_viewCount: '', ec_s_showFlag: '', ec_s_showMobileFlag: ''},
@@ -679,7 +695,7 @@ Door:
           re_bar: json, # 请求参数
           }
           test_noclass_news: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/content/info/info_page?viewType=1&tenantId=188078",
+          url: "/manager/gwforward/manager-webapi/content/info/info_page",
           level: 中,   #级别
           author: 陈建波,  #作者
           bar: {top: -1,recommend: -1,startDate: '', endDate: '',pcStatus: -1,mobileStatus: -1,cateId: 0,keywords: '',wd: '',queryType: 4,ec_p: 1,ec_crd: 15,ec_s: '',v: 1,orderColumn: '',orderType: '', ec_s_title: '',ec_s_categorys: '',ec_s_pubDate: '',ec_s_viewCount: '',ec_s_showFlag: '',ec_s_showMobileFlag: ''},
@@ -690,7 +706,7 @@ Door:
           re_bar: json, # 请求参数
           }
           test_search_news: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/content/info/info_page?viewType=1&tenantId=188078",
+          url: "/manager/gwforward/manager-webapi/content/info/info_page",
           level: 中,   #级别
           author: 陈建波,  #作者
           bar: {top: -1,recommend: -1,startDate: '', endDate: '',pcStatus: -1,mobileStatus: -1,cateId: 0,keywords: '',wd: '',queryType: 4,ec_p: 1,ec_crd: 15,ec_s: '',v: 1,orderColumn: '',orderType: '', ec_s_title: '',ec_s_categorys: '',ec_s_pubDate: '',ec_s_viewCount: '',ec_s_showFlag: '',ec_s_showMobileFlag: ''},
@@ -700,9 +716,8 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
-
           test_screen_news: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/content/info/info_page?viewType=1&tenantId=188078",
+          url: "/manager/gwforward/manager-webapi/content/info/info_page",
           level: 中,   #级别
           author: 陈建波,  #作者
           bar: {top: -1,recommend: -1,startDate: '', endDate: '',pcStatus: -1,mobileStatus: -1,cateId: 0,keywords: '',wd: '',queryType: 4,ec_p: 1,ec_crd: 15,ec_s: '',v: 1,orderColumn: '',orderType: '', ec_s_title: '',ec_s_categorys: '',ec_s_pubDate: '',ec_s_viewCount: '',ec_s_showFlag: '',ec_s_showMobileFlag: ''},
@@ -713,7 +728,7 @@ Door:
           re_bar: json, # 请求参数
           }
           test_turnpage_news: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/content/info/info_page?viewType=1&tenantId=188078",
+          url: "/manager/gwforward/manager-webapi/content/info/info_page",
           level: 中,   #级别
           author: 陈建波,  #作者
           bar: {top: -1,recommend: -1,startDate: '', endDate: '',pcStatus: -1,mobileStatus: -1,cateId: 0,keywords: '',wd: '',queryType: 4,ec_p: 1,ec_crd: 15,ec_s: '',v: 1},
@@ -724,7 +739,7 @@ Door:
           re_bar: json, # 请求参数
           }
           test_theadsort_news: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/content/info/info_page?viewType=1&tenantId=188078",
+          url: "/manager/gwforward/manager-webapi/content/info/info_page",
           level: 中,   #级别
           author: 陈建波,  #作者
           bar: {top: -1,recommend: -1,startDate: endDate=, pcStatus: -1, mobileStatus: -1,cateId: -1,keywords: '',wd: '',queryType: 4, ec_p: 1,ec_crd: 15,ec_s: '',v: 1,orderColumn: '',orderType: '',ec_s_title: '',ec_s_categorys: '',ec_s_pubDate: '',ec_s_viewCount: '', ec_s_showFlag: '', ec_s_showMobileFlag: ''},
@@ -735,7 +750,7 @@ Door:
           re_bar: json, # 请求参数
           }
           test_dragsort_news: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/content/info/updateSort?viewType=1&tenantId=188078",
+          url: "/manager/gwforward/manager-webapi/content/info/updateSort",
           level: 中,   #级别
           author: 陈建波,  #作者
           bar: {maxOrder: 9,minOrder: 4,direction: -1,targetId: 1,sectionIds: 2,isTop: false},
@@ -745,6 +760,7 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
+
           test_edit_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/update",
           level: 高,   #级别
@@ -767,7 +783,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
-        }
+          }
           test_updatetransfer_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/updateTransfer",
           level: 中,   #级别
@@ -778,7 +794,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_updatepcview_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
@@ -790,7 +806,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_hide_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
@@ -802,7 +818,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_copy_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/add",
@@ -814,7 +830,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_top_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/updateTop",
@@ -837,7 +853,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_savetags_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/saveTags",
@@ -849,7 +865,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_delete_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/delete",
@@ -861,7 +877,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_transfer_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/updateTransfer",
@@ -885,7 +901,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_hidepcview_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/updatePcview",
@@ -897,7 +913,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_batchdelete_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/delete",
@@ -909,7 +925,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_batchrecommend_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/updateRecommend",
@@ -921,7 +937,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_cancelrecommend_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/updateRecommend",
@@ -933,7 +949,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
-        }
+          }
 
           test_canceltop_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/updateTop",
@@ -1041,7 +1057,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
-        }
+          }
 
           test_brelevant_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/add",
@@ -1089,7 +1105,7 @@ Door:
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
-        }
+          }
 
           test_aselect_news: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/content/info/add",
@@ -1102,107 +1118,6 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
-
-  tab: # 标记管理
-    - url:  # 新闻资讯
-      modular: 标记管理  # 接口注释
-      className: info_tab  # 接口类名
-      funName:
-        - test_all_tablist: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/product/productMark/list",
-          level: 中,   #级别
-          author: 宋宇,  #作者
-          bar: {appId: 2},
-          test_data: {},
-          case_name: 全部标记列表,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_add_tab_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productMark/save',
-          level: 高,
-          author: 宋宇,
-          bar: {appId: 2, markName: 小熊2, imageId: 60, imageurl: /repository/image/kaAnY7BRRIuCo67vZDJJig.jpg},
-          relation_data: {},    #关联接口
-          case_name: 新增标记,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: data, # 请求参数
-        }
-          test_edit_tab: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/product/productMark/save",
-          level: 中,   #级别
-          author: 宋宇,  #作者
-          bar: {appId: 2, markName: 编辑, imageId: 60, imageurl: /repository/image/kaAnY7BRRIuCo67vZDJJig.jpg, id: 18},
-          test_data: {},
-          case_name: 编辑标记,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: data, # 请求参数
-        }
-          test_delete_tab: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/product/productMark/delete",
-          level: 中,   #级别
-          author: 宋宇,  #作者
-          bar: {appId: 2, authPermission: tag_del, id: 5},
-          test_data: {},
-          case_name: 删除标记,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_add_img_tab: {  # 添加属性类型
-          url: "/manager/gwforward/dssresources/imageRepository/imageFileUpload?viewType=1",
-          level: 中,   #级别
-          author: 宋宇,  #作者
-          bar: {appId: ""},
-          test_data: {},
-          case_name: 上传照片,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: data, # 请求参数
-        }
-
-  class: # 分类管理
-    - url:  # 新闻资讯
-      modular: 分类管理  # 接口注释
-      className: info_class  # 接口类名
-      funName:
-        - test_all_classlist: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/product/appCategory/list",
-          level: 中,   #级别
-          author: 宋宇,  #作者
-          bar: {appId: 2, pid: 0},
-          test_data: {},
-          case_name: 全部分类列表,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_delete_class: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/product/appCategory/delete",
-          level: 中,   #级别
-          author: 宋宇,  #作者
-          bar: {appId: 2, authPermission: classify_del, id: 5},
-          test_data: {},
-          case_name: 删除分类,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_add_class: {  # 添加属性类型
-          url: "/manager/gwforward/manager-webapi/product/appCategory/save",
-          level: 中,   #级别
-          author: 宋宇,  #作者
-          bar: {"category":{"id":"","ismobile":0,"status":0,"isSearch":0,"sequence":"","imageId":"","imageurl":"","parentId":"","addPId":"","addPname":"","editPId":"","eidtPname":"","categoryType":"0","windowtype":1,"mobileWindowType":1,"styleCategoryListId":"","styleProductDetailId":"","gototype":0,"defTabStyle":"","defDetailStyle":"","mobileStyleCategoryListId":"","mobileStyleProductDetailId":"","defTabStyleM":"","defDetailStyleM":"","appId":2,"categoryName":"点点点","linkurl":"","mobileLinkUrl":""},"choiceUrl":"","choiceUrlM":"","destype":0,"description":"","content":"","mobileContent":"","descriptionS":"","seoState":1,"hidTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"hidDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"hidTitleSign":"_","hidKeywordsSign":",","hidDescriptionSign":"-","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"authData":[{"authType":1,"authStr":"GW_:2:category:view:","roleIds":""}],"authStr":"GW_:2:category:view:","authType":1,"roleIds":""},
-          test_data: {},
-          case_name: 新增标记,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-        }
-
 
   newsclass: #新闻资讯
     - url:  # 新闻资讯
@@ -1457,7 +1372,7 @@ Door:
           url: "/manager/gwforward/dssresources/imageRepository/findByPagination",
           level: 中,   #级别
           author: 陈建波,  #作者
-          bar: {pageSize: 15,currentPage: 1,queryStatus: 1,startDate: '2020-06-08+00:00:00',endDate: '2020-06-18+23:59:59',classId: 1},
+          bar: {pageSize: 15,currentPage: 1,queryStatus: 1,startDate: 2020-06-08+00:00:00,endDate: 2020-06-18+23:59:59,classId: 1},
           test_data: {},
           case_name: 筛选图片,
           expected: ['200'],  # 预期结果
@@ -1801,242 +1716,7 @@ Door:
           re_bar: data, # 请求参数
           }
 
-  product: #内容模块
-    - url:  # 邮件地址
-      modular: 介绍内容  # 接口注释
-      className: getlist_product  # 接口类名
-      funName:
-        - test_add_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate',
-          level: 高,
-          author: 宋宇,
-          bar: {"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"接口产品","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-15 09:39","mobilePublishTime":"2020-06-15 09:39","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"10天","moq":1,"chargedWeight":0,"name":"接口产品"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[5],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
-          relation_data: {},    #关联接口
-          case_name: 添加普通产品,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-        }
-          test_add_link_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate',
-          level: 高,
-          author: 宋宇,
-          bar: {"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"接口链接产品","productType":1,"unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-15 09:53","mobilePublishTime":"2020-06-15 09:53","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"www.baidu.com","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"","moq":1,"chargedWeight":0},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[5],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
-          relation_data: {},    #关联接口
-          case_name: 添加链接产品,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-        }
-          test_get_all_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/list',
-          level: 高,
-          author: 宋宇,
-          bar: {"appId":2,"cateId":0,"showCaseId":null,"attributeId":0,"pcStatus":"null","moStatus":"null","startDate":"","endDate":"","pageSize":15,"pageNumber":1,"orderColumn":"","order_productName":"","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":""},
-          relation_data: {},    #关联接口
-          case_name: 全部产品,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-        }
-          test_search_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/searchTips',
-          level: 高,
-          author: 宋宇,
-          bar: {appId: 2, keywords: 接口, categoryId: 0, showcaseId: "", status: "", ismobile: "", beginDate:  ""},
-          relation_data: {},    #关联接口
-          case_name: 搜索产品,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: data, # 请求参数
-        }
-          test_screen_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/list',
-          level: 高,
-          author: 宋宇,
-          bar: {"appId":2,"cateId":5,"showCaseId":null,"attributeId":0,"pcStatus":"null","moStatus":"null","startDate":"","endDate":"","keyword":"","pageSize":15,"pageNumber":1,"orderColumn":"","order_productName":"","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":"","categoryName":"111"},
-          relation_data: {},    #关联接口
-          case_name: 分类筛选产品,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-        }
-          test_drag_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/orderByProductNew',
-          level: 高,
-          author: 宋宇,
-          bar: {appId: 2, scopeIDs: 31,32},
-          relation_data: {},    #关联接口
-          case_name: 拖拽产品排序,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-        }
-          test_headers_sort_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/list',
-          level: 高,
-          author: 宋宇,
-          bar: {"appId":2,"cateId":0,"showCaseId":null,"attributeId":0,"pcStatus":"null","moStatus":"null","startDate":"","endDate":"","pageSize":15,"pageNumber":1,"orderColumn":"order_productName","order_productName":"asc","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":""},
-          relation_data: {},    #关联接口
-          case_name: 表头排序,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-        }
-          test_class_sort_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/list',
-          level: 高,
-          author: 宋宇,
-          bar: {"appId":2,"cateId":0,"showCaseId":null,"attributeId":0,"pcStatus":"null","moStatus":"null","startDate":"","endDate":"","pageSize":15,"pageNumber":1,"orderColumn":"order_cateName","order_productName":"asc","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":""},
-          relation_data: {},    #关联接口
-          case_name: 分类排序,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: data, # 请求参数
-        }
-          test_export_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productStream/validExportExcel/',
-          level: 高,
-          author: 宋宇,
-          bar: {authPermission: product_excel, appId: 2, categoryId: 0, startDate: "", endDate: "", leaf: false},
-          relation_data: {},    #关联接口
-          case_name: 导出全部产品,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_import_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productStream/importZip',
-          level: 高,
-          author: 宋宇,
-          bar: {isOverwrite: true, appId: 2},
-          relation_data: {},    #关联接口
-          case_name: 导入产品,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: data, # 请求参数
-        }
-          test_edit_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate',
-          level: 高,
-          author: 宋宇,
-          bar: {"show360ImageList":[],"operType":"edit","productInformation":{"appId":2,"attributeTemplateId":1,"chargedWeight":0,"createTime":1592186274000,"deliveryTime":"","id":32,"isSyncQR":false,"ismobile":0,"ispublish":1,"keyword":"","linkUrl":"http://www.baidu.com","mobileIspublish":1,"mobileLinkUrl":"","mobilePublishTime":"2020-06-15 09:53","mobileWindowType":1,"moq":1,"price":0,"productName":"接口链接产品15921862711","productType":1,"publishTime":"2020-06-15 09:53","pvs":1000,"retailPrice":0,"saveSelf":false,"sequence":1592186274948,"shortUrl":"5ee6d5a317507rbfnHO","status":0,"stock":0,"syncQRStatus":2,"unit":"0","updateTime":1592189023000,"useViewType":false,"videoThumbnail":"","weight":0,"windowType":1,"name":"接口链接产品1592186271"},"productBigField":{"content":"","mobileContent":"","mobileSummary":"","productId":32,"summary":"","useViewType":false},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[5],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":"","categoryList":[{"appId":2,"categoryName":"111","categoryType":"0","createtime":1587312000000,"id":5,"imageurl":"","isSearch":0,"ismobile":0,"leaf":false,"linkurl":"","location":"1","mobileLinkUrl":"","mobileStyleCategoryListId":"","mobileWindowType":"1","parentId":0,"proCount":0,"sequence":1587375289318,"status":0,"styleCategoryListId":"","updatetime":1587375289000,"useViewType":false,"windowtype":"1"}]},
-          relation_data: {},    #关联接口
-          case_name: 编辑产品,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-        }
-          test_preview_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/getUrl',
-          level: 高,
-          author: 宋宇,
-          bar: {appId: 2, id: 82},
-          relation_data: {},    #关联接口
-          case_name: 预览产品,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_get_product_classid: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/appCategory/list',
-          level: 高,
-          author: 宋宇,
-          bar: {appId: 2, pid: 0},
-          relation_data: {},    #关联接口
-          case_name: 获取产品分类id,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_move_product_classid: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/appCategory/list',
-          level: 高,
-          author: 宋宇,
-          bar: {appId: 2, authPermission: product_update, proids: 82, cateids: 64},
-          relation_data: {},    #关联接口
-          case_name: 转移产品分类id,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_hide_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/updateStatus',
-          level: 高,
-          author: 宋宇,
-          bar: {appId: 2, authPermission: product_update, ids: 87, status: 1},
-          relation_data: {},    #关联接口
-          case_name: 隐藏电脑版,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_show_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/updateStatus',
-          level: 高,
-          author: 宋宇,
-          bar: {appId: 2, authPermission: product_update, ids: 87, status: 0},
-          relation_data: {},    #关联接口
-          case_name: 显示电脑版,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_tab_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/markProduct',
-          level: 高,
-          author: 宋宇,
-          bar: {appId: 2, authPermission: product_update, proid: 88, markids: 1},
-          relation_data: {},    #关联接口
-          case_name: 标记产品,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_shopwindow_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/markProduct',
-          level: 高,
-          author: 宋宇,
-          bar: {appId: 2, authPermission: product_update, proid: 88, caseids: 3},
-          relation_data: {},    #关联接口
-          case_name: 选择橱窗,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_share_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/interaction/cron/share/info',
-          level: 高,
-          author: 宋宇,
-          bar: {tenantId: null},
-          relation_data: {},    #关联接口
-          case_name: 分享,
-          expected: [200],  # 预期结果
-          mode: post,  # 请求类型
-          re_bar: json, # 请求参数
-        }
-          test_one_delete_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/delete',
-          level: 高,
-          author: 宋宇,
-          bar: {authPermission: product_del, appId: 2, ids: 65},
-          relation_data: {},    #关联接口
-          case_name: 删除单个产品,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
-          test_batch_delete_product: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/product/productInformation/delete',
-          level: 高,
-          author: 宋宇,
-          bar: {authPermission: product_del, appId: 2, ids: 65},
-          relation_data: {},    #关联接口
-          case_name: 批量删除产品,
-          expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
-        }
+
 
 
 

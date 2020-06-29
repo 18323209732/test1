@@ -6,33 +6,30 @@ from Common.FontColor import outcome
 from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
-import urllib3, time
-from Door.listShowcase.Public import readyaml,writeyaml,GetAll,readconfig_ini
+import urllib3
+import time
+from Door.classify.Public import Classify
 
 
-class manage_listShowcase(MyTest):
+class manage_classify(MyTest):
 
     condition = True
     type_condition = True
-    # 橱窗管理
+    # 介绍内容-分类管理
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test01_add_listShowcase(self):
-        # 添加/编辑橱窗
+    def test_classify_manage(self):
+        # 分类管理页面
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
                 
-            url = ConfigYaml(self.projectName).base_url + self.url
-            for i, y in [('1', 'w'), ('2', 'a')]:
-                self.data['showcaseName'] = '橱窗%s号' %i
-                self.data['showcaseId'] = ''
-                r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
-                self.result = r.json()
-                # print(self.result)
-                writeyaml(w_key=self.result['data']['showcaseName'], w_value=self.result['data']['id'], n=y)
-                self.time = r.elapsed.total_seconds()
+            url = ConfigYaml(self.projectName).base_url + self.url + 'viewType=1&node=root'
+            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
@@ -40,98 +37,18 @@ class manage_listShowcase(MyTest):
         
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test02_listShowcase(self):
-
-        # 橱窗列表
+    def test_add_classify(self):
+        # 添加分类
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.type_condition = False
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
                 
-            url = ConfigYaml(self.projectName).base_url + self.url+'&ec_crd=15&ec_p=1&appId=2'
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            self.result = r.json()
-
-            self.time = r.elapsed.total_seconds()
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red', self.singular)
-            return self.singular
-
-    # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test03_keywords_listShowcase(self):
-        # 筛选橱窗
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
-            url = ConfigYaml(self.projectName).base_url + self.url+\
-                  '&ec_crd=15&ec_p=1&appId=2&keywords=01&startDate=2020-06-17+00:00&endDate=%s+23:59' % time.strftime("%Y-%m-%d", time.localtime())
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            self.result = r.json()
-
-            self.time = r.elapsed.total_seconds()
-            return self.url
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red', self.singular)
-            return self.singular
-        
-    # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test04_saveProductShowcaseRelation(self):
-        # 橱窗选择产品
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-            proIds = GetAll().get_product_attribute()
-            caseId = readyaml(file='listShowcase', key='橱窗1号')
-            url = ConfigYaml(self.projectName).base_url + self.url + '&appId=2&proIds=%s&caseId=%s' % (proIds,caseId)
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            self.result = r.json()
-            self.time = r.elapsed.total_seconds()
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red', self.singular)
-            return self.singular
-        
-    # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test05_ShowcaseRelation(self):
-        # 选择/批量选择橱窗
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-            proIds = GetAll().get_product_attribute()
-            caseId = readyaml(file='listShowcase', key='橱窗1号')
-            url = ConfigYaml(self.projectName).base_url + self.url +'&appId=2&proids=%s&caseids=%s' % (proIds,caseId)
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            self.result = r.json()
-            self.time = r.elapsed.total_seconds()
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red', self.singular)
-            return self.singular
-        
-    # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test06_delProduct(self):
-        # 橱窗批量/移除产品
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        try:
-            proIds = GetAll().get_product_list()
-            caseId = readyaml(file='listShowcase', key='橱窗1号')
             url = ConfigYaml(self.projectName).base_url + self.url
-            self.data['ids'] = proIds
-            self.data['showcaseId'] = caseId
-            headers = readconfig_ini(v=False)
-            r = requests.post(url, headers=headers, data=self.data, stream=True, verify=False)
+            self.data['introductionCategory']['name'] = '接口分类{}'.format(time.time())
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-            assert readyaml(file='listShowcase', key='删除') == '成功', '橱窗移除产品失败！'
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -141,16 +58,17 @@ class manage_listShowcase(MyTest):
         
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test07_Productlist(self):
-        # 筛选并搜索橱窗里显示的产品列表
+    def test_edit_classify(self):
+        # 编辑分类
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-            self.data["showCaseId"] = readyaml(file='listShowcase', key='橱窗1号')
+            id = Classify().add_classify() #添加分类id
             url = ConfigYaml(self.projectName).base_url + self.url
-            headers = readconfig_ini()
-            r = requests.post(url, headers=headers, json=self.data, stream=True, verify=False)
+            self.data['introductionCategory']['name'] = '编辑分类{}'.format(time.time())
+            self.data['introductionCategory']['id'] = id
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -161,27 +79,101 @@ class manage_listShowcase(MyTest):
         
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test08_delete(self):
-        # 筛选并搜索橱窗里显示的产品列表
+    def test_see_classify(self):
+        # 查看分类
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-            # 获取橱窗列表所有数据，找出没有产品的橱窗
-            url = ConfigYaml(self.projectName).base_url + manage_listShowcase.test03_keywords_listShowcase + '&ec_crd=15&ec_p=1&appId=2'
+
+            id = Classify().add_classify()  # 添加分类id
+            url = ConfigYaml(self.projectName).base_url + self.url + '&viewType=1&categoryId={}&isdisplay=&title=&ismobile=&endDate=&ec_crd=15&ec_p=1&beginDate=&category={}'.format(id,id)
             print(url)
+            print(self.headers)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
             print(self.result)
-            productNum = self.result['data']['list']['productNum']
-            for i in productNum:
-                if productNum == 0:
-                    id = self.result['data']['list']['id']
-                    # 删除没有产品的橱窗
-                    self.data['id'] = id
-                    url = ConfigYaml(self.projectName).base_url + self.url
-                    r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
-                    self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_transfer_classify(self):
+        # 转移分类
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+
+            id = Classify().add_classify()  # 添加分类id
+            pid = Classify().add_classify()  # 添加分类id
+            url = ConfigYaml(self.projectName).base_url + self.url + '&id={}&pid={}'.format(id,pid)
+            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_hide_classify(self):
+        # 隐藏电脑版
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+
+            id = Classify().add_classify()  # 添加分类id
+            url = ConfigYaml(self.projectName).base_url + self.url
+            self.data['id'] = id
+            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_display_classify(self):
+        # 显示电脑版
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+            id = Classify().add_hide_classify()
+            url = ConfigYaml(self.projectName).base_url + self.url
+            self.data['id'] = id
+            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test_del_classify(self):
+        # 删除分类
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+            id = Classify().add_hide_classify()
+            url = ConfigYaml(self.projectName).base_url + self.url + '&id={}'.format(id)
+            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
         except:
