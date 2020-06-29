@@ -7,7 +7,7 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-from Door.content.Public import Public_path, print_debug_info
+from Door.classes.Public import Public_path, print_debug_info
 from Common.RWyaml import RWyaml
 import time
 
@@ -28,7 +28,7 @@ class info_classes(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             i = r.json()['data'][-1]
             RWyaml(Public_path()).write_yaml('class', 'id', i['id'])  # 标记id存入public.yaml文件
 
