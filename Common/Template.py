@@ -192,7 +192,7 @@ html_all_case = '''
         <td colspan='8'>
             <div>
                <pre class="text-left">
-               {}
+{}
                </pre>
             </div>
         </td>

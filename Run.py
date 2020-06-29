@@ -89,14 +89,14 @@ class RunAll:
         self.data = CaseYaml().all_case                                 # 获取用例所有数据
         self.sql = ConfigYaml('sql').base_config                        # 是否开启mysql存储数据
         self.redis = ConfigYaml('redis').base_config                    #是否开始redis存储数据
+        self.mail = ConfigYaml('Mail').base_config
+        self.wechat = ConfigYaml('Wechat').base_config
         self.eachtimes = ConfigYaml('eachtimes').base_config            #运行次数
         self.search_max_result = ConfigYaml('search_max_result').sql    #查询最大数字
         self.operatmode = ConfigYaml('operatmode').base_config          #选择执行方式，
         self.basenumber = ConfigYaml('basenumber').base_config          #执行次数，基数
         self.runfrequency = ConfigYaml('runfrequency').base_config      #只运行失败和错误的用例次数
         self.againrunall = ConfigYaml('againrun').base_config           #运行失败和错误的用例多少次数之后再整体运行多少次
-        self.create_table = ConfigYaml('create_table').sql              #创建response表
-        self.create_result = ConfigYaml('create_result').sql            #创建result表
         self.report_path = Any_Path("template", 'report.html')       #测试报告存放路径
         self.oldstrcs = '../../static/mycss.css'                       #静态文件地址css
         self.oldstrjs = '../../static/alljs.js'                         #静态js文件地址
@@ -126,7 +126,7 @@ class RunAll:
         runner = unittest.TextTestRunner(verbosity=1)
         result = runner.run(discover)
         log.info("单线程用例执行完成....")
-        Get_Skip(result.skipped,self.data).get_skip()
+        Get_Skip(result.skipped, self.data).get_skip()
 
     def runthread(self):
         '''
@@ -179,10 +179,11 @@ class RunAll:
                 if times[0] != 0:
                     all_time.append(times[0])
                     sumtime += float(times[0])
-                else:
-                    all_time = sumtime = 0
 
-            return all_time,sumtime
+            return all_time, sumtime
+        else:
+            all_time = sumtime = 0
+            return all_time, sumtime
 
     def runmethod(self):
         '''
@@ -248,10 +249,10 @@ class RunAll:
         '''
         starttime, endtime, sumtime = self.runcase()
         if self.sql:
-            data = Sql(self.search_sql).execute_sql()    #数据库数据
+            data = list(Sql(self.search_sql).execute_sql())    #数据库数据
         else:
             cases = ReDis().lrange()
-            data = GetRedis(cases).get_redis()         #redis库数据
+            data = list(GetRedis(cases).get_redis())         #redis库数据
         case_data = Case_data().conversion_data()      #插入异常文件数据
         if case_data:
             all_data = data + case_data               #拼接数据
@@ -259,12 +260,12 @@ class RunAll:
             all_data = data
         times = Sql(self.search_desc).execute_sql()
         all_time, run_sumtime = self.sql_handle(times)
-        if isinstance(all_time,list):
+        if isinstance(all_time, list):
             max_time = round(all_time[0], 2)
             min_time = round(all_time[-1], 2)
             avg_time = round(run_sumtime/len(all_time), 2)
         else:
-            max_time = min_time = avg_time =0
+            max_time = min_time = avg_time = 0
 
         value = Package_Data(
                 all_data, sumtime, starttime, endtime,
@@ -278,8 +279,8 @@ class RunAll:
         发送数据到服务器
         :return:
         '''
-        value = self.collect_data()
 
+        value = self.collect_data()
         r = requests.post(url=self.url, json=value, stream=True, timeout=60)
         if r.json().get('code') == 0:
             url = r.json().get('data').get('report_url')
@@ -316,16 +317,19 @@ class RunAll:
         发送邮件
         :return:
         '''
+
         url, file_path, success, error, fail, timeout, skip = self.download_report()
         sum_case = success + error + fail + timeout + skip
-        title = '{}({})'.format(self.title,self.EnvName)
+        title = '{}({})'.format(self.title, self.EnvName)
         description = '''本次接口运行总数: {}, 成功: {}, 错误: {}, 失败: {}, 超时: {}, 跳过: {}'''\
             .format(sum_case, success, error, fail, timeout, skip)
         img_url = self.url.replace('get_report', 'image')
-        Send_Wechat().send_picture(title, description, url, img_url)
-        outcome("green", "请稍后!正在发送邮件....")
-        MyMail(url, self.report_path).send_info()
-
+        if self.mail:
+            outcome("green", "请稍后!正在发送邮件....")
+            MyMail(url, self.report_path).send_info()
+        if self.wechat:
+            outcome("green", "请稍后!正在发送企业微信消息....")
+            Send_Wechat().send_picture(title, description, url, img_url)
 
     def clean_data(self):
         '''
@@ -333,8 +337,6 @@ class RunAll:
         :return:
         '''
 
-        Sql(self.create_table).execute_sql()            #创建表response
-        Sql(self.create_result).execute_sql()           #创建表result
         if self.sql:
             Sql(self.delsql).execute_sql()              #清空response表
         if self.redis:
@@ -344,6 +346,6 @@ class RunAll:
 
         log.info("表创建及清空前置相关工作运行成功....")
 
-if __name__=='__main__':
 
+if __name__=='__main__':
     RunAll().send_mail()

@@ -51,10 +51,12 @@ class Sql:
 
 
 if __name__=="__main__":
+    tt="SELECT funname,describes,priority,address,result,writer,usetime,summary FROM response WHERE 1=1;"
     create_response = "CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL AUTO_INCREMENT,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));"
     create_result = "CREATE TABLE IF NOT EXISTS result(id INTEGER primary key NOT NULL AUTO_INCREMENT,funname varchar (100),totalnumber int default 0,passnumber int default 0, errornumber int default 0,failnumber int default 0,passrate float default 0,errorrate float default 0,failrate float default 0,modular varchar (30));"
-    response = Sql(create_response).execute_sql()
-    result = Sql(create_result).execute_sql()
+    response = Sql(tt).execute_sql()
+    print(response)
+    # result = Sql(create_result).execute_sql()
 
 
 

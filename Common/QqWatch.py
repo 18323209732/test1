@@ -18,7 +18,7 @@ from Common.Route import Any_Path
 import os
 import requests,json
 from Common.FontColor import outcome
-
+from Common.Driver import browser
 
 class QQ():
     def __init__(self,name,picture,msg):
@@ -36,6 +36,7 @@ class QQ():
         self.msg = msg
         self.QQ = ConfigYaml('QQ').base_config
         self.chat = ConfigYaml('chat').base_config
+
 
     def write_picture(self):
         '''
@@ -161,6 +162,8 @@ class Send_Wechat(object):
         self.toparty = ConfigYaml('toparty').wechat
         self.touser = ConfigYaml('touser').wechat
         self.agentid = ConfigYaml('agentid').wechat
+        self.mail = ConfigYaml('Mail').base_config
+        self.wechat = ConfigYaml('Wechat').base_config
 
     def get_access_token(self):
         '''
@@ -202,7 +205,7 @@ class Send_Wechat(object):
         :return:
         '''
         access_token = self.get_access_token()
-        header = {"accept":"application/json"}
+        header = {"accept": "application/json"}
         datas = {
            "touser": self.touser,
            "toparty": self.toparty,
@@ -223,7 +226,7 @@ class Send_Wechat(object):
         if access_token:
             r = requests.post(url=self.token_url.format(access_token), data=data, headers=header,stream=True)
             if r.json().get("errcode") == 0:
-                outcome('green','企业微信消息发送成功....!')
+                outcome('green', '企业微信消息发送成功....!')
             else:
                 outcome('red', '企业微信消息发送失败....!')
 
