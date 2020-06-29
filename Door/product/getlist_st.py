@@ -7,7 +7,7 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-from Door.content.Public import Public_path, print_debug_info
+from Door.product.Public import Public_path, print_debug_info
 from Common.RWyaml import RWyaml
 
 
