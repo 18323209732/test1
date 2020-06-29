@@ -12,6 +12,7 @@ from random import randint
 from datetime import date,timedelta
 from Common.ReadYaml import ReadPublic
 
+
 def Public_path():
     """当前路径"""
     return os.path.realpath('Public.yaml')
@@ -33,3 +34,5 @@ def print_debug_info(o):
 def test1():
     print("test1")
     print_debug_info('-->pass')
+
+# test1()
