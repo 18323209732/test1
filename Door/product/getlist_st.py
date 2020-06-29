@@ -95,14 +95,14 @@ class getlist_product(MyTest):
         # 搜索产品
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         self.type_condition = True
-        self.data["keyworlds"] = RWyaml.read_yaml_value('product', 'name1')
+        self.data["keyworlds"] = RWyaml(Public_path()).read_yaml_value('product', 'name1')
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -170,10 +170,11 @@ class getlist_product(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -191,10 +192,11 @@ class getlist_product(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -213,10 +215,11 @@ class getlist_product(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -229,7 +232,8 @@ class getlist_product(MyTest):
         # 导入产品
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         # del self.headers['Content-Type']
-        path = os.path.realpath('产品导入.zip')
+        # path = os.path.realpath('产品导入.zip')
+        path = "D:\Program Files\PycharmProjects\Portal_interface\Door\product\产品导入.zip"
         files = {"file": ("产品导入.zip", open(path, "rb"), "application/zip")}
         try:
             if self.type_condition:
@@ -237,10 +241,11 @@ class getlist_product(MyTest):
             del self.headers['Content-Type']
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False, files=files)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -263,6 +268,7 @@ class getlist_product(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -281,10 +287,11 @@ class getlist_product(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -302,7 +309,7 @@ class getlist_product(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             n = 1
             for i in r.json()["data"]:
                 # print(i["id"])
@@ -311,6 +318,7 @@ class getlist_product(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -330,10 +338,11 @@ class getlist_product(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -355,6 +364,7 @@ class getlist_product(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -376,6 +386,7 @@ class getlist_product(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -397,6 +408,7 @@ class getlist_product(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -418,6 +430,7 @@ class getlist_product(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -439,6 +452,7 @@ class getlist_product(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -460,6 +474,7 @@ class getlist_product(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -483,6 +498,7 @@ class getlist_product(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)

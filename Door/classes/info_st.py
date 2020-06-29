@@ -35,6 +35,7 @@ class info_classes(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -56,6 +57,7 @@ class info_classes(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
@@ -77,6 +79,7 @@ class info_classes(MyTest):
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
