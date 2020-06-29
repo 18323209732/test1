@@ -51,7 +51,7 @@ base_config:
   redisip: 192.168.4.36                       #redis服务ip
   redisport: 6379                             #redis服务端口
   redisresult: redisre                        #redis表名
-  serverip: 192.168.4.36                      #服务器ip
+  serverip: 192.168.4.17                      #服务器ip
   serverport: 8080                            #服务器端口
   threadrun: False                            #是否开启多线程运行
   timing: 1                                  #定时任务间隔时间
@@ -83,7 +83,7 @@ email:
   smtp_sever: smtp.gouuse.cn # 邮箱smtp服务 如 smtp.163.com
   send_person: chenjianbo@gouuse.cn    #邮件发送者邮箱
   send_pwd: Cjbwt0107  # 邮件发送者邮箱密码
-  receive_person: [chenjianbo@gouuse.cn]      #邮件接收者
+  receive_person: [chenjianbo@gouuse.cn, songyu@gouuse.cn]      #邮件接收者
 sql:
   create_table: CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL AUTO_INCREMENT,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));
   drop_database: DROP DATABASE %s;
