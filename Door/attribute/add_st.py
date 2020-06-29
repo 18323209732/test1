@@ -13,15 +13,14 @@ import datetime,time
 
 class add_attribute(MyTest):
     condition = True
-    # 添加属性
+    # 属性管理
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_add_attribute(self):
         # 添加属性类型
         try:
-            url = ConfigYaml(self.projectName).base_url + self.url
-            num = random.randint(0, 999999)
+            url = ConfigYaml(self.projectName).base_url + self.url + '&authPermission=attribute_add'
             self.data['templateName'] = 'FK自动{}'.format(time.time())
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -51,12 +50,11 @@ class add_attribute(MyTest):
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test_edit_attribute_pre(self):
+    def test_edit_attribute(self):
         # 编辑属性类型
         try:
-            id = random.choice(Public_Data().get_attribute(swich=False))
-            url = ConfigYaml(self.projectName).base_url + self.url
-            num = random.randint(0,10000)
+            id = random.choice(Public_Data().get_attribute())
+            url = ConfigYaml(self.projectName).base_url + self.url + '&authPermission=attribute_edit'
             self.data['templateName'] = 'FKBJ自动{}'.format(time.time())
             self.data['id'] = id
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify = False)
@@ -125,22 +123,4 @@ class add_attribute(MyTest):
             outcome('red',self.singular)
             return self.singular
 
-    # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test_edit_attribute(self):
-        # 编辑属性类型
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
-            url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            self.result = r.json()
-
-            self.time = r.elapsed.total_seconds()
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red', self.singular)
-            return self.singular
         

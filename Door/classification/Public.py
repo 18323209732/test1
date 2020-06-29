@@ -21,7 +21,24 @@ class Public_Data:
         self.url = ConfigYaml(projectName).base_url
         self.tenant_value = ConfigYaml('tenant_value').base_config
 
+    def add_classify(self):
+        '''
+        新建分类
+        :return: 分类id
+        '''
+        self.public_data = ReadPublic(catalog='classification', key="add_classify")
+        url = self.public_data.public_value("url")
+        url = self.url + url
+        data = self.public_data.public_value("bar")
+        data['category']['categoryName'] = '接口分类{}'.format(time.time())
 
+        self.headers['Content-Type'] = 'application/json;charset=UTF-8'
+        r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+        result = r.json()
+        if result.get('status')==200:
+            id = result.get('data').get('id')
+
+        return id
 
     def get_classification(self, swich=True):
         '''
@@ -44,8 +61,10 @@ class Public_Data:
             else:
                 for value in result.get('data'):
                     id.append(value.get('id'))
-
-                return id
+                if id is None:
+                    return self.add_classify()
+                else:
+                    return id
 
 class Classify:
 
@@ -62,31 +81,14 @@ class Classify:
         self.url = ConfigYaml(projectName).base_url
         self.tenant_value = ConfigYaml('tenant_value').base_config
 
-    def add_classify(self):
-        '''
-        新建分类
-        :return: 分类id
-        '''
-        self.public_data = ReadPublic(catalog='classification', key="add_classify")
-        url = self.public_data.public_value("url")
-        url = self.url + url
-        data = self.public_data.public_value("bar")
-        data['category']['categoryName'] = '接口分类{}'.format(time.time())
 
-        self.headers['Content-Type'] = 'application/json;charset=UTF-8'
-        r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
-        result = r.json()
-        if result.get('status')==200:
-            id = result.get('data').get('id')
-
-        return id
 
     def hide_classify(self):
         '''
         隐藏分类
         :return: 隐藏分类的id
         '''
-        id = Classify().add_classify() #新建分类id
+        id = Public_Data().add_classify() #新建分类id
         self.public_data = ReadPublic(catalog='classification', key="hide_classify")
         url = self.public_data.public_value("url")
         url = self.url + url + "?viewType=1&authPermission=classify_update&appId=2&id={}&status=1".format(id) + "&tenantId={}".format(self.tenant_value)

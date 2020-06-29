@@ -27,8 +27,24 @@ class Public_Data:
         self.headers.update({self.cookies_key: self.cookies_value})
         self.projectName = ConfigYaml("projectName").base_config
         self.url = ConfigYaml(projectName).base_url
+        self.tenant_value = ConfigYaml('tenant_value').base_config
 
 
+    def add_attribute(self):
+        '''
+        添加属性类型
+        :return: 属性类型id
+        '''
+        self.public_data = ReadPublic(catalog='attribute', key="add_attribute")
+        url = self.public_data.public_value("url")
+        url = self.url + url + "?tenantId={}".format(self.tenant_value) + '&authPermission=attribute_add'
+        data = self.public_data.public_value("bar")
+        data['templateName'] = 'FK自动{}'.format(time.time())
+        self.headers['Content-Type'] = 'application/json'
+        r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+        result = r.json()
+        if result.get('status') == 200:
+            return result['data']['templateId']
 
     def get_attribute(self, swich=False):
         '''
@@ -37,7 +53,7 @@ class Public_Data:
         '''
         self.public_data = ReadPublic(catalog='attribute', key="get_attribute")
         url = self.public_data.public_value("url")
-        url = self.url + url
+        url = self.url + url + "?tenantId={}".format(self.tenant_value) +'&appId=2&ec_p=1&ec_crd=15&startDate=&endDate=&sortField=&sortType='
         data = self.public_data.public_value("bar")
         r = requests.get(url, headers=self.headers, json=data, stream=True, verify=False)
         result = r.json()
@@ -53,9 +69,14 @@ class Public_Data:
                 for value in result.get('data').get('list'):
                     if value.get('id') != 1:
                         id.append(value.get('id'))
+                if id is None:
+                    return self.add_attribute()
+                else:
+                    return id
 
-                return id
 
 
 if __name__ == '__main__':
-    pass
+    p =  Public_Data()
+
+    print(p.get_attribute())

@@ -24,13 +24,10 @@ class manage_classification(MyTest):
         # 编辑分类
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            url = ConfigYaml(self.projectName).base_url + self.url
+            url = ConfigYaml(self.projectName).base_url + self.url + '&authPermission=classify_update'
             id = random.choice(Public_Data().get_classification(swich=False))
-
             self.data['category']['id'] = id
-            num = time.time()
-            self.data['category']['categoryName']= '自动化修改{}'.format(num)
-
+            self.data['category']['categoryName']= 'FK自动化修改{}'.format(time.time())
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -52,11 +49,9 @@ class manage_classification(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             id = random.choice(Public_Data().get_classification(swich=False))
-            print(id)
             self.data['cateId'] = id
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-            print(self.result)
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -74,11 +69,10 @@ class manage_classification(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
                 
-            url = ConfigYaml(self.projectName).base_url + self.url
+            url = ConfigYaml(self.projectName).base_url + self.url + '&authPermission=classify_add'
             id = random.choice(Public_Data().get_classification(swich=False))
-            print(id)
             self.data['category']['parentId'] = id
-            self.data['category']['categoryName'] = '自动下级分类{}'.format(time.time())
+            self.data['category']['categoryName'] = 'FK自动下级分类{}'.format(time.time())
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -97,7 +91,11 @@ class manage_classification(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
                 
-            url = ConfigYaml(self.projectName).base_url + self.url
+            url = ConfigYaml(self.projectName).base_url + self.url + '&authPermission=classify_update'
+            pid = random.choice(Public_Data().get_classification(swich=False))
+            id = Public_Data().add_classify()
+            self.data['pid'] = pid
+            self.data['id'] = id
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -116,11 +114,8 @@ class manage_classification(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = Classify().add_classify()  # 新建分类id
-            url = ConfigYaml(
-                self.projectName).base_url + self.url + "&authPermission=classify_update&appId=2&id={}&status=1".format(
-                id)
-            print(url)
+            id = Public_Data().add_classify()  # 新建分类id
+            url = ConfigYaml(self.projectName).base_url + self.url + "&authPermission=classify_update&appId=2&id={}&status=1".format(id)
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -140,9 +135,7 @@ class manage_classification(MyTest):
                 self.headers[self.type] = self.form_type
 
             id = Classify().hide_classify()
-            url = ConfigYaml(
-                self.projectName).base_url + self.url + "&authPermission=classify_update&appId=2&id={}&status=0".format(
-                id)
+            url = ConfigYaml(self.projectName).base_url + self.url + "&authPermission=classify_update&appId=2&id={}&status=0".format(id)
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -161,7 +154,7 @@ class manage_classification(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = Classify().add_classify()  # 新建分类id
+            id = Public_Data().add_classify()  # 新建分类id
             url = ConfigYaml(
                 self.projectName).base_url + self.url + '?viewType=1&authPermission=classify_del&appId=2&id={}'.format(
                 id)
