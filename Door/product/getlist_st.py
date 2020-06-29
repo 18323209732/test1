@@ -95,7 +95,7 @@ class getlist_product(MyTest):
         # 搜索产品
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         self.type_condition = True
-        self.data["keyworlds"] = RWyaml.read_yaml_value('product', 'name1')
+        self.data["keyworlds"] = RWyaml(Public_path()).read_yaml_value('product', 'name1')
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
