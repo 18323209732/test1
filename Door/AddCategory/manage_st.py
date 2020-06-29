@@ -10,8 +10,6 @@ import urllib3
 import time, yaml, os
 from ruamel.yaml import RoundTripDumper
 
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 
 class manage_AddCategory(MyTest):
     condition = True
