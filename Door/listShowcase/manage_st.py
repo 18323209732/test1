@@ -31,7 +31,7 @@ class manage_listShowcase(MyTest):
                 r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
                 self.result = r.json()
                 # print(self.result)
-                writeyaml(w_key=self.result['data']['showcaseName'], w_value=self.result['data']['id'], n=y)
+                writeyaml(file='Door\listShowcase', w_key=self.result['data']['showcaseName'], w_value=self.result['data']['id'], n=y)
                 self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
@@ -88,7 +88,7 @@ class manage_listShowcase(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
             proIds = GetAll().get_product_attribute()
-            caseId = readyaml(file='listShowcase', key='橱窗1号')
+            caseId = readyaml(file='Door\listShowcase', key='橱窗1号')
             url = ConfigYaml(self.projectName).base_url + self.url + '&appId=2&proIds=%s&caseId=%s' % (proIds,caseId)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -107,7 +107,7 @@ class manage_listShowcase(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
             proIds = GetAll().get_product_list()
-            caseId = readyaml(file='listShowcase', key='橱窗1号')
+            caseId = readyaml(file='Door\listShowcase', key='橱窗1号')
             url = ConfigYaml(self.projectName).base_url + self.url +'&appId=2&proids=%s&caseids=%s' % (proIds,caseId)
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -124,7 +124,7 @@ class manage_listShowcase(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             proIds = GetAll().get_product_list()
-            caseId = readyaml(file='listShowcase', key='橱窗1号')
+            caseId = readyaml(file='Door\listShowcase', key='橱窗1号')
             url = ConfigYaml(self.projectName).base_url + self.url
             self.data['ids'] = proIds
             self.data['showcaseId'] = caseId
@@ -145,7 +145,7 @@ class manage_listShowcase(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-            self.data["showCaseId"] = readyaml(file='listShowcase', key='橱窗1号')
+            self.data["showCaseId"] = readyaml(file='Door\listShowcase', key='橱窗1号')
             url = ConfigYaml(self.projectName).base_url + self.url
             headers = readconfig_ini()
             r = requests.post(url, headers=headers, json=self.data, stream=True, verify=False)
