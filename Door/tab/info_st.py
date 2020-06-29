@@ -47,25 +47,24 @@ class info_tab(MyTest):
     @ReRun(MyTest.setUp)
     def test_add_tab_product(self):
         # 新增标记
-        for i in range(1):
-            urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-            self.type_condition = True
-            self.data['markName'] = ("接口新增标记" + str(time.time())[:10])   # 拼接产品名称
-            self.data['imageId'] = RWyaml(Public_path()).read_yaml_value('img', 'imageId')  # 读取yaml文件imageId
-            self.data['imageurl'] = RWyaml(Public_path()).read_yaml_value('img', 'imageurl')  # 读取yaml文件imageurl
-            try:
-                if self.type_condition:
-                    self.headers[self.type] = self.form_type
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.type_condition = True
+        self.data['markName'] = ("接口新增标记" + str(time.time())[:10])   # 拼接产品名称
+        self.data['imageId'] = RWyaml(Public_path()).read_yaml_value('img', 'imageId')  # 读取yaml文件imageId
+        self.data['imageurl'] = RWyaml(Public_path()).read_yaml_value('img', 'imageurl')  # 读取yaml文件imageurl
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+                
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            self.result = r.json()
 
-                url = ConfigYaml(self.projectName).base_url + self.url
-                r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
-                self.result = r.json()
-
-                self.time = r.elapsed.total_seconds()
-            except:
-                self.singular = str(traceback.format_exc())
-                outcome('red',self.singular)
-                return self.singular
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red',self.singular)
+            return self.singular
         
     
     # @unittest.skipIf(condition, "暂时跳过")
