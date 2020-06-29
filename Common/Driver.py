@@ -15,9 +15,7 @@ def browser(switch=True):
         driver = webdriver.Chrome(executable_path=driver_path, options=options)
         driver.maximize_window()
     else:
-        options = None
-        driver = webdriver.Chrome(executable_path=driver_path, options=options)
+        driver = webdriver.Chrome(executable_path=driver_path)
         driver.maximize_window()
+
     return driver
-
-

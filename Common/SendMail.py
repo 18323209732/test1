@@ -19,7 +19,7 @@ from Common.ReadYaml import ConfigYaml
 
 class MyMail(object):
 
-    def __init__(self,url,filedir,filename='report.png'):
+    def __init__(self,url,filedir, filename='report.png'):
         '''
         初始化数据
         :param url: 图片地址
@@ -56,7 +56,7 @@ class MyMail(object):
         sleep(3)
         if not os.path.exists(self.image_path):
             os.makedirs(self.image_path)
-        driver.get_screenshot_as_file(Any_Path(self.image,self.filename))
+        driver.get_screenshot_as_file(Any_Path(self.image, self.filename))
         driver.quit()
 
     def text_header(self):

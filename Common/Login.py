@@ -138,7 +138,15 @@ class Login:
         else:
             outcome('red', "获取网站【index】失败....")
 
-#
-if __name__=="__main__":
-    # Login().get_cookie()
-    pass
+    def get_picture(self, piture_path, url):
+        '''
+        :param url:
+        :return:
+        '''
+        self.driver.get(url)
+        self.driver.get_screenshot_as_file(piture_path)
+
+# #
+# if __name__=="__main__":
+#     # Login().get_cookie()
+#     pass

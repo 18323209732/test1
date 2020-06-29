@@ -1,5 +1,6 @@
 # from Common.GetPath import second_path,third_path
 import base64
+from ast import literal_eval
 
 from Common.Route import Any_Path
 from Common.ReadYaml import CaseYaml,ConfigYaml
@@ -278,7 +279,7 @@ class  Case_data:
                 f.close()
         return content
 
-    def handle_data(self,data):
+    def handle_data(self, data):
         '''
         数据处理
         :return:
@@ -325,7 +326,6 @@ class  Case_data:
         with open(self.path, "a+", encoding=self.encoding) as f:
             f.writelines(str(content) + '\n')
             f.close()
-
 
 class GetRedis(object):
 
@@ -401,7 +401,7 @@ class Assertion:
 
 class Package_Data:
 
-    def __init__(self,data,sumtime,starttime,endtime,maxtime,mintime,avgtime):
+    def __init__(self, data, sumtime, starttime, endtime, maxtime, mintime, avgtime):
         '''
         :param data: 接受数据
         :param sumtime:  总共用时
