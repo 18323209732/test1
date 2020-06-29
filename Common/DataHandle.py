@@ -513,8 +513,8 @@ class Get_Skip:
         if self.skipped:
             if isinstance(self.skipped, list):
                 for skip in self.skipped:
-                    class_name = re.findall("\.(.*?) ", str(skip[0]))[0]
-                    fun_name = re.findall("testMethod=(.*?)>", str(skip[0]))[0]
+                    class_name = re.findall("\.(.*?)\)", str(skip[0]))[0]
+                    fun_name = re.findall("(.*?) \(", str(skip[0]))[0]
                     key = class_name.split('_')[1]
                     for case in self.data.get(key):
                         if class_name == case.get('className'):
