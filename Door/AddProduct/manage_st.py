@@ -63,10 +63,11 @@ class manage_AddProduct(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
+            writeyaml(file="Door\AddProduct", w_key="productName",
+                      w_value=self.data['productInformation']['productName'], n="w")
 
             self.time = r.elapsed.total_seconds()
-            # 把添加成功的产品名称写入Public.yaml
-            writeyaml(file='Door/AddProduct',w_key='data', w_value=self.data, n="w")
+
         except:
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
@@ -120,6 +121,11 @@ class manage_AddProduct(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
+            list = self.result['data']['list']
+            for i in list:
+                if i['productName'] == readyaml(file='Door/AddProduct', key='productName'):
+                    # 把添加成功的产品名称写入Public.yaml
+                    writeyaml(file='Door/AddProduct', w_key='product_id', w_value=i['id'], n="a")
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -244,11 +250,16 @@ class manage_AddProduct(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            data = readyaml(file='Door\AddProduct', key='data')
-            data['productInformation']['price'] = 8000
-            data['productInformation']['retailPrice'] = 1000
-            data['productInformation']['stock'] = 50
-            r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+            self.data['productInformation']['publishTime'] = time.strftime("%Y-%m-%d %H:%M", time.localtime())
+            self.data['productInformation']['id'] = readyaml(file="Door\AddProduct",key='product_id')
+            self.data['productBigField']['productId'] = readyaml(file="Door\AddProduct",key='product_id')
+            self.data['productBigField']['productName'] = readyaml(file="Door\AddProduct", key='productName')
+            self.data['categoryList'][0]['id'] = readyaml(file='Door\AddCategory', key='id')
+            self.data['categoryList'][0]['categoryName'] = readyaml(file="Door\AddCategory", key='productName')
+            self.data['productInformation']['price'] = 8000
+            self.data['productInformation']['retailPrice'] = 7000
+            self.data['productInformation']['stock'] = 50
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -267,9 +278,14 @@ class manage_AddProduct(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            data = readyaml(file='Door\AddProduct', key='data')
-            data['productInformation']['price'] = 8000
-            r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+            self.data['productInformation']['publishTime'] = time.strftime("%Y-%m-%d %H:%M", time.localtime())
+            self.data['productInformation']['id'] = readyaml(file="Door\AddProduct", key='product_id')
+            self.data['productBigField']['productId'] = readyaml(file="Door\AddProduct", key='product_id')
+            self.data['productBigField']['productName'] = readyaml(file="Door\AddProduct", key='productName')
+            self.data['categoryList'][0]['id'] = readyaml(file='Door\AddCategory', key='id')
+            self.data['categoryList'][0]['categoryName'] = readyaml(file="Door\AddCategory", key='productName')
+
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
