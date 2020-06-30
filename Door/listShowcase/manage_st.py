@@ -160,7 +160,7 @@ class manage_listShowcase(MyTest):
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test08_delete(self):
-        # 筛选并搜索橱窗里显示的产品列表
+        # 删除没有产品的橱窗
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             if self.type_condition:
