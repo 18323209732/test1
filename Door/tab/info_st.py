@@ -122,7 +122,7 @@ class info_tab(MyTest):
     def test_add_img_tab(self):
         # 上传照片
         # file_path = os.path.realpath('图片.jpg')
-        file_path = "D:\Program Files\PycharmProjects\Portal_interface\Door\\tab\图片.jpg"
+        file_path = os.path.realpath('Door\\tab\Public.yaml')
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         file = {"file": ("图片.jpg", open(file_path, "rb"), "image/jpeg")}
         del self.headers['Content-Type']
