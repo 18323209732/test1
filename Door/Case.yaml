@@ -570,7 +570,7 @@ Door:
 
           test_add_content: {  # # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/save/',
-          level: 中,
+          level: 高,
           author: 宋宇,
           bar: {"introductionContent":{"linkurl":"","mobileLinkUrl":"","spreadId":"","spreadName":"","spreadType":0,"appId":"1","subtype":"0","contentList":"","catid":0,"source":0,"catname":"","ConfigJson":"[{savemessage: 0,treeValue:['{id:35,pId:0,name:'新后台添加分类测试2'}','{id:34,pId:0,name:'新后台添加分类测试1-1'}','{id:39,pId:0,name:'333'}','{id:41,pId:0,name:'555'}','{id:40,pId:0,name:'方法'}','{id:45,pId:40,name:'fdfs'}','{id:43,pId:40,name:'2224444'}','{id:42,pId:43,name:'11'}]","videoIds":"","canTitle":"","canDescription":"","canTitleSign":"","canKeywordsSign":"","canDescriptionSign":"","canAddDescription":"","contenttype":"0","ismobile":0,"isdisplay":0,"windowtype":1,"mobileWindowType":1,"categoryId":2,"keywords":"","pageId":"","mobilePageId":"","imageurl":"","imageId":"","title":"你好4","PVS":"","selectcate":555},"relecontent":[{"appId":1,"contentList":[]}],"destype":0,"seoState":1,"hidTitle":[{"id":"name","name":"介绍类应用名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":"","hidDescription":"","hidTitleSign":"","hidKeywordsSign":"","hidDescriptionSign":"","hidAddDescription":"","content":"<p>内容4</p>\n","mobileContent":"","description":"","choiceUrl":"","choiceUrlM":"","PVS":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"}],"seoKeywords":[{"name":"介绍类应用关键词","id":"keyword"},{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"}],"seoDescription":[{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"},{"name":"介绍类应用概要","id":"summary"}],"device":"","seoAuto":true},
           relation_data: {},    #关联接口
@@ -581,7 +581,7 @@ Door:
         }
           test_zdel_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/delete/',
-          level: 中,
+          level: 高,
           author: 宋宇,
           bar: {"id": ''},
           relation_data: {},    #关联接口
@@ -625,7 +625,7 @@ Door:
         }
           test_drag_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/updateSortCategoryAndContentList/',
-          level: 中,
+          level: 高,
           author: 宋宇,
           bar: {id: 1,orderid: 5, operatype: before,ordertype: nr,type: nr},
           relation_data: {},    #关联接口
@@ -636,7 +636,7 @@ Door:
         }
           test_updata_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/update',
-          level: 中,
+          level: 高,
           author: 宋宇,
           bar: {"introductionContent":{"spreadId":"","spreadName":"","spreadType":0,"appId":1,"subtype":"0","contentList":"","catid":0,"source":0,"catname":"","videoIds":"","canTitle":"","canDescription":"","canTitleSign":"","canKeywordsSign":"","canDescriptionSign":"","canAddDescription":"","contenttype":"0","ismobile":"0","isdisplay":"0","windowtype":1,"mobileWindowType":1,"categoryId":4,"keywords":"","pageId":"","mobilePageId":"","imageurl":"","imageId":"","title":"1接口编辑普通内容1593311330","selectcate":555,"id":105,"ec_p":1,"treeValue":"","destype":1,"hidTitle":[{"id":"name","name":"介绍类应用名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":"","hidDescription":"","hidTitleSign":"","hidKeywordsSign":"","hidDescriptionSign":"","hidAddDescription":"","PVS":0},"relecontent":[],"destype":0,"seoState":1,"content":"<p>接口新增内容</p>\n","mobileContent":"接口新增内容","description":"","PVS":0,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"}],"seoKeywords":[{"name":"介绍类应用关键词","id":"keyword"},{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"}],"seoDescription":[{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"},{"name":"介绍类应用概要","id":"summary"}],"device":"","seoAuto":true,"appId":"1"},
           relation_data: {},    #关联接口
@@ -713,7 +713,7 @@ Door:
         }
           test_zbatch_delete_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/delete',
-          level: 中,
+          level: 高,
           author: 宋宇,
           bar: {id: 37},
           relation_data: {},    #关联接口
@@ -768,7 +768,7 @@ Door:
         }
           test_add_link_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/save/',
-          level: 中,
+          level: 高,
           author: 宋宇,
           bar: {"introductionContent":{"linkurl":"www.baidu.com","mobileLinkUrl":"","spreadId":"","spreadName":"","spreadType":0,"appId":"1","subtype":"0","contentList":"","catid":0,"source":0,"catname":"","ConfigJson":"[{savemessage: 0,treeValue:['{id:35,pId:0,name:'新后台添加分类测试2'}','{id:34,pId:0,name:'新后台添加分类测试1-1'}','{id:39,pId:0,name:'333'}','{id:41,pId:0,name:'555'}','{id:40,pId:0,name:'方法'}','{id:45,pId:40,name:'fdfs'}','{id:43,pId:40,name:'2224444'}','{id:42,pId:43,name:'11'}]","videoIds":"","canTitle":"","canDescription":"","canTitleSign":"","canKeywordsSign":"","canDescriptionSign":"","canAddDescription":"","contenttype":"1","ismobile":0,"isdisplay":0,"windowtype":1,"mobileWindowType":1,"categoryId":4,"keywords":"","pageId":"","mobilePageId":"","imageurl":"","imageId":"","title":"哈喽","PVS":"","selectcate":555},"relecontent":[{"appId":1,"contentList":[]}],"destype":0,"seoState":1,"hidTitle":[{"id":"name","name":"介绍类应用名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":"","hidDescription":"","hidTitleSign":"","hidKeywordsSign":"","hidDescriptionSign":"","hidAddDescription":"","content":"","mobileContent":"","description":"","choiceUrl":"","choiceUrlM":"","PVS":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"}],"seoKeywords":[{"name":"介绍类应用关键词","id":"keyword"},{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"}],"seoDescription":[{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"},{"name":"介绍类应用概要","id":"summary"}],"device":"","seoAuto":true},
           relation_data: {},    #关联接口
@@ -1226,7 +1226,7 @@ Door:
       funName:
         - test_all_tablist: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/product/productMark/list",
-          level: 中,   #级别
+          level: 高,   #级别
           author: 宋宇,  #作者
           bar: {appId: 2},
           test_data: {},
@@ -1259,7 +1259,7 @@ Door:
         }
           test_delete_tab: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/product/productMark/delete",
-          level: 中,   #级别
+          level: 高,   #级别
           author: 宋宇,  #作者
           bar: {appId: 2, authPermission: tag_del, id: 5},
           test_data: {},
@@ -1270,7 +1270,7 @@ Door:
         }
           test_add_img_tab: {  # 添加属性类型
           url: "/manager/gwforward/dssresources/imageRepository/imageFileUpload?viewType=1",
-          level: 中,   #级别
+          level: 高,   #级别
           author: 宋宇,  #作者
           bar: {appId: ""},
           test_data: {},
@@ -1287,7 +1287,7 @@ Door:
       funName:
         - test_all_classlist: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/product/appCategory/list",
-          level: 中,   #级别
+          level: 高,   #级别
           author: 宋宇,  #作者
           bar: {appId: 2, pid: 0},
           test_data: {},
@@ -1298,7 +1298,7 @@ Door:
         }
           test_delete_class: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/product/appCategory/delete",
-          level: 中,   #级别
+          level: 高,   #级别
           author: 宋宇,  #作者
           bar: {appId: 2, authPermission: classify_del, id: 5},
           test_data: {},
@@ -1309,7 +1309,7 @@ Door:
         }
           test_add_class: {  # 添加属性类型
           url: "/manager/gwforward/manager-webapi/product/appCategory/save",
-          level: 中,   #级别
+          level: 高,   #级别
           author: 宋宇,  #作者
           bar: {"category":{"id":"","ismobile":0,"status":0,"isSearch":0,"sequence":"","imageId":"","imageurl":"","parentId":"","addPId":"","addPname":"","editPId":"","eidtPname":"","categoryType":"0","windowtype":1,"mobileWindowType":1,"styleCategoryListId":"","styleProductDetailId":"","gototype":0,"defTabStyle":"","defDetailStyle":"","mobileStyleCategoryListId":"","mobileStyleProductDetailId":"","defTabStyleM":"","defDetailStyleM":"","appId":2,"categoryName":"点点点","linkurl":"","mobileLinkUrl":""},"choiceUrl":"","choiceUrlM":"","destype":0,"description":"","content":"","mobileContent":"","descriptionS":"","seoState":1,"hidTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"hidDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"hidTitleSign":"_","hidKeywordsSign":",","hidDescriptionSign":"-","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"authData":[{"authType":1,"authStr":"GW_:2:category:view:","roleIds":""}],"authStr":"GW_:2:category:view:","authType":1,"roleIds":""},
           test_data: {},
@@ -1957,7 +1957,7 @@ Door:
         }
           test_search_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productInformation/searchTips',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {appId: 2, keywords: 接口, categoryId: 0, showcaseId: "", status: "", ismobile: "", beginDate:  ""},
           relation_data: {},    #关联接口
@@ -1968,7 +1968,7 @@ Door:
         }
           test_screen_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productInformation/list',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {"appId":2,"cateId":5,"showCaseId":null,"attributeId":0,"pcStatus":"null","moStatus":"null","startDate":"","endDate":"","keyword":"","pageSize":15,"pageNumber":1,"orderColumn":"","order_productName":"","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":"","categoryName":"111"},
           relation_data: {},    #关联接口
@@ -1990,7 +1990,7 @@ Door:
         }
           test_headers_sort_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productInformation/list',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {"appId":2,"cateId":0,"showCaseId":null,"attributeId":0,"pcStatus":"null","moStatus":"null","startDate":"","endDate":"","pageSize":15,"pageNumber":1,"orderColumn":"order_productName","order_productName":"asc","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":""},
           relation_data: {},    #关联接口
@@ -2001,7 +2001,7 @@ Door:
         }
           test_class_sort_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productInformation/list',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {"appId":2,"cateId":0,"showCaseId":null,"attributeId":0,"pcStatus":"null","moStatus":"null","startDate":"","endDate":"","pageSize":15,"pageNumber":1,"orderColumn":"order_cateName","order_productName":"asc","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":""},
           relation_data: {},    #关联接口
@@ -2012,7 +2012,7 @@ Door:
         }
           test_export_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productStream/validExportExcel/',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {authPermission: product_excel, appId: 2, categoryId: 0, startDate: "", endDate: "", leaf: false},
           relation_data: {},    #关联接口
@@ -2023,7 +2023,7 @@ Door:
         }
           test_import_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productStream/importZip',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {isOverwrite: true, appId: 2},
           relation_data: {},    #关联接口
@@ -2045,7 +2045,7 @@ Door:
         }
           test_preview_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productInformation/getUrl',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {appId: 2, id: 82},
           relation_data: {},    #关联接口
@@ -2056,7 +2056,7 @@ Door:
         }
           test_get_product_classid: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/appCategory/list',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {appId: 2, pid: 0},
           relation_data: {},    #关联接口
@@ -2067,7 +2067,7 @@ Door:
         }
           test_move_product_classid: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/appCategory/list',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {appId: 2, authPermission: product_update, proids: 82, cateids: 64},
           relation_data: {},    #关联接口
@@ -2078,7 +2078,7 @@ Door:
         }
           test_hide_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productInformation/updateStatus',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {appId: 2, authPermission: product_update, ids: 87, status: 1},
           relation_data: {},    #关联接口
@@ -2089,7 +2089,7 @@ Door:
         }
           test_show_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productInformation/updateStatus',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {appId: 2, authPermission: product_update, ids: 87, status: 0},
           relation_data: {},    #关联接口
@@ -2100,7 +2100,7 @@ Door:
         }
           test_tab_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productInformation/markProduct',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {appId: 2, authPermission: product_update, proid: 88, markids: 1},
           relation_data: {},    #关联接口
@@ -2111,7 +2111,7 @@ Door:
         }
           test_shopwindow_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/product/productInformation/markProduct',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {appId: 2, authPermission: product_update, proid: 88, caseids: 3},
           relation_data: {},    #关联接口
@@ -2122,7 +2122,7 @@ Door:
         }
           test_share_product: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/interaction/cron/share/info',
-          level: 高,
+          level: 中,
           author: 宋宇,
           bar: {tenantId: null},
           relation_data: {},    #关联接口
