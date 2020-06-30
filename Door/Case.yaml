@@ -400,6 +400,28 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
+          test11_order_Product: {  # 接口方法名：拖拽产品排序
+          url: /manager/gwforward/manager-webapi/product/productInformation/orderByProductNew,
+          level: 中,
+          author: 姜娜,
+          bar:{"appId":2,"scopeIDs":6,5},
+          relation_data: {},    #关联接口
+          case_name: 拖拽产品排序,
+          expected: [200],  # 预期结果添加成功，产品列表显示正常
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test12_delete_Product: {  # 接口方法名：删除产品
+          url: /manager/gwforward/manager-webapi/product/productInformation/delete,
+          level: 中,
+          author: 姜娜,
+          bar:{},
+          relation_data: {},    #关联接口
+          case_name: 删除产品,
+          expected: [200],  # 预期结果添加成功，产品列表显示正常
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
 
   listShowcase: # 橱窗列表及添加橱窗
     - url:   # 橱窗管理
