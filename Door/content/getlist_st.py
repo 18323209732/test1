@@ -66,7 +66,7 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -217,7 +217,7 @@ class getlist_content(MyTest):
         self.data['introductionContent']['id'] = RWyaml(Public_path()).read_yaml_value('content', 'id1')
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             # print(r.json())
             self.result = r.json()
 
@@ -424,6 +424,7 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
