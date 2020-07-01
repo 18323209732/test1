@@ -146,7 +146,7 @@ class GetAll:
             requests.packages.urllib3.disable_warnings()
             headers = readconfig_ini(v=3)
             url = readconfig_yaml() + r'/manager/gwforward/dssresources/imageRepository/imageFileUpload'
-            img_path = r"E:\Automate\Portal_interface\Img\产品用图.png"
+            img_path = Any_Path('Img','产品用图.png')
             with open(img_path, "rb")as f:
                 body = {'file': f}  # 图片的名称、图片的绝对路径、图片的类型（就是后缀）
                 r = requests.post(url=url, headers=headers, data={'appId': ""}, files=body, verify=False)
@@ -212,5 +212,5 @@ class GetAll:
 
 
 if __name__ == '__main__':
-    GetAll().get_mark()
+    GetAll().put_img()
 #     print(readyaml(file="Door\AddProduct",key="p_id"))
