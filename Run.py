@@ -124,7 +124,7 @@ class RunAll:
         else:
             self.current_path = Any_Path(self.projectName)
         discover = unittest.defaultTestLoader.discover(
-            self.current_path, pattern=self.matching,top_level_dir=None
+            self.current_path, pattern=self.matching, top_level_dir=None
             )
         runner = unittest.TextTestRunner(verbosity=1)
         result = runner.run(discover)
@@ -334,7 +334,6 @@ class RunAll:
         if self.wechat:
             outcome("green", "请稍后!正在发送企业微信消息....")
             Send_Wechat().send_picture(title, description, url, img_url)
-            outcome("green", "企业微信消息发送成功....")
 
     def clean_data(self):
         '''
