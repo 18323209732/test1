@@ -24,11 +24,11 @@ class RWyaml(object):
             old_data[nb][key] = value
             with open(self.file, 'w', encoding='utf-8') as f:
                 self.y.dump(old_data, f)
-                print('写入成功：%s' % old_data)
+                # print('写入成功：%s' % old_data)
         else:
             with open(self.file, 'a', encoding='utf-8') as f:
                 self.y.dump(data, f)
-                print('写入成功：%s' % data)
+                # print('写入成功：%s' % data)
 
     #读取节点下面key的值
     def read_yaml_value(self, nb, key):

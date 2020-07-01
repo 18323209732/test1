@@ -330,6 +330,7 @@ class RunAll:
         if self.wechat:
             outcome("green", "请稍后!正在发送企业微信消息....")
             Send_Wechat().send_picture(title, description, url, img_url)
+            outcome("green", "企业微信消息发送成功....")
 
     def clean_data(self):
         '''
@@ -345,7 +346,6 @@ class RunAll:
         Delete_file().beforedata()                      #删除7天前的日志
 
         log.info("表创建及清空前置相关工作运行成功....")
-
-
+        
 if __name__=='__main__':
     RunAll().send_mail()

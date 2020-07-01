@@ -513,14 +513,15 @@ class Get_Skip:
         if self.skipped:
             if isinstance(self.skipped, list):
                 for skip in self.skipped:
-                    fun_class = str(skip[0]).split(' ')
-                    fun_name = fun_class[0]
-                    classname = fun_class[1].split('.')[1].split(')')[0]
-                    key = classname.split('_')[1]
+                    class_name = re.findall("\.(.*?)\)", str(skip[0]))[0]
+                    fun_name = re.findall("(.*?) \(", str(skip[0]))[0]
+                    key = class_name.split('_')[1]
                     for case in self.data.get(key):
-                        if classname == case.get('className'):
+                        if class_name == case.get('className'):
                             for funs in case.get('funName'):
                                 data = funs.get(fun_name)
                                 SqlHandle(fun_name, data.get('case_name'), data.get('level'),
                                 data.get('url'), 'skip', data.get('author'),
-                                0,skip[1], classname).implement()
+                                0, skip[1], class_name).implement()
+
+
