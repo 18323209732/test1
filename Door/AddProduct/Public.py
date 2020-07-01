@@ -212,5 +212,5 @@ class GetAll:
 
 
 if __name__ == '__main__':
-    GetAll().put_img()
+    GetAll().get_mark()
 #     print(readyaml(file="Door\AddProduct",key="p_id"))
