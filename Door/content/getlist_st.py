@@ -213,10 +213,12 @@ class getlist_content(MyTest):
     def test_updata_content(self):
         # 编辑第一个分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.data['introductionContent']['title'] = ('接口编辑内容' + str(time.time())[:8])
+        self.data['introductionContent']['id'] = RWyaml(Public_path()).read_yaml_value('content', 'id1')
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
