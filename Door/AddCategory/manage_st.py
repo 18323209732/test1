@@ -10,8 +10,6 @@ import urllib3
 import time, yaml, os
 from ruamel.yaml import RoundTripDumper
 from Common.Route import Any_Path
-import warnings
-warnings.simplefilter("ignore", ResourceWarning)
 
 
 class manage_AddCategory(MyTest):

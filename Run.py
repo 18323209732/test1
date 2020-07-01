@@ -21,6 +21,7 @@ from Common.MyProcess import RunFailError
 from Common.QqWatch import Send_Wechat
 log= MyLog()
 
+
 class MyThread(Thread):
     '''
     重写多线程方法
@@ -115,13 +116,15 @@ class RunAll:
         非多线程运行
         :return:
         '''
+        from Door import all_class
+
         log.info("单线程用例执行开始....")
         if self.moudleName:
             self.current_path = Any_Path(self.projectName, self.moudleName)
         else:
             self.current_path = Any_Path(self.projectName)
         discover = unittest.defaultTestLoader.discover(
-            self.current_path,pattern=self.matching,top_level_dir=None
+            self.current_path, pattern=self.matching,top_level_dir=None
             )
         runner = unittest.TextTestRunner(verbosity=1)
         result = runner.run(discover)
@@ -136,7 +139,7 @@ class RunAll:
         from Door import all_class
         mythreads = []
         for mythread in all_class:
-            mythreads.append(MyThread(mythread,self.data))
+            mythreads.append(MyThread(mythread, self.data))
 
         for start in mythreads:
             start.start()
@@ -190,6 +193,7 @@ class RunAll:
         运行方法
         :return:
         '''
+
         log.info('开始运行用例....')
         if self.thread:
             self.runthread()

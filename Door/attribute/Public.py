@@ -17,7 +17,8 @@ url = ConfigYaml(projectName).base_url
 
 class Public_Data:
     def __init__(self):
-
+        '''
+        '''
         self.type = ConfigYaml('type_key').base_config
         self.form_type = ConfigYaml('form_type').base_config
         self.cookies_key = ConfigYaml('cookies').base_config
@@ -27,6 +28,7 @@ class Public_Data:
         self.projectName = ConfigYaml("projectName").base_config
         self.url = ConfigYaml(projectName).base_url
         self.tenant_value = ConfigYaml('tenant_value').base_config
+
 
     def add_attribute(self):
         '''
@@ -77,4 +79,4 @@ class Public_Data:
 if __name__ == '__main__':
     p =  Public_Data()
 
-    # print(p.get_attribute())
+    print(p.get_attribute())

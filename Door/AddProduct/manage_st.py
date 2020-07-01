@@ -10,8 +10,6 @@ import urllib3
 import time, yaml, os
 from Door.AddProduct.Public import readyaml, writeyaml,GetAll
 from Door.news.Public import Public_Data
-import warnings
-warnings.simplefilter("ignore", ResourceWarning)
 
 
 class manage_AddProduct(MyTest):
@@ -135,8 +133,8 @@ class manage_AddProduct(MyTest):
             outcome('red', self.singular)
             return self.singular
 
-    #@unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
+    @unittest.skipIf(condition, "暂时跳过")
+    # @ReRun(MyTest.setUp)
     def test05_news_list(self):
         # 相关内容获取新闻资讯
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -290,46 +288,6 @@ class manage_AddProduct(MyTest):
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
-            self.time = r.elapsed.total_seconds()
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red', self.singular)
-            return self.singular
-        
-    # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test11_order_Product(self):
-        # 拖拽产品排序
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-
-            # 颠倒前两个产品id顺序
-            id1, id2 = GetAll().get_list()
-            self.data['scopeIDs'] = id2, id1
-            url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            self.result = r.json()
-
-            self.time = r.elapsed.total_seconds()
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red', self.singular)
-            return self.singular
-
-    # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test12_delete_Product(self):
-        # 删除编辑过的产品
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-
-            url = ConfigYaml(self.projectName).base_url + self.url +'&authPermission=product_del&appId=2&ids=%s' % (readyaml(file= "Door\AddProduct", key='product_id'))
-            r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            self.result = r.json()
             self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
