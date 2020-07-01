@@ -459,12 +459,12 @@ class getlist_product(MyTest):
             return self.singular
         
     
-    @unittest.skipIf(condition, "暂时跳过")
+    # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_one_delete_product(self):
         # 删除单个产品
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        self.data['ids'] = RWyaml(Public_path()).read_yaml_value('product', 'id1')  # 读取yaml文件id
+        self.data['ids'] = RWyaml(Public_path()).read_yaml_value('product', 'id3')  # 读取yaml文件id
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
@@ -481,7 +481,7 @@ class getlist_product(MyTest):
             return self.singular
         
     
-    @unittest.skipIf(condition, "暂时跳过")
+    # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_batch_delete_product(self):
         # 批量删除产品
