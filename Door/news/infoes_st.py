@@ -12,7 +12,7 @@ from Door.news.Public import Public_Data
 from Common.CusMethod import get_data_time, random_char, thead_sort, random_str, show_sort, get_hour_second
 
 
-class info_news(MyTest):
+class infoes_news(MyTest):
 
     condition = True
     # 新闻资讯
