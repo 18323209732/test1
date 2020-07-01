@@ -635,15 +635,15 @@ Door:
           re_bar: data, # 请求参数
         }
           test_updata_content: {  # 接口方法名
-          url: '/manager/gwforward/manager-webapi/content/introcate/treeDateList',
+          url: '/manager/gwforward/manager-webapi/content/introduction/update/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, node: root},
+          bar: {"introductionContent":{"linkurl":"","mobileLinkUrl":"","spreadId":"","spreadName":"","spreadType":0,"appId":1,"subtype":"0","contentList":"","catid":0,"source":0,"catname":"","videoIds":"","canTitle":"","canDescription":"","canTitleSign":"","canKeywordsSign":"","canDescriptionSign":"","canAddDescription":"","contenttype":"0","ismobile":"0","isdisplay":"0","windowtype":1,"mobileWindowType":1,"categoryId":2,"keywords":"","pageId":"","mobilePageId":"","imageurl":"","imageId":"","title":"1接口新增普通内容1593324914","selectcate":555,"id":115,"ec_p":1,"treeValue":"","destype":1,"hidTitle":[{"id":"name","name":"介绍类应用名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":"","hidDescription":"","hidTitleSign":"","hidKeywordsSign":"","hidDescriptionSign":"","hidAddDescription":"","PVS":0},"relecontent":[],"destype":0,"seoState":1,"content":"<p>接口新增内容</p>\n","mobileContent":"接口新增内容","description":"","PVS":0,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"}],"seoKeywords":[{"name":"介绍类应用关键词","id":"keyword"},{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"}],"seoDescription":[{"name":"介绍类应用名称","id":"name"},{"name":"网站名称","id":"siteName"},{"name":"介绍类应用概要","id":"summary"}],"device":"","seoAuto":true,"appId":"1"},
           relation_data: {},    #关联接口
           case_name: 编辑第一个分类内容,
           expected: [200],  # 预期结果
-          mode: get,  # 请求类型
-          re_bar: params, # 请求参数
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
         }
           test_preview_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/getUrl/',
