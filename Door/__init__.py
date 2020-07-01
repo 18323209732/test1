@@ -1,9 +1,11 @@
-from Door.news.info_st import info_news
+from Door.attribute.add_st import add_attribute
+from Door.classification.manage_st import manage_classification
+from Door.classify.manage_st import manage_classify
 
-all_class = [info_news]
+all_class = [add_attribute, manage_classification, manage_classify]
 
-all_dirs = ['AddCategory', 'AddProduct', 'attribute', 'content', 'news', 'productCategory']
+all_dirs = ['attribute', 'classification', 'classify']
 
-class_case = (('manage_productCategory', 'test_add_category'), ('info_news', 'test_all_news'), ('info_news', 'test_noclass_news'), ('info_news', 'test_search_news'), ('info_news', 'test_screen_news'), ('info_news', 'test_turnpage_news'), ('info_news', 'test_theadsort_news'), ('info_news', 'test_dragsort_news'), ('info_news', 'test_edit_news'), ('info_news', 'test_browse_news'), ('info_news', 'test_updatetransfer_news'), ('info_news', 'test_updatepcview_news'), ('info_news', 'test_hide_news'), ('info_news', 'test_copy_news'), ('info_news', 'test_top_news'), ('info_news', 'test_recommend_news'), ('info_news', 'test_savetags_news'), ('info_news', 'test_delete_news'), ('info_news', 'test_transfer_news'), ('info_news', 'test_pcview_news'), ('info_news', 'test_hidepcview_news'), ('info_news', 'test_batchdelete_news'), ('info_news', 'test_batchrecommend_news'), ('info_news', 'test_cancelrecommend_news'), ('info_news', 'test_canceltop_news'), ('info_news', 'test_batchcancel_news'), ('info_news', 'test_customsort_news'))
+class_case = (('manage_classification', 'test_edit_classification'), ('add_attribute', 'test_attribute_list'), ('manage_classification', 'test_see_classification'), ('manage_classification', 'test_classify_add'), ('manage_classification', 'test_classify_update'), ('add_attribute', 'test_add_attribute'), ('manage_classification', 'test_hide_classify'), ('manage_classification', 'test_display_classify'), ('manage_classify', 'test_classify_manage'), ('manage_classify', 'test_add_classify'), ('manage_classify', 'test_edit_classify'), ('manage_classify', 'test_see_classify'), ('add_attribute', 'test_attribute_copy'), ('add_attribute', 'test_attribute_delete'), ('add_attribute', 'test_edit_attribute'), ('add_attribute', 'test_list_screen'), ('manage_classify', 'test_add_classify_picture'))
 
-fail_error = (('manage_productCategory', 'test_add_category'), ('info_news', 'test_hide_news'), ('info_news', 'test_copy_news'))
+fail_error = (('manage_classification', 'test_edit_classification'), ('manage_classification', 'test_classify_add'), ('manage_classify', 'test_see_classify'), ('add_attribute', 'test_attribute_copy'), ('manage_classify', 'test_add_classify_picture'))

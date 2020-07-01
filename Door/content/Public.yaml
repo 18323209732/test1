@@ -1,4 +1,0 @@
-add_customer:
-- bar: {}
-  url: /add/customerParam
-content: {id: 4, id1: 1, id2: 5, id3: 11, title: "1137\u7F16\u8F911"}

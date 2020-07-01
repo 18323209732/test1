@@ -1,4 +1,0 @@
-add_customer:
-- bar: {}
-  url: /add/customerParam
-img: {imageId: 83, imageurl: /repository/image/4506e490-b0b8-467a-978a-66e1c7f4221a.jpg}
