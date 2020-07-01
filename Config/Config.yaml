@@ -28,10 +28,10 @@ base_config:
   domain:                                         #域名
   EnvName: Door线上环境测试报告
   projectName: Door                           #项目名称
-  moudleName: newsclass #picture news #newsclass                                   #运行模块
+  moudleName: newsclass #[newsclass,picture,news] #newsclass                                   #运行模块
   timeout: 3                                     #超时时间
   thread_count: 4                                 #开启线程数，开启线程数不能大于模块数
-  process: False                                 #开启多进程
+  process: False                                 #是否开启多进程
   sql: True                                     #sql执行开关
   redis: False                                     #redis执行开关
   Log: Log                                           #存放日志文件的目录名称
@@ -51,8 +51,8 @@ base_config:
   redisip: 192.168.4.36                       #redis服务ip
   redisport: 6379                             #redis服务端口
   redisresult: redisre                        #redis表名
-  serverip: 192.168.4.17                      #服务器ip
-  serverport: 8080                            #服务器端口
+  serverip: 192.168.4.36                     #服务器ip
+  serverport: 8082                           #服务器端口
   threadrun: False                            #是否开启多线程运行
   timing: 1                                  #定时任务间隔时间
   company: 秒                                 #定时任务执行单位,时，分，秒

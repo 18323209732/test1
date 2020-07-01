@@ -2,17 +2,26 @@
 import unittest
 import traceback
 import requests
+
+from Common.CusMethod import get_hour_second, random_str
 from Common.FontColor import outcome
 from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
+from random import choice
+from Door.picture.Public import Public_Data as pd
+from Door.news.Public import Public_Data as pub_news
+from Common.Route import Any_Path
 
 
 class library_picture(MyTest):
 
     condition = True
-    type_condition = False
+    type_condition = True
+
+    pub_data = pd()
+    pub_news_data = pub_news()
     # 新闻分类管理
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
@@ -41,7 +50,12 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            self.data['queryStatus'] = choice([0, 1, ''])
+            self.data['startDate'] = get_hour_second(-7)
+            self.data['endDate'] = get_hour_second(0)
+            self.data['classId'] = choice([0,1,''])
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -60,9 +74,11 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            self.data['name'] = next(pd().get_news(value='name'))
+
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -79,9 +95,12 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            self.data['id'] = next(pd().get_news(value='id'))
+            self.data['name'] = random_str("自动化编辑图片名称...")
+
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -96,12 +115,17 @@ class library_picture(MyTest):
         # 上传图片
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
+
+            file_path = Any_Path("File", "picture.jpg")
+            del self.headers[self.type]
+            f = open(file_path, "rb")
+            file = {"file": f}
+
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            r = requests.post(url, headers=self.headers, data=self.data, files=file, stream=True, verify=False)
+            f.close()
             self.result = r.json()
+
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -115,12 +139,14 @@ class library_picture(MyTest):
         # 预览图片
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-                
-            url = ConfigYaml(self.projectName).base_url + self.url
+
+            del self.headers[self.type]
+            img_url = next(pd().picture_name(value='imgUrl'))
+
+            url = ConfigYaml(self.projectName).base_url + img_url
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            self.result = r.json()
+            if r.content:
+                self.result = {'status': '200'}
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -136,9 +162,12 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            id = next(pd().get_news(value='id'))
+            self.data['ids'] = id
+
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -155,9 +184,14 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            id_one = next(pd().get_news(value='id'))
+            id_two = next(pd().get_news(value='id'))
+            id_three = next(pd().get_news(value='id'))
+            self.data['ids'] = [id_one, id_two, id_three]
+
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -174,9 +208,12 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            ids = next(pd().get_news(value='id'))
+            self.data['ids'] = ids
+
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -193,7 +230,12 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            id_one = next(pd().get_news(value='id'))
+            id_two = next(pd().get_news(value='id'))
+            id_three = next(pd().get_news(value='id'))
+            self.data['ids'] = [id_one, id_two, id_three]
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -212,7 +254,12 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            id_one = next(pd().get_news(value='id'))
+            id_two = next(pd().get_news(value='id'))
+            id_three = next(pd().get_news(value='id'))
+            self.data['ids'] = [id_one, id_two, id_three]
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -231,7 +278,10 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            ids = next(pd().get_news(value='id'))
+            self.data['ids'] = ids
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -250,8 +300,11 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
-            url = ConfigYaml(self.projectName).base_url + self.url
+
+            ids = next(pd().get_news_used(value="id"))
+            print(ids)
+
+            url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={ids}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -269,8 +322,11 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
-            url = ConfigYaml(self.projectName).base_url + self.url
+
+            id_one = next(pd().get_news(value='id'))
+            id_two = next(pd().get_news(value='id'))
+
+            url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={id_one},{id_two}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -288,8 +344,10 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
-            url = ConfigYaml(self.projectName).base_url + self.url
+
+            page = choice([1, 2, 3, 4])
+
+            url = ConfigYaml(self.projectName).base_url + self.url + f"&pageSize=15&currentPage={page}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -307,9 +365,15 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            file_path = Any_Path("File", "edit.jpg")
+            del self.headers[self.type]
+            f = open(file_path, "rb")
+            file = {"file": f}
+
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            r = requests.post(url, headers=self.headers, files=file, data=self.data, stream=True, verify=False)
+            f.close()
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -317,6 +381,7 @@ class library_picture(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
+
         
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
@@ -326,10 +391,13 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
-            url = ConfigYaml(self.projectName).base_url + self.url
+
+            img_url = next(pd().picture_name(value="imgUrl"))
+
+            url = ConfigYaml(self.projectName).base_url + img_url
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            self.result = r.json()
+            if r.content:
+                self.result = {'status': '200'}
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -345,9 +413,13 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            id = next(pd().get_news(value='id'))
+            self.data['name'] = random_str("自动化图片编辑....")
+            self.data['id'] = id
+
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -380,13 +452,15 @@ class library_picture(MyTest):
     def test_saveandgetwater_pictures(self):
         # 生成水印waterbak.png
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.type_condition = False
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            self.result = r.json()
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
+            if r.content:
+                self.result = {"status": '200'}
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -394,17 +468,24 @@ class library_picture(MyTest):
             outcome('red', self.singular)
             return self.singular
         
+
+        
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_waterupload_pictures(self):
         # 水印设置保存
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
+
+            img_url = next(pd().picture_name(value="imgUrl"))
+            id = next(pd().get_news(value='id'))
+            self.data['imageUrl'] = img_url
+            self.data['word'] = random_str("自动化测试")
+            self.data['url'] = "http://www.baidu.com"
+            self.data['imageId'] = id
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -424,7 +505,8 @@ class library_picture(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            self.result = r.json()
+            if r.content:
+                self.result = {"status": '200'}
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -443,7 +525,8 @@ class library_picture(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            self.result = r.json()
+            if r.content:
+                self.result = {"status": '200'}
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -462,7 +545,8 @@ class library_picture(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            self.result = r.json()
+            if r.content:
+                self.result = {"status": '200'}
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -498,9 +582,10 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
                 
-            url = ConfigYaml(self.projectName).base_url + self.url
+            url = ConfigYaml(self.projectName).base_url + self.url + "&ids=1,2"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            self.result = r.json()
+            if r.json():
+                self.result = {"status": 200}
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -516,7 +601,10 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            self.data['className'] = random_str("自动化测试")
+            self.data['classInfo'] = random_str("自动化测试描述")
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -535,7 +623,9 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            self.data['ids'] = next(pd().get_news(value='id'))
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -554,7 +644,11 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
+            self.data['ids'] = next(pd().get_news(value='id'))
+            self.data['className'] = random_str("编辑后的自动化测试")
+            self.data['classInfo'] = random_str("编辑后的自动化测试描述")
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()

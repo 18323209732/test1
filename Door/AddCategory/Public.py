@@ -8,6 +8,4 @@ import requests
 import time
 from random import randint
 from datetime import date,timedelta
-from Common.ReadYaml import ReadPublic, ConfigYaml
-projectName = ConfigYaml("projectName").base_config
-Url = ConfigYaml(projectName).base_url
+from Common.ReadYaml import ReadPublic

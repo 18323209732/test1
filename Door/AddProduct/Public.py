@@ -179,38 +179,19 @@ class GetAll:
         2.获取标记id
         """
         requests.packages.urllib3.disable_warnings()
-        headers = readconfig_ini(v=2)
-        url = readconfig_yaml() + r'/manager/gwforward/manager-webapi/product/productMark/save?tenantId=%s&authPermission=tag_add' % (
-            self.tenant_value)
-        data = {'appId': 2, 'markName': '我的标记', 'imageId': readyaml(file='Door\AddProduct', key='p_id'),
-                'imageurl': readyaml(file='Door\AddProduct', key='p_url')}
+        headers = readconfig_ini(v=3)
+        url = readconfig_yaml() + r'/manager/gwforward/manager-webapi/product/productMark/save?tenantId=%s&authPermission=tag_add'% (self.tenant_value)
+        data = {'appId': 2, 'markName': '我的标记', 'imageId': readyaml(file='AddProduct', key='p_id'), 'imageurl': readyaml(file='AddProduct', key='p_url')}
         r = requests.post(url, headers=headers, data=data, stream=True, verify=False)
 
-        url2 = readconfig_yaml() + r'/manager/gwforward/manager-webapi/product/productMark/list?tenantId=%s&appId=2' % (
-            self.tenant_value)
-        r2 = requests.get(url2, headers=self.headers, stream=True, verify=False)
 
+        url2 = readconfig_yaml() + r'/manager/gwforward/manager-webapi/product/productMark/list?tenantId=%s&appId=2'% (self.tenant_value)
+        r2 = requests.get(url2, headers=self.headers,  stream=True, verify=False)
         result = r2.json()['data'][-1]['id']
-
+        # print(result)
         return result
 
-    def get_list(self):
-        """
-        1.产品列表
-        2.获取第一个产品id1，第二个产品id2
-        """
-        requests.packages.urllib3.disable_warnings()
-        headers = readconfig_ini()
-        url = readconfig_yaml() + r'/manager/gwforward/manager-webapi/product/productInformation/list'
-        data = {"appId":2,"cateId":0,"showCaseId":'',"attributeId":0,"pcStatus":"","moStatus":"","startDate":"","endDate":"","pageSize":15,"pageNumber":1,"orderColumn":"","order_productName":"","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":""}
-        r = requests.post(url, headers=headers, json=data, stream=True, verify=False)
-        result = r.json()
-        id1 = result['data']['list'][0]['id']
-        id2 = result['data']['list'][1]['id']
-        # print(id1,id2)
-        return id1, id2
 
-
-if __name__ == '__main__':
-    GetAll().get_mark()
+# if __name__ == '__main__':
+#     #   GetAll().get_product_attribute()
 #     print(readyaml(file="Door\AddProduct",key="p_id"))

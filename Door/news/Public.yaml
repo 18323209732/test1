@@ -1,3 +1,27 @@
-add_customer:
-  - url: /add/customerParam
-    bar: {}
+get_news:
+  url: "/manager/gwforward/manager-webapi/content/info/info_page"
+  bar: {top: -1,recommend: -1,startDate: endDate=, pcStatus: -1, mobileStatus: -1,cateId: -1,keywords: '',wd: '',queryType: 4, ec_p: 1,ec_crd: 15,ec_s: '',v: 1,orderColumn: '',orderType: '',ec_s_title: '',ec_s_categorys: '',ec_s_pubDate: '',ec_s_viewCount: '', ec_s_showFlag: '', ec_s_showMobileFlag: ''}
+
+get_news_class:
+  url: "/manager/gwforward/manager-webapi/content/infoCategory/infoCategoryTreeExt"
+  bar: {node: -1}
+
+add_news:
+  url: "/manager/gwforward/manager-webapi/content/info/add"
+  bar: {"relecontentList":[],"contentValid":1,"id":"","infotype": 1,"title":"11","content":"<p>12131</p>\n","summary":"","keyWords":"","cateGoryIds":"1","sign":[],"author":"","source":"","appId":"3","showFlag":"true","pubDate":"2020-06-10 10:11:56","showMobileFlag":"true","accessPermission":"","veiwCount":"0","linkPath":"http://","linkPathMobile":"http://","targetFlag":"true","imgs":[],"InfoConfig":[{"name":"资讯内容","state":"2","id":"show_info_content"},{"name":"链接目标","state":"2","id":"show_link_info"},{"name":"相关内容","state":"1","id":"show_info_relation"},{"name":"权限设置","state":"1","id":"show_info_permission"},{"name":"推广优化","state":"1","id":"show_info_extension"},{"name":"高级设置","state":"1","id":"show_info_senior"}],"RelevantContent":[],"showStyle":"","recommandType":"false","seoAuto":"true","seoTitle":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"资讯关键词\"},{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"资讯名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"资讯概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","targetFlagMobile":"true","pubDateMobile":"2020-06-10 10:11:56","showStyleMobile":"","contentMobile":"","authData":"[{\"authType\":1,\"authStr\":\"GW_:3:detail:view:\",\"roleIds\":\"\"}]","videoIds":"","infoImgUrl":""}
+
+get_picture:
+  url: "/manager/gwforward/dssresources/imageRepository/findByPagination"
+  bar: {}
+
+get_application:
+  url: "/manager/gwforward/manager-webapi/product/productInformation/relevantProductList"
+  bar: {pcStatus: -1,moStatus: -1,categoryId: 0, pageNumber: 1,pageSize: 15, appId: 2}
+
+add_classnews:
+  url: "/manager/gwforward/manager-webapi/content/infoCategory/saveInfoCategory"
+  bar: {"id":"","parentId":"","parentName":"","name":"444","imgUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg","imgId":15,"imgThumbUrl":"/repository/image/c0edcf34-2a3a-44b2-bd98-a075a327fbe6.jpg","type":"1","des":"<p>555</p>\n","mobileDes":"","summary":"666","keywords":"777","targetType":"true","linkUrl":"","mobileTargetType":"true","mobileLinkUrl":"","showFlag":true,"mobileShowFlag":true,"newOpen":"true","showStyle":"","detailStyle":"","configValue":"","seoState":true,"seoTitle":[{"id":"categoryName","name":"资讯分类名称"},{"id":"oneCategoryName","name":"资讯分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoTitleSign":"_","seoKeywords":[{"id":"categoryKeyword","name":"资讯分类关键词"},{"id":"siteName","name":"网站名称"}],"seoKeywordsSign":",","seoDescription":[{"id":"categoryName","name":"资讯分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"资讯分类描述"}],"seoDescriptionSign":"-","mobileNewOpen":"true","mobileShowStyle":"","mobileDetailStyle":"","authType":1,"authStr":"GW_:3:category:view:","roleIds":"","authData":[{"authType":1,"authStr":"GW_:3:category:view:","roleIds":""}]}
+
+file_upload:
+  url: "/manager/gwforward/dssresources/imageRepository/imageFileUpload"
+  bar: {appId: 0}
