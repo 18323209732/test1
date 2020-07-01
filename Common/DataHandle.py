@@ -517,9 +517,6 @@ class Get_Skip:
                     class_name = class_module.split(".")[-1]
                     fun_name = re.findall("(.*?) \(", str(skip[0]))[0]
                     key = class_name.split('_')[1]
-                    print(key)
-                    print(class_name)
-                    print(fun_name)
                     if key:
                         for case in self.data.get(key):
                             if class_name == case.get('className'):
