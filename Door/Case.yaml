@@ -213,7 +213,7 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
           }
-          test_hide_classify: { #隐藏电脑版
+          test_content_hide_classify: { #隐藏电脑版
           url: '/manager/gwforward/manager-webapi/content/introcate/updateStatus',
           level: 中,   #级别
           author: 方坤,  #作者
@@ -224,7 +224,7 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
           }
-          test_display_classify: { #显示电脑版
+          test_content_display_classify: { #显示电脑版
           url: '/manager/gwforward/manager-webapi/content/introcate/updateStatus',
           level: 中,   #级别
           author: 方坤,  #作者
