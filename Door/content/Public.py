@@ -15,7 +15,8 @@ from Common.ReadYaml import ReadPublic
 
 def Public_path():
     """当前路径"""
-    return os.path.realpath('Public.yaml')
+    # return os.path.realpath('Public.yaml')
+    return os.path.realpath('Door\content\Public.yaml')
 
 def print_debug_info(o):
     """
