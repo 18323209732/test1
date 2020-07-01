@@ -233,7 +233,7 @@ class getlist_product(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         # del self.headers['Content-Type']
         # path = os.path.realpath('产品导入.zip')
-        path = "D:\Program Files\PycharmProjects\Portal_interface\Door\product\产品导入.zip"
+        path = os.path.realpath('Door\product\产品导入.zip')
         files = {"file": ("产品导入.zip", open(path, "rb"), "application/zip")}
         try:
             if self.type_condition:
