@@ -1,7 +1,7 @@
 # coding=utf-8
 import unittest
 import traceback, sys
-import requests,time
+import requests
 from Common.FontColor import outcome
 from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
@@ -66,7 +66,7 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            # print(r.json())
+            print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -100,15 +100,14 @@ class getlist_content(MyTest):
         # 新增分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         num = random_name()
-        self.data["introductionContent"]['title'] = ('接口新增内容'+ str(time.time())[:8])  # 随机生成内容标题
-        self.data["content"] = '接口新增内容'  # 随机生成详细介绍
+        self.data["introductionContent"]['title'] = num  # 随机生成内容标题
+        self.data["content"] = num  # 随机生成详细介绍
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             id = r.json()['data']
             RWyaml(Public_path()).write_yaml('content', 'addid2', id[8:])  # 新增内容id存入public.yaml文件
             # print(r.json())
-
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -120,11 +119,11 @@ class getlist_content(MyTest):
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test_zdel_content(self):
+    def test_del_content(self):
         # 删除分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         self.headers["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8"  # 修改头部请求方式
-        self.data["id"] = RWyaml(Public_path()).read_yaml_value('content', 'id1')  # yaml文件读取删除id
+        self.data["id"] = RWyaml(Public_path()).read_yaml_value('content', 'id3')  # yaml文件读取删除id
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -214,12 +213,10 @@ class getlist_content(MyTest):
     def test_updata_content(self):
         # 编辑第一个分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        self.data['introductionContent']['title'] = ('接口编辑内容'+ str(time.time())[:8])
-        self.data['introductionContent']['id'] = RWyaml(Public_path()).read_yaml_value('content', 'id1')  # 拖拽到id
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            # print(r.json())
+            r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -341,7 +338,7 @@ class getlist_content(MyTest):
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test_zbatch_delete_content(self):
+    def test_batch_delete_content(self):
         # 批量删除
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         self.headers["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8"
@@ -351,7 +348,7 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
-            # print(r.json())
+            print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -425,7 +422,6 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()

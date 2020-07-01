@@ -120,7 +120,7 @@ class manage_classify(MyTest):
         
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test_hide_classify(self):
+    def test_content_hide_classify(self):
         # 隐藏电脑版
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
@@ -141,7 +141,7 @@ class manage_classify(MyTest):
         
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test_display_classify(self):
+    def test_content_display_classify(self):
         # 显示电脑版
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:

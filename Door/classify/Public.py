@@ -56,8 +56,7 @@ class Classify:
         data = self.public_data.public_value("bar")
         data['id'] = id
         self.headers['Content-Type'] = 'application/x-www-form-urlencoded'
-        r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
-        result = r.json()
+        requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
 
         return id
     def get_picture_id(self):

@@ -4,7 +4,6 @@
     <data-source name="sqlite3.exe" uuid="16474f35-cd59-48b7-8613-d778b00a4419">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
       <secret-storage>forget</secret-storage>
-      <schema-mapping />
     </data-source>
   </component>
 </project>
