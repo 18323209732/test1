@@ -461,7 +461,7 @@ class info_banner(MyTest):
     def test_ydelete_content_banner(self):
         # 删除banner内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        self.data['ids'] = RWYaml(self.Public_path).read_yaml_value('banner', 'maintainid')
+        self.data['ids'] = RWYaml(self.Public_path).read_yaml_value('banner', 'content_id')
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
