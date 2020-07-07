@@ -2154,6 +2154,243 @@ Door:
           re_bar: params, # 请求参数
         }
 
+Door:
+  banner: #属性管理
+    - url:   # 添加属性类型地址
+      modular: 属性管理  # 接口注释
+      className: info_banner  # 接口类名
+      funName:
+        - test_add_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/position/addOrUpdatePosition,
+          level: 高,   #级别
+          author: 宋宇,  #作者
+          bar: {name: 接口新增},
+          test_data: {},
+          case_name: 新增banner,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_zdelete_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/position/deletePosition,
+          level: 高,   #级别
+          author: 宋宇,  #作者
+          bar: {id: ''},
+          test_data: {},
+          case_name: 删除banner,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_bgetlist_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/position/findBannerPositionList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {currentPage: 1, pageSize: 15, param: {"category":0}},
+          test_data: {},
+          case_name: 获取全部列表banner,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_time_screen_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/position/findBannerPositionList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {startDate: '', endDate: '',positionId: '', currentPage: 1, pageSize: 15},
+          test_data: {},
+          case_name: 筛选banner,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_name_screen_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/position/findBannerPositionList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {keywords: '编辑', currentPage: 1, pageSize: 15},
+          test_data: {},
+          case_name: 筛选banner,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_add_img_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/addBannerContentBatch,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: [{"title":"接口","description":"","linkUrl":"","openMode":"BLANK","beginTime":"2020-07-06 14:32:03","endTime":"","isShow":true,"mobileState":true,"isNever":true,"type":"IMAGE","isCompress":false,"resUrl":"repository/image/4eafef6a-7fb0-490e-ac9a-14cae2f77361.jpg","thumbUrl":"repository/image/4eafef6a-7fb0-490e-ac9a-14cae2f77361.jpg_135x135.jpg","smallImg":"repository/image/4eafef6a-7fb0-490e-ac9a-14cae2f77361.jpg","resId":257,"thumbId":257,"apId":31}],
+          test_data: {},
+          case_name: 添加图片内容,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_edit_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/position/addOrUpdatePosition,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {name: 接口新增, id: ''},
+          test_data: {},
+          case_name: 编辑banner,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_aaupload_img_banner: {  # 添加属性类型
+          url: /manager/gwforward/dssresources/imageRepository/imageFileUpload,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {appId: ""},
+          test_data: {},
+          case_name: 上传照片,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+          test_title_sort_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/position/findBannerPositionList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {currentPage: 1, pageSize: 15, ec_s_name: asc, param: {"category":0}},
+          test_data: {},
+          case_name: 表头排序,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_flip_over_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/position/findBannerPositionList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {currentPage: 1, pageSize: 15, param: {"category":0}},
+          test_data: {},
+          case_name: 翻页,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_maintain_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/findBannerContentList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {positionId: '', currentPage: 1, pageSize: 15, param: {"category":0}},
+          test_data: {},
+          case_name: 维护跳转,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_add_code_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/addBannerContentBatch,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: [{"apId":56,"title":"代码","description":"","content":"我是代码","openMode":"","beginTime":"2020-07-06 16:31:59","endTime":"","isShow":true,"mobileState":true,"isNever":true,"type":"CODE","linkUrl":"","resId":"","resUrl":"","smallImg":"","thumbId":"","thumbUrl":""}],
+          test_data: {},
+          case_name: 添加代码内容,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_bmaintain_list_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/findBannerContentList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {positionId: '', currentPage: 1, pageSize: 15, pcStatus: -1, mobileStatus: -1, keywords: ''},
+          test_data: {},
+          case_name: 维护列表内容,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_hide_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/updateStatus,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {state: false, isMobile: false, id: 18},
+          test_data: {},
+          case_name: 隐藏电脑版,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_show_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/updateStatus,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {state: true, isMobile: false, id: 18},
+          test_data: {},
+          case_name: 显示电脑版,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_edit_content_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/updateBannerContent,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {"title":"编辑图片1594090130","description":"","linkUrl":"","openMode":"BLANK","beginTime":"2020-07-06 14:32:03","isShow":true,"mobileState":true,"isNever":true,"type":"IMAGE","isCompress":false,"resUrl":"repository/image/32a4fa21-181d-4b89-ac20-e5db3b99f19c.jpg","thumbUrl":"repository/image/4eafef6a-7fb0-490e-ac9a-14cae2f77361.jpg_135x135.jpg","apId":65,"resId":269,"thumbId":257,"id":30},
+          test_data: {},
+          case_name: 编辑banner内容,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_screen_content_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/findBannerContentList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {positionId: '', startDate: 2020-07-07, endDate: 2020-07-07, keywords: '', pcStatus: -1, mobileStatus: -1, currentPage: 1,pageSize: 15},
+          test_data: {},
+          case_name: 筛选banner内容,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_findname_content_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/findBannerContentList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {positionId: '', keywords: '', pcStatus: -1, mobileStatus: -1, currentPage: 1,pageSize: 15},
+          test_data: {},
+          case_name: name搜索banner内容,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_ydelete_content_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/deleteBannerContent,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {ids: ''},
+          test_data: {},
+          case_name: 删除banner内容,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_flipover_content_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/findBannerContentList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {positionId: 65, currentPage: 1, pageSize: 15, param: {"category":65}},
+          test_data: {},
+          case_name: 翻页banner内容,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_editpage_content_banner: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/banner/content/toEdit,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {id: ''},
+          test_data: {},
+          case_name: 编辑banner内容页面,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
 
 
 
