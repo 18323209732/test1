@@ -2154,7 +2154,6 @@ Door:
           re_bar: params, # 请求参数
         }
 
-Door:
   banner: #属性管理
     - url:   # 添加属性类型地址
       modular: 属性管理  # 接口注释
