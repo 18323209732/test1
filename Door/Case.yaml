@@ -2391,5 +2391,163 @@ Door:
           re_bar: params, # 请求参数
         }
 
-
+  gotomenu: #属性管理
+    - url:   # 添加属性类型地址
+      modular: 一键菜单  # 接口注释
+      className: info_gotomenu  # 接口类名
+      funName:
+        - test_all_gotomenu: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/interaction/toolbar/getList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {viewType: 1, status: -1, queryStatus: -1, pageSize: 15, currentPage: 1, startDate: '', endDate: ''},
+          test_data: {},
+          case_name: 全部一键菜单列表页,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+        }
+          test_add_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbar/add,
+            level: 高,   #级别
+            author: 宋宇,  #作者
+            bar: {"id":0,"name":"接口","btnRelations":[{"moBtnId":16,"showFlag":true},{"moBtnId":15,"showFlag":true},{"moBtnId":14,"showFlag":true},{"moBtnId":3,"showFlag":true},{"moBtnId":1,"showFlag":true}],"useFlag":false,"showFlag":true,"appType":1},
+            test_data: {},
+            case_name: 添加一键菜单,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_zdelete_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbar/delete,
+            level: 高,   #级别
+            author: 宋宇,  #作者
+            bar: {"ids":''},
+            test_data: {},
+            case_name: 删除一键菜单,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
+          }
+          test_edit_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbar/update,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"id":0,"name":"","btnRelations":[{"moBtnId":16,"showFlag":true},{"moBtnId":15,"showFlag":true},{"moBtnId":14,"showFlag":true},{"moBtnId":3,"showFlag":true},{"moBtnId":1,"showFlag":true}],"useFlag":false,"showFlag":true,"appType":1},
+            test_data: {},
+            case_name: 编辑一键菜单,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_hide_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbar/updateState,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {ids: '', state: false},
+            test_data: {},
+            case_name: 隐藏一键菜单,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
+          }
+          test_show_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbar/updateState,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {ids: '', state: true},
+            test_data: {},
+            case_name: 显示一键菜单,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
+          }
+          test_find_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbar/getList,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {viewType: 1, status: -1, queryStatus: -1, pageSize: 15, currentPage: 1, startDate: '', endDate: ''},
+            test_data: {},
+            case_name: 筛选一键菜单列表页,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_flip_over_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbar/getList,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {viewType: 1, status: -1, queryStatus: -1, pageSize: 15, currentPage: 1, startDate: '', endDate: ''},
+            test_data: {},
+            case_name: 翻页,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_aadd_button_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbarBtn/addToolbarBtn,
+            level: 高,   #级别
+            author: 宋宇,  #作者
+            bar: {"id":"","targetType":0,"iconId":"","iconUrl":"","type":1,"attr":"customize","showFlag":true,"linkType":true,"linkUrl":"www.baidu.com","choose":true,"name":"自定义按钮","alias":"接口","linkPath":"www.baidu.com"},
+            test_data: {},
+            case_name: 添加按钮,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_aall_button_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbarBtn/getToolbtnList,
+            level: 高,   #级别
+            author: 宋宇,  #作者
+            bar: {currentPage: 1, pageSize: 15},
+            test_data: {},
+            case_name: 全部按钮列表页,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_edit_button_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbarBtn/updateToolbarBtn,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"id":23,"targetType":0,"iconId":"","iconUrl":"","type":1,"attr":"customize","showFlag":true,"linkType":true,"appId":"","sequence":17,"linkUrl":"www.baidu.com","choose":true,"name":"自定义按钮","alias":"哈喽1","linkPath":"www.baidu.com"},
+            test_data: {},
+            case_name: 编辑按钮,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_zdelete_button_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbarBtn/delete,
+            level: 高,   #级别
+            author: 宋宇,  #作者
+            bar: {"ids": ''},
+            test_data: {},
+            case_name: 删除按钮,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
+          }
+          test_drag_button_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbarBtn/sort,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {sectionIds: 23, targetId: 16, minOrder: 16, maxOrder: 17, direction: 0, type: 0},
+            test_data: {},
+            case_name: 拖拽按钮排序,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
+          }
+          test_flip_over_button_gotomenu: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/toolbarBtn/getToolbtnList,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {currentPage: 1, pageSize: 15},
+            test_data: {},
+            case_name: 翻页,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
 
