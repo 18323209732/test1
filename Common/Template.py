@@ -11,6 +11,7 @@ from Common.FontColor import outcome
 from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
+from Common.PrintDebug import print_debug_info
 import urllib3
 
 
@@ -35,6 +36,7 @@ case_body = """
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
+            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
