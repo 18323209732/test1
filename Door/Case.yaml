@@ -2550,4 +2550,118 @@ Door:
             mode: get,  # 请求类型
             re_bar: params, # 请求参数
           }
-
+  CustomContent: #属性管理
+    - url:   # 添加属性类型地址
+      modular: 自定义内容  # 接口注释
+      className: info_CustomContent  # 接口类名
+      funName:
+        - test_all_CustomContent: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/content/complaintPageContent/list,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {"isdisplay":"-1","ismobile":"-1","dateType":"0","beginDate":"","endDate":"","keywords":"","currentPage":1,"pageSize":15},
+          test_data: {},
+          case_name: 全部自定义内容列表页,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_add_CustomContent: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/content/complaintPageContent/save,
+            level: 高,   #级别
+            author: 宋宇,  #作者
+            bar: {"complaintPageContent":{"title":"自定义","isdisplay":"0","categoryId":"2","contenttype":"0","ismobile":"0"},"content":"<p>我是内容</p>\n","mobileContent":"","appId":"","catname":"全部内容"},
+            test_data: {},
+            case_name: 新增自定义内容,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_edit_CustomContent: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/content/complaintPageContent/update,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"complaintPageContent":{"id": 3,"title":"自定义","isdisplay":"0","categoryId":"2","contenttype":"0","ismobile":"0"},"content":"<p>我是内容</p>\n","mobileContent":"","appId":"","catname":"全部内容"},
+            test_data: {},
+            case_name: 编辑自定义内容,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_zdelete_CustomContent: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/content/complaintPageContent/delete,
+            level: 高,   #级别
+            author: 宋宇,  #作者
+            bar: {ids: ''},
+            test_data: {},
+            case_name: 删除自定义内容,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_hide_CustomContent: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/content/complaintPageContent/updateStatus,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {ids: '', status: 1},
+            test_data: {},
+            case_name: 隐藏自定义内容,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
+          }
+          test_show_CustomContent: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/content/complaintPageContent/updateStatus,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {ids: '', status: 0},
+            test_data: {},
+            case_name: 显示自定义内容,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
+          }
+          test_flip_over_CustomContent: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/content/complaintPageContent/list,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"isdisplay":"-1","ismobile":"-1","dateType":"0","beginDate":"","endDate":"","keywords":"","currentPage":1,"pageSize":15},
+            test_data: {},
+            case_name: 翻页,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_time_find_CustomContent: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/content/complaintPageContent/list,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"isdisplay":"-1","ismobile":"-1","dateType":"0","beginDate":"","endDate":"","keywords":"","currentPage":1,"pageSize":15},
+            test_data: {},
+            case_name: 日期搜索,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_title_find_CustomContent: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/content/complaintPageContent/list,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"isdisplay":"-1","ismobile":"-1","dateType":"0","beginDate":"","endDate":"","keywords":"","currentPage":1,"pageSize":15},
+            test_data: {},
+            case_name: 标题搜索,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_pull_find_CustomContent: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/content/complaintPageContent/list,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"isdisplay":"-1","ismobile":"-1","dateType":"0","beginDate":"","endDate":"","keywords":"","currentPage":1,"pageSize":15},
+            test_data: {},
+            case_name: 电脑版下拉搜索,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
