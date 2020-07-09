@@ -8,7 +8,7 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 from Common.PrintDebug import print_debug_info
-from Common.RWYaml import RWYaml
+from Common.RWyaml import RWyaml as RWYaml
 from Common.Route import Any_Path
 import urllib3
 
