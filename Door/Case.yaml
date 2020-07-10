@@ -2665,3 +2665,423 @@ Door:
             mode: post,  # 请求类型
             re_bar: json, # 请求参数
           }
+
+ companyCategory: # 企业下载分类
+    - url:   # 企业下载分类
+      modular: 企业分类  # 接口注释
+      className: manage_companyCategory  # 接口类名
+      funName:
+        - test01_add_companyCategory: {  # 方法名：添加普通分类，并从图片库选择图片，推广优化，html描述
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/saveCompanyfileCategory,
+          level: 高,
+          author: 姜娜,
+          bar: {'id': 0,'type': 1,'parentId': ,'imgUrl': '/repository/image/cb9a7720-11dc-4e15-8da3-c96735c49471.jpg','imgId': 5,'newOpen': 1,'mobileNewOpen': 1,'showFlag': 1,'mobileShowFlag': 1,'appId': 24,'name': '企业分类001', 'seoState': true,'hidTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'hidKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'hidDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'hidTitleSign': _,'hidKeywordsSign': ',','hidDescriptionSign': -,'hidAddDescription':,'seoTitleSign': _,'seoKeywordsSign': ',','seoDescriptionSign': -,'seoTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'seoKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'seoDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'authData': [{"authType":1,"authStr":"GW_:24:category:view:","roleIds":""}],'authType': 1,'authStr':'GW_:24:category:view:1'},
+          relation_data: {},    #关联接口
+          case_name: 添加普通分类，并从图片库选择图片，推广优化，html描述,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test02_add_Category: {  # 方法名：添加链接分类，并从图片库选择图片，推广优化，链接目标
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/saveCompanyfileCategory,
+          level: 中,
+          author: 姜娜,
+          bar: {'id': 0,'type': 2,'parentId': ,'imgUrl': '/repository/image/cb9a7720-11dc-4e15-8da3-c96735c49471.jpg','imgId': 5,'newOpen': 1,'mobileNewOpen': 1,'showFlag': 1,'mobileShowFlag': 1,'appId': 24,'name': '企业分类001', 'seoState': true,'hidTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'hidKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'hidDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'hidTitleSign': _,'hidKeywordsSign': ',','hidDescriptionSign': -,'hidAddDescription':,'seoTitleSign': _,'seoKeywordsSign': ',','seoDescriptionSign': -,'seoTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'seoKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'seoDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'authData': [{"authType":1,"authStr":"GW_:24:category:view:","roleIds":""}],'authType': 1,'authStr':'GW_:24:category:view:1'},
+          relation_data: {},    #关联接口
+          case_name: 添加链接分类，并从图片库选择图片，推广优化，链接目标,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test03_edit_companyCategory: {  # 方法名：编辑链接分类
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/updateCompanyfile,
+          level: 中,
+          author: 姜娜,
+          bar: {'id': 0,'type': 2,'parentId': ,'imgUrl': '/repository/image/cb9a7720-11dc-4e15-8da3-c96735c49471.jpg','imgId': 5,'newOpen': 1,'mobileNewOpen': 1,'showFlag': 1,'mobileShowFlag': 1,'appId': 24,'name': '企业分类001', 'seoState': true,'hidTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'hidKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'hidDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'hidTitleSign': _,'hidKeywordsSign': ',','hidDescriptionSign': -,'hidAddDescription':,'seoTitleSign': _,'seoKeywordsSign': ',','seoDescriptionSign': -,'seoTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'seoKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'seoDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'authData': [{"authType":1,"authStr":"GW_:24:category:view:","roleIds":""}],'authType': 1,'authStr':'GW_:24:category:view:1'},
+          relation_data: {},    #关联接口
+          case_name: 编辑链接分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test04_update_CateStatus: {  # 方法名：隐藏/显示电脑版链接分类
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/updateCateStatus,
+          level: 中,
+          author: 姜娜,
+          bar: [{'cateId': 31,'status': 0},{'cateId': 31,'status': 1}],
+          relation_data: {},    #关联接口
+          case_name: 隐藏电脑版链接分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test05_checkout_CateStatus: {  # 方法名：查看链接分类
+          url: /manager/gwforward/manager-webapi/content/companyFile/page,
+          level: 中,
+          author: 姜娜,
+          bar: "appId=24&cateId=1&pcStatus=-1&mobileStatus=-1&startDate=&endDate=&wd=&pageSize=15&currentPage=1&ec_s_title=&ec_s_categorys=&ec_s_pubDate=&ec_s_showFlag=&ec_s_showMobileFlag=&ec_s_viewcount=&orderColumn=&orderType=&",
+          relation_data: {},    #关联接口
+          case_name: 查看链接分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test06_Cate_Tree: {  # 方法名：全部分类列表
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/companyfileCategoryTree,
+          level: 高,
+          author: 姜娜,
+          bar: "cateId=-1",
+          relation_data: {},    #关联接口
+          case_name: 全部分类列表,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test07_order_Cate: {  # 方法名：分类拖拽排序
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/updateOrderAndMoveCate,
+          level: 中,
+          author: 姜娜,
+          bar: "cateId=32&targetId=2&targetPos=below&",
+          relation_data: {},    #关联接口
+          case_name: 分类拖拽排序,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test08_move_Cate: {  # 方法名：转移分类
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/updateMoveCate,
+          level: 中,
+          author: 姜娜,
+          bar: "toCateId=32&cateId=33&",
+          relation_data: {},    #关联接口
+          case_name: 转移分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test09_update_CateStatus: {  # 方法名：隐藏/显示电脑版分类
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/updateCateStatus,
+          level: 中,
+          author: 姜娜,
+          bar: {'cateId': 31,'status': 0},
+          relation_data: {},    #关联接口
+          case_name: 隐藏/显示电脑版分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test10_delete_Cate: {  # 方法名：删除分类
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/deleteCate,
+          level: 中,
+          author: 姜娜,
+          bar: "",
+          relation_data: {},    #关联接口
+          case_name: 删除分类,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test11_update_CateStatus: {  # 方法名：隐藏/显示移动版分类
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/updateCateStatusMobile,
+          level: 中,
+          author: 姜娜,
+          bar: {'cateId': 31,'status': 0},
+          relation_data: {},    #关联接口
+          case_name: 隐藏/显示移动版分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+  companyFile: # 企业下载
+    - url:   # 企业下载
+      modular: 企业分类  # 接口注释
+      className: manage_companyFile  # 接口类名
+      funName:
+        - test01_add_companyFile: {  # 方法名：添加链接文件
+          url: /manager/gwforward/manager-webapi/content/companyfile/add,
+          level: 高,
+          author: 姜娜,
+          bar: {"infotype":"2","title":"接口链接文件001","summary":"啦啦啦啦啦啦啦啦啦啦啦","keyWords":"","cateGoryIds":"48","appId":"24","content":"","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"false","targetFlagMobile":"false","linkPath":"{\"entityTag\":\"page\",\"text\":\"企业下载\",\"id\":\"8a2d65e7-9e70-4bc6-903d-aa31082d9051\",\"param\":0}","linkPathMobile":"{\"entityTag\":\"page\",\"text\":\"企业下载\",\"id\":\"8a2d65e7-9e70-4bc6-903d-aa31082d9051\",\"param\":0}","pubDate":"","veiwCount":"500","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":null,"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 添加链接文件,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test02_more_companyFile: {  # 方法名：添加多个分类链接文件
+          url: /manager/gwforward/manager-webapi/content/companyfile/add,
+          level: 中,
+          author: 姜娜,
+          bar: {"infotype":"2","title":"接口链接文件001","summary":"啦啦啦啦啦啦啦啦啦啦啦","keyWords":"","cateGoryIds":"48","appId":"24","content":"","contentMobile":"","showFlag":"false","showMobileFlag":"false","targetFlag":"false","targetFlagMobile":"false","linkPath":"{\"entityTag\":\"page\",\"text\":\"企业下载\",\"id\":\"8a2d65e7-9e70-4bc6-903d-aa31082d9051\",\"param\":0}","linkPathMobile":"{\"entityTag\":\"page\",\"text\":\"企业下载\",\"id\":\"8a2d65e7-9e70-4bc6-903d-aa31082d9051\",\"param\":0}","pubDate":"","veiwCount":"500","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":null,"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 多个分类链接文件,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test03_selectApp: {  # 方法名：获取相关内容
+          url: /manager/gwforward/manager-webapi/content/common/relatedContent/selectApp,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 获取相关内容,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test04_getSeoList: {  # 方法名：获取SEO列表
+          url: /manager/gwforward/manager-webapi/content/companyfile/getSeoList,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 获取SEO列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test05_getUsedAndTotalCapacity: {  # 方法名：获取全部分类和用户分类
+          url: /manager/gwforward/dssresources/fileRepository/getUsedAndTotalCapacity,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 获取全部分类和用户分类,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test06_getKs3Config: {  # 方法名：获取金山文件接口
+          url: /manager/gwforward/dssresources/fileRepository/getKs3Config,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 获取金山文件接口,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test07_findByPagination: {  # 方法名：获取文件接口列表
+          url: /manager/gwforward/dssresources/fileRepository/findByPagination,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 获取文件接口列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test08_add_File: {  # 方法名：添加普通单图文件
+          url: /manager/gwforward/manager-webapi/content/companyfile/add,
+          level: 高,
+          author: 姜娜,
+          bar: {"id":"38","infotype":"1","title":"企业普通文件","summary":"88888888","keyWords":"关键词001","cateGoryIds":"52","appId":"24","content":"<p>88888888</p>\n","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"true","targetFlagMobile":"true","linkPath":"","linkPathMobile":"","pubDate":"2020-07-08 10:21:42","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"2020-07-08 10:21:42","showStyleMobile":"","imgUrl":"/repository/image/c29bb365-842a-43fa-8b92-36317255eeea.png","imgId":"19","RelevantContent":null,"comFiles":[{"id":35,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"/comp/xcompanyFile/download.do?appId=24&fid=35&id=38"},{"id":71,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2006245115/%E4%BC%81%E4%B8%9A%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.txt"}],"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:38\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:38\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 添加普通单图文件,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test09_add_moreCate: {  # 方法名：添加多选文件
+          url: /manager/gwforward/manager-webapi/content/companyfile/add,
+          level: 中,
+          author: 姜娜,
+          bar: {"id":"38","infotype":"1","title":"企业普通多文件","summary":"88888888","keyWords":"关键词001","cateGoryIds":"52","appId":"24","content":"<p>88888888</p>\n","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"true","targetFlagMobile":"true","linkPath":"","linkPathMobile":"","pubDate":"2020-07-08 10:21:42","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"2020-07-08 10:21:42","showStyleMobile":"","imgUrl":"/repository/image/c29bb365-842a-43fa-8b92-36317255eeea.png","imgId":"19","RelevantContent":null,"comFiles":[{"id":35,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"/comp/xcompanyFile/download.do?appId=24&fid=35&id=38"},{"id":71,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2006245115/%E4%BC%81%E4%B8%9A%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.txt"}],"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:38\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:38\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 添加多选文件,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test10_add_content: {  # 方法名：添加电脑版、移动版描述，关键词文件
+          url: /manager/gwforward/manager-webapi/content/companyfile/add,
+          level: 中,
+          author: 姜娜,
+          bar: {"infotype":"1","title":"有描述文件","summary":"概要描述在这里","keyWords":"关键词001","cateGoryIds":"47","appId":"24","content":"<p>电脑88888</p>\n","contentMobile":"<p>移动版88888</p>\n","showFlag":"false","showMobileFlag":"true","targetFlag":"false","targetFlagMobile":"false","linkPath":"","linkPathMobile":"","pubDate":"","veiwCount":"50","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":[{"id":72,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2006245115/%E4%BC%81%E4%B8%9A%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.txt"}],"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 添加电脑版、移动版描述，关键词文件,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test11_add_relevantInfoList: {  # 方法名：获取企业下载列表
+          url: /manager/gwforward/manager-webapi/content/companyFile/relevantInfoList,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 获取企业下载列表,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test12_RelevantContent: {  # 方法名：有相关内容文件
+          url: /manager/gwforward/manager-webapi/content/companyfile/add,
+          level: 中,
+          author: 姜娜,
+          bar: {"infotype":"1","title":"有相关内容文件","summary":"","keyWords":"","cateGoryIds":"52","appId":"24","content":"<p>1</p>\n","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"true","targetFlagMobile":"true","linkPath":"","linkPathMobile":"","pubDate":"2020-07-08 11:36:08","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"2020-07-08 11:36:08","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":[{"appId":24,"contentList":[48]}],"comFiles":[{"id":72,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"/comp/xcompanyFile/download.do?appId=24&fid=72&id=48"}],"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:48\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:48\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 有相关内容文件,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test13_getAppAuthority: {  # 方法名：获取高级选项
+          url: /manager/gwforward/manager-webapi/content/companyfile/getAppAuthority,
+          level: 中,
+          author: 姜娜,
+          bar: {"id":"38","infotype":"1","title":"企业普通文件","summary":"88888888","keyWords":"关键词001","cateGoryIds":"52","appId":"24","content":"<p>88888888</p>\n","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"true","targetFlagMobile":"true","linkPath":"","linkPathMobile":"","pubDate":"2020-07-08 10:21:42","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"2020-07-08 10:21:42","showStyleMobile":"","imgUrl":"/repository/image/c29bb365-842a-43fa-8b92-36317255eeea.png","imgId":"19","RelevantContent":null,"comFiles":[{"id":35,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"/comp/xcompanyFile/download.do?appId=24&fid=35&id=38"},{"id":71,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2006245115/%E4%BC%81%E4%B8%9A%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.txt"}],"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:38\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:38\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 获取高级选项,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test14_authData: {  # 方法名：高级选项文件
+          url: /manager/gwforward/manager-webapi/content/companyfile/add,
+          level: 中,
+          author: 姜娜,
+          bar: {"infotype":"1","title":"高级选项文件","summary":"","keyWords":"","cateGoryIds":"47","appId":"24","content":"<p>123456</p>\n","contentMobile":"<p>123456</p>\n","showFlag":"true","showMobileFlag":"true","targetFlag":"false","targetFlagMobile":"false","linkPath":"","linkPathMobile":"","pubDate":"","veiwCount":"980","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":[{"id":72,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2006245115/%E4%BC%81%E4%B8%9A%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.txt"}],"authData":"[{\"authType\":2,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":2,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 高级选项文件,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test15_sort_list: {  # 方法名：企业下载列表排序
+          url: /manager/gwforward/manager-webapi/content/companyFile/updateCustomSort,
+          level: 中,
+          author: 姜娜,
+          bar: "viewType=1&tenantId=196566&_d=1594276214675&orderMode=",
+          relation_data: {},    #关联接口
+          case_name: 企业下载列表排序,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test16_get_info: {  # 方法名：获取电脑、移动端域名
+          url: /manager/gwforward/manager-webapi/interaction/cron/share/info,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 获取电脑、移动端域名,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test17_get_list: {  # 方法名：获取企业下载列表
+          url: /manager/gwforward/manager-webapi/content/companyFile/page,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 企业下载列表,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test18_get_updatelist: {  # 方法名：企业拖拽排序
+          url: /manager/gwforward/manager-webapi/content/companyFile/updateCompanyfilePosition,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 企业拖拽排序,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test19_choice_list: {  # 方法名：筛选列表
+          url: /manager/gwforward/manager-webapi/content/companyFile/page,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 筛选列表,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test20_search_list: {  # 方法名：搜索列表
+          url: /manager/gwforward/manager-webapi/content/companyFile/page,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 搜索列表,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test21_next_list: {  # 方法名：翻页
+          url: /manager/gwforward/manager-webapi/content/companyFile/page,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 翻页,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test22_editor: {  # 方法名：编辑企业下载
+          url: /manager/gwforward/manager-webapi/content/companyfile/update,
+          level: 中,
+          author: 姜娜,
+          bar: {"id":"14","infotype":"1","title":"高级选项文件","summary":"","keyWords":"","cateGoryIds":"1","appId":"24","content":"<p>123456</p>\n","contentMobile":"<p>123456</p>\n","showFlag":"true","showMobileFlag":"true","targetFlag":"true","targetFlagMobile":"true","linkPath":"","linkPathMobile":"","pubDate":"2020-07-09 14:03:00","veiwCount":"980","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"2020-07-09 14:03:00","showStyleMobile":"","imgUrl":"/repository/image/73519170-e243-4bdd-93d4-0db4ebc77025.png","imgId":"89","RelevantContent":null,"comFiles":[{"id":72,"path":"/comp/xcompanyFile/download.do?appId=24&fid=72&id=14"}],"authData":"[{\"authType\":2,\"authStr\":\"GW_:24:detail:view:14\",\"roleIds\":\"\"},{\"authType\":2,\"authStr\":\"GW_:24:detail:download:14\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 编辑企业下载,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test23_goto: {  # 方法名：批量转移
+          url: /manager/gwforward/manager-webapi/content/companyFile/updateMove,
+          level: 中,
+          author: 姜娜,
+          bar: "appId=24&id=60&cateId=55&",
+          relation_data: {},    #关联接口
+          case_name: 批量转移,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test24_updateState_PC: {  # 方法名：批量显示/隐藏电脑版
+          url: /manager/gwforward/manager-webapi/content/companyFile/updateState,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 批量显示/隐藏电脑版,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test25_updateState_MO: {  # 方法名：批量显示/隐藏移动版
+          url: /manager/gwforward/manager-webapi/content/companyFile/updateState,
+          level: 中,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 批量显示/隐藏移动版,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test26_delete: {  # 方法名：批量删除
+          url: /manager/gwforward/manager-webapi/content/companyFile/delete,
+          level: 高,
+          author: 姜娜,
+          bar: "ppId=24&id=60,57",
+          relation_data: {},    #关联接口
+          case_name: 批量删除,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
