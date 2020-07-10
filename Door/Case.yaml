@@ -70,6 +70,7 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
           }
+
   classification: #分类管理
     - url:   # 分类地址
       modular: 分类管理  # 接口注释
@@ -285,6 +286,7 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
         }
+
   AddProduct: #添加产品，选择必填项，并上传图片，设置封面
     - url:   # 保存产品
       modular: 保存产品  # 接口注释
@@ -516,7 +518,6 @@ Door:
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
           }
-
 
   content: #内容模块
     - url:  # 邮件地址
@@ -1319,7 +1320,6 @@ Door:
           re_bar: json, # 请求参数
         }
 
-
   newsclass: #新闻资讯
     - url:  # 新闻资讯
       modular: 新闻分类管理  # 接口注释
@@ -1552,6 +1552,7 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
           }
+ 
   picture: #新闻资讯
     - url:  # 新闻资讯
       modular: 新闻分类管理  # 接口注释
@@ -2550,6 +2551,7 @@ Door:
             mode: get,  # 请求类型
             re_bar: params, # 请求参数
           }
+ 
   CustomContent: #属性管理
     - url:   # 添加属性类型地址
       modular: 自定义内容  # 接口注释
@@ -2666,7 +2668,7 @@ Door:
             re_bar: json, # 请求参数
           }
 
- companyCategory: # 企业下载分类
+  companyCategory: # 企业下载分类
     - url:   # 企业下载分类
       modular: 企业分类  # 接口注释
       className: manage_companyCategory  # 接口类名
