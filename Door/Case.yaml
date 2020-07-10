@@ -2710,7 +2710,7 @@ Door:
           url: /manager/gwforward/manager-webapi/content/companyFileCategory/updateCateStatus,
           level: 中,
           author: 姜娜,
-          bar: [{'cateId': 31,'status': 0},{'cateId': 31,'status': 1}],
+          bar: {'cateId': 31,'status': 0},
           relation_data: {},    #关联接口
           case_name: 隐藏电脑版链接分类,
           expected: [200],  # 预期结果
