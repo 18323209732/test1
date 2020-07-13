@@ -30,3 +30,4 @@ def Get_Regular(string,style,index=-1):
             raise IndexError("你的取值已经超出列表范围....")
 
     return value
+

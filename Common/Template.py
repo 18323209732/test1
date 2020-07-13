@@ -11,10 +11,12 @@ from Common.FontColor import outcome
 from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
-from Common.PrintDebug import print_debug_info
 import urllib3
+from ddt import ddt, data,file_data
+from Common.ReExecution import Get_Cls_Fun
 
 
+@ddt
 class {}(MyTest):
 
     condition = True
@@ -22,6 +24,7 @@ class {}(MyTest):
     # {}"""
 
 case_body = """
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def {}(self):
@@ -36,12 +39,35 @@ case_body = """
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
-            print_debug_info('--->pass')
         except:
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
         """
+
+case_body_ddt = """
+
+    # @unittest.skipIf(condition, "暂时跳过")
+    @Get_Cls_Fun
+    @ReRun(MyTest.setUp)
+    def {}(self, case):
+        # {}
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
+
+            url = ConfigYaml(self.projectName).base_url + self.url
+            r = requests.{}(url, headers=self.headers, {}=case, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
+        """
+
 
 case_data = '''%s:
   product: #产品管理

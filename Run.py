@@ -99,8 +99,8 @@ class RunAll:
         self.runfrequency = ConfigYaml('runfrequency').base_config      #只运行失败和错误的用例次数
         self.againrunall = ConfigYaml('againrun').base_config           #运行失败和错误的用例多少次数之后再整体运行多少次
         self.report_path = Any_Path("template", 'report.html')       #测试报告存放路径
-        self.oldstrcs = '../../static/mycss.css'                       #静态文件地址css
-        self.oldstrjs = '../../static/alljs.js'                         #静态js文件地址
+        self.oldstrcs = '/static/mycss.css'                       #静态文件地址css
+        self.oldstrjs = '/static/alljs.js'                         #静态js文件地址
         self.newstrcs = '../static/mycss.css'
         self.newstrjs = '../static/alljs.js'
         if self.domain:
@@ -285,14 +285,16 @@ class RunAll:
         '''
 
         value = self.collect_data()
-        r = requests.post(url=self.url, json=value, stream=True, timeout=60)
+        r = requests.post(url=self.url, json=value, stream=True, timeout=100)
         if r.json().get('code') == 0:
-            url = r.json().get('data').get('report_url')
-            file = r.json().get('data').get('report_dir')
+            result = r.json().get('data')
+            url = result.get('report_url')
+            file = result.get('report_dir')
+            file_name = result.get('report_name')
 
             log.info('获取测试报告数据相关内容成功...')
 
-            return url, file, len(value['success']), len(value['error']), len(value['fail']), \
+            return url, file, file_name, len(value['success']), len(value['error']), len(value['fail']), \
                    len(value['timeout']), len(value['skip'])
 
     def download_report(self):
@@ -300,10 +302,10 @@ class RunAll:
         将服务器的测试报告下载到本地接口
         :return:
         '''
-        url, file_path, success, error, fail, timeout, skip = self.get_report()
+        url, file_path, file_name, success, error, fail, timeout, skip = self.get_report()
         data = {'report_dir': file_path}
         re_url = self.url.replace("get_report", "download_report")
-        r = requests.post(url=re_url, data=data, stream=True, timeout=60)
+        r = requests.post(url=re_url, data=data, stream=True, timeout=100)
 
         if r.content:
             with open(self.report_path, 'w', encoding=self.encoding) as f:
@@ -313,7 +315,7 @@ class RunAll:
                 f.close()
         log.info('下载测试报告至本地成功....')
 
-        return url, file_path, success, error, fail, timeout, skip
+        return url, file_path, file_name, success, error, fail, timeout, skip
 
 
     def send_mail(self):
@@ -322,7 +324,8 @@ class RunAll:
         :return:
         '''
 
-        url, file_path, success, error, fail, timeout, skip = self.download_report()
+        url, file_path, file_name, success, error, fail, timeout, skip = self.download_report()
+        report_url = self.url.replace("http://", "").replace("get_report/", f"report/?filename={file_name}")
         sum_case = success + error + fail + timeout + skip
         title = '{}({})'.format(self.title, self.EnvName)
         description = '''本次接口运行总数: {}, 成功: {}, 错误: {}, 失败: {}, 超时: {}, 跳过: {}'''\
@@ -330,10 +333,10 @@ class RunAll:
         img_url = self.url.replace('get_report', 'image')
         if self.mail:
             outcome("green", "请稍后!正在发送邮件....")
-            MyMail(url, self.report_path).send_info()
+            MyMail(report_url, self.report_path).send_info()
         if self.wechat:
             outcome("green", "请稍后!正在发送企业微信消息....")
-            Send_Wechat().send_picture(title, description, url, img_url)
+            Send_Wechat().send_picture(title, description, report_url, img_url)
 
     def clean_data(self):
         '''
