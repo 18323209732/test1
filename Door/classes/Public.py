@@ -16,7 +16,7 @@ from Common.ReadYaml import ReadPublic
 def Public_path():
     """当前路径"""
     # return os.path.realpath('Public.yaml')
-    return "D:\Program Files\PycharmProjects\Portal_interface\Door\classes\Public.yaml"
+    return os.path.realpath('Door\classes\Public.yaml')
 
 def print_debug_info(o):
     """

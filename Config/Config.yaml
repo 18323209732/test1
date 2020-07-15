@@ -1,6 +1,6 @@
 base_url:
-  Design: https://new-console.300.cn        #会员中心地址
-  Door: https://2004105022-site.pool5.yun300.cn   #https://2004105022-site.pool5.yun300.cn # 正式环境
+  Design: https://new-console.300.cn                  #会员中心地址
+  Door: https://2004105022-site.pool5.yun300.cn       #https://2004105022-site.pool5.yun300.cn # 正式环境
 base_config:
   tenant_key: tenantId
   tenant_value: 188078
@@ -25,10 +25,10 @@ base_config:
   backupCount: 7                                  #日志保存最大天数
   browserName: chrome                             #启动浏览器类型
   title: 门户接口化测试报告
-  domain:                                         #域名
+  domain:  publicapi.cd.app.scrm365.cn                                       #域名
   EnvName: Door线上环境测试报告
   projectName: Door                           #项目名称
-  moudleName: newsclass #[newsclass,picture,news] #newsclass                                   #运行模块
+  moudleName:  newsclass #news #[newsclass,picture,news] #newsclass                                   #运行模块
   timeout: 3                                     #超时时间
   thread_count: 4                                 #开启线程数，开启线程数不能大于模块数
   process: False                                 #是否开启多进程
@@ -36,10 +36,10 @@ base_config:
   redis: False                                     #redis执行开关
   Log: Log                                           #存放日志文件的目录名称
   image: Img                                       #图片存放地址
-  mail_file: True                                   #是否发送邮件附件
+  mail_file: False                                   #是否发送邮件附件
   mail_picture: True                               #是否添加发送邮件正文图片
   Mail: True                                        #是否发送邮件
-  Wechat: True                                      #是否发送企业微信
+  Wechat: False                                      #是否发送企业微信
   matching: '*_st.py'                              #文件后缀
   mysql:  True                                   #数据库连接类型开关
   sqlite: False                                    #sqlite执行开关
@@ -51,10 +51,10 @@ base_config:
   redisip: 192.168.4.36                       #redis服务ip
   redisport: 6379                             #redis服务端口
   redisresult: redisre                        #redis表名
-  serverip: 192.168.4.36                     #服务器ip
-  serverport: 8082                           #服务器端口
+  serverip: 192.168.5.240                     #服务器ip
+  serverport: 38888                          #服务器端口
   threadrun: False                            #是否开启多线程运行
-  timing: 1                                  #定时任务间隔时间
+  timing: 3600                                  #定时任务间隔时间
   company: 秒                                 #定时任务执行单位,时，分，秒
   errorrate: 0.7                              #错误率
   failrate: 0.8                               #失败率
@@ -83,7 +83,7 @@ email:
   smtp_sever: smtp.gouuse.cn # 邮箱smtp服务 如 smtp.163.com
   send_person: chenjianbo@gouuse.cn    #邮件发送者邮箱
   send_pwd: Cjbwt0107  # 邮件发送者邮箱密码
-  receive_person: [chenjianbo@gouuse.cn, songyu@gouuse.cn]      #邮件接收者
+  receive_person: [chenjianbo@300.cn,songyu@gouuse.cn,jiangna@gouuse.cn,fangkun@gouuse.cn]  #songyu@gouuse.cn,jiangna@gouuse.cn,fangkun@gouuse.cn    #邮件接收者
 sql:
   create_table: CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL AUTO_INCREMENT,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));
   drop_database: DROP DATABASE %s;

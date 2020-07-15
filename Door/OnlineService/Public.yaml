@@ -1,0 +1,20 @@
+add_customer:
+- bar: {}
+  url: /add/customerParam
+data:
+  list:
+  - id: 34
+    name: "\u65B0\u589E\u7EC4485"
+    sequence: 34
+    staff:
+    - {account: '13213213131', groupId: 34, id: 31, name: "\u5BA2\u670D501", sequence: 31,
+      status: true, type: 1, typeText: QQ}
+    - {account: '13213213131', groupId: 34, id: 30, name: "\u5BA2\u670D501", sequence: 30,
+      status: true, type: 1, typeText: QQ}
+  - id: 33
+    name: "\u65B0\u589E\u7EC4484"
+    sequence: 33
+    staff: []
+group: {id1: 34, id2: 33}
+service:
+  id1: [31, 30]

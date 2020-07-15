@@ -1,6 +1,14 @@
+import unittest
 from functools import wraps
 from random import choice
 from time import sleep
+
+import requests
+import urllib3
+from ddt import ddt,data
+
+from Common.DataHandle import Get_Data
+from Common.ReadYaml import CaseYaml, ConfigYaml
 
 
 class ReExecution:
@@ -64,7 +72,6 @@ class ReExecution:
                             # if value.get(self.key) == self.isuse:
                             #     yield value.get(kwargs.get('value'))
 
-
                 else:
 
                     if not result.get(self.response_key):
@@ -83,7 +90,6 @@ class ReExecution:
                                 # value = choice(result.get(self.response_key))
                                 # if value.get(self.key) == self.isuse:
                                 #     yield value.get(kwargs.get('value'))
-
                     else:
                         if self.swich:
                             value = choice(result.get(self.response_key))
@@ -99,4 +105,29 @@ class ReExecution:
                             #     yield value.get(kwargs.get('value'))
 
         return wrapper
+
+
+def Get_Cls_Fun(fun):
+    '''
+    动态获取类名及方法名
+    :param fun:
+    :return:
+    '''
+
+    cla_name = str(fun).split(" ")[1].split(".")[0]    #类名
+    fun_name = fun.__name__        #方法名
+    datas = CaseYaml().all_case    #数据
+    value = Get_Data(cla_name, fun_name, datas)   #对应用例数据
+
+    @data(*value)
+    @wraps(fun)
+    def Inner(*args, **kwargs):
+        '''
+        :param args:
+        :param kwargs:
+        :return:
+        '''
+        fun(*args, **kwargs)
+
+    return Inner
 

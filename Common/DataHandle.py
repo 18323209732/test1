@@ -81,8 +81,24 @@ def Matching(style,string):
     return result
 
 
+def Get_Data(clsname,funname, data):
 
-
+    '''
+    用例数据处理
+    :param clsname:
+    :param funname:
+    :return:
+    '''
+    allkeys = list(data.keys())
+    key = clsname.split('_')[1]
+    if key in allkeys:
+        for value in data.get(key):
+            if value.get("className") == clsname:
+                for fun in value['funName']:
+                    return fun.get(funname).get("bar")
+    else:
+        log.info(f'未找到{key}相关目录')
+        raise KeyException(key)
 
 def CaseHandle(clsname,funname,data):
 
@@ -170,7 +186,7 @@ class SqlHandle:
                 self.status = "跳过"
 
             else:
-                self.status = "错误"
+                self.status = "失败"
         else:
             self.status = "成功"
 
@@ -258,7 +274,7 @@ class SqlHandle:
 
 class  Case_data:
 
-    def __init__(self,filename='Data.yaml',encoding='utf-8'):
+    def __init__(self, filename='Data.yaml',encoding='utf-8'):
         '''
         :param filename: 文件名
         :param encoding:
