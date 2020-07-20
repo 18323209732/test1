@@ -1,5 +1,6 @@
 import re
 import warnings
+from collections import ChainMap
 
 from Common.Abnormal import RepeatClass,RepeatCase
 from Common.ReadYaml import ConfigYaml,CaseYaml
@@ -42,7 +43,16 @@ class Initialization(object):
         else:
             outcome('red', f'请检查配置文件是否存在{self.projectName}....')
 
-        self.data = CaseYaml().all_case
+        case_list = Any_Path(self.projectName)
+        case_file = os.listdir(case_list)
+        yaml_list = [file for file in case_file if file.endswith(".yaml") and file != "Data.yaml"]
+        case_dict = {}
+        for file in yaml_list:
+            value = CaseYaml(file=file).all_case
+            case_dict.update(value)
+
+        self.data = case_dict
+
 
     def search_pyfun(self, module, pyfile):
 

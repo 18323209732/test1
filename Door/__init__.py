@@ -10,10 +10,9 @@ from Door.news.infoes_st import infoes_news
 from Door.newsclass.newsmanage_st import newsmanage_newsclass
 from Door.picture.library_st import library_picture
 from Door.product.getlist_st import getlist_product
-from Door.productCategory.manage_st import manage_productCategory
 from Door.tab.info_st import info_tab
 
-all_class = [manage_AddCategory, manage_AddProduct, add_attribute, info_classes, manage_classification, manage_classify, getlist_content, manage_listShowcase, infoes_news, newsmanage_newsclass, library_picture, getlist_product, manage_productCategory, info_tab]
+all_class = [manage_AddCategory, manage_AddProduct, add_attribute, info_classes, manage_classification, manage_classify, getlist_content, manage_listShowcase, infoes_news, newsmanage_newsclass, library_picture, getlist_product, info_tab]
 
 all_dirs = ['AddCategory', 'AddProduct', 'attribute', 'classes', 'classification', 'classify', 'content', 'listShowcase', 'news', 'newsclass', 'picture', 'product', 'productCategory', 'tab']
 
