@@ -1,0 +1,128 @@
+Door:
+  fslinkCategory: #友情链接分类
+    - url:   # 友情链接地址
+      modular: 友情链接分类  # 接口注释
+      className: Category_fslinkCategory  # 接口类名
+      funName:
+        - test_getList: {  # 分类列表
+          url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/getList,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 分类列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_01_add_Category: {  # 添加分类
+          url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/save,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: [{"name":"我的分类2","description":"这是分类描述","showFlag":true,"mobileShowFlag":true,"showOrder":"","createDate":"","imgId":443,"imgUrl":"/repository/image/44ca00bf-be59-4a3c-a741-3462dd862aaf.jpg"},
+                {"name":"我的分类3","description":"这是分类描述","showFlag":true,"mobileShowFlag":true,"showOrder":"","createDate":"","imgId":443,"imgUrl":"/repository/image/44ca00bf-be59-4a3c-a741-3462dd862aaf.jpg"}],
+          test_data: {},
+          case_name: 添加分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_edit_Category: {  # 编辑分类
+          url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/save,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"contentNum":0,"createDate":1595321179000,"description":"这是分类描述","id":18,"imgId":443,"imgUrl":"/repository/image/44ca00bf-be59-4a3c-a741-3462dd862aaf.jpg","isEnable":false,"mobileShowFlag":true,"name":"接口添加555","showFlag":true,"showOrder":18,"useViewType":false},
+          test_data: {},
+          case_name: 编辑分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_see_Category: {  # 查看分类
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/getList,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 查看分类,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_01_hide_Category: {  # 隐藏电脑版
+          url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/updateShowState,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"id":15,"state":0,"type":1},
+          test_data: {},
+          case_name: 隐藏电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_display_Category: {  # 显示电脑版
+          url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/updateShowState,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"id":15,"state":1,"type":1},
+          test_data: {},
+          case_name: 显示电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_01_hide_move: {  # 隐藏移动版
+          url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/updateShowState,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"id":15,"state":0,"type":2},
+          test_data: {},
+          case_name: 隐藏移动版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_display_move: {  # 显示移动版
+          url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/updateShowState,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"id":15,"state":1,"type":2},
+          test_data: {},
+          case_name: 显示移动版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_delete_Category: {  # 删除分类
+          url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/delete,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"id":28},
+          test_data: {},
+          case_name: 删除分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_PageDown: {  # 翻页
+          url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/getList,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"id":28},
+          test_data: {},
+          case_name: 翻页,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_imageFileUploadNew: {  # 添加图片
+          url: /manager/gwforward/dssresources/imageRepository/imageFileUploadNew,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 添加图片,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
