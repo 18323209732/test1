@@ -19,8 +19,7 @@ Door:
           url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/save,
           level: 中,   #级别
           author: 方坤,  #作者
-          bar: [{"name":"我的分类2","description":"这是分类描述","showFlag":true,"mobileShowFlag":true,"showOrder":"","createDate":"","imgId":443,"imgUrl":"/repository/image/44ca00bf-be59-4a3c-a741-3462dd862aaf.jpg"},
-                {"name":"我的分类3","description":"这是分类描述","showFlag":true,"mobileShowFlag":true,"showOrder":"","createDate":"","imgId":443,"imgUrl":"/repository/image/44ca00bf-be59-4a3c-a741-3462dd862aaf.jpg"}],
+          bar: [{"name":"我的分类2","description":"这是分类描述","showFlag":true,"mobileShowFlag":true,"showOrder":"","createDate":"","imgId":443,"imgUrl":"/repository/image/44ca00bf-be59-4a3c-a741-3462dd862aaf.jpg"},{"name":"我的分类3","description":"这是分类描述","showFlag":true,"mobileShowFlag":true,"showOrder":"","createDate":"","imgId":443,"imgUrl":"/repository/image/44ca00bf-be59-4a3c-a741-3462dd862aaf.jpg"}],
           test_data: {},
           case_name: 添加分类,
           expected: [200],  # 预期结果

@@ -252,7 +252,7 @@ class Category_fslinkCategory(MyTest):
                 self.headers[self.type] = self.form_type
 
             url = ConfigYaml(self.projectName).base_url + self.url
-            print(case)
+            case['name'] = '接口添加{}'.format(time.time())
             r = requests.post(url, headers=self.headers, json=case, stream=True, verify=False)
             self.result = r.json()
 
