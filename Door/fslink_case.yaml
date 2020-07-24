@@ -1,0 +1,160 @@
+Door:
+  friendshiplink: #友情链接
+    - url:   # 友情链接地址
+      modular: 友情链接  # 接口注释
+      className: link_friendshiplink  # 接口类名
+      funName:
+        - test_01_add_friendshiplink: {  # 添加链接
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/save,
+          level: 高,   #级别
+          author: 方坤,  #作者
+          bar: {"friendLink":{"name":"带图片","mobileTargetType":true,"targetType":true,"linkUrl":"http://dcdesign.site.cn/html/login.html","mobileLinkUrl":"","description":"我的页面描述","showFlag":1,"mobileShowFlag":1,"imgId":168,"imgUrl":"/repository/image/348b9c1d-86cf-4653-b0c9-37843923a58e.jpg"},"categoryIds":[4],"isEdit":"","saveAndGoFlag":false},
+          test_data: {},
+          case_name: 添加链接,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_friendshiplink_list: {  #链接列表
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/getList,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 链接列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_list_Search: {  #列表搜索
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/getSearchKeywords,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 列表搜索,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_list_sort: {  #列表排序
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/updateShowOrder,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {'sectionIds':12,'targetId':10,'minOrder':10,'maxOrder':12,'direction':0},
+          test_data: {},
+          case_name: 列表排序,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_edit_link: {  #编辑
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/save,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"friendLink":{"createDate":1595399003000,"description":"我的页面描述","id":27,"imgId":168,"imgUrl":"/repository/image/348b9c1d-86cf-4653-b0c9-37843923a58e.jpg","linkUrl":"","mobileLinkUrl":"","mobileShowFlag":1,"mobileTargetType":true,"name":"666","showFlag":1,"showOrder":16,"targetType":true,"useViewType":false},"categoryIds":[8],"isEdit":true,"saveAndGoFlag":false},
+          test_data: {},
+          case_name: 编辑,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_transfer_link: {  #转移
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/transfer,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"ids":37,"categoryIds":12},
+          test_data: {},
+          case_name: 转移,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_01_updateShowState: {  #隐藏电脑版
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/updateShowState,
+          level: 低,   #级别
+          author: 方坤,  #作者
+          bar: {"ids":33,"state":0,"type":1},
+          test_data: {},
+          case_name: 隐藏电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_display_updateShowState: {  #显示电脑版
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/updateShowState,
+          level: 低,   #级别
+          author: 方坤,  #作者
+          bar: {"ids":33,"state":1,"type":1},
+          test_data: {},
+          case_name: 显示电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_delete_friendshiplink: {  #删除友情链接
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/delete,
+          level: 高,   #级别
+          author: 方坤,  #作者
+          bar: {"ids":52},
+          test_data: {},
+          case_name: 删除友情链接,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_batchdelete_friendshiplink: {  #批量删除
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/delete,
+          level: 高,   #级别
+          author: 方坤,  #作者
+          bar: {"ids":[59,58]},
+          test_data: {},
+          case_name: 批量删除,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_batch_updateShowState: {  #批量隐藏电脑版
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/updateShowState,
+          level: 低,   #级别
+          author: 方坤,  #作者
+          bar: {"ids":[67,68,69],"state":0,"type":1},
+          test_data: {},
+          case_name: 批量隐藏电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_batchdisplay_updateShowState: {  #批量显示电脑版
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/updateShowState,
+          level: 低,   #级别
+          author: 方坤,  #作者
+          bar: {"ids":[67,68,69],"state":1,"type":1},
+          test_data: {},
+          case_name: 批量显示电脑版,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_batch_transfer: {  #批量转移
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/transfer,
+          level: 低,   #级别
+          author: 方坤,  #作者
+          bar: {"ids":[67,68,69],"categoryIds": 14},
+          test_data: {},
+          case_name: 批量转移,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_Turn_the_page: {  #翻页
+          url: /manager/gwforward/manager-webapi/content/friendshiplink/getList,
+          level: 低,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 翻页,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }

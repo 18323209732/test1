@@ -1,0 +1,6 @@
+add_classify:
+    url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/save
+    bar: {"name":"我的分类","description":"","showFlag":true,"mobileShowFlag":true,"showOrder":"","createDate":"","imgId":"","imgUrl":""}
+get_classify_list:
+    url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/getList
+    bar:

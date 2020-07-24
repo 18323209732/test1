@@ -1,0 +1,13 @@
+add_friendshiplink:
+    url: /manager/gwforward/manager-webapi/content/friendshiplink/save
+    bar: {"friendLink":{"name":"带图片","mobileTargetType":true,"targetType":true,"linkUrl":"","mobileLinkUrl":"","description":"我的页面描述","showFlag":1,"mobileShowFlag":1,"imgId":168,"imgUrl":"/repository/image/348b9c1d-86cf-4653-b0c9-37843923a58e.jpg"},"categoryIds":[4],"isEdit":"","saveAndGoFlag":false}
+
+get_list_id:
+    url: /manager/gwforward/manager-webapi/content/friendshiplink/getList
+    bar:
+add_classify:
+    url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/save
+    bar: {"name":"我的分类","description":"","showFlag":true,"mobileShowFlag":true,"showOrder":"","createDate":"","imgId":"","imgUrl":""}
+get_classify_list:
+    url: /manager/gwforward/manager-webapi/content/friendshiplinkCategory/getList
+    bar:

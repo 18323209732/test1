@@ -70,7 +70,6 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
           }
-
   classification: #分类管理
     - url:   # 分类地址
       modular: 分类管理  # 接口注释
@@ -286,7 +285,6 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
         }
-
   AddProduct: #添加产品，选择必填项，并上传图片，设置封面
     - url:   # 保存产品
       modular: 保存产品  # 接口注释
@@ -518,6 +516,7 @@ Door:
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
           }
+
 
   content: #内容模块
     - url:  # 邮件地址
@@ -1320,6 +1319,7 @@ Door:
           re_bar: json, # 请求参数
         }
 
+
   newsclass: #新闻资讯
     - url:  # 新闻资讯
       modular: 新闻分类管理  # 接口注释
@@ -1552,7 +1552,6 @@ Door:
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
           }
-
   picture: #新闻资讯
     - url:  # 新闻资讯
       modular: 新闻分类管理  # 接口注释
@@ -2551,7 +2550,6 @@ Door:
             mode: get,  # 请求类型
             re_bar: params, # 请求参数
           }
-
   CustomContent: #属性管理
     - url:   # 添加属性类型地址
       modular: 自定义内容  # 接口注释
@@ -2666,6 +2664,269 @@ Door:
             expected: [200],  # 预期结果
             mode: post,  # 请求类型
             re_bar: json, # 请求参数
+          }
+  SiteSettings: #属性管理
+    - url:   # 添加属性类型地址
+      modular: 网站设置  # 接口注释
+      className: info_SiteSettings  # 接口类名
+      funName:
+        - test_basic_setting: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/repository/config/getInfo,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 基本设置页,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_save_basic_setting: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/repository/config/save,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"id":22,"mainIndustryName":"电子电工","mianProduct":"电子产品","businessMode":1,"title":"企业官网1137","businessIntro":"销售电子产品"},
+            test_data: {},
+            case_name: 保存基本设置,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_all_sectors: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/repository/config/getInfo,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {},
+            test_data: {},
+            case_name: 所有主营行业,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_send_mail: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/repository/email/sendTestMail,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {to: songyu@gouuse.cn},
+            test_data: {},
+            case_name: 发送邮件,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
+          }
+          test_save_mail: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/repository/email/save,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"id":21,"mailaddress":"luoguopiao@300.cn","password":"luo@19911211","sendName":"中企动力","stmpServer":"smtp.300.cn"},
+            test_data: {},
+            case_name: 保存邮件配置,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_email_setting: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/repository/config/getInfo,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {},
+            test_data: {},
+            case_name: 企业邮箱设置页,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_third_party_code: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/repository/code/getInfo,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {},
+            test_data: {},
+            case_name: 第三方代码设置页,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_save_third_party_code: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/repository/code/save,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"id":26,"baiduCode":"<script>\r\nvar _hmt = _hmt || [];\r\n(function() {\r\n  var hm = document.createElement('script');\r\n  hm.src = '//hm.baidu.com/hm.js?8b1ff96da5c6d4b73d11478d5d360234';\r\n  var s = document.getElementsByTagName('script')[0];\r\n  s.parentNode.insertBefore(hm, s);\r\n})();\r\n</script>","googleCode":"","baiduBridge":""},
+            test_data: {},
+            case_name: 保存邮件配置,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_save_network_state: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/repository/code/save,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"pcStatus":1,"moStatus":0,"IPv6":"off","multilingualSwitcher":"on","multilingualJson":"{\"de\":\"de.aker.euzhongtec.com\",\"ru\":\"ru.hliower.euzhongtec.com\",\"pt\":\"pt.aflower.euzhongtec.com\",\"ko\":\"www.ko.godfrey.euzhongtec.com\",\"en\":\"en.godfrey.euzhongtec.com\",\"zh_CN\":\"www.www.robotstest.euzhongtec.com\",\"es\":\"es.adala.euzhongtec.com\"}","moResponsive":0},
+            test_data: {},
+            case_name: 保存网络状态,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_network_state: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/repository/webstatus/get,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {},
+            test_data: {},
+            case_name: 网络状态设置页,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+  OnlineService: #属性管理
+    - url:   # 添加属性类型地址
+      modular: 在线客服  # 接口注释
+      className: info_OnlineService  # 接口类名
+      funName:
+        - test_all_group_onlineservice: {  # 添加属性类型
+          url: /manager/gwforward/manager-webapi/interaction/staff/getGroupList,
+          level: 中,   #级别
+          author: 宋宇,  #作者
+          bar: {},
+          test_data: {},
+          case_name: 基本设置页获取列表组,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: params, # 请求参数
+        }
+          test_azll_service_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staff/getGroupList,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {},
+            test_data: {},
+            case_name: 基本设置页获取列表每组客服,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_add_agroup_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staffGroup/addGroup,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {name: "1组"},
+            test_data: {},
+            case_name: 添加客服组,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_azdd_service_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staff/add,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"name":"2号","type":1,"account":"13213213131","groupId":3,"status":true,"sequence":""},
+            test_data: {},
+            case_name: 添加客服人员,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_edit_agroup_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staffGroup/updateGroup,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {name: "1组", id: ''},
+            test_data: {},
+            case_name: 编辑客服组,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_edit_service_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staff/update,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"name":"客服153编辑","type":1,"account":"13213213131","groupId":4,"status":true,"sequence":5,"id":5},
+            test_data: {},
+            case_name: 编辑客服人员,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_off_service_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staff/updateStatus,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {id: 5, status: false},
+            test_data: {},
+            case_name: 停用客服人员,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
+          }
+          test_open_service_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staff/updateStatus,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {id: 5, status: true},
+            test_data: {},
+            case_name: 启用客服人员,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
+          }
+          test_zdelet_agroup_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staffGroup/delete,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {authPermission: services_del, id: ''},
+            test_data: {},
+            case_name: 删除客服组,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_ydelet_service_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staff/delete,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {authPermission: service_del, id: ''},
+            test_data: {},
+            case_name: 删除客服人员,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_hotline_service_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staff/hotLineInfo,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {},
+            test_data: {},
+            case_name: 客服热线页,
+            expected: [200],  # 预期结果
+            mode: get,  # 请求类型
+            re_bar: params, # 请求参数
+          }
+          test_save_hotline_service_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staff/updateHotLine,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {"telephone":"","serviceTimeStart":"8:00","serviceTimeEnd":"24:00", "id":1},
+            test_data: {},
+            case_name: 保存客服热线配置,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: json, # 请求参数
+          }
+          test_aydrag_service_onlineservice: {  # 添加属性类型
+            url: /manager/gwforward/manager-webapi/interaction/staffGroup/sortUpdate,
+            level: 中,   #级别
+            author: 宋宇,  #作者
+            bar: {jsonData: '{"groups":[{"id":9,"name":"新增组837","sequence":2,"staff":[]},{"id":8,"name":"新增组827","sequence":1,"staff":[]}]}'},
+            test_data: {},
+            case_name: 拖拽客服组排序,
+            expected: [200],  # 预期结果
+            mode: post,  # 请求类型
+            re_bar: data, # 请求参数
           }
 
   companyCategory: # 企业下载分类

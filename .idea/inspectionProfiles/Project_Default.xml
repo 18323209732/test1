@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="129">
+          <list size="150">
             <item index="0" class="java.lang.String" itemvalue="tzlocal" />
             <item index="1" class="java.lang.String" itemvalue="PyYAML" />
             <item index="2" class="java.lang.String" itemvalue="queued" />
@@ -134,6 +134,27 @@
             <item index="126" class="java.lang.String" itemvalue="allure-behave" />
             <item index="127" class="java.lang.String" itemvalue="aiohttp" />
             <item index="128" class="java.lang.String" itemvalue="six" />
+            <item index="129" class="java.lang.String" itemvalue="PyMouse" />
+            <item index="130" class="java.lang.String" itemvalue="pypng" />
+            <item index="131" class="java.lang.String" itemvalue="asn1crypto" />
+            <item index="132" class="java.lang.String" itemvalue="pyHook" />
+            <item index="133" class="java.lang.String" itemvalue="atomicwrites" />
+            <item index="134" class="java.lang.String" itemvalue="xlwt" />
+            <item index="135" class="java.lang.String" itemvalue="Click" />
+            <item index="136" class="java.lang.String" itemvalue="lml" />
+            <item index="137" class="java.lang.String" itemvalue="MarkupSafe" />
+            <item index="138" class="java.lang.String" itemvalue="pycparser" />
+            <item index="139" class="java.lang.String" itemvalue="importlib-metadata" />
+            <item index="140" class="java.lang.String" itemvalue="psutil" />
+            <item index="141" class="java.lang.String" itemvalue="WMI" />
+            <item index="142" class="java.lang.String" itemvalue="zipp" />
+            <item index="143" class="java.lang.String" itemvalue="PyQRCode" />
+            <item index="144" class="java.lang.String" itemvalue="itsdangerous" />
+            <item index="145" class="java.lang.String" itemvalue="pyexcel-xls" />
+            <item index="146" class="java.lang.String" itemvalue="itchat" />
+            <item index="147" class="java.lang.String" itemvalue="xlrd" />
+            <item index="148" class="java.lang.String" itemvalue="idna" />
+            <item index="149" class="java.lang.String" itemvalue="Pillow" />
           </list>
         </value>
       </option>
