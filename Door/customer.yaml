@@ -1,0 +1,17 @@
+Door:
+  customer_manage: #客户管理
+    - url:   # 客户管理地址
+      modular: 客户管理  # 接口注释
+      className: customer_customer_manage  # 接口类名
+      funName:
+        - test_customer_list: {  # 客户列表
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/list,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {'groupId':0,'customerType':0,'queryType':4,'ec_p':1,'ec_crd':15,'dataType':0},
+          test_data: {},
+          case_name: 客户列表,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
