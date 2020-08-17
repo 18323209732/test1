@@ -61,7 +61,13 @@ class MyTest(TestCase):
         :return:
         '''
         self.className = self.__class__.__name__
-        self.casename = self._testMethodName
+        false_case = self._testMethodName
+        try:
+            if isinstance(int(false_case.rsplit("_", 1)[1]), int):
+                self.casename = false_case.rsplit("_", 1)[0]
+        except:
+            self.casename = false_case
+
         self.projectName = ConfigYaml("projectName").base_config
         self.headers.update({self.type: self.json_type})
         case_list = Any_Path(self.projectName)

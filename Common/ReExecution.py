@@ -9,7 +9,8 @@ from ddt import ddt,data
 
 from Common.DataHandle import Get_Data
 from Common.ReadYaml import CaseYaml, ConfigYaml
-
+from Common.Route import Any_Path
+import os
 
 class ReExecution:
 
@@ -116,8 +117,16 @@ def Get_Cls_Fun(fun):
 
     cla_name = str(fun).split(" ")[1].split(".")[0]    #类名
     fun_name = fun.__name__        #方法名
-    datas = CaseYaml().all_case    #数据
-    value = Get_Data(cla_name, fun_name, datas)   #对应用例数据
+    projectName = ConfigYaml("projectName").base_config
+    case_list = Any_Path(projectName)
+    case_file = os.listdir(case_list)
+    yaml_list = [file for file in case_file if file.endswith(".yaml") and file != "Data.yaml"]
+    case_dict = {}
+    if yaml_list:
+        for file in yaml_list:
+            value = CaseYaml(file=file).all_case
+            case_dict.update(value)
+    value = Get_Data(cla_name, fun_name, case_dict)   #对应用例数据
 
     @data(*value)
     @wraps(fun)
