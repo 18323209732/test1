@@ -1,0 +1,752 @@
+Door:
+  atlas: #企业图册
+    - url:  # 邮件地址
+      modular: 企业图册  # 接口注释
+      className: add_atlas  # 接口类名
+      funName:
+        - test_add_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/save',
+          level: 高,
+          author: 陈建波,
+          bar: {"atlasType":"0","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:\",\"roleIds\":\"\"}]","commonAtlasName":"32424","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"<p>234242</p>\n","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"","showStyle":"","showMobileStyle":"","keywords":"","viewCountOfCommonAtlas":"0","atlasImgs":[{"id":"450","name":"图片","relativeImgUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","imgUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","thumbUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","showOrder":"","imgId":"450","relativeThumbUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","thumbId":"450","title":"","des":"","coverFlag":"true","linkUrl":"","targetFlag":"false"}],"atlasCategoryArr":["1"],"linkAtlasName":"32424","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"","keywordsLink":"","linkUrl":"http://","targetType":"true","linkMobileUrl":"http://","mobileTargetType":"true","viewCountOfLinkAtlas":"0","imgId":"","imgUrl":"","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[],"isSpread":"no"},
+          relation_data: {},    #关联接口
+          case_name: 添加企业图册,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_addmuchpicture_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/save',
+          level: 高,
+          author: 陈建波,
+          bar: {"atlasType":"0","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:\",\"roleIds\":\"\"}]","commonAtlasName":"2342","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"<p>23424</p>\n","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"23424\n","showStyle":"","showMobileStyle":"","keywords":"23424","viewCountOfCommonAtlas":"0","atlasImgs":[{"id":"450","name":"图片","relativeImgUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","imgUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","thumbUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","showOrder":"","imgId":"450","relativeThumbUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","thumbId":"450","title":"","des":"","coverFlag":"true","linkUrl":"","targetFlag":"false"},{"id":"449","name":"图片","relativeImgUrl":"/repository/image/29908711-616c-44f4-9464-a870bf1ab09b.jpg","imgUrl":"/repository/image/29908711-616c-44f4-9464-a870bf1ab09b.jpg","thumbUrl":"/repository/image/29908711-616c-44f4-9464-a870bf1ab09b.jpg","showOrder":"","imgId":"449","relativeThumbUrl":"/repository/image/29908711-616c-44f4-9464-a870bf1ab09b.jpg","thumbId":"449","title":"","des":"","coverFlag":"false","linkUrl":"","targetFlag":"false"}],"atlasCategoryArr":["1"],"linkAtlasName":"2342","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"23424\n","keywordsLink":"23424","linkUrl":"http://","targetType":"true","linkMobileUrl":"http://","mobileTargetType":"true","viewCountOfLinkAtlas":"0","imgId":"","imgUrl":"","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[],"isSpread":"no"},
+          relation_data: {},    #关联接口
+          case_name: 添加企业图册_多张图片,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_imageupload_atlas: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/imageRepository/imageFileUpload',
+          level: 高,
+          author: 陈建波,
+          bar: {appId: ""},
+          relation_data: {},    #关联接口
+          case_name: 本地文件上传,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_image_atlas: {  # 接口方法名
+          url: '/repository/image/',
+          level: 中,
+          author: 陈建波,
+          bar: {appId: ""},
+          relation_data: {},    #关联接口
+          case_name: 更改缩略图,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+#          test_removeimage_atlas: {  # 接口方法名
+#          url: '/repository/image/',
+#          level: 中,
+#          author: 陈建波,
+#          bar: {appId: ""},
+#          relation_data: {},    #关联接口
+#          case_name: 重置图片,
+#          expected: [200],  # 预期结果
+#          mode: post,  # 请求类型
+#          re_bar: json, # 请求参数
+#          }
+
+          test_link_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/common/link/selectLink',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 添加链接,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_sort_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/sort',
+          level: 中,
+          author: 陈建波,
+          bar: {targetId: 10,minOrder: 9,maxOrder: 10,direction: -1},
+          relation_data: {},    #关联接口
+          case_name: 拖拽排序,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_delete_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/delete',
+          level: 高,
+          author: 陈建波,
+          bar: {id: 6},
+          relation_data: {},    #关联接口
+          case_name: 删除,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_deleteMulti_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/deleteMulti',
+          level: 高,
+          author: 陈建波,
+          bar: {id: 6},
+          relation_data: {},    #关联接口
+          case_name: 删除,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_addmuchclass_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/save',
+          level: 高,
+          author: 陈建波,
+          bar: {"atlasType":"0","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:\",\"roleIds\":\"\"}]","commonAtlasName":"111","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"<p>111</p>\n","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"","showStyle":"","showMobileStyle":"","keywords":"","viewCountOfCommonAtlas":"0","atlasImgs":[{"id":"451","name":"edit","relativeImgUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","imgUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","thumbUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","showOrder":"","imgId":"451","relativeThumbUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","thumbId":"451","title":"","des":"","coverFlag":"true","linkUrl":"","targetFlag":"false"}],"atlasCategoryArr":["1","5","6"],"linkAtlasName":"111","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"","keywordsLink":"","linkUrl":"http://","targetType":"true","linkMobileUrl":"http://","mobileTargetType":"true","viewCountOfLinkAtlas":"0","imgId":"","imgUrl":"","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[],"isSpread":"no"},
+          relation_data: {},    #关联接口
+          case_name: 添加多分类,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_addclass_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/add',
+          level: 高,
+          author: 陈建波,
+          bar: {"atlasCategory":{"id":"","parentId":"0","parentName":"","name":"11","imgUrl":"/repository/image/085b2e2d-6752-46bb-8a34-ff3a6e9bb003.jpg","imgId":446,"imgThumbUrl":"/repository/image/085b2e2d-6752-46bb-8a34-ff3a6e9bb003.jpg","type":"0","des":"<p>111</p>\n","mobileDes":"","summary":"","keywords":"","targetType":"true","linkUrl":"","mobileTargetType":"true","mobileLinkUrl":"","showFlag":true,"mobileShowFlag":true,"authData":"[{\"authType\":1,\"authStr\":\"GW_:4:category:view:\",\"roleIds\":\"\"}]","imageUrl":"/repository/image/085b2e2d-6752-46bb-8a34-ff3a6e9bb003.jpg"},"seoState":"1","seoPageType":"2","seoAddDescription":"","strSeoTitle":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"图册分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoKeywords":"[{\"id\":\"categoryKeyword\",\"name\":\"图册分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoDescription":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"图册分类描述\"}]","strSeoTitleSign":"_","strSeoKeywordsSign":",","strSeoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 快捷添加分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_content_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/product/productInformation/relevantProductList',
+          level: 中,
+          author: 陈建波,
+          bar: {keyword: "",pcStatus: -1,moStatus: -1,ids: "",notSelectIds: "",categoryId: 0,pageNumber: 1,pageSize: 15,appId: 2},
+          relation_data: {},    #关联接口
+          case_name: 相关内容数据获取,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_addcontent_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/save',
+          level: 中,
+          author: 陈建波,
+          bar: {"atlasType":"0","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:\",\"roleIds\":\"\"}]","commonAtlasName":"111","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"<p>1231</p>\n","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"12313","showStyle":"","showMobileStyle":"","keywords":"23131","viewCountOfCommonAtlas":"0","atlasImgs":[{"id":"126","name":"test","relativeImgUrl":"/repository/image/6e3fb627-6827-4e5e-a5f2-26e0c4dab0bc.jpg","imgUrl":"/repository/image/6e3fb627-6827-4e5e-a5f2-26e0c4dab0bc.jpg","thumbUrl":"/repository/image/6e3fb627-6827-4e5e-a5f2-26e0c4dab0bc.jpg","showOrder":"","imgId":"126","relativeThumbUrl":"/repository/image/6e3fb627-6827-4e5e-a5f2-26e0c4dab0bc.jpg","thumbId":"126","title":"12312","des":"312313","coverFlag":"true","linkUrl":"{\"entityTag\":\"page\",\"text\":\"产品中心\",\"appTag\":\"2\",\"id\":\"0dd93dc0-c03b-4326-a36d-65778d921991\",\"param\":\"5\"}","targetFlag":"false"}],"atlasCategoryArr":["4"],"linkAtlasName":"111","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"12313","keywordsLink":"23131","linkUrl":"http://","targetType":"true","linkMobileUrl":"http://","mobileTargetType":"true","viewCountOfLinkAtlas":"0","imgId":"","imgUrl":"","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[{"appId":4,"contentList":[]},{"appId":3,"contentList":[228,7,85,130,154,164,172,218,239,1606,1600,1599,1598,1590,1589]}],"isSpread":"no"},
+          relation_data: {},    #关联接口
+          case_name: 添加,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_savecontinu_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/save',
+          level: 高,
+          author: 陈建波,
+          bar: {"atlasType":"0","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:\",\"roleIds\":\"\"}]","commonAtlasName":"3242342","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"<p>32424</p>\n","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"32424\n","showStyle":"","showMobileStyle":"","keywords":"32424","viewCountOfCommonAtlas":"0","atlasImgs":[{"id":"451","name":"edit","relativeImgUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","imgUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","thumbUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","showOrder":"","imgId":"451","relativeThumbUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","thumbId":"451","title":"111","des":"11111111111111","coverFlag":"true","linkUrl":"{\"entityTag\":\"page\",\"text\":\"产品分类\",\"id\":\"0c9eb030-a1e4-40c7-b81a-4a4086bd6876\"}","targetFlag":"false"}],"atlasCategoryArr":["1"],"linkAtlasName":"3242342","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"32424\n","keywordsLink":"32424","linkUrl":"http://","targetType":"true","linkMobileUrl":"http://","mobileTargetType":"true","viewCountOfLinkAtlas":"0","imgId":"","imgUrl":"","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[{"appId":4,"contentList":[]},{"appId":2,"contentList":[218,219,228,229,230,232,233,234,235,236,242,243,245,246,247]}],"isSpread":"no"},
+          relation_data: {},    #关联接口
+          case_name: 保存并继续,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_talke_atlas: {  # 接口方法名
+          url: 'http://1906255068.pool1-gcsite.make.yun300.cn/cmscontent/393.html',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 说明,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_addlink_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/save',
+          level: 高,
+          author: 陈建波,
+          bar: {"atlasType":"1","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:6\",\"roleIds\":\"\"}]","commonAtlasName":"11","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"123123","showStyle":"","showMobileStyle":"","keywords":"123123","viewCountOfCommonAtlas":"0","atlasCategoryArr":["5"],"linkAtlasName":"11","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"123123","keywordsLink":"123123","linkUrl":{"entityTag":"page","text":"互动留言","id":"0386fad2-eb04-41fb-a1b0-3a93c980c153"},"targetType":"true","linkMobileUrl":"http://","mobileTargetType":"true","viewCountOfLinkAtlas":"737","imgId":"451","imgUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[],"isSpread":"no"},
+          relation_data: {},    #关联接口
+          case_name: 添加链接,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_muchaddlink_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/save',
+          level: 中,
+          author: 陈建波,
+          bar: {"atlasType":"1","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:6\",\"roleIds\":\"\"}]","commonAtlasName":"11","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"123123","showStyle":"","showMobileStyle":"","keywords":"123123","viewCountOfCommonAtlas":"0","atlasCategoryArr":["1","5","6"],"linkAtlasName":"11","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"123123","keywordsLink":"123123","linkUrl":{"entityTag":"page","text":"互动留言","id":"0386fad2-eb04-41fb-a1b0-3a93c980c153"},"targetType":"true","linkMobileUrl":"http://","mobileTargetType":"true","viewCountOfLinkAtlas":"142","imgId":"451","imgUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[],"isSpread":"no"},
+          relation_data: {},    #关联接口
+          case_name: 多选分类链接,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_list_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/showAsynctree',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 企业图册库列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_sortcom_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/sort',
+          level: 中,
+          author: 陈建波,
+          bar: {sectionIds: 34,targetId: 35,minOrder: 34,maxOrder: 35,direction: -1},
+          relation_data: {},    #关联接口
+          case_name: 排序,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_headsort_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/atlas_page',
+          level: 中,
+          author: 陈建波,
+          bar: {"currentPage":1,"pageSize":15,"state":"-1","mobileState":"-1","timeType":"","startDate":"","endDate":"","categoryId":"","view":"1","keywords":"","draftBox":"false","operType":2,"fromVisualOfAtlas":true,"categoryName":"全部图册","ec_s_name":"","ec_s_categorys":"","ec_s_pubDate":"desc","ec_s_viewCount":"","ec_s_showFlag":"","ec_s_mobileShowFlag":""},
+          relation_data: {},    #关联接口
+          case_name: 表头排序,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_atlas_page_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/atlas_page',
+          level: 中,
+          author: 陈建波,
+          bar: {"currentPage":1,"pageSize":15,"state":"-1","mobileState":"-1","timeType":"","startDate":"","endDate":"","categoryId":"","view":"1","keywords":"111","draftBox":"false","operType":2,"fromVisualOfAtlas":true},
+          relation_data: {},    #关联接口
+          case_name: 搜索,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_shaixuan_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/atlas_page',
+          level: 中,
+          author: 陈建波,
+          bar: {"currentPage":1,"pageSize":15,"state":"1","mobileState":"-1","timeType":"0","startDate":"2020-07-14","endDate":"2020-07-21","categoryId":"","view":"1","keywords":"","draftBox":"false","operType":2,"fromVisualOfAtlas":true},
+          relation_data: {},    #关联接口
+          case_name: 筛选,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_update_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/update',
+          level: 中,
+          author: 陈建波,
+          bar: {"atlasType":"1","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:6\",\"roleIds\":\"\"}]","commonAtlasName":"编辑...1595230081199","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"自动化企业图册描述链接数据...1595230081199","showStyle":"","showMobileStyle":"","keywords":"链接关键词...1595230081199","viewCountOfCommonAtlas":"0","atlasCategoryArr":["1","10"],"linkAtlasName":"编辑...1595230081199","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"自动化企业图册描述链接数据...1595230081199","keywordsLink":"链接关键词...1595230081199","linkUrl":{"text":"互动留言","id":"0386fad2-eb04-41fb-a1b0-3a93c980c153","entityTag":"page"},"targetType":"true","linkMobileUrl":"http://","mobileTargetType":"true","viewCountOfLinkAtlas":"142","imgId":"451","imgUrl":"/repository/image/b70c0c91-028c-43e5-88fd-ebbc8a2b950f.jpg","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[],"isSpread":"no","id":"38",},
+          relation_data: {},    #关联接口
+          case_name: 编辑,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_transfer_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/transfer',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 转移,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_piliangtransfer_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/transfer',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 批量转移,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_updateShowPc_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/updateShowPc',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: pc显示,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_updatehidePc_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/updateShowPc',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: pc隐藏,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_updatepihidePc_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/updateShowPc',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 批量隐藏,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_updatepishowPc_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/updateShowPc',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 批量隐藏,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_deletedata_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/delete',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 删除,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_pildelete_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/deleteMulti',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 批量删除,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_page_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/atlas_page',
+          level: 中,
+          author: 陈建波,
+          bar: {"currentPage":2,"pageSize":15,"state":"-1","mobileState":"-1","timeType":"","startDate":"","endDate":"","categoryId":"","view":"1","keywords":"","draftBox":"false","operType":2,"fromVisualOfAtlas":true},
+          relation_data: {},    #关联接口
+          case_name: 翻页,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_adatlasca_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/add',
+          level: 中,
+          author: 陈建波,
+          bar: {"atlasCategory":{"id":"","parentId":"0","parentName":"","name":"11","imgUrl":"/repository/image/e2b51f4d-60eb-498b-b220-0800970b40de.jpg","imgId":452,"imgThumbUrl":"/repository/image/e2b51f4d-60eb-498b-b220-0800970b40de.jpg","type":"0","des":"<p>11</p>\n","mobileDes":"","summary":"22","keywords":"33","targetType":"true","linkUrl":"","mobileTargetType":"true","mobileLinkUrl":"","showFlag":true,"mobileShowFlag":true,"authData":"[{\"authType\":1,\"authStr\":\"GW_:4:category:view:\",\"roleIds\":\"\"}]","imageUrl":"/repository/image/e2b51f4d-60eb-498b-b220-0800970b40de.jpg"},"seoState":"1","seoPageType":"2","seoAddDescription":"","strSeoTitle":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"图册分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoKeywords":"[{\"id\":\"categoryKeyword\",\"name\":\"图册分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoDescription":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"图册分类描述\"}]","strSeoTitleSign":"_","strSeoKeywordsSign":",","strSeoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 添加普通分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test_adlink_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/add',
+          level: 中,
+          author: 陈建波,
+          bar: {"atlasCategory":{"id":"","parentId":"0","parentName":"","name":"55555555","imgUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg","imgId":1,"imgThumbUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg","type":"1","des":"","mobileDes":"","summary":"666666666666666","keywords":"","targetType":"true","linkUrl":"首页","mobileTargetType":"true","mobileLinkUrl":"登录页","showFlag":true,"mobileShowFlag":true,"authData":"[{\"authType\":1,\"authStr\":\"GW_:4:category:view:45\",\"roleIds\":\"\"}]","seoState":false,"imageUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg"},"seoState":"1","seoPageType":"2","seoAddDescription":"","strSeoTitle":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"图册分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoKeywords":"[{\"id\":\"categoryKeyword\",\"name\":\"图册分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoDescription":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"图册分类描述\"}]","strSeoTitleSign":"_","strSeoKeywordsSign":",","strSeoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 添加链接分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_selectlink_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/common/link/selectLink',
+          level: 中,
+          author: 陈建波,
+          bar: {"atlasCategory":{"id":"","parentId":"0","parentName":"","name":"55555555","imgUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg","imgId":1,"imgThumbUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg","type":"1","des":"","mobileDes":"","summary":"666666666666666","keywords":"","targetType":"true","linkUrl":"首页","mobileTargetType":"true","mobileLinkUrl":"登录页","showFlag":true,"mobileShowFlag":true,"authData":"[{\"authType\":1,\"authStr\":\"GW_:4:category:view:45\",\"roleIds\":\"\"}]","seoState":false,"imageUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg"},"seoState":"1","seoPageType":"2","seoAddDescription":"","strSeoTitle":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"图册分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoKeywords":"[{\"id\":\"categoryKeyword\",\"name\":\"图册分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoDescription":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"图册分类描述\"}]","strSeoTitleSign":"_","strSeoKeywordsSign":",","strSeoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 获取链接,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_adlinkji_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/add',
+          level: 中,
+          author: 陈建波,
+          bar: {"atlasCategory":{"id":"","parentId":"0","parentName":"","name":"23421","imgUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg","imgId":1,"imgThumbUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg","type":"1","des":"<p>21432</p>\n","mobileDes":"","summary":"","keywords":"","targetType":"true","linkUrl":"首页","mobileTargetType":"true","mobileLinkUrl":"登录页","showFlag":true,"mobileShowFlag":true,"authData":"[{\"authType\":1,\"authStr\":\"GW_:4:category:view:45\",\"roleIds\":\"\"}]","seoState":false,"imageUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg"},"seoState":"1","seoPageType":"2","seoAddDescription":"","strSeoTitle":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"图册分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoKeywords":"[{\"id\":\"categoryKeyword\",\"name\":\"图册分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoDescription":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"图册分类描述\"}]","strSeoTitleSign":"_","strSeoKeywordsSign":",","strSeoDescriptionSign":"-"},
+          relation_data: {},    #关联接口
+          case_name: 保存继续,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_edite_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/add',
+          level: 中,
+          author: 陈建波,
+          bar: {"atlasCategory":{"id":1,"parentId":0,"parentName":"","name":"88888888888","imgUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg","imgId":1,"imgThumbUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg","type":"1","mobileDes":"","summary":"666666666666666","keywords":"","targetType":"true","linkUrl":"首页","mobileTargetType":"true","mobileLinkUrl":"登录页","showFlag":true,"mobileShowFlag":true,"authData":"[{\"authType\":1,\"authStr\":\"GW_:4:category:view:45\",\"roleIds\":\"\"}]"},"seoState":"1","seoPageType":"2","seoAddDescription":"","strSeoTitle":"[]","strSeoKeywords":"[]","strSeoDescription":"[]","strSeoTitleSign":"_","strSeoKeywordsSign":"_","strSeoDescriptionSign":"_"},
+          relation_data: {},    #关联接口
+          case_name: 编辑,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_mobileshow_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/updateShowMobile',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 移动端显示,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_mobilehide_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/updateShowMobile',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 移动端隐藏,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_mobilepihide_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/updateShowMobile',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 移动端批量隐藏,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_mobilepishow_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlas/updateShowMobile',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 移动端批量显示,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_resort_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/resort',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 拖拽排序,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_move_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/resort',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 转移,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_updateshowstate_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/updateshowstate',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 显示电脑端,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_updatehidestate_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/updateshowstate',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 隐藏电脑端,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_emobileshowstate_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/updatemobileshowstate',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 显示电移动端,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_emobilehidestate_atlas: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/atlascategory/updateshowstate',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 隐藏移动端,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+  filelibrary: #企业图册
+    - url:  # 邮件地址
+      modular: 文件库  # 接口注释
+      className: file_filelibrary  # 接口类名
+      funName:
+        - test_list_file: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/findByPagination',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 文件列表,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_search_file: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/findByPagination',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 搜索,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_shaixuan_file: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/findByPagination',
+          level: 中,
+          author: 陈建波,
+          bar: {currentPage: 1,pageSize: 15,startDate: 2020-07-22 00:00:00,endDate: 2020-08-17 23:59:59,queryStatus: 0,type: 1,orderColumn: UPDATE_DATE,orderType: DESC,classId: 0,keywords: },
+          relation_data: {},    #关联接口
+          case_name: 筛选,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_headsort_file: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/findByPagination',
+          level: 中,
+          author: 陈建波,
+          bar: {currentPage: 1,pageSize: 15,startDate: ,endDate: ,queryStatus: 0,type: 1,orderColumn: UPDATE_DATE,orderType: asc,classId: 0,keywords: },
+          relation_data: {},    #关联接口
+          case_name: 表头排序,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_upload_file: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/saveKs3FileInfo',
+          level: 中,
+          author: 陈建波,
+          bar: {fileName: test.xlsx,title: test.xlsx, type: 1,size: 32462},
+          relation_data: {},    #关联接口
+          case_name: 上传,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_edit_file: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/updateFileInfo',
+          level: 中,
+          author: 陈建波,
+          bar: {authPermission: file_update, name: test3453,id: 14},
+          relation_data: {},    #关联接口
+          case_name: 编辑,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_down_file: {  # 接口方法名
+          url: 'https://v1.cecdn.yun300.cn/',
+          level: 中,
+          author: 陈建波,
+          bar: {authPermission: file_update, name: test3453,id: 14},
+          relation_data: {},    #关联接口
+          case_name: 下载,
+          expected: [200
+          ],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_delete_file: {  # 接口方法名
+          url: 'https://v1.cecdn.yun300.cn/',
+          level: 中,
+          author: 陈建波,
+          bar: {fileKeys: 100001_2007225007/20151207092712_yTFKS.jpeg},
+          relation_data: {},    #关联接口
+          case_name: 删除,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_pidelete_file: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/deleteKs3File',
+          level: 中,
+          author: 陈建波,
+          bar: {fileKeys: 100001_2007225007/20151207092712_yTFKS.jpeg},
+          relation_data: {},    #关联接口
+          case_name: 批量删除,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_page_file: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/findByPagination',
+          level: 中,
+          author: 陈建波,
+          bar: {currentPage: 2},
+          relation_data: {},    #关联接口
+          case_name: 翻页,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_add_fileclass: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/addFileClass',
+          level: 中,
+          author: 陈建波,
+          bar: {className: 879,classInfo: 78987},
+          relation_data: {},    #关联接口
+          case_name: 添加分类,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_edit_fileclass: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/updateFileClass',
+          level: 中,
+          author: 陈建波,
+          bar: {id: 15, className: 879,classInfo: 78987},
+          relation_data: {},    #关联接口
+          case_name: 编辑分类,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_deleteclass_fileclass: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/deleteFileClass?',
+          level: 中,
+          author: 陈建波,
+          bar: {ids: 16},
+          relation_data: {},    #关联接口
+          case_name: 删除,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_deletepi_fileclass: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/deleteFileClass',
+          level: 中,
+          author: 陈建波,
+          bar: {ids: 16},
+          relation_data: {},    #关联接口
+          case_name: 批量删除,
+          expected: ['200'],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_search_fileclass: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/fileRepository/findAllClass',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 查找,
+          expected: ['200'],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+

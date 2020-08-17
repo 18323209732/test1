@@ -1,0 +1,18 @@
+get_atlas:
+  url: "/manager/gwforward/manager-webapi/content/atlas/atlas_page"
+  bar: {"currentPage":1,"pageSize":15,"state":"-1","mobileState":"-1","timeType":"","startDate":"","endDate":"","categoryId":"","view":"1","keywords":"","draftBox":"false","operType":2,"fromVisualOfAtlas":true}
+
+add_atlas:
+  url: "/manager/gwforward/manager-webapi/content/atlas/save"
+  bar: {"atlasType":"0","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:\",\"roleIds\":\"\"}]","commonAtlasName":"32424","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"<p>234242</p>\n","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"","showStyle":"","showMobileStyle":"","keywords":"","viewCountOfCommonAtlas":"0","atlasImgs":[{"id":"450","name":"图片","relativeImgUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","imgUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","thumbUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","showOrder":"","imgId":"450","relativeThumbUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","thumbId":"450","title":"","des":"","coverFlag":"true","linkUrl":"","targetFlag":"false"}],"atlasCategoryArr":["1"],"linkAtlasName":"32424","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"","keywordsLink":"","linkUrl":"http://","targetType":"true","linkMobileUrl":"http://","mobileTargetType":"true","viewCountOfLinkAtlas":"0","imgId":"","imgUrl":"","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[],"isSpread":"no"}
+
+add_class:
+  url: "/manager/gwforward/manager-webapi/content/atlascategory/add"
+  bar: {"atlasCategory":{"id":"","parentId":"0","parentName":"","name":"2222","imgUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","imgId":450,"imgThumbUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg","type":"0","des":"<p>222</p>\n","mobileDes":"","summary":"222\n","keywords":"222,2222","targetType":"true","linkUrl":"","mobileTargetType":"true","mobileLinkUrl":"","showFlag":true,"mobileShowFlag":true,"authData":"[{\"authType\":1,\"authStr\":\"GW_:4:category:view:\",\"roleIds\":\"\"}]","imageUrl":"/repository/image/8b2f9dbe-5c4d-4c1f-a31f-25e510fc707d.jpg"},"seoState":"1","seoPageType":"2","seoAddDescription":"","strSeoTitle":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"图册分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoKeywords":"[{\"id\":\"categoryKeyword\",\"name\":\"图册分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoDescription":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"图册分类描述\"}]","strSeoTitleSign":"_","strSeoKeywordsSign":",","strSeoDescriptionSign":"-"}
+
+get_class:
+  url: "/manager/gwforward/manager-webapi/content/atlascategory/atlasCategoryTreeForIndex"
+  bar: {}
+
+
+

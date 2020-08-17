@@ -81,7 +81,7 @@ class ConfigYaml:
 
 
 class CaseYaml:
-    def __init__(self, key=None,file='Case.yaml', encoding='utf-8'):
+    def __init__(self, key=None, file='Case.yaml', encoding='utf-8'):
         '''
 
         :param key:
