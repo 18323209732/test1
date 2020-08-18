@@ -671,7 +671,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introduction/edit/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, id: '', cateid: '', source: '', ec_p: 1, subtype: 1},
+          bar: {id: '', cateid: '', source: '', ec_p: 1, subtype: 1},
           relation_data: {},    #关联接口
           case_name: 复制分类内容,
           expected: [200],  # 预期结果
