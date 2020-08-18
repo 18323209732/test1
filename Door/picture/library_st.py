@@ -302,7 +302,6 @@ class library_picture(MyTest):
                 self.headers[self.type] = self.form_type
 
             ids = next(pd().get_news_used(value="id"))
-            print(ids)
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={ids}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -375,7 +374,6 @@ class library_picture(MyTest):
             r = requests.post(url, headers=self.headers, files=file, data=self.data, stream=True, verify=False)
             f.close()
             self.result = r.json()
-            print(self.result)
             if "image has existed!" in self.result.get("msg"):
                 self.result = {"status": '200'}
 
