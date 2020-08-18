@@ -1,0 +1,19 @@
+file_list:
+  url: "/manager/gwforward/dssresources/fileRepository/findByPagination"
+  bar: {}
+
+get_key:
+  url: "/manager/gwforward/dssresources/fileRepository/getKs3Signature"
+  bar: {"acl":"public-read","key":"${filename}","fileName":"test.xlsx"}
+
+file_add:
+  url: '/manager/gwforward/dssresources/fileRepository/saveKs3FileInfo'
+  bar: {fileName: test.xlsx,title: test.xlsx, type: 1,size: 32462}
+
+class_add:
+  url: '/manager/gwforward/dssresources/fileRepository/addFileClass'
+  bar: {className: 879,classInfo: 78987}
+
+class_list:
+  url: '/manager/gwforward/dssresources/fileRepository/findAllClass'
+  bar: {}

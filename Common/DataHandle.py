@@ -109,7 +109,7 @@ def CaseHandle(clsname,funname,data):
     :return:
     '''
     allkeys = list(data.keys())
-    key = clsname.split('_')[1]
+    key = clsname.split('_', 1)[1]
     if key in allkeys:
         for value in data.get(key):
             if value.get("className") == clsname:

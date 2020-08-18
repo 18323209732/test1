@@ -22,6 +22,9 @@ import re
 from Common.MyRedis import ReDis
 from Common.DataHandle import SqlHandle,Assertion
 from time import sleep
+import os
+from Common.Route import Any_Path
+
 
 class MyTest(TestCase):
     def __init__(self, methodName='runTest', param=None):
@@ -58,10 +61,26 @@ class MyTest(TestCase):
         :return:
         '''
         self.className = self.__class__.__name__
-        self.casename = self._testMethodName
+        false_case = self._testMethodName
+        try:
+            if isinstance(int(false_case.rsplit("_", 1)[1]), int):
+                self.casename = false_case.rsplit("_", 1)[0]
+        except:
+            self.casename = false_case
+
         self.projectName = ConfigYaml("projectName").base_config
         self.headers.update({self.type: self.json_type})
-        self.casedata = CaseYaml().all_case
+        case_list = Any_Path(self.projectName)
+        case_file = os.listdir(case_list)
+        yaml_list = [file for file in case_file if file.endswith(".yaml") and file != "Data.yaml"]
+        case_dict = {}
+        if yaml_list:
+            for file in yaml_list:
+                value = CaseYaml(file=file).all_case
+                case_dict.update(value)
+
+        self.casedata = case_dict
+
         if self.casedata:
             self.clsdata,self.fundata = CaseHandle(self.className, self.casename,self.casedata)
         self.sql = ConfigYaml('sql').base_config

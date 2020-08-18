@@ -1,9 +1,9 @@
 base_url:
   Design: https://new-console.300.cn                  #会员中心地址
-  Door: https://2004105022-site.pool5.yun300.cn       #https://2004105022-site.pool5.yun300.cn # 正式环境
+  Door: https://2007225007-site.pool202.yun300.cn     #https://2004105022-site.pool5.yun300.cn # 正式环境
 base_config:
   tenant_key: tenantId
-  tenant_value: 188078
+  tenant_value: 179557
   json_type: application/json
   form_type: application/x-www-form-urlencoded
   type_key: Content-Type
@@ -15,7 +15,7 @@ base_config:
   key: CEST             #JSESSIONID                                   #cookies键
   user_name: CEM10097239                         #登录名称
   user_pwd: zok9phwv6n                                    #密码
-  website: www.vue3.euzhongtec.com                      #网站 2004105022.pool5-site.make.yun300.cn
+  website: www.wholetest.euzhongtec.com                      #网站 2004105022.pool5-site.make.yun300.cn
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
   steam_handler: false                          #控制台输入日志 Fasle：不输入
@@ -28,7 +28,7 @@ base_config:
   domain:  publicapi.cd.app.scrm365.cn                                       #域名
   EnvName: Door线上环境测试报告
   projectName: Door                           #项目名称
-  moudleName:  newsclass #news #[newsclass,picture,news] #newsclass                                   #运行模块
+  moudleName:  #[newsclass,news] #news #[newsclass,picture,news] #newsclass                                   #运行模块
   timeout: 3                                     #超时时间
   thread_count: 4                                 #开启线程数，开启线程数不能大于模块数
   process: False                                 #是否开启多进程

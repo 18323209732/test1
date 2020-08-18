@@ -121,11 +121,41 @@ class GetAll:
         1. 上传企业文件《企业测试文件》
         """
         try:
+            url_getfile = Url + r'/manager/gwforward/dssresources/fileRepository/getFileByFileKey'
+            url_getkey = Url + r'/manager/gwforward/dssresources/fileRepository/getKs3Signature?tenantId=%s' % (self.tenant_value)
+            url_putkey = 'https://ks3-cn-beijing.ksyun.com/xgw-vod'
             url = Url + r'/manager/gwforward/dssresources/fileRepository/saveKs3FileInfo'  # 获取文件key
-            file_path = Any_Path('File', '企业测试文件.txt')
+            file_path = Any_Path('File', '文件上传模板.txt')
             f = open(file_path, "rb")
             file = {'file': f}
-            data = {'fileName': '企业测试文件.txt', 'title': "企业测试文件.txt", 'type': 1, 'size': 17}
+            # ---- --------上传金山文件的名------------------------
+            data_putname = "fileNames=文件上传模板.txt"
+            r1 = requests.post(url=url_getkey, headers=readconfig_ini(v=2),
+                               data=data_putname, verify=False)
+
+            # ---- --------获取金山文件的key------------------------
+            data_getkey = {"acl": "public-read", "key": "${filename}", "fileName": "文件上传模板.txt"}
+            r1 = requests.post(url=url_getkey, headers=readconfig_ini(),
+                              json=data_getkey, verify=False)
+            result1 = r1.json()
+            key = result1['data']['key']
+            signature = result1['data']['signature']['signature']
+            policy = result1['data']['signature']['policy']
+            # --------------上传金山文件---------------------------
+            data_putkey = {'name': '文件上传模板.txt',
+                           'key': key,
+                           'acl': 'public-read',
+                           'signature': signature,
+                           'KSSAccessKeyId': 'TMRzmmQZpYOxoUjagQ5E',
+                           'policy': policy,
+                           'Bucket': 'xgw-vod',
+                           'file': ('文件上传模板.txt', f.read())}
+            print(f.read())
+            encode_data = encode_multipart_formdata(data_putkey)
+
+            requests.post(url=url_putkey, headers={'Content-Type':encode_data[1]}, data=encode_data[0], verify=False)
+            # ----------------上传自己的文件-----------------------------------
+            data = {'fileName': '文件上传模板.txt', 'title': "文件上传模板.txt", 'type': 1, 'size': 17}
             for i in [1, 2]:
                 r = requests.post(url=url, headers=readconfig_ini(v=4), data=data, verify=False, files=file)
                 result = r.json()
@@ -158,4 +188,4 @@ class GetAll:
 
 
 if __name__ == '__main__':
-    GetAll().get_sortlist()
+    GetAll().put_file()
