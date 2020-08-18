@@ -924,20 +924,20 @@ class add_atlas(MyTest):
             img_id = next(pub_news().get_pictures(value='id'))
             id = next(curre().get_atlas(value='id'))
 
-            self.data['atlasCategory']['id'] = id
-            self.data['atlasCategory']['name'] = random_str("编辑后的企业图册分类...")
-            self.data['atlasCategory']['imgUrl'] = img_url
-            self.data['atlasCategory']['imgId'] = img_id
-            self.data['atlasCategory']['keywords'] = random_str("编辑后的关键词...")
-            self.data['atlasCategory']["imgThumbUrl"] = img_url
-            self.data['atlasCategory']["des"] = random_str("编辑后的企业图册分类描述内容...")
-            self.data['atlasCategory']["summary"] = random_str("编辑后的企业图册分类描述内容...")
-                
+            self.data['id'] = id
+            self.data['name'] = random_str("编辑后的企业图册分类...")
+            self.data['imgUrl'] = img_url
+            self.data['imgId'] = img_id
+            self.data['keywords'] = random_str("编辑后的关键词...")
+            self.data["imgThumbUrl"] = img_url
+            self.data["des"] = random_str("编辑后的企业图册分类描述内容...")
+            self.data["summary"] = random_str("编辑后的企业图册分类描述内容...")
+
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-
-
+            print(self.result)
             self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
