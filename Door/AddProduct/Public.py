@@ -53,7 +53,10 @@ def writeyaml(w_key=None, w_value=None, n=None, file=None):
     path = Any_Path(file, "Public.yaml")
     with open(path, n, encoding="utf-8") as yaml_file:
         data = {w_key: w_value}
-        yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
+        if int(yaml.__version__[0]) >= 5:
+            yaml.dump(data, yaml_file, allow_unicode=True)
+        else:
+            yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
 
 
 def readconfig_yaml(basekey='base_url', key='Door'):
@@ -212,5 +215,13 @@ class GetAll:
 
 
 if __name__ == '__main__':
-    GetAll().get_mark()
+    writeyaml()
 #     print(readyaml(file="Door\AddProduct",key="p_id"))
+#     print(Any_Path('Img','产品用图.png'))
+    # print(os.path.dirname(os.path.dirname(__file__)))
+    # print(os.path.dirname(__file__))
+    # targetDir = r'E:/Automate/Portal_interface/Door/AddProduct'
+    # files = []
+    # dirs = []
+    # files = os.listdir(targetDir)
+    # print(files)

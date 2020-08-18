@@ -1,5 +1,5 @@
 get_picture:
-  url: "/manager/gwforward/dssresources/imageRepository/findAllClass"
+  url: "/manager/gwforward/dssresources/imageRepository/findByPagination"
   bar: {}
 
 picture_url:

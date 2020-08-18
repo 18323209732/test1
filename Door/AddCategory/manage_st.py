@@ -10,6 +10,7 @@ import urllib3
 import time, yaml, os
 from ruamel.yaml import RoundTripDumper
 from Common.Route import Any_Path
+from Door.AddCategory.Public import writeyaml
 
 
 class manage_AddCategory(MyTest):
@@ -27,11 +28,9 @@ class manage_AddCategory(MyTest):
             self.data['category']['categoryName'] = '分类%s' % time.time()  # 获取随机分类名称
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-            path = Any_Path("Door\AddCategory", "Public.yaml")
-            with open(path, "w", encoding="utf-8") as yaml_file:  # 把传入的分类名称存入Public.yaml
-                data = {'categoryName': self.data['category']['categoryName']}
-                yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
-            # print(self.data['category']['categoryName'])
+
+            writeyaml(w_key='categoryName', w_value=self.data['category']['categoryName'], n='w', file="Door\AddCategory")
+
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -57,9 +56,7 @@ class manage_AddCategory(MyTest):
                     for i in self.result['data']:  # 循环判断分类列表名称与存入的是否一致
                         if i['categoryName'] == value:
                             id = i['id']
-                            with open(path, "a", encoding="utf-8") as yaml_file:  # 把传入的分类名称存入Public.yaml
-                                data = {'id': id}
-                                yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
+                            writeyaml(w_key='id', w_value=id, n='a', file= "Door\AddCategory")
 
             except:
                 self.singular = str(traceback.format_exc())

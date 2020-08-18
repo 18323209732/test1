@@ -143,7 +143,7 @@ class Public_Data:
 
 
 if __name__ == "__main__":
-    print(next(Public_Data().get_news(value='id')))
+    print(next(Public_Data().get_news_used(value='id')))
 #     # Public_Data().add_class()
 #     pass
 
