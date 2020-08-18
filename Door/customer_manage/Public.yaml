@@ -1,3 +1,9 @@
-add_customer:
-  - url: /add/customerParam
+add_customergroup:
+    url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/group/save
+    bar: {"name":"","desc":"客户分组描述"}
+
+get_group_list:
+    url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/group/list
     bar: {}
+
+
