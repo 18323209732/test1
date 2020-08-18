@@ -11,6 +11,7 @@ from ruamel.yaml import RoundTripDumper
 from Common.Route import Any_Path
 from Common.ReadYaml import ReadPublic, ConfigYaml
 from urllib3 import encode_multipart_formdata
+from Door.companyFile import Public
 projectName = ConfigYaml("projectName").base_config
 Url = ConfigYaml(projectName).base_url
 
@@ -58,7 +59,7 @@ def writeyaml(w_key=None, w_value=None, n=None, file=None):
     path = Any_Path(file, "Public.yaml")
     with open(path, n, encoding="utf-8") as yaml_file:
         data = {w_key: w_value}
-        yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
+        yaml.dump(data, yaml_file,  allow_unicode=True)
 
 
 def readconfig_yaml(basekey='base_url', key='Door'):
@@ -104,7 +105,10 @@ class GetAll:
         """
         try:
             url = Url + r'/manager/gwforward/manager-webapi/content/companyFileCategory/saveCompanyfileCategory'
-            data = "id=0&type=1&parentId=&imgUrl=%2Frepository%2Fimage%2Fc29bb365-842a-43fa-8b92-36317255eeea.png&imgId=19&newOpen=1&mobileNewOpen=1&showFlag=1&mobileShowFlag=1&linkUrl=&mobileLinkUrl=&iconUrl=&appId=24&name=%E4%BC%81%E4%B8%9A%E4%B8%8B%E8%BD%BD%E5%88%86%E7%B1%BB01&summaryCheck=&linkPath=&linkPathMobile=&des=%3Cp%3E123456789%3C%2Fp%3E%0A&mobileDes=&message=&keywords=&summary=&seoState=true&hidTitle=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22oneCategoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&hidKeywords=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%85%B3%E9%94%AE%E8%AF%8D%22%2C%22id%22%3A%22categoryKeyword%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&hidDescription=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E6%8F%8F%E8%BF%B0%22%2C%22id%22%3A%22categoryDescription%22%7D%5D&hidTitleSign=_&hidKeywordsSign=%2C&hidDescriptionSign=-&hidAddDescription=&seoTitleSign=_&seoKeywordsSign=%2C&seoDescriptionSign=-&seoTitle=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22oneCategoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&seoKeywords=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%85%B3%E9%94%AE%E8%AF%8D%22%2C%22id%22%3A%22categoryKeyword%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&seoDescription=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E6%8F%8F%E8%BF%B0%22%2C%22id%22%3A%22categoryDescription%22%7D%5D&seoAddDescription=&authData=%5B%7B%22authType%22%3A1%2C%22authStr%22%3A%22GW_%3A24%3Acategory%3Aview%3A47%22%2C%22roleIds%22%3A%22%22%7D%5D&authStr=GW_%3A24%3Acategory%3Aview%3A47&authType=1&roleIds=&createDate=1594105477000&hasInfoCount=0&showOrder=7&useViewType=false&"
+            imgurl = Public.readyaml(file=r'Door\AddProduct', key='p_url')
+            imgId = Public.readyaml(file=r'Door\AddProduct', key='p_id')
+            data = "id=0&type=1&parentId=&imgUrl=" + str(imgurl) + "&imgId=" + str(
+                imgId) + "&newOpen=1&mobileNewOpen=1&showFlag=1&mobileShowFlag=1&linkUrl=&mobileLinkUrl=&iconUrl=&appId=24&name=%E4%BC%81%E4%B8%9A%E4%B8%8B%E8%BD%BD%E5%88%86%E7%B1%BB01&summaryCheck=&linkPath=&linkPathMobile=&des=123456789&mobileDes=&message=&keywords=&summary=&seoState=true&hidTitle=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22oneCategoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&hidKeywords=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%85%B3%E9%94%AE%E8%AF%8D%22%2C%22id%22%3A%22categoryKeyword%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&hidDescription=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E6%8F%8F%E8%BF%B0%22%2C%22id%22%3A%22categoryDescription%22%7D%5D&hidTitleSign=_&hidKeywordsSign=%2C&hidDescriptionSign=-&hidAddDescription=&seoTitleSign=_&seoKeywordsSign=%2C&seoDescriptionSign=-&seoTitle=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22oneCategoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&seoKeywords=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%85%B3%E9%94%AE%E8%AF%8D%22%2C%22id%22%3A%22categoryKeyword%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&seoDescription=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E6%8F%8F%E8%BF%B0%22%2C%22id%22%3A%22categoryDescription%22%7D%5D&seoAddDescription=&authData=%5B%7B%22authType%22%3A1%2C%22authStr%22%3A%22GW_%3A24%3Acategory%3Aview%3A%22%2C%22roleIds%22%3A%22%22%7D%5D&authStr=GW_%3A24%3Acategory%3Aview%3A&authType=1&roleIds=&"
             r = requests.post(url=url, headers=readconfig_ini(v=2), data=data, verify=False)
             result = r.json()
             id = result['data']['id']
@@ -125,16 +129,16 @@ class GetAll:
             url_getkey = Url + r'/manager/gwforward/dssresources/fileRepository/getKs3Signature?tenantId=%s' % (self.tenant_value)
             url_putkey = 'https://ks3-cn-beijing.ksyun.com/xgw-vod'
             url = Url + r'/manager/gwforward/dssresources/fileRepository/saveKs3FileInfo'  # 获取文件key
-            file_path = Any_Path('File', '文件上传模板.txt')
+            file_path = Any_Path('File', 'testfile001.txt')
             f = open(file_path, "rb")
             file = {'file': f}
             # ---- --------上传金山文件的名------------------------
-            data_putname = "fileNames=文件上传模板.txt"
+            data_putname = "fileNames=testfile001.txt"
             r1 = requests.post(url=url_getkey, headers=readconfig_ini(v=2),
                                data=data_putname, verify=False)
 
             # ---- --------获取金山文件的key------------------------
-            data_getkey = {"acl": "public-read", "key": "${filename}", "fileName": "文件上传模板.txt"}
+            data_getkey = {"acl": "public-read", "key": "${filename}", "fileName": "testfile001.txt"}
             r1 = requests.post(url=url_getkey, headers=readconfig_ini(),
                               json=data_getkey, verify=False)
             result1 = r1.json()
@@ -142,20 +146,20 @@ class GetAll:
             signature = result1['data']['signature']['signature']
             policy = result1['data']['signature']['policy']
             # --------------上传金山文件---------------------------
-            data_putkey = {'name': '文件上传模板.txt',
+            data_putkey = {'name': 'testfile001.txt',
                            'key': key,
                            'acl': 'public-read',
                            'signature': signature,
                            'KSSAccessKeyId': 'TMRzmmQZpYOxoUjagQ5E',
                            'policy': policy,
                            'Bucket': 'xgw-vod',
-                           'file': ('文件上传模板.txt', f.read())}
-            print(f.read())
+                           'file': ('testfile001.txt', f.read())}
+
             encode_data = encode_multipart_formdata(data_putkey)
 
             requests.post(url=url_putkey, headers={'Content-Type':encode_data[1]}, data=encode_data[0], verify=False)
             # ----------------上传自己的文件-----------------------------------
-            data = {'fileName': '文件上传模板.txt', 'title': "文件上传模板.txt", 'type': 1, 'size': 17}
+            data = {'fileName': 'testfile001.txt', 'title': "testfile001.txt", 'type': 1, 'size': 17}
             for i in [1, 2]:
                 r = requests.post(url=url, headers=readconfig_ini(v=4), data=data, verify=False, files=file)
                 result = r.json()
@@ -188,4 +192,4 @@ class GetAll:
 
 
 if __name__ == '__main__':
-    GetAll().put_file()
+    GetAll().add_Cate()

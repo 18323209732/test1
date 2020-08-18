@@ -32,7 +32,8 @@ class manage_companyCategory(MyTest):
             r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
             self.result = r.json()
             # 把添加的企业下载分类id写入companyCategory的Public.yaml
-            Public.writeyaml(w_key='C_id', w_value=self.result['data']['id'], n='w', file='Door/companyCategory')
+            # print(self.result['data']['id'])
+            Public.writeyaml(w_key='C_id', w_value=self.result['data']['id'], n='w', file=r'Door/companyCategory')
             self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
