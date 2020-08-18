@@ -492,7 +492,7 @@ class info_banner(MyTest):
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json()['data']['list'][0]['id'])
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
