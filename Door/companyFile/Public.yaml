@@ -1,7 +1,7 @@
-file_id1: 102
-path1: http://cetest01.us-ca.ufileos.com/100001_2007225007/testfile001.txt
-file_id2: 103
-path2: http://cetest01.us-ca.ufileos.com/100001_2007225007/testfile001.txt
-list_id: 51
-id1: 53
-id2: 52
+{file_id1: 8}
+{path1: 'https://ks3-cn-beijing.ksyun.com/xgw-vod/150001_2008185016/testfile001.txt'}
+{file_id2: 9}
+{path2: 'https://ks3-cn-beijing.ksyun.com/xgw-vod/150001_2008185016/testfile001.txt'}
+{list_id: 26}
+{id1: 28}
+{id2: 27}
