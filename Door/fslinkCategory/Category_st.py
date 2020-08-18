@@ -9,6 +9,7 @@ from Common.DataHandle import ReRun
 import urllib3
 import time
 import random
+import os
 from ddt import ddt, data,file_data
 from Common.ReExecution import Get_Cls_Fun
 from Door.fslinkCategory.Public import get_classify,EnvData_Category
@@ -229,7 +230,8 @@ class Category_fslinkCategory(MyTest):
 
             self.headers.pop('Content-Type')
             image = "image{}.jpg".format(time.time())
-            files = {"file": (image, open(r"E:\mycode\Portal_interface\Door\fslinkCategory\timg1.jpg", "rb"), "images/jpeg")}
+            img = os.path.join(os.path.dirname(os.path.abspath(__file__)),"timg1.jpg")
+            files = {"file": (image, open(img, "rb"), "images/jpeg")}
             r = requests.post(url, headers=self.headers, files=files, stream=True, verify=False)
             self.result = r.json()
             print(self.result)
