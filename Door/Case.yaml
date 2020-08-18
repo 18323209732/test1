@@ -3055,6 +3055,17 @@ Door:
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
           }
+          test12_update_CateStatus: {  # 方法名：隐藏/显示电脑版链接分类
+          url: /manager/gwforward/manager-webapi/content/companyFileCategory/updateCateStatus,
+          level: 中,
+          author: 姜娜,
+          bar: [{'cateId': 1, 'status': 0}, {'cateId': 1, 'status': 1}],
+          relation_data: {},    #关联接口
+          case_name: 隐藏电脑版链接分类,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
 
   companyFile: # 企业下载
     - url:   # 企业下载
@@ -3065,7 +3076,7 @@ Door:
           url: /manager/gwforward/manager-webapi/content/companyfile/add,
           level: 高,
           author: 姜娜,
-          bar: {"infotype":"2","title":"接口链接文件001","summary":"啦啦啦啦啦啦啦啦啦啦啦","keyWords":"","cateGoryIds":"48","appId":"24","content":"","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"false","targetFlagMobile":"false","linkPath":"{\"entityTag\":\"page\",\"text\":\"企业下载\",\"id\":\"8a2d65e7-9e70-4bc6-903d-aa31082d9051\",\"param\":0}","linkPathMobile":"{\"entityTag\":\"page\",\"text\":\"企业下载\",\"id\":\"8a2d65e7-9e70-4bc6-903d-aa31082d9051\",\"param\":0}","pubDate":"","veiwCount":"500","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":null,"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          bar: {"infotype":"2","title":"接口链接文件001","summary":"啦啦啦啦啦啦啦啦啦啦啦","keyWords":"","cateGoryIds":"12","appId":"24","content":"","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"false","targetFlagMobile":"false","linkPath":"http://www.baidu.com","linkPathMobile":"http://www.baidu.com","pubDate":"","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":null,"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
           case_name: 添加链接文件,
           expected: [200],  # 预期结果
@@ -3076,7 +3087,7 @@ Door:
           url: /manager/gwforward/manager-webapi/content/companyfile/add,
           level: 中,
           author: 姜娜,
-          bar: {"infotype":"2","title":"接口链接文件001","summary":"啦啦啦啦啦啦啦啦啦啦啦","keyWords":"","cateGoryIds":"48","appId":"24","content":"","contentMobile":"","showFlag":"false","showMobileFlag":"false","targetFlag":"false","targetFlagMobile":"false","linkPath":"{\"entityTag\":\"page\",\"text\":\"企业下载\",\"id\":\"8a2d65e7-9e70-4bc6-903d-aa31082d9051\",\"param\":0}","linkPathMobile":"{\"entityTag\":\"page\",\"text\":\"企业下载\",\"id\":\"8a2d65e7-9e70-4bc6-903d-aa31082d9051\",\"param\":0}","pubDate":"","veiwCount":"500","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":null,"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
+          bar: {"infotype":"2","title":"接口链接文件001","summary":"啦啦啦啦啦啦啦啦啦啦啦","keyWords":"","cateGoryIds":"12","appId":"24","content":"","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"false","targetFlagMobile":"false","linkPath":"http://www.baidu.com","linkPathMobile":"http://www.baidu.com","pubDate":"","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":null,"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
           case_name: 多个分类链接文件,
           expected: [200],  # 预期结果

@@ -57,9 +57,10 @@ def writeyaml(w_key=None, w_value=None, n=None, file=None):
     3. 转译文件，传入参数，去重｛｝，方便yaml直接读取数据
     """
     path = Any_Path(file, "Public.yaml")
+
     with open(path, n, encoding="utf-8") as yaml_file:
         data = {w_key: w_value}
-        yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
+        yaml.dump(data, yaml_file,  allow_unicode=True)
 
 
 def readconfig_yaml(basekey='base_url', key='Door'):
