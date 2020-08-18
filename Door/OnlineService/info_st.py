@@ -109,7 +109,7 @@ class info_OnlineService(MyTest):
     @ReRun(MyTest.setUp)
     def test_azdd_service_onlineservice(self):
         # 添加客服人员
-        for i in range(2):
+        for i in range(1):
             urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
             self.data['name'] = '客服' + str(time.time())[7:10]
             self.data['ccount'] = str(time.time())[:10]
