@@ -106,7 +106,7 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             id = r.json()['data']
             # print(id[8:])
             RWyaml(self.Public_path).write_yaml('content', 'addid2', id[8:])  # 新增内容id存入public.yaml文件
@@ -277,6 +277,7 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -426,7 +427,7 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            # print(r.json())
+            print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
