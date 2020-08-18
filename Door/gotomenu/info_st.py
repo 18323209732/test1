@@ -79,7 +79,7 @@ class info_gotomenu(MyTest):
                 outcome('red', self.singular)
                 return self.singular
         
-    @unittest.skipIf(condition, "暂时跳过")
+    # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_zdelete_gotomenu(self):
         # 删除一键菜单
