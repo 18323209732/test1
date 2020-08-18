@@ -10,25 +10,31 @@ class RWyaml(object):
 
     #字典形式读取所有内容
     def read_yaml_all(self):
-        with open(self.file, 'r', encoding='utf-8') as f:
-            # return self.y.load(f, Loader=self.y.FullLoader)
-            return self.y.load(f)
+        try:
+            with open(self.file, 'r', encoding='utf-8') as f:
+                # return self.y.load(f, Loader=self.y.FullLoader)
+                return self.y.load(f)
+        except:
+            return None
 
 
     #写入（完善了下，可修改key值,但不使用空表）
     def write_yaml(self, nb, key, value):
         data = {nb: {key: value}}
         old_data = self.read_yaml_all()
-
-        if nb in old_data:
-            old_data[nb][key] = value
-            with open(self.file, 'w', encoding='utf-8') as f:
-                self.y.dump(old_data, f)
-                # print('写入成功：%s' % old_data)
-        else:
+        if old_data == None:
             with open(self.file, 'a', encoding='utf-8') as f:
                 self.y.dump(data, f)
-                # print('写入成功：%s' % data)
+        else:
+            if nb in old_data:
+                old_data[nb][key] = value
+                with open(self.file, 'w', encoding='utf-8') as f:
+                    self.y.dump(old_data, f)
+                    # print('写入成功：%s' % old_data)
+            else:
+                with open(self.file, 'a', encoding='utf-8') as f:
+                    self.y.dump(data, f)
+                    # print('写入成功：%s' % data)
 
     #读取节点下面key的值
     def read_yaml_value(self, nb, key):
