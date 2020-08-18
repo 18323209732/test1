@@ -69,8 +69,8 @@ class Public_Data:
                 for value in result.get('data').get('list'):
                     if value.get('id') != 1:
                         id.append(value.get('id'))
-                if id is None:
-                    return self.add_attribute()
+                if id == []:
+                    return [self.add_attribute()]
                 else:
                     return id
 
