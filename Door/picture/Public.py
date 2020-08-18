@@ -87,7 +87,7 @@ class Public_Data:
 
         return result
 
-    @ReExecution(add_class, status='200')
+    @ReExecution(add_class, status='200',response_list='')
     def get_news(self):
         '''
         获取新闻资讯列表数据
@@ -95,10 +95,11 @@ class Public_Data:
         '''
 
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        self.public_data = ReadPublic(catalog='picture', key="get_picture")
+        self.public_data = ReadPublic(catalog='picture', key="get_class")
         url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
         url = self.url + url
         data = self.public_data.public_value("bar")
+
         r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
         result = r.json()
 

@@ -48,7 +48,7 @@ class info_banner(MyTest):
                 outcome('red', self.singular)
                 return self.singular
         
-    @unittest.skipIf(condition, "暂时跳过")
+    # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_zdelete_banner(self):
         # 删除banner
@@ -446,7 +446,7 @@ class info_banner(MyTest):
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()
@@ -456,7 +456,7 @@ class info_banner(MyTest):
             outcome('red', self.singular)
             return self.singular
         
-    @unittest.skipIf(condition, "暂时跳过")
+    # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_ydelete_content_banner(self):
         # 删除banner内容
@@ -492,7 +492,7 @@ class info_banner(MyTest):
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, params=self.data, stream=True, verify=False)
-            print(r.json()['data']['list'][0]['id'])
+            # print(r.json())
             self.result = r.json()
 
             self.time = r.elapsed.total_seconds()

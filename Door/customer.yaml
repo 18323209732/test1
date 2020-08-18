@@ -15,3 +15,58 @@ Door:
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
           }
+          test_customer_grouplist: {  # 客户分组列表-客户列表页面的接口
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/group/groupList,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 客户分组列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_add_customergroup: {  # 添加客户分组
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/group/save,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"name":"","desc":"客户分组描述"},
+          test_data: {},
+          case_name: 添加客户分组,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_group_list: {  # 客户分组列表-客户分组页面接口
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/group/list,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 客户分组列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_loadINProperties: {  # 添加客户-获取属性
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/group/loadI18NProperties,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: ,
+          test_data: {},
+          case_name: 添加客户-获取属性,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_add_newcustomer: {  # 添加客户
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/save,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"businessname": "我的手动创建5","groupId": 4,"sex": 1},
+          test_data: {},
+          case_name: 添加客户,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }

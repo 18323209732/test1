@@ -61,6 +61,7 @@ class manage_classify(MyTest):
     def test_edit_classify(self):
         # 编辑分类
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.type_condition = False
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type

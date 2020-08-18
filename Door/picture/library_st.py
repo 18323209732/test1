@@ -302,7 +302,6 @@ class library_picture(MyTest):
                 self.headers[self.type] = self.form_type
 
             ids = next(pd().get_news_used(value="id"))
-            print(ids)
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={ids}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -375,6 +374,8 @@ class library_picture(MyTest):
             r = requests.post(url, headers=self.headers, files=file, data=self.data, stream=True, verify=False)
             f.close()
             self.result = r.json()
+            if "image has existed!" in self.result.get("msg"):
+                self.result = {"status": '200'}
 
             self.time = r.elapsed.total_seconds()
         except:
@@ -645,13 +646,14 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['ids'] = next(pd().get_news(value='id'))
+            self.data['id'] = next(pd().get_news(value='id'))
             self.data['className'] = random_str("编辑后的自动化测试")
             self.data['classInfo'] = random_str("编辑后的自动化测试描述")
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
+
 
             self.time = r.elapsed.total_seconds()
         except:
