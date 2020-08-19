@@ -363,8 +363,6 @@ class library_picture(MyTest):
         # 编辑上传图片
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
 
             file_path = Any_Path("File", "edit.jpg")
             del self.headers[self.type]
@@ -372,11 +370,9 @@ class library_picture(MyTest):
             file = {"file": f}
 
             url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, files=file, data=self.data, stream=True, verify=False)
+            r = requests.post(url, headers=self.headers, data=self.data, files=file, stream=True, verify=False)
             f.close()
             self.result = r.json()
-            if "image has existed!" in self.result.get("msg"):
-                self.result = {"status": '200'}
 
             self.time = r.elapsed.total_seconds()
         except:
