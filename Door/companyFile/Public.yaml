@@ -1,7 +1,7 @@
-{file_id1: 8}
-{path1: 'https://ks3-cn-beijing.ksyun.com/xgw-vod/150001_2008185016/testfile001.txt'}
-{file_id2: 9}
-{path2: 'https://ks3-cn-beijing.ksyun.com/xgw-vod/150001_2008185016/testfile001.txt'}
-{list_id: 26}
-{id1: 28}
-{id2: 27}
+file_id1: 15
+path1: https://ks3-cn-beijing.ksyun.com/xgw-vod/150001_2008185016/testfile001.txt
+file_id2: 14
+path2: https://ks3-cn-beijing.ksyun.com/xgw-vod/150001_2008185016/testfile001.txt
+list_id: 40
+id1: 42
+id2: 41
