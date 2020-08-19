@@ -355,7 +355,8 @@ class library_picture(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_editwindow_pictures(self):
