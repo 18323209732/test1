@@ -1,9 +1,9 @@
 base_url:
   Design: https://new-console.300.cn                  #会员中心地址
-  Door: https://2008185016-stsite-oper.pool602.yun300.cn     #https://2004105022-site.pool5.yun300.cn # 正式环境
+  Door: http://2008205028.pool602-xnstsite.oper.site.cn       #https://2004105022-site.pool5.yun300.cn # 正式环境
 base_config:
   tenant_key: tenantId
-  tenant_value: 208223
+  tenant_value: 208507
   json_type: application/json
   form_type: application/x-www-form-urlencoded
   type_key: Content-Type
@@ -13,9 +13,9 @@ base_config:
   new_website: "{}/manager/gwforward/manager-webapi/content/info/info_page"
   over_time: 14400                                #cookie 过期时间
   key: CEST             #JSESSIONID                                   #cookies键
-  user_name: CEM10097239                         #登录名称
-  user_pwd: zok9phwv6n                                    #密码
-  website: www.wholetest.euzhongtec.com                      #网站 2004105022.pool5-site.make.yun300.cn
+  user_name: 12345qwert                        #登录名称
+  user_pwd: CE111453168                                    #密码
+  website: 602test.euzhongtec.com                      #网站 2004105022.pool5-site.make.yun300.cn
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
   steam_handler: false                          #控制台输入日志 Fasle：不输入
@@ -30,8 +30,8 @@ base_config:
   projectName: Door                           #项目名称
   moudleName:  #[newsclass,news] #news #[newsclass,picture,news] #newsclass                                   #运行模块
   timeout: 3                                     #超时时间
-  thread_count: 4                                 #开启线程数，开启线程数不能大于模块数
-  process: False                                 #是否开启多进程
+  thread_count: 5                                 #开启线程数，开启线程数不能大于模块数
+  process: True                                 #是否开启多进程
   sql: True                                     #sql执行开关
   redis: False                                     #redis执行开关
   Log: Log                                           #存放日志文件的目录名称
@@ -51,8 +51,8 @@ base_config:
   redisip: 192.168.4.36                       #redis服务ip
   redisport: 6379                             #redis服务端口
   redisresult: redisre                        #redis表名
-  serverip: 192.168.5.240                     #服务器ip
-  serverport: 38888                          #服务器端口
+  serverip: 192.168.4.17                     #服务器ip
+  serverport: 8081                          #服务器端口
   threadrun: False                            #是否开启多线程运行
   timing: 3600                                  #定时任务间隔时间
   company: 秒                                 #定时任务执行单位,时，分，秒
@@ -81,8 +81,8 @@ email:
   title: 门户接口自动化测试报告  # 邮件标题
   desc: 用例执行情况       #邮件描述
   smtp_sever: smtp.gouuse.cn # 邮箱smtp服务 如 smtp.163.com
-  send_person: chenjianbo@gouuse.cn    #邮件发送者邮箱
-  send_pwd: Cjbwt0107  # 邮件发送者邮箱密码
+  send_person: fangkun@gouuse.cn    #邮件发送者邮箱
+  send_pwd: Ff905202467  # 邮件发送者邮箱密码
   receive_person: [chenjianbo@300.cn,songyu@gouuse.cn,jiangna@gouuse.cn,fangkun@gouuse.cn]  #songyu@gouuse.cn,jiangna@gouuse.cn,fangkun@gouuse.cn    #邮件接收者
 sql:
   create_table: CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL AUTO_INCREMENT,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));
