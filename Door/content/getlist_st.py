@@ -106,9 +106,8 @@ class getlist_content(MyTest):
         try:
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
-            print(r.json())
+            # print(r.json())
             id = r.json()['data']
-            # print(id[8:])
             RWyaml(self.Public_path).write_yaml('content', 'addid2', id[8:])  # 新增内容id存入public.yaml文件
             self.result = r.json()
 
