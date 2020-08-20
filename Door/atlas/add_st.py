@@ -12,8 +12,6 @@ import urllib3
 from ddt import ddt, data,file_data
 from Common.ReExecution import Get_Cls_Fun
 from Common.Route import Any_Path
-from Door.news.Public import Public_Data as pub_news
-from Door.picture.Public import Public_Data as picture
 from Door.atlas.Public import Public_Data as curre
 
 @ddt
@@ -30,8 +28,8 @@ class add_atlas(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             class_id = next(curre().get_class(value='id'))
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
-            id = next(picture().picture_name(value='id'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
+            id = next(curre().picture_name(value='id'))
 
             self.data['commonAtlasName'] = random_str("自动化企业图册...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细内容数据...</p>\n")
@@ -39,6 +37,7 @@ class add_atlas(MyTest):
             self.data['keywords'] = random_str("关键词...")
             self.data["atlasImgs"][0]['atlasCategoryArr'] = [class_id]
             self.data["atlasImgs"][0]['id'] = id
+            self.data["atlasImgs"][0]['thumbId'] = id
             self.data["atlasImgs"][0]['relativeImgUrl'] = img_url
             self.data["atlasImgs"][0]['imgUrl'] = img_url
             self.data["atlasImgs"][0]['thumbUrl'] = img_url
@@ -62,24 +61,26 @@ class add_atlas(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            id_1 = next(picture().picture_name(value='id'))
-            id_2 = next(picture().picture_name(value='id'))
+            id_1 = next(curre().picture_name(value='id'))
+            id_2 = next(curre().picture_name(value='id'))
             class_id = next(curre().get_class(value='id'))
 
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
-            img_url_1 = next(pub_news().get_pictures(value='imgUrl'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
+            img_url_1 = next(curre().get_pictures(value='imgUrl'))
             self.data['commonAtlasName'] = random_str("自动化企业图册...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细内容数据...</p>\n")
             self.data['commonAtlasSummary'] = random_str("自动化企业图册描述数据...")
             self.data['keywords'] = random_str("关键词...")
             self.data["atlasImgs"][0]['atlasCategoryArr'] = [class_id]
             self.data["atlasImgs"][0]['id'] = id_1
+            self.data["atlasImgs"][0]['thumbId'] = id_1
             self.data["atlasImgs"][0]['relativeImgUrl'] = img_url
             self.data["atlasImgs"][0]['imgUrl'] = img_url
             self.data["atlasImgs"][0]['thumbUrl'] = img_url
             self.data["atlasImgs"][0]['relativeThumbUrl'] = img_url
             self.data["atlasImgs"][1]['atlasCategoryArr'] = [class_id]
             self.data["atlasImgs"][1]['id'] = id_2
+            self.data["atlasImgs"][1]['thumbId'] = id_2
             self.data["atlasImgs"][1]['relativeImgUrl'] = img_url_1
             self.data["atlasImgs"][1]['imgUrl'] = img_url_1
             self.data["atlasImgs"][1]['thumbUrl'] = img_url_1
@@ -131,7 +132,7 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
             img_name = img_url.split("/")[-1]
 
             url = ConfigYaml(self.projectName).base_url + f"/repository/image/{img_name}"
@@ -145,29 +146,6 @@ class add_atlas(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
-
-    # # @unittest.skipIf(condition, "暂时跳过")
-    # @ReRun(MyTest.setUp)
-    # def test_removeimage_atlas(self):
-    #     # 重置图片
-    #     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-    #     try:
-    #         if self.type_condition:
-    #             self.headers[self.type] = self.form_type
-    #
-    #         url = ConfigYaml(self.projectName).base_url + self.url
-    #         print(url)
-    #         r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
-    #         print(r.json())
-    #         self.result = r.json()
-    #
-    #         self.time = r.elapsed.total_seconds()
-    #     except:
-    #         self.singular = str(traceback.format_exc())
-    #         outcome('red', self.singular)
-    #         return self.singular
-    #
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
@@ -261,8 +239,8 @@ class add_atlas(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
-            id = next(picture().picture_name(value='id'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
+            id = next(curre().picture_name(value='id'))
             class_id_1 = next(curre().get_class(value='id'))
             class_id_2 = next(curre().get_class(value='id'))
 
@@ -272,6 +250,7 @@ class add_atlas(MyTest):
             self.data['keywords'] = random_str("关键词...")
             self.data["atlasImgs"][0]['atlasCategoryArr'] = [class_id_1,class_id_2]
             self.data["atlasImgs"][0]['id'] = id
+            self.data["atlasImgs"][0]['thumbId'] = id
             self.data["atlasImgs"][0]['relativeImgUrl'] = img_url
             self.data["atlasImgs"][0]['imgUrl'] = img_url
             self.data["atlasImgs"][0]['thumbUrl'] = img_url
@@ -295,8 +274,8 @@ class add_atlas(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
-            img_id = next(pub_news().get_pictures(value='id'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
+            img_id = next(curre().get_pictures(value='id'))
 
             self.data['atlasCategory']['name'] = random_str("自动化企业图册分类...")
             self.data['atlasCategory']['imgUrl'] = img_url
@@ -345,9 +324,9 @@ class add_atlas(MyTest):
         try:
 
             class_id = next(curre().get_class(value='id'))
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
-            id = next(picture().picture_name(value='id'))
-            news_id = next(pub_news().get_news_id(value='id'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
+            id = next(curre().picture_name(value='id'))
+            news_id = next(curre().get_news_id(value='id'))
 
             self.data['commonAtlasName'] = random_str("自动化企业图册...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细内容数据...</p>\n")
@@ -361,6 +340,7 @@ class add_atlas(MyTest):
             self.data["atlasImgs"][0]['relativeThumbUrl'] = img_url
             self.data['relevantContentList'][1]['contentList'] = [news_id]
             url = ConfigYaml(self.projectName).base_url + self.url
+
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -379,9 +359,9 @@ class add_atlas(MyTest):
         try:
 
             class_id = next(curre().get_class(value='id'))
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
-            id = next(picture().picture_name(value='id'))
-            news_id = next(pub_news().get_news_id(value='id'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
+            id = next(curre().picture_name(value='id'))
+            news_id = next(curre().get_news_id(value='id'))
 
             self.data['commonAtlasName'] = random_str("自动化企业图册...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细内容数据...</p>\n")
@@ -431,11 +411,11 @@ class add_atlas(MyTest):
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test_addlink_atlas(self):
+    def test_addlink10_atlas(self):
         # 添加链接
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
 
             self.data['commonAtlasName'] = random_str("自动化企业图册链接...")
             self.data['linkAtlasName'] = random_str("自动化企业图册链接...")
@@ -462,7 +442,7 @@ class add_atlas(MyTest):
         # 多选分类链接
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
             class_id_1 = next(curre().get_class(value='id'))
             class_id_2 = next(curre().get_class(value='id'))
             self.data['commonAtlasName'] = random_str("自动化企业图册链接...")
@@ -815,8 +795,8 @@ class add_atlas(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
-            img_id = next(pub_news().get_pictures(value='id'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
+            img_id = next(curre().get_pictures(value='id'))
 
             self.data['atlasCategory']['name'] = random_str("自动化普通企业图册分类...")
             self.data['atlasCategory']['imgUrl'] = img_url
@@ -843,8 +823,8 @@ class add_atlas(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
-            img_id = next(pub_news().get_pictures(value='id'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
+            img_id = next(curre().get_pictures(value='id'))
 
             self.data['atlasCategory']['name'] = random_str("自动化链接企业图册分类...")
             self.data['atlasCategory']['imgUrl'] = img_url
@@ -891,8 +871,8 @@ class add_atlas(MyTest):
         # 保存继续
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
-            img_id = next(pub_news().get_pictures(value='id'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
+            img_id = next(curre().get_pictures(value='id'))
 
             self.data['atlasCategory']['name'] = random_str("自动化链接企业图册分类...")
             self.data['atlasCategory']['imgUrl'] = img_url
@@ -920,8 +900,8 @@ class add_atlas(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
-            img_id = next(pub_news().get_pictures(value='id'))
+            img_url = next(curre().get_pictures(value='imgUrl'))
+            img_id = next(curre().get_pictures(value='id'))
             id = next(curre().get_atlas(value='id'))
 
             self.data['id'] = id
@@ -937,7 +917,7 @@ class add_atlas(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
-            print(self.result)
+
             self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())

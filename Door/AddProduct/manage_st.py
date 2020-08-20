@@ -129,10 +129,9 @@ class manage_AddProduct(MyTest):
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
             list = self.result['data']['list']
-            for i in list:
-                if i['productName'] == readyaml(file='Door/AddProduct', key='productName'):
-                    # 把添加成功的产品名称写入Public.yaml
-                    writeyaml(file='Door/AddProduct', w_key='product_id', w_value=i['id'], n="a")
+            id1 = list[0]['id']
+            writeyaml(file='Door/AddProduct', w_key='product_id', w_value=id1, n="a")
+
 
             self.time = r.elapsed.total_seconds()
         except:

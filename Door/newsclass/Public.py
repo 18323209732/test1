@@ -12,6 +12,8 @@ from Common.CusMethod import random_str
 from Common.GetToken import Get_Cookies
 from Common.ReadWriteIni import ReadWrite
 from Common.ReadYaml import ReadPublic, ConfigYaml
+from Common.Route import Any_Path
+
 projectName = ConfigYaml("projectName").base_config
 from Door.news.Public import Public_Data as pub_news
 from Common.ReExecution import ReExecution
@@ -79,24 +81,39 @@ class Public_Data:
 
         return result
 
-    # @ReExecution(add_classnews, response_list='data') #value='name'
-    # def get_classnews_name(self):
-    #     '''
-    #     获取新闻资讯列表数据
-    #     :return:
-    #     '''
-    #
-    #     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-    #
-    #     self.public_data = ReadPublic(catalog='newsclass', key="list_classnews")
-    #     url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
-    #     url = self.url + url
-    #
-    #     data = self.public_data.public_value("bar")
-    #     r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
-    #     result = r.json()
-    #
-    #     return result
+    def file_upload(self):
+        '''
+        添加新闻资讯
+        :return:
+        '''
+
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+        file_path = Any_Path("File", "picture.jpg")
+        del self.headers[self.type]
+        f = open(file_path, "rb")
+        file = {"file": f}
+        self.public_data = ReadPublic(catalog='newsclass', key="file_upload")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
+        url = self.url + url
+        data = self.public_data.public_value("bar")
+        r = requests.post(url, headers=self.headers, data=data, files=file, stream=True, verify=False)
+
+    @ReExecution(file_upload, status='200', response_list='list')
+    def get_pictures(self):
+        '''
+        获取新闻资讯分类数据
+        :return:
+        '''
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.public_data = ReadPublic(catalog='newsclass', key="get_picture")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
+        url = self.url + url
+        data = self.public_data.public_value("bar")
+        r = requests.get(url, headers=self.headers, data=data, stream=True, verify=False)
+        result = r.json()
+
+        return result
 
 # if __name__ == "__main__":
 #     # print(next(Public_Data().get_classnews_name()))

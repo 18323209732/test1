@@ -49,9 +49,11 @@ class manage_companyFile(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-            C_id = str(Public.GetAll().add_Cate())
-            a = C_id
-            b = Public.GetAll().add_Cate()
+            url1 = ConfigYaml(self.projectName).base_url+"/manager/gwforward/manager-webapi/content/companyFileCategory/companyfileCategoryTree"
+            r1 = requests.get(url=url1, headers=self.headers,data={},stream=True, verify=False)
+            self.result = r1.json()
+            a = self.result['data'][0]['id']
+            b = self.result['data'][1]['id']
             self.data['cateGoryIds'] = "%s,%s" % (a, b)
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
