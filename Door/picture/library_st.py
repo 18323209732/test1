@@ -368,8 +368,8 @@ class library_picture(MyTest):
             del self.headers[self.type]
             f = open(file_path, "rb")
             file = {"file": f}
-
             url = ConfigYaml(self.projectName).base_url + self.url
+
             r = requests.post(url, headers=self.headers, data=self.data, files=file, stream=True, verify=False)
             f.close()
             self.result = r.json()
@@ -380,7 +380,7 @@ class library_picture(MyTest):
             outcome('red', self.singular)
             return self.singular
 
-        
+    #
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_wicket_pictures(self):
@@ -643,7 +643,7 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(pd().get_news(value='id'))
+            self.data['id'] = next(pd().get_class(value='id'))
             self.data['className'] = random_str("编辑后的自动化测试")
             self.data['classInfo'] = random_str("编辑后的自动化测试描述")
 
