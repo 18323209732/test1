@@ -183,7 +183,7 @@ Door:
           re_bar: data, # 请求参数
           }
 
-          test_addlink_atlas: {  # 接口方法名
+          test_addlink10_atlas: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/atlas/save',
           level: 高,
           author: 陈建波,
