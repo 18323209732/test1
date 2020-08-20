@@ -11,7 +11,6 @@ from Common.DataHandle import ReRun
 import urllib3
 from random import choice
 from Door.picture.Public import Public_Data as pd
-from Door.news.Public import Public_Data as pub_news
 from Common.Route import Any_Path
 
 
@@ -21,7 +20,7 @@ class library_picture(MyTest):
     type_condition = True
 
     pub_data = pd()
-    pub_news_data = pub_news()
+
     # 新闻分类管理
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
@@ -650,7 +649,6 @@ class library_picture(MyTest):
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
-
 
             self.time = r.elapsed.total_seconds()
         except:

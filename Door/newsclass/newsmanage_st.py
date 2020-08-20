@@ -9,7 +9,7 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-from Door.news.Public import Public_Data as pub_news
+# from Door.news.Public import Public_Data as pub_news
 from Door.newsclass.Public import Public_Data as pd
 
 
@@ -66,7 +66,7 @@ class newsmanage_newsclass(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(pub_news().get_pictures(value='id'))
+            img_url = next(pd().get_pictures(value='id'))
             self.data['name'] = random_str("自动化新增分类...")
             self.data['des'] = random_str("<p>自动化新增分类描述数据...</p>\n")
             self.data['imgUrl'] = img_url
@@ -273,7 +273,7 @@ class newsmanage_newsclass(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
+            img_url = next(pd().get_pictures(value='imgUrl'))
             self.data['name'] = random_str("自动化新增普通分类...")
             self.data['des'] = random_str("<p>自动化新增普通分类描述数据...</p>\n")
             self.data['imgUrl'] = img_url
@@ -298,7 +298,7 @@ class newsmanage_newsclass(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
+            img_url = next(pd().get_pictures(value='imgUrl'))
             self.data['name'] = random_str("自动化新增连接分类...")
             self.data['des'] = random_str("<p>自动化新增连接分类描述数据...</p>\n")
             self.data['imgUrl'] = img_url
@@ -397,7 +397,7 @@ class newsmanage_newsclass(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(pub_news().get_pictures(value='imgUrl'))
+            img_url = next(pd().get_pictures(value='imgUrl'))
             self.data['name'] = random_str("自动化新增保存继续分类...")
             self.data['des'] = random_str("<p>自动化新增保存继续分类描述数据...</p>\n")
             self.data['imgUrl'] = img_url
