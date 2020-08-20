@@ -19,7 +19,7 @@ base_config:
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
   steam_handler: false                          #控制台输入日志 Fasle：不输入
-  frequency: 0                                  #运行失败重跑次数
+  frequency: 2                                  #运行失败重跑次数
   intervaltime: 0.1                                #失败间隔时间
   interval: 1                                      #日志间隔，1表示每多少天新建一个日志文件
   backupCount: 7                                  #日志保存最大天数

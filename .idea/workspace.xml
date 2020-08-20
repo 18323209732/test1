@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="89211bc0-fa15-4ecc-a7f3-73c9f4440e86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/QqWatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/QqWatch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/Config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/AddCategory/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/AddCategory/Public.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/AddProduct/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/AddProduct/Public.yaml" afterDir="false" />
@@ -16,17 +31,14 @@
       <change beforePath="$PROJECT_DIR$/Door/banner/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/banner/Public.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/classes/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/classes/Public.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/companyCategory/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/companyCategory/Public.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/companyFile/Public.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/companyFile/Public.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/companyFile/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/companyFile/manage_st.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Door/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Door/companyFile/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/companyFile/Public.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/content/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/content/Public.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/gotomenu/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/gotomenu/Public.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/listShowcase/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/listShowcase/Public.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/product/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/product/Public.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Door/tab/Public.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Door/tab/Public.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Img/report.png" beforeDir="false" afterPath="$PROJECT_DIR$/Img/report.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log/2020-08-20.log" beforeDir="false" afterPath="$PROJECT_DIR$/Log/2020-08-20.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +116,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_ui" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -289,6 +301,7 @@
       <workItem from="1597890789874" duration="176000" />
       <workItem from="1597891417636" duration="876000" />
       <workItem from="1597892338195" duration="2194000" />
+      <workItem from="1597895365136" duration="4531000" />
     </task>
     <task id="LOCAL-00002" summary="666">
       <created>1591349407745</created>
@@ -522,34 +535,34 @@
     <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1597822103924" />
     <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597822103924" />
     <state x="332" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597822103924" />
-    <state x="495" y="101" key="FileChooserDialogImpl" timestamp="1597893261104">
+    <state x="495" y="101" key="FileChooserDialogImpl" timestamp="1597902519826">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="495" y="101" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597893261104" />
+    <state x="495" y="101" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597902519826" />
     <state x="558" y="110" key="FileChooserDialogImpl/62.0.1538.900@62.0.1538.900" timestamp="1597822103924" />
-    <state width="1493" height="266" key="GridCell.Tab.0.bottom" timestamp="1597894085531">
+    <state width="1493" height="366" key="GridCell.Tab.0.bottom" timestamp="1597904336254">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="391" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597822103924" />
-    <state width="1493" height="266" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597894085531" />
+    <state width="1493" height="366" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597904336254" />
     <state width="1485" height="131" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1597822103924" />
-    <state width="1493" height="266" key="GridCell.Tab.0.center" timestamp="1597894085531">
+    <state width="1493" height="366" key="GridCell.Tab.0.center" timestamp="1597904336254">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="391" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597822103924" />
-    <state width="1493" height="266" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597894085531" />
+    <state width="1493" height="366" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597904336254" />
     <state width="1485" height="131" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1597822103924" />
-    <state width="1493" height="266" key="GridCell.Tab.0.left" timestamp="1597894085531">
+    <state width="1493" height="366" key="GridCell.Tab.0.left" timestamp="1597904336254">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="391" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597822103924" />
-    <state width="1493" height="266" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597894085531" />
+    <state width="1493" height="366" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597904336254" />
     <state width="1485" height="131" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1597822103924" />
-    <state width="1493" height="266" key="GridCell.Tab.0.right" timestamp="1597894085531">
+    <state width="1493" height="366" key="GridCell.Tab.0.right" timestamp="1597904336254">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="391" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597822103924" />
-    <state width="1493" height="266" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597894085531" />
+    <state width="1493" height="366" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597904336254" />
     <state width="1485" height="131" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1597822103924" />
     <state width="1493" height="188" key="GridCell.Tab.1.bottom" timestamp="1597893655311">
       <screen x="0" y="0" width="1536" height="824" />
@@ -596,9 +609,11 @@
     <state x="467" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597822103924" />
     <state x="467" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1597822103924" />
     <state x="588" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1538.900@62.0.1538.900" timestamp="1597822103924" />
-    <state x="377" y="177" key="git4idea.merge.GitPullDialog" timestamp="1597822103924" />
+    <state x="377" y="177" key="git4idea.merge.GitPullDialog" timestamp="1597906753086">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
     <state x="335" y="156" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1597822103924" />
-    <state x="377" y="177" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1597822103924" />
+    <state x="377" y="177" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1597906753086" />
     <state x="439" y="193" key="git4idea.merge.GitPullDialog/62.0.1538.900@62.0.1538.900" timestamp="1597822103924" />
     <state x="596" y="310" key="git4idea.ui.GitStashDialog" timestamp="1597822103924" />
     <state x="596" y="310" key="git4idea.ui.GitStashDialog/0.0.1536.824@0.0.1536.824" timestamp="1597822103924" />
@@ -625,7 +640,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_in_add_st_py.coverage" NAME="Unittests in add_st.py Coverage Results" MODIFIED="1597892701701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
-    <SUITE FILE_PATH="coverage/Portal_interface$Run.coverage" NAME="Run Coverage Results" MODIFIED="1597894085523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Portal_interface$Run.coverage" NAME="Run Coverage Results" MODIFIED="1597895421735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_edit_attribute.coverage" NAME="Unittests for add_st.add_attribute.test_edit_attribute Coverage Results" MODIFIED="1597893263584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_info_st_info_tab_test_all_tablist.coverage" NAME="Unittests for info_st.info_tab.test_all_tablist Coverage Results" MODIFIED="1597828141694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/tab" />
     <SUITE FILE_PATH="coverage/Portal_interface$Unittests_for_add_st_add_attribute_test_attribute_list.coverage" NAME="Unittests for add_st.add_attribute.test_attribute_list Coverage Results" MODIFIED="1597893110417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Door/attribute" />
