@@ -16,7 +16,6 @@ class manage_companyFile(MyTest):
 
     condition = True
     type_condition = False
-    C_id = str(Public.GetAll().add_Cate())
 
     # 企业下载
     # @unittest.skipIf(condition, "暂时跳过")
@@ -29,7 +28,8 @@ class manage_companyFile(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            self.data['cateGoryIds'] = self.C_id
+            C_id = str(Public.GetAll().add_Cate())
+            self.data['cateGoryIds'] = C_id
             self.data['imgUrl'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_url'))
             self.data['imgId'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_id'))
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -49,8 +49,11 @@ class manage_companyFile(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-            a = self.C_id
-            b = Public.GetAll().add_Cate()
+            url1 = ConfigYaml(self.projectName).base_url+"/manager/gwforward/manager-webapi/content/companyFileCategory/companyfileCategoryTree"
+            r1 = requests.get(url=url1, headers=self.headers,data={},stream=True, verify=False)
+            self.result = r1.json()
+            a = self.result['data'][0]['id']
+            b = self.result['data'][1]['id']
             self.data['cateGoryIds'] = "%s,%s" % (a, b)
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -174,7 +177,8 @@ class manage_companyFile(MyTest):
                 self.headers[self.type] = self.form_type
 
             url = ConfigYaml(self.projectName).base_url + self.url
-            self.data['cateGoryIds'] = self.C_id
+            C_id = str(Public.GetAll().add_Cate())
+            self.data['cateGoryIds'] = C_id
             self.data['imgUrl'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_url'))
             self.data['imgId'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_id'))
             self.data['comFiles'][0]['id'] = Public.readyaml(file=r'Door\companyFile', key='file_id1')
@@ -198,7 +202,8 @@ class manage_companyFile(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            self.data['cateGoryIds'] = self.C_id
+            C_id = str(Public.GetAll().add_Cate())
+            self.data['cateGoryIds'] = C_id
             self.data['imgUrl'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_url'))
             self.data['imgId'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_id'))
             self.data['comFiles'][0]['id'] = Public.readyaml(file=r'Door\companyFile', key='file_id1')
@@ -224,7 +229,8 @@ class manage_companyFile(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            self.data['cateGoryIds'] = self.C_id
+            C_id = str(Public.GetAll().add_Cate())
+            self.data['cateGoryIds'] = C_id
             self.data['comFiles'][0]['id'] = Public.readyaml(file=r'Door\companyFile', key='file_id1')
             self.data['comFiles'][0]['path'] = Public.readyaml(file=r'Door\companyFile', key='path1')
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -265,7 +271,8 @@ class manage_companyFile(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            self.data['cateGoryIds'] = self.C_id
+            C_id = str(Public.GetAll().add_Cate())
+            self.data['cateGoryIds'] = C_id
             self.data['comFiles'][0]['id'] = Public.readyaml(file=r'Door\companyFile', key='file_id1')
             self.data['comFiles'][0]['path'] = Public.readyaml(file=r'Door\companyFile', key='path1')
             self.data['RelevantContent'][0]['contentList'] = [Public.readyaml(file=r'Door\companyFile', key='list_id')]
@@ -309,7 +316,8 @@ class manage_companyFile(MyTest):
                 self.headers[self.type] = self.form_type
                 
             url = ConfigYaml(self.projectName).base_url + self.url
-            self.data['cateGoryIds'] = self.C_id
+            C_id = str(Public.GetAll().add_Cate())
+            self.data['cateGoryIds'] = C_id
             self.data['imgUrl'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_url'))
             self.data['imgId'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_id'))
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -412,7 +420,8 @@ class manage_companyFile(MyTest):
         try:
             headers = Public.readconfig_ini(v=2)
             url = ConfigYaml(self.projectName).base_url + self.url
-            self.data = "appId=24&cateId="+self.C_id+"&pcStatus=1&mobileStatus=-1&startDate=2020-07-08%2000%3A00&endDate=2020-07-08%2023%3A59&wd=&pageSize=15&currentPage=1&ec_s_title=&ec_s_categorys=&ec_s_pubDate=&ec_s_showFlag=&ec_s_showMobileFlag=&ec_s_viewcount=&orderColumn=&orderType=&"
+            C_id = str(Public.GetAll().add_Cate())
+            self.data = "appId=24&cateId="+C_id+"&pcStatus=1&mobileStatus=-1&startDate=2020-07-08%2000%3A00&endDate=2020-07-08%2023%3A59&wd=&pageSize=15&currentPage=1&ec_s_title=&ec_s_categorys=&ec_s_pubDate=&ec_s_showFlag=&ec_s_showMobileFlag=&ec_s_viewcount=&orderColumn=&orderType=&"
             r = requests.post(url, headers=headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -429,7 +438,8 @@ class manage_companyFile(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             headers = Public.readconfig_ini(v=2)
-            cateId = self.C_id
+            C_id = str(Public.GetAll().add_Cate())
+            cateId = C_id
             self.data = "appId=24&cateId="+cateId+"&pcStatus=1&mobileStatus=-1&startDate=&endDate=&wd=%E5%85%B3%E9%94%AE&pageSize=15&currentPage=1&ec_s_title=&ec_s_categorys=&ec_s_pubDate=&ec_s_showFlag=&ec_s_showMobileFlag=&ec_s_viewcount=&orderColumn=&orderType=&"
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -449,7 +459,8 @@ class manage_companyFile(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             headers = Public.readconfig_ini(v=2)
-            cateId = self.C_id
+            C_id = str(Public.GetAll().add_Cate())
+            cateId = C_id
             self.data = "appId=24&cateId=" + cateId + "&pcStatus=1&mobileStatus=-1&startDate=&endDate=&wd=&pageSize=15&currentPage=2&ec_s_title=&ec_s_categorys=&ec_s_pubDate=&ec_s_showFlag=&ec_s_showMobileFlag=&ec_s_viewcount=&orderColumn=&orderType=&"
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -473,7 +484,8 @@ class manage_companyFile(MyTest):
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             self.data['id'] = str(Public.readyaml(file=r'Door\companyFile', key='id1'))
-            self.data['cateGoryIds'] = self.C_id
+            C_id = str(Public.GetAll().add_Cate())
+            self.data['cateGoryIds'] = C_id
             self.data['imgUrl'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_url'))
             self.data['imgId'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_id'))
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -494,8 +506,8 @@ class manage_companyFile(MyTest):
             headers = Public.readconfig_ini(v=2)
             id1 = str(Public.readyaml(file=r'Door\companyFile', key='id1'))
             id2 = str(Public.readyaml(file=r'Door\companyFile', key='id2'))
-            c_id = self.C_id
-            data1 = "appId=24&id="+id1+',' + id2+"&cateId=" + c_id
+            C_id = str(Public.GetAll().add_Cate())
+            data1 = "appId=24&id="+id1+',' + id2+"&cateId=" + C_id
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=headers, data=data1, stream=True, verify=False)
             self.result = r.json()

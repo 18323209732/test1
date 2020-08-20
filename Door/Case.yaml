@@ -579,7 +579,7 @@ Door:
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
         }
-          test_del_content: {  # 接口方法名
+          test_zdel_content: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/introduction/delete/',
           level: 中,
           author: 宋宇,
