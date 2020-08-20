@@ -527,7 +527,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introduction/introductList',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, categoryId: '', isdisplay: '',ismobile: '' ,endDate: '',beginDate: '',keywords: '', ec_crd: 15, ec_p: 1, title: ''},
+          bar: {categoryId: '', isdisplay: '',ismobile: '' ,endDate: '',beginDate: '',keywords: '', ec_crd: 15, ec_p: 1, title: ''},
           relation_data: {},    #关联接口
           case_name: 全部分类内容,
           expected: [200],  # 预期结果
@@ -538,7 +538,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introduction/introductList/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, categoryId: 1, isdisplay: '',ismobile: '' ,endDate: '',beginDate: '',keywords: '', ec_crd: 15, ec_p: 1, title: ''},
+          bar: {categoryId: 1, isdisplay: '',ismobile: '' ,endDate: '',beginDate: '',keywords: '', ec_crd: 15, ec_p: 1, title: ''},
           relation_data: {},    #关联接口
           case_name: 无分类内容,
           expected: [200],  # 预期结果
@@ -549,7 +549,7 @@ Door:
           url:  '/manager/gwforward/manager-webapi/content/introduction/updateStatus/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, id: 2, status: 0},
+          bar: {id: 2, status: 0},
           relation_data: {},    #关联接口
           case_name: 显示电脑版,
           expected: [200],  # 预期结果
@@ -560,7 +560,7 @@ Door:
           url:  '/manager/gwforward/manager-webapi/content/introduction/updateStatus/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, id: 2, status: 1},
+          bar: {id: 2, status: 1},
           relation_data: {},    #关联接口
           case_name: 隐藏电脑版,
           expected: [200],  # 预期结果
@@ -594,7 +594,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introduction/searchTips',
           level: 中,
           author: 宋宇,
-          bar: {tenantId: 196498,viewType: 1,keywords: '请输入标题',parentId: 0},
+          bar: {keywords: '请输入标题',parentId: 0},
           relation_data: {},    #关联接口
           case_name: 搜索分类内容,
           expected: [200],  # 预期结果
@@ -605,7 +605,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introduction/introductList/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, categoryId: '', isdisplay: 0,ismobile: '' ,endDate: '',beginDate: '',keywords: '', ec_crd: 15, ec_p: 1, title: ''},
+          bar: {categoryId: '', isdisplay: 0,ismobile: '' ,endDate: '',beginDate: '',keywords: '', ec_crd: 15, ec_p: 1, title: ''},
           relation_data: {},    #关联接口
           case_name: 筛选分类内容,
           expected: [200],  # 预期结果
@@ -616,7 +616,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introduction/introductList/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, categoryId: '', isdisplay: '',ismobile: '' ,endDate: '',beginDate: '',keywords: '', ec_crd: 15, ec_p: 2, title: ''},
+          bar: {categoryId: '', isdisplay: '',ismobile: '' ,endDate: '',beginDate: '',keywords: '', ec_crd: 15, ec_p: 2, title: ''},
           relation_data: {},    #关联接口
           case_name: 翻页分类内容,
           expected: [200],  # 预期结果
@@ -660,7 +660,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introduction/updateChange',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, id: '', cateid: ''},
+          bar: {id: '', cateid: ''},
           relation_data: {},    #关联接口
           case_name: 转移分类,
           expected: [200],  # 预期结果
@@ -682,7 +682,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introduction/updateBatchData/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, ids: [1,5],values: 4, column: categoryId},
+          bar: {ids: [1,5],values: 4, column: categoryId},
           relation_data: {},    #关联接口
           case_name: 批量转移分类内容,
           expected: [200],  # 预期结果
@@ -693,7 +693,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introduction/updateBatchData/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, ids: [28,29],values: 1, column: isdisplay},
+          bar: {ids: [28,29],values: 1, column: isdisplay},
           relation_data: {},    #关联接口
           case_name: 批量隐藏电脑版,
           expected: [200],  # 预期结果
@@ -704,7 +704,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introduction/updateBatchData/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, ids: [28,29],values: 0, column: isdisplay},
+          bar: {ids: [28,29],values: 0, column: isdisplay},
           relation_data: {},    #关联接口
           case_name: 批量显示电脑版,
           expected: [200],  # 预期结果
@@ -759,7 +759,7 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/introcate/treeDateList/',
           level: 中,
           author: 宋宇,
-          bar: {viewType: 1, tenantId: 188078, node: root},
+          bar: {node: root},
           relation_data: {},    #关联接口
           case_name: 跳转分类管理页,
           expected: [200],  # 预期结果
