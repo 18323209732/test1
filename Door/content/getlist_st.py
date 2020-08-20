@@ -121,7 +121,7 @@ class getlist_content(MyTest):
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test_del_content(self):
+    def test_zdel_content(self):
         # 删除分类内容
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         self.headers["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8"  # 修改头部请求方式
