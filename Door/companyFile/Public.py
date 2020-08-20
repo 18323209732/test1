@@ -27,7 +27,7 @@ def readyaml(file=None, key=None):
 
     try:
         with open(path, 'r', encoding='utf-8') as f:
-            yaml.warnings({'YAMLLoadWarning': False})
+            # yaml.warnings({'YAMLLoadWarning': False})
             value = yaml.load(f.read(), Loader=yaml.Loader)[key]
         return value
     except:
@@ -43,7 +43,7 @@ def readyaml_case(key=None):
 
     try:
         with open(path, 'r', encoding='utf-8') as f:
-            yaml.warnings({'YAMLLoadWarning': False})
+            # yaml.warnings({'YAMLLoadWarning': False})
             # value = yaml.load(f.read(), Loader=yaml.Loader)[key]
             value = yaml.load(f.read())['Door']['listShowcase'][0]['funName'][0]['test03_keywords_listShowcase']['url']
 
@@ -62,7 +62,7 @@ def writeyaml(w_key=None, w_value=None, n=None, file=None):
     with open(path, n, encoding="utf-8") as yaml_file:
         data = {w_key: w_value}
         if int(yaml.__version__[0]) >= 5:
-            yaml.warnings({'YAMLLoadWarning': False})
+            # yaml.warnings({'YAMLLoadWarning': False})
             yaml.dump(data, yaml_file, allow_unicode=True)
         else:
             yaml.dump(data, yaml_file, Dumper=RoundTripDumper, allow_unicode=True)
@@ -72,7 +72,7 @@ def readconfig_yaml(basekey='base_url', key='Door'):
     path = Any_Path("Config", "Config.yaml")
     # print(path)
     with open(path, 'r', encoding='utf-8') as f:
-        yaml.warnings({'YAMLLoadWarning': False})
+        # yaml.warnings({'YAMLLoadWarning': False})
         value = yaml.load(f.read(), Loader=yaml.Loader)[basekey][key]
     return value
 
