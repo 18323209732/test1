@@ -1,8 +1,8 @@
 add_customer:
 - bar: {}
   url: /add/customerParam
-content: {addid1: '10', addid2: '9', id: 4, id1: 9, id10: 124, id11: 127, id12: 126,
-  id13: 129, id14: 128, id15: 130, id2: 10, id3: 3, id4: 7, id5: 8, id6: 121, id7: 122,
-  id8: 123, id9: 125, title: "\u63A5\u53E3\u65B0\u589E\u5185\u5BB91597895472"}
+content: {addid1: '37', addid2: '36', id: 4, id1: 15, id10: 124, id11: 127, id12: 126,
+  id13: 129, id14: 128, id15: 130, id2: 24, id3: 36, id4: 37, id5: 8, id6: 121, id7: 122,
+  id8: 123, id9: 125, title: "\u63A5\u53E3\u7F16\u8F91\u5185\u5BB915977478"}
 product: {id1: 32, id10: 21, id11: 20, id12: 22, id13: 17, id14: 7, id15: 5, id2: 31,
   id3: 30, id4: 29, id5: 28, id6: 26, id7: 25, id8: 24, id9: 23}

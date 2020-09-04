@@ -59,13 +59,90 @@ Door:
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
           }
-          test_add_newcustomer: {  # 添加客户
+          test_add_newcustomer: {  # 添加企业客户
           url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/save,
           level: 中,   #级别
           author: 方坤,  #作者
           bar: {"businessname": "我的手动创建5","groupId": 4,"sex": 1},
           test_data: {},
-          case_name: 添加客户,
+          case_name: 添加企业客户,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_screen_customer: {  # 客户管理-客户分组筛选客户
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/list,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"groupId":4,"customerType":0,"queryType":4,"endDate":,"startDate":,"wd":,"ec_p":1,"ec_crd":15,"dataType":0},
+          test_data: {},
+          case_name: 客户管理-客户分组筛选客户,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_add_percustomer: {  # 客户管理-添加个人客户
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/save,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"name": "我的个人客户1","sex": 1,"customerType": 2,"groupId": 4},
+          test_data: {},
+          case_name: 客户管理-添加个人客户,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_screen_percustomer: {  # 客户管理-客户类型(个人客户)筛选客户
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/list,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"groupId":0,"customerType":2,"queryType":4,"endDate":,"startDate":,"wd":,"ec_p":1,"ec_crd":15,"dataType":0},
+          test_data: {},
+          case_name: 客户管理-客户类型(个人客户)筛选客户,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_screen_entcustomer: {  # 客户管理-客户类型(企业客户)筛选客户
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/list,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"groupId":0,"customerType":1,"queryType":4,"endDate":,"startDate":,"wd":,"ec_p":1,"ec_crd":15,"dataType":0},
+          test_data: {},
+          case_name: 客户管理-客户类型(企业客户)筛选客户,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_data_screen_customer: {  # 客户管理-注册日期筛选客户
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/list,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"groupId":0,"customerType":0,"queryType":4,"endDate": 2020-09-04,"startDate": 2020-09-01,"wd":,"ec_p":1,"ec_crd":15,"dataType":0},
+          test_data: {},
+          case_name: 客户管理-注册日期筛选客户,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_input_customer: {  # 客户管理-在搜索框中输入内容
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/findTips,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"groupId":0,"customerType":0,"queryType":4,"endDate":,"startDate":,"wd":,"dataType":0,"keywords": 2},
+          test_data: {},
+          case_name: 客户管理-在搜索框中输入内容,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_name_sort_customer: {  # 客户管理-表头名称排序
+          url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/findTips,
+          level: 中,   #级别
+          author: 方坤,  #作者
+          bar: {"groupId":0,"customerType":0,"queryType":4,"endDate":,"startDate":,"wd": 2,"ec_p": 1,"ec_crd": 15,"dataType":0,"ec_cp": 1,"ec_s_name": desc},
+          test_data: {},
+          case_name: 客户管理-表头名称排序,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
