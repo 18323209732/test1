@@ -274,7 +274,7 @@ class customer_customer_manage(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
