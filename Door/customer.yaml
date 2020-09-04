@@ -136,7 +136,7 @@ Door:
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
           }
-          test_name_sort_customer: {  # 客户管理-表头名称排序
+          test_name_sort_customer: {  #客户管理-表头名称排序
           url: /manager/gwforward/manager-webapi/interaction/manager/newcustomer/findTips,
           level: 中,   #级别
           author: 方坤,  #作者
