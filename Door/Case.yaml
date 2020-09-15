@@ -3059,7 +3059,7 @@ Door:
           url: /manager/gwforward/manager-webapi/content/companyFileCategory/updateCateStatus,
           level: 中,
           author: 姜娜,
-          bar: [{'cateId': 1, 'status': 0}, {'cateId': 1, 'status': 1}],
+          bar: {'cateId': 1, 'status': 0},
           relation_data: {},    #关联接口
           case_name: 企业下载分类隐藏电脑版链接分类,
           expected: [200],  # 预期结果
