@@ -35,7 +35,7 @@ def imgdata(src):
 
 class Design:
     def __init__(self):
-        self.Des_url = ConfigYaml('Design_web').base_url
+        self.Des_url = ConfigYaml('website').base_config
         self.url = ConfigYaml('Door').base_url
         self.base_url = ConfigYaml('design_web').base_config  # 设计器地址
         self.user_pwd = ConfigYaml('design_pwd').base_config
@@ -260,7 +260,7 @@ class Design:
 
 
 if __name__ == '__main__':
-    Design().add_intention()
+    Design().login()
     # path = Route.Any_Path("Img", "imagedata.jpg")
     # print(path)
 
