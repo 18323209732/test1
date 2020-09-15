@@ -1,7 +1,6 @@
 base_url:
   Design: https://new-console.300.cn                  #会员中心地址
   Door: https://2007225007-site.pool202.yun300.cn/     #https://2004105022-site.pool5.yun300.cn # 正式环境
-  Design_web: 2007225007.pool202-site.yun300.cn
 base_config:
   tenant_key: tenantId
   tenant_value: 205217
