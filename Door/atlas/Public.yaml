@@ -46,3 +46,5 @@ file_upload:
 picture_url:
   url: "/manager/gwforward/dssresources/imageRepository/findByPagination"
   bar: {}
+
+

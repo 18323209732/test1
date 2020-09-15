@@ -30,3 +30,7 @@ get_application:
 file_upload:
   url: "/manager/gwforward/dssresources/imageRepository/imageFileUpload"
   bar: {appId: 0}
+
+add_link_class:
+  url: "/manager/gwforward/manager-webapi/content/infoCategory/saveInfoCategory"
+  bar: {"id":"","parentId":"","parentName":"","name":"12","imgUrl":"/repository/image/732c3097-cc2a-413d-ac2f-ede8fc7d91f1.jpg","imgId":3,"imgThumbUrl":"/repository/image/732c3097-cc2a-413d-ac2f-ede8fc7d91f1.jpg","type":"2","des":"<p>3</p>\n","mobileDes":"<p>3</p>\n","summary":"","keywords":"","targetType":"true","linkUrl":"http://www.baidu.com","mobileTargetType":"true","mobileLinkUrl":"http://www.baidu.com","showFlag":true,"mobileShowFlag":true,"newOpen":"true","showStyle":"","detailStyle":"","configValue":"","seoState":true,"seoTitle":[{"id":"categoryName","name":"资讯分类名称"},{"id":"oneCategoryName","name":"资讯分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoTitleSign":"_","seoKeywords":[{"id":"categoryKeyword","name":"资讯分类关键词"},{"id":"siteName","name":"网站名称"}],"seoKeywordsSign":",","seoDescription":[{"id":"categoryName","name":"资讯分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"资讯分类描述"}],"seoDescriptionSign":"-","mobileNewOpen":"true","mobileShowStyle":"","mobileDetailStyle":"","authType":1,"authStr":"GW_:3:category:view:","roleIds":"","authData":[{"authType":1,"authStr":"GW_:3:category:view:","roleIds":""}]}

@@ -168,7 +168,81 @@ class Public_Data:
             except StopIteration:
                 pass
 
-# if __name__ == "__main__":
-#     # print(Public_Data().add_news())
-#     pass
+
+    def get_news_ids(self):
+        '''
+        获取新闻id
+        :return:
+        '''
+
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.public_data = ReadPublic(catalog='news', key="get_news")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
+        url = self.url + url
+        data = self.public_data.public_value("bar")
+        r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+        result = r.json()
+        if result.get("data").get("pres"):
+            return result.get("data").get("pres")
+        else:
+            self.add_news()
+            r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+            result = r.json()
+            if result.get("data").get("pres"):
+                return result.get("data").get("pres")
+            else:
+                return False
+
+    def get_class_ids(self):
+        '''
+        获取新闻id
+        :return:
+        '''
+
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.public_data = ReadPublic(catalog='news', key="get_news_class")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
+        url = self.url + url
+        data = self.public_data.public_value("bar")
+        r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+        result = r.json()
+        if result.get("data").get("data"):
+            return result.get("data").get("data")
+        else:
+            self.add_classnews()
+            r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+            result = r.json()
+            if result.get("data").get("data"):
+                return result.get("data").get("data")
+            else:
+                return False
+
+    def get_picture_ids(self):
+        '''
+        获取新闻id
+        :return:
+        '''
+
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.public_data = ReadPublic(catalog='news', key="get_picture")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
+        url = self.url + url
+        data = self.public_data.public_value("bar")
+        r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+        result = r.json()
+
+        if result.get("data").get("list"):
+            return result.get("data").get("list")
+        else:
+            self.file_upload()
+            r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+            result = r.json()
+            if result.get("data").get("list"):
+                return result.get("data").get("list")
+            else:
+                return False
+
+if __name__ == "__main__":
+    Public_Data().get_picture_ids()
+
 #
