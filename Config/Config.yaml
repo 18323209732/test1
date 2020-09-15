@@ -1,6 +1,7 @@
 base_url:
   Design: https://new-console.300.cn                  #会员中心地址
-  Door: https://2007225007-site.pool202.yun300.cn       #https://2004105022-site.pool5.yun300.cn # 正式环境
+  Door: https://2007225007-site.pool202.yun300.cn/     #https://2004105022-site.pool5.yun300.cn # 正式环境
+  Design_web: 2007225007-site.pool202.yun300.cn
 base_config:
   tenant_key: tenantId
   tenant_value: 205217
@@ -16,6 +17,9 @@ base_config:
   user_name: CEM10097239                      #登录名称
   user_pwd: zok9phwv6n                                  #密码
   website: www.wholetest.euzhongtec.com                      #网站 2004105022.pool5-site.make.yun300.cn
+  design_web: http://design.yun300.cn/html/login.html    # 设计器地址
+  design_username: zhanghailong            # 设计器账号
+  design_pwd: v4                           # 设计器密码
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
   steam_handler: false                          #控制台输入日志 Fasle：不输入
@@ -46,7 +50,7 @@ base_config:
   host: localhost                                 #数据库主机ip
   port: 3306                                          #主机sql端口
   sqlname: response                                  #数据库名称
-  pwd: '123456'                                         #数据库连接密码
+  pwd: 'jn123000'                                         #数据库连接密码
   user: root                                  #数据库连接用户
   redisip: 192.168.4.36                       #redis服务ip
   redisport: 6379                             #redis服务端口
@@ -81,8 +85,8 @@ email:
   title: 门户接口自动化测试报告  # 邮件标题
   desc: 用例执行情况       #邮件描述
   smtp_sever: smtp.gouuse.cn # 邮箱smtp服务 如 smtp.163.com
-  send_person: fangkun@gouuse.cn    #邮件发送者邮箱
-  send_pwd: Ff905202467  # 邮件发送者邮箱密码
+  send_person: chenjianbo@gouuse.cn    #邮件发送者邮箱
+  send_pwd: Cjbwt0107  # 邮件发送者邮箱密码
   receive_person: [chenjianbo@300.cn,songyu@gouuse.cn,jiangna@gouuse.cn,fangkun@gouuse.cn]  #songyu@gouuse.cn,jiangna@gouuse.cn,fangkun@gouuse.cn    #邮件接收者
 sql:
   create_table: CREATE TABLE IF NOT EXISTS response(id INTEGER primary key NOT NULL AUTO_INCREMENT,funname varchar (100),describes varchar(1000),priority varchar(50),address varchar(1000),result varchar(30), writer varchar(30),usetime float ,summary nvarchar(10000));
