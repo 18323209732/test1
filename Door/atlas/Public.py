@@ -17,11 +17,9 @@ from Common.Route import Any_Path
 
 projectName = ConfigYaml("projectName").base_config
 from Common.ReExecution import ReExecution
-from Door.picture.Public import Public_Data as picture
 
-
-picture_pd = picture()
-picture_ids = picture_pd.get_picture_ids()
+from Door.news.infoes_st import picture_ids, news_ids , my_data
+from Door.news.infoes_st import news_ids as class_ids
 
 picture_data = type("picture_data", (object,), {})
 setattr(picture_data, "picture_ids", picture_ids)
@@ -55,7 +53,7 @@ class Public_Data:
         data = self.public_data.public_value("bar")
 
         if not picture_data.picture_ids:
-            picture_data.picture_ids = picture_pd.get_picture_ids()
+            picture_data.picture_ids = my_data.get_picture_ids()
             value = choice(picture_data.picture_ids)
         else:
             value = choice(picture_data.picture_ids)
@@ -117,7 +115,7 @@ class Public_Data:
         data = self.public_data.public_value("bar")
 
         if not picture_data.picture_ids:
-            picture_data.picture_ids = picture_pd.get_picture_ids()
+            picture_data.picture_ids = my_data.get_picture_ids()
             value = choice(picture_data.picture_ids)
         else:
             value = choice(picture_data.picture_ids)
@@ -225,7 +223,7 @@ class Public_Data:
 
         data = self.public_data.public_value("bar")
         if not picture_data.picture_ids:
-            picture_data.picture_ids = picture_pd.get_picture_ids()
+            picture_data.picture_ids = my_data.get_picture_ids()
             img_url = choice(picture_data.picture_ids).get("imgUrl")
         else:
             img_url = choice(picture_data.picture_ids).get("imgUrl")
@@ -319,8 +317,10 @@ class Public_Data:
 
 
 class_pd = Public_Data()
-class_ids = class_pd.get_news_class()
-get_class = class_pd.get_class()
+try:
+    get_class = class_pd.get_class()
+except:
+    get_class = []
 class_data = type("class_data", (object,), {})
 setattr(class_data, "class_ids", class_ids)
 setattr(class_data, "get_class", get_class)

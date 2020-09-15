@@ -16,8 +16,14 @@ from Common.ReExecution import Get_Cls_Fun
 from Common.Route import Any_Path
 from Door.filelibrary.Public import Public_Data as pd
 my_data = pd()
-class_ids = my_data.get_class_list()
-file_ids = my_data.get_file_list()
+try:
+    class_ids = my_data.get_class_list()
+except:
+    class_ids = []
+try:
+    file_ids = my_data.get_file_list()
+except:
+    file_ids = []
 
 
 pb_data = type("pb_data", (object,), {})

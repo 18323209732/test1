@@ -9,16 +9,11 @@ from Common.MyUnit import MyTest
 from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
-
-from Door.newsclass.Public import Public_Data as pd
-
+from Door.news.infoes_st import pb_data
+from Door.news.Public import Public_Data as pd
+from Door.newsclass.Public import Public_Data as curr
+curr = curr()
 my_data = pd()
-picture_ids = my_data.get_picture_ids()
-class_ids = my_data.get_class_ids()
-
-pb_data = type("pb_data", (object,), {})
-setattr(pb_data, "picture_ids", picture_ids)
-setattr(pb_data, "class_ids", class_ids)
 
 
 class newsmanage_newsclass(MyTest):
@@ -188,8 +183,8 @@ class newsmanage_newsclass(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            toCateId = choice(pd().get_move_ids())
-            cateId = choice(pd().get_move_ids(swich=False))
+            toCateId = choice(curr.get_move_ids())
+            cateId = choice(curr.get_move_ids(swich=False))
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&toCateId={toCateId}&cateId={cateId}"
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -285,8 +280,8 @@ class newsmanage_newsclass(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            targetId = choice(pd().get_move_ids())
-            cateId = choice(pd().get_move_ids(swich=False))
+            targetId = choice(curr.get_move_ids())
+            cateId = choice(curr.get_move_ids(swich=False))
             targetPos = choice(['before', 'below'])
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&cateId={cateId}&targetId={targetId}&targetPos={targetPos}"

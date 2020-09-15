@@ -13,11 +13,17 @@ from Common.DataHandle import ReRun
 import urllib3
 from ddt import ddt, data,file_data
 from Common.ReExecution import Get_Cls_Fun
+from Door.news.infoes_st import picture_ids
 from Door.position.Public import Public_Data as pd
 my_data = pd()
-department_ids = my_data.get_department_ids()
-position_ids = my_data.get_position_ids()
-picture_ids = my_data.get_picture_ids()
+try:
+    department_ids = my_data.get_department_ids()
+except:
+    department_ids = []
+try:
+    position_ids = my_data.get_position_ids()
+except:
+    position_ids = []
 
 pb_data = type("pb_data", (object,), {})
 setattr(pb_data, "department_ids", department_ids)

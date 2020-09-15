@@ -1,7 +1,7 @@
 add_customer:
 - bar: {}
   url: /add/customerParam
-banner: {addid: 30, banner_number: 25, content_id: 37, content_number: 3, id1: 30,
-  id10: 16, id11: 15, id12: 14, id13: 13, id14: 12, id15: 11, id2: 24, id3: 23, id4: 22,
-  id5: 21, id6: 20, id7: 19, id8: 18, id9: 17, name: "\u63A5\u53E3\u65B0\u589E1598318440"}
-img: {imageId: 125, imageurl: /repository/image/68b10e28-2911-4b60-ba7b-f4196f8d4dda.jpg}
+banner: {addid: 12, banner_number: 11, content_id: 37, content_number: 3, id1: 12,
+  id10: 3, id11: 2, id12: 18, id13: 17, id14: 16, id15: 15, id2: 11, id3: 10, id4: 9,
+  id5: 8, id6: 7, id7: 6, id8: 5, id9: 4, name: "\u63A5\u53E3\u65B0\u589E1600157937"}
+img: {imageId: 135, imageurl: /repository/image/06ae48ad-82fd-4eca-b671-1ea7b836349b.jpg}

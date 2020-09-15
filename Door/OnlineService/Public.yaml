@@ -3,83 +3,34 @@ add_customer:
   url: /add/customerParam
 data:
   list:
-  - id: 32
-    name: "\u65B0\u589E\u7EC4454"
-    sequence: 32
+  - id: 5
+    name: "\u65B0\u589E\u7EC4967"
+    sequence: 5
     staff:
-    - {account: '13213213131', groupId: 32, id: 21, imageId: 0, name: "\u5BA2\u670D\
-        468", sequence: 21, status: true, type: 1, typeText: QQ}
-  - id: 31
-    name: "\u65B0\u589E\u7EC4454"
-    sequence: 31
+    - {account: '13213213131', groupId: 5, id: 2, imageId: 0, name: "\u5BA2\u670D\
+        992", sequence: 2, status: true, type: 1, typeText: QQ}
+  - id: 4
+    name: "\u65B0\u589E\u7EC4966"
+    sequence: 4
     staff: []
-  - id: 30
-    name: "\u7F16\u8F91\u7EC4666"
-    sequence: 30
+  - id: 3
+    name: "\u7F16\u8F91\u7EC4556"
+    sequence: 3
     staff:
-    - {account: '13213213131', groupId: 30, id: 20, imageId: 0, name: "\u5BA2\u670D\
-        661", sequence: 20, status: true, type: 1, typeText: QQ}
-  - id: 29
-    name: "\u65B0\u589E\u7EC4653"
-    sequence: 29
-    staff: []
-  - id: 18
-    name: "\u65B0\u589E\u7EC4324"
-    sequence: 18
-    staff: []
-  - id: 17
-    name: "\u65B0\u589E\u7EC4323"
-    sequence: 17
-    staff: []
-  - id: 16
-    name: "\u65B0\u589E\u7EC4541"
-    sequence: 16
-    staff: []
-  - id: 15
-    name: "\u65B0\u589E\u7EC4539"
-    sequence: 15
-    staff: []
-  - id: 12
-    name: "\u65B0\u589E\u7EC4802"
-    sequence: 12
-    staff: []
-  - id: 11
-    name: "\u65B0\u589E\u7EC4801"
-    sequence: 11
-    staff: []
-  - id: 10
-    name: "\u65B0\u589E\u7EC4863"
-    sequence: 10
-    staff: []
-  - id: 9
-    name: "\u65B0\u589E\u7EC4862"
-    sequence: 9
-    staff: []
+    - {account: '13213213131', groupId: 3, id: 1, imageId: 0, name: "\u7F16\u8F91\u5BA2\
+        \u670D565", sequence: 5, status: true, type: 1, typeText: QQ}
   - id: 2
-    name: '111'
+    name: "\u65B0\u589E\u7EC4506"
     sequence: 2
-    staff:
-    - {account: '6666666666', groupId: 2, id: 6, imageId: 0, name: '6666', sequence: 6,
-      status: true, type: 1, typeText: QQ}
-    - {account: '5555555555555', groupId: 2, id: 5, imageId: 0, name: '55555', sequence: 5,
-      status: true, type: 5, typeText: "\u963F\u91CC\u65FA\u65FAE\u5BA2\u670D"}
-    - {account: '44444444444', groupId: 2, id: 4, imageId: 0, name: '444444', sequence: 4,
-      status: true, type: 4, typeText: Skype}
-    - {account: '3333333333333', groupId: 2, id: 3, imageId: 0, name: '3333333', sequence: 3,
-      status: true, type: 2, typeText: "\u963F\u91CC\u65FA\u65FA"}
-    - {account: '222222222222222', groupId: 2, id: 2, imageId: 0, name: '22222222',
-      sequence: 2, status: true, type: 3, typeText: "\u963F\u91CC\u65FA\u65FAE\u5BA2\
-        \u670D"}
-    - {account: '11111111111', groupId: 2, id: 1, imageId: 0, name: '1111', sequence: 1,
-      status: true, type: 1, typeText: QQ}
+    staff: []
   - id: 1
     name: "\u5728\u7EBF\u5BA2\u670D"
     sequence: 1
     staff: []
-group: {id1: 32, id10: 11, id11: 10, id12: 9, id13: 2, id14: 1, id2: 31, id3: 30,
-  id4: 29, id5: 18, id6: 17, id7: 16, id8: 15, id9: 12}
+group: {id1: 5, id10: 11, id11: 10, id12: 9, id13: 2, id14: 1, id2: 4, id3: 3, id4: 2,
+  id5: 1, id6: 17, id7: 16, id8: 15, id9: 12}
 service:
-  id1: [21]
+  id1: [2]
   id13: [6, 5, 4, 3, 2, 1]
-  id3: [20]
-  id4: [7, 2]
+  id3: [1]
+  id4: [3]

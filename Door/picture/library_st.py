@@ -11,10 +11,13 @@ from Common.DataHandle import ReRun
 import urllib3
 from random import choice
 from Door.picture.Public import Public_Data as pd
+from Door.news.infoes_st import picture_ids
 from Common.Route import Any_Path
 my_data = pd()
-picture_ids = my_data.get_picture_ids()
-class_ids = my_data.get_class_ids()
+try:
+    class_ids = my_data.get_class_ids()
+except:
+    class_ids = []
 
 pb_data = type("pb_data", (object,), {})
 setattr(pb_data, "picture_ids", picture_ids)

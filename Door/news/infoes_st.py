@@ -12,9 +12,18 @@ from Door.news.Public import Public_Data as pd
 from Common.CusMethod import get_data_time, random_char, thead_sort, random_str, show_sort, get_hour_second
 
 my_data = pd()
-news_ids = my_data.get_news_ids()
-picture_ids = my_data.get_picture_ids()
-class_ids = my_data.get_class_ids()
+try:
+    news_ids = my_data.get_news_ids()
+except:
+    news_ids = []
+try:
+    picture_ids = my_data.get_picture_ids()
+except:
+    picture_ids = []
+try:
+    class_ids = my_data.get_class_ids()
+except:
+    class_ids = []
 
 pb_data = type("pb_data", (object,), {})
 setattr(pb_data, "news_ids",news_ids)
@@ -63,8 +72,8 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
             return self.singular
-        
-    
+
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_search_news(self):
@@ -739,7 +748,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_add_news(self):
@@ -770,7 +779,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_addpicture_news(self):
@@ -811,7 +820,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_addlink_news(self):
@@ -830,7 +839,7 @@ class infoes_news(MyTest):
                 id = choice(pb_data.class_ids).get("id")
             else:
                 id = choice(pb_data.class_ids).get("id")
-            
+
             self.data['infotype'] = id
             self.data['cateGoryIds'] = id
             self.data['title'] = random_str("自动化新增图片新闻资讯")
@@ -847,7 +856,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_getkeywords_news(self):
@@ -864,7 +873,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_addcategor_news(self):
@@ -884,7 +893,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_timing_news(self):
@@ -909,7 +918,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_brelevant_news(self):
@@ -942,7 +951,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_extension_news(self):
@@ -974,7 +983,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_senior_news(self):
@@ -996,7 +1005,7 @@ class infoes_news(MyTest):
             self.data['source'] = random_str("自动化测试来源...")
             self.data['pubDate'] = get_hour_second(2)
             self.data['seoAddDescription'] = random_str("高级设置描述...")
-                
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -1006,7 +1015,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_cmuchpicture_news(self):
@@ -1056,7 +1065,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_aselect_news(self):

@@ -15,15 +15,20 @@ from ddt import ddt, data,file_data
 from Common.ReExecution import Get_Cls_Fun
 from Common.Route import Any_Path
 from Door.atlas.Public import Public_Data as curre
+from Door.news.infoes_st import picture_ids, news_ids
+
 my_data = curre()
-atlas_ids = my_data.get_atlas()
-class_ids = my_data.get_class()
-picture_ids = my_data.get_pictures()
-news_class = my_data.get_news_class()
-news_ids = my_data.get_news_id()
+try:
+    atlas_ids = my_data.get_atlas()
+except:
+    atlas_ids = []
+try:
+    class_ids = my_data.get_class()
+except:
+    class_ids = []
 
 pb_data = type("pb_data", (object,), {})
-setattr(pb_data, "news_ids",news_ids)
+setattr(pb_data, "news_ids", news_ids)
 setattr(pb_data, "picture_ids", picture_ids)
 setattr(pb_data, "class_ids", class_ids)
 setattr(pb_data, "atlas_ids", atlas_ids)

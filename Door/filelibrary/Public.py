@@ -17,8 +17,6 @@ from Common.Route import Any_Path
 
 projectName = ConfigYaml("projectName").base_config
 from Common.ReExecution import ReExecution
-from Door.picture.Public import Public_Data as picture
-from Door.news.Public import Public_Data as pub_news
 
 
 class Public_Data:
@@ -176,6 +174,6 @@ class Public_Data:
                 return False
 
 
-if __name__=="__main__":
-    print(Public_Data().get_file_list())
+# if __name__=="__main__":
+    # print(Public_Data().get_file_list())
     # pass
