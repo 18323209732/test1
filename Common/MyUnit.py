@@ -112,20 +112,43 @@ class MyTest(TestCase):
 
     def tearDown(self):
         try:
-            self.actual = Matching("status",self.result)
+            self.actual = Matching("status", self.result)
+
         except Exception:
             self.actual = 'None'
-        try:
-            self.msg = Matching("msg",self.result)
-        except:
-            self.msg = 'None'
-        try:
-            Assertion(self.result, self.assertEqual, actualone="status",
-                      expectone=self.expected[0],
-                      ).datahandle()
-        except:
-            self.abnormal = str(traceback.format_exc())
-            outcome('red',self.abnormal)
+
+        if self.actual is None:
+            try:
+                self.actual = Matching("code", self.result)
+            except Exception:
+                self.actual = 'None'
+
+            try:
+                self.msg = Matching("msg", self.result)
+            except:
+                self.msg = 'None'
+
+            try:
+                Assertion(self.result, self.assertEqual, actualone="code",
+                          expectone=self.expected[0],
+                          ).datahandle()
+            except:
+                self.abnormal = str(traceback.format_exc())
+                outcome('red', self.abnormal)
+
+        else:
+            try:
+                self.msg = Matching("msg", self.result)
+            except:
+                self.msg = 'None'
+
+            try:
+                Assertion(self.result, self.assertEqual, actualone="status",
+                          expectone=self.expected[0],
+                          ).datahandle()
+            except:
+                self.abnormal = str(traceback.format_exc())
+                outcome('red', self.abnormal)
         resonse = results(
             expected=self.expected[0],
             actual=self.actual,
