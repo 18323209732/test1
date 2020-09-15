@@ -240,18 +240,20 @@ class Design:
             self._click("*", "class", "btn btn-primary submitPC p_submit", 1)
             if self.driver.find_element_by_xpath(
                     "(//*[@class='text-error color_error h6'])"):
-                while True:
-                    self._click("*", "class", "(//*[@class='e_image col-sm-2 p_imageB'])[1]/*",1)
+                while 1 < 2:
+                    self.driver.find_element_by_xpath(
+                        "(//*[@class='e_image col-sm-2 p_imageB'])[1]/*").click()
+                    sleep(1)
                     src = self.driver.find_element_by_xpath(
                         "(//*[@class='e_image col-sm-2 p_imageB'])[1]/*").get_attribute('src')
                     result = imgdata(src)
-                    # print(result)
                     self._send_keys("*", "class", "form-control InputText", 1, data=result)
+                    sleep(0.5)
                     self._click("*", "class", "btn btn-primary submitPC p_submit", 1)
-                    sleep(2)
-
+                    sleep(0.5)
                     if self.driver.find_element_by_xpath(
                             "(//*[@class='text-error color_error h6'])"):
+                        sleep(0.5)
                         continue
                     else:
                         break
@@ -260,7 +262,7 @@ class Design:
 
 
 if __name__ == '__main__':
-    Design().login()
+    Design().add_intention()
     # path = Route.Any_Path("Img", "imagedata.jpg")
     # print(path)
 
