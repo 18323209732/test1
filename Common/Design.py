@@ -22,7 +22,7 @@ def imgdata(src):
     image = src.replace('data:image/JPEG;base64,', '')
     imgdata = base64.b64decode(image)
     path = Route.Any_Path("Img", "imagedata.jpg")
-    print(path)
+    # print(path)
     fp = open(path, 'wb')  # 'wb'表示写二进制文件
     fp.write(imgdata)
     fp.close()
@@ -235,7 +235,7 @@ class Design:
             src = self.driver.find_element_by_xpath(
                 "(//*[@class='e_image col-sm-2 p_imageB'])[1]/*").get_attribute('src')
             result = imgdata(src)
-            print(result)
+            # print(result)
             self._send_keys("*", "class", "form-control InputText", 1, data=result)
             self._click("*", "class", "btn btn-primary submitPC p_submit", 1)
             if self.driver.find_element_by_xpath(
@@ -245,7 +245,7 @@ class Design:
                     src = self.driver.find_element_by_xpath(
                         "(//*[@class='e_image col-sm-2 p_imageB'])[1]/*").get_attribute('src')
                     result = imgdata(src)
-                    print(result)
+                    # print(result)
                     self._send_keys("*", "class", "form-control InputText", 1, data=result)
                     self._click("*", "class", "btn btn-primary submitPC p_submit", 1)
                     sleep(2)
