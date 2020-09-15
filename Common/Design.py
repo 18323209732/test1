@@ -13,6 +13,7 @@ import json
 import base64
 import tesserocr   # 用于图片转文字
 from PIL import Image
+from Common import Route
 projectName = ConfigYaml("projectName").base_config
 Url = ConfigYaml(projectName).base_url
 
@@ -20,12 +21,13 @@ Url = ConfigYaml(projectName).base_url
 def imgdata(src):
     image = src.replace('data:image/JPEG;base64,', '')
     imgdata = base64.b64decode(image)
-    fp = open('imagedata.jpg', 'wb')  # 'wb'表示写二进制文件
+    path = Route.Any_Path("Img", "imagedata.jpg")
+    print(path)
+    fp = open(path, 'wb')  # 'wb'表示写二进制文件
     fp.write(imgdata)
     fp.close()
 
-    image = 'imagedata.jpg'
-    image = Image.open(image)  # 传入你所保存的图片路径
+    image = Image.open(path)  # 传入你所保存的图片路径
     result = tesserocr.image_to_text(image)[0:5]
     
     return result
@@ -258,5 +260,7 @@ class Design:
 
 
 if __name__ == '__main__':
-    Design().add_enquiry()
+    Design().add_intention()
+    # path = Route.Any_Path("Img", "imagedata.jpg")
+    # print(path)
 
