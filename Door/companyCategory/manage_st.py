@@ -239,23 +239,3 @@ class manage_companyCategory(MyTest):
 
         
 
-
-    # @unittest.skipIf(condition, "暂时跳过")
-    @ReRun(MyTest.setUp)
-    def test12_update_CateStatus(self, case):
-        # 隐藏电脑版链接分类
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        try:
-            if self.type_condition:
-                self.headers[self.type] = self.form_type
-
-            url = ConfigYaml(self.projectName).base_url + self.url
-            r = requests.post(url, headers=self.headers, data=case, stream=True, verify=False)
-            self.result = r.json()
-
-            self.time = r.elapsed.total_seconds()
-        except:
-            self.singular = str(traceback.format_exc())
-            outcome('red', self.singular)
-            return self.singular
-        
