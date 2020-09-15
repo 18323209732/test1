@@ -269,7 +269,7 @@ Door:
           author: 姜娜,
           bar:{"category":{"id":"","ismobile":0,"status":0,"isSearch":0,"sequence":"","imageId":"","imageurl":"","parentId":"","addPId":"","addPname":"","editPId":"","eidtPname":"","categoryType":"0","windowtype":1,"mobileWindowType":1,"styleCategoryListId":"","styleProductDetailId":"","gototype":0,"defTabStyle":"","defDetailStyle":"","mobileStyleCategoryListId":"","mobileStyleProductDetailId":"","defTabStyleM":"","defDetailStyleM":"","appId":2,"categoryName":"测试分类2","linkurl":"","mobileLinkUrl":""},"choiceUrl":"","choiceUrlM":"","destype":0,"description":"","content":"","mobileContent":"","descriptionS":"","seoState":1,"hidTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"hidKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"hidDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"hidTitleSign":"_","hidKeywordsSign":",","hidDescriptionSign":"-","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"oneCategoryName","name":"产品基本分类一级分类名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"categoryKeyword","name":"产品基本分类关键词"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"categoryName","name":"产品基本分类名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"产品基本分类描述"}],"authData":[{"authType":1,"authStr":"GW_:2:category:view:","roleIds":""}],"authStr":"GW_:2:category:view:","authType":1,"roleIds":""},
           relation_data: {},    #关联接口
-          case_name: 添加产品分类,
+          case_name: 产品管理添加产品分类,
           expected: [200],  # 预期结果，接口返回正常
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -280,7 +280,7 @@ Door:
           author: 姜娜,
           bar:{},
           relation_data: {},    #关联接口
-          case_name: 获取产品分类列表,
+          case_name: 产品管理获取产品分类列表,
           expected: [200],  # 预期结果，接口返回正常
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
@@ -296,7 +296,7 @@ Door:
           author: 姜娜,
           bar: {"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"我的产品001","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-17 11:41","mobilePublishTime":"2020-06-17 11:41","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"我的产品001"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[6],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
           relation_data: {},    #关联接口
-          case_name: 添加产品,
+          case_name: 产品管理添加产品,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -307,7 +307,7 @@ Door:
           author: 姜娜,
           bar: {"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"我的产品001","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-17 11:41","mobilePublishTime":"2020-06-17 11:41","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"我的产品001"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[6],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
           relation_data: {},    #关联接口
-          case_name: 添加规格值货品信息,
+          case_name: 产品管理添加规格值货品信息,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -318,7 +318,7 @@ Door:
           author: 姜娜,
           bar: {"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"我的产品001","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-17 11:41","mobilePublishTime":"2020-06-17 11:41","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"我的产品001"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[6],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
           relation_data: {},    #关联接口
-          case_name: 添加图片,
+          case_name: 产品管理添加图片,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -329,7 +329,7 @@ Door:
           author: 姜娜,
           bar:{"appId":2,"cateId":0,"showCaseId":null,"attributeId":0,"pcStatus":"null","moStatus":"null","startDate":"","endDate":"","pageSize":15,"pageNumber":1,"orderColumn":"","order_productName":"","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":"","order_pvs":""},
           relation_data: {},    #关联接口
-          case_name: 产品列表,
+          case_name: 产品管理产品列表,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -340,7 +340,7 @@ Door:
           author: 姜娜,
           bar:{"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"123312321","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-24 14:47","mobilePublishTime":"2020-06-24 14:47","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"123312321"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[{"appId":2,"contentList":[]},{"appId":3,"contentList":[1709]}],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[50],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
           relation_data: {},    #关联接口
-          case_name: 相关内容获取新闻资讯,
+          case_name: 产品管理相关内容获取新闻资讯,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -351,7 +351,7 @@ Door:
           author: 姜娜,
           bar:{},
           relation_data: {},    #关联接口
-          case_name: 优化推广,
+          case_name: 产品管理优化推广,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
@@ -362,7 +362,7 @@ Door:
           author: 姜娜,
           bar:{"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"我的产品001","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-17 11:41","mobilePublishTime":"2020-06-17 11:41","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"我的产品001"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[6],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"2","auth":"GW_:2:detail:view:","roleIds":"1"}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
           relation_data: {},    #关联接口
-          case_name: 选择橱窗,
+          case_name: 产品管理选择橱窗,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -373,7 +373,7 @@ Door:
           author: 姜娜,
           bar:{"show360ImageList":[],"operType":"add","productInformation":{"id":"","attributeTemplateId":1,"appId":2,"ismobile":0,"status":0,"productName":"我的产品001","productType":0,"productCode":"","unit":0,"weight":0,"price":0,"retailPrice":0,"stock":0,"ispublish":1,"mobileIspublish":1,"publishTime":"2020-06-17 11:41","mobilePublishTime":"2020-06-17 11:41","keyword":"","pvs":1000,"sequence":"","shortUrl":"","qrbuyUrl":"","syncQRStatus":2,"videoId":"","videoThumbnail":"","linkUrl":"","windowType":1,"mobileLinkUrl":"","mobileWindowType":1,"deliveryTime":"1","moq":1,"chargedWeight":0,"name":"我的产品001"},"productBigField":{"content":"","mobileContent":"","summary":"","mobileSummary":""},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[6],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[],"specConfigList":[],"authList":[{"authType":"2","auth":"GW_:2:detail:view:","roleIds":"1"}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":""},
           relation_data: {},    #关联接口
-          case_name: 选择标记,
+          case_name: 产品管理选择标记,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -384,7 +384,7 @@ Door:
           author: 姜娜,
           bar:{"show360ImageList":[],"operType":"edit","productInformation":{"appId":2,"attributeTemplateId":1,"chargedWeight":0,"createTime":1593424660000,"deliveryTime":"1","id":208,"isSyncQR":false,"ismobile":0,"ispublish":1,"keyword":"","linkUrl":"","mobileIspublish":1,"mobileLinkUrl":"","mobilePublishTime":"2020-06-17 11:41","mobileWindowType":"1","moq":1,"price":8000,"productCode":"","productName":"我的产品1593421928.5754907","productType":0,"publishTime":"2020-06-29 17:12","pvs":1000,"qrbuyUrl":"","retailPrice":0,"saveSelf":false,"sequence":1593424660225,"shortUrl":"5ef9bb14b98dfLWTiH4","status":0,"stock":0,"syncQRStatus":2,"unit":"0","updateTime":1593424660000,"useViewType":false,"videoThumbnail":"","weight":0,"windowType":"1","code":"","name":"我的产品1593421928.5754907"},"productBigField":{"content":"","mobileContent":"","mobileSummary":"","productId":208,"summary":"","useViewType":false},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[140],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[{"chargedWeight":0,"code":"110","createDate":1593424660000,"id":236,"isDefault":1,"moq":1,"name":"我的产品1593421928.5754907","price":0,"productId":208,"productSkuSpecs":[{"createDate":1593424660000,"id":46,"productId":208,"skuId":236,"specId":71,"specName":"尺寸","specValueId":90,"specValueName":"10寸","updateDate":1593424660000,"useViewType":false,"name":"10寸"}],"productSpecConfigs":[],"retailPrice":0,"skuId":0,"status":0,"stock":0,"templateId":8,"useViewType":false,"weight":0}],"specConfigList":[{"id":"","productId":208,"specId":71,"specValueId":90,"alias":"10寸","productSpecImgList":[]}],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":"","categoryList":[{"appId":2,"categoryName":"FK自动化修改1593423599.29857","categoryType":"0","createtime":1593360000000,"id":140,"imageurl":"","isSearch":0,"ismobile":0,"linkurl":"","location":"1","mobileLinkUrl":"","mobileStyleCategoryListId":"","mobileWindowType":"1","parentId":0,"proCount":0,"sequence":1591324635189,"status":0,"styleCategoryListId":"","updatetime":1593423600000,"useViewType":false,"windowtype":"1"}]},
           relation_data: {},    #关联接口
-          case_name: 编辑库存和价格,
+          case_name: 产品管理编辑库存和价格,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -395,7 +395,7 @@ Door:
           author: 姜娜,
           bar:{"show360ImageList":[],"operType":"edit","productInformation":{"appId":2,"attributeTemplateId":1,"chargedWeight":0,"createTime":1593424660000,"deliveryTime":"1","id":208,"isSyncQR":false,"ismobile":0,"ispublish":1,"keyword":"","linkUrl":"","mobileIspublish":1,"mobileLinkUrl":"","mobilePublishTime":"2020-06-17 11:41","mobileWindowType":"1","moq":1,"price":8000,"productCode":"","productName":"我的产品1593421928.5754907","productType":0,"publishTime":"2020-06-29 17:12","pvs":1000,"qrbuyUrl":"","retailPrice":0,"saveSelf":false,"sequence":1593424660225,"shortUrl":"5ef9bb14b98dfLWTiH4","status":0,"stock":0,"syncQRStatus":2,"unit":"0","updateTime":1593424660000,"useViewType":false,"videoThumbnail":"","weight":0,"windowType":"1","code":"","name":"我的产品1593421928.5754907"},"productBigField":{"content":"","mobileContent":"","mobileSummary":"","productId":208,"summary":"","useViewType":false},"productImageList":[],"relecontentList":[],"matchingProduct":{"appId":"","contentList":[]},"categoryIds":[140],"showcaseIds":[],"markIds":[],"paramValueList":[],"tabPageValueList":[],"buttonValueList":[],"filePageValueList":[],"customAttrValueList":[],"skuList":[{"chargedWeight":0,"code":"110","createDate":1593424660000,"id":236,"isDefault":1,"moq":1,"name":"我的产品1593421928.5754907","price":0,"productId":208,"productSkuSpecs":[{"createDate":1593424660000,"id":46,"productId":208,"skuId":236,"specId":71,"specName":"尺寸","specValueId":90,"specValueName":"10寸","updateDate":1593424660000,"useViewType":false,"name":"10寸"}],"productSpecConfigs":[],"retailPrice":0,"skuId":0,"status":0,"stock":0,"templateId":8,"useViewType":false,"weight":0}],"specConfigList":[{"id":"","productId":208,"specId":71,"specValueId":90,"alias":"10寸","productSpecImgList":[]}],"authList":[{"authType":"1","auth":"GW_:2:detail:view:","roleIds":""}],"seoData":{"seoState":1,"seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","seoTitle":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoKeywords":[{"id":"keyword","name":"产品关键词"},{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"}],"seoDescription":[{"id":"name","name":"产品名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"产品简介"}]},"itemDataArr":[],"qrDomain":"","qrTenantId":-1,"choiceUrl":"","choiceUrlM":"","categoryList":[{"appId":2,"categoryName":"FK自动化修改1593423599.29857","categoryType":"0","createtime":1593360000000,"id":140,"imageurl":"","isSearch":0,"ismobile":0,"linkurl":"","location":"1","mobileLinkUrl":"","mobileStyleCategoryListId":"","mobileWindowType":"1","parentId":0,"proCount":0,"sequence":1591324635189,"status":0,"styleCategoryListId":"","updatetime":1593423600000,"useViewType":false,"windowtype":"1"}]},
           relation_data: {},    #关联接口
-          case_name: 批量/隐藏货品,
+          case_name: 产品管理批量/隐藏货品,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -406,7 +406,7 @@ Door:
           author: 姜娜,
           bar:{"appId":2,"scopeIDs":6,5},
           relation_data: {},    #关联接口
-          case_name: 拖拽产品排序,
+          case_name: 产品管理拖拽产品排序,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -417,7 +417,7 @@ Door:
           author: 姜娜,
           bar:{},
           relation_data: {},    #关联接口
-          case_name: 删除产品,
+          case_name: 产品管理删除产品,
           expected: [200],  # 预期结果添加成功，产品列表显示正常
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -434,7 +434,7 @@ Door:
           author: 姜娜,
           bar: {showcaseId: 1,showcaseName: 橱窗01号, appId: 2 ,content: '' },
           relation_data: {},    #关联接口
-          case_name: 添加橱窗,
+          case_name: 橱窗管理添加橱窗,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -445,7 +445,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 橱窗列表,
+          case_name: 橱窗管理橱窗列表,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
@@ -456,7 +456,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 筛选橱窗,
+          case_name: 橱窗管理筛选橱窗,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: json, # 请求参数
@@ -500,7 +500,7 @@ Door:
           author: 姜娜,
           bar: {"appId":2,"cateId":0,"showCaseId":1,"attributeId":0,"pcStatus":"1","moStatus":"null","startDate":"","endDate":"","keyword":"1","pageSize":15,"pageNumber":1,"orderColumn":"","order_productName":"","order_productCode":"","order_cateName":"","order_retailPrice":"","order_publishTime":"","order_pcStatus":"","order_moStatus":"","order_shortUrl":""},
           relation_data: {},    #关联接口
-          case_name: 筛选并搜索橱窗里显示的产品列表,
+          case_name: 橱窗管理筛选并搜索橱窗里显示的产品列表,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -511,7 +511,7 @@ Door:
           author: 姜娜,
           bar: {"appId":2,"id":28},
           relation_data: {},    #关联接口
-          case_name: 筛选并搜索橱窗里显示的产品列表,
+          case_name: 橱窗管理筛选并搜索橱窗里显示的产品列表,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -2940,7 +2940,7 @@ Door:
           author: 姜娜,
           bar: {'id': 0,'type': 1,'parentId': ,'imgUrl': '/repository/image/cb9a7720-11dc-4e15-8da3-c96735c49471.jpg','imgId': 5,'newOpen': 1,'mobileNewOpen': 1,'showFlag': 1,'mobileShowFlag': 1,'appId': 24,'name': '企业分类001', 'seoState': true,'hidTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'hidKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'hidDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'hidTitleSign': _,'hidKeywordsSign': ',','hidDescriptionSign': -,'hidAddDescription':,'seoTitleSign': _,'seoKeywordsSign': ',','seoDescriptionSign': -,'seoTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'seoKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'seoDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'authData': [{"authType":1,"authStr":"GW_:24:category:view:","roleIds":""}],'authType': 1,'authStr':'GW_:24:category:view:1'},
           relation_data: {},    #关联接口
-          case_name: 添加普通分类，并从图片库选择图片，推广优化，html描述,
+          case_name: 企业下载分类添加普通分类，并从图片库选择图片，推广优化，html描述,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -2951,7 +2951,7 @@ Door:
           author: 姜娜,
           bar: {'id': 0,'type': 2,'parentId': ,'imgUrl': '/repository/image/cb9a7720-11dc-4e15-8da3-c96735c49471.jpg','imgId': 5,'newOpen': 1,'mobileNewOpen': 1,'showFlag': 1,'mobileShowFlag': 1,'appId': 24,'name': '企业分类001', 'seoState': true,'hidTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'hidKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'hidDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'hidTitleSign': _,'hidKeywordsSign': ',','hidDescriptionSign': -,'hidAddDescription':,'seoTitleSign': _,'seoKeywordsSign': ',','seoDescriptionSign': -,'seoTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'seoKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'seoDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'authData': [{"authType":1,"authStr":"GW_:24:category:view:","roleIds":""}],'authType': 1,'authStr':'GW_:24:category:view:1'},
           relation_data: {},    #关联接口
-          case_name: 添加链接分类，并从图片库选择图片，推广优化，链接目标,
+          case_name: 企业下载分类添加链接分类，并从图片库选择图片，推广优化，链接目标,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -2962,7 +2962,7 @@ Door:
           author: 姜娜,
           bar: {'id': 0,'type': 2,'parentId': ,'imgUrl': '/repository/image/cb9a7720-11dc-4e15-8da3-c96735c49471.jpg','imgId': 5,'newOpen': 1,'mobileNewOpen': 1,'showFlag': 1,'mobileShowFlag': 1,'appId': 24,'name': '企业分类001', 'seoState': true,'hidTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'hidKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'hidDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'hidTitleSign': _,'hidKeywordsSign': ',','hidDescriptionSign': -,'hidAddDescription':,'seoTitleSign': _,'seoKeywordsSign': ',','seoDescriptionSign': -,'seoTitle': [{"name":"文件分类名称","id":"categoryName"},{"name":"文件分类一级分类名称","id":"oneCategoryName"},{"name":"网站名称","id":"siteName"}],'seoKeywords': [{"name":"文件分类关键词","id":"categoryKeyword"},{"name":"网站名称","id":"siteName"}],'seoDescription': [{"name":"文件分类名称","id":"categoryName"},{"name":"网站名称","id":"siteName"},{"name":"文件分类描述","id":"categoryDescription"}],'authData': [{"authType":1,"authStr":"GW_:24:category:view:","roleIds":""}],'authType': 1,'authStr':'GW_:24:category:view:1'},
           relation_data: {},    #关联接口
-          case_name: 编辑链接分类,
+          case_name: 企业下载分类编辑链接分类,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -2973,7 +2973,7 @@ Door:
           author: 姜娜,
           bar: {'cateId': 31,'status': 0},
           relation_data: {},    #关联接口
-          case_name: 隐藏电脑版链接分类,
+          case_name: 企业下载分类隐藏电脑版链接分类,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -2984,7 +2984,7 @@ Door:
           author: 姜娜,
           bar: "appId=24&cateId=1&pcStatus=-1&mobileStatus=-1&startDate=&endDate=&wd=&pageSize=15&currentPage=1&ec_s_title=&ec_s_categorys=&ec_s_pubDate=&ec_s_showFlag=&ec_s_showMobileFlag=&ec_s_viewcount=&orderColumn=&orderType=&",
           relation_data: {},    #关联接口
-          case_name: 查看链接分类,
+          case_name: 企业下载分类查看链接分类,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -2995,7 +2995,7 @@ Door:
           author: 姜娜,
           bar: "cateId=-1",
           relation_data: {},    #关联接口
-          case_name: 全部分类列表,
+          case_name: 企业下载分类全部分类列表,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3006,7 +3006,7 @@ Door:
           author: 姜娜,
           bar: "cateId=32&targetId=2&targetPos=below&",
           relation_data: {},    #关联接口
-          case_name: 分类拖拽排序,
+          case_name: 企业下载分类分类拖拽排序,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3017,7 +3017,7 @@ Door:
           author: 姜娜,
           bar: "toCateId=32&cateId=33&",
           relation_data: {},    #关联接口
-          case_name: 转移分类,
+          case_name: 企业下载分类转移分类,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3028,7 +3028,7 @@ Door:
           author: 姜娜,
           bar: {'cateId': 31,'status': 0},
           relation_data: {},    #关联接口
-          case_name: 隐藏/显示电脑版分类,
+          case_name: 企业下载分类隐藏/显示电脑版分类,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3039,7 +3039,7 @@ Door:
           author: 姜娜,
           bar: "",
           relation_data: {},    #关联接口
-          case_name: 删除分类,
+          case_name: 企业下载分类删除分类,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -3050,7 +3050,7 @@ Door:
           author: 姜娜,
           bar: {'cateId': 31,'status': 0},
           relation_data: {},    #关联接口
-          case_name: 隐藏/显示移动版分类,
+          case_name: 企业下载分类隐藏/显示移动版分类,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3059,9 +3059,9 @@ Door:
           url: /manager/gwforward/manager-webapi/content/companyFileCategory/updateCateStatus,
           level: 中,
           author: 姜娜,
-          bar: [{'cateId': 1, 'status': 0}, {'cateId': 1, 'status': 1}],
+          bar: {'cateId': 1, 'status': 0},
           relation_data: {},    #关联接口
-          case_name: 隐藏电脑版链接分类,
+          case_name: 企业下载分类隐藏电脑版链接分类,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3078,7 +3078,7 @@ Door:
           author: 姜娜,
           bar: {"infotype":"2","title":"接口链接文件001","summary":"啦啦啦啦啦啦啦啦啦啦啦","keyWords":"","cateGoryIds":"12","appId":"24","content":"","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"false","targetFlagMobile":"false","linkPath":"http://www.baidu.com","linkPathMobile":"http://www.baidu.com","pubDate":"","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":null,"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
-          case_name: 添加链接文件,
+          case_name: 企业下载添加链接文件,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -3089,7 +3089,7 @@ Door:
           author: 姜娜,
           bar: {"infotype":"2","title":"接口链接文件001","summary":"啦啦啦啦啦啦啦啦啦啦啦","keyWords":"","cateGoryIds":"12","appId":"24","content":"","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"false","targetFlagMobile":"false","linkPath":"http://www.baidu.com","linkPathMobile":"http://www.baidu.com","pubDate":"","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":null,"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
-          case_name: 多个分类链接文件,
+          case_name: 企业下载多个分类链接文件,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -3100,7 +3100,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 获取相关内容,
+          case_name: 企业下载获取相关内容,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -3111,7 +3111,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 获取SEO列表,
+          case_name: 企业下载获取SEO列表,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -3122,7 +3122,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 获取全部分类和用户分类,
+          case_name: 企业下载获取全部分类和用户分类,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -3133,7 +3133,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 获取金山文件接口,
+          case_name: 企业下载获取金山文件接口,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -3144,7 +3144,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 获取文件接口列表,
+          case_name: 企业下载获取文件接口列表,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -3155,7 +3155,7 @@ Door:
           author: 姜娜,
           bar: {"id":"38","infotype":"1","title":"企业普通文件","summary":"88888888","keyWords":"关键词001","cateGoryIds":"52","appId":"24","content":"<p>88888888</p>\n","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"true","targetFlagMobile":"true","linkPath":"","linkPathMobile":"","pubDate":"2020-07-08 10:21:42","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"2020-07-08 10:21:42","showStyleMobile":"","imgUrl":"/repository/image/c29bb365-842a-43fa-8b92-36317255eeea.png","imgId":"19","RelevantContent":null,"comFiles":[{"id":35,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"/comp/xcompanyFile/download.do?appId=24&fid=35&id=38"},{"id":71,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2006245115/%E4%BC%81%E4%B8%9A%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.txt"}],"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:38\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:38\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
-          case_name: 添加普通单图文件,
+          case_name: 企业下载添加普通单图文件,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -3166,7 +3166,7 @@ Door:
           author: 姜娜,
           bar: {"id":"38","infotype":"1","title":"企业普通多文件","summary":"88888888","keyWords":"关键词001","cateGoryIds":"52","appId":"24","content":"<p>88888888</p>\n","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"true","targetFlagMobile":"true","linkPath":"","linkPathMobile":"","pubDate":"2020-07-08 10:21:42","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"2020-07-08 10:21:42","showStyleMobile":"","imgUrl":"/repository/image/c29bb365-842a-43fa-8b92-36317255eeea.png","imgId":"19","RelevantContent":null,"comFiles":[{"id":35,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"/comp/xcompanyFile/download.do?appId=24&fid=35&id=38"},{"id":71,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2006245115/%E4%BC%81%E4%B8%9A%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.txt"}],"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:38\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:38\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
-          case_name: 添加多选文件,
+          case_name: 企业下载添加多选文件,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -3177,7 +3177,7 @@ Door:
           author: 姜娜,
           bar: {"infotype":"1","title":"有描述文件","summary":"概要描述在这里","keyWords":"关键词001","cateGoryIds":"47","appId":"24","content":"<p>电脑88888</p>\n","contentMobile":"<p>移动版88888</p>\n","showFlag":"false","showMobileFlag":"true","targetFlag":"false","targetFlagMobile":"false","linkPath":"","linkPathMobile":"","pubDate":"","veiwCount":"50","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":[{"id":72,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2006245115/%E4%BC%81%E4%B8%9A%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.txt"}],"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
-          case_name: 添加电脑版、移动版描述，关键词文件,
+          case_name: 企业下载添加电脑版、移动版描述，关键词文件,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -3188,7 +3188,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 获取企业下载列表,
+          case_name: 企业下载获取企业下载列表,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -3199,7 +3199,7 @@ Door:
           author: 姜娜,
           bar: {"infotype":"1","title":"有相关内容文件","summary":"","keyWords":"","cateGoryIds":"52","appId":"24","content":"<p>1</p>\n","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"true","targetFlagMobile":"true","linkPath":"","linkPathMobile":"","pubDate":"2020-07-08 11:36:08","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"2020-07-08 11:36:08","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":[{"appId":24,"contentList":[48]}],"comFiles":[{"id":72,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"/comp/xcompanyFile/download.do?appId=24&fid=72&id=48"}],"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:48\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:48\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
-          case_name: 有相关内容文件,
+          case_name: 企业下载有相关内容文件,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -3210,7 +3210,7 @@ Door:
           author: 姜娜,
           bar: {"id":"38","infotype":"1","title":"企业普通文件","summary":"88888888","keyWords":"关键词001","cateGoryIds":"52","appId":"24","content":"<p>88888888</p>\n","contentMobile":"","showFlag":"true","showMobileFlag":"true","targetFlag":"true","targetFlagMobile":"true","linkPath":"","linkPathMobile":"","pubDate":"2020-07-08 10:21:42","veiwCount":"0","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"2020-07-08 10:21:42","showStyleMobile":"","imgUrl":"/repository/image/c29bb365-842a-43fa-8b92-36317255eeea.png","imgId":"19","RelevantContent":null,"comFiles":[{"id":35,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"/comp/xcompanyFile/download.do?appId=24&fid=35&id=38"},{"id":71,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2006245115/%E4%BC%81%E4%B8%9A%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.txt"}],"authData":"[{\"authType\":1,\"authStr\":\"GW_:24:detail:view:38\",\"roleIds\":\"\"},{\"authType\":1,\"authStr\":\"GW_:24:detail:download:38\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
-          case_name: 获取高级选项,
+          case_name: 企业下载获取高级选项,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -3221,7 +3221,7 @@ Door:
           author: 姜娜,
           bar: {"infotype":"1","title":"高级选项文件","summary":"","keyWords":"","cateGoryIds":"47","appId":"24","content":"<p>123456</p>\n","contentMobile":"<p>123456</p>\n","showFlag":"true","showMobileFlag":"true","targetFlag":"false","targetFlagMobile":"false","linkPath":"","linkPathMobile":"","pubDate":"","veiwCount":"980","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"","showStyleMobile":"","imgUrl":"","imgId":"","RelevantContent":null,"comFiles":[{"id":72,"fileName":"企业测试文件","extName":"txt","size":17,"type":1,"typeName":"文档","displaySize":"0.0KB","path":"https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2006245115/%E4%BC%81%E4%B8%9A%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.txt"}],"authData":"[{\"authType\":2,\"authStr\":\"GW_:24:detail:view:\",\"roleIds\":\"\"},{\"authType\":2,\"authStr\":\"GW_:24:detail:download:\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
-          case_name: 高级选项文件,
+          case_name: 企业下载高级选项文件,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -3243,7 +3243,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 获取电脑、移动端域名,
+          case_name: 企业下载获取电脑、移动端域名,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -3265,7 +3265,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 企业拖拽排序,
+          case_name: 企业下载企业拖拽排序,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3276,7 +3276,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 筛选列表,
+          case_name: 企业下载筛选列表,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3287,7 +3287,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 搜索列表,
+          case_name: 企业下载搜索列表,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3298,7 +3298,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 翻页,
+          case_name: 企业下载翻页,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3309,7 +3309,7 @@ Door:
           author: 姜娜,
           bar: {"id":"14","infotype":"1","title":"高级选项文件","summary":"","keyWords":"","cateGoryIds":"1","appId":"24","content":"<p>123456</p>\n","contentMobile":"<p>123456</p>\n","showFlag":"true","showMobileFlag":"true","targetFlag":"true","targetFlagMobile":"true","linkPath":"","linkPathMobile":"","pubDate":"2020-07-09 14:03:00","veiwCount":"980","imgs":"","showStyle":"","recommandType":"","pubDateMobile":"2020-07-09 14:03:00","showStyleMobile":"","imgUrl":"/repository/image/73519170-e243-4bdd-93d4-0db4ebc77025.png","imgId":"89","RelevantContent":null,"comFiles":[{"id":72,"path":"/comp/xcompanyFile/download.do?appId=24&fid=72&id=14"}],"authData":"[{\"authType\":2,\"authStr\":\"GW_:24:detail:view:14\",\"roleIds\":\"\"},{\"authType\":2,\"authStr\":\"GW_:24:detail:download:14\",\"roleIds\":\"\"}]","seoState":"1","seoAuto":"","seoTitle":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoKeywords":"[{\"name\":\"文件关键词\",\"id\":\"keyword\"},{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"}]","seoDescription":"[{\"name\":\"文件名称\",\"id\":\"name\"},{\"name\":\"网站名称\",\"id\":\"siteName\"},{\"name\":\"文件概要\",\"id\":\"summary\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-"},
           relation_data: {},    #关联接口
-          case_name: 编辑企业下载,
+          case_name: 企业下载编辑企业下载,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -3320,7 +3320,7 @@ Door:
           author: 姜娜,
           bar: "appId=24&id=60&cateId=55&",
           relation_data: {},    #关联接口
-          case_name: 批量转移,
+          case_name: 企业下载批量转移,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -3331,7 +3331,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 批量显示/隐藏电脑版,
+          case_name: 企业下载批量显示/隐藏电脑版,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -3342,7 +3342,7 @@ Door:
           author: 姜娜,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 批量显示/隐藏移动版,
+          case_name: 企业下载批量显示/隐藏移动版,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -3353,9 +3353,416 @@ Door:
           author: 姜娜,
           bar: "ppId=24&id=60,57",
           relation_data: {},    #关联接口
-          case_name: 批量删除,
+          case_name: 企业下载批量删除,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
           }
 
+  enquiry: # 在线询价
+    - url:   # 在线询价
+      modular: 互动表单-在线询价  # 接口注释
+      className: manage_enquiry  # 接口类名
+      funName:
+        - test01_enquiry_list: {  # 方法名：询价列表
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/page,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 询价列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test02_enquiry_list: {  # 方法名：询价列表筛选
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/page,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 询价筛选已删除列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test03_enquiry_list: {  # 方法名：搜索询价列表
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/page,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 搜索询价列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test04_enquiry_list: {  # 方法名：排序询价列表
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/page,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 排序询价列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test05_enquiry_list: {  # 方法名：翻页询价列表
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/page,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 翻页询价列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test06_send_sms: {  # 方法名：转发短信
+          url: /manager/gwforward/manager-webapi/interaction/sms/common/send,
+          level: 高,
+          author: 姜娜,
+          bar: "id=8&mobileList=13333333333&appId=32&content=123456&sendDate=&dateFormat=yyyy-MM-dd%20HH%3Amm%3Ass&timeFlag=false&smsChannel=1",
+          relation_data: {},    #关联接口
+          case_name: 询价转发短信,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test07_send_sendMail: {  # 方法名：转发邮件
+          url: /manager/gwforward/manager-webapi/interaction/manager/mail/send/sendMail,
+          level: 高,
+          author: 姜娜,
+          bar: {"accounts":"jiangna@gouuse.cn","content":"<p>123456</p>\n","title":"123456","TOKEN":"677e5175691c341933f475b60866a712d9735f276e01ed9636e5387c91ea6cbcbaee891be12e7592f87b9fe786642f1b8b4b844f5576d825411935c3871433c8f112940fd2e1b700541f8cc52396394f8043a30ef5843e29af6d782402434e90681a3d38924f8a675a6bef0ce94a6aced27105711ed6adc9"},
+          relation_data: {},    #关联接口
+          case_name: 询价转发邮件,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test08_enquiry: {  # 方法名：处理询价
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/handleEnquiryData,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 处理未删除和已删除询价,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test09_enquiry_subhandle: {  # 方法名：询价备注
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/subhandle,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 询价备注,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test10_getAllChannel_sms: {  # 方法名：给客户发短信
+          url: /manager/gwforward/manager-webapi/interaction/sms/market/getAllChannel,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 询价客户发短信,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test11_change_status: {  # 方法名：有效询价
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/changeEnquiry,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 有效询价,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test12_change_status: {  # 方法名：无效询价
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/changeEnquiry,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 无效询价,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test13_change_list: {  # 方法名：询价操作记录
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/refreshEnquiryHandle,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 询价操作记录,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test14_delete_enquiry: {  # 方法名：删除询价列表
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/deleteEnquiry,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 删除询价列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test15_enquiry_dellist: {  # 方法名：询价已删除列表筛选
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/page,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 搜索和筛选已删除列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test16_enquiry_nodellist: {  # 方法名：询价还原
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/transmitEnquiry,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 询价还原,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test17_see_del_enquiry: {  # 方法名：查看已删除询价
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/handleEnquiryData,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 查看已删除询价,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test18_enquiry_isdellist: {  # 方法名：彻底删除询价
+          url: /manager/gwforward/manager-webapi/interaction/enquiry/shiftDeleteEnquiry,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 彻底删除询价,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+  intention: # 意向信息
+    - url:   # 意向信息
+      modular: 互动表单-意向信息  # 接口注释
+      className: manage_intention  # 接口类名
+      funName:
+        - test01_intention_list: {  # 方法名：意向信息列表
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/list,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 意向信息列表,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test02_intention_list: {  # 方法名：意向列表筛选
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/list,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 意向筛选已删除列表,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test03_intention_list: {  # 方法名：搜索意向列表
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/list,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 搜索意向列表,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test04_intention_list: {  # 方法名：排序意向列表
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/list,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 排序意向列表,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test05_intention_list: {  # 方法名：翻页意向列表
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/list,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 翻页意向列表,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test06_send_sms_intention: {  # 方法名：转发短信
+          url: /manager/gwforward/manager-webapi/interaction/sms/common/send,
+          level: 高,
+          author: 姜娜,
+          bar: "id=8&mobileList=13333333333&appId=32&content=123456&sendDate=&dateFormat=yyyy-MM-dd%20HH%3Amm%3Ass&timeFlag=false&smsChannel=1",
+          relation_data: {},    #关联接口
+          case_name: 意向转发短信,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test07_send_sendMail_intention: {  # 方法名：转发邮件
+          url: /manager/gwforward/manager-webapi/interaction/manager/mail/send/sendMail,
+          level: 高,
+          author: 姜娜,
+          bar: {"accounts":"jiangna@gouuse.cn","content":"<p>123456</p>\n","title":"123456","TOKEN":"677e5175691c341933f475b60866a712d9735f276e01ed9636e5387c91ea6cbcbaee891be12e7592f87b9fe786642f1b8b4b844f5576d825411935c3871433c8f112940fd2e1b700541f8cc52396394f8043a30ef5843e29af6d782402434e90681a3d38924f8a675a6bef0ce94a6aced27105711ed6adc9"},
+          relation_data: {},    #关联接口
+          case_name: 意向转发邮件,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+          test08_intention_intention: {  # 方法名：处理意向
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/findFollowupIntentions,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 处理未删除和已删除意向,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test09_intention_subhandle: {  # 方法名：意向备注
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/saveFollowupIntention,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 意向备注,
+          expected: ["0"],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test10_getAllChannel_sms_intention: {  # 方法名：给客户发短信
+          url: /manager/gwforward/manager-webapi/interaction/sms/market/getAllChannel,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 意向客户发短信,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test11_change_status_intention: {  # 方法名：有效意向
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/updateStatus,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 有效意向,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test12_change_status_intention: {  # 方法名：无效意向
+          url: manager/gwforward/manager-webapi/interaction/intention/detail/updateStatus,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 无效意向,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test13_change_list_intention: {  # 方法名：意向操作记录
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/findFollowupIntentions,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 意向操作记录,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test14_delete_intention: {  # 方法名：删除意向列表
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/delete,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 删除意向列表,
+          expected: ["0"],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test15_intention_dellist: {  # 方法名：意向已删除列表筛选
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/list,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 搜索和筛选已删除意向列表,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test16_intention_nodellist: {  # 方法名：意向还原
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/reverseIntentionDetails,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 意向还原,
+          expected: ["0"],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test17_see_del_intention: {  # 方法名：查看已删除意向
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/findDeletedFollowupIntentions,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 查看已删除意向,
+          expected: ["0"],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test18_intention_isdelete: {  # 方法名：彻底删除意向
+          url: /manager/gwforward/manager-webapi/interaction/intention/detail/deleteCompletely,
+          level: 高,
+          author: 姜娜,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 彻底删除意向,
+          expected: ["0"],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }

@@ -14,7 +14,7 @@ from urllib3 import encode_multipart_formdata
 from Door.companyFile import Public
 projectName = ConfigYaml("projectName").base_config
 Url = ConfigYaml(projectName).base_url
-
+requests.packages.urllib3.disable_warnings()
 
 
 def readyaml(file=None, key=None):

@@ -1,5 +1,5 @@
 add_customer:
 - bar: {}
   url: /add/customerParam
-img: {imageId: 7, imageurl: /repository/image/1f5fd0d3-d5d2-44d0-9ca2-6364e0fa0ba4.jpg}
-tab: {id: 2}
+img: {imageId: 127, imageurl: /repository/image/b1be4521-e0aa-4723-a087-a99d125eee13.jpg}
+tab: {id: 33}
