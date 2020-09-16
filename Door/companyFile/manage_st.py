@@ -26,12 +26,12 @@ class manage_companyFile(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
+            Public.put_img()
             url = ConfigYaml(self.projectName).base_url + self.url
             C_id = str(Public.GetAll().add_Cate())
             self.data['cateGoryIds'] = C_id
-            self.data['imgUrl'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_url'))
-            self.data['imgId'] = str(Public.readyaml(file=r'Door\AddProduct', key='p_id'))
+            self.data['imgUrl'] = str(Public.readyaml(file=r'Door/companyFile', key='p_url'))
+            self.data['imgId'] = str(Public.readyaml(file=r'Door/companyFile', key='p_id'))
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
 

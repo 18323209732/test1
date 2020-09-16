@@ -1,0 +1,7 @@
+networke_list:
+  url: "/manager/gwforward/manager-webapi/content/mapCategory/list"
+  bar: {}
+
+networke_add:
+  url: "/manager/gwforward/manager-webapi/content/mapPostion/add"
+  bar: {name: "11",categoryId: "2",locaJson: "[]",cityName: 成都市,provinceName: 四川省,districtName: 锦江区,address: 天府半岛110号,lng: 104.071161,lat: 30.482808,zipCode: ,website: ,wechat:,statu: 1,syncStatu:,images: [{"imgId":3,"url":"/repository/image/69acc9aa-cc41-4cfd-95c9-ee05dbf3c751.jpg","thumbId":3,"imgUrl":"/repository/image/69acc9aa-cc41-4cfd-95c9-ee05dbf3c751.jpg","imageName":"微信图片_20200717114351","iscover":1,"sequence":"","height":"","wide":""}],description: "<p>2222222222222222222222222222</p>",mobileDesc:,keywords: "4444555555555555555",cardId:,mobileStatu: 1,seoAuto: true,viewCount: 998,seoTitle: [{"id":"name","name":"网点名称"},{"id":"siteName","name":"网站名称"}],seoTitleSign: _,seoKeywords: [{"id":"keyword","name":"网点关键词"},{"id":"name","name":"网点名称"},{"id":"siteName","name":"网站名称"}],seoKeywordsSign: ,seoDescription: [{"id":"name","name":"网点名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"网点概要"}],seoDescriptionSign: -,seoAddDescription: "undefined",logoUrl: "repository/image/69acc9aa-cc41-4cfd-95c9-ee05dbf3c751.jpg",logoId: 3,fullAddress: "成都市锦江区",summary: "44444444444444444",locationArray: [],citys: ["四川省","成都市","锦江区"],relationListJson: [{"appId":11,"appName":"企业网点","contentList":[]}]}

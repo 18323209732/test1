@@ -30,7 +30,6 @@ class Customer:
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         public_data = ReadPublic(catalog='customer_manage', key="get_group_list")
         url = self.url + public_data.public_value('url') + self.tenant_value
-        data = public_data.public_value('bar')
         name = self.add_customergroup()
         self.headers['Content-Type'] = "application/x-www-form-urlencoded"
         r = requests.post(url, headers=self.headers, stream=True, verify=False)
@@ -55,3 +54,8 @@ class Customer:
         result = r.json()
         if result['status'] == 200:
             return data['name']
+
+# c = Customer()
+# print(c.get_group_list())
+
+

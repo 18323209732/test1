@@ -17,8 +17,6 @@ from Common.Route import Any_Path
 
 projectName = ConfigYaml("projectName").base_config
 from Common.ReExecution import ReExecution
-from Door.picture.Public import Public_Data as picture
-from Door.news.Public import Public_Data as pub_news
 
 
 class Public_Data:
@@ -49,7 +47,8 @@ class Public_Data:
         data = self.public_data.public_value("bar")
 
         self.headers[self.type] = self.json_type
-        del self.headers[self.type]
+        if self.headers[self.type]:
+            del self.headers[self.type]
 
         r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
 
@@ -126,6 +125,56 @@ class Public_Data:
 
         return result
 
-if __name__=="__main__":
-    print(next(Public_Data().class_list(value='id')))
+    def get_class_list(self):
+        '''
+        获取新闻id
+        :return:
+        '''
+
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.public_data = ReadPublic(catalog='filelibrary', key="class_list")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
+        url = self.url + url
+        data = self.public_data.public_value("bar")
+        r = requests.get(url, headers=self.headers, stream=True, verify=False)
+        result = r.json()
+
+        if result.get("data"):
+            return result.get("data")
+        else:
+            self.class_add()
+            r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+            result = r.json()
+            if result.get("data"):
+                return result.get("data")
+            else:
+                return False
+
+    def get_file_list(self):
+        '''
+        获取新闻id
+        :return:
+        '''
+
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        self.public_data = ReadPublic(catalog='filelibrary', key="file_list")
+        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
+        url = self.url + url
+        data = self.public_data.public_value("bar")
+        r = requests.get(url, headers=self.headers, stream=True, verify=False)
+        result = r.json()
+        if result.get("data").get("list"):
+            return result.get("data").get("list")
+        else:
+            self.file_add()
+            r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+            result = r.json()
+            if result.get("data").get("list"):
+                return result.get("data").get("list")
+            else:
+                return False
+
+
+# if __name__=="__main__":
+    # print(Public_Data().get_file_list())
     # pass

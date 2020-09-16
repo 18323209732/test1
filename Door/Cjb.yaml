@@ -183,11 +183,11 @@ Door:
           re_bar: data, # 请求参数
           }
 
-          test_addlink10_atlas: {  # 接口方法名
+          test_addlink_atlas: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/atlas/save',
           level: 高,
           author: 陈建波,
-          bar: {"atlasType":"1","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:6\",\"roleIds\":\"\"}]","commonAtlasName":"11","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"123123","showStyle":"","showMobileStyle":"","keywords":"123123","viewCountOfCommonAtlas":"0","atlasCategoryArr":["5"],"linkAtlasName":"11","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"123123","keywordsLink":"123123","linkUrl":{"entityTag":"page","text":"互动留言","id":"0386fad2-eb04-41fb-a1b0-3a93c980c153"},"targetType":"true","linkMobileUrl":"http://","mobileTargetType":"true","viewCountOfLinkAtlas":"737","imgId":"451","imgUrl":"/repository/image/fff1e740-fd26-4f97-93ad-ca02d6c13dac.jpg","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[],"isSpread":"no"},
+          bar: {"atlasType":"1","authData":"[{\"authType\":1,\"authStr\":\"GW_:4:detail:view:6\",\"roleIds\":\"\"}]","commonAtlasName":"22","showFlagOfCommonAtlas":"1","showMobileFlagOfCommonAtlas":"1","commonAtlasDescription":"","commonMobileAtlasDescription":"","videoIds":"","commonAtlasSummary":"33","showStyle":"","showMobileStyle":"","keywords":"44","viewCountOfCommonAtlas":"0","viewCountOfLinkAtlas":"0","atlasCategoryArr":["43"],"linkAtlasName":"22","showFlagOfLinkAtlas":"1","showMobileFlagOfLinkAtlas":"1","linkAtlasSummary":"33","keywordsLink":"44","linkUrl":"http://www.baidu.com","targetType":"true","linkMobileUrl":"http://www.baidu.com","mobileTargetType":"true","imgId":"37","imgUrl":"/repository/image/a47299bf-2a37-49fa-8e0a-82bda1175816.jpg","publishDate":"","publishMobileDate":"","seoState":"1","seoPageType":"3","seoTitle":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoKeywords":"[{\"id\":\"keyword\",\"name\":\"图册关键词\"},{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","seoDescription":"[{\"id\":\"name\",\"name\":\"图册名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"summary\",\"name\":\"图册概要\"}]","seoAddDescription":"","seoTitleSign":"_","seoKeywordsSign":",","seoDescriptionSign":"-","relevantContentList":[],"isSpread":"no"},
           relation_data: {},    #关联接口
           case_name: 添加链接,
           expected: [200],  # 预期结果
@@ -437,9 +437,9 @@ Door:
           url: '/manager/gwforward/manager-webapi/content/atlascategory/add',
           level: 中,
           author: 陈建波,
-          bar: {"atlasCategory":{"id":1,"parentId":0,"parentName":"","name":"88888888888","imgUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg","imgId":1,"imgThumbUrl":"/repository/image/46578388-49b5-44c8-b036-4e7681ffc7be.jpg","type":"1","mobileDes":"","summary":"666666666666666","keywords":"","targetType":"true","linkUrl":"首页","mobileTargetType":"true","mobileLinkUrl":"登录页","showFlag":true,"mobileShowFlag":true,"authData":"[{\"authType\":1,\"authStr\":\"GW_:4:category:view:45\",\"roleIds\":\"\"}]"},"seoState":"1","seoPageType":"2","seoAddDescription":"","strSeoTitle":"[]","strSeoKeywords":"[]","strSeoDescription":"[]","strSeoTitleSign":"_","strSeoKeywordsSign":"_","strSeoDescriptionSign":"_"},
+          bar: {"atlasCategory":{"id":53,"parentId":0,"parentName":"","name":"自动化企业图册分类44...1599797715720","imgUrl":"/repository/image/a47299bf-2a37-49fa-8e0a-82bda1175816.jpg","imgId":37,"imgThumbUrl":"/repository/image/a47299bf-2a37-49fa-8e0a-82bda1175816.jpg","type":"0","des":"<p>自动化企业图册分类描述内容...1599797715720</p>\n","mobileDes":"<p>自动化企业图册分类描述内容...1599797715720</p>\n","summary":"自动化企业图册分类描述内容...1599797715720","keywords":"关键词...1599797715720","targetType":"true","linkUrl":"","mobileTargetType":"true","mobileLinkUrl":"","showFlag":false,"mobileShowFlag":true,"authData":"[{\"authType\":1,\"authStr\":\"GW_:4:category:view:53\",\"roleIds\":\"\"}]"},"seoState":"1","seoPageType":"2","seoAddDescription":"","strSeoTitle":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"oneCategoryName\",\"name\":\"图册分类一级分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoKeywords":"[{\"id\":\"categoryKeyword\",\"name\":\"图册分类关键词\"},{\"id\":\"siteName\",\"name\":\"网站名称\"}]","strSeoDescription":"[{\"id\":\"categoryName\",\"name\":\"图册分类名称\"},{\"id\":\"siteName\",\"name\":\"网站名称\"},{\"id\":\"categoryDescription\",\"name\":\"图册分类描述\"}]","strSeoTitleSign":"_","strSeoKeywordsSign":",","strSeoDescriptionSign":"-"},
           relation_data: {},    #关联接口
-          case_name: 编辑,
+          case_name: 编辑分类,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: json, # 请求参数
@@ -499,11 +499,12 @@ Door:
           author: 陈建波,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 拖拽排序,
+          case_name: 分类拖拽排序,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
           }
+
 
           test_move_atlas: {  # 接口方法名
           url: '/manager/gwforward/manager-webapi/content/atlascategory/resort',
@@ -511,7 +512,7 @@ Door:
           author: 陈建波,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 转移,
+          case_name: 分类转移,
           expected: [200],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -750,3 +751,399 @@ Door:
           re_bar: data, # 请求参数
           }
 
+  video: #企业图册
+    - url:  # 邮件地址
+      modular: 企业视频  # 接口注释
+      className: library_video  # 接口类名
+      funName:
+        - test_list_video: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/videoRepository/findByPagination',
+          level: 高,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 企业视频--列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+        }
+          test_shaixuan_video: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/videoRepository/findByPagination',
+          level: 高,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 企业视频---筛选,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_search_video: {  # 接口方法名
+          url: '/manager/gwforward/dssresources/videoRepository/findByPagination',
+          level: 高,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 企业视频---搜索,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+  position: #企业图册
+    - url:  # 邮件地址
+      modular: 职位发布  # 接口注释
+      className: release_position  # 接口类名
+      funName:
+        - test_add_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/saveOrUpdate',
+          level: 高,
+          author: 陈建波,
+          bar: {"job":{"age":"24","departmentId":1,"des":"<p>222222222222</p>\n","district":"四川省||成都市||锦江区","education":"本科","frequency":"每日","gender":"男","headcounts":"22","jobNature":"全职","keywords":"222222222222","mobileDes":"<p>222222222222</p>\n","name":"11","salary":"10000||20000","shortUrl":"","summary":"222222222222\n","videoIds":"","visitCounts":117,"worklife":"3-5年"},"departmentId":["1"],"endTime":"","startTime":"2020-09-07 13:43","isSpread":"no","saveAndGoFlag":false,"showFlag":true,"seoManagerVo":{"seoAddDescription":"","seoDescription":[{"id":"name","name":"职位名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"职位概要"}],"seoDescriptionSign":"-","seoKeywords":[{"id":"keyword","name":"职位关键词"},{"id":"name","name":"职位名称"},{"id":"siteName","name":"网站名称"}],"seoKeywordsSign":",","seoState":"1","seoTitle":[{"id":"name","name":"职位名称"},{"id":"siteName","name":"网站名称"}],"seoTitleSign":"_","seoPageType":3}},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--添加职位,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_add_department: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobpostingDepartment/saveOrUpdate',
+          level: 高,
+          author: 陈建波,
+          bar: {"appId":28,"seoAddDescription":"","strSeoDescription":[{"id":"categoryName","name":"职能部门名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"职能部门描述"}],"strSeoDescriptionSign":"-","strSeoKeywords":[{"id":"categoryKeyword","name":"职能部门关键词"},{"id":"siteName","name":"网站名称"}],"strSeoKeywordsSign":",","seoState":"1","strSeoTitle":[{"id":"categoryName","name":"职能部门名称"},{"id":"siteName","name":"网站名称"}],"strSeoTitleSign":"_","seoPageType":2,"department":{"fromVisual":false,"name":"11","des":"<p>22</p>\n","ckeditorContent":"<p>22</p>\n","mobileDes":"<p>22</p>\n","mobileCkeditorContent":"<p>22</p>\n","summary":"33","keywords":"44","seoState":"44","showFlag":true,"imgUrl":"/repository/image/fac8ee04-53b7-4a74-aba7-18ff5f36de53.jpg","imgId":24,"showOrder":1}},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--添加部门,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_list_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/search',
+          level: 高,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--职位列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_theader_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/search',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--表头排序,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_sort_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/sort',
+          level: 高,
+          author: 陈建波,
+          bar: {sectionIds: 3,targetId: 4,minOrder: 3,maxOrder: 4,direction: -1},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--拖拽排序,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_search_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/search',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--搜索,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_screen_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/search',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--筛选,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_edit_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/saveOrUpdate',
+          level: 中,
+          author: 陈建波,
+          bar: {"job":{"age":"24","departmentId":10,"des":"<p>222222222222</p>\n","district":"四川省||成都市||锦江区","education":"本科","frequency":"每日","gender":"男","headcounts":"22","jobNature":"全职","keywords":"222222222222","mobileDes":"<p>222222222222</p>\n","name":"边界后","salary":"10000||20000","shortUrl":"","summary":"222222222222\n","videoIds":"","visitCounts":117,"worklife":"3-5年","id":"2"},"departmentId":["10"],"endTime":"","startTime":"2020-09-07 13:43","isSpread":"no","saveAndGoFlag":false,"showFlag":true,"seoManagerVo":{"seoAddDescription":"","seoDescription":[{"id":"name","name":"职位名称"},{"id":"siteName","name":"网站名称"},{"id":"summary","name":"职位概要"}],"seoDescriptionSign":"-","seoKeywords":[{"id":"keyword","name":"职位关键词"},{"id":"name","name":"职位名称"},{"id":"siteName","name":"网站名称"}],"seoKeywordsSign":",","seoState":"1","seoTitle":[{"id":"name","name":"职位名称"},{"id":"siteName","name":"网站名称"}],"seoTitleSign":"_","seoPageType":3},"isEdit":true},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--编辑,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_updatePubTime_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/updatePubTime',
+          level: 中,
+          author: 陈建波,
+          bar: {id: 7},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--更新,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_getSitePage_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/getSitePage',
+          level: 中,
+          author: 陈建波,
+          bar: {id: 7, viewType: 1},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--浏览,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_transfer_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/transfer',
+          level: 中,
+          author: 陈建波,
+          bar: {ids: 3, departmentIds: 10},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--转移,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_pitransfer_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/transfer',
+          level: 中,
+          author: 陈建波,
+          bar: {ids: 3, departmentIds: 10},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--批量转移,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_show_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/updateStatus',
+          level: 中,
+          author: 陈建波,
+          bar: {ids: 6, isMobile: false, state: 1},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--显示,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_hiden_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/updateStatus',
+          level: 中,
+          author: 陈建波,
+          bar: {ids: 6, isMobile: false, state: 0},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--隐藏,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_pishow_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/updateStatus',
+          level: 中,
+          author: 陈建波,
+          bar: {ids: 6, isMobile: false, state: 1},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--批量显示,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_pihiden_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/updateStatus',
+          level: 中,
+          author: 陈建波,
+          bar: {ids: 6, isMobile: false, state: 0},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--批量隐藏,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_delete_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/delete',
+          level: 中,
+          author: 陈建波,
+          bar: {ids: 6},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--删除,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_pidelete_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/delete',
+          level: 中,
+          author: 陈建波,
+          bar: {ids: 6},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--批量删除,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_turnpage_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/search',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--翻页,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_getSeoList_position: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/getSeoList',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--添加职能部门页面接口,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+          test_list_department: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobpostingDepartment/departmentList',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--职能部门列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: data, # 请求参数
+          }
+
+          test_edit_department: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobpostingDepartment/saveOrUpdate',
+          level: 中,
+          author: 陈建波,
+          bar: {"appId":"28","seoAddDescription":"","strSeoDescription":[{"id":"categoryName","name":"职能部门名称"},{"id":"siteName","name":"网站名称"},{"id":"categoryDescription","name":"职能部门描述"}],"strSeoDescriptionSign":"-","strSeoKeywords":[{"id":"categoryKeyword","name":"职能部门关键词"},{"id":"siteName","name":"网站名称"}],"strSeoKeywordsSign":",","seoState":"1","strSeoTitle":[{"id":"categoryName","name":"职能部门名称"},{"id":"siteName","name":"网站名称"}],"strSeoTitleSign":"_","seoPageType":2,"department":{"fromVisual":false,"name":"115555","des":"<p>22</p>\n","ckeditorContent":"<p>22</p>\n","mobileDes":"<p>22</p>\n","mobileCkeditorContent":"<p>22</p>\n","summary":"22","keywords":"33","seoState":"","showFlag":true,"imgUrl":"/repository/image/1075fb07-a208-460b-94f2-df8b8436e666.jpg","imgId":19,"id":13,"showOrder":4}},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--职能部门编辑,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_cat_department: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobposting/search',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--职能部门查看,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_sort_department: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobpostingDepartment/sort',
+          level: 中,
+          author: 陈建波,
+          bar: {sectionIds: 14,targetId: 13,minOrder: 4,maxOrder: 5,direction: -1},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--职能部门拖拽排序,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_show_department: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobpostingDepartment/updateState',
+          level: 中,
+          author: 陈建波,
+          bar: {id: 10, flag: true},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--职能部门显示,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_hideen_department: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobpostingDepartment/updateState',
+          level: 中,
+          author: 陈建波,
+          bar: {id: 10, flag: false},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--职能部门隐藏,
+          expected: [200],  # 预期结果
+          mode: post,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_delete_department: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/interaction/jobpostingDepartment/delete',
+          level: 中,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 职位发布--职能部门删除,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+  enternetwork: #企业图册
+    - url:  # 邮件地址
+      modular: 企业网点  # 接口注释
+      className: enterprise_enternetwork # 接口类名
+      funName:
+        - test_list_network: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/mapCategory/list',
+          level: 高,
+          author: 陈建波,
+          bar: {},
+          relation_data: {},    #关联接口
+          case_name: 企业网点--企业网点列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }
+
+          test_position_network: {  # 接口方法名
+          url: '/manager/gwforward/manager-webapi/content/mapPostion/position_page',
+          level: 高,
+          author: 陈建波,
+          bar: {mobileStatu: -1,statu: -1,cid: 0,pageSize: 15,currentPage: 1},
+          relation_data: {},    #关联接口
+          case_name: 企业网点--企业网点列表,
+          expected: [200],  # 预期结果
+          mode: get,  # 请求类型
+          re_bar: json, # 请求参数
+          }

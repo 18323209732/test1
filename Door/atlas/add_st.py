@@ -1,6 +1,8 @@
 # coding=utf-8
 import unittest
 import traceback
+from random import choice
+
 import requests
 
 from Common.CusMethod import random_str
@@ -13,6 +15,25 @@ from ddt import ddt, data,file_data
 from Common.ReExecution import Get_Cls_Fun
 from Common.Route import Any_Path
 from Door.atlas.Public import Public_Data as curre
+from Door.news.infoes_st import picture_ids, news_ids
+
+my_data = curre()
+try:
+    atlas_ids = my_data.get_atlas()
+except:
+    atlas_ids = []
+try:
+    class_ids = my_data.get_class()
+except:
+    class_ids = []
+
+pb_data = type("pb_data", (object,), {})
+setattr(pb_data, "news_ids", news_ids)
+setattr(pb_data, "picture_ids", picture_ids)
+setattr(pb_data, "class_ids", class_ids)
+setattr(pb_data, "atlas_ids", atlas_ids)
+setattr(pb_data, "news_ids", news_ids)
+
 
 @ddt
 class add_atlas(MyTest):
@@ -27,17 +48,30 @@ class add_atlas(MyTest):
         # 添加企业图册
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            class_id = next(curre().get_class(value='id'))
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            id = next(curre().picture_name(value='id'))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
 
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+
+            img_url = value.get('imgUrl')
+            id = value.get('id')
+            name = value.get('name')
             self.data['commonAtlasName'] = random_str("自动化企业图册...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细内容数据...</p>\n")
             self.data['commonAtlasSummary'] = random_str("自动化企业图册描述数据...")
             self.data['keywords'] = random_str("关键词...")
-            self.data["atlasImgs"][0]['atlasCategoryArr'] = [class_id]
-            self.data["atlasImgs"][0]['id'] = id
-            self.data["atlasImgs"][0]['thumbId'] = id
+            self.data['atlasCategoryArr'] = [f"{class_id}"]
+            self.data["atlasImgs"][0]['id'] = f"{id}"
+            self.data["atlasImgs"][0]['imgId'] = f"{id}"
+            self.data["atlasImgs"][0]['thumbId'] = f"{id}"
+            self.data["atlasImgs"][0]['name'] = name
             self.data["atlasImgs"][0]['relativeImgUrl'] = img_url
             self.data["atlasImgs"][0]['imgUrl'] = img_url
             self.data["atlasImgs"][0]['thumbUrl'] = img_url
@@ -60,27 +94,47 @@ class add_atlas(MyTest):
         # 添加企业图册_多张图片
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
 
-            id_1 = next(curre().picture_name(value='id'))
-            id_2 = next(curre().picture_name(value='id'))
-            class_id = next(curre().get_class(value='id'))
+            if len(pb_data.picture_ids) > 2:
+                value = pb_data.picture_ids[0]
+                value_ = pb_data.picture_ids[1]
+            else:
+                my_data.file_upload()
+                my_data.file_upload()
+                pb_data.picture_ids = my_data.get_pictures()
+                value = pb_data.picture_ids[0]
+                value_ = pb_data.picture_ids[1]
+            id_1 = value.get('id')
+            id_2 = value_.get('id')
 
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            img_url_1 = next(curre().get_pictures(value='imgUrl'))
+            img_url = value.get('imgUrl')
+            img_url_1 = value_.get('imgUrl')
+            name_1 = value.get('name')
+            name_2 = value_.get('name')
             self.data['commonAtlasName'] = random_str("自动化企业图册...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细内容数据...</p>\n")
             self.data['commonAtlasSummary'] = random_str("自动化企业图册描述数据...")
             self.data['keywords'] = random_str("关键词...")
-            self.data["atlasImgs"][0]['atlasCategoryArr'] = [class_id]
-            self.data["atlasImgs"][0]['id'] = id_1
-            self.data["atlasImgs"][0]['thumbId'] = id_1
+
+            self.data['atlasCategoryArr'] = [f"{class_id}"]
+            self.data["atlasImgs"][0]['id'] = f"{id_1}"
+            self.data["atlasImgs"][0]['imgId'] = f"{id_1}"
+            self.data["atlasImgs"][0]['thumbId'] = f"{id_1}"
+            self.data["atlasImgs"][0]['name'] = name_1
             self.data["atlasImgs"][0]['relativeImgUrl'] = img_url
             self.data["atlasImgs"][0]['imgUrl'] = img_url
             self.data["atlasImgs"][0]['thumbUrl'] = img_url
             self.data["atlasImgs"][0]['relativeThumbUrl'] = img_url
             self.data["atlasImgs"][1]['atlasCategoryArr'] = [class_id]
-            self.data["atlasImgs"][1]['id'] = id_2
-            self.data["atlasImgs"][1]['thumbId'] = id_2
+            self.data["atlasImgs"][1]['id'] = f"{id_2}"
+            self.data["atlasImgs"][1]['imgId'] = f"{id_2}"
+            self.data["atlasImgs"][1]['thumbId'] = f"{id_2}"
+            self.data["atlasImgs"][1]['name'] = name_2
             self.data["atlasImgs"][1]['relativeImgUrl'] = img_url_1
             self.data["atlasImgs"][1]['imgUrl'] = img_url_1
             self.data["atlasImgs"][1]['thumbUrl'] = img_url_1
@@ -131,8 +185,12 @@ class add_atlas(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                img_url = choice(pb_data.picture_ids).get("imgUrl")
+            else:
+                img_url = choice(pb_data.picture_ids).get("imgUrl")
 
-            img_url = next(curre().get_pictures(value='imgUrl'))
             img_name = img_url.split("/")[-1]
 
             url = ConfigYaml(self.projectName).base_url + f"/repository/image/{img_name}"
@@ -175,9 +233,17 @@ class add_atlas(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-
-            id_one = next(curre().get_atlas(value="id"))
-            id_two = next(curre().get_atlas(value="id"))
+            if len(pb_data.atlas_ids) > 2:
+                value = pb_data.atlas_ids[0]
+                value_ = pb_data.atlas_ids[1]
+            else:
+                my_data.add_atlas()
+                my_data.add_atlas()
+                pb_data.atlas_ids = my_data.get_atlas()
+                value = pb_data.atlas_ids[0]
+                value_ = pb_data.atlas_ids[1]
+            id_one = value.get("id")
+            id_two = value_.get("id")
             url = ConfigYaml(self.projectName).base_url + self.url + f"&sectionIds={id_one}&targetId={id_two}&minOrder=9&maxOrder=10&direction=-1"
             r = requests.get(url, headers=self.headers, stream=True, verify=False)
             self.result = r.json()
@@ -197,8 +263,11 @@ class add_atlas(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-
-            id = next(curre().get_atlas(value="id"))
+            if not pb_data.atlas_ids:
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = pb_data.atlas_ids.pop(0).get("id")
+            else:
+                id = pb_data.atlas_ids.pop(0).get("id")
             url = ConfigYaml(self.projectName).base_url + self.url + f"&id={id}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -218,9 +287,16 @@ class add_atlas(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+            if len(pb_data.atlas_ids) > 2:
+                id_1 = pb_data.atlas_ids.pop(0).get("id")
+                id_2 = pb_data.atlas_ids.pop(1).get("id")
+            else:
+                my_data.add_atlas()
+                my_data.add_atlas()
+                pb_data.atlas_ids = my_data.get_atlas()
+                id_1 = pb_data.atlas_ids.pop(0).get("id")
+                id_2 = pb_data.atlas_ids.pop(1).get("id")
 
-            id_1 = next(curre().get_atlas(value="id"))
-            id_2 = next(curre().get_atlas(value="id"))
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id_1},{id_2}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -238,19 +314,33 @@ class add_atlas(MyTest):
         # 添加多分类
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            id = next(curre().picture_name(value='id'))
-            class_id_1 = next(curre().get_class(value='id'))
-            class_id_2 = next(curre().get_class(value='id'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+            img_url = value.get('imgUrl')
+            id = value.get('id')
+            name = value.get('name')
+            if len(pb_data.class_ids) > 2:
+                class_id_1 = pb_data.class_ids[0].get("id")
+                class_id_2 = pb_data.class_ids[1].get("id")
+            else:
+                my_data.add_class()
+                my_data.add_class()
+                pb_data.class_ids = my_data.get_class()
+                class_id_1 = pb_data.class_ids[0].get("id")
+                class_id_2 = pb_data.class_ids[1].get("id")
 
             self.data['commonAtlasName'] = random_str("自动化企业图册...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细内容数据...</p>\n")
             self.data['commonAtlasSummary'] = random_str("自动化企业图册描述数据...")
             self.data['keywords'] = random_str("关键词...")
-            self.data["atlasImgs"][0]['atlasCategoryArr'] = [class_id_1,class_id_2]
-            self.data["atlasImgs"][0]['id'] = id
-            self.data["atlasImgs"][0]['thumbId'] = id
+            self.data['atlasCategoryArr'] = [f"{class_id_1}", f"{class_id_2}"]
+            self.data["atlasImgs"][0]['id'] = f"{id}"
+            self.data["atlasImgs"][0]['imgId'] = f"{id}"
+            self.data["atlasImgs"][0]['thumbId'] = f"{id}"
+            self.data["atlasImgs"][0]['name'] = name
             self.data["atlasImgs"][0]['relativeImgUrl'] = img_url
             self.data["atlasImgs"][0]['imgUrl'] = img_url
             self.data["atlasImgs"][0]['thumbUrl'] = img_url
@@ -273,9 +363,13 @@ class add_atlas(MyTest):
         # 快捷添加分类
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            img_id = next(curre().get_pictures(value='id'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+            img_url = value.get('imgUrl')
+            img_id = value.get('id')
 
             self.data['atlasCategory']['name'] = random_str("自动化企业图册分类...")
             self.data['atlasCategory']['imgUrl'] = img_url
@@ -322,18 +416,34 @@ class add_atlas(MyTest):
         # 添加
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_id()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
 
-            class_id = next(curre().get_class(value='id'))
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            id = next(curre().picture_name(value='id'))
-            news_id = next(curre().get_news_id(value='id'))
-
+            img_url = value.get('imgUrl')
+            id = value.get('id')
+            name = value.get('name')
             self.data['commonAtlasName'] = random_str("自动化企业图册...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细内容数据...</p>\n")
             self.data['commonAtlasSummary'] = random_str("自动化企业图册描述数据...")
             self.data['keywords'] = random_str("关键词...")
-            self.data["atlasImgs"][0]['atlasCategoryArr'] = [class_id]
-            self.data["atlasImgs"][0]['id'] = id
+            self.data['atlasCategoryArr'] = [f"{class_id}"]
+            self.data["atlasImgs"][0]['id'] = f"{id}"
+            self.data["atlasImgs"][0]['imgId'] = f"{id}"
+            self.data["atlasImgs"][0]['thumbId'] = f"{id}"
+            self.data["atlasImgs"][0]['name'] = name
             self.data["atlasImgs"][0]['relativeImgUrl'] = img_url
             self.data["atlasImgs"][0]['imgUrl'] = img_url
             self.data["atlasImgs"][0]['thumbUrl'] = img_url
@@ -358,17 +468,34 @@ class add_atlas(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            class_id = next(curre().get_class(value='id'))
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            id = next(curre().picture_name(value='id'))
-            news_id = next(curre().get_news_id(value='id'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_id()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
 
+            img_url = value.get('imgUrl')
+            id = value.get('id')
+            name = value.get('name')
             self.data['commonAtlasName'] = random_str("自动化企业图册...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细内容数据...</p>\n")
             self.data['commonAtlasSummary'] = random_str("自动化企业图册描述数据...")
             self.data['keywords'] = random_str("关键词...")
-            self.data["atlasImgs"][0]['atlasCategoryArr'] = [class_id]
-            self.data["atlasImgs"][0]['id'] = id
+            self.data['atlasCategoryArr'] = [f"{class_id}"]
+            self.data["atlasImgs"][0]['id'] = f"{id}"
+            self.data["atlasImgs"][0]['imgId'] = f"{id}"
+            self.data["atlasImgs"][0]['thumbId'] = f"{id}"
+            self.data["atlasImgs"][0]['name'] = name
             self.data["atlasImgs"][0]['relativeImgUrl'] = img_url
             self.data["atlasImgs"][0]['imgUrl'] = img_url
             self.data["atlasImgs"][0]['thumbUrl'] = img_url
@@ -411,13 +538,27 @@ class add_atlas(MyTest):
 
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
-    def test_addlink10_atlas(self):
+    def test_addlink_atlas(self):
         # 添加链接
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            img_url = next(curre().get_pictures(value='imgUrl'))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
 
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+
+            img_url = value.get('imgUrl')
+            id = value.get('id')
+            self.data['atlasCategoryArr'] = [f"{class_id}"]
             self.data['commonAtlasName'] = random_str("自动化企业图册链接...")
+            self.data['imgId'] = id
             self.data['linkAtlasName'] = random_str("自动化企业图册链接...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细链接内容数据...</p>\n")
             self.data['linkAtlasSummary'] = random_str("自动化企业图册描述链接数据...")
@@ -442,9 +583,32 @@ class add_atlas(MyTest):
         # 多选分类链接
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            class_id_1 = next(curre().get_class(value='id'))
-            class_id_2 = next(curre().get_class(value='id'))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+
+            if len(pb_data.class_ids) > 2:
+                class_id_1 = pb_data.class_ids[0].get("id")
+                class_id_2 = pb_data.class_ids[1].get("id")
+            else:
+                my_data.add_class()
+                my_data.add_class()
+                pb_data.class_ids = my_data.get_class()
+                class_id_1 = pb_data.class_ids[0].get("id")
+                class_id_2 = pb_data.class_ids[1].get("id")
+
+            img_url = value.get('imgUrl')
+            id = value.get('id')
+            self.data['atlasCategoryArr'] = [f"{class_id}"]
+            self.data['imgId'] = id
             self.data['commonAtlasName'] = random_str("自动化企业图册链接...")
             self.data['linkAtlasName'] = random_str("自动化企业图册链接...")
             self.data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细链接内容数据...</p>\n")
@@ -492,9 +656,16 @@ class add_atlas(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+            if len(pb_data.atlas_ids) > 2:
+                id_one = pb_data.atlas_ids[0].get("id")
+                id_two = pb_data.atlas_ids[1].get("id")
+            else:
+                my_data.add_atlas()
+                my_data.add_atlas()
+                pb_data.atlas_ids = my_data.get_atlas()
+                id_one = pb_data.atlas_ids[0].get("id")
+                id_two = pb_data.atlas_ids[1].get("id")
 
-            id_one = next(curre().get_atlas(value="id"))
-            id_two = next(curre().get_atlas(value="id"))
             del self.headers[self.type]
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&sectionIds={id_one}&targetId={id_two}&minOrder={id_one}&maxOrder={id_two}&direction=-1"
@@ -532,8 +703,12 @@ class add_atlas(MyTest):
         # 搜索
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
+            if not pb_data.atlas_ids:
+                pb_data.atlas_ids = my_data.get_atlas()
+                name = choice(pb_data.atlas_ids).get("name")
+            else:
+                name = choice(pb_data.atlas_ids).get("name")
 
-            name = next(curre().get_atlas(value="name"))
             self.data["keywords"] = name
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -571,9 +746,12 @@ class add_atlas(MyTest):
         # 编辑
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-
+            if not pb_data.atlas_ids:
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = choice(pb_data.atlas_ids).get("id")
+            else:
+                id = choice(pb_data.atlas_ids).get("id")
             self.data['commonAtlasName'] = random_str("编辑后的企业图册链接...")
-            id = next(curre().get_atlas(value="id"))
             self.data['id'] = id
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -596,8 +774,16 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_atlas(value="id"))
-            class_id = next(curre().get_class(value='id'))
+            if not pb_data.atlas_ids:
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = choice(pb_data.atlas_ids).get("id")
+            else:
+                id = choice(pb_data.atlas_ids).get("id")
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
 
             url = ConfigYaml(self.projectName).base_url + self.url +f"&atlasIds={id}&categoryIds={class_id}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -618,10 +804,20 @@ class add_atlas(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-
-            id = next(curre().get_atlas(value="id"))
-            id_2 = next(curre().get_atlas(value="id"))
-            class_id = next(curre().get_class(value='id'))
+            if len(pb_data.atlas_ids) > 2:
+                id = pb_data.atlas_ids[0].get("id")
+                id_2 = pb_data.atlas_ids[1].get("id")
+            else:
+                my_data.add_atlas()
+                my_data.add_atlas()
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = pb_data.atlas_ids[0].get("id")
+                id_2 = pb_data.atlas_ids[1].get("id")
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id},{id_2}&categoryIds={class_id}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -643,7 +839,12 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_atlas(value="id"))
+            if not pb_data.atlas_ids:
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = choice(pb_data.atlas_ids).get("id")
+            else:
+                id = choice(pb_data.atlas_ids).get("id")
+
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id}&state=1"
 
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -666,7 +867,11 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_atlas(value="id"))
+            if not pb_data.atlas_ids:
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = choice(pb_data.atlas_ids).get("id")
+            else:
+                id = choice(pb_data.atlas_ids).get("id")
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id}&state=0"
 
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -687,9 +892,16 @@ class add_atlas(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+            if len(pb_data.atlas_ids) > 2:
+                id = pb_data.atlas_ids[0].get("id")
+                id_2 = pb_data.atlas_ids[1].get("id")
+            else:
+                my_data.add_atlas()
+                my_data.add_atlas()
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = pb_data.atlas_ids[0].get("id")
+                id_2 = pb_data.atlas_ids[1].get("id")
 
-            id = next(curre().get_atlas(value="id"))
-            id_2 = next(curre().get_atlas(value="id"))
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id},{id_2}&state=0"
 
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -705,14 +917,22 @@ class add_atlas(MyTest):
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_updatepishowPc_atlas(self):
-        # 批量隐藏
+        # 批量显示
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_atlas(value="id"))
-            id_2 = next(curre().get_atlas(value="id"))
+            if len(pb_data.atlas_ids) > 2:
+                id = pb_data.atlas_ids[0].get("id")
+                id_2 = pb_data.atlas_ids[1].get("id")
+            else:
+                my_data.add_atlas()
+                my_data.add_atlas()
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = pb_data.atlas_ids[0].get("id")
+                id_2 = pb_data.atlas_ids[1].get("id")
+
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id},{id_2}&state=1"
 
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -734,7 +954,11 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_atlas(value="id"))
+            if not pb_data.atlas_ids:
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = choice(pb_data.atlas_ids).get("id")
+            else:
+                id = choice(pb_data.atlas_ids).get("id")
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&id={id}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -755,9 +979,15 @@ class add_atlas(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-
-            id = next(curre().get_atlas(value="id"))
-            id_1 = next(curre().get_atlas(value="id"))
+            if len(pb_data.atlas_ids) > 2:
+                id = pb_data.atlas_ids.pop(0).get("id")
+                id_1 = pb_data.atlas_ids.pop(1).get("id")
+            else:
+                my_data.add_atlas()
+                my_data.add_atlas()
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = pb_data.atlas_ids.pop(0).get("id")
+                id_1 = pb_data.atlas_ids.pop(1).get("id")
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id},{id_1}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -795,8 +1025,14 @@ class add_atlas(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            img_id = next(curre().get_pictures(value='id'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+
+            img_url = value.get('imgUrl')
+            img_id = value.get('id')
 
             self.data['atlasCategory']['name'] = random_str("自动化普通企业图册分类...")
             self.data['atlasCategory']['imgUrl'] = img_url
@@ -823,8 +1059,14 @@ class add_atlas(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            img_id = next(curre().get_pictures(value='id'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+
+            img_url = value.get('imgUrl')
+            img_id = value.get('id')
 
             self.data['atlasCategory']['name'] = random_str("自动化链接企业图册分类...")
             self.data['atlasCategory']['imgUrl'] = img_url
@@ -871,8 +1113,14 @@ class add_atlas(MyTest):
         # 保存继续
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            img_id = next(curre().get_pictures(value='id'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+
+            img_url = value.get('imgUrl')
+            img_id = value.get('id')
 
             self.data['atlasCategory']['name'] = random_str("自动化链接企业图册分类...")
             self.data['atlasCategory']['imgUrl'] = img_url
@@ -896,23 +1144,32 @@ class add_atlas(MyTest):
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_edite_atlas(self):
-        # 编辑
+        # 编辑分类
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(curre().get_pictures(value='imgUrl'))
-            img_id = next(curre().get_pictures(value='id'))
-            id = next(curre().get_atlas(value='id'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_pictures()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                id = choice(pb_data.class_ids).get("id")
+            else:
+                id = choice(pb_data.class_ids).get("id")
 
-            self.data['id'] = id
-            self.data['name'] = random_str("编辑后的企业图册分类...")
-            self.data['imgUrl'] = img_url
-            self.data['imgId'] = img_id
-            self.data['keywords'] = random_str("编辑后的关键词...")
-            self.data["imgThumbUrl"] = img_url
-            self.data["des"] = random_str("编辑后的企业图册分类描述内容...")
-            self.data["summary"] = random_str("编辑后的企业图册分类描述内容...")
+            img_url = value.get('imgUrl')
+            img_id = value.get('id')
 
+            self.data["atlasCategory"]['id'] = id
+            self.data["atlasCategory"]['name'] = random_str("编辑后的企业图册分类...")
+            self.data["atlasCategory"]['imgUrl'] = img_url
+            self.data["atlasCategory"]['imgId'] = img_id
+            self.data["atlasCategory"]['keywords'] = random_str("编辑后的关键词...")
+            self.data["atlasCategory"]["imgThumbUrl"] = img_url
+            self.data["atlasCategory"]["des"] = random_str("编辑后的企业图册分类描述内容...")
+            self.data["atlasCategory"]["summary"] = random_str("编辑后的企业图册分类描述内容...")
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -934,7 +1191,11 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_atlas(value="id"))
+            if not pb_data.atlas_ids:
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = choice(pb_data.atlas_ids).get("id")
+            else:
+                id = choice(pb_data.atlas_ids).get("id")
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id}&state=1"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -956,7 +1217,11 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_atlas(value="id"))
+            if not pb_data.atlas_ids:
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = choice(pb_data.atlas_ids).get("id")
+            else:
+                id = choice(pb_data.atlas_ids).get("id")
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id}&state=0"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -978,8 +1243,15 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_atlas(value="id"))
-            id_ = next(curre().get_atlas(value="id"))
+            if len(pb_data.atlas_ids) > 2:
+                id = pb_data.atlas_ids[0].get("id")
+                id_ = pb_data.atlas_ids[1].get("id")
+            else:
+                my_data.add_atlas()
+                my_data.add_atlas()
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = pb_data.atlas_ids[0].get("id")
+                id_ = pb_data.atlas_ids[1].get("id")
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id},{id_}&state=0"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -1001,8 +1273,15 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_atlas(value="id"))
-            id_ = next(curre().get_atlas(value="id"))
+            if len(pb_data.atlas_ids) > 2:
+                id = pb_data.atlas_ids[0].get("id")
+                id_ = pb_data.atlas_ids[1].get("id")
+            else:
+                my_data.add_atlas()
+                my_data.add_atlas()
+                pb_data.atlas_ids = my_data.get_atlas()
+                id = pb_data.atlas_ids[0].get("id")
+                id_ = pb_data.atlas_ids[1].get("id")
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&atlasIds={id},{id_}&state=1"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -1023,8 +1302,17 @@ class add_atlas(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+            if len(pb_data.class_ids) > 2:
+                class_id_1 = pb_data.class_ids[0].get("id")
+                class_id_2 = pb_data.class_ids[1].get("id")
+            else:
+                my_data.add_class()
+                my_data.add_class()
+                pb_data.class_ids = my_data.get_class()
+                class_id_1 = pb_data.class_ids[0].get("id")
+                class_id_2 = pb_data.class_ids[1].get("id")
 
-            url = ConfigYaml(self.projectName).base_url + self.url + f"&id=3&targetId=4&type=below"
+            url = ConfigYaml(self.projectName).base_url + self.url + f"&id={class_id_1}&targetId={class_id_2}&type=above"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -1043,8 +1331,18 @@ class add_atlas(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+
+            if len(pb_data.class_ids) > 2:
+                class_id_1 = pb_data.class_ids[0].get("id")
+                class_id_2 = pb_data.class_ids[1].get("id")
+            else:
+                my_data.add_class()
+                my_data.add_class()
+                pb_data.class_ids = my_data.get_class()
+                class_id_1 = pb_data.class_ids[0].get("id")
+                class_id_2 = pb_data.class_ids[1].get("id")
                 
-            url = ConfigYaml(self.projectName).base_url + self.url + f"&id=4&targetId=6"
+            url = ConfigYaml(self.projectName).base_url + self.url + f"&id={class_id_1}&targetId={class_id_2}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -1064,9 +1362,13 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_class(value="id"))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
 
-            url = ConfigYaml(self.projectName).base_url + self.url + f"&id={id}&flag=1"
+            url = ConfigYaml(self.projectName).base_url + self.url + f"&id={class_id}&flag=1"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -1086,9 +1388,13 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_class(value="id"))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
 
-            url = ConfigYaml(self.projectName).base_url + self.url + f"&id={id}&flag=0"
+            url = ConfigYaml(self.projectName).base_url + self.url + f"&id={class_id}&flag=0"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -1108,7 +1414,11 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_class(value="id"))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                id = choice(pb_data.class_ids).get("id")
+            else:
+                id = choice(pb_data.class_ids).get("id")
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&id={id}&flag=1"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -1130,7 +1440,12 @@ class add_atlas(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(curre().get_class(value="id"))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class()
+                id = choice(pb_data.class_ids).get("id")
+            else:
+                id = choice(pb_data.class_ids).get("id")
+
             url = ConfigYaml(self.projectName).base_url + self.url + f"&id={id}&flag=0"
 
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -1141,4 +1456,3 @@ class add_atlas(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        

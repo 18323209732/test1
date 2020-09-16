@@ -11,15 +11,23 @@ from Common.DataHandle import ReRun
 import urllib3
 from random import choice
 from Door.picture.Public import Public_Data as pd
+from Door.news.infoes_st import picture_ids
 from Common.Route import Any_Path
+my_data = pd()
+try:
+    class_ids = my_data.get_class_ids()
+except:
+    class_ids = []
 
+pb_data = type("pb_data", (object,), {})
+setattr(pb_data, "picture_ids", picture_ids)
+setattr(pb_data, "class_ids", class_ids)
 
 class library_picture(MyTest):
 
     condition = True
     type_condition = True
 
-    pub_data = pd()
 
     # 新闻分类管理
     # @unittest.skipIf(condition, "暂时跳过")
@@ -53,7 +61,7 @@ class library_picture(MyTest):
             self.data['queryStatus'] = choice([0, 1, ''])
             self.data['startDate'] = get_hour_second(-7)
             self.data['endDate'] = get_hour_second(0)
-            self.data['classId'] = choice([0,1,''])
+            self.data['classId'] = choice([0, 1, ''])
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -73,8 +81,12 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-
-            self.data['name'] = next(pd().get_news(value='name'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                name = choice(pb_data.picture_ids).get("name")
+            else:
+                name = choice(pb_data.picture_ids).get("name")
+            self.data['name'] = name
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -95,7 +107,12 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(pd().get_news(value='id'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id = choice(pb_data.picture_ids).get("id")
+            else:
+                id = choice(pb_data.picture_ids).get("id")
+            self.data['id'] = id
             self.data['name'] = random_str("自动化编辑图片名称...")
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -125,7 +142,6 @@ class library_picture(MyTest):
             f.close()
             self.result = r.json()
 
-
             self.time = r.elapsed.total_seconds()
         except:
             self.singular = str(traceback.format_exc())
@@ -140,7 +156,11 @@ class library_picture(MyTest):
         try:
 
             del self.headers[self.type]
-            img_url = next(pd().picture_name(value='imgUrl'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                img_url = choice(pb_data.picture_ids).get("imgUrl")
+            else:
+                img_url = choice(pb_data.picture_ids).get("imgUrl")
 
             url = ConfigYaml(self.projectName).base_url + img_url
             r = requests.get(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -162,8 +182,18 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(pd().get_news(value='id'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id = choice(pb_data.picture_ids).get("id")
+            else:
+                id = choice(pb_data.picture_ids).get("id")
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
             self.data['ids'] = id
+            self.data['classId'] = class_id
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -184,10 +214,24 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id_one = next(pd().get_news(value='id'))
-            id_two = next(pd().get_news(value='id'))
-            id_three = next(pd().get_news(value='id'))
-            self.data['ids'] = [id_one, id_two, id_three]
+            if len(pb_data.picture_ids) > 2:
+                id_one = pb_data.picture_ids[0].get("id")
+                id_two = pb_data.picture_ids[1].get("id")
+            else:
+                my_data.file_upload()
+                my_data.file_upload()
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id_one = pb_data.picture_ids[0].get("id")
+                id_two = pb_data.picture_ids[1].get("id")
+
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+
+            self.data['classId'] = class_id
+            self.data['ids'] = [id_one, id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -208,8 +252,18 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            ids = next(pd().get_news(value='id'))
-            self.data['ids'] = ids
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id = choice(pb_data.picture_ids).get("id")
+            else:
+                id = choice(pb_data.picture_ids).get("id")
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+            self.data['ids'] = id
+            self.data['classId'] = class_id
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -230,10 +284,24 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id_one = next(pd().get_news(value='id'))
-            id_two = next(pd().get_news(value='id'))
-            id_three = next(pd().get_news(value='id'))
-            self.data['ids'] = [id_one, id_two, id_three]
+            if len(pb_data.picture_ids) > 2:
+                id_one = pb_data.picture_ids[0].get("id")
+                id_two = pb_data.picture_ids[1].get("id")
+            else:
+                my_data.file_upload()
+                my_data.file_upload()
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id_one = pb_data.picture_ids[0].get("id")
+                id_two = pb_data.picture_ids[1].get("id")
+
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+
+            self.data['classId'] = class_id
+            self.data['ids'] = [id_one, id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -254,10 +322,24 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id_one = next(pd().get_news(value='id'))
-            id_two = next(pd().get_news(value='id'))
-            id_three = next(pd().get_news(value='id'))
-            self.data['ids'] = [id_one, id_two, id_three]
+            if len(pb_data.picture_ids) > 2:
+                id_one = pb_data.picture_ids[0].get("id")
+                id_two = pb_data.picture_ids[1].get("id")
+            else:
+                my_data.file_upload()
+                my_data.file_upload()
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id_one = pb_data.picture_ids[0].get("id")
+                id_two = pb_data.picture_ids[1].get("id")
+
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+
+            self.data['classId'] = class_id
+            self.data['ids'] = [id_one, id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -278,8 +360,20 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            ids = next(pd().get_news(value='id'))
-            self.data['ids'] = ids
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id = choice(pb_data.picture_ids).get("id")
+            else:
+                id = choice(pb_data.picture_ids).get("id")
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+
+            self.data['ids'] = id
+            self.data['classId'] = class_id
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -299,10 +393,13 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id = choice(pb_data.picture_ids).get("id")
+            else:
+                id = choice(pb_data.picture_ids).get("id")
 
-            ids = next(pd().get_news_used(value="id"))
-
-            url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={ids}"
+            url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={id}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
 
@@ -321,8 +418,22 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id_one = next(pd().get_news(value='id'))
-            id_two = next(pd().get_news(value='id'))
+            if len(pb_data.picture_ids) > 2:
+                id_one = pb_data.picture_ids[0].get("id")
+                id_two = pb_data.picture_ids[1].get("id")
+            else:
+                my_data.file_upload()
+                my_data.file_upload()
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id_one = pb_data.picture_ids[0].get("id")
+                id_two = pb_data.picture_ids[1].get("id")
+
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+            self.data['classId'] = class_id
 
             url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={id_one},{id_two}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -388,8 +499,11 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-
-            img_url = next(pd().picture_name(value="imgUrl"))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                img_url = choice(pb_data.picture_ids).get("imgUrl")
+            else:
+                img_url = choice(pb_data.picture_ids).get("imgUrl")
 
             url = ConfigYaml(self.projectName).base_url + img_url
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -411,9 +525,13 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            id = next(pd().get_news(value='id'))
-            self.data['name'] = random_str("自动化图片编辑....")
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id = choice(pb_data.picture_ids).get("id")
+            else:
+                id = choice(pb_data.picture_ids).get("id")
             self.data['id'] = id
+            self.data['name'] = random_str("自动化图片编辑后的数据")
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -474,12 +592,22 @@ class library_picture(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(pd().picture_name(value="imgUrl"))
-            id = next(pd().get_news(value='id'))
-            self.data['imageUrl'] = img_url
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                value = choice(pb_data.picture_ids)
+            else:
+                value = choice(pb_data.picture_ids)
+
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+            self.data['classId'] = class_id
+            self.data['imageUrl'] = value.get("imgUrl")
             self.data['word'] = random_str("自动化测试")
             self.data['url'] = "http://www.baidu.com"
-            self.data['imageId'] = id
+            self.data['imageId'] = value.get("id")
                 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -578,8 +706,17 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-                
-            url = ConfigYaml(self.projectName).base_url + self.url + "&ids=1,2"
+            if len(pb_data.picture_ids) > 2:
+                id_one = pb_data.picture_ids[0].get("id")
+                id_two = pb_data.picture_ids[1].get("id")
+            else:
+                my_data.file_upload()
+                my_data.file_upload()
+                pb_data.picture_ids = my_data.get_picture_ids()
+                id_one = pb_data.picture_ids[0].get("id")
+                id_two = pb_data.picture_ids[1].get("id")
+
+            url = ConfigYaml(self.projectName).base_url + self.url + f"&ids={id_one},{id_two}"
             r = requests.get(url, headers=self.headers, data=self.data, stream=True, verify=False)
             if r.json():
                 self.result = {"status": 200}
@@ -620,8 +757,12 @@ class library_picture(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-
-            self.data['ids'] = next(pd().get_news(value='id'))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = pb_data.class_ids.pop(0).get("id")
+            else:
+                class_id = pb_data.class_ids.pop(0).get("id")
+            self.data['ids'] = class_id
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -642,7 +783,13 @@ class library_picture(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            self.data['id'] = next(pd().get_class(value='id'))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+
+            self.data['id'] = class_id
             self.data['className'] = random_str("编辑后的自动化测试")
             self.data['classInfo'] = random_str("编辑后的自动化测试描述")
 

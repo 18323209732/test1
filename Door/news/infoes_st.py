@@ -8,9 +8,27 @@ from Common.ReadYaml import ConfigYaml
 from Common.DataHandle import ReRun
 import urllib3
 from random import choice
-from Door.news.Public import Public_Data
+from Door.news.Public import Public_Data as pd
 from Common.CusMethod import get_data_time, random_char, thead_sort, random_str, show_sort, get_hour_second
 
+my_data = pd()
+try:
+    news_ids = my_data.get_news_ids()
+except:
+    news_ids = []
+try:
+    picture_ids = my_data.get_picture_ids()
+except:
+    picture_ids = []
+try:
+    class_ids = my_data.get_class_ids()
+except:
+    class_ids = []
+
+pb_data = type("pb_data", (object,), {})
+setattr(pb_data, "news_ids",news_ids)
+setattr(pb_data, "picture_ids", picture_ids)
+setattr(pb_data, "class_ids", class_ids)
 
 class infoes_news(MyTest):
 
@@ -18,7 +36,6 @@ class infoes_news(MyTest):
     # 新闻资讯
     type_condition = True
 
-    public_data = Public_Data()
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_all_news(self):
@@ -55,8 +72,8 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red',self.singular)
             return self.singular
-        
-    
+
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_search_news(self):
@@ -65,8 +82,11 @@ class infoes_news(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-
-            news_name = next(Public_Data().get_news_id(value='title'))
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_name = choice(pb_data.news_ids).get("title")
+            else:
+                news_name = choice(pb_data.news_ids).get("title")
 
             self.data['keywords'] = news_name
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -87,8 +107,11 @@ class infoes_news(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
-
-            class_id = next(Public_Data().get_news_class(value='id'))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_picture_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
             self.data['cateId'] = class_id
             self.data['pcStatus'] = choice([0, 1, -1])
             self.data['startDate'] = get_data_time(-7)
@@ -156,12 +179,18 @@ class infoes_news(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+            if len(pb_data.news_ids) > 2:
+                    id_one = pb_data.news_ids[0].get("id")
+                    id_two = pb_data.news_ids[1].get("id")
+            else:
+                my_data.add_news()
+                my_data.add_news()
+                pb_data.news_ids = my_data.get_news_ids()
+                id_one = pb_data.news_ids[0].get("id")
+                id_two = pb_data.news_ids[1].get("id")
 
-            news_id = Public_Data().get_news_id(value='id')
-            value = next(news_id)
-
-            self.data['targetId'] = value - 1
-            self.data['sectionIds'] = value
+            self.data['targetId'] = id_one
+            self.data['sectionIds'] = id_two
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -176,15 +205,23 @@ class infoes_news(MyTest):
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_edit_news(self):
-        # 拖拽排序
+        # 编辑新闻资讯
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_picture_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
 
-            news_id = Public_Data().get_news_id(value='id')
-            class_id = Public_Data().get_news_class(value='id')
-            self.data['id'] = str(next(news_id))
-            self.data['title'] = random_str("自动化测试")
-            self.data['infotype'] = str(next(class_id))
+            self.data['id'] = news_id
+            self.data['title'] = random_str("自动化测试编辑后数据")
+            self.data['infotype'] = class_id
             self.data['content'] = random_str("<p>自动化测试新闻资讯内容数据</p>\n")
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -206,8 +243,13 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id = Public_Data().get_news_id(value='id')
-            self.data['id'] = next(news_id)
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
+
+            self.data['id'] = news_id
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -227,10 +269,19 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id = Public_Data().get_news_id(value='id')
-            class_id = Public_Data().get_news_class(value='id')
-            self.data['id'] = next(news_id)
-            self.data['cateId'] = next(class_id)
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+
+            self.data['id'] = news_id
+            self.data['cateId'] = class_id
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -251,8 +302,13 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id = Public_Data().get_news_id(value='id')
-            self.data['id'] = next(news_id)
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
+
+            self.data['id'] = news_id
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -272,8 +328,13 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id = Public_Data().get_news_id(value='id')
-            self.data['id'] = next(news_id)
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
+
+            self.data['id'] = news_id
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -291,8 +352,13 @@ class infoes_news(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            news_id = Public_Data().get_news_id(value='id')
-            self.data['id'] = next(news_id)
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
+
+            self.data['id'] = news_id
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -312,8 +378,13 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id = Public_Data().get_news_id(value='id')
-            self.data['id'] = next(news_id)
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
+
+            self.data['id'] = news_id
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -333,8 +404,13 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id = Public_Data().get_news_id(value='id')
-            self.data['id'] = next(news_id)
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
+
+            self.data['id'] = news_id
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -353,11 +429,14 @@ class infoes_news(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            news_id = Public_Data().get_news_id(value='id')
-            news_id = next(news_id)
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id = choice(pb_data.news_ids).get("id")
+            else:
+                news_id = choice(pb_data.news_ids).get("id")
 
-            self.data['tags'][0]['infoId'] = next(Public_Data().get_news_id(value='id'))
-            self.data['tags'][1]['infoId'] = next(Public_Data().get_news_id(value='id'))
+            self.data['tags'][0]['infoId'] = news_id
+            self.data['tags'][1]['infoId'] = news_id
             self.data['id'] = news_id
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -379,8 +458,13 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id = Public_Data().get_news_id(value='id')
-            self.data['id'] = next(news_id)
+            if not pb_data.news_ids:
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id = pb_data.news_ids.pop(0).get("id")
+            else:
+                news_id = pb_data.news_ids.pop(0).get("id")
+
+            self.data['id'] = news_id
 
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
@@ -400,11 +484,23 @@ class infoes_news(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+            if len(pb_data.news_ids) > 2:
+                    news_id_one = pb_data.news_ids[0].get("id")
+                    news_id_two = pb_data.news_ids[1].get("id")
+            else:
+                my_data.add_news()
+                my_data.add_news()
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
 
-            class_id = Public_Data().get_news_class(value='id')
-            news_id_one = next(Public_Data().get_news_id(value='id'))
-            news_id_two = next(Public_Data().get_news_id(value='id'))
-            self.data['cateId'] = next(class_id)
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                class_id = choice(pb_data.class_ids).get("id")
+            else:
+                class_id = choice(pb_data.class_ids).get("id")
+
+            self.data['cateId'] = class_id
             self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -426,8 +522,16 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(Public_Data().get_news_id(value='id'))
-            news_id_two = next(Public_Data().get_news_id(value='id'))
+            if len(pb_data.news_ids) > 2:
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
+            else:
+                my_data.add_news()
+                my_data.add_news()
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
+
             self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -449,8 +553,16 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(Public_Data().get_news_id(value='id'))
-            news_id_two = next(Public_Data().get_news_id(value='id'))
+            if len(pb_data.news_ids) > 2:
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
+            else:
+                my_data.add_news()
+                my_data.add_news()
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
+
             self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -472,8 +584,16 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(Public_Data().get_news_id(value='id'))
-            news_id_two = next(Public_Data().get_news_id(value='id'))
+            if len(pb_data.news_ids) > 2:
+                news_id_one = pb_data.news_ids.pop(0).get("id")
+                news_id_two = pb_data.news_ids.pop(1).get("id")
+            else:
+                my_data.add_news()
+                my_data.add_news()
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id_one = pb_data.news_ids.pop(0).get("id")
+                news_id_two = pb_data.news_ids.pop(1).get("id")
+
             self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -495,8 +615,16 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(Public_Data().get_news_id(value='id'))
-            news_id_two = next(Public_Data().get_news_id(value='id'))
+            if len(pb_data.news_ids) > 2:
+                news_id_one = pb_data.news_ids.pop(0).get("id")
+                news_id_two = pb_data.news_ids.pop(1).get("id")
+            else:
+                my_data.add_news()
+                my_data.add_news()
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id_one = pb_data.news_ids.pop(0).get("id")
+                news_id_two = pb_data.news_ids.pop(1).get("id")
+
             self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -518,8 +646,16 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(Public_Data().get_news_id(value='id'))
-            news_id_two = next(Public_Data().get_news_id(value='id'))
+            if len(pb_data.news_ids) > 2:
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
+            else:
+                my_data.add_news()
+                my_data.add_news()
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
+
             self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -541,8 +677,16 @@ class infoes_news(MyTest):
             if self.type_condition:
                 self.headers[self.type] = self.form_type
 
-            news_id_one = next(Public_Data().get_news_id(value='id'))
-            news_id_two = next(Public_Data().get_news_id(value='id'))
+            if len(pb_data.news_ids) > 2:
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
+            else:
+                my_data.add_news()
+                my_data.add_news()
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
+
             self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -563,9 +707,16 @@ class infoes_news(MyTest):
         try:
             if self.type_condition:
                 self.headers[self.type] = self.form_type
+            if len(pb_data.news_ids) > 2:
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
+            else:
+                my_data.add_news()
+                my_data.add_news()
+                pb_data.news_ids = my_data.get_news_ids()
+                news_id_one = pb_data.news_ids[0].get("id")
+                news_id_two = pb_data.news_ids[1].get("id")
 
-            news_id_one = next(Public_Data().get_news_id(value='id'))
-            news_id_two = next(Public_Data().get_news_id(value='id'))
             self.data['id'] = [news_id_one, news_id_two]
 
             url = ConfigYaml(self.projectName).base_url + self.url
@@ -597,7 +748,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_add_news(self):
@@ -605,7 +756,11 @@ class infoes_news(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            id = str(next(Public_Data().get_news_class(value='id')))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                id = choice(pb_data.class_ids).get("id")
+            else:
+                id = choice(pb_data.class_ids).get("id")
             self.data['infotype'] = id
             self.data['cateGoryIds'] = id
             self.data['title'] = random_str("自动化新增普通新闻资讯...")
@@ -624,16 +779,24 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_addpicture_news(self):
         # 图片资讯新增
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                img_url = choice(pb_data.picture_ids).get('imgUrl')
+            else:
+                img_url = choice(pb_data.picture_ids).get('imgUrl')
 
-            img_url = next(Public_Data().get_pictures(value='imgUrl'))
-            id = str(next(Public_Data().get_news_class(value='id')))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                id = choice(pb_data.class_ids).get("id")
+            else:
+                id = choice(pb_data.class_ids).get("id")
             self.data['infotype'] = id
             self.data['cateGoryIds'] = id
             self.data['title'] = random_str("自动化新增图片新闻资讯")
@@ -657,7 +820,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_addlink_news(self):
@@ -665,8 +828,18 @@ class infoes_news(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(Public_Data().get_pictures(value='imgUrl'))
-            id = str(next(Public_Data().get_news_class(value='id')))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                img_url = choice(pb_data.picture_ids).get('imgUrl')
+            else:
+                img_url = choice(pb_data.picture_ids).get('imgUrl')
+
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                id = choice(pb_data.class_ids).get("id")
+            else:
+                id = choice(pb_data.class_ids).get("id")
+
             self.data['infotype'] = id
             self.data['cateGoryIds'] = id
             self.data['title'] = random_str("自动化新增图片新闻资讯")
@@ -683,7 +856,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_getkeywords_news(self):
@@ -700,7 +873,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_addcategor_news(self):
@@ -720,7 +893,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_timing_news(self):
@@ -745,7 +918,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_brelevant_news(self):
@@ -753,7 +926,12 @@ class infoes_news(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            id = str(next(Public_Data().get_news_class(value='id')))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                id = choice(pb_data.class_ids).get("id")
+            else:
+                id = choice(pb_data.class_ids).get("id")
+
             self.data['infotype'] = id
             self.data['cateGoryIds'] = id
             self.data['title'] = random_str("自动化新增相关内容新闻资讯")
@@ -762,7 +940,7 @@ class infoes_news(MyTest):
             self.data['keyWords'] = random_str("关键词....")
             self.data['author'] = random_str("自动化测试...")
             self.data['source'] = random_str("自动化测试来源...")
-            contentList = next(Public_Data().get_application)
+            contentList = next(pd().get_application)
             self.data['relecontentList'][1]['contentList'] = [contentList]
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
@@ -773,7 +951,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_extension_news(self):
@@ -781,7 +959,11 @@ class infoes_news(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            id = str(next(Public_Data().get_news_class(value='id')))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                id = choice(pb_data.class_ids).get("id")
+            else:
+                id = choice(pb_data.class_ids).get("id")
             self.data['infotype'] = id
             self.data['cateGoryIds'] = id
             self.data['title'] = random_str("自动化新增推广优化新闻资讯")
@@ -801,15 +983,18 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_senior_news(self):
         # 高级设置
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
-
-            id = str(next(Public_Data().get_news_class(value='id')))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                id = choice(pb_data.class_ids).get("id")
+            else:
+                id = choice(pb_data.class_ids).get("id")
             self.data['infotype'] = id
             self.data['cateGoryIds'] = id
             self.data['title'] = random_str("自动化新增高级设置新闻资讯")
@@ -820,7 +1005,7 @@ class infoes_news(MyTest):
             self.data['source'] = random_str("自动化测试来源...")
             self.data['pubDate'] = get_hour_second(2)
             self.data['seoAddDescription'] = random_str("高级设置描述...")
-                
+
             url = ConfigYaml(self.projectName).base_url + self.url
             r = requests.post(url, headers=self.headers, json=self.data, stream=True, verify=False)
             self.result = r.json()
@@ -830,18 +1015,29 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_cmuchpicture_news(self):
         # 多图片上传
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
+            if len(pb_data.picture_ids) > 2:
+                img_url_one = pb_data.picture_ids[0].get("imgUrl")
+                img_url_two = pb_data.picture_ids[1].get("imgUrl")
+            else:
+                my_data.file_upload()
+                my_data.file_upload()
+                pb_data.picture_ids = my_data.get_picture_ids()
+                img_url_one = pb_data.picture_ids[0].get("imgUrl")
+                img_url_two = pb_data.picture_ids[1].get("imgUrl")
 
-            img_url_one = next(Public_Data().get_pictures(value='imgUrl'))
-            img_url_two = next(Public_Data().get_pictures(value='imgUrl'))
+            if not pb_data.class_ids:
+                pb_data.class_ids = my_data.get_class_ids()
+                id = choice(pb_data.class_ids).get("id")
+            else:
+                id = choice(pb_data.class_ids).get("id")
 
-            id = str(next(Public_Data().get_news_class(value='id')))
             self.data['infotype'] = id
             self.data['cateGoryIds'] = id
             self.data['title'] = random_str("自动化新增多图片新闻资讯")
@@ -869,7 +1065,7 @@ class infoes_news(MyTest):
             self.singular = str(traceback.format_exc())
             outcome('red', self.singular)
             return self.singular
-        
+
     # @unittest.skipIf(condition, "暂时跳过")
     @ReRun(MyTest.setUp)
     def test_aselect_news(self):
@@ -877,7 +1073,11 @@ class infoes_news(MyTest):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
 
-            img_url = next(Public_Data().get_pictures(value='imgUrl'))
+            if not pb_data.picture_ids:
+                pb_data.picture_ids = my_data.get_picture_ids()
+                img_url = choice(pb_data.picture_ids).get('imgUrl')
+            else:
+                img_url = choice(pb_data.picture_ids).get('imgUrl')
 
             self.data['title'] = random_str("自动化新增选择连接新闻资讯99...")
             self.data['content'] = random_str("<p>自动化新增选择连接新闻资讯内容....</p>\n")

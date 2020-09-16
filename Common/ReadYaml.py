@@ -25,6 +25,7 @@ class ConfigYaml:
         self.path = Any_Path(self.dir, self.file)
         if os.path.exists(self.path):
             f = open(self.path, encoding=self.encoding)
+            yaml.warnings({'YAMLLoadWarning': False})
             data = yaml.load(f)
             f.close()
             return data
@@ -100,6 +101,7 @@ class CaseYaml:
         self.path = Any_Path(self.dir, self.file)
         if os.path.exists(self.path):
             f = open(self.path, encoding=self.encoding)
+            yaml.warnings({'YAMLLoadWarning': False})
             data = yaml.load(f)
             f.close()
             return data
@@ -145,6 +147,7 @@ class ReadPublic:
         self.path = Any_Path(self.dir, self.catalog, self.file)
         if os.path.exists(self.path):
             f = open(self.path, encoding=self.encoding)
+            yaml.warnings({'YAMLLoadWarning': False})
             data = yaml.load(f)
             f.close()
             return data

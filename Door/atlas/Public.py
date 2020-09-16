@@ -17,8 +17,12 @@ from Common.Route import Any_Path
 
 projectName = ConfigYaml("projectName").base_config
 from Common.ReExecution import ReExecution
-from Door.picture.Public import Public_Data as picture
-from Door.news.Public import Public_Data as pub_news
+
+from Door.news.infoes_st import picture_ids, news_ids , my_data
+from Door.news.infoes_st import news_ids as class_ids
+
+picture_data = type("picture_data", (object,), {})
+setattr(picture_data, "picture_ids", picture_ids)
 
 
 class Public_Data:
@@ -48,20 +52,37 @@ class Public_Data:
         url = self.url + url
         data = self.public_data.public_value("bar")
 
-        img_url = next(pub_news().get_pictures(value='imgUrl'))
-        id = next(picture().picture_name(value='id'))
-
+        if not picture_data.picture_ids:
+            picture_data.picture_ids = my_data.get_picture_ids()
+            value = choice(picture_data.picture_ids)
+        else:
+            value = choice(picture_data.picture_ids)
+        if not class_data.get_class:
+            class_data.get_class = class_pd.get_class()
+            id_ = choice(class_data.get_class).get("id")
+        else:
+            id_ = choice(class_data.get_class).get("id")
+        img_url = value.get("imgUrl")
+        id = value.get("id")
+        name = value.get("name")
         data['commonAtlasName'] = random_str("自动化企业图册...")
         data['commonAtlasDescription'] = random_str("<p>自动化企业图册详细内容数据...</p>\n")
         data['commonAtlasSummary'] = random_str("自动化企业图册描述数据...")
         data['keywords'] = random_str("关键词...")
-        data["atlasImgs"][0]['id'] = id
+        data['atlasCategoryArr'] = [f"{id_}"]
+        data["atlasImgs"][0]['id'] = f"{id}"
+        data["atlasImgs"][0]['imgId'] = f"{id}"
+        data["atlasImgs"][0]['thumbId'] = f"{id}"
+        data["atlasImgs"][0]['name'] = name
         data["atlasImgs"][0]['relativeImgUrl'] = img_url
         data["atlasImgs"][0]['imgUrl'] = img_url
         data["atlasImgs"][0]['thumbUrl'] = img_url
         data["atlasImgs"][0]['relativeThumbUrl'] = img_url
+
         self.headers[self.type] = self.json_type
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+
+
 
     def file_upload(self):
         '''
@@ -72,7 +93,8 @@ class Public_Data:
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
         file_path = Any_Path("File", "picture.jpg")
-        del self.headers[self.type]
+        if self.headers[self.type]:
+            del self.headers[self.type]
         f = open(file_path, "rb")
         file = {"file": f}
         self.public_data = ReadPublic(catalog='atlas', key="file_upload")
@@ -93,8 +115,16 @@ class Public_Data:
         url = self.url + url
         data = self.public_data.public_value("bar")
 
-        img_url = next(pub_news().get_pictures(value='imgUrl'))
-        img_id = next(pub_news().get_pictures(value='id'))
+        if not picture_data.picture_ids:
+            picture_data.picture_ids = my_data.get_picture_ids()
+            value = choice(picture_data.picture_ids)
+        else:
+            value = choice(picture_data.picture_ids)
+
+
+        img_url = value.get("imgUrl")
+        img_id = value.get("id")
+
         data['atlasCategory']['name'] = random_str("自动化企业图册分类...")
         data['atlasCategory']['imgUrl'] = img_url
         data['atlasCategory']['imgId'] = img_id
@@ -106,7 +136,7 @@ class Public_Data:
 
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
 
-    @ReExecution(add_atlas, status=200, response_list="pres")
+    # @ReExecution(add_atlas, status=200, response_list="pres")
     def get_atlas(self):
         '''
         获取新闻资讯列表数据
@@ -121,10 +151,19 @@ class Public_Data:
         data = self.public_data.public_value("bar")
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
         result = r.json()
+        if result.get("data").get("pres"):
+            return result.get("data").get("pres")
+        else:
+            self.add_atlas()
+            r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
+            result = r.json()
+            if result.get("data").get("pres"):
+                return result.get("data").get("pres")
+            else:
+                return False
 
-        return result
 
-    @ReExecution(add_class, status=200)
+    # @ReExecution(add_class, status=200)
     def get_class(self):
         '''
         获取新闻资讯列表数据
@@ -138,10 +177,17 @@ class Public_Data:
         r = requests.get(url, headers=self.headers, stream=True, verify=False)
         result = r.json()
 
-        return result
+        if result.get("data").get("list"):
+            return result.get("data").get("list")
+        else:
+            self.add_class()
+            r = requests.post(url, headers=self.headers, stream=True, verify=False)
+            result = r.json()
+            if result.get("data").get("list"):
+                return result.get("data").get("list")
+            else:
+                return False
 
-
-    @ReExecution(file_upload, status='200', response_list='list')
     def get_pictures(self):
         '''
         获取新闻资讯分类数据
@@ -154,8 +200,16 @@ class Public_Data:
         data = self.public_data.public_value("bar")
         r = requests.get(url, headers=self.headers, data=data, stream=True, verify=False)
         result = r.json()
-
-        return result
+        if result.get("data").get("list"):
+            return result.get("data").get("list")
+        else:
+            self.file_upload()
+            r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
+            result = r.json()
+            if result.get("data").get("list"):
+                return result.get("data").get("list")
+            else:
+                return False
 
     def add_classnews(self):
         '''
@@ -169,7 +223,11 @@ class Public_Data:
         self.headers[self.type] = self.json_type
 
         data = self.public_data.public_value("bar")
-        img_url = next(Public_Data().get_pictures(value='imgUrl'))
+        if not picture_data.picture_ids:
+            picture_data.picture_ids = my_data.get_picture_ids()
+            img_url = choice(picture_data.picture_ids).get("imgUrl")
+        else:
+            img_url = choice(picture_data.picture_ids).get("imgUrl")
 
         data['name'] = random_str("自动化新增分类...")
         data['des'] = random_str("<p>自动化新增分类描述数据...</p>\n")
@@ -180,7 +238,7 @@ class Public_Data:
         data['keywords'] = random_str("关键词...")
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
 
-    @ReExecution(add_classnews, response_list='data')  # value='id'
+    # @ReExecution(add_classnews, response_list='data')  # value='id'
     def get_news_class(self):
         '''
         获取新闻资讯分类数据
@@ -195,7 +253,16 @@ class Public_Data:
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
         result = r.json()
 
-        return result
+        if result.get("data").get("data"):
+            return result.get("data").get("data")
+        else:
+            self.add_classnews()
+            r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
+            result = r.json()
+            if result.get("data").get("data"):
+                return result.get("data").get("data")
+            else:
+                return False
 
     def add_news(self):
         '''
@@ -210,16 +277,21 @@ class Public_Data:
         url = self.url + url
         data = self.public_data.public_value("bar")
 
-        id = str(next(Public_Data().get_news_class(value='id')))
+        if not class_data.class_ids:
+            class_data.class_ids = class_pd.get_news_class()
+            id_ = choice(class_data.class_ids).get("id")
+        else:
+            id_ = choice(class_data.class_ids).get("id")
+
         data['title'] = random_str("自动化新增新闻资讯")
         data['content'] = random_str("<p>自动化新增新闻资讯内容....</p>\n")
-        data['infotype'] = id
-        data['cateGoryIds'] = id
+        data['infotype'] = id_
+        data['cateGoryIds'] = id_
 
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
 
 
-    @ReExecution(add_news, response_list='pres')
+    # @ReExecution(add_news, response_list='pres')
     def get_news_id(self):
         '''
         获取新闻资讯列表数据
@@ -233,26 +305,24 @@ class Public_Data:
         data = self.public_data.public_value("bar")
         r = requests.post(url, headers=self.headers, json=data, stream=True, verify=False)
         result = r.json()
+        if result.get("data").get("pres"):
+            return result.get("data").get("pres")
+        else:
+            self.add_news()
+            r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
+            result = r.json()
+            if result.get("data").get("pres"):
+                return result.get("data").get("pres")
+            else:
+                return False
 
-        return result
 
-    @ReExecution(file_upload, status='200')   #imgUrl
-    def picture_name(self):
-        '''
-        获取新闻资讯列表数据
-        :return:
-        '''
+class_pd = Public_Data()
+try:
+    get_class = class_pd.get_class()
+except:
+    get_class = []
+class_data = type("class_data", (object,), {})
+setattr(class_data, "class_ids", class_ids)
+setattr(class_data, "get_class", get_class)
 
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        self.public_data = ReadPublic(catalog='atlas', key="picture_url")
-        url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}&pageSize=15&currentPage=1&queryStatus=&startDate=&endDate=&name=&classId="
-        url = self.url + url
-        data = self.public_data.public_value("bar")
-        r = requests.get(url, headers=self.headers, json=data, stream=True, verify=False)
-        result = r.json()
-
-        return result
-
-# if __name__=="__main__":
-#     print(next(Public_Data().get_class(value='id')))
-    # pass

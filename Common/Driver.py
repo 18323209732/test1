@@ -2,7 +2,7 @@ from selenium import webdriver
 from Common.Route import Any_Path
 
 
-def browser(switch=True):
+def browser(switch=False):
     """Ｆａｌｓｅ
     浏览器驱动程序
     :param switch: 是否开启显示还是隐试浏览器

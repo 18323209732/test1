@@ -1,9 +1,9 @@
 base_url:
   Design: https://new-console.300.cn                  #会员中心地址
-  Door: https://2008185016-stsite-oper.pool602.yun300.cn     #https://2004105022-site.pool5.yun300.cn # 正式环境
+  Door: https://2007225007-site.pool202.yun300.cn/     #https://2004105022-site.pool5.yun300.cn # 正式环境
 base_config:
   tenant_key: tenantId
-  tenant_value: 208223
+  tenant_value: 205217
   json_type: application/json
   form_type: application/x-www-form-urlencoded
   type_key: Content-Type
@@ -13,13 +13,16 @@ base_config:
   new_website: "{}/manager/gwforward/manager-webapi/content/info/info_page"
   over_time: 14400                                #cookie 过期时间
   key: CEST             #JSESSIONID                                   #cookies键
-  user_name: CEM10097239                         #登录名称
-  user_pwd: zok9phwv6n                                    #密码
+  user_name: CEM10097239                      #登录名称
+  user_pwd: zok9phwv6n                                  #密码
   website: www.wholetest.euzhongtec.com                      #网站 2004105022.pool5-site.make.yun300.cn
+  design_web: http://design.yun300.cn/html/login.html    # 设计器地址
+  design_username: zhanghailong            # 设计器账号
+  design_pwd: v4                           # 设计器密码
   log_level: 10                                   #输出日志级别
   file_handler: True                             #文件输出日志，Fasle：不输入
   steam_handler: false                          #控制台输入日志 Fasle：不输入
-  frequency: 0                                  #运行失败重跑次数
+  frequency: 2                                  #运行失败重跑次数
   intervaltime: 0.1                                #失败间隔时间
   interval: 1                                      #日志间隔，1表示每多少天新建一个日志文件
   backupCount: 7                                  #日志保存最大天数
@@ -30,8 +33,8 @@ base_config:
   projectName: Door                           #项目名称
   moudleName:  #[newsclass,news] #news #[newsclass,picture,news] #newsclass                                   #运行模块
   timeout: 3                                     #超时时间
-  thread_count: 4                                 #开启线程数，开启线程数不能大于模块数
-  process: False                                 #是否开启多进程
+  thread_count: 5                                 #开启线程数，开启线程数不能大于模块数
+  process: True                                 #是否开启多进程
   sql: True                                     #sql执行开关
   redis: False                                     #redis执行开关
   Log: Log                                           #存放日志文件的目录名称
@@ -46,13 +49,13 @@ base_config:
   host: localhost                                 #数据库主机ip
   port: 3306                                          #主机sql端口
   sqlname: response                                  #数据库名称
-  pwd: '123456'                                         #数据库连接密码
+  pwd: 'jn123000'                                         #数据库连接密码
   user: root                                  #数据库连接用户
   redisip: 192.168.4.36                       #redis服务ip
   redisport: 6379                             #redis服务端口
   redisresult: redisre                        #redis表名
-  serverip: 192.168.5.240                     #服务器ip
-  serverport: 38888                          #服务器端口
+  serverip: 192.168.4.17                     #服务器ip
+  serverport: 8081                          #服务器端口
   threadrun: False                            #是否开启多线程运行
   timing: 3600                                  #定时任务间隔时间
   company: 秒                                 #定时任务执行单位,时，分，秒

@@ -1,8 +1,8 @@
 add_customer:
 - bar: {}
   url: /add/customerParam
-button: {button_id1: 23, button_id2: 22, button_id3: 17, button_id4: 16, button_id5: 15,
-  button_id6: 14, button_id7: 3, button_id8: 1}
-button_number: {number: 8}
-gotomenu: {id1: 3, id10: 51, id11: 50, id12: 49, id13: 48, id14: 47, id15: 45, id2: 2,
-  id3: 1, id4: 57, id5: 56, id6: 55, id7: 54, id8: 53, id9: 52, number: 3}
+button: {button_id1: 17, button_id10: 1, button_id2: 16, button_id3: 15, button_id4: 14,
+  button_id5: 3, button_id6: 1, button_id7: 15, button_id8: 14, button_id9: 3}
+button_number: {number: 6}
+gotomenu: {id1: 1, id10: 51, id11: 50, id12: 49, id13: 48, id14: 47, id15: 45, id2: 4,
+  id3: 3, id4: 2, id5: 1, id6: 55, id7: 54, id8: 53, id9: 52, number: 1}

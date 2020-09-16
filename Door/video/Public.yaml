@@ -1,0 +1,20 @@
+
+get_video_data:
+  url: "/manager/gwforward/dssresources/videoRepository/findByPagination"
+  bar: {}
+#/manager/gwforward/dssresources/videoRepository/getUcloudVideoSignature
+get_signature:
+  url: "/manager/gwforward/dssresources/videoRepository/getUcloudVideoSignature"
+  bar: {"method":"POST","key":"55.mp4","content_md5":"","content_type":"video/mp4","date":""}
+
+get_signature_:
+  url: "/manager/gwforward/dssresources/videoRepository/getUcloudVideoSignature"
+  bar: {"method":"PUT","key":"55.mp4","content_md5":"","content_type":"video/mp4","date":""}
+
+get_signature_one:
+  url: "/manager/gwforward/dssresources/videoRepository/getUcloudVideoSignature"
+  bar: {"method":"POST","key":"55.mp4","content_md5":"","content_type":"video/mp4","date":""}
+
+save:
+  url: "/manager/gwforward/dssresources/videoRepository/saveUcloudInfo"
+  bar: {title: 55.mp4 ,summary: "", type: 0, size: 3798643, duratio0s n: 34}

@@ -23,10 +23,11 @@ class manage_companyCategory(MyTest):
         # 添加“普通”企业下载分类，并从图片库选择图片，推广优化，html描述
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         try:
+            Public.put_img()
             self.headers = Public.readconfig_ini(v=2)
             url = ConfigYaml(self.projectName).base_url + self.url
-            imgurl = Public.readyaml(file=r'Door\AddProduct', key='p_url')
-            imgId = Public.readyaml(file=r'Door\AddProduct', key='p_id')
+            imgurl = Public.readyaml(file=r'Door/companyCategory', key='p_url')
+            imgId = Public.readyaml(file=r'Door/companyCategory', key='p_id')
             data = "id=0&type=1&parentId=&imgUrl=" + str(imgurl) + "&imgId=" + str(
                 imgId) + "&newOpen=1&mobileNewOpen=1&showFlag=1&mobileShowFlag=1&linkUrl=&mobileLinkUrl=&iconUrl=&appId=24&name=%E4%BC%81%E4%B8%9A%E4%B8%8B%E8%BD%BD%E5%88%86%E7%B1%BB01&summaryCheck=&linkPath=&linkPathMobile=&des=123456789&mobileDes=&message=&keywords=&summary=&seoState=true&hidTitle=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22oneCategoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&hidKeywords=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%85%B3%E9%94%AE%E8%AF%8D%22%2C%22id%22%3A%22categoryKeyword%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&hidDescription=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E6%8F%8F%E8%BF%B0%22%2C%22id%22%3A%22categoryDescription%22%7D%5D&hidTitleSign=_&hidKeywordsSign=%2C&hidDescriptionSign=-&hidAddDescription=&seoTitleSign=_&seoKeywordsSign=%2C&seoDescriptionSign=-&seoTitle=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22oneCategoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&seoKeywords=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%85%B3%E9%94%AE%E8%AF%8D%22%2C%22id%22%3A%22categoryKeyword%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%5D&seoDescription=%5B%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22categoryName%22%7D%2C%7B%22name%22%3A%22%E7%BD%91%E7%AB%99%E5%90%8D%E7%A7%B0%22%2C%22id%22%3A%22siteName%22%7D%2C%7B%22name%22%3A%22%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E6%8F%8F%E8%BF%B0%22%2C%22id%22%3A%22categoryDescription%22%7D%5D&seoAddDescription=&authData=%5B%7B%22authType%22%3A1%2C%22authStr%22%3A%22GW_%3A24%3Acategory%3Aview%3A%22%2C%22roleIds%22%3A%22%22%7D%5D&authStr=GW_%3A24%3Acategory%3Aview%3A&authType=1&roleIds=&"
             r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
@@ -236,5 +237,22 @@ class manage_companyCategory(MyTest):
             outcome('red', self.singular)
             return self.singular
 
+    # @unittest.skipIf(condition, "暂时跳过")
+    @ReRun(MyTest.setUp)
+    def test12_update_CateStatus(self):
+        # 隐藏电脑版链接分类
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            if self.type_condition:
+                self.headers[self.type] = self.form_type
 
-        
+            url = ConfigYaml(self.projectName).base_url + self.url
+            self.data['cateId'] = Public.readyaml(file=r'Door\companyCategory', key='C_id')
+            r = requests.post(url, headers=self.headers, data=self.data, stream=True, verify=False)
+            self.result = r.json()
+
+            self.time = r.elapsed.total_seconds()
+        except:
+            self.singular = str(traceback.format_exc())
+            outcome('red', self.singular)
+            return self.singular
