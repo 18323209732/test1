@@ -47,7 +47,8 @@ class Public_Data:
         data = self.public_data.public_value("bar")
 
         self.headers[self.type] = self.json_type
-        del self.headers[self.type]
+        if self.headers[self.type]:
+            del self.headers[self.type]
 
         r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
 

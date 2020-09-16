@@ -3,34 +3,25 @@ add_customer:
   url: /add/customerParam
 data:
   list:
-  - id: 5
-    name: "\u65B0\u589E\u7EC4967"
-    sequence: 5
-    staff:
-    - {account: '13213213131', groupId: 5, id: 2, imageId: 0, name: "\u5BA2\u670D\
-        992", sequence: 2, status: true, type: 1, typeText: QQ}
-  - id: 4
-    name: "\u65B0\u589E\u7EC4966"
-    sequence: 4
-    staff: []
   - id: 3
-    name: "\u7F16\u8F91\u7EC4556"
+    name: "\u65B0\u589E\u7EC4449"
     sequence: 3
     staff:
-    - {account: '13213213131', groupId: 3, id: 1, imageId: 0, name: "\u7F16\u8F91\u5BA2\
-        \u670D565", sequence: 5, status: true, type: 1, typeText: QQ}
+    - {account: '13213213131', groupId: 3, id: 1, imageId: 0, name: "\u5BA2\u670D\
+        457", sequence: 1, status: true, type: 1, typeText: QQ}
   - id: 2
-    name: "\u65B0\u589E\u7EC4506"
+    name: "\u65B0\u589E\u7EC4449"
     sequence: 2
     staff: []
   - id: 1
     name: "\u5728\u7EBF\u5BA2\u670D"
     sequence: 1
     staff: []
-group: {id1: 5, id10: 11, id11: 10, id12: 9, id13: 2, id14: 1, id2: 4, id3: 3, id4: 2,
-  id5: 1, id6: 17, id7: 16, id8: 15, id9: 12}
+group: {id1: 3, id10: 11, id11: 10, id12: 9, id13: 2, id14: 1, id2: 2, id3: 1, id4: 17,
+  id5: 16, id6: 15, id7: 12, id8: 30, id9: 18}
 service:
-  id1: [2]
+  id1: [1]
   id13: [6, 5, 4, 3, 2, 1]
   id3: [1]
   id4: [3]
+  id8: [20]

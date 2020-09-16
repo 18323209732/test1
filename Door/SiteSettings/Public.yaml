@@ -1,21 +1,18 @@
 add_customer:
 - bar: {}
   url: /add/customerParam
-sectors: {name1: "\u7535\u5B50\u7535\u5DE5", name10: "\u7537\u88C5", name11: "\u7AE5\u88C5",
-  name12: "\u5185\u8863", name13: "\u978B\u9774", name14: "\u7BB1\u5305", name15: "\u914D\u4EF6\
-    \u9970\u54C1", name16: "\u6A61\u80F6\u5236\u54C1", name17: "\u5851\u6599\u5236\
-    \u54C1", name18: "\u51B6\u91D1\u5236\u54C1", name19: "\u94A2\u6750", name2: "\u673A\u5E8A\
-    \u8BBE\u5907", name20: "\u5316\u5DE5\u539F\u6599", name21: "\u5316\u5DE5\u5236\
-    \u54C1", name22: "\u7EBA\u7EC7", name23: "\u7EBA\u7EC7\u8F85\u6599", name24: "\u5BB6\u7EBA\
-    \u5BB6\u9970", name25: "\u5BB6\u88C5\u5EFA\u6750", name26: "\u53A8\u623F\u7528\
-    \u54C1", name27: "\u6536\u7EB3\u6E05\u6D01", name28: "\u5DE5\u827A\u793C\u54C1",
-  name29: "\u529E\u516C\u6587\u6559", name3: "\u673A\u68B0\u4E94\u91D1", name30: "\u5C45\u5BB6\
-    \u65E5\u7528", name31: "\u98DF\u54C1", name32: "\u7AE5\u88C5", name33: "\u73A9\u5177",
-  name34: "\u6BCD\u5A74", name35: "\u7F8E\u5986", name36: "\u73E0\u5B9D", name37: "\u65E5\u5316",
-  name38: "\u7535\u8111\u53CA\u914D\u4EF6", name39: "\u7F51\u7EDC\u8BBE\u5907", name4: "\u7167\u660E\
-    \u5DE5\u4E1A", name40: "\u624B\u673A\u53CA\u914D\u4EF6", name41: "\u6570\u7801\
-    \u5F71\u97F3", name42: "\u4E2A\u4EBA\u62A4\u7406\uFF0C\u4FDD\u5065\u7528\u54C1",
-  name43: "\u5C0F\u5BB6\u7535", name44: "\u8FD0\u52A8\u7528\u54C1", name45: "\u6237\u5916\
-    \u88C5\u5907", name46: "\u7F8E\u5BB9\u5065\u8EAB", name47: "\u57F9\u8BAD\u6559\
-    \u80B2", name48: "\u5176\u5B83", name5: "\u5B89\u5168\u9632\u62A4", name6: "\u4EEA\u5668\
-    \u4EEA\u8868", name7: "\u5305\u88C5", name8: "\u5305\u88C5\u4EA7\u54C1", name9: "\u5973\u88C5"}
+sectors: {name1: Electronic electrician, name10: "Men\u2019s clothing", name11: "Children\u2019\
+    s wear", name12: Underwear, name13: Shoes, name14: Bags and suitcases, name15: Accessories,
+  name16: Rubber products, name17: Plastic products, name18: Metallurgical products,
+  name19: Steel materials, name2: Machine tool equipment, name20: Chemical materials,
+  name21: Chemicalproducts, name22: Textile, name23: Textile accessories, name24: Home
+    textiles and home furnishings, name25: Home decoration materials, name26: Kitchen
+    supplies, name27: Storage cleaning, name28: Craft gift, name29: Officeequipment
+    & supplies, name3: Mechanical hardware, name30: Home daily, name31: Food, name32: "Children\u2019\
+    s wear", name33: Toys, name34: Infant & mom, name35: Beauty makeup, name36: Jewelry,
+  name37: Daily use chemical, name38: Computer and accessories, name39: Network equipment,
+  name4: Lighting industry, name40: Mobile phone and accessories, name41: Digital
+    sound vision, name42: Personal care and health care products, name43: Small household
+    appliances, name44: Sports goods, name45: Outdoor equipment, name46: Beauty fitness,
+  name47: Training education, name48: Others, name5: Safety protection, name6: Instrument
+    and meter, name7: Packaging, name8: Packaging product, name9: "Women\u2019s dress"}

@@ -1,7 +1,13 @@
-file_id1: 28
-path1: https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2007165090/testfile001.txt
-file_id2: 27
-path2: https://ks3-cn-beijing.ksyun.com/xgw-vod/100001_2007165090/testfile001.txt
+file_id1: 149
+path1: http://cetest01.us-ca.ufileos.com/100001_2007225007/testfile001.txt
+file_id2: 150
+path2: http://cetest01.us-ca.ufileos.com/100001_2007225007/testfile001.txt
+list_id: 154
+id1: 156
+id2: 155
+list_id: 5
+id1: 7
+id2: 6
 list_id: 5
 id1: 7
 id2: 6

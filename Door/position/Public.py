@@ -114,7 +114,8 @@ class Public_Data:
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
         file_path = Any_Path("File", "picture.jpg")
-        del self.headers[self.type]
+        if self.headers[self.type]:
+            del self.headers[self.type]
         f = open(file_path, "rb")
         file = {"file": f}
         self.public_data = ReadPublic(catalog='position', key="file_upload")
