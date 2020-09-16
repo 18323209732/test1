@@ -100,3 +100,25 @@ def readconfig_ini(v=True):
         headers2.update({'Cookie': cookies_value})
         return headers2
 
+
+def put_img():
+        """
+        :param img_path:图片的路径
+        :param img_name:图片的名称
+        :param img_type:图片的类型,这里写的是image/jpeg，也可以是png/jpg
+        """
+        requests.packages.urllib3.disable_warnings()
+        headers = readconfig_ini(v=3)
+        url = readconfig_yaml() + r'/manager/gwforward/dssresources/imageRepository/imageFileUpload'
+        img_path = Any_Path('Img', '产品用图.png')
+        with open(img_path, "rb")as f:
+            body = {'file': f}  # 图片的名称、图片的绝对路径、图片的类型（就是后缀）
+            r = requests.post(url=url, headers=headers, data={'appId': ""}, files=body, verify=False)
+            result = r.json()
+            p_id = result['data']['id']
+            p_url = result['data']['imgUrl']
+            p_name = result['data']['name']
+            # print(p_name)
+            writeyaml(file='Door/companyCategory', w_key='p_id', w_value=p_id, n='a')
+            writeyaml(file='Door/companyCategory', w_key='p_url', w_value=p_url, n='a')
+

@@ -1,6 +1,7 @@
 base_url:
   Design: https://new-console.300.cn                  #会员中心地址
-  Door: https://2007225007-site.pool202.yun300.cn/     #https://2004105022-site.pool5.yun300.cn # 正式环境
+  Door: https://2009155116-site.pool202.yun300.cn   #https://2004105022-site.pool5.yun300.cn # 正式环境
+  Design_web: 2007225007.pool202-site.yun300.cn
 base_config:
   tenant_key: tenantId
   tenant_value: 205217
@@ -34,7 +35,7 @@ base_config:
   moudleName:  #[newsclass,news] #news #[newsclass,picture,news] #newsclass                                   #运行模块
   timeout: 3                                     #超时时间
   thread_count: 5                                 #开启线程数，开启线程数不能大于模块数
-  process: True                                 #是否开启多进程
+  process: False                                 #是否开启多进程
   sql: True                                     #sql执行开关
   redis: False                                     #redis执行开关
   Log: Log                                           #存放日志文件的目录名称
@@ -49,7 +50,7 @@ base_config:
   host: localhost                                 #数据库主机ip
   port: 3306                                          #主机sql端口
   sqlname: response                                  #数据库名称
-  pwd: 'jn123000'                                         #数据库连接密码
+  pwd: '123456'                                         #数据库连接密码
   user: root                                  #数据库连接用户
   redisip: 192.168.4.36                       #redis服务ip
   redisport: 6379                             #redis服务端口
@@ -65,7 +66,7 @@ base_config:
   basenumber: 3                               #运行总数,基数
   runfrequency: 2                             #只运行失败和错误的达到多少次之后
   againrun: 3                                 #再次整体运行多少次，再运行失败和错误的，循环
-  operatmode: -1                               #0表示每多少次（eachtimes）整体运行一次，其余（eachtimes-1）次只运行失败或者错误用例
+  operatmode: 9                              #0表示每多少次（eachtimes）整体运行一次，其余（eachtimes-1）次只运行失败或者错误用例
                                               #1表示在运行总数达到多少时（totalfrequency），错误率和失败率到达多少时（errorrate，failrate），
                                               #只运行失败和错误用例（runfrequency）这么多次以后再整体运行（againrun）。。。
                                               # 除此之外的数字表示一直全部执行
@@ -108,7 +109,7 @@ sql:
   search_cookies: select name ,encrypted_value from cookies WHERE host_key='%s';
 
 report:
-  title: 接口自动化测试报告
+  title: 接口自动化测试报告--全球门户(标准版(英语))
   edition: V1.0.0.1        #项目版本
   science: 线上环境          #项目环境
 
