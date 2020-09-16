@@ -27,6 +27,7 @@ try:
 except:
     class_ids = []
 
+
 pb_data = type("pb_data", (object,), {})
 setattr(pb_data, "news_ids", news_ids)
 setattr(pb_data, "picture_ids", picture_ids)
