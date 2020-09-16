@@ -122,6 +122,7 @@ class Public_Data:
         url = self.url + url
         data = self.public_data.public_value("bar")
         r = requests.post(url, headers=self.headers, data=data, files=file, stream=True, verify=False)
+        self.headers[self.type] = self.form_type
 
     @ReExecution(file_upload, status='200', response_list='list')
     def get_pictures(self):

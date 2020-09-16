@@ -51,6 +51,7 @@ class Public_Data:
             del self.headers[self.type]
 
         r = requests.post(url, headers=self.headers, data=data, stream=True, verify=False)
+        self.headers[self.type] = self.form_type
 
     def class_add(self):
         '''

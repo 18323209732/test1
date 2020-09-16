@@ -101,7 +101,9 @@ class Public_Data:
         url = self.public_data.public_value("url") + f"?{self.tenant_key}={self.tenant_value}"
         url = self.url + url
         data = self.public_data.public_value("bar")
+        self.headers[self.type] = self.form_type
         r = requests.post(url, headers=self.headers, data=data, files=file, stream=True, verify=False)
+        self.headers[self.type] = self.form_type
 
 
     def add_class(self):
@@ -120,7 +122,6 @@ class Public_Data:
             value = choice(picture_data.picture_ids)
         else:
             value = choice(picture_data.picture_ids)
-
 
         img_url = value.get("imgUrl")
         img_id = value.get("id")
@@ -325,4 +326,5 @@ except:
 class_data = type("class_data", (object,), {})
 setattr(class_data, "class_ids", class_ids)
 setattr(class_data, "get_class", get_class)
-
+if __name__=="__main__":
+    Public_Data().get_pictures()
