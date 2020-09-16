@@ -1,0 +1,422 @@
+时间:2020-09-16 10:15:01,411  方法:<module>  级别:DEBUG  消息:Not in REPL -> leaving logger event level as is. 行数: 24 文件名:factory.py
+时间:2020-09-16 10:15:01,411  方法:<module>  级别:DEBUG  消息:Not in REPL -> leaving logger event level as is. 行数: 24 文件名:factory.py
+时间:2020-09-16 10:15:01,411  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.address`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,411  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.address`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,423  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.address` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,423  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.address` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,427  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.automotive`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,427  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.automotive`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,431  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.automotive`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-16 10:15:01,431  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.automotive`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-16 10:15:01,432  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.bank`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,432  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.bank`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,436  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-16 10:15:01,436  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-16 10:15:01,437  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.barcode` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,437  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.barcode` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,437  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.color`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,437  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.color`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,440  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.color`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-16 10:15:01,440  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.color`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-16 10:15:01,440  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.company`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,440  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.company`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,447  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.company` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,447  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.company` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,448  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.credit_card` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,448  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.credit_card` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,449  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.currency` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,449  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.currency` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,449  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.date_time`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,449  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.date_time`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,452  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.date_time`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-16 10:15:01,452  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.date_time`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-16 10:15:01,454  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.file` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,454  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.file` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,454  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.geo`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,454  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.geo`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,455  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.geo`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-16 10:15:01,455  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.geo`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-16 10:15:01,456  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.internet`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,456  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.internet`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,464  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.internet` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,464  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.internet` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,465  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.isbn` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,465  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.isbn` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,465  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.job`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,465  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.job`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,470  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.job` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,470  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.job` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,471  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.lorem`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,471  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.lorem`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,476  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.lorem` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,476  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.lorem` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,476  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.misc` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,476  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.misc` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,476  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.person`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,476  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.person`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,492  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.person` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,492  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.person` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,493  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.phone_number`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,493  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.phone_number`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,504  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.phone_number` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,504  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.phone_number` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,519  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.profile` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,519  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.profile` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,519  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.python` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,519  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.python` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,519  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.ssn`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,519  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.ssn`. 行数: 97 文件名:factory.py
+时间:2020-09-16 10:15:01,532  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.ssn` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,532  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.ssn` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-16 10:15:01,543  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.user_agent` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:01,543  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.user_agent` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-16 10:15:11,262  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:15:11,262  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:15:11,265  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:15:11,265  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:15:11,322  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:15:11,322  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:15:12,524  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:15:12,524  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:15:12,526  方法:info  级别:INFO  消息:单线程用例执行开始.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:15:12,526  方法:info  级别:INFO  消息:单线程用例执行开始.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:15:25,961  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--no-sandbox", "--disable-dev-shm-usage", "headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--no-sandbox", "--disable-dev-shm-usage", "headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:25,961  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--no-sandbox", "--disable-dev-shm-usage", "headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--no-sandbox", "--disable-dev-shm-usage", "headless"]}}} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:25,963  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:49771 行数: 205 文件名:connectionpool.py
+时间:2020-09-16 10:15:25,963  方法:_new_conn  级别:DEBUG  消息:Starting new HTTP connection (1): 127.0.0.1:49771 行数: 205 文件名:connectionpool.py
+时间:2020-09-16 10:15:29,355  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session HTTP/1.1" 200 719 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:29,355  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session HTTP/1.1" 200 719 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:29,355  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:29,355  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:29,356  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/window/maximize {} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:29,356  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/window/maximize {} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:30,476  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/window/maximize HTTP/1.1" 200 48 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:30,476  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/window/maximize HTTP/1.1" 200 48 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:30,476  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:30,476  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:30,476  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/url {"url": "https://new-console.300.cn"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:30,476  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/url {"url": "https://new-console.300.cn"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:33,310  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/url HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:33,310  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/url HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:33,310  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:33,310  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:33,311  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@id='username'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:33,311  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@id='username'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,520  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,520  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,521  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,521  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,521  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/8129b4bf-de0c-47c6-95ce-24c71a51ba54/clear {"id": "8129b4bf-de0c-47c6-95ce-24c71a51ba54"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,521  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/8129b4bf-de0c-47c6-95ce-24c71a51ba54/clear {"id": "8129b4bf-de0c-47c6-95ce-24c71a51ba54"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,578  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/8129b4bf-de0c-47c6-95ce-24c71a51ba54/clear HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,578  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/8129b4bf-de0c-47c6-95ce-24c71a51ba54/clear HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,578  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,578  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,578  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@id='username'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,578  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@id='username'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,591  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,591  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,592  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,592  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,592  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/8129b4bf-de0c-47c6-95ce-24c71a51ba54/value {"text": "CEM10097239", "value": ["C", "E", "M", "1", "0", "0", "9", "7", "2", "3", "9"], "id": "8129b4bf-de0c-47c6-95ce-24c71a51ba54"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,592  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/8129b4bf-de0c-47c6-95ce-24c71a51ba54/value {"text": "CEM10097239", "value": ["C", "E", "M", "1", "0", "0", "9", "7", "2", "3", "9"], "id": "8129b4bf-de0c-47c6-95ce-24c71a51ba54"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,686  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/8129b4bf-de0c-47c6-95ce-24c71a51ba54/value HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,686  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/8129b4bf-de0c-47c6-95ce-24c71a51ba54/value HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,686  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,686  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,686  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@id='password'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,686  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@id='password'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,697  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,697  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,697  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,697  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,697  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/49afdef1-b259-48f0-a57c-3a598c8a2e8a/clear {"id": "49afdef1-b259-48f0-a57c-3a598c8a2e8a"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,697  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/49afdef1-b259-48f0-a57c-3a598c8a2e8a/clear {"id": "49afdef1-b259-48f0-a57c-3a598c8a2e8a"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,727  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/49afdef1-b259-48f0-a57c-3a598c8a2e8a/clear HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,727  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/49afdef1-b259-48f0-a57c-3a598c8a2e8a/clear HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,727  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,727  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,727  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@id='password'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,727  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@id='password'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,734  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,734  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,735  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,735  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,735  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/49afdef1-b259-48f0-a57c-3a598c8a2e8a/value {"text": "zok9phwv6n", "value": ["z", "o", "k", "9", "p", "h", "w", "v", "6", "n"], "id": "49afdef1-b259-48f0-a57c-3a598c8a2e8a"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,735  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/49afdef1-b259-48f0-a57c-3a598c8a2e8a/value {"text": "zok9phwv6n", "value": ["z", "o", "k", "9", "p", "h", "w", "v", "6", "n"], "id": "49afdef1-b259-48f0-a57c-3a598c8a2e8a"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,799  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/49afdef1-b259-48f0-a57c-3a598c8a2e8a/value HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,799  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/49afdef1-b259-48f0-a57c-3a598c8a2e8a/value HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,799  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,799  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,799  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='input-box-button m20'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,799  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='input-box-button m20'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,809  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,809  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:34,809  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,809  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,809  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/f30a3b06-b1d0-49c4-98e2-b8b6a32e90db/click {"id": "f30a3b06-b1d0-49c4-98e2-b8b6a32e90db"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:34,809  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/f30a3b06-b1d0-49c4-98e2-b8b6a32e90db/click {"id": "f30a3b06-b1d0-49c4-98e2-b8b6a32e90db"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:35,279  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/f30a3b06-b1d0-49c4-98e2-b8b6a32e90db/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:35,279  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/f30a3b06-b1d0-49c4-98e2-b8b6a32e90db/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:35,279  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:35,279  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,302  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,302  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='closeCode abs'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,334  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:45,334  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:45,335  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,335  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,335  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/8b82634a-3322-45f8-82ff-2735a6e35195/click {"id": "8b82634a-3322-45f8-82ff-2735a6e35195"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,335  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/8b82634a-3322-45f8-82ff-2735a6e35195/click {"id": "8b82634a-3322-45f8-82ff-2735a6e35195"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,404  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/8b82634a-3322-45f8-82ff-2735a6e35195/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:45,404  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/8b82634a-3322-45f8-82ff-2735a6e35195/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:45,404  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,404  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,404  方法:_request  级别:DEBUG  消息:GET http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/cookie {} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,404  方法:_request  级别:DEBUG  消息:GET http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/cookie {} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,415  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "GET /session/f89503e9a88bc250a3592aa7472744e4/cookie HTTP/1.1" 200 1160 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:45,415  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "GET /session/f89503e9a88bc250a3592aa7472744e4/cookie HTTP/1.1" 200 1160 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:45,416  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,416  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:45,447  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): api-shop.300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:15:45,447  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): api-shop.300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:15:47,516  方法:_make_request  级别:DEBUG  消息:https://api-shop.300.cn:443 "GET /security/operInstance/getNewInstanceInfoList?productType=11 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:47,516  方法:_make_request  级别:DEBUG  消息:https://api-shop.300.cn:443 "GET /security/operInstance/getNewInstanceInfoList?productType=11 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:47,521  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:47,521  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[1]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:47,550  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:47,550  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:47,551  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:47,551  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:47,551  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:47,551  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:47,617  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:47,617  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:47,618  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:47,618  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:48,618  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:48,618  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:48,646  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:48,646  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:48,646  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:48,646  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:48,647  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:48,647  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:48,696  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:48,696  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:48,697  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:48,697  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:49,697  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:49,697  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:49,707  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:49,707  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:49,707  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:49,707  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:49,707  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:49,707  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:49,735  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:49,735  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:49,735  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:49,735  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:50,735  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:50,735  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:50,756  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:50,756  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:50,756  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:50,756  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:50,758  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:50,758  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:50,832  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:50,832  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:50,833  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:50,833  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:51,833  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:51,833  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:51,849  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:51,849  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:51,851  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:51,851  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:51,851  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:51,851  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:51,903  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:51,903  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:51,904  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:51,904  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:52,904  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:52,904  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:52,923  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:52,923  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:52,924  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:52,924  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:52,924  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:52,924  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:52,974  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:52,974  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:52,974  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:52,974  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:53,975  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:53,975  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:53,996  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:53,996  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:53,996  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:53,996  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:53,996  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:53,996  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:54,049  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:54,049  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:54,049  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:54,049  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:55,049  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:55,049  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:55,067  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:55,067  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:55,067  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:55,067  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:55,068  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:55,068  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:55,118  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:55,118  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:55,118  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:55,118  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:56,118  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:56,118  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:56,137  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:56,137  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:56,139  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:56,139  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:56,139  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:56,139  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:56,187  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:56,187  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:56,187  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:56,187  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:57,187  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:57,187  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='arrow-border active'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:57,203  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:57,203  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:57,203  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:57,203  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:57,203  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:57,203  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click {"id": "b3b53c6c-e58a-4e9b-876a-7a605202874d"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:57,248  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:57,248  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/b3b53c6c-e58a-4e9b-876a-7a605202874d/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:57,248  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:57,248  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:58,249  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='fr'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:58,249  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element {"using": "xpath", "value": "(//*[@class='fr'])[2]"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:58,279  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:58,279  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element HTTP/1.1" 200 88 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:58,279  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:58,279  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:58,279  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/e21cdbc9-d569-47e5-87f3-a9b6c33e85bb/click {"id": "e21cdbc9-d569-47e5-87f3-a9b6c33e85bb"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:58,279  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/element/e21cdbc9-d569-47e5-87f3-a9b6c33e85bb/click {"id": "e21cdbc9-d569-47e5-87f3-a9b6c33e85bb"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:15:58,343  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/e21cdbc9-d569-47e5-87f3-a9b6c33e85bb/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:58,343  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/element/e21cdbc9-d569-47e5-87f3-a9b6c33e85bb/click HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:15:58,344  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:15:58,344  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:16:03,344  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/url {"url": "https://2008185016-stsite-oper.pool602.yun300.cn/manager/gwforward/manager-webapi/content/info/info_page"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:16:03,344  方法:_request  级别:DEBUG  消息:POST http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/url {"url": "https://2008185016-stsite-oper.pool602.yun300.cn/manager/gwforward/manager-webapi/content/info/info_page"} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:16:04,388  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/url HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:04,388  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "POST /session/f89503e9a88bc250a3592aa7472744e4/url HTTP/1.1" 200 14 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:04,388  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:16:04,388  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:16:06,388  方法:_request  级别:DEBUG  消息:GET http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/cookie {} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:16:06,388  方法:_request  级别:DEBUG  消息:GET http://127.0.0.1:49771/session/f89503e9a88bc250a3592aa7472744e4/cookie {} 行数: 388 文件名:remote_connection.py
+时间:2020-09-16 10:16:06,398  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "GET /session/f89503e9a88bc250a3592aa7472744e4/cookie HTTP/1.1" 200 202 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:06,398  方法:_make_request  级别:DEBUG  消息:http://127.0.0.1:49771 "GET /session/f89503e9a88bc250a3592aa7472744e4/cookie HTTP/1.1" 200 202 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:06,398  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:16:06,398  方法:_request  级别:DEBUG  消息:Finished Request 行数: 440 文件名:remote_connection.py
+时间:2020-09-16 10:16:09,664  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:09,664  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:09,903  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/appCategory/save?tenantId=208223 HTTP/1.1" 200 308 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:09,903  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/appCategory/save?tenantId=208223 HTTP/1.1" 200 308 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:16,059  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:16,059  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:16,271  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/appCategory/list?tenantId=208223&appId=2 HTTP/1.1" 200 315 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:16,271  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/appCategory/list?tenantId=208223&appId=2 HTTP/1.1" 200 315 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:22,540  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:22,540  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:22,756  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate?tenantId=208223 HTTP/1.1" 200 323 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:22,756  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate?tenantId=208223 HTTP/1.1" 200 323 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:28,747  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:28,747  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:29,177  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=208223&authPermission=attribute_edit HTTP/1.1" 200 363 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:29,177  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productAttribute/saveAttribute?viewType=1&tenantId=208223&authPermission=attribute_edit HTTP/1.1" 200 363 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:29,256  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:29,256  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:29,465  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productAttribute/list?tenantId=208223&appId=2&sortField= HTTP/1.1" 200 331 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:29,465  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productAttribute/list?tenantId=208223&appId=2&sortField= HTTP/1.1" 200 331 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:29,516  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:29,516  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:29,712  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?tenantId=208223&appId=2&id=Traceback%20(most%20recent%20call%20last):%0A%20%20File%20%22D:%5CProgram%20Files%5CPycharmProjects%5CPortal_interface%5CDoor%5CAddProduct%5CPublic.py%22,%20line%20108,%20in%20get_product_attribute%0A%20%20%20%20id%20=%20result['data']['list'][0]['id']%0AKeyError:%20'data'%0A&operType=edit HTTP/1.1" 400 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:29,712  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productAttribute/getAttributeDetail?tenantId=208223&appId=2&id=Traceback%20(most%20recent%20call%20last):%0A%20%20File%20%22D:%5CProgram%20Files%5CPycharmProjects%5CPortal_interface%5CDoor%5CAddProduct%5CPublic.py%22,%20line%20108,%20in%20get_product_attribute%0A%20%20%20%20id%20=%20result['data']['list'][0]['id']%0AKeyError:%20'data'%0A&operType=edit HTTP/1.1" 400 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:35,992  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:35,992  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:36,652  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/dssresources/imageRepository/imageFileUpload HTTP/1.1" 200 297 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:36,652  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/dssresources/imageRepository/imageFileUpload HTTP/1.1" 200 297 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:42,763  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:42,763  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:42,974  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productInformation/list?tenantId=208223 HTTP/1.1" 200 315 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:42,974  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productInformation/list?tenantId=208223 HTTP/1.1" 200 315 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:49,110  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:49,110  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:49,312  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/info/info_page?tenantId=208223 HTTP/1.1" 200 306 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:49,312  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/info/info_page?tenantId=208223 HTTP/1.1" 200 306 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:55,364  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:55,364  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:16:55,547  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productInformation/getSeoList?tenantId=208223&appId=2 HTTP/1.1" 200 328 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:16:55,547  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productInformation/getSeoList?tenantId=208223&appId=2 HTTP/1.1" 200 328 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:01,640  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:01,640  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:01,835  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productShowcase/save?tenantId=208223 HTTP/1.1" 200 312 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:01,835  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productShowcase/save?tenantId=208223 HTTP/1.1" 200 312 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:07,926  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:07,926  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:08,108  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productMark/save?tenantId=208223&authPermission=tag_add HTTP/1.1" 200 331 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:08,108  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productMark/save?tenantId=208223&authPermission=tag_add HTTP/1.1" 200 331 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:08,144  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:08,144  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:08,328  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productMark/list?tenantId=208223&appId=2 HTTP/1.1" 200 315 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:08,328  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productMark/list?tenantId=208223&appId=2 HTTP/1.1" 200 315 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:14,315  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:14,315  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:14,569  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate?tenantId=208223 HTTP/1.1" 200 323 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:14,569  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate?tenantId=208223 HTTP/1.1" 200 323 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:20,562  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:20,562  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:20,827  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate?tenantId=208223 HTTP/1.1" 200 323 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:20,827  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productInformation/saveOrUpdate?tenantId=208223 HTTP/1.1" 200 323 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:27,372  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:27,372  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:27,561  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productInformation/list HTTP/1.1" 200 299 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:27,561  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productInformation/list HTTP/1.1" 200 299 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:33,673  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:33,673  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:33,854  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productInformation/delete?tenantId=208223&authPermission=product_del&appId=2&ids=58 HTTP/1.1" 200 358 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:33,854  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productInformation/delete?tenantId=208223&authPermission=product_del&appId=2&ids=58 HTTP/1.1" 200 358 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:40,075  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:40,075  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:17:40,248  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/complaintPageContent/save?tenantId=208223 HTTP/1.1" 200 317 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:17:40,248  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/complaintPageContent/save?tenantId=208223 HTTP/1.1" 200 317 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:18:40,559  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:18:40,559  方法:info  级别:INFO  消息:开始清空文件..... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:18:40,560  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:18:40,560  方法:info  级别:INFO  消息:清空文件结束..... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:18:40,608  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:18:40,608  方法:info  级别:INFO  消息:表创建及清空前置相关工作运行成功.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:18:41,739  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:18:41,739  方法:info  级别:INFO  消息:开始运行用例.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:18:41,740  方法:info  级别:INFO  消息:单线程用例执行开始.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:18:41,740  方法:info  级别:INFO  消息:单线程用例执行开始.... 行数: 55 文件名:Log.py
+时间:2020-09-16 10:18:43,326  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:18:43,326  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:18:43,748  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/dssresources/imageRepository/imageFileUpload?viewType=1?tenantId=208223 HTTP/1.1" 200 324 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:18:43,748  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/dssresources/imageRepository/imageFileUpload?viewType=1?tenantId=208223 HTTP/1.1" 200 324 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:18:49,884  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:18:49,884  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:18:51,124  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productMark/save?tenantId=208223 HTTP/1.1" 200 308 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:18:51,124  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "POST /manager/gwforward/manager-webapi/product/productMark/save?tenantId=208223 HTTP/1.1" 200 308 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:18:57,247  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:18:57,247  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008185016-stsite-oper.pool602.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-16 10:18:57,479  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productMark/list?tenantId=208223&appId=2 HTTP/1.1" 200 315 行数: 393 文件名:connectionpool.py
+时间:2020-09-16 10:18:57,479  方法:_make_request  级别:DEBUG  消息:https://2008185016-stsite-oper.pool602.yun300.cn:443 "GET /manager/gwforward/manager-webapi/product/productMark/list?tenantId=208223&appId=2 HTTP/1.1" 200 315 行数: 393 文件名:connectionpool.py
