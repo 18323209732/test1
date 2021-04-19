@@ -3,24 +3,24 @@ add_customer:
   url: /add/customerParam
 data:
   list:
-  - id: 7
-    name: "\u65B0\u589E\u7EC4057"
-    sequence: 7
+  - id: 3
+    name: "\u65B0\u589E\u7EC4230"
+    sequence: 3
     staff:
-    - {account: '13213213131', groupId: 7, id: 3, imageId: 0, name: "\u5BA2\u670D\
-        066", sequence: 3, status: true, type: 1, typeText: QQ}
-  - id: 6
-    name: "\u65B0\u589E\u7EC4056"
-    sequence: 6
+    - {account: '13213213131', groupId: 3, id: 1, imageId: 0, name: "\u5BA2\u670D\
+        237", sequence: 1, status: true, type: 1, typeText: QQ}
+  - id: 2
+    name: "\u65B0\u589E\u7EC4230"
+    sequence: 2
     staff: []
   - id: 1
     name: "\u5728\u7EBF\u5BA2\u670D"
     sequence: 1
     staff: []
-group: {id1: 7, id10: 11, id11: 10, id12: 9, id13: 2, id14: 1, id2: 6, id3: 1, id4: 17,
+group: {id1: 3, id10: 11, id11: 10, id12: 9, id13: 2, id14: 1, id2: 2, id3: 1, id4: 1,
   id5: 16, id6: 15, id7: 12, id8: 30, id9: 18}
 service:
-  id1: [3]
+  id1: [1]
   id13: [6, 5, 4, 3, 2, 1]
   id3: [1]
   id4: [3]

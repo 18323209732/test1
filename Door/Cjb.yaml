@@ -577,7 +577,7 @@ Door:
           author: 陈建波,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 文件列表,
+          case_name: 文件库---文件列表,
           expected: ['200'],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -589,7 +589,7 @@ Door:
           author: 陈建波,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 搜索,
+          case_name: 文件库---搜索,
           expected: ['200'],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -601,7 +601,7 @@ Door:
           author: 陈建波,
           bar: {currentPage: 1,pageSize: 15,startDate: 2020-07-22 00:00:00,endDate: 2020-08-17 23:59:59,queryStatus: 0,type: 1,orderColumn: UPDATE_DATE,orderType: DESC,classId: 0,keywords: },
           relation_data: {},    #关联接口
-          case_name: 筛选,
+          case_name: 文件库---筛选,
           expected: ['200'],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -613,7 +613,7 @@ Door:
           author: 陈建波,
           bar: {currentPage: 1,pageSize: 15,startDate: ,endDate: ,queryStatus: 0,type: 1,orderColumn: UPDATE_DATE,orderType: asc,classId: 0,keywords: },
           relation_data: {},    #关联接口
-          case_name: 表头排序,
+          case_name: 文件库---表头排序,
           expected: ['200'],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数
@@ -625,7 +625,7 @@ Door:
           author: 陈建波,
           bar: {fileName: test.xlsx,title: test.xlsx, type: 1,size: 32462},
           relation_data: {},    #关联接口
-          case_name: 上传,
+          case_name: 文件库---上传,
           expected: ['200'],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -637,7 +637,7 @@ Door:
           author: 陈建波,
           bar: {authPermission: file_update, name: test3453,id: 14},
           relation_data: {},    #关联接口
-          case_name: 编辑,
+          case_name: 文件库---编辑,
           expected: ['200'],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -648,7 +648,7 @@ Door:
           author: 陈建波,
           bar: {authPermission: file_update, name: test3453,id: 14},
           relation_data: {},    #关联接口
-          case_name: 下载,
+          case_name: 文件库---下载,
           expected: [200
           ],  # 预期结果
           mode: post,  # 请求类型
@@ -661,7 +661,7 @@ Door:
           author: 陈建波,
           bar: {fileKeys: 100001_2007225007/20151207092712_yTFKS.jpeg},
           relation_data: {},    #关联接口
-          case_name: 删除,
+          case_name: 文件库---删除,
           expected: [200],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -673,7 +673,7 @@ Door:
           author: 陈建波,
           bar: {fileKeys: 100001_2007225007/20151207092712_yTFKS.jpeg},
           relation_data: {},    #关联接口
-          case_name: 批量删除,
+          case_name: 文件库---批量删除,
           expected: ['200'],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -685,7 +685,7 @@ Door:
           author: 陈建波,
           bar: {currentPage: 2},
           relation_data: {},    #关联接口
-          case_name: 翻页,
+          case_name: 文件库---翻页,
           expected: ['200'],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -697,7 +697,7 @@ Door:
           author: 陈建波,
           bar: {className: 879,classInfo: 78987},
           relation_data: {},    #关联接口
-          case_name: 添加分类,
+          case_name: 文件库---添加分类,
           expected: ['200'],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -709,7 +709,7 @@ Door:
           author: 陈建波,
           bar: {id: 15, className: 879,classInfo: 78987},
           relation_data: {},    #关联接口
-          case_name: 编辑分类,
+          case_name: 文件库---编辑分类,
           expected: ['200'],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -721,7 +721,7 @@ Door:
           author: 陈建波,
           bar: {ids: 16},
           relation_data: {},    #关联接口
-          case_name: 删除,
+          case_name: 文件库---删除,
           expected: ['200'],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -733,7 +733,7 @@ Door:
           author: 陈建波,
           bar: {ids: 16},
           relation_data: {},    #关联接口
-          case_name: 批量删除,
+          case_name: 文件库---批量删除,
           expected: ['200'],  # 预期结果
           mode: post,  # 请求类型
           re_bar: data, # 请求参数
@@ -745,7 +745,7 @@ Door:
           author: 陈建波,
           bar: {},
           relation_data: {},    #关联接口
-          case_name: 查找,
+          case_name: 文件库---查找,
           expected: ['200'],  # 预期结果
           mode: get,  # 请求类型
           re_bar: data, # 请求参数

@@ -1,4 +1,4 @@
 add_customer:
 - bar: {}
   url: /add/customerParam
-class: {id: 14}
+class: {id: 7}
