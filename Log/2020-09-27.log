@@ -1,0 +1,235 @@
+时间:2020-09-27 09:59:45,745  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 09:59:46,404  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/info/info_page?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 09:59:46,465  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 09:59:46,737  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/dssresources/imageRepository/findByPagination?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 09:59:46,808  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 09:59:47,134  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/infoCategory/infoCategoryTreeExt?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 09:59:48,449  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 09:59:48,828  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/atlascategory/atlasCategoryTreeForIndex?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 09:59:49,075  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:10,168  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:10,580  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/atlascategory/atlasCategoryTreeForIndex?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:15,084  方法:<module>  级别:DEBUG  消息:Not in REPL -> leaving logger event level as is. 行数: 24 文件名:factory.py
+时间:2020-09-27 10:00:15,085  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.address`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,088  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.address` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:00:15,089  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.automotive`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,092  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.automotive`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:00:15,092  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.bank`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,094  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:00:15,095  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.barcode` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:00:15,095  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.color`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,095  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.color`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:00:15,096  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.company`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,099  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.company` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:00:15,100  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.credit_card` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:00:15,100  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.currency` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:00:15,100  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.date_time`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,103  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.date_time`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:00:15,104  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.file` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:00:15,105  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.geo`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,105  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.geo`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:00:15,105  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.internet`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,110  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.internet` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:00:15,111  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.isbn` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:00:15,111  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.job`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,112  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.job` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:00:15,113  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.lorem`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,115  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.lorem` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:00:15,115  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.misc` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:00:15,116  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.person`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,123  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.person` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:00:15,124  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.phone_number`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,128  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.phone_number` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:00:15,129  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.profile` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:00:15,129  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.python` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:00:15,131  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.ssn`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:00:15,135  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.ssn` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:00:15,136  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.user_agent` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:00:18,167  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:18,600  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/fileRepository/findAllClass?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:18,635  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:18,931  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/fileRepository/findByPagination?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:24,412  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:24,918  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/imageRepository/findAllClass?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:26,102  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:27,043  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/interaction/jobpostingDepartment/departmentList?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:27,100  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:27,518  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/interaction/jobposting/search?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:51,411  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:52,206  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/info/info_page?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:52,257  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:52,526  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/dssresources/imageRepository/findByPagination?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:52,593  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:52,948  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/infoCategory/infoCategoryTreeExt?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:54,327  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:54,621  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/atlascategory/atlasCategoryTreeForIndex?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:54,857  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:55,868  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/atlas/atlas_page?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:00:55,931  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:00:56,372  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/atlascategory/atlasCategoryTreeForIndex?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:01:00,460  方法:<module>  级别:DEBUG  消息:Not in REPL -> leaving logger event level as is. 行数: 24 文件名:factory.py
+时间:2020-09-27 10:01:00,462  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.address`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,467  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.address` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:01:00,467  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.automotive`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,468  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.automotive`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:01:00,470  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.bank`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,470  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:01:00,470  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.barcode` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:01:00,470  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.color`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,473  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.color`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:01:00,473  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.company`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,476  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.company` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:01:00,476  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.credit_card` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:01:00,478  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.currency` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:01:00,478  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.date_time`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,479  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.date_time`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:01:00,480  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.file` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:01:00,480  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.geo`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,480  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.geo`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:01:00,480  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.internet`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,484  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.internet` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:01:00,484  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.isbn` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:01:00,484  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.job`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,486  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.job` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:01:00,487  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.lorem`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,489  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.lorem` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:01:00,489  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.misc` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:01:00,491  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.person`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,496  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.person` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:01:00,497  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.phone_number`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,503  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.phone_number` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:01:00,503  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.profile` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:01:00,503  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.python` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:01:00,503  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.ssn`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:01:00,508  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.ssn` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:01:00,510  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.user_agent` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:01:02,865  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:01:03,364  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/fileRepository/findAllClass?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:01:03,414  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:01:04,704  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/fileRepository/findByPagination?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:01:10,015  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:01:10,332  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/imageRepository/findAllClass?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:01:11,421  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:01:11,963  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/interaction/jobpostingDepartment/departmentList?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:01:12,014  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:01:13,628  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/interaction/jobposting/search?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:30,228  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:30,634  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/info/info_page?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:30,724  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:31,068  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/dssresources/imageRepository/findByPagination?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:31,136  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:31,467  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/infoCategory/infoCategoryTreeExt?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:32,782  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:33,520  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/atlascategory/atlasCategoryTreeForIndex?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:33,776  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:35,292  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/atlas/atlas_page?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:35,356  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:35,692  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/atlascategory/atlasCategoryTreeForIndex?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:39,776  方法:<module>  级别:DEBUG  消息:Not in REPL -> leaving logger event level as is. 行数: 24 文件名:factory.py
+时间:2020-09-27 10:02:39,776  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.address`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,782  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.address` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:02:39,782  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.automotive`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,783  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.automotive`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:02:39,784  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.bank`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,785  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:02:39,785  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.barcode` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:02:39,787  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.color`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,788  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.color`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:02:39,789  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.company`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,792  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.company` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:02:39,792  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.credit_card` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:02:39,792  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.currency` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:02:39,792  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.date_time`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,793  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.date_time`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:02:39,795  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.file` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:02:39,795  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.geo`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,796  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.geo`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:02:39,796  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.internet`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,799  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.internet` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:02:39,799  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.isbn` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:02:39,799  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.job`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,802  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.job` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:02:39,802  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.lorem`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,804  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.lorem` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:02:39,806  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.misc` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:02:39,806  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.person`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,811  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.person` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:02:39,812  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.phone_number`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,817  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.phone_number` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:02:39,817  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.profile` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:02:39,817  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.python` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:02:39,817  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.ssn`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:02:39,822  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.ssn` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:02:39,825  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.user_agent` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:02:42,078  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:42,383  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/fileRepository/findAllClass?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:42,417  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:42,735  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/fileRepository/findByPagination?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:47,976  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:48,284  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/imageRepository/findAllClass?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:49,371  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:49,966  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/interaction/jobpostingDepartment/departmentList?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:50,038  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:50,460  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/interaction/jobposting/search?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:02:52,651  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:02:52,884  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/mapPostion/add?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:05:57,803  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:05:58,536  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/info/info_page?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:05:58,627  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:05:58,868  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/dssresources/imageRepository/findByPagination?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:05:58,939  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:05:59,532  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/infoCategory/infoCategoryTreeExt?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:06:00,832  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:06:01,199  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/atlascategory/atlasCategoryTreeForIndex?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:06:01,428  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:06:01,976  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/atlas/atlas_page?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:06:02,035  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:06:04,351  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/content/atlascategory/atlasCategoryTreeForIndex?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:06:08,524  方法:<module>  级别:DEBUG  消息:Not in REPL -> leaving logger event level as is. 行数: 24 文件名:factory.py
+时间:2020-09-27 10:06:08,524  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.address`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,529  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.address` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:06:08,529  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.automotive`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,532  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.automotive`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:06:08,532  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.bank`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,534  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:06:08,535  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.barcode` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:06:08,535  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.color`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,536  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.color`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:06:08,536  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.company`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,539  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.company` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:06:08,539  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.credit_card` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:06:08,540  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.currency` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:06:08,540  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.date_time`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,542  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.date_time`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:06:08,542  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.file` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:06:08,542  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.geo`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,542  方法:_find_provider_class  级别:DEBUG  消息:Specified locale `zh_CN` is not available for provider `faker.providers.geo`. Locale reset to `en_US` for this provider. 行数: 107 文件名:factory.py
+时间:2020-09-27 10:06:08,543  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.internet`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,548  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.internet` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:06:08,548  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.isbn` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:06:08,549  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.job`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,551  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.job` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:06:08,551  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.lorem`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,552  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.lorem` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:06:08,553  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.misc` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:06:08,553  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.person`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,559  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.person` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:06:08,559  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.phone_number`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,564  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.phone_number` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:06:08,566  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.profile` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:06:08,566  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.python` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:06:08,567  方法:_find_provider_class  级别:DEBUG  消息:Looking for locale `zh_CN` in provider `faker.providers.ssn`. 行数: 97 文件名:factory.py
+时间:2020-09-27 10:06:08,571  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.ssn` has been localized to `zh_CN`. 行数: 111 文件名:factory.py
+时间:2020-09-27 10:06:08,572  方法:_find_provider_class  级别:DEBUG  消息:Provider `faker.providers.user_agent` does not feature localization. Specified locale `zh_CN` is not utilized for this provider. 行数: 124 文件名:factory.py
+时间:2020-09-27 10:06:10,812  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:06:12,103  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/fileRepository/findAllClass?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:06:12,128  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:06:12,408  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/fileRepository/findByPagination?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:06:17,655  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:06:17,977  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/dssresources/imageRepository/findAllClass?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:06:19,088  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:06:22,924  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/interaction/jobpostingDepartment/departmentList?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:06:22,988  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:06:23,574  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "GET /manager/gwforward/manager-webapi/interaction/jobposting/search?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
+时间:2020-09-27 10:06:25,694  方法:_new_conn  级别:DEBUG  消息:Starting new HTTPS connection (1): 2008145027-site.pool202.yun300.cn:443 行数: 813 文件名:connectionpool.py
+时间:2020-09-27 10:06:29,264  方法:_make_request  级别:DEBUG  消息:https://2008145027-site.pool202.yun300.cn:443 "POST /manager/gwforward/manager-webapi/content/mapPostion/add?tenantId=205217 HTTP/1.1" 200 None 行数: 393 文件名:connectionpool.py
