@@ -43,3 +43,36 @@ def test_delete():
     userid = "0928"
     res = requests.get(f'https://qyapi.weixin.qq.com/cgi-bin/user/delete?access_token={test_token()}&userid={userid}')
     print(res.json())
+
+def test_create_department():
+    #创建新部门
+    data = {
+        "name": "易强欢乐中心",
+        "parentid": 1,
+    }
+    res = requests.post(f'https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token={test_token()}',json=data)
+    print(res.json())
+
+def test_get_department():
+    #获取部门信息
+    id = 2
+    res = requests.get(f'https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token={test_token()}&id={id}')
+    print(res.json())
+
+def test_update_department():
+    #更新部门信息
+    data = {
+        "id": 2,
+        "name": "易二麻子装傻中心",
+        "name_en": "yqsz",
+        "parentid": 1,
+        "order": 1
+    }
+    res = requests.post(f"https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token={test_token()}",json=data)
+    print(res.json())
+
+def test_delete_department():
+    #删除部门
+    id = 2
+    res = requests.get(f'https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token={test_token()}&id={id}')
+    print(res.json())
