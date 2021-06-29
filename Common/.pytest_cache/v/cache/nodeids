@@ -18,6 +18,7 @@
   "lianxi123.py::test_search3",
   "lianxi123.py::test_three",
   "lianxi123.py::test_two",
+  "test_case/test_get_token.py::TestToken::test_get_token",
   "test_data.py::TestData::test_data",
   "test_data.py::TestData::test_data2",
   "test_data.py::TestData::test_data3",
