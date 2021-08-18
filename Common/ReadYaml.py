@@ -29,7 +29,7 @@ class ConfigYaml:
             f.close()
             return data
         else:
-            outcome('red', f"请检此路径:{self.path},下的用例文件是否存在")
+            outcome('red', f"请检查此路径:{self.path},下的用例文件是否存在")
 
     @property
     def base_config(self):
